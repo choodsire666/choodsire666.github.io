@@ -97,11 +97,11 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape	
-theme: Kratos-Rebirth
+theme: anzhiyu
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: git@github.com:choodsire666/blog.git
+  type: git
+  repo: https://github.com/choodsire666/choodsire666.github.io.git
   branch: main
