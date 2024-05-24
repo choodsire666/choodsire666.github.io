@@ -313,8 +313,8 @@ addtoany:
 
 comments:
   # Up to two comments system, the first will be shown as default
-  # Choose: Valine/Waline/Twikoo/Artalk
-  use: Twikoo/Waline
+  # Choose: Valine/Waline/Twikoo/Artalk  
+  use: giscus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -369,12 +369,22 @@ twikoo:
 # https://giscus.app/
 giscus:
   repo: choodsire666/choodsire666.github.io
-  repo_id: R_kgDOL-6PGA
-  category_id: DIC_kwDOL-6PGM4Cfk_w
-  theme:
-    light: light
-    dark: dark
-  option:
+  repo-id: R_kgDOL-6PGA
+  category: Announcements
+  category-id: DIC_kwDOL-6PGM4Cfk_w
+  # Available values: pathname | url | title | og:title
+  mapping: pathname
+  # Available values: 0 | 1
+  reactions-enabled: 1
+   # Available values: 0 | 1
+  emit-metadata: 0
+  # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
+  theme: preferred_color_scheme
+  # Available values: en | zh-CN
+  lang: zh-CN
+  # Place the comment box above the comments
+  input-position: top
+
 
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
