@@ -368,9 +368,9 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo:
-  repo_id:
-  category_id:
+  repo: choodsire666/choodsire666.github.io
+  repo_id: R_kgDOL-6PGA
+  category_id: DIC_kwDOL-6PGM4Cfk_w
   theme:
     light: light
     dark: dark
