@@ -1266,7 +1266,7 @@ CDN:
     # docsearch_css:
     # pjax:
     # blueimp_md5:
-    # valine:
+    valine: https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/valine_f/valine.min.js
     # twikoo:
     # waline_js:
     # waline_css:
