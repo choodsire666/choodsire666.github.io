@@ -1127,9 +1127,10 @@ nav_music:
   # server: netease
   server: tencent
   volume: 0.7 # 默认音量
-  # all_playlist: https://y.qq.com/n/ryqq/playlist/3502370514
+  all_playlist: https://y.qq.com/n/ryqq/playlist/3502370514
   type: playlist
   order: list 
+  lrc-type: 1
 
 # 评论匿名邮箱
 visitorMail:
