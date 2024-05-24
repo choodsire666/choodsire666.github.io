@@ -1123,8 +1123,7 @@ comment_barrage_config:
 nav_music:
   enable: true
   console_widescreen_music: true # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示  
-  # server: netease
-  server: tencent
+  # server: netease  
   volume: 0.7 # 默认音量
   id: 8152976493
   server: netease
