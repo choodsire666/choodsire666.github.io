@@ -3,7 +3,6 @@ title: idea打war包
 date: '2024-05-24 16:19:18'
 updated: '2024-05-22 16:19:20'
 tags:
-
   - idea
 categories:
   - java后端
@@ -15,7 +14,7 @@ categories:
 
 - 注意看,现在idea没有识别到---->这个项目是web工程
 
-<img src="images/001.png">
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241434191.png)
 
 - 我们打开项目结构
   	1. 点击Facets
@@ -23,7 +22,7 @@ categories:
    	3. 添加web
    	4. 选择你要添加的模块
 
-![002](D:/Text/java后端/idea打war包/images/002.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241436675.png)
 
 - 现在你就填加进来了
 
@@ -35,7 +34,7 @@ categories:
 
   
 
-![003](D:/Text/java后端/idea打war包/images/003.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241436394.png)
 
 - 现在他运行的非常好
   - 首先看他<output root>下面
@@ -43,7 +42,7 @@ categories:
   - 和resources
   - 呢就没问题了
 
-![004](D:/Text/java后端/idea打war包/images/004.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241436401.png)
 
 
 
@@ -51,15 +50,15 @@ categories:
 
 - 还是老样子开始
 
-![001](D:/Text/java后端/idea打war包/images/001.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241434191.png)
 
 - 第一步
 
-  ![005](D:/Text/java后端/idea打war包/images/005.png)
+  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241436280.png)
 
 - 然后你的项目就被标记为web项目了
 
-  ![006](D:/Text/java后端/idea打war包/images/006.png)
+  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241436895.png)
 
 - 在factes中标记为web项目后
 
@@ -68,24 +67,22 @@ categories:
   3. 如果没有标记,就看不到一下from moudules
   4. 就算有,点进去也找不到你要的module
 
-  ![007](D:/Text/java后端/idea打war包/images/007.png)
+  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241437879.png)
 
 #### 第一种
 
 - 看到,创建了一个unnamed的artifacts. 可以修改名字
 - 但是注意看,右边啥也没有
 
-![008](D:/Text/java后端/idea打war包/images/008.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241437924.png)
 
 - 然后做下面操作
 
-  ![004](D:/Text/java后端/idea打war包/images/002.png)
-
-  ![009](D:/Text/java后端/idea打war包/images/009.png)
+  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241437012.png)
 
 - 然后就成这
 
-  ![010](D:/Text/java后端/idea打war包/images/010.png)
+  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241437073.png)
 
 apply一下就完事了
 
