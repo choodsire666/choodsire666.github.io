@@ -327,23 +327,10 @@ comments:
 valine:
   appId: 3YPTClSqEar2HGGGPmSQ5FcQ-gzGzoHsz # leancloud application app id
   appKey: tBgbA7HEODALiqsqeTfJox0n # leancloud application app key
-  pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
-  placeholder: 填写QQ邮箱就会使用QQ头像喔~. # valine comment input placeholder (like: Please leave your footprints)
-  guest_info: nick,mail,link # valine comment header info (nick/mail/link)
-  recordIP: true # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /img/comment_bg.png # valine background
-  emojiCDN: //i0.hdslb.com/bfs/emote/ # emoji CDN
-  enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: nick,mail # required fields (nick/mail)
   visitor: false
-  # master:
-  #   - xxxxx
-  # friends:
-  #   - xxxxxx
-  tagMeta: "博主,小伙伴,访客"
   option:
 
 # waline - A simple comment system with backend support fork from Valine
