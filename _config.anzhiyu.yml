@@ -31,8 +31,8 @@ nav:
         - name: 博客
           link: https://choodsire666.github.io/
           icon: /img/favicon.ico
-    - title: 项目
-      item:
+    # - title: 项目
+      # item:
       #  - name: 安知鱼图床
       #    link: https://image.anheyu.com/
       #    icon: https://image.anheyu.com/favicon.ico
