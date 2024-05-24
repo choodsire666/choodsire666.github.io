@@ -15,7 +15,7 @@ categories:
 
 - 注意看,现在idea没有识别到---->这个项目是web工程
 
-![001](D:/Text/java后端/idea打war包/images/001.png)
+<img src="/images/001.png">
 
 - 我们打开项目结构
   	1. 点击Facets
