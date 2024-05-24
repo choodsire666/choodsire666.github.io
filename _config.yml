@@ -120,7 +120,7 @@ bangumi: # 追番设置
   lazyload: false
   loading:
   showMyComment: false
-  pagination: true
+  pagination: false
   metaColor:
   color:
   webp:
