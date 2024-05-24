@@ -92,7 +92,7 @@ pagination_dir: page
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
   appId: "JRTDVCGPVY"
-  apiKey: "706fefe5ab199d60666d55df32e6818b"
+  apiKey: "af646c8f73b9e4ff305c9a84b01ac5ca"
   adminApiKey: "94e23ebf861b6bba12b31386a81b2e87"
   chunkSize: 5000
   indexName: "blog"
