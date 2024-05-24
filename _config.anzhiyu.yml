@@ -331,6 +331,7 @@ valine:
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /img/comment_bg.png # valine background
   visitor: false
+  emojiCDN: //i0.hdslb.com/bfs/emote/
   option:
 
 # waline - A simple comment system with backend support fork from Valine
