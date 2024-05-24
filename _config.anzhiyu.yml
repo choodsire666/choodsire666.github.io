@@ -330,7 +330,7 @@ valine:
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /img/comment_bg.png # valine background
-  placeholder: 请输入QQ邮箱以便自动获取头像和用户名
+  placeholder: '请输入QQ邮箱以便自动获取头像和用户名'
   visitor: false
   emojiCDN: https://i0.hdslb.com/bfs/emote/
   enableQQ: true
