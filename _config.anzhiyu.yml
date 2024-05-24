@@ -90,12 +90,30 @@ author_status:
 
 # Algolia search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 6
-  tags:
+  # tags:
     # - 前端
     # - Hexo
+
+
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+algolia:
+  appId: "JRTDVCGPVY"
+  apiKey: "706fefe5ab199d60666d55df32e6818b"
+  adminApiKey: "94e23ebf861b6bba12b31386a81b2e87"
+  chunkSize: 5000
+  indexName: "blog"
+  fields:
+    - content:strip:truncate,0,200
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
 
 # Docsearch
 # Apply and Docs: see https://docsearch.algolia.com/
@@ -1214,7 +1232,7 @@ rightClickMenu:
 
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
-  enable: true
+  enable: false
   img: https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241847080.png
 
 # 动效
