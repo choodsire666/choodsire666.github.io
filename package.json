@@ -5,24 +5,30 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "clean:yuque": "yuque-hexo clean",
+    "sync": "yuque-hexo sync",
+    "publish": "npm run clean && npm run deploy",
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.2.0"
+    "version": "5.4.2"
   },
   "dependencies": {
     "-": "^0.0.1",
+    "bluebird": "^3.7.2",
+    "chokidar": "^3.6.0",
+    "graceful-fs": "^4.2.11",
     "hexo": "^7.0.0",
-    "hexo-algolia": "^1.3.2",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-bilibili-bangumi": "^1.9.0",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-deployer-git": "^4.0.0",
+    "hexo-fs": "^4.1.3",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-log": "^4.1.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-pug": "^3.0.0",
@@ -31,6 +37,23 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-util": "^3.3.0",
     "hexo-wordcount": "^6.0.1",
-    "save-dev": "0.0.1-security"
+    "picocolors": "^1.0.1",
+    "pug": "^3.0.3",
+    "save-dev": "0.0.1-security",
+    "yuque-tools": "^2.3.4"
+  },
+  "yuqueConfig": {
+    "postPath": "source/_posts/yuque",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "title",
+    "adapter": "hexo",
+    "concurrency": 5,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "chood",
+    "repo": "blog",
+    "onlyPublished": false
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.9.5"
   }
 }
