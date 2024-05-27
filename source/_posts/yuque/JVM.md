@@ -1,3 +1,11 @@
+---
+title: JVM
+urlname: ctoz5c
+date: '2022-08-21 11:55:48'
+updated: '2024-04-09 16:03:30'
+cover: 'https://cdn.nlark.com/yuque/0/2024/png/29688613/1710733746806-89265629-4794-4205-baf1-f5c15227330a.png'
+description: JVM概述基本介绍JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作特点：Java 虚拟机基于二进制字节码执行，由一套字节码指令集、一组寄存器、一个...
+---
 ## JVM概述
 ### 基本介绍
 JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作
@@ -8,13 +16,13 @@ JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身�
 
 Java 代码执行流程：Java 程序 --（编译）--> 字节码文件 --（解释执行）--> 操作系统（Win，Linux）
 JVM 结构：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524666592-568c36ef-6e4b-4869-9c26-9d664d2e97e8.png#averageHue=%23e0eabc&clientId=u5b1215c9-629a-4&from=paste&id=u5305ba3c&originHeight=492&originWidth=898&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u416f2b03-9426-40c0-977d-0652b6191b9&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fa45c3fcfbfd3fd5e0d44ff4c7601a43.png)
 JVM、JRE、JDK 对比：
 
 - JDK(Java SE Development Kit)：Java 标准开发包，提供了编译、运行 Java 程序所需的各种工具和资源
 - JRE( Java Runtime Environment)：Java 运行环境，用于解释执行 Java 的字节码文件
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524666633-3a289530-d423-43f8-b0a4-46a66efa383d.png#averageHue=%237cda7f&clientId=u5b1215c9-629a-4&from=paste&id=u9063a2d9&originHeight=500&originWidth=848&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uf720164a-377b-4cc5-8515-3a46ae81b70&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0891880b460fe367e217da7b2572cc76.png)
 参考书籍：[https://book.douban.com/subject/34907497/](https://book.douban.com/subject/34907497/)
 参考视频：[https://www.bilibili.com/video/BV1PJ411n7xZ](https://www.bilibili.com/video/BV1PJ411n7xZ)
 参考视频：[https://www.bilibili.com/video/BV1yE411Z7AP](https://www.bilibili.com/video/BV1yE411Z7AP)
@@ -58,8 +66,8 @@ JVM 的生命周期分为三个阶段，分别为：启动、运行、死亡
 内存结构是 JVM 中非常重要的一部分，是非常重要的系统资源，是硬盘和 CPU 的桥梁，承载着操作系统和应用程序的实时运行，又叫运行时数据区
 JVM 内存结构规定了 Java 在运行过程中内存申请、分配、管理的策略，保证了 JVM 的高效稳定运行
 
-- Java1.8 以前的内存结构图：![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524666610-ed63b915-d001-4563-beaa-b73549361124.png#averageHue=%23f2f2f2&clientId=u5b1215c9-629a-4&from=paste&id=u7e2d1078&originHeight=683&originWidth=1187&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u8f33a581-f717-4807-a1cb-f85a45c2c0c&title=)
-- Java1.8 之后的内存结果图：![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524666648-85492314-8d2f-4dec-9b3b-b8ead496bb76.png#averageHue=%23a7cf8c&clientId=u5b1215c9-629a-4&from=paste&id=u8bdf735b&originHeight=720&originWidth=1280&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u15573d48-9018-4cf3-8001-c4b4475e507&title=)
+- Java1.8 以前的内存结构图：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2413f446e615f2a6d5b29704ea59ac22.png)
+- Java1.8 之后的内存结果图：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f61e6ac0afa93435bd0d06a03c9c71c3.png)
 
 线程运行诊断：
 
@@ -90,7 +98,7 @@ Java 虚拟机栈：Java Virtual Machine Stacks，**每个线程**运行时所�
    - 动态链接：也叫指向运行时常量池的方法引用
    - 方法返回地址：方法正常退出或者异常退出的定义
    - 操作数栈或表达式栈和其他一些附加信息
-- ![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524666604-705ab854-65d6-4616-81da-4c72e51863c9.png#averageHue=%23b7a68a&clientId=u5b1215c9-629a-4&from=paste&id=u7dcfcd06&originHeight=446&originWidth=786&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ue071bcf5-2572-40a0-84c8-a24fed4186d&title=)
+- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/14040ecb0307410767695076325a0f5e.png)
 
 设置栈内存大小：-Xss size-Xss 1024k
 
@@ -144,8 +152,8 @@ Java 虚拟机栈：Java Virtual Machine Stacks，**每个线程**运行时所�
 ##### 动态链接
 动态链接是指向运行时常量池的方法引用，涉及到栈操作已经是类加载完成，这个阶段的解析是**动态绑定**
 
-- 为了支持当前方法的代码能够实现动态链接，每一个栈帧内部都包含一个指向运行时常量池或该栈帧所属方法的引用![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524667147-fcf73db5-f3bb-48e2-9998-82454b4bb702.png#averageHue=%23fcf8f7&clientId=u5b1215c9-629a-4&from=paste&id=ue27090b3&originHeight=222&originWidth=699&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u0f4aa0d8-7e84-4d4b-b760-ea41b2c98df&title=)
-- 在 Java 源文件被编译成的字节码文件中，所有的变量和方法引用都作为符号引用保存在 class 的常量池中常量池的作用：提供一些符号和常量，便于指令的识别![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524667175-972beeed-37b0-496c-bca2-08d067e89d81.png#averageHue=%23f9f5f3&clientId=u5b1215c9-629a-4&from=paste&id=u38b29ed0&originHeight=244&originWidth=820&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u93587c80-217a-4b9c-ae3b-a906ee97cf4&title=)
+- 为了支持当前方法的代码能够实现动态链接，每一个栈帧内部都包含一个指向运行时常量池或该栈帧所属方法的引用![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d0cfcbe8bef28ccae3dcb0e70343ee0c.png)
+- 在 Java 源文件被编译成的字节码文件中，所有的变量和方法引用都作为符号引用保存在 class 的常量池中常量池的作用：提供一些符号和常量，便于指令的识别![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8abc9226f073e2d8212145b51d9d6c56.png)
 
 ---
 
@@ -181,7 +189,7 @@ JNI：Java Native Interface，通过使用 Java 本地接口程序，可以确�
 - dlopen 函数：Linux 系统加载和链接共享库
 - dlclose 函数：卸载共享库
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524667316-0ec9ee1e-9e4f-4039-954e-2bf867989690.png#averageHue=%23f1f1f1&clientId=u5b1215c9-629a-4&from=paste&id=ua893027e&originHeight=254&originWidth=539&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u0d0b3f24-2bc2-4a75-a1fe-9e590fc74fd&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1871d19ec6b8f5cfbbef2d873e25835b.png)
 图片来源：[https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.md](https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.md)
 
 ---
@@ -279,7 +287,7 @@ public static void main(String[] args) {
 虚拟机内存：Java 虚拟机在执行的时候会把管理的内存分配成不同的区域，受虚拟机内存大小的参数控制，当大小超过参数设置的大小时就会报 OOM
 本地内存：又叫做**堆外内存**，线程共享的区域，本地内存这块区域是不会受到 JVM 的控制的，不会发生 GC；因此对于整个 Java 的执行效率是提升非常大，但是如果内存的占用超出物理内存的大小，同样也会报 OOM
 本地内存概述图：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524667339-80d296a9-836f-43d7-a0a9-2914f8755160.png#averageHue=%23eaf2c5&clientId=u5b1215c9-629a-4&from=paste&id=u6913964a&originHeight=668&originWidth=1003&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u5b399846-27f9-41b4-895f-5dfa4804000&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/55fe582cea443b975f883b09dce7b908.png)
 
 ---
 
@@ -382,7 +390,7 @@ TLAB：Thread Local Allocation Buffer，为每个线程在堆内单独分配了�
 
 堆区是线程共享区域，任何线程都可以访问到堆区中的共享数据，由于对象实例的创建在 JVM 中非常频繁，因此在并发环境下为避免多个线程操作同一地址，需要使用加锁等机制，进而影响分配速度
 问题：堆空间都是共享的么？ 不一定，因为还有 TLAB，在堆中划分出一块区域，为每个线程所独占
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1711524667407-501bbe61-f294-41d5-9279-32aa32d78743.jpeg#averageHue=%23e3f5e3&clientId=u5b1215c9-629a-4&from=paste&id=uafcd436f&originHeight=508&originWidth=1019&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u2ab6ef5d-3c7b-4216-a538-d61ac9863b9&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/678bf6211f7dc005dd2f76800398904b.jpeg)
 JVM 是将 TLAB 作为内存分配的首选，但不是所有的对象实例都能够在 TLAB 中成功分配内存，一旦对象在 TLAB 空间分配内存失败时，JVM 就会通过**使用加锁机制确保数据操作的原子性**，从而直接在堆中分配内存
 栈上分配优先于 TLAB 分配进行，逃逸分析中若可进行栈上分配优化，会优先进行对象栈上直接分配内存
 参数设置：
@@ -391,7 +399,7 @@ JVM 是将 TLAB 作为内存分配的首选，但不是所有的对象实例都�
 - -XX:TLABWasteTargetPercent：设置 TLAB 空间所占用 Eden 空间的百分比大小，默认情况下 TLAB 空间的内存非常小，仅占有整个 Eden 空间的1%
 - -XX:TLABRefillWasteFraction：指当 TLAB 空间不足，请求分配的对象内存大小超过此阈值时不会进行 TLAB 分配，直接进行堆内存分配，否则还是会优先进行 TLAB 分配
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1711524667688-65583624-a4bb-4afa-8367-d1033d2a0afa.jpeg#averageHue=%23f6f9f6&clientId=u5b1215c9-629a-4&from=paste&id=u1eaccce4&originHeight=487&originWidth=1048&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uf6c0d102-ccaa-425e-b593-65895952192&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ddd67376615ecacff646c3750cf228a1.jpeg)
 
 ---
 
@@ -466,7 +474,7 @@ Java8 时，堆被分为了两份：新生代和老年代（1:2），在 Java7 �
 - Full GC：回收老年代和新生代，老年代对象其存活时间长，所以 Full GC 很少执行，执行速度会比 Minor GC 慢很多
 
 Eden 和 Survivor 大小比例默认为 8:1:1
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524667735-3f6b912d-fea7-4bf9-971e-844bc252ce32.png#averageHue=%23fdfdfd&clientId=u5b1215c9-629a-4&from=paste&id=uc05c58ea&originHeight=316&originWidth=738&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u078249b5-a242-4e90-b16d-70909127ea0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/873faab384f6692a236787595f170168.png)
 
 ---
 
@@ -593,7 +601,7 @@ public class Test {
     }
 }
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524667840-d57f76e1-d8c0-434d-91c0-452cabd413b6.png#averageHue=%23f5f8f5&clientId=u5b1215c9-629a-4&from=paste&id=u9b8bf320&originHeight=516&originWidth=942&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u5d8cdb00-a094-4a00-a5f2-a6888ab46d7&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/25b3464076634e4303159ceaea919bdc.png)
 
 ---
 
@@ -620,7 +628,7 @@ GC Roots 对象：
 
 - 可达性分析算法后，内存中的存活对象都会被根对象集合直接或间接连接着，搜索走过的路径称为引用链
 - 如果目标对象没有任何引用链相连，则是不可达的，就意味着该对象己经死亡，可以标记为垃圾对象
-- 在可达性分析算法中，只有能够被根对象集合直接或者间接连接的对象才是存活对象![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524668056-efe9c2ce-da01-4988-97db-390a9ee39274.png#averageHue=%23f8f2f2&clientId=u5b1215c9-629a-4&from=paste&id=u5cc18f60&originHeight=710&originWidth=1057&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u3befbb81-8f91-46ff-b586-d810cc63cff&title=)
+- 在可达性分析算法中，只有能够被根对象集合直接或者间接连接的对象才是存活对象![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ffa1107c12db63916f4daae8c9d50713.png)
 
 ---
 
@@ -642,7 +650,7 @@ GC Roots 对象：
 4. 重复步骤 3，直至灰色集合为空时结束
 5. 结束后，仍在白色集合的对象即为 GC Roots 不可达，可以进行回收
 
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711524668008-6d56af94-5a35-4e1f-bba9-581a24f909e6.gif#averageHue=%23f4f4f4&clientId=u5b1215c9-629a-4&from=paste&id=u12f8d3c5&originHeight=451&originWidth=706&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uefc3ae80-1bca-4deb-bf08-69f9264c0e2&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/77261eb8953c97e824e1757ce9c480d7.gif)
 参考文章：[https://www.jianshu.com/p/12544c0ad5c1](https://www.jianshu.com/p/12544c0ad5c1)
 
 ---
@@ -654,14 +662,14 @@ GC Roots 对象：
 - 针对并发标记开始后的**新对象**，通常的做法是直接全部当成黑色，也算浮动垃圾
 - 浮动垃圾并不会影响应用程序的正确性，只是需要等到下一轮垃圾回收中才被清除
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524668259-1b4c968b-c6cf-40be-b6d1-e5482e4125f2.png#averageHue=%23eeeeee&clientId=u5b1215c9-629a-4&from=paste&id=uc40f27b3&originHeight=420&originWidth=683&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u0c607f90-8030-4add-8df3-47dde1006e0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0b073c4ee45ac3e2597142e1c8bedf89.png)
 **漏标情况：**
 
 - 条件一：灰色对象断开了对一个白色对象的引用（直接或间接），即灰色对象原成员变量的引用发生了变化
 - 条件二：其他线程中修改了黑色对象，插入了一条或多条对该白色对象的新引用
 - 结果：导致该白色对象当作垃圾被 GC，影响到了程序的正确性
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524668336-6f486cfb-6534-4ac2-9de8-5ce383b2a627.png#averageHue=%23efeeee&clientId=u5b1215c9-629a-4&from=paste&id=u45310d4f&originHeight=432&originWidth=689&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u44bcb805-a212-4d2b-82de-fe8cc1d3cb6&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f6be9d36ebd5117486f1641f778da53d.png)
 代码角度解释漏标：
 ```
 Object G = objE.fieldG; // 读
@@ -703,7 +711,7 @@ Java 语言提供了对象终止（finalization）机制来允许开发人员提
 
 #### 引用分析
 无论是通过引用计数算法判断对象的引用数量，还是通过可达性分析算法判断对象是否可达，判定对象是否可被回收都与引用有关，Java 提供了四种强度不同的引用类型
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1712649802403-d6762359-52e5-4707-bd0f-0f84279ab30d.png#averageHue=%23f5f3ea&clientId=u5e01ae12-8fe4-4&from=paste&height=490&id=u9884b8cc&originHeight=607&originWidth=1215&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=255534&status=done&style=none&taskId=u932f0698-4ed4-4e62-b93f-241fe202fdd&title=&width=980.1680358063502)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b908690b787f94a6e67ba042d40f3824.png)
 
 1. 强引用：被强引用关联的对象不会被回收，只有所有 GCRoots 都不通过强引用引用该对象，才能被垃圾回收
    - 强引用可以直接访问目标对象
@@ -773,7 +781,7 @@ obj = null;
 #### 复制算法
 复制算法的核心就是，**将原有的内存空间一分为二，每次只用其中的一块**，在垃圾回收时，将正在使用的对象复制到另一个内存空间中，然后将该内存空间清理，交换两个内存的角色，完成垃圾的回收
 应用场景：如果内存中的垃圾对象较多，需要复制的对象就较少，这种情况下适合使用该方式并且效率比较高，反之则不适合
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524668543-928fdab2-e75b-43c5-bfc2-24c0ab0872ab.png#averageHue=%23f7f7f7&clientId=u5b1215c9-629a-4&from=paste&id=ucf9e2c1c&originHeight=462&originWidth=1107&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uc1e0d4b5-3d8e-448f-859b-4c7f8c3fd30&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1ee9c5a31ae62440f40407486147cff2.png)
 算法优点：
 
 - 没有标记和清除过程，实现简单，运行速度快
@@ -800,7 +808,7 @@ obj = null;
 - 标记和清除过程效率都不高
 - 会产生大量不连续的内存碎片，导致无法给大对象分配内存，需要维护一个空闲链表
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524668579-a47b64e2-afb0-4446-bac5-e34b807ab650.png#averageHue=%23ddecdd&clientId=u5b1215c9-629a-4&from=paste&id=u0bfaabd7&originHeight=652&originWidth=832&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u84bb05bc-0a2c-4e10-9093-d92d69eed5d&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cf9909ede39057412b71f4b3b0932014.png)
 
 ---
 
@@ -809,7 +817,7 @@ obj = null;
 标记阶段和标记清除算法一样，也是从根节点开始，对对象的引用进行标记，在清理阶段，并不是简单的直接清理可回收对象，而是**将存活对象都向内存另一端移动**，然后清理边界以外的垃圾，从而**解决了碎片化**的问题
 优点：不会产生内存碎片
 缺点：需要移动大量对象，处理效率比较低
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524668708-576c8c50-adbc-4e45-8daf-6f45895c73ba.png#averageHue=%23ddedde&clientId=u5b1215c9-629a-4&from=paste&id=u3b1b3791&originHeight=538&originWidth=667&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uad27ba39-d8ba-44aa-9b5c-732a8c7cfd0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/922e550a3e9847c4376a3585edde5766.png)
 
 |  | **Mark-Sweep** | **Mark-Compact** | **Copying** |
 | --- | --- | --- | --- |
@@ -843,7 +851,7 @@ GC 性能指标：
 - 快速：一个对象从诞生到被回收所经历的时间
 
 **垃圾收集器的组合关系**：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524785594-6b132973-73da-48d0-abe9-3f86e2ff4198.png#averageHue=%23dfe2df&clientId=u5b1215c9-629a-4&from=paste&id=u15b38411&originHeight=472&originWidth=872&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u0dc5a297-4f88-4438-a278-c3842f44355&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/47151df77a8094f1b81394146c8112cd.png)
 新生代收集器：Serial、ParNew、Parallel Scavenge
 老年代收集器：Serial old、Parallel old、CMS
 整堆收集器：G1
@@ -868,7 +876,7 @@ Serial：串行垃圾收集器，作用于新生代，是指使用单线程进�
    - 作为老年代 CMS 收集器的**后备垃圾回收方案**，在并发收集发生 Concurrent Mode Failure 时使用
 
 开启参数：-XX:+UseSerialGC 等价于新生代用 Serial GC 且老年代用 Serial old GC
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524785589-b98e185c-7999-4dd5-80dc-b0033a086053.png#averageHue=%23e9ece9&clientId=u5b1215c9-629a-4&from=paste&id=u5687dcef&originHeight=328&originWidth=1065&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u960d3b5d-20b5-450d-83c7-38877d2b008&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/64151173672f7102e3c09f7c141ade13.png)
 优点：简单而高效（与其他收集器的单线程比），对于限定单个 CPU 的环境来说，Serial 收集器由于没有线程交互的开销，可以获得最高的单线程收集效率
 缺点：对于交互性较强的应用而言，这种垃圾收集器是不能够接受的，比如 JavaWeb 应用
 
@@ -883,7 +891,7 @@ Par 是 Parallel 并行的缩写，New 是只能处理的是新生代
 - -XX：+UseParNewGC：表示年轻代使用并行收集器，不影响老年代
 - -XX:ParallelGCThreads：默认开启和 CPU 数量相同的线程数
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524785646-0b8332b3-02ea-4578-b440-239f948fd315.png#averageHue=%23e8ebe8&clientId=u5b1215c9-629a-4&from=paste&id=u27f65e34&originHeight=322&originWidth=1104&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u3889dbb6-ad9e-4526-8ac1-c5319e160a1&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d48836456ec2fe328283eb74b88b695c.png)
 ParNew 是很多 JVM 运行在 Server 模式下新生代的默认垃圾收集器
 
 - 对于新生代，回收次数频繁，使用并行方式高效
@@ -907,7 +915,7 @@ Parallel Old 收集器：是一个应用于老年代的并行垃圾回收器，*
 
 停顿时间和吞吐量的关系：新生代空间变小 → 缩短停顿时间 → 垃圾回收变得频繁 → 导致吞吐量下降
 在注重吞吐量及 CPU 资源敏感的场合，都可以优先考虑 Parallel Scavenge + Parallel Old 收集器，在 Server 模式下的内存回收性能很好，**Java8 默认是此垃圾收集器组合**
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524785604-db3f4488-ea60-40a3-b984-0ef28ba3eda4.png#averageHue=%23e8ebe8&clientId=u5b1215c9-629a-4&from=paste&id=ubfc4aeb1&originHeight=341&originWidth=1111&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u61dd3de9-a69f-45d3-ba69-601e20ae053&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/719d17b0148b678c7991bee48b246b33.png)
 参数配置：
 
 - -XX：+UseParallelGC：手动指定年轻代使用 Paralle 并行收集器执行内存回收任务
@@ -938,7 +946,7 @@ CMS 收集器的关注点是尽可能缩短垃圾收集时用户线程的停顿�
 
 Mark Sweep 会造成内存碎片，不把算法换成 Mark Compact 的原因：Mark Compact 算法会整理内存，导致用户线程使用的**对象的地址改变**，影响用户线程继续执行
 在整个过程中耗时最长的并发标记和并发清除过程中，收集器线程都可以与用户线程一起工作，不需要进行停顿
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524785623-613808e5-4de9-44e6-a717-05c6150f0a5c.png#averageHue=%23eaedea&clientId=u5b1215c9-629a-4&from=paste&id=ud8037204&originHeight=328&originWidth=1061&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uf5844393-d605-40ab-a11f-e2a7e689ecf&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3dc444144f64b1509daafe002d5fd2f7.png)
 优点：并发收集、低延迟
 缺点：
 
@@ -976,7 +984,7 @@ G1 对比其他处理器的优点：
    - G1 不会对巨型对象进行拷贝，回收时被优先考虑，G1 会跟踪老年代所有 incoming 引用，这样老年代 incoming 引用为 0 的巨型对象就可以在新生代垃圾回收时处理掉
    - Region 结构图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786198-f50eefe7-2272-4477-9a1b-94d0726ba6df.png#averageHue=%23c6b840&clientId=u5b1215c9-629a-4&from=paste&id=u7d6af775&originHeight=280&originWidth=681&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ufce7e4b0-6be5-4cfd-a99e-facdbdeac81&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bcefea7456bf6fb8a92e0d2b9c8831dc.png)
 
 - 空间整合：
    - CMS：标记-清除算法、内存碎片、若干次 GC 后进行一次碎片整理
@@ -1000,7 +1008,7 @@ G1 垃圾收集器的缺点：
 
 ##### 记忆集
 记忆集 Remembered Set 在新生代中，每个 Region 都有一个 Remembered Set，用来被哪些其他 Region 里的对象引用（谁引用了我就记录谁）
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786277-8c95fddc-1dfa-47b5-8fa9-7ec686e98a90.png#averageHue=%23f5f5f3&clientId=u5b1215c9-629a-4&from=paste&id=u39bada2f&originHeight=412&originWidth=906&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u542e2dc1-0e0c-4e90-89d4-c1ed3c28245&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2f28a170640ae08713af150b630f1e91.png)
 
 - 程序对 Reference 类型数据写操作时，产生一个 Write Barrier 暂时中断操作，检查该对象和 Reference 类型数据是否在不同的 Region（跨代引用），不同就将相关引用信息记录到 Reference 类型所属的 Region 的 Remembered Set 之中
 - 进行内存回收时，在 GC 根节点的枚举范围中加入 Remembered Set 即可保证不对全堆扫描也不会有遗漏
@@ -1025,7 +1033,7 @@ G1 中提供了三种垃圾回收模式：YoungGC、Mixed GC 和 Full GC，在�
 - 当堆内存使用达到一定值（默认 45%）时，开始老年代并发标记过程
 - 标记完成马上开始混合回收过程
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786306-f67adf72-473e-46e1-934a-1dbb09d42fc4.png#averageHue=%23e4f3e4&clientId=u5b1215c9-629a-4&from=paste&id=u544cd465&originHeight=402&originWidth=1129&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ua011e423-217d-47f3-becb-26da1b1003c&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d38991dd811a0e26cbba883082b850c1.png)
 顺时针：Young GC → Young GC + Concurrent Mark → Mixed GC 顺序，进行垃圾回收
 
 - **Young GC**：发生在年轻代的 GC 算法，一般对象（除了巨型对象）都是在 eden region 中分配内存，当所有 eden region 被耗尽无法申请内存时，就会触发一次 Young GC，G1 停止应用程序的执行 STW，把活跃对象放入老年代，垃圾对象回收**回收过程**：
@@ -1041,7 +1049,7 @@ G1 中提供了三种垃圾回收模式：YoungGC、Mixed GC 和 Full GC，在�
    - 并发标记 (Concurrent Marking)：在整个堆中进行并发标记（应用程序并发执行），可能被 YoungGC 中断。会计算每个区域的对象活性，即区域中存活对象的比例，若区域中的所有对象都是垃圾，则这个区域会被立即回收（**实时回收**），给浮动垃圾准备出更多的空间，把需要收集的 Region 放入 CSet 当中
    - 最终标记：为了修正在并发标记期间因用户程序继续运作而导致标记产生变动的那一部分标记记录，虚拟机将这段时间对象变化记录在线程的 Remembered Set Logs 里面，最终标记阶段需要把 Remembered Set Logs 的数据合并到 Remembered Set 中，这阶段需要停顿线程，但是可并行执行（**防止漏标**）
    - 筛选回收：并发清理阶段，首先对 CSet 中各个 Region 中的回收价值和成本进行排序，根据用户所期望的 GC 停顿时间来制定回收计划，也需要 STW
-- ![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1711524786415-0cb05b06-bac8-42e5-806f-275e34dc3989.jpeg#averageHue=%23e9eae6&clientId=u5b1215c9-629a-4&from=paste&id=u86262507&originHeight=249&originWidth=763&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u5eb6f8d0-a08c-42bf-99b9-d758414c6b1&title=)
+- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/338c545e6edca38206f9e05d4e20f76b.jpeg)
 - **Mixed GC**：当很多对象晋升到老年代时，为了避免堆内存被耗尽，虚拟机会触发一个混合的垃圾收集器，即 Mixed GC，除了回收整个 young region，还会回收一部分的 old region，过程同 YGC注意：**是一部分老年代，而不是全部老年代**，可以选择哪些老年代 region 收集，对垃圾回收的时间进行控制在 G1 中，Mixed GC 可以通过 -XX:InitiatingHeapOccupancyPercent 设置阈值
 - **Full GC**：对象内存分配速度过快，Mixed GC 来不及回收，导致老年代被填满，就会触发一次 Full GC，G1 的 Full GC 算法就是单线程执行的垃圾回收，会导致异常长时间的暂停时间，需要进行不断的调优，尽可能的避免 Full GC产生 Full GC 的原因：
    - 晋升时没有足够的空间存放晋升的对象
@@ -1124,7 +1132,7 @@ Serial GC、Parallel GC、Concurrent Mark Sweep GC 这三个 GC 不同：
 - 最大化应用程序的吞吐量，选 Parallel GC
 - 最小化 GC 的中断或停顿时间，选 CMS GC
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786399-f7b3b971-4f7d-427d-a5a5-0f142eac49f9.png#averageHue=%23aac4af&clientId=u5b1215c9-629a-4&from=paste&id=u06736d8e&originHeight=312&originWidth=1149&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u68f8825c-a52a-49f2-9d99-49d303d23eb&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/10c7b12bd11ee69ce33f9746888910cc.png)
 
 ---
 
@@ -1298,7 +1306,7 @@ private int hash32;
 深堆（Retained Heap）：指对象的保留集中所有的对象的浅堆大小之和，一个对象的深堆指只能通过该对象访问到的（直接或间接）所有对象的浅堆之和，即对象被回收后，可以释放的真实空间
 对象的实际大小：一个对象所能触及的所有对象的浅堆大小之和，也就是通常意义上我们说的对象大小
 下图显示了一个简单的对象引用关系图，对象 A 引用了 C 和 D，对象 B 引用了 C 和 E。那么对象 A 的浅堆大小只是 A 本身，**A 的实际大小为 A、C、D 三者之和**，A 的深堆大小为 A 与 D 之和，由于对象 C 还可以通过对象 B 访问到 C，因此 C 不在对象 A 的深堆范围内
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786852-8e6f8a22-3047-40ce-8c38-5e5781dcbfbb.png#averageHue=%23c0c3be&clientId=u5b1215c9-629a-4&from=paste&id=u3942c21d&originHeight=315&originWidth=549&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uab2f0be8-9885-449b-993e-078827faec0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ea72be8dfc3fed9aafa4b54eb95aebc3.png)
 内存分析工具 MAT 提供了一种叫支配树的对象图，体现了对象实例间的支配关系
 基本性质：
 
@@ -1307,7 +1315,7 @@ private int hash32;
 - 支配树的边与对象引用图的边不直接对应
 
 左图表示对象引用图，右图表示左图所对应的支配树：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524787251-ccc9397e-8b18-41b3-a5b3-91c44b4a3a52.png#averageHue=%23f9f2e3&clientId=u5b1215c9-629a-4&from=paste&id=u7e5ba110&originHeight=387&originWidth=556&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4f66197e-f89f-4cb0-87de-cc2f538c9a5&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/780cfc61d31c94ea35914209af4868aa.png)
 比如：对象 F 与对象 D 相互引用，因为到对象 F 的所有路径必然经过对象 D，因此对象 D 是对象 F 的直接支配者
 参考文章：[https://www.yuque.com/u21195183/jvm/nkq31c](https://www.yuque.com/u21195183/jvm/nkq31c)
 
@@ -1331,8 +1339,8 @@ Mark Word 占 4byte，Klass Word 占 4byte，一个 int 字段占 4byte，elemen
 #### 对象访问
 JVM 是通过**栈帧中的对象引用**访问到其内部的对象实例：
 
-- 句柄访问：Java 堆中会划分出一块内存来作为句柄池，reference 中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息优点：reference 中存储的是稳定的句柄地址，在对象被移动（垃圾收集）时只会改变句柄中的实例数据指针，而 reference 本身不需要被修改![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786923-271cc009-b5e4-4b97-be42-89e76e49a215.png#averageHue=%23becdbc&clientId=u5b1215c9-629a-4&from=paste&id=u188fc475&originHeight=336&originWidth=680&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u550c8014-5254-4256-b418-2471cca6c7c&title=)
-- 直接指针（HotSpot 采用）：Java 堆对象的布局必须考虑如何放置访问类型数据的相关信息，reference 中直接存储的对象地址优点：速度更快，**节省了一次指针定位的时间开销**缺点：对象被移动时（如进行 GC 后的内存重新排列），对象的 reference 也需要同步更新![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524786946-16d600d6-f581-42ea-b96a-019f27f0f4e8.png#averageHue=%23b5d7b3&clientId=u5b1215c9-629a-4&from=paste&id=u69358678&originHeight=336&originWidth=680&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ua25b73f5-1402-4a44-b448-305c7b6ab26&title=)
+- 句柄访问：Java 堆中会划分出一块内存来作为句柄池，reference 中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息优点：reference 中存储的是稳定的句柄地址，在对象被移动（垃圾收集）时只会改变句柄中的实例数据指针，而 reference 本身不需要被修改![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9f3ced871b8b1f60f48633e3b59b6a08.png)
+- 直接指针（HotSpot 采用）：Java 堆对象的布局必须考虑如何放置访问类型数据的相关信息，reference 中直接存储的对象地址优点：速度更快，**节省了一次指针定位的时间开销**缺点：对象被移动时（如进行 GC 后的内存重新排列），对象的 reference 也需要同步更新![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5a6955446e231db07bda0304e0b5f9f2.png)
 
 参考文章：[https://www.cnblogs.com/afraidToForget/p/12584866.html](https://www.cnblogs.com/afraidToForget/p/12584866.html)
 
@@ -1463,7 +1471,7 @@ public class StaticTest {
 ### 加载过程
 #### 生命周期
 类是在运行期间**第一次使用时动态加载**的（不使用不加载），而不是一次性加载所有类，因为一次性加载会占用很多的内存，加载的类信息存放于一块成为方法区的内存空间
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524787278-da060901-7d0e-4621-a902-a3bdf16a6c9c.png#averageHue=%23f7f6f6&clientId=u5b1215c9-629a-4&from=paste&id=uc2b92a2c&originHeight=234&originWidth=1092&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ub8838dfa-0e87-44ee-8f06-96d57084dac&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/98cf06e4fe54a5ad09c7c5aa86443c55.png)
 包括 7 个阶段：
 
 - 加载（Loading）
@@ -1500,7 +1508,7 @@ public class StaticTest {
 - 加载和链接可能是交替运行的
 - Class 对象和 _java_mirror 相互持有对方的地址，堆中对象通过 instanceKlass 和元空间进行交互
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524787481-7a474a1f-cdee-4b90-8686-df57c7293762.png#averageHue=%23eef4bd&clientId=u5b1215c9-629a-4&from=paste&id=u96063abe&originHeight=379&originWidth=817&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u9138efe0-c222-4722-9183-154c57d44a2&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f65f8da8f54f7285f22bb557ebea0a6c.png)
 创建数组类有些特殊，因为数组类本身并不是由类加载器负责创建，而是由 JVM 在运行时根据需要而直接创建的，但数组的元素类型仍然需要依靠类加载器去创建，创建数组类的过程：
 
 - 如果数组的元素类型是引用类型，那么遵循定义的加载过程递归加载和创建数组的元素类型
@@ -1797,7 +1805,7 @@ public class String {
 ```
 此时执行 main 函数会出现异常，在类 java.lang.String 中找不到 main 方法。因为双亲委派的机制，java.lang.String 的在启动类加载器（Bootstrap）得到加载，启动类加载器优先级更高，在核心 jre 库中有其相同名字的类文件，但该类中并没有 main 方法
 双亲委派机制的缺点：检查类是否加载的委托过程是单向的，这个方式虽然从结构上看比较清晰，使各个 ClassLoader 的职责非常明确，但**顶层的 ClassLoader 无法访问底层的 ClassLoader 所加载的类**（可见性）
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524787517-ad685fa4-c885-405e-b36e-edd894660997.png#averageHue=%23e9e3b0&clientId=u5b1215c9-629a-4&from=paste&id=uae4da1cf&originHeight=1166&originWidth=1200&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ueb044d63-5eb8-44cd-b5b5-a388871ddac&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e98047286ec30d67bf7328b8f3c83afe.png)
 
 ---
 
@@ -1869,7 +1877,7 @@ protected Class<?> loadClass(String name, boolean resolve)
    7. 否则，类查找失败
 - 热替换是指在程序的运行过程中，不停止服务，只通过替换程序文件来修改程序的行为，**热替换的关键需求在于服务不能中断**，修改必须立即表现正在运行的系统之中
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524787595-f3d4a9d9-81ce-4577-8a4e-878f6b499c0c.png#averageHue=%23f4f3f3&clientId=u5b1215c9-629a-4&from=paste&id=u1f48188d&originHeight=1144&originWidth=2088&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4596d22e-441f-42a5-a395-123fb2cf0f7&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8da7e0aff495f29e5365c07bde4d9fb9.png)
 
 ---
 
@@ -1882,7 +1890,7 @@ protected Class<?> loadClass(String name, boolean resolve)
 - JDK1.2：改进了安全机制，增加了代码签名，不论本地代码或是远程代码都会按照用户的安全策略设定，由类加载器加载到虚拟机中权限不同的运行空间，来实现差异化的代码执行权限控制
 - JDK1.6：当前最新的安全机制，引入了域（Domain）的概念。虚拟机会把所有代码加载到不同的系统域和应用域，不同的保护域对应不一样的权限。系统域部分专门负责与关键资源进行交互，而各个应用域部分则通过系统域的部分代理来对各种需要的资源进行访问
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524787858-8abb28da-d247-4c5d-bd7b-1e16ec34057f.png#averageHue=%23ebd3bf&clientId=u5b1215c9-629a-4&from=paste&id=u560ada39&originHeight=473&originWidth=955&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u76d2e5ef-079d-486d-90d3-0c91601439b&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/304ddedbce5612daa9bd0f90fafdaacc.png)
 
 ---
 
@@ -1974,7 +1982,7 @@ public static void main(String[] args) {
 ## 运行机制
 ### 执行过程
 Java 文件编译执行的过程：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711524788009-41b035f6-c077-4566-9473-f7bd24d7ab72.png#averageHue=%23c2f2c2&clientId=u5b1215c9-629a-4&from=paste&id=u5b90cd0e&originHeight=739&originWidth=1382&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u9a691c99-4b9d-41eb-8c79-841b4030875&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d537dcc106deb9737069a53ad80aa998.png)
 
 - 类加载器：用于装载字节码文件（.class文件）
 - 运行时数据区：用于分配存储空间
@@ -2030,7 +2038,7 @@ Java 语言：跨平台的语言（write once ，run anywhere）
 - 字节码为了实现特定软件运行和软件环境，与硬件环境无关
 - 通过编译器和虚拟机器实现，编译器将源码编译成字节码，虚拟机器将字节码转译为可以直接执行的指令
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163147-0db5b2d1-46bb-43fc-b37d-81c264432194.png#averageHue=%236aa8e2&clientId=u5b1215c9-629a-4&from=paste&id=uf03563c6&originHeight=784&originWidth=1280&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uabf00cae-fea3-4221-8272-cff59238b59&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/374b88bc98647002b4e5da4247cad667.png)
 
 ---
 
@@ -2115,7 +2123,7 @@ Class 文件格式采用一种类似于 C 语言结构体的方式进行数据�
 | 54 | 0 | 1.10 |
 | 55 | 0 | 1.11 |
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163193-e440f28e-6dc0-4b3c-a1dd-77188cb48f98.png#averageHue=%23f7dc78&clientId=u5b1215c9-629a-4&from=paste&id=u224f0083&originHeight=1021&originWidth=2350&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u2787dc0b-0a5d-42ac-a483-16ab668ac0f&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/377512f7ab66f8dadd50c1b01ec3b620.png)
 图片来源：[https://www.bilibili.com/video/BV1PJ411n7xZ](https://www.bilibili.com/video/BV1PJ411n7xZ)
 
 ---
@@ -2750,7 +2758,7 @@ Exception table:
 - montiorenter：进入并获取对象监视器，即为栈顶对象加锁
 - monitorexit：释放并退出对象监视器，即为栈顶对象解锁
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163206-be95169f-0ec0-4930-91c0-0da487806373.png#averageHue=%23e9e8e9&clientId=u5b1215c9-629a-4&from=paste&id=u37031a02&originHeight=723&originWidth=1570&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u2a418f8a-7ec0-44a8-8b26-ea5e4712b07&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a79e0b076426ef1ab91118bb18a0cf7.png)
 
 ---
 
@@ -2776,14 +2784,14 @@ javap -v Demo.class：省略
    - ldc 将一个 int 压入操作数栈
    - ldc2_w 将一个 long 压入操作数栈（分两次压入，因为 long 是 8 个字节）
    - 这里小的数字都是和字节码指令存在一起，超过 short 范围的数字存入了常量池
-- istore_1：将操作数栈顶数据弹出，存入局部变量表的 slot 1![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163178-e5adf1fc-7ad9-4102-acfd-a14f30472223.png#averageHue=%23d0f1bd&clientId=u5b1215c9-629a-4&from=paste&id=u6af00070&originHeight=389&originWidth=958&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u31ac054d-9ae3-4ba9-96ca-dae392123c4&title=)ldc #3：从常量池加载 #3 数据到操作数栈Short.MAX_VALUE 是 32767，所以 32768 = Short.MAX_VALUE + 1 实际是在编译期间计算完成![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163195-06e176e3-51d2-4c26-8158-287467c55052.png#averageHue=%23dafac2&clientId=u5b1215c9-629a-4&from=paste&id=ub3576ee8&originHeight=446&originWidth=1110&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u996bdeae-193b-4b95-b32e-09a07a1ed0d&title=)istore_2：将操作数栈顶数据弹出，存入局部变量表的 slot 2iload_1：将局部变量表的 slot 1 数据弹出，放入操作数栈栈顶iload_2：将局部变量表的 slot 2 数据弹出，放入操作数栈栈顶iadd：执行相加操作![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163740-f7ab1684-efdf-4d1a-bc92-481e9e19bd58.png#averageHue=%23dffdc5&clientId=u5b1215c9-629a-4&from=paste&id=u6157eba7&originHeight=699&originWidth=839&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u795ed31a-53ce-42ce-93fc-2b758143ceb&title=)istore_3：将操作数栈顶数据弹出，存入局部变量表的 slot 3getstatic #4：获取静态字段![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163804-8c32b111-e818-46ca-ad7d-526708086509.png#averageHue=%23dafdc6&clientId=u5b1215c9-629a-4&from=paste&id=ufcfdb43a&originHeight=336&originWidth=829&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u5dcad653-3236-4c5d-8ab4-51354224722&title=)iload_3：![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163914-2e2d5d1b-aefb-46fb-9a72-bc996ad72414.png#averageHue=%23e1fdc6&clientId=u5b1215c9-629a-4&from=paste&id=u4f47a4f7&originHeight=333&originWidth=833&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=udca9cf43-0bf1-4ae2-9918-87e6af51dc5&title=)invokevirtual #5：
+- istore_1：将操作数栈顶数据弹出，存入局部变量表的 slot 1![](https://raw.githubusercontent.com/choodsire666/blog-img/main/795c75cfc8a7b75155fa25183a25fcce.png)ldc #3：从常量池加载 #3 数据到操作数栈Short.MAX_VALUE 是 32767，所以 32768 = Short.MAX_VALUE + 1 实际是在编译期间计算完成![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b797bfc3173807f8f1a30e3a94ba8da3.png)istore_2：将操作数栈顶数据弹出，存入局部变量表的 slot 2iload_1：将局部变量表的 slot 1 数据弹出，放入操作数栈栈顶iload_2：将局部变量表的 slot 2 数据弹出，放入操作数栈栈顶iadd：执行相加操作![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6d604ede4b3d524e5f4f9fc8c590635e.png)istore_3：将操作数栈顶数据弹出，存入局部变量表的 slot 3getstatic #4：获取静态字段![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f393f6b9f6e0bc4b2a91fba892d7f39c.png)iload_3：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e38b4c47c55a5b905af8335020633959.png)invokevirtual #5：
    - 找到常量池 #5 项
    - 定位到方法区 java/io/PrintStream.println:(I)V 方法
    - **生成新的栈帧**（分配 locals、stack等）
    - 传递参数，执行新栈帧中的字节码
    - 执行完毕，弹出栈帧
    - 清除 main 操作数栈内容
-- ![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525163940-13ff836a-e2eb-494e-9805-3ab513bf2009.png#averageHue=%23dcf3c7&clientId=u5b1215c9-629a-4&from=paste&id=u3dd40017&originHeight=452&originWidth=960&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uaee160b7-36b5-4d1d-92e9-c081760e4d3&title=)return：完成 main 方法调用，弹出 main 栈帧，程序结束
+- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a12926def21b223011235cc96ba71c31.png)return：完成 main 方法调用，弹出 main 栈帧，程序结束
 
 ---
 
@@ -2815,7 +2823,7 @@ HotSpot VM 可以通过 VM 参数设置程序执行方式：
 - -Xcomp：完全采用即时编译器模式执行程序。如果即时编译出现问题，解释器会介入执行
 - -Xmixed：采用解释器 + 即时编译器的混合模式共同执行程序
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525164124-9bb05b12-6f90-48df-8119-a319d9808595.png#averageHue=%23b6d8c7&clientId=u5b1215c9-629a-4&from=paste&id=ub9eed05b&originHeight=548&originWidth=1280&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4afcc87c-ca94-4fd9-984a-313311f7b3c&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8995bdc873405d71dfe1110d6daa4917.png)
 
 ---
 
@@ -3055,7 +3063,7 @@ Java 虚拟机中关于方法重写的判定基于方法描述符，如果子类
 - 其一，子类方法表中包含父类方法表中的**所有方法**，并且在方法表中的索引值与父类方法表种的索引值相同
 - 其二，**非重写的方法指向父类的方法表项，与父类共享一个方法表项，重写的方法指向本身自己的实现**，这就是为什么多态情况下可以访问父类的方法。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525164381-8dfe42db-fe2e-45a9-9ba9-211d797fc4ee.png#averageHue=%23f8f2e1&clientId=u5b1215c9-629a-4&from=paste&id=ud4bd577e&originHeight=219&originWidth=631&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=udef08ecf-858d-428a-af97-36716bb6278&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5b6ad8248b02bcc28e339b013bc13792.png)
 Passenger 类的方法表包括两个方法，分别对应 0 号和 1 号。方法表调换了 toString 方法和 passThroughImmigration 方法的位置，是因为 toString 方法的索引值需要与 Object 类中同名方法的索引值一致，为了保持简洁，这里不考虑 Object 类中的其他方法。
 虚方法表对性能的影响：
 
@@ -3086,7 +3094,7 @@ class Girl extends Person {
     public void sing() {}
 }
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525164451-e6f7d05c-5242-4642-ab37-fde35ca07dff.png#averageHue=%23f6f6f3&clientId=u5b1215c9-629a-4&from=paste&id=u7d735414&originHeight=255&originWidth=543&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ub1bb00b2-2bdc-4443-8fed-8c1835d43d3&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe3e200d2d31af46d0265b6b35e2cd6a.png)
 参考文档：[https://www.cnblogs.com/kaleidoscope/p/9790766.html](https://www.cnblogs.com/kaleidoscope/p/9790766.html)
 
 ---
@@ -3762,7 +3770,7 @@ jcmd 进程号 help：针对指定的进程，列出支持的所有具体命令
 #### jstatd
 jstatd 是一个 RMI 服务端程序，相当于代理服务器，建立本地计算机与远程监控工具的通信，jstatd 服务器将本机的 Java 应用程序信息传递到远程计算机
 远程主机信息收集，前面的指令只涉及到监控本机的 Java 应用程序，而在这些工具中，一些监控工具也支持对远程计算机的监控（如 jps、jstat），为了启用远程监控，则需要配合使用 jstatd 工具。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525164565-16d58733-0e9b-4989-b0bb-f8adb78fdacc.png#averageHue=%236a5c4c&clientId=u5b1215c9-629a-4&from=paste&id=u9d22d8ff&originHeight=298&originWidth=835&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ua2d92273-592e-45be-b300-ad513fd7c67&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a4edaaf2766e735d3c2395b81bbcd18e.png)
 
 ---
 

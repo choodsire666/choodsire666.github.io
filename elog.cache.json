@@ -1,20 +1,47 @@
 {
   "docs": [
     {
-      "id": 90161528,
-      "doc_id": "hug0bw",
-      "updated": 1716368390000,
+      "id": 169310275,
+      "doc_id": "rud7yqbfaig1h5m7",
+      "updated": 1716430300000,
       "properties": {
-        "title": "疑问",
-        "urlname": "hug0bw",
-        "date": "2022-08-21 09:32:12",
-        "updated": "2024-05-22 16:59:50",
-        "description": "啥时候用int或者Integer1） 所有的POJO类属性必须使用包装数据类型。2） RPC方法的返回值和参数必须使用包装数据类型。3） 所有的局部变量推荐使用基本数据类型。两者之间的区别：最本质的区别：基本数据类型不是对象，包装类型是对象存储位置不同：基本类型是直接将变量值存储在栈中，而包装..."
+        "title": "工作周报",
+        "urlname": "rud7yqbfaig1h5m7",
+        "date": "2024-05-12 12:02:22",
+        "updated": "2024-05-23 10:11:40",
+        "description": "日期：2024-5-12本周重点1.任务进展本周完成了哪些任务、整体进度如何。本周完成了XXX需求开发，已经提测。项目整体进度比预期延迟1d，预计下周三可以开始正式测试。2.相关数据呈现相关数据以及背后的原因（如有）。本周日均 UV 3000，同比上周上涨20%。原因是周二投放的运营活动生效，..."
       },
       "catalog": [],
-      "realName": "疑问",
-      "relativePath": "\\疑问.md",
-      "docPath": "./source/_posts/yuque"
+      "realName": "工作周报",
+      "relativePath": "\\工作周报.md",
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
+      "id": 161661313,
+      "doc_id": "dx44u12yyxklvoss",
+      "updated": 1716811001000,
+      "properties": {
+        "title": "01数据库描述",
+        "urlname": "dx44u12yyxklvoss",
+        "date": "2024-03-13 16:53:33",
+        "updated": "2024-05-27 19:56:41",
+        "description": "描述",
+        "tags": [
+          "Mysql"
+        ],
+        "categories": [
+          "Mysql"
+        ]
+      },
+      "catalog": [
+        {
+          "title": "MySQL",
+          "doc_id": "dx44u12yyxklvoss"
+        }
+      ],
+      "realName": "01数据库描述",
+      "relativePath": "\\MySQL\\01数据库描述.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 169310315,
@@ -30,23 +57,7 @@
       "catalog": [],
       "realName": "工作日报",
       "relativePath": "\\工作日报.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 169310275,
-      "doc_id": "rud7yqbfaig1h5m7",
-      "updated": 1716430300000,
-      "properties": {
-        "title": "工作周报",
-        "urlname": "rud7yqbfaig1h5m7",
-        "date": "2024-05-12 12:02:22",
-        "updated": "2024-05-23 10:11:40",
-        "description": "日期：2024-5-12本周重点1.任务进展本周完成了哪些任务、整体进度如何。本周完成了XXX需求开发，已经提测。项目整体进度比预期延迟1d，预计下周三可以开始正式测试。2.相关数据呈现相关数据以及背后的原因（如有）。本周日均 UV 3000，同比上周上涨20%。原因是周二投放的运营活动生效，..."
-      },
-      "catalog": [],
-      "realName": "工作周报",
-      "relativePath": "\\工作周报.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 105678488,
@@ -63,7 +74,23 @@
       "catalog": [],
       "realName": "学习思考和方法总结",
       "relativePath": "\\学习思考和方法总结.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
+      "id": 90161528,
+      "doc_id": "hug0bw",
+      "updated": 1716368390000,
+      "properties": {
+        "title": "疑问",
+        "urlname": "hug0bw",
+        "date": "2022-08-21 09:32:12",
+        "updated": "2024-05-22 16:59:50",
+        "description": "啥时候用int或者Integer1） 所有的POJO类属性必须使用包装数据类型。2） RPC方法的返回值和参数必须使用包装数据类型。3） 所有的局部变量推荐使用基本数据类型。两者之间的区别：最本质的区别：基本数据类型不是对象，包装类型是对象存储位置不同：基本类型是直接将变量值存储在栈中，而包装..."
+      },
+      "catalog": [],
+      "realName": "疑问",
+      "relativePath": "\\疑问.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 161666037,
@@ -88,8 +115,8 @@
         }
       ],
       "realName": "JDK8-17新特性（下）",
-      "relativePath": "\\JDK8-17新特性（下）.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\JDK8-17新特性\\JDK8-17新特性（下）.md",
+      "docPath": "source\\_posts\\yuque\\Java\\JDK8-17新特性"
     },
     {
       "id": 170041447,
@@ -109,8 +136,8 @@
         }
       ],
       "realName": "MobaXterm",
-      "relativePath": "\\MobaXterm.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\工具使用\\MobaXterm.md",
+      "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
       "id": 170041006,
@@ -130,8 +157,8 @@
         }
       ],
       "realName": "IDEA",
-      "relativePath": "\\IDEA.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\工具使用\\IDEA.md",
+      "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
       "id": 90161554,
@@ -148,23 +175,7 @@
       "catalog": [],
       "realName": "BUG库",
       "relativePath": "\\BUG库.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 162365021,
-      "doc_id": "qcrge7r13lkbwlg9",
-      "updated": 1715927452000,
-      "properties": {
-        "title": "Git|Linux|Docker",
-        "urlname": "qcrge7r13lkbwlg9",
-        "date": "2024-03-19 11:53:42",
-        "updated": "2024-05-17 14:30:52",
-        "description": "Git概述版本系统SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而开发人员工作的时候，用的都是自己的电脑，所以首先要从中央服务器下载最新的版本，然后开发，开发完后，需要把自己开发的代码提交到中央服务器。集中式版本控制工具缺点：服务器单点故障、容错性差Git 是分布式版本控制系统（..."
-      },
-      "catalog": [],
-      "realName": "Git!Linux!Docker",
-      "relativePath": "\\Git!Linux!Docker.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 170007503,
@@ -184,8 +195,24 @@
         }
       ],
       "realName": "业务需求",
-      "relativePath": "\\业务需求.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\yanhe_ledger\\业务需求.md",
+      "docPath": "source\\_posts\\yuque\\yanhe_ledger"
+    },
+    {
+      "id": 162365021,
+      "doc_id": "qcrge7r13lkbwlg9",
+      "updated": 1715927452000,
+      "properties": {
+        "title": "Git|Linux|Docker",
+        "urlname": "qcrge7r13lkbwlg9",
+        "date": "2024-03-19 11:53:42",
+        "updated": "2024-05-17 14:30:52",
+        "description": "Git概述版本系统SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而开发人员工作的时候，用的都是自己的电脑，所以首先要从中央服务器下载最新的版本，然后开发，开发完后，需要把自己开发的代码提交到中央服务器。集中式版本控制工具缺点：服务器单点故障、容错性差Git 是分布式版本控制系统（..."
+      },
+      "catalog": [],
+      "realName": "Git!Linux!Docker",
+      "relativePath": "\\Git!Linux!Docker.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 169935971,
@@ -205,8 +232,8 @@
         }
       ],
       "realName": "远程连接",
-      "relativePath": "\\远程连接.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\工具使用\\远程连接.md",
+      "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
       "id": 169874586,
@@ -226,8 +253,8 @@
         }
       ],
       "realName": "CollectionUtils",
-      "relativePath": "\\CollectionUtils.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\工具使用\\CollectionUtils.md",
+      "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
       "id": 163843757,
@@ -244,7 +271,7 @@
       "catalog": [],
       "realName": "MyBatis-Plus",
       "relativePath": "\\MyBatis-Plus.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 169783268,
@@ -264,30 +291,8 @@
         }
       ],
       "realName": "Apifox",
-      "relativePath": "\\Apifox.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161830164,
-      "doc_id": "ya82rih88q5s87o9",
-      "updated": 1715754377000,
-      "properties": {
-        "title": "SpringMVC",
-        "urlname": "ya82rih88q5s87o9",
-        "date": "2024-03-14 15:36:40",
-        "updated": "2024-05-15 14:26:17",
-        "cover": "https://www.yuque.com/api/filetransfer/images?url=http%3A%2F%2Fimgcloud.duiyi.xyz%2F%2Fdata20200522155555.png&amp;sign=2bdee9ce343324a48700f6fe21e124297b2938e3b3edb76f710c2d51f66c5885",
-        "description": "课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的..."
-      },
-      "catalog": [
-        {
-          "title": "SSM",
-          "doc_id": "ya82rih88q5s87o9"
-        }
-      ],
-      "realName": "SpringMVC",
-      "relativePath": "\\SpringMVC.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\工具使用\\Apifox.md",
+      "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
       "id": 169737425,
@@ -303,7 +308,7 @@
       "catalog": [],
       "realName": "smartlock",
       "relativePath": "\\smartlock.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 161780151,
@@ -324,8 +329,31 @@
         }
       ],
       "realName": "常见的API类",
-      "relativePath": "\\常见的API类.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\常见的API类.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\Java"
+    },
+    {
+      "id": 161830164,
+      "doc_id": "ya82rih88q5s87o9",
+      "updated": 1715754377000,
+      "properties": {
+        "title": "SpringMVC",
+        "urlname": "ya82rih88q5s87o9",
+        "date": "2024-03-14 15:36:40",
+        "updated": "2024-05-15 14:26:17",
+        "cover": "https://www.yuque.com/api/filetransfer/images?url=http%3A%2F%2Fimgcloud.duiyi.xyz%2F%2Fdata20200522155555.png&amp;sign=2bdee9ce343324a48700f6fe21e124297b2938e3b3edb76f710c2d51f66c5885",
+        "description": "课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的..."
+      },
+      "catalog": [
+        {
+          "title": "SSM",
+          "doc_id": "ya82rih88q5s87o9"
+        }
+      ],
+      "realName": "SpringMVC",
+      "relativePath": "\\SSM\\SpringMVC.md",
+      "docPath": "source\\_posts\\yuque\\SSM"
     },
     {
       "id": 167362001,
@@ -349,8 +377,8 @@
         }
       ],
       "realName": "MVCC版本控制",
-      "relativePath": "\\MVCC版本控制.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\知识点\\MVCC版本控制.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\知识点"
     },
     {
       "id": 90163434,
@@ -367,7 +395,7 @@
       "catalog": [],
       "realName": "算法和数据结构与GoF(设计模式)",
       "relativePath": "\\算法和数据结构与GoF(设计模式).md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 167361922,
@@ -391,8 +419,8 @@
         }
       ],
       "realName": "日志文件",
-      "relativePath": "\\日志文件.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\DM\\日志文件.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167361974,
@@ -416,8 +444,8 @@
         }
       ],
       "realName": "TransactionManager",
-      "relativePath": "\\TransactionManager.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\TM\\TransactionManager.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\TM"
     },
     {
       "id": 168434071,
@@ -434,7 +462,7 @@
       "catalog": [],
       "realName": "LIMS",
       "relativePath": "\\LIMS.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 167361997,
@@ -458,25 +486,8 @@
         }
       ],
       "realName": "死锁的检测",
-      "relativePath": "\\死锁的检测.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 91136321,
-      "doc_id": "xuk6bl",
-      "updated": 1715442784000,
-      "properties": {
-        "title": "SpringBoot",
-        "urlname": "xuk6bl",
-        "date": "2022-08-30 08:32:56",
-        "updated": "2024-05-11 23:53:04",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1662791824056-daa8dbc9-2b79-460f-ae25-0c628dc42928.png",
-        "description": "1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot..."
-      },
-      "catalog": [],
-      "realName": "SpringBoot",
-      "relativePath": "\\SpringBoot.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\VM\\死锁的检测.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\VM"
     },
     {
       "id": 167361993,
@@ -500,8 +511,42 @@
         }
       ],
       "realName": "事务的隔离级别",
-      "relativePath": "\\事务的隔离级别.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\VM\\事务的隔离级别.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\VM"
+    },
+    {
+      "id": 91136321,
+      "doc_id": "xuk6bl",
+      "updated": 1715442784000,
+      "properties": {
+        "title": "SpringBoot",
+        "urlname": "xuk6bl",
+        "date": "2022-08-30 08:32:56",
+        "updated": "2024-05-11 23:53:04",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1662791824056-daa8dbc9-2b79-460f-ae25-0c628dc42928.png",
+        "description": "1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot..."
+      },
+      "catalog": [],
+      "realName": "SpringBoot",
+      "relativePath": "\\SpringBoot.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
+      "id": 162404549,
+      "doc_id": "fp6ps3t3rlbygff4",
+      "updated": 1715562415000,
+      "properties": {
+        "title": "JavaWeb",
+        "urlname": "fp6ps3t3rlbygff4",
+        "date": "2024-03-19 16:02:01",
+        "updated": "2024-05-13 09:06:55",
+        "description": "HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku..."
+      },
+      "catalog": [],
+      "realName": "JavaWeb",
+      "relativePath": "\\JavaWeb.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 167361982,
@@ -525,8 +570,8 @@
         }
       ],
       "realName": "VM的实现",
-      "relativePath": "\\VM的实现.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\VM\\VM的实现.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\VM"
     },
     {
       "id": 167361971,
@@ -550,24 +595,8 @@
         }
       ],
       "realName": "字段与表管理",
-      "relativePath": "\\字段与表管理.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 162404549,
-      "doc_id": "fp6ps3t3rlbygff4",
-      "updated": 1715562415000,
-      "properties": {
-        "title": "JavaWeb",
-        "urlname": "fp6ps3t3rlbygff4",
-        "date": "2024-03-19 16:02:01",
-        "updated": "2024-05-13 09:06:55",
-        "description": "HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku..."
-      },
-      "catalog": [],
-      "realName": "JavaWeb",
-      "relativePath": "\\JavaWeb.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\TBM\\字段与表管理.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\TBM"
     },
     {
       "id": 167361958,
@@ -591,8 +620,8 @@
         }
       ],
       "realName": "SQL解析器",
-      "relativePath": "\\SQL解析器.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\TBM\\SQL解析器.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\TBM"
     },
     {
       "id": 167361929,
@@ -616,8 +645,8 @@
         }
       ],
       "realName": "页面缓冲",
-      "relativePath": "\\页面缓冲.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\DM\\页面缓冲.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167361926,
@@ -641,8 +670,8 @@
         }
       ],
       "realName": "引用计数缓存框架",
-      "relativePath": "\\引用计数缓存框架.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\DM\\引用计数缓存框架.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167362020,
@@ -666,8 +695,8 @@
         }
       ],
       "realName": "C_S通信",
-      "relativePath": "\\C_S通信.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\服务端和客户端\\C_S通信.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\服务端和客户端"
     },
     {
       "id": 167361918,
@@ -691,8 +720,8 @@
         }
       ],
       "realName": "页面索引",
-      "relativePath": "\\页面索引.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\DM\\页面索引.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167361915,
@@ -716,8 +745,8 @@
         }
       ],
       "realName": "DataManager",
-      "relativePath": "\\DataManager.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\DM\\DataManager.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167362013,
@@ -741,8 +770,8 @@
         }
       ],
       "realName": "事务管理",
-      "relativePath": "\\事务管理.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\知识点\\事务管理.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\知识点"
     },
     {
       "id": 167362025,
@@ -765,8 +794,8 @@
         }
       ],
       "realName": "Server 和 Client的实现",
-      "relativePath": "\\Server 和 Client的实现.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\服务端和客户端\\Server 和 Client的实现.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\服务端和客户端"
     },
     {
       "id": 167362011,
@@ -789,8 +818,8 @@
         }
       ],
       "realName": "两端锁协议-2PL",
-      "relativePath": "\\两端锁协议-2PL.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\知识点\\两端锁协议-2PL.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\知识点"
     },
     {
       "id": 167362007,
@@ -813,8 +842,8 @@
         }
       ],
       "realName": "基本知识点",
-      "relativePath": "\\基本知识点.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\知识点\\基本知识点.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\知识点"
     },
     {
       "id": 167361987,
@@ -837,8 +866,8 @@
         }
       ],
       "realName": "版本的记录",
-      "relativePath": "\\版本的记录.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\VM\\版本的记录.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\VM"
     },
     {
       "id": 167361965,
@@ -861,8 +890,8 @@
         }
       ],
       "realName": "TableManager",
-      "relativePath": "\\TableManager.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\TBM\\TableManager.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\TBM"
     },
     {
       "id": 167361951,
@@ -885,32 +914,8 @@
         }
       ],
       "realName": "Booter",
-      "relativePath": "\\Booter.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 167361938,
-      "doc_id": "ggghg5mgmlci",
-      "updated": 1714196640000,
-      "properties": {
-        "title": "共享内存数组",
-        "urlname": "ggghg5mgmlci",
-        "date": "2024-04-26 16:38:23",
-        "updated": "2024-04-27 13:44:00"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "ggghg5mgmlci"
-        },
-        {
-          "title": "DM",
-          "doc_id": "ggghg5mgmlci"
-        }
-      ],
-      "realName": "共享内存数组",
-      "relativePath": "\\共享内存数组.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\TBM\\Booter.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\TBM"
     },
     {
       "id": 167361945,
@@ -933,8 +938,32 @@
         }
       ],
       "realName": "Node",
-      "relativePath": "\\Node.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\IM\\Node.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\IM"
+    },
+    {
+      "id": 167361938,
+      "doc_id": "ggghg5mgmlci",
+      "updated": 1714196640000,
+      "properties": {
+        "title": "共享内存数组",
+        "urlname": "ggghg5mgmlci",
+        "date": "2024-04-26 16:38:23",
+        "updated": "2024-04-27 13:44:00"
+      },
+      "catalog": [
+        {
+          "title": "手写数据MySQL",
+          "doc_id": "ggghg5mgmlci"
+        },
+        {
+          "title": "DM",
+          "doc_id": "ggghg5mgmlci"
+        }
+      ],
+      "realName": "共享内存数组",
+      "relativePath": "\\手写数据MySQL\\DM\\共享内存数组.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167361911,
@@ -957,8 +986,8 @@
         }
       ],
       "realName": "DataItem",
-      "relativePath": "\\DataItem.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\手写数据MySQL\\DM\\DataItem.md",
+      "docPath": "source\\_posts\\yuque\\手写数据MySQL\\DM"
     },
     {
       "id": 167361293,
@@ -978,8 +1007,9 @@
         }
       ],
       "realName": "Part3",
-      "relativePath": "\\Part3.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\技术派项目\\Part3.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\技术派项目"
     },
     {
       "id": 167360341,
@@ -999,8 +1029,8 @@
         }
       ],
       "realName": "Part2",
-      "relativePath": "\\Part2.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\技术派项目\\Part2.md",
+      "docPath": "source\\_posts\\yuque\\技术派项目"
     },
     {
       "id": 167356387,
@@ -1021,8 +1051,8 @@
         }
       ],
       "realName": "Part1",
-      "relativePath": "\\Part1.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\技术派项目\\Part1.md",
+      "docPath": "source\\_posts\\yuque\\技术派项目"
     },
     {
       "id": 161989000,
@@ -1047,8 +1077,24 @@
         }
       ],
       "realName": "集合",
-      "relativePath": "\\集合.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\数据结构与集合源码\\集合.md",
+      "docPath": "source\\_posts\\yuque\\Java\\数据结构与集合源码"
+    },
+    {
+      "id": 161275591,
+      "doc_id": "thntx25rsgidw0u8",
+      "updated": 1713173398000,
+      "properties": {
+        "title": "技术派项目",
+        "urlname": "thntx25rsgidw0u8",
+        "date": "2024-03-10 21:22:48",
+        "updated": "2024-04-15 17:29:58",
+        "description": "1. 问答环节项目的介绍?实现的背景实现基本的业务需求使用MQ、ElasticSearch，优化项目结构和提供更优的搜索功能1.1. 项目背景技术派里面用到的都是互联网当下最流行的技术架构，骨架是通过 Spring Boot+Mybatis-Plus 搭建的，并且是前后端分离的，其中还用到了数..."
+      },
+      "catalog": [],
+      "realName": "技术派项目",
+      "relativePath": "\\技术派项目.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 162922841,
@@ -1065,23 +1111,7 @@
       "catalog": [],
       "realName": "VUE",
       "relativePath": "\\VUE.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161275591,
-      "doc_id": "thntx25rsgidw0u8",
-      "updated": 1713173398000,
-      "properties": {
-        "title": "技术派项目",
-        "urlname": "thntx25rsgidw0u8",
-        "date": "2024-03-10 21:22:48",
-        "updated": "2024-04-15 17:29:58",
-        "description": "1. 问答环节项目的介绍?实现的背景实现基本的业务需求使用MQ、ElasticSearch，优化项目结构和提供更优的搜索功能1.1. 项目背景技术派里面用到的都是互联网当下最流行的技术架构，骨架是通过 Spring Boot+Mybatis-Plus 搭建的，并且是前后端分离的，其中还用到了数..."
-      },
-      "catalog": [],
-      "realName": "技术派项目",
-      "relativePath": "\\技术派项目.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 161666083,
@@ -1105,8 +1135,9 @@
         }
       ],
       "realName": "JDK8-17新特性（上）",
-      "relativePath": "\\JDK8-17新特性（上）.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\JDK8-17新特性\\JDK8-17新特性（上）.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\Java\\JDK8-17新特性"
     },
     {
       "id": 163840916,
@@ -1127,8 +1158,8 @@
         }
       ],
       "realName": "15 redis集群搭建",
-      "relativePath": "\\15 redis集群搭建.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\15 redis集群搭建.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163841613,
@@ -1153,51 +1184,8 @@
         }
       ],
       "realName": "21-2 原理解析：Redis通信协议",
-      "relativePath": "\\21-2 原理解析：Redis通信协议.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161669600,
-      "doc_id": "wrgazsca6l923zq3",
-      "updated": 1713166969000,
-      "properties": {
-        "title": "10 存储引擎概述",
-        "urlname": "wrgazsca6l923zq3",
-        "date": "2024-03-13 17:33:03",
-        "updated": "2024-04-15 15:42:49",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055070265-ef20b94d-3ed7-41cd-8661-d84f1cee53ac.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_1022%2Climit_0",
-        "description": "1 MySQL体系结构●连接层：最上层是一些客户端和链接服务，包含本地sock 通信和大多数基于客户端/服务端工具实现的类似于TCP/IP的通信。主要完成一些类似于连接处理、授权认证、及相关的安全方案。在该层上引入了线程池的概念，为通过认证安全接入的客户端提供线程。同样在该层上可以实现基于SS..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "wrgazsca6l923zq3"
-        }
-      ],
-      "realName": "10 存储引擎概述",
-      "relativePath": "\\10 存储引擎概述.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161669342,
-      "doc_id": "lkechbpu779kxpds",
-      "updated": 1713165686000,
-      "properties": {
-        "title": "07 约束",
-        "urlname": "lkechbpu779kxpds",
-        "date": "2024-03-13 17:31:40",
-        "updated": "2024-04-15 15:21:26",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 概述概念：约束是作用于表中字段上的规则，用于限制存储在表中的数据。 目的：保证数据库中数据的正确、有效性和完整性。分类约束描述关键字非空约束限制该字段的数据不能为nullNOT NULL..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "lkechbpu779kxpds"
-        }
-      ],
-      "realName": "07 约束",
-      "relativePath": "\\07 约束.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\21 原理解析\\21-2 原理解析：Redis通信协议.md",
+      "docPath": "source\\_posts\\yuque\\redis\\21 原理解析"
     },
     {
       "id": 161669751,
@@ -1218,8 +1206,51 @@
         }
       ],
       "realName": "11 索引详述",
-      "relativePath": "\\11 索引详述.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\11 索引详述.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
+    },
+    {
+      "id": 161669600,
+      "doc_id": "wrgazsca6l923zq3",
+      "updated": 1713166969000,
+      "properties": {
+        "title": "10 存储引擎概述",
+        "urlname": "wrgazsca6l923zq3",
+        "date": "2024-03-13 17:33:03",
+        "updated": "2024-04-15 15:42:49",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055070265-ef20b94d-3ed7-41cd-8661-d84f1cee53ac.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_1022%2Climit_0",
+        "description": "1 MySQL体系结构●连接层：最上层是一些客户端和链接服务，包含本地sock 通信和大多数基于客户端/服务端工具实现的类似于TCP/IP的通信。主要完成一些类似于连接处理、授权认证、及相关的安全方案。在该层上引入了线程池的概念，为通过认证安全接入的客户端提供线程。同样在该层上可以实现基于SS..."
+      },
+      "catalog": [
+        {
+          "title": "MySQL",
+          "doc_id": "wrgazsca6l923zq3"
+        }
+      ],
+      "realName": "10 存储引擎概述",
+      "relativePath": "\\MySQL\\10 存储引擎概述.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
+    },
+    {
+      "id": 161669342,
+      "doc_id": "lkechbpu779kxpds",
+      "updated": 1713165686000,
+      "properties": {
+        "title": "07 约束",
+        "urlname": "lkechbpu779kxpds",
+        "date": "2024-03-13 17:31:40",
+        "updated": "2024-04-15 15:21:26",
+        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 概述概念：约束是作用于表中字段上的规则，用于限制存储在表中的数据。 目的：保证数据库中数据的正确、有效性和完整性。分类约束描述关键字非空约束限制该字段的数据不能为nullNOT NULL..."
+      },
+      "catalog": [
+        {
+          "title": "MySQL",
+          "doc_id": "lkechbpu779kxpds"
+        }
+      ],
+      "realName": "07 约束",
+      "relativePath": "\\MySQL\\07 约束.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161669422,
@@ -1239,8 +1270,8 @@
         }
       ],
       "realName": "08 多表查询",
-      "relativePath": "\\08 多表查询.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\08 多表查询.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161669267,
@@ -1260,51 +1291,8 @@
         }
       ],
       "realName": "06 非聚合函数",
-      "relativePath": "\\06 非聚合函数.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161661313,
-      "doc_id": "dx44u12yyxklvoss",
-      "updated": 1713083450000,
-      "properties": {
-        "title": "01 数据库概述",
-        "urlname": "dx44u12yyxklvoss",
-        "date": "2024-03-13 16:53:33",
-        "updated": "2024-04-14 16:30:50",
-        "description": "1. 数据库相关概念我们先来讲解三个概念：数据库、数据库管理系统、SQL。名称全称简称数据库存储数据的仓库，数据是有组织的进行存储DataBase（DB）数据库管理系统操纵和管理数据库的大型软件DataBase Management System (DBMS)SQL操作关系型数据库的编程语言，..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "dx44u12yyxklvoss"
-        }
-      ],
-      "realName": "01 数据库概述",
-      "relativePath": "\\01 数据库概述.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161793856,
-      "doc_id": "sccz1qv8gkkd",
-      "updated": 1712895561000,
-      "properties": {
-        "title": "02 Redis命令",
-        "urlname": "sccz1qv8gkkd",
-        "date": "2024-03-14 12:27:14",
-        "updated": "2024-04-12 12:19:21",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854200739-f856afa6-e264-43ab-9f73-e147ea20098b.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis的中文文档：中文文档菜鸟教程官网：菜鸟教程1 Redis数据结构介绍Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样2 通用..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "sccz1qv8gkkd"
-        }
-      ],
-      "realName": "02 Redis命令",
-      "relativePath": "\\02 Redis命令.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\06 非聚合函数.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161666013,
@@ -1325,52 +1313,31 @@
         }
       ],
       "realName": "网络编程",
-      "relativePath": "\\网络编程.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\网络编程.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
-      "id": 161781110,
-      "doc_id": "canurtaag1nab24f",
-      "updated": 1715761410000,
+      "id": 161793856,
+      "doc_id": "sccz1qv8gkkd",
+      "updated": 1712895561000,
       "properties": {
-        "title": "集合**",
-        "urlname": "canurtaag1nab24f",
-        "date": "2024-03-14 11:10:08",
-        "updated": "2024-05-15 16:23:30",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1664805296233-ea954596-b3d0-4243-b897-81b06146398f.png",
-        "description": "本章专题与脉络1. 集合框架概述1.1 生活中的容器1.2 数组的特点与弊端一方面，面向对象语言对事物的体现都是以对象的形式，为了方便对多个对象的操作，就要对对象进行存储。另一方面，使用数组存储对象方面具有一些弊端，而Java 集合就像一种容器，可以动态地把多个对象的引用放入容器中。数组在内存..."
+        "title": "02 Redis命令",
+        "urlname": "sccz1qv8gkkd",
+        "date": "2024-03-14 12:27:14",
+        "updated": "2024-04-12 12:19:21",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854200739-f856afa6-e264-43ab-9f73-e147ea20098b.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis的中文文档：中文文档菜鸟教程官网：菜鸟教程1 Redis数据结构介绍Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样2 通用..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "canurtaag1nab24f"
+          "title": "redis",
+          "doc_id": "sccz1qv8gkkd"
         }
       ],
-      "realName": "集合_canurtaag1nab24f",
-      "relativePath": "\\集合_canurtaag1nab24f.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161668561,
-      "doc_id": "ryb6mifnakmr6okx",
-      "updated": 1713083494000,
-      "properties": {
-        "title": "02 SQL-DDL",
-        "urlname": "ryb6mifnakmr6okx",
-        "date": "2024-03-13 17:27:41",
-        "updated": "2024-04-14 16:31:34",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747570-d2a4b4e5-0c53-4fbe-8eb1-1ebe07453440.png",
-        "description": "1. SQL简介SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一标准 。1.1. SQL通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。SQL语句可以单行或多行书写，以分号结尾。S..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "ryb6mifnakmr6okx"
-        }
-      ],
-      "realName": "02 SQL-DDL",
-      "relativePath": "\\02 SQL-DDL.md",
-      "docPath": "./source/_posts/yuque"
+      "realName": "02 Redis命令",
+      "relativePath": "\\redis\\02 Redis命令.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 161792492,
@@ -1391,8 +1358,52 @@
         }
       ],
       "realName": "16 锁",
-      "relativePath": "\\16 锁.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\16 锁.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
+    },
+    {
+      "id": 161781110,
+      "doc_id": "canurtaag1nab24f",
+      "updated": 1715761410000,
+      "properties": {
+        "title": "集合**",
+        "urlname": "canurtaag1nab24f",
+        "date": "2024-03-14 11:10:08",
+        "updated": "2024-05-15 16:23:30",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1664805296233-ea954596-b3d0-4243-b897-81b06146398f.png",
+        "description": "本章专题与脉络1. 集合框架概述1.1 生活中的容器1.2 数组的特点与弊端一方面，面向对象语言对事物的体现都是以对象的形式，为了方便对多个对象的操作，就要对对象进行存储。另一方面，使用数组存储对象方面具有一些弊端，而Java 集合就像一种容器，可以动态地把多个对象的引用放入容器中。数组在内存..."
+      },
+      "catalog": [
+        {
+          "title": "Java",
+          "doc_id": "canurtaag1nab24f"
+        }
+      ],
+      "realName": "集合",
+      "relativePath": "\\Java\\集合.md",
+      "docPath": "source\\_posts\\yuque\\Java"
+    },
+    {
+      "id": 161668561,
+      "doc_id": "ryb6mifnakmr6okx",
+      "updated": 1713083494000,
+      "properties": {
+        "title": "02 SQL-DDL",
+        "urlname": "ryb6mifnakmr6okx",
+        "date": "2024-03-13 17:27:41",
+        "updated": "2024-04-14 16:31:34",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747570-d2a4b4e5-0c53-4fbe-8eb1-1ebe07453440.png",
+        "description": "1. SQL简介SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一标准 。1.1. SQL通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。SQL语句可以单行或多行书写，以分号结尾。S..."
+      },
+      "catalog": [
+        {
+          "title": "MySQL",
+          "doc_id": "ryb6mifnakmr6okx"
+        }
+      ],
+      "realName": "02 SQL-DDL",
+      "relativePath": "\\MySQL\\02 SQL-DDL.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161792486,
@@ -1412,8 +1423,8 @@
         }
       ],
       "realName": "15 触发器",
-      "relativePath": "\\15 触发器.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\15 触发器.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 164676667,
@@ -1434,30 +1445,8 @@
         }
       ],
       "realName": "MVCC",
-      "relativePath": "\\MVCC.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161792669,
-      "doc_id": "ixgx5y5warh2ogcm",
-      "updated": 1712820630000,
-      "properties": {
-        "title": "17 InnoDB引擎详述",
-        "urlname": "ixgx5y5warh2ogcm",
-        "date": "2024-03-14 12:14:31",
-        "updated": "2024-04-11 15:30:30",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055415399-3519ec15-1e58-4cc7-89fa-f2bb4261656f.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_1022%2Climit_0",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 逻辑存储结构InnoDB的逻辑存储结构如下图所示:表空间：是InnoDB存储引擎逻辑结构的最高层， 如果用户启用了参数 innodb_file_per_table(在8.0版本中默认开启..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "ixgx5y5warh2ogcm"
-        }
-      ],
-      "realName": "17 InnoDB引擎详述",
-      "relativePath": "\\17 InnoDB引擎详述.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\MVCC.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161792684,
@@ -1478,8 +1467,30 @@
         }
       ],
       "realName": "19 MySQL日志",
-      "relativePath": "\\19 MySQL日志.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\19 MySQL日志.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
+    },
+    {
+      "id": 161792669,
+      "doc_id": "ixgx5y5warh2ogcm",
+      "updated": 1712820630000,
+      "properties": {
+        "title": "17 InnoDB引擎详述",
+        "urlname": "ixgx5y5warh2ogcm",
+        "date": "2024-03-14 12:14:31",
+        "updated": "2024-04-11 15:30:30",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055415399-3519ec15-1e58-4cc7-89fa-f2bb4261656f.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_1022%2Climit_0",
+        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 逻辑存储结构InnoDB的逻辑存储结构如下图所示:表空间：是InnoDB存储引擎逻辑结构的最高层， 如果用户启用了参数 innodb_file_per_table(在8.0版本中默认开启..."
+      },
+      "catalog": [
+        {
+          "title": "MySQL",
+          "doc_id": "ixgx5y5warh2ogcm"
+        }
+      ],
+      "realName": "17 InnoDB引擎详述",
+      "relativePath": "\\MySQL\\17 InnoDB引擎详述.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161669490,
@@ -1500,30 +1511,8 @@
         }
       ],
       "realName": "09 事务",
-      "relativePath": "\\09 事务.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161776955,
-      "doc_id": "um7lilrkavmww4r4",
-      "updated": 1712733569000,
-      "properties": {
-        "title": "异常",
-        "urlname": "um7lilrkavmww4r4",
-        "date": "2024-03-14 10:55:41",
-        "updated": "2024-04-10 15:19:29",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710316696411-9383e1d8-2ff4-4f32-b92d-8a97fbd5e81c.png",
-        "description": "本章专题与脉络1. 异常概述1.1 什么是生活的异常男主角小明每天开车上班，正常车程1小时。但是，不出意外的话，可能会出现意外。出现意外，即为异常情况。我们会做相应的处理。如果不处理，到不了公司。处理完了，就可以正常开车去公司。1.2 什么是程序的异常在使用计算机语言进行项目开发的过程中，即使..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "um7lilrkavmww4r4"
-        }
-      ],
-      "realName": "异常",
-      "relativePath": "\\异常.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\09 事务.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161781771,
@@ -1544,8 +1533,30 @@
         }
       ],
       "realName": "File类与IO流",
-      "relativePath": "\\File类与IO流.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\File类与IO流.md",
+      "docPath": "source\\_posts\\yuque\\Java"
+    },
+    {
+      "id": 161776955,
+      "doc_id": "um7lilrkavmww4r4",
+      "updated": 1712733569000,
+      "properties": {
+        "title": "异常",
+        "urlname": "um7lilrkavmww4r4",
+        "date": "2024-03-14 10:55:41",
+        "updated": "2024-04-10 15:19:29",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710316696411-9383e1d8-2ff4-4f32-b92d-8a97fbd5e81c.png",
+        "description": "本章专题与脉络1. 异常概述1.1 什么是生活的异常男主角小明每天开车上班，正常车程1小时。但是，不出意外的话，可能会出现意外。出现意外，即为异常情况。我们会做相应的处理。如果不处理，到不了公司。处理完了，就可以正常开车去公司。1.2 什么是程序的异常在使用计算机语言进行项目开发的过程中，即使..."
+      },
+      "catalog": [
+        {
+          "title": "Java",
+          "doc_id": "um7lilrkavmww4r4"
+        }
+      ],
+      "realName": "异常",
+      "relativePath": "\\Java\\异常.md",
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 161778299,
@@ -1566,8 +1577,8 @@
         }
       ],
       "realName": "多线程",
-      "relativePath": "\\多线程.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\多线程.md",
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 161701146,
@@ -1583,7 +1594,7 @@
       "catalog": [],
       "realName": "计算机网络和操作系统",
       "relativePath": "\\计算机网络和操作系统.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 164680157,
@@ -1603,8 +1614,8 @@
         }
       ],
       "realName": "SpringBoot启动原理",
-      "relativePath": "\\SpringBoot启动原理.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringBoot\\SpringBoot启动原理.md",
+      "docPath": "source\\_posts\\yuque\\SpringBoot"
     },
     {
       "id": 161792674,
@@ -1625,8 +1636,8 @@
         }
       ],
       "realName": "18 MySQL管理工具",
-      "relativePath": "\\18 MySQL管理工具.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\18 MySQL管理工具.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 90169206,
@@ -1643,7 +1654,7 @@
       "catalog": [],
       "realName": "JVM",
       "relativePath": "\\JVM.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 161672069,
@@ -1664,8 +1675,8 @@
         }
       ],
       "realName": "12 SQL优化",
-      "relativePath": "\\12 SQL优化.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\12 SQL优化.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161669014,
@@ -1686,8 +1697,8 @@
         }
       ],
       "realName": "04 SQL-DQL",
-      "relativePath": "\\04 SQL-DQL.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\04 SQL-DQL.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 163845814,
@@ -1708,8 +1719,8 @@
         }
       ],
       "realName": "SSM整合",
-      "relativePath": "\\SSM整合.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SSM\\SSM整合.md",
+      "docPath": "source\\_posts\\yuque\\SSM"
     },
     {
       "id": 161827270,
@@ -1730,8 +1741,8 @@
         }
       ],
       "realName": "Spring",
-      "relativePath": "\\Spring.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SSM\\Spring.md",
+      "docPath": "source\\_posts\\yuque\\SSM"
     },
     {
       "id": 161977026,
@@ -1752,8 +1763,8 @@
         }
       ],
       "realName": "swagger",
-      "relativePath": "\\swagger.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\swagger\\swagger.md",
+      "docPath": "source\\_posts\\yuque\\swagger"
     },
     {
       "id": 90161472,
@@ -1774,8 +1785,9 @@
         }
       ],
       "realName": "面向对象",
-      "relativePath": "\\面向对象.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\面向对象.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 92083438,
@@ -1792,7 +1804,7 @@
       "catalog": [],
       "realName": "项目优化技术",
       "relativePath": "\\项目优化技术.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 164323370,
@@ -1817,8 +1829,8 @@
         }
       ],
       "realName": "Kubernetes",
-      "relativePath": "\\Kubernetes.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\Kubernetes.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 161665991,
@@ -1838,8 +1850,9 @@
         }
       ],
       "realName": "数据结构与集合源码",
-      "relativePath": "\\数据结构与集合源码.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\数据结构与集合源码.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 161820140,
@@ -1860,24 +1873,8 @@
         }
       ],
       "realName": "Docker实用篇",
-      "relativePath": "\\Docker实用篇.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 162405726,
-      "doc_id": "mh6nqsrgn902qzd0",
-      "updated": 1712388508000,
-      "properties": {
-        "title": "JUC",
-        "urlname": "mh6nqsrgn902qzd0",
-        "date": "2024-03-19 16:06:38",
-        "updated": "2024-04-06 15:28:28",
-        "description": "JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，..."
-      },
-      "catalog": [],
-      "realName": "JUC",
-      "relativePath": "\\JUC.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\Docker实用篇.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud"
     },
     {
       "id": 164315592,
@@ -1894,7 +1891,7 @@
       "catalog": [],
       "realName": "nginx",
       "relativePath": "\\nginx.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 163840679,
@@ -1915,8 +1912,24 @@
         }
       ],
       "realName": "08-2 Redis优化秒杀抢购问题",
-      "relativePath": "\\08-2 Redis优化秒杀抢购问题.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\08-2 Redis优化秒杀抢购问题.md",
+      "docPath": "source\\_posts\\yuque\\redis"
+    },
+    {
+      "id": 162405726,
+      "doc_id": "mh6nqsrgn902qzd0",
+      "updated": 1712388508000,
+      "properties": {
+        "title": "JUC",
+        "urlname": "mh6nqsrgn902qzd0",
+        "date": "2024-03-19 16:06:38",
+        "updated": "2024-04-06 15:28:28",
+        "description": "JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，..."
+      },
+      "catalog": [],
+      "realName": "JUC",
+      "relativePath": "\\JUC.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 163841542,
@@ -1941,34 +1954,8 @@
         }
       ],
       "realName": "21-1 原理解析：Redis网络模型",
-      "relativePath": "\\21-1 原理解析：Redis网络模型.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163841331,
-      "doc_id": "hvz3tmfghzf9xnbw",
-      "updated": 1711854824000,
-      "properties": {
-        "title": "19-5 多级缓存：安装OpenResty",
-        "urlname": "hvz3tmfghzf9xnbw",
-        "date": "2024-03-31 11:13:27",
-        "updated": "2024-03-31 11:13:44",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854814036-6f816c3c-2d89-4f56-950b-9e59c852faa2.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 安装首先你的Linux虚拟机必须联网1.1 安装开发库首先要安装OpenResty的依赖开发库，执行命令：yum install -y pcre-devel openssl-devel..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "hvz3tmfghzf9xnbw"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "hvz3tmfghzf9xnbw"
-        }
-      ],
-      "realName": "19-5 多级缓存：安装OpenResty",
-      "relativePath": "\\19-5 多级缓存：安装OpenResty.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\21 原理解析\\21-1 原理解析：Redis网络模型.md",
+      "docPath": "source\\_posts\\yuque\\redis\\21 原理解析"
     },
     {
       "id": 163841448,
@@ -1993,8 +1980,8 @@
         }
       ],
       "realName": "21-0 原理解析：Redis数据结构",
-      "relativePath": "\\21-0 原理解析：Redis数据结构.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\21 原理解析\\21-0 原理解析：Redis数据结构.md",
+      "docPath": "source\\_posts\\yuque\\redis\\21 原理解析"
     },
     {
       "id": 163840937,
@@ -2015,34 +2002,34 @@
         }
       ],
       "realName": "20 redis最佳实践总结",
-      "relativePath": "\\20 redis最佳实践总结.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\20 redis最佳实践总结.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
-      "id": 163841265,
-      "doc_id": "vivusc7pehivp53k",
-      "updated": 1711854796000,
+      "id": 163841331,
+      "doc_id": "hvz3tmfghzf9xnbw",
+      "updated": 1711854824000,
       "properties": {
-        "title": "19-3 多级缓存：Nginx实现本地缓存",
-        "urlname": "vivusc7pehivp53k",
-        "date": "2024-03-31 11:12:52",
-        "updated": "2024-03-31 11:13:16",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665042308862-30c20a36-a2eb-4410-9d44-2fc275dcb91b.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案多级缓存的实现离不开Nginx编程，而Nginx编程又离不开OpenResty。1 安装OpenRestyOpenResty® 是一个基于 Nginx的高性能 Web 平台，用于方便地搭建..."
+        "title": "19-5 多级缓存：安装OpenResty",
+        "urlname": "hvz3tmfghzf9xnbw",
+        "date": "2024-03-31 11:13:27",
+        "updated": "2024-03-31 11:13:44",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854814036-6f816c3c-2d89-4f56-950b-9e59c852faa2.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 安装首先你的Linux虚拟机必须联网1.1 安装开发库首先要安装OpenResty的依赖开发库，执行命令：yum install -y pcre-devel openssl-devel..."
       },
       "catalog": [
         {
           "title": "redis",
-          "doc_id": "vivusc7pehivp53k"
+          "doc_id": "hvz3tmfghzf9xnbw"
         },
         {
           "title": "19 多级缓冲",
-          "doc_id": "vivusc7pehivp53k"
+          "doc_id": "hvz3tmfghzf9xnbw"
         }
       ],
-      "realName": "19-3 多级缓存：Nginx实现本地缓存",
-      "relativePath": "\\19-3 多级缓存：Nginx实现本地缓存.md",
-      "docPath": "./source/_posts/yuque"
+      "realName": "19-5 多级缓存：安装OpenResty",
+      "relativePath": "\\redis\\19 多级缓冲\\19-5 多级缓存：安装OpenResty.md",
+      "docPath": "source\\_posts\\yuque\\redis\\19 多级缓冲"
     },
     {
       "id": 163841310,
@@ -2067,8 +2054,34 @@
         }
       ],
       "realName": "19-4 多级缓存：使用Mycat做缓存同步",
-      "relativePath": "\\19-4 多级缓存：使用Mycat做缓存同步.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\19 多级缓冲\\19-4 多级缓存：使用Mycat做缓存同步.md",
+      "docPath": "source\\_posts\\yuque\\redis\\19 多级缓冲"
+    },
+    {
+      "id": 163841265,
+      "doc_id": "vivusc7pehivp53k",
+      "updated": 1711854796000,
+      "properties": {
+        "title": "19-3 多级缓存：Nginx实现本地缓存",
+        "urlname": "vivusc7pehivp53k",
+        "date": "2024-03-31 11:12:52",
+        "updated": "2024-03-31 11:13:16",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665042308862-30c20a36-a2eb-4410-9d44-2fc275dcb91b.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案多级缓存的实现离不开Nginx编程，而Nginx编程又离不开OpenResty。1 安装OpenRestyOpenResty® 是一个基于 Nginx的高性能 Web 平台，用于方便地搭建..."
+      },
+      "catalog": [
+        {
+          "title": "redis",
+          "doc_id": "vivusc7pehivp53k"
+        },
+        {
+          "title": "19 多级缓冲",
+          "doc_id": "vivusc7pehivp53k"
+        }
+      ],
+      "realName": "19-3 多级缓存：Nginx实现本地缓存",
+      "relativePath": "\\redis\\19 多级缓冲\\19-3 多级缓存：Nginx实现本地缓存.md",
+      "docPath": "source\\_posts\\yuque\\redis\\19 多级缓冲"
     },
     {
       "id": 163841253,
@@ -2093,8 +2106,8 @@
         }
       ],
       "realName": "19-2 多级缓存：Lua脚本入门",
-      "relativePath": "\\19-2 多级缓存：Lua脚本入门.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\19 多级缓冲\\19-2 多级缓存：Lua脚本入门.md",
+      "docPath": "source\\_posts\\yuque\\redis\\19 多级缓冲"
     },
     {
       "id": 163841228,
@@ -2119,8 +2132,8 @@
         }
       ],
       "realName": "19-1 多级缓存：Caffeine实现JVM进程缓存",
-      "relativePath": "\\19-1 多级缓存：Caffeine实现JVM进程缓存.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\19 多级缓冲\\19-1 多级缓存：Caffeine实现JVM进程缓存.md",
+      "docPath": "source\\_posts\\yuque\\redis\\19 多级缓冲"
     },
     {
       "id": 163840935,
@@ -2145,8 +2158,8 @@
         }
       ],
       "realName": "19-0 多级缓存：概述",
-      "relativePath": "\\19-0 多级缓存：概述.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\19 多级缓冲\\19-0 多级缓存：概述.md",
+      "docPath": "source\\_posts\\yuque\\redis\\19 多级缓冲"
     },
     {
       "id": 163840932,
@@ -2167,8 +2180,8 @@
         }
       ],
       "realName": "18 Redis分片",
-      "relativePath": "\\18 Redis分片.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\18 Redis分片.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840925,
@@ -2189,8 +2202,8 @@
         }
       ],
       "realName": "17 Redis哨兵",
-      "relativePath": "\\17 Redis哨兵.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\17 Redis哨兵.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840920,
@@ -2211,8 +2224,8 @@
         }
       ],
       "realName": "16 Redis主从",
-      "relativePath": "\\16 Redis主从.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\16 Redis主从.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840913,
@@ -2233,30 +2246,8 @@
         }
       ],
       "realName": "14 Redis持久化",
-      "relativePath": "\\14 Redis持久化.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163840905,
-      "doc_id": "gphkccpkqwg43dvx",
-      "updated": 1711854584000,
-      "properties": {
-        "title": "13 HyperLog数据结构的应用",
-        "urlname": "gphkccpkqwg43dvx",
-        "date": "2024-03-31 11:08:54",
-        "updated": "2024-03-31 11:09:44",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036498331-c14ba67d-9940-4595-a3ff-5592b9832288.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "gphkccpkqwg43dvx"
-        }
-      ],
-      "realName": "13 HyperLog数据结构的应用",
-      "relativePath": "\\13 HyperLog数据结构的应用.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\14 Redis持久化.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840895,
@@ -2277,8 +2268,30 @@
         }
       ],
       "realName": "12 BitMap数据结构的应用",
-      "relativePath": "\\12 BitMap数据结构的应用.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\12 BitMap数据结构的应用.md",
+      "docPath": "source\\_posts\\yuque\\redis"
+    },
+    {
+      "id": 163840905,
+      "doc_id": "gphkccpkqwg43dvx",
+      "updated": 1711854584000,
+      "properties": {
+        "title": "13 HyperLog数据结构的应用",
+        "urlname": "gphkccpkqwg43dvx",
+        "date": "2024-03-31 11:08:54",
+        "updated": "2024-03-31 11:09:44",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036498331-c14ba67d-9940-4595-a3ff-5592b9832288.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次..."
+      },
+      "catalog": [
+        {
+          "title": "redis",
+          "doc_id": "gphkccpkqwg43dvx"
+        }
+      ],
+      "realName": "13 HyperLog数据结构的应用",
+      "relativePath": "\\redis\\13 HyperLog数据结构的应用.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840862,
@@ -2299,8 +2312,8 @@
         }
       ],
       "realName": "11 GEO数据结构的应用",
-      "relativePath": "\\11 GEO数据结构的应用.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\11 GEO数据结构的应用.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840833,
@@ -2321,30 +2334,8 @@
         }
       ],
       "realName": "10 Set数据结构的应用",
-      "relativePath": "\\10 Set数据结构的应用.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163840682,
-      "doc_id": "crgnles3h9qs8wbb",
-      "updated": 1711854434000,
-      "properties": {
-        "title": "09 Redis实现消息队列",
-        "urlname": "crgnles3h9qs8wbb",
-        "date": "2024-03-31 11:06:10",
-        "updated": "2024-03-31 11:07:14",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035717181-8b47a0ff-5513-4fd4-889c-e51fc9e98c3c.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 认识消息队列什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：消息队列：存储和管理消息，也被称为消息代理（Message Broker）生产者：发送消息到消..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "crgnles3h9qs8wbb"
-        }
-      ],
-      "realName": "09 Redis实现消息队列",
-      "relativePath": "\\09 Redis实现消息队列.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\10 Set数据结构的应用.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840775,
@@ -2365,8 +2356,30 @@
         }
       ],
       "realName": "08-1 RedisSon实现分布式锁",
-      "relativePath": "\\08-1 RedisSon实现分布式锁.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\08-1 RedisSon实现分布式锁.md",
+      "docPath": "source\\_posts\\yuque\\redis"
+    },
+    {
+      "id": 163840682,
+      "doc_id": "crgnles3h9qs8wbb",
+      "updated": 1711854434000,
+      "properties": {
+        "title": "09 Redis实现消息队列",
+        "urlname": "crgnles3h9qs8wbb",
+        "date": "2024-03-31 11:06:10",
+        "updated": "2024-03-31 11:07:14",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035717181-8b47a0ff-5513-4fd4-889c-e51fc9e98c3c.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 认识消息队列什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：消息队列：存储和管理消息，也被称为消息代理（Message Broker）生产者：发送消息到消..."
+      },
+      "catalog": [
+        {
+          "title": "redis",
+          "doc_id": "crgnles3h9qs8wbb"
+        }
+      ],
+      "realName": "09 Redis实现消息队列",
+      "relativePath": "\\redis\\09 Redis实现消息队列.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840675,
@@ -2387,8 +2400,8 @@
         }
       ],
       "realName": "08 自定义分布式锁",
-      "relativePath": "\\08 自定义分布式锁.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\08 自定义分布式锁.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 161818235,
@@ -2409,8 +2422,8 @@
         }
       ],
       "realName": "06 Redis实现全局唯一Id",
-      "relativePath": "\\06 Redis实现全局唯一Id.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\06 Redis实现全局唯一Id.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163840647,
@@ -2431,30 +2444,8 @@
         }
       ],
       "realName": "07 乐观锁和悲观锁解决秒杀抢购问题",
-      "relativePath": "\\07 乐观锁和悲观锁解决秒杀抢购问题.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161794003,
-      "doc_id": "tk35clgh7trg",
-      "updated": 1712391299000,
-      "properties": {
-        "title": "05 Redis做缓存数据库",
-        "urlname": "tk35clgh7trg",
-        "date": "2024-03-14 12:28:29",
-        "updated": "2024-04-06 16:14:59",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665031853891-93ff0ca5-4c67-4cdb-ae82-2a861a9f2ce3.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_1022%2Climit_0",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 什么是缓存?前言：什么是缓存?就像自行车。越野车的避震器举个例子：越野车，山地自行车，都拥有\"避震器\"，防止车体加速后因惯性，在酷似\"U\"字母的地形上飞跃，硬着陆导致的损害，像个弹簧一..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "tk35clgh7trg"
-        }
-      ],
-      "realName": "05 Redis做缓存数据库",
-      "relativePath": "\\05 Redis做缓存数据库.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\07 乐观锁和悲观锁解决秒杀抢购问题.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 161794000,
@@ -2475,8 +2466,30 @@
         }
       ],
       "realName": "04 Redis实现Session共享",
-      "relativePath": "\\04 Redis实现Session共享.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\04 Redis实现Session共享.md",
+      "docPath": "source\\_posts\\yuque\\redis"
+    },
+    {
+      "id": 161794003,
+      "doc_id": "tk35clgh7trg",
+      "updated": 1712391299000,
+      "properties": {
+        "title": "05 Redis做缓存数据库",
+        "urlname": "tk35clgh7trg",
+        "date": "2024-03-14 12:28:29",
+        "updated": "2024-04-06 16:14:59",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665031853891-93ff0ca5-4c67-4cdb-ae82-2a861a9f2ce3.png?x-oss-process=image%2Fformat%2Cwebp%2Fresize%2Cw_1022%2Climit_0",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 什么是缓存?前言：什么是缓存?就像自行车。越野车的避震器举个例子：越野车，山地自行车，都拥有\"避震器\"，防止车体加速后因惯性，在酷似\"U\"字母的地形上飞跃，硬着陆导致的损害，像个弹簧一..."
+      },
+      "catalog": [
+        {
+          "title": "redis",
+          "doc_id": "tk35clgh7trg"
+        }
+      ],
+      "realName": "05 Redis做缓存数据库",
+      "relativePath": "\\redis\\05 Redis做缓存数据库.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 161793987,
@@ -2497,8 +2510,8 @@
         }
       ],
       "realName": "03 Redis客户端",
-      "relativePath": "\\03 Redis客户端.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\03 Redis客户端.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 161793641,
@@ -2519,8 +2532,8 @@
         }
       ],
       "realName": "01 入门介绍",
-      "relativePath": "\\01 入门介绍.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\redis\\01 入门介绍.md",
+      "docPath": "source\\_posts\\yuque\\redis"
     },
     {
       "id": 163839063,
@@ -2540,8 +2553,8 @@
         }
       ],
       "realName": "数组",
-      "relativePath": "\\数组.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\数组.md",
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 163839013,
@@ -2561,8 +2574,30 @@
         }
       ],
       "realName": "流程控制语句",
-      "relativePath": "\\流程控制语句.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\流程控制语句.md",
+      "docPath": "source\\_posts\\yuque\\Java"
+    },
+    {
+      "id": 161776380,
+      "doc_id": "iea26vb0n13x9kdb",
+      "updated": 1711853395000,
+      "properties": {
+        "title": "变量与运算符",
+        "urlname": "iea26vb0n13x9kdb",
+        "date": "2024-03-14 10:53:13",
+        "updated": "2024-03-31 10:49:55",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321333936-b0e36a3c-b88d-4db2-bf1e-5080e9840c04.png",
+        "description": "个人笔记需要不断的迭代本章专题与脉络1. 关键字（keyword）定义：被Java语言赋予了特殊含义，用做专门用途的字符串（或单词）HelloWorld案例中，出现的关键字有 class、public 、 static 、 void 等，这些单词已经被Java定义好了。特点：全部关键字都是小写..."
+      },
+      "catalog": [
+        {
+          "title": "Java",
+          "doc_id": "iea26vb0n13x9kdb"
+        }
+      ],
+      "realName": "变量与运算符",
+      "relativePath": "\\Java\\变量与运算符.md",
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 161781613,
@@ -2582,8 +2617,8 @@
         }
       ],
       "realName": "泛型",
-      "relativePath": "\\泛型.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\泛型.md",
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 163594887,
@@ -2612,60 +2647,8 @@
         }
       ],
       "realName": "3.部署篇(工具部署)",
-      "relativePath": "\\3.部署篇(工具部署).md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161776380,
-      "doc_id": "iea26vb0n13x9kdb",
-      "updated": 1711853395000,
-      "properties": {
-        "title": "变量与运算符",
-        "urlname": "iea26vb0n13x9kdb",
-        "date": "2024-03-14 10:53:13",
-        "updated": "2024-03-31 10:49:55",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321333936-b0e36a3c-b88d-4db2-bf1e-5080e9840c04.png",
-        "description": "个人笔记需要不断的迭代本章专题与脉络1. 关键字（keyword）定义：被Java语言赋予了特殊含义，用做专门用途的字符串（或单词）HelloWorld案例中，出现的关键字有 class、public 、 static 、 void 等，这些单词已经被Java定义好了。特点：全部关键字都是小写..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "iea26vb0n13x9kdb"
-        }
-      ],
-      "realName": "变量与运算符",
-      "relativePath": "\\变量与运算符.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163594824,
-      "doc_id": "ur02buwkmprvwubv",
-      "updated": 1711615106000,
-      "properties": {
-        "title": "2.部署篇（开发部署）",
-        "urlname": "ur02buwkmprvwubv",
-        "date": "2024-03-28 16:38:15",
-        "updated": "2024-03-28 16:38:26",
-        "cover": "https://cdn.nlark.com/yuque/0/2020/gif/1169676/1601289240324-2cfef487-4989-4ce3-a96b-dbf38cde7d2d.gif",
-        "description": "导读：在上一篇文章《SpringCloud 应用在 Kubernetes 上的云上实践 - 开发篇》中讲到可以通过两个工具，轻松地将一个 SpringCloud 应用从初始化到本地运行。本篇文章，我们将介绍如何将上一篇文章中提到的应用在云上跑起来。初始化集群为了将应用运行在云端，首先我们需要一..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "ur02buwkmprvwubv"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "ur02buwkmprvwubv"
-        },
-        {
-          "title": "SpringCloud集成K8S",
-          "doc_id": "ur02buwkmprvwubv"
-        }
-      ],
-      "realName": "2.部署篇（开发部署）",
-      "relativePath": "\\2.部署篇（开发部署）.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\3.部署篇(工具部署).md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
     },
     {
       "id": 163594692,
@@ -2694,8 +2677,38 @@
         }
       ],
       "realName": "1.开发篇（脚手架下载）",
-      "relativePath": "\\1.开发篇（脚手架下载）.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\1.开发篇（脚手架下载）.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
+    },
+    {
+      "id": 163594824,
+      "doc_id": "ur02buwkmprvwubv",
+      "updated": 1711615106000,
+      "properties": {
+        "title": "2.部署篇（开发部署）",
+        "urlname": "ur02buwkmprvwubv",
+        "date": "2024-03-28 16:38:15",
+        "updated": "2024-03-28 16:38:26",
+        "cover": "https://cdn.nlark.com/yuque/0/2020/gif/1169676/1601289240324-2cfef487-4989-4ce3-a96b-dbf38cde7d2d.gif",
+        "description": "导读：在上一篇文章《SpringCloud 应用在 Kubernetes 上的云上实践 - 开发篇》中讲到可以通过两个工具，轻松地将一个 SpringCloud 应用从初始化到本地运行。本篇文章，我们将介绍如何将上一篇文章中提到的应用在云上跑起来。初始化集群为了将应用运行在云端，首先我们需要一..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "ur02buwkmprvwubv"
+        },
+        {
+          "title": "高级篇",
+          "doc_id": "ur02buwkmprvwubv"
+        },
+        {
+          "title": "SpringCloud集成K8S",
+          "doc_id": "ur02buwkmprvwubv"
+        }
+      ],
+      "realName": "2.部署篇（开发部署）",
+      "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\2.部署篇（开发部署）.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
     },
     {
       "id": 163594490,
@@ -2723,8 +2736,9 @@
         }
       ],
       "realName": "ElasticSearch集群",
-      "relativePath": "\\ElasticSearch集群.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\ElasticSearch集群.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594384,
@@ -2752,37 +2766,9 @@
         }
       ],
       "realName": "数据聚合、自动补全、数据同步",
-      "relativePath": "\\数据聚合、自动补全、数据同步.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163594331,
-      "doc_id": "tw4e1oe6q4ixiqbo",
-      "updated": 1711614944000,
-      "properties": {
-        "title": "DSL语法、搜索结果处理",
-        "urlname": "tw4e1oe6q4ixiqbo",
-        "date": "2024-03-28 16:35:21",
-        "updated": "2024-03-28 16:35:44",
-        "description": "在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。1.DSL查询文档elasticsearch的查询依然是基..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "tw4e1oe6q4ixiqbo"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "tw4e1oe6q4ixiqbo"
-        },
-        {
-          "title": "分布式搜索引擎ElasticSearch",
-          "doc_id": "tw4e1oe6q4ixiqbo"
-        }
-      ],
-      "realName": "DSL语法、搜索结果处理",
-      "relativePath": "\\DSL语法、搜索结果处理.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\数据聚合、自动补全、数据同步.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594258,
@@ -2810,8 +2796,39 @@
         }
       ],
       "realName": "索引库、文档操作",
-      "relativePath": "\\索引库、文档操作.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\索引库、文档操作.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
+    },
+    {
+      "id": 163594331,
+      "doc_id": "tw4e1oe6q4ixiqbo",
+      "updated": 1711614944000,
+      "properties": {
+        "title": "DSL语法、搜索结果处理",
+        "urlname": "tw4e1oe6q4ixiqbo",
+        "date": "2024-03-28 16:35:21",
+        "updated": "2024-03-28 16:35:44",
+        "description": "在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。1.DSL查询文档elasticsearch的查询依然是基..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "tw4e1oe6q4ixiqbo"
+        },
+        {
+          "title": "高级篇",
+          "doc_id": "tw4e1oe6q4ixiqbo"
+        },
+        {
+          "title": "分布式搜索引擎ElasticSearch",
+          "doc_id": "tw4e1oe6q4ixiqbo"
+        }
+      ],
+      "realName": "DSL语法、搜索结果处理",
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\DSL语法、搜索结果处理.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594190,
@@ -2839,33 +2856,8 @@
         }
       ],
       "realName": "安装ES、Kibana、IK",
-      "relativePath": "\\安装ES、Kibana、IK.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163594137,
-      "doc_id": "demgaggh1tyqt5m1",
-      "updated": 1711614862000,
-      "properties": {
-        "title": "分布式搜索引擎ElasticSearch",
-        "urlname": "demgaggh1tyqt5m1",
-        "date": "2024-03-28 16:34:09",
-        "updated": "2024-03-28 16:34:22",
-        "description": "1.初识elasticsearch1.1.了解ES1.1.1.elasticsearch的作用elasticsearch是一款非常强大的开源搜索引擎，具备非常多强大功能，可以帮助我们从海量数据中快速找到需要的内容，例如： 在GitHub搜索代码 在电商网站搜索商品 在百度搜索答案 在打车软件搜..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "demgaggh1tyqt5m1"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "demgaggh1tyqt5m1"
-        }
-      ],
-      "realName": "分布式搜索引擎ElasticSearch",
-      "relativePath": "\\分布式搜索引擎ElasticSearch.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\安装ES、Kibana、IK.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594032,
@@ -2889,8 +2881,33 @@
         }
       ],
       "realName": "Sentinel工作原理",
-      "relativePath": "\\Sentinel工作原理.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\Sentinel工作原理.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+    },
+    {
+      "id": 163594137,
+      "doc_id": "demgaggh1tyqt5m1",
+      "updated": 1711614862000,
+      "properties": {
+        "title": "分布式搜索引擎ElasticSearch",
+        "urlname": "demgaggh1tyqt5m1",
+        "date": "2024-03-28 16:34:09",
+        "updated": "2024-03-28 16:34:22",
+        "description": "1.初识elasticsearch1.1.了解ES1.1.1.elasticsearch的作用elasticsearch是一款非常强大的开源搜索引擎，具备非常多强大功能，可以帮助我们从海量数据中快速找到需要的内容，例如： 在GitHub搜索代码 在电商网站搜索商品 在百度搜索答案 在打车软件搜..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "demgaggh1tyqt5m1"
+        },
+        {
+          "title": "高级篇",
+          "doc_id": "demgaggh1tyqt5m1"
+        }
+      ],
+      "realName": "分布式搜索引擎ElasticSearch",
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 163593797,
@@ -2914,8 +2931,9 @@
         }
       ],
       "realName": "Seata的部署和集成",
-      "relativePath": "\\Seata的部署和集成.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\Seata的部署和集成.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 163593916,
@@ -2940,33 +2958,8 @@
         }
       ],
       "realName": "微服务保护Sentinel",
-      "relativePath": "\\微服务保护Sentinel.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 163593580,
-      "doc_id": "nsgd1vcw40dhn1gz",
-      "updated": 1711614700000,
-      "properties": {
-        "title": "Redis集群部署指南",
-        "urlname": "nsgd1vcw40dhn1gz",
-        "date": "2024-03-28 16:31:22",
-        "updated": "2024-03-28 16:31:40",
-        "description": "本章是基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1.单机安装Redis首先需要安装Redis所需要的依赖：yum install -y gcc tcl然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：📎redis-6.2.4...."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "nsgd1vcw40dhn1gz"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "nsgd1vcw40dhn1gz"
-        }
-      ],
-      "realName": "Redis集群部署指南",
-      "relativePath": "\\Redis集群部署指南.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\微服务保护Sentinel.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 163593697,
@@ -2990,33 +2983,35 @@
         }
       ],
       "realName": "分布式事务Seata",
-      "relativePath": "\\分布式事务Seata.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\分布式事务Seata.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
-      "id": 163593508,
-      "doc_id": "mbewrwpdklq4ihs8",
-      "updated": 1711614680000,
+      "id": 163593580,
+      "doc_id": "nsgd1vcw40dhn1gz",
+      "updated": 1711614700000,
       "properties": {
-        "title": "分布式缓存Redis(高级)",
-        "urlname": "mbewrwpdklq4ihs8",
-        "date": "2024-03-28 16:31:02",
-        "updated": "2024-03-28 16:31:20",
-        "description": "作为分布式系统中，必不可少的非结构化存储中间件，Redis在小型、中型、大型乃至高并发系统中均有自己发挥的场合，除了基础数据结构（String/Hash/Set/ZSet/List）的增删改查操作，在真正的生产环境中我们如何避免数据的丢失？如何避免单点的性能瓶颈？如何搭建合适的集群架构？本节笔..."
+        "title": "Redis集群部署指南",
+        "urlname": "nsgd1vcw40dhn1gz",
+        "date": "2024-03-28 16:31:22",
+        "updated": "2024-03-28 16:31:40",
+        "description": "本章是基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1.单机安装Redis首先需要安装Redis所需要的依赖：yum install -y gcc tcl然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：📎redis-6.2.4...."
       },
       "catalog": [
         {
           "title": "SpringCloud",
-          "doc_id": "mbewrwpdklq4ihs8"
+          "doc_id": "nsgd1vcw40dhn1gz"
         },
         {
           "title": "高级篇",
-          "doc_id": "mbewrwpdklq4ihs8"
+          "doc_id": "nsgd1vcw40dhn1gz"
         }
       ],
-      "realName": "分布式缓存Redis(高级)",
-      "relativePath": "\\分布式缓存Redis(高级).md",
-      "docPath": "./source/_posts/yuque"
+      "realName": "Redis集群部署指南",
+      "relativePath": "\\SpringCloud\\高级篇\\Redis集群部署指南.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 163593411,
@@ -3040,33 +3035,35 @@
         }
       ],
       "realName": "RabbitMQ部署指南",
-      "relativePath": "\\RabbitMQ部署指南.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\高级篇\\RabbitMQ部署指南.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
-      "id": 163593245,
-      "doc_id": "yzchuzvgkp5t2qgg",
-      "updated": 1711614594000,
+      "id": 163593508,
+      "doc_id": "mbewrwpdklq4ihs8",
+      "updated": 1711614680000,
       "properties": {
-        "title": "消息中间件RabbitMQ(高级)",
-        "urlname": "yzchuzvgkp5t2qgg",
-        "date": "2024-03-28 16:29:29",
-        "updated": "2024-03-28 16:29:54",
-        "description": "消息中间件，作为分布式系统中必不可少的一部分，在前面我们学习过其基本的消息发送、消费（跳转链接），但是读者朋友们肯定也知道，真正的生产环境可不是简单的发送消息这么简单。如何避免消息丢失？如何满足特殊场景下的消息延迟消费？如何解决消费能力不足？如何搭建集群？等等本节笔者将从消息的可靠性出发，解决..."
+        "title": "分布式缓存Redis(高级)",
+        "urlname": "mbewrwpdklq4ihs8",
+        "date": "2024-03-28 16:31:02",
+        "updated": "2024-03-28 16:31:20",
+        "description": "作为分布式系统中，必不可少的非结构化存储中间件，Redis在小型、中型、大型乃至高并发系统中均有自己发挥的场合，除了基础数据结构（String/Hash/Set/ZSet/List）的增删改查操作，在真正的生产环境中我们如何避免数据的丢失？如何避免单点的性能瓶颈？如何搭建合适的集群架构？本节笔..."
       },
       "catalog": [
         {
           "title": "SpringCloud",
-          "doc_id": "yzchuzvgkp5t2qgg"
+          "doc_id": "mbewrwpdklq4ihs8"
         },
         {
           "title": "高级篇",
-          "doc_id": "yzchuzvgkp5t2qgg"
+          "doc_id": "mbewrwpdklq4ihs8"
         }
       ],
-      "realName": "消息中间件RabbitMQ(高级)",
-      "relativePath": "\\消息中间件RabbitMQ(高级).md",
-      "docPath": "./source/_posts/yuque"
+      "realName": "分布式缓存Redis(高级)",
+      "relativePath": "\\SpringCloud\\高级篇\\分布式缓存Redis(高级).md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 163592130,
@@ -3090,25 +3087,34 @@
         }
       ],
       "realName": "2.SpringCloud工程部署启动",
-      "relativePath": "\\2.SpringCloud工程部署启动.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\2.SpringCloud工程部署启动.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
-      "id": 155797132,
-      "doc_id": "lvs8h5illwcpvnnn",
-      "updated": 1715827971000,
+      "id": 163593245,
+      "doc_id": "yzchuzvgkp5t2qgg",
+      "updated": 1711614594000,
       "properties": {
-        "title": "资料和计划",
-        "urlname": "lvs8h5illwcpvnnn",
-        "date": "2024-01-12 16:56:02",
-        "updated": "2024-05-16 10:52:51",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710664242235-0fbb41e2-2920-4abf-9731-d055cac4e87d.png",
-        "description": "JavaSE变量，数据类型，运算符控制语句面向对象编程异常机制Java常用类集合IO流多线程网络编程反射MySQLDQL DDL DML DCl 约束 事务 索引JDBCVUEJavaWebAJAXLinuxJava框架MavenMybatisSpring6SpringMVCGitCRMRed..."
+        "title": "消息中间件RabbitMQ(高级)",
+        "urlname": "yzchuzvgkp5t2qgg",
+        "date": "2024-03-28 16:29:29",
+        "updated": "2024-03-28 16:29:54",
+        "description": "消息中间件，作为分布式系统中必不可少的一部分，在前面我们学习过其基本的消息发送、消费（跳转链接），但是读者朋友们肯定也知道，真正的生产环境可不是简单的发送消息这么简单。如何避免消息丢失？如何满足特殊场景下的消息延迟消费？如何解决消费能力不足？如何搭建集群？等等本节笔者将从消息的可靠性出发，解决..."
       },
-      "catalog": [],
-      "realName": "资料和计划",
-      "relativePath": "\\资料和计划.md",
-      "docPath": "./source/_posts/yuque"
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "yzchuzvgkp5t2qgg"
+        },
+        {
+          "title": "高级篇",
+          "doc_id": "yzchuzvgkp5t2qgg"
+        }
+      ],
+      "realName": "消息中间件RabbitMQ(高级)",
+      "relativePath": "\\SpringCloud\\高级篇\\消息中间件RabbitMQ(高级).md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 161782200,
@@ -3129,8 +3135,25 @@
         }
       ],
       "realName": "反射",
-      "relativePath": "\\反射.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\Java\\反射.md",
+      "docPath": "source\\_posts\\yuque\\Java"
+    },
+    {
+      "id": 155797132,
+      "doc_id": "lvs8h5illwcpvnnn",
+      "updated": 1715827971000,
+      "properties": {
+        "title": "资料和计划",
+        "urlname": "lvs8h5illwcpvnnn",
+        "date": "2024-01-12 16:56:02",
+        "updated": "2024-05-16 10:52:51",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710664242235-0fbb41e2-2920-4abf-9731-d055cac4e87d.png",
+        "description": "JavaSE变量，数据类型，运算符控制语句面向对象编程异常机制Java常用类集合IO流多线程网络编程反射MySQLDQL DDL DML DCl 约束 事务 索引JDBCVUEJavaWebAJAXLinuxJava框架MavenMybatisSpring6SpringMVCGitCRMRed..."
+      },
+      "catalog": [],
+      "realName": "资料和计划",
+      "relativePath": "\\资料和计划.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 161983402,
@@ -3150,8 +3173,8 @@
         }
       ],
       "realName": "Kafka",
-      "relativePath": "\\Kafka.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\消息队列\\Kafka.md",
+      "docPath": "source\\_posts\\yuque\\消息队列"
     },
     {
       "id": 161979985,
@@ -3172,8 +3195,8 @@
         }
       ],
       "realName": "Rabbitmq",
-      "relativePath": "\\Rabbitmq.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\消息队列\\Rabbitmq.md",
+      "docPath": "source\\_posts\\yuque\\消息队列"
     },
     {
       "id": 161825610,
@@ -3198,8 +3221,8 @@
         }
       ],
       "realName": "8.Gateway服务网关",
-      "relativePath": "\\8.Gateway服务网关.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\8.Gateway服务网关.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 161825343,
@@ -3224,8 +3247,8 @@
         }
       ],
       "realName": "7.Feign远程调用",
-      "relativePath": "\\7.Feign远程调用.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\7.Feign远程调用.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 161824369,
@@ -3250,8 +3273,8 @@
         }
       ],
       "realName": "6.Nacos配置管理",
-      "relativePath": "\\6.Nacos配置管理.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\6.Nacos配置管理.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 161819746,
@@ -3276,29 +3299,8 @@
         }
       ],
       "realName": "1.认识微服务",
-      "relativePath": "\\1.认识微服务.md",
-      "docPath": "./source/_posts/yuque"
-    },
-    {
-      "id": 161829288,
-      "doc_id": "wtu242yw5rgrmmzf",
-      "updated": 1716183807000,
-      "properties": {
-        "title": "MyBatis",
-        "urlname": "wtu242yw5rgrmmzf",
-        "date": "2024-03-14 15:32:53",
-        "updated": "2024-05-20 13:43:27",
-        "description": "一、MyBatis概述1.1 框架在文献中看到的framework被翻译为框架Java常用框架：SSM三大框架：Spring + SpringMVC + MyBatisSpringBootSpringCloud等。框架其实就是对通用代码的封装，提前写好了一堆接口和类，我们可以在做项目的时候直接..."
-      },
-      "catalog": [
-        {
-          "title": "SSM",
-          "doc_id": "wtu242yw5rgrmmzf"
-        }
-      ],
-      "realName": "MyBatis",
-      "relativePath": "\\MyBatis.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\1.认识微服务.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 161824023,
@@ -3323,8 +3325,29 @@
         }
       ],
       "realName": "5.Nacos注册中心",
-      "relativePath": "\\5.Nacos注册中心.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\5.Nacos注册中心.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
+    },
+    {
+      "id": 161829288,
+      "doc_id": "wtu242yw5rgrmmzf",
+      "updated": 1716183807000,
+      "properties": {
+        "title": "MyBatis",
+        "urlname": "wtu242yw5rgrmmzf",
+        "date": "2024-03-14 15:32:53",
+        "updated": "2024-05-20 13:43:27",
+        "description": "一、MyBatis概述1.1 框架在文献中看到的framework被翻译为框架Java常用框架：SSM三大框架：Spring + SpringMVC + MyBatisSpringBootSpringCloud等。框架其实就是对通用代码的封装，提前写好了一堆接口和类，我们可以在做项目的时候直接..."
+      },
+      "catalog": [
+        {
+          "title": "SSM",
+          "doc_id": "wtu242yw5rgrmmzf"
+        }
+      ],
+      "realName": "MyBatis",
+      "relativePath": "\\SSM\\MyBatis.md",
+      "docPath": "source\\_posts\\yuque\\SSM"
     },
     {
       "id": 161820852,
@@ -3349,8 +3372,9 @@
         }
       ],
       "realName": "4.Ribbon负载均衡",
-      "relativePath": "\\4.Ribbon负载均衡.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\4.Ribbon负载均衡.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 161820387,
@@ -3375,8 +3399,8 @@
         }
       ],
       "realName": "3.Eureka注册中心",
-      "relativePath": "\\3.Eureka注册中心.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\SpringCloud\\基本篇\\3.Eureka注册中心.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 161792700,
@@ -3397,8 +3421,8 @@
         }
       ],
       "realName": "22 MySQL读写分离",
-      "relativePath": "\\22 MySQL读写分离.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\22 MySQL读写分离.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161792687,
@@ -3419,8 +3443,8 @@
         }
       ],
       "realName": "20 主从复制",
-      "relativePath": "\\20 主从复制.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\20 主从复制.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161792696,
@@ -3441,8 +3465,8 @@
         }
       ],
       "realName": "21 MySQL分库分表",
-      "relativePath": "\\21 MySQL分库分表.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\21 MySQL分库分表.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161792481,
@@ -3463,8 +3487,8 @@
         }
       ],
       "realName": "14 储存过程",
-      "relativePath": "\\14 储存过程.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\14 储存过程.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161792471,
@@ -3485,8 +3509,8 @@
         }
       ],
       "realName": "13 视图详述",
-      "relativePath": "\\13 视图详述.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\13 视图详述.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161669138,
@@ -3506,8 +3530,8 @@
         }
       ],
       "realName": "05 SQL-DCL",
-      "relativePath": "\\05 SQL-DCL.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\05 SQL-DCL.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161668872,
@@ -3527,8 +3551,8 @@
         }
       ],
       "realName": "03 SQL-DML",
-      "relativePath": "\\03 SQL-DML.md",
-      "docPath": "./source/_posts/yuque"
+      "relativePath": "\\MySQL\\03 SQL-DML.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 93950898,
@@ -3545,7 +3569,7 @@
       "catalog": [],
       "realName": "Java仿牛客社区",
       "relativePath": "\\Java仿牛客社区.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 93148888,
@@ -3561,7 +3585,7 @@
       "catalog": [],
       "realName": "消息队列",
       "relativePath": "\\消息队列.md",
-      "docPath": "./source/_posts/yuque"
+      "docPath": "source\\_posts\\yuque"
     }
   ],
   "catalog": [

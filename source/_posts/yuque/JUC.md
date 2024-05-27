@@ -1,3 +1,10 @@
+---
+title: JUC
+urlname: mh6nqsrgn902qzd0
+date: '2024-03-19 16:06:38'
+updated: '2024-04-06 15:28:28'
+description: JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，...
+---
 # JUC
 
 ## 进程
@@ -421,7 +428,7 @@ LockSupport 类在 同步 → park-un 详解
 
 两阶段终止模式图示：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-两阶段终止模式.png#id=h6dBY&originHeight=600&originWidth=826&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/4c6b3705f8646c9315b99f465dfc4a1c.png)
 
 打断线程可能在任何时间，所以需要考虑在任何时刻被打断的处理方法：
 
@@ -591,7 +598,7 @@ Java 提供了线程优先级的机制，优先级会提示（hint）调度器�
 | Teminated（结束） | run 方法正常退出而死亡，或者因为没有捕获的异常终止了 run 方法而死亡 |
 
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E7%BA%BF%E7%A8%8B6%E7%A7%8D%E7%8A%B6%E6%80%81.png#id=VjVqU&originHeight=528&originWidth=729&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9cfb47d83dc9cb0a014d0e7501c9712f.png)
 
 -  NEW → RUNNABLE：当调用 t.start() 方法时，由 NEW → RUNNABLE 
 -  RUNNABLE <--> WAITING： 
@@ -826,21 +833,21 @@ Monitor 被翻译为监视器或管程
 每个 Java 对象都可以关联一个 Monitor 对象，Monitor 也是 class，其**实例存储在堆中**，如果使用 synchronized 给对象上锁（重量级）之后，该对象头的 Mark Word 中就被设置指向 Monitor 对象的指针，这就是重量级锁
 
 -  Mark Word 结构：最后两位是**锁标志位**
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Monitor-MarkWord%E7%BB%93%E6%9E%8432%E4%BD%8D.png#id=rAsTw&originHeight=366&originWidth=921&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5d254764912e61f50cf85bb74c24280e.png) 
 -  64 位虚拟机 Mark Word：
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Monitor-MarkWord%E7%BB%93%E6%9E%8464%E4%BD%8D.png#id=vMVeq&originHeight=359&originWidth=898&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3045824fb40f370bcb82bebe06779760.png) 
 
 工作流程：
 
 - 开始时 Monitor 中 Owner 为 null
 - 当 Thread-2 执行 synchronized(obj) 就会将 Monitor 的所有者 Owner 置为 Thread-2，Monitor 中只能有一个 Owner，**obj 对象的 Mark Word 指向 Monitor**，把**对象原有的 MarkWord 存入线程栈中的锁记录**中（轻量级锁部分详解）
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Monitor工作原理1.png#id=qof0j&originHeight=527&originWidth=991&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9865bf2e1d0238dbb309da4243881511.png)
 - 在 Thread-2 上锁的过程，Thread-3、Thread-4、Thread-5 也执行 synchronized(obj)，就会进入 EntryList BLOCKED（双向链表）
 - Thread-2 执行完同步代码块的内容，根据 obj 对象头中 Monitor 地址寻找，设置 Owner 为空，把线程栈的锁记录中的对象头的值设置回 MarkWord
 - 唤醒 EntryList 中等待的线程来竞争锁，竞争是**非公平的**，如果这时有新的线程想要获取锁，可能直接就抢占到了，阻塞队列的线程就会继续阻塞
 - WaitSet 中的 Thread-0，是以前获得过锁，但条件不满足进入 WAITING 状态的线程（wait-notify 机制）
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Monitor%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%862.png#id=Stzmf&originHeight=386&originWidth=939&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1f2a66293ad2f03f899c3eaec6d23d7d.png)
 
 注意：
 
@@ -911,7 +918,7 @@ LocalVariableTable:
 无锁 -> 偏向锁 -> 轻量级锁 -> 重量级锁	// 随着竞争的增加，只能锁升级，不能降级
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E9%94%81%E5%8D%87%E7%BA%A7%E8%BF%87%E7%A8%8B.png#id=YpK0P&originHeight=303&originWidth=852&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6ab0b50a53c6d8e5986b02b1310fe337.png)
 
 ---
 
@@ -922,7 +929,7 @@ LocalVariableTable:
 -  当锁对象第一次被线程获得的时候进入偏向状态，标记为 101，同时**使用 CAS 操作将线程 ID 记录到 Mark Word**。如果 CAS 操作成功，这个线程以后进入这个锁相关的同步块，查看这个线程 ID 是自己的就表示没有竞争，就不需要再进行任何同步操作 
 -  当有另外一个线程去尝试获取这个锁对象时，偏向状态就宣告结束，此时撤销偏向（Revoke Bias）后恢复到未锁定或轻量级锁状态 
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Monitor-MarkWord结构64位.png#id=vysjR&originHeight=359&originWidth=898&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d5d4ccd90c704a345f75061111374e31.png)
 
 一个对象创建时：
 
@@ -970,15 +977,15 @@ public static void method2() {
 ```
 
 -  创建锁记录（Lock Record）对象，每个线程的**栈帧**都会包含一个锁记录的结构，存储锁定对象的 Mark Word
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%94%81%E5%8E%9F%E7%90%861.png#id=OoZNh&originHeight=301&originWidth=655&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cec3652c4733180279a6ce78c221ff76.png) 
 -  让锁记录中 Object reference 指向锁住的对象，并尝试用 CAS 替换 Object 的 Mark Word，将 Mark Word 的值存入锁记录 
 -  如果 CAS 替换成功，对象头中存储了锁记录地址和状态 00（轻量级锁） ，表示由该线程给对象加锁
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%94%81%E5%8E%9F%E7%90%862.png#id=Q25uG&originHeight=335&originWidth=702&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9406fef1e00cb98764d291a7b74e4859.png) 
 -  如果 CAS 失败，有两种情况： 
    - 如果是其它线程已经持有了该 Object 的轻量级锁，这时表明有竞争，进入锁膨胀过程
    - 如果是线程自己执行了 synchronized 锁重入，就添加一条 Lock Record 作为重入的计数
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%94%81%E5%8E%9F%E7%90%863.png#id=erJvi&originHeight=373&originWidth=782&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ce94517e312fd40434c8d1e4599bf910.png)
 
 -  当退出 synchronized 代码块（解锁时） 
    - 如果有取值为 null 的锁记录，表示有重入，这时重置锁记录，表示重入计数减 1
@@ -993,9 +1000,9 @@ public static void method2() {
 在尝试加轻量级锁的过程中，CAS 操作无法成功，可能是其它线程为此对象加上了轻量级锁（有竞争），这时需要进行锁膨胀，将轻量级锁变为**重量级锁**
 
 -  当 Thread-1 进行轻量级加锁时，Thread-0 已经对该对象加了轻量级锁
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E9%87%8D%E9%87%8F%E7%BA%A7%E9%94%81%E5%8E%9F%E7%90%861.png#id=exzAv&originHeight=348&originWidth=859&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/496b7c0172c682a54fbc24f7ee037538.png) 
 -  Thread-1 加轻量级锁失败，进入锁膨胀流程：为 Object 对象申请 Monitor 锁，**通过 Object 对象头获取到持锁线程**，将 Monitor 的 Owner 置为 Thread-0，将 Object 的对象头指向重量级锁地址，然后自己进入 Monitor 的 EntryList BLOCKED
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E9%87%8D%E9%87%8F%E7%BA%A7%E9%94%81%E5%8E%9F%E7%90%862.png#id=U3DfY&originHeight=311&originWidth=857&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/05225ebe319ad175a54829ff21d090d7.png) 
 -  当 Thread-0 退出同步块解锁时，使用 CAS 将 Mark Word 的值恢复给对象头失败，这时进入重量级解锁流程，即按照 Monitor 地址找到 Monitor 对象，设置 Owner 为 null，唤醒 EntryList 中 BLOCKED 线程 
 
 ---
@@ -1018,8 +1025,8 @@ public static void method2() {
 自旋锁情况：
 
 -  自旋成功的情况：
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-自旋成功.png#id=yemvM&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
--  自旋失败的情况： ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-自旋失败.png#id=nXxRr&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8546f2213c61a67a631bb4381355ef35.png) 
+-  自旋失败的情况： ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5059d8c1743731b60bb69507d382251e.png) 
 
 自旋锁说明：
 
@@ -1436,14 +1443,14 @@ LockSupport 出现就是为了增强 wait & notify 的功能：
    4. 调用 Unsafe.unpark(Thread_0) 方法，设置 _counter 为 1
    5. 唤醒 _cond 条件变量中的 Thread_0，Thread_0 恢复运行，设置 _counter 为 0
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-park%E5%8E%9F%E7%90%861.png#id=ay1Ti&originHeight=280&originWidth=492&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6ffe21b65b804729641f917a8dcd03b8.png)
 
 -  先 unpark： 
    1. 调用 Unsafe.unpark(Thread_0) 方法，设置 _counter 为 1
    2. 当前线程调用 Unsafe.park() 方法
    3. 检查 _counter ，本情况为 1，这时线程无需挂起，继续运行，设置 _counter 为 0
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-park%E5%8E%9F%E7%90%862.png#id=P3Isk&originHeight=254&originWidth=492&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3ed963560616ff241b13720d57eadc08.png)
 
 ---
 
@@ -1506,7 +1513,7 @@ Guarded Suspension，用在一个线程等待另一个线程的执行结果
 - 如果有结果不断从一个线程到另一个线程那么可以使用消息队列（见生产者/消费者）
 - JDK 中，join 的实现、Future 的实现，采用的就是此模式
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E4%BF%9D%E6%8A%A4%E6%80%A7%E6%9A%82%E5%81%9C.png#id=Ona8P&originHeight=354&originWidth=972&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9cab1c69439ced813decbc043746ccf3.png)
 
 ```java
 public static void main(String[] args) {
@@ -1575,7 +1582,7 @@ class GuardedObject {
 
 多任务版保护性暂停：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E4%BF%9D%E6%8A%A4%E6%80%A7%E6%9A%82%E5%81%9C%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%89%88.png#id=B3TbT&originHeight=401&originWidth=973&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c93ed14012ef04be33924267a9a55194.png)
 
 ```java
 public static void main(String[] args) throws InterruptedException {
@@ -1813,7 +1820,7 @@ public class TraditionalProducerConsumer {
 - 消息队列是有容量限制的，满时不会再加入数据，空时不会再消耗数据
 - JDK 中各种阻塞队列，采用的就是这种模式
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F.png#id=WVEdI&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/44c27c0a04b23e67f15968e2ce50562e.png)
 
 ```java
 public class demo {
@@ -1941,7 +1948,7 @@ JMM 作用：
 
 根据 JMM 的设计，系统存在一个主内存（Main Memory），Java 中所有变量都存储在主存中，对于所有线程都是共享的；每条线程都有自己的工作内存（Working Memory），工作内存中保存的是主存中某些**变量的拷贝**，线程对所有变量的操作都是先对变量进行拷贝，然后在工作内存中进行，不能直接操作主内存中的变量；线程之间无法相互直接访问，线程间的通信（传递）必须通过主内存来完成
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.png#id=ZCjFj&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/064f021e1d1480540d6b1b85017eb9c7.png)
 
 主内存和工作内存：
 
@@ -1961,7 +1968,7 @@ Java 内存模型定义了 8 个操作来完成主内存和工作内存的交互
 
 非原子协定：没有被 volatile 修饰的 long、double 外，默认按照两次 32 位的操作
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM-内存交互.png#id=bnvz1&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/251b49a838dc2ccfa41a7d12bad76b7e.png)
 
 - lock：作用于主内存，将一个变量标识为被一个线程独占状态（对应 monitorenter）
 - unclock：作用于主内存，将一个变量从独占状态释放出来，释放后的变量才可以被其他线程锁定（对应 monitorexit）
@@ -2006,7 +2013,7 @@ public static void main(String[] args) throws InterruptedException {
 - 因为 t 线程要频繁从主内存中读取 run 的值，JIT 编译器会将 run 的值缓存至自己工作内存中的高速缓存中，减少对主存中 run 的访问，提高效率
 - 1 秒之后，main 线程修改了 run 的值，并同步至主存，而 t 是从自己工作内存中的高速缓存中读取这个变量的值，结果永远是旧值
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM-%E5%8F%AF%E8%A7%81%E6%80%A7%E4%BE%8B%E5%AD%90.png#id=AIKa0&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/015fd6790a26095e5e6570de2d561b77.png)
 
 ---
 
@@ -2062,7 +2069,7 @@ CPU 的基本工作是执行存储的指令序列，即程序，程序的执行�
 
 CPU 处理器速度远远大于在主内存中的，为了解决速度差异，在它们之间架设了多级缓存，如 L1、L2、L3 级别的缓存，这些缓存离 CPU 越近就越快，将频繁操作的数据缓存到这里，加快访问速度
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM-CPU缓存结构.png#id=OBFSF&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f6b62e7c0484dcad67a221a034fd8de4.png)
 
 | 从 CPU 到 | 大约需要的时钟周期 |
 | --- | --- |
@@ -2087,7 +2094,7 @@ CPU 处理器速度远远大于在主内存中的，为了解决速度差异，�
 
 缓存会造成数据副本的产生，即同一份数据会缓存在不同核心的缓存行中，CPU 要保证数据的一致性，需要做到某个 CPU 核心更改了数据，其它 CPU 核心对应的**整个缓存行必须失效**，这就是伪共享
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-内存伪共享.png#id=TuupZ&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3fff6c832d1681aacdc0581ca81fe4df.png)
 
 解决方法：
 
@@ -2105,7 +2112,7 @@ Linux 查看 CPU 缓存行：
 
 缓存一致性：当多个处理器运算任务都涉及到同一块主内存区域的时候，将可能导致各自的缓存数据不一样
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-缓存一致性.png#id=dN3uC&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0aecd293a2a37a413d74322a81f200e6.png)
 
 MESI（Modified Exclusive Shared Or Invalid）是一种广泛使用的**支持写回策略的缓存一致性协议**，CPU 中每个缓存行（caceh line）使用 4 种状态进行标记（使用额外的两位 bit 表示)：
 
@@ -2254,7 +2261,7 @@ public void actor1(I_Result r) {
     }
 }
 ```
- ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM-volatile保证可见性.png#id=rS6w5&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+ ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0679f34a36a8c40a4c8986fc77a3bb9e.png) 
 
 -  全能屏障：mfence（modify/mix Barrier），兼具 sfence 和 lfence 的功能 
 
@@ -2279,7 +2286,7 @@ i++ 反编译后的指令：
 1: istore_1			// 将操作数栈顶数据弹出，存入局部变量表的 slot 1
 2: iinc		1, 1
 ```
- ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM-volatile不能保证原子性.png#id=caeIW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+ ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ba6ac5491b615cba81c64d5e71a40bc3.png) 
 
 ---
 
@@ -2373,7 +2380,7 @@ getInstance 方法对应的字节码为：
 - 关键在于 0:getstatic 这行代码在 monitor 控制之外，可以越过 monitor 读取 INSTANCE 变量的值
 - 当其他线程访问 INSTANCE 不为 null 时，由于 INSTANCE 实例未必已初始化，那么 t2 拿到的是将是一个未初始化完毕的单例返回，这就造成了线程安全的问题
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JMM-DCL%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.png#id=o4Yvy&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c3d9bea43ec7496603d3ba72f9c754fc.png)
 
 ---
 
@@ -2820,11 +2827,11 @@ Cell 为累加单元：数组访问索引是通过 Thread 里的 threadLocalRand
 
 Cell 是数组形式，**在内存中是连续存储的**，64 位系统中，一个 Cell 为 24 字节（16 字节的对象头和 8 字节的 value），每一个 cache line 为 64 字节，因此缓存行可以存下 2 个的 Cell 对象，当 Core-0 要修改 Cell[0]、Core-1 要修改 Cell[1]，无论谁修改成功都会导致当前缓存行失效，从而导致对方的数据失效，需要重新去主存获取，影响效率
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E4%BC%AA%E5%85%B1%E4%BA%AB1.png#id=pn00A&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7f90745cc28db97d96100c1c9db7d4c3.png)
 
 @sun.misc.Contended：防止缓存行伪共享，在使用此注解的对象或字段的前后各增加 128 字节大小的 padding，使用 2 倍于大多数硬件缓存行让 CPU 将对象预读至缓存时**占用不同的缓存行**，这样就不会造成对方缓存行的失效
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E4%BC%AA%E5%85%B1%E4%BA%AB2.png#id=Ih9It&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/de1bfdfed677e4f76190417f2a2ccbdf.png)
 
 ---
 
@@ -3321,7 +3328,7 @@ public class ThreadLocalDateUtil {
 
 JDK8 以前：每个 ThreadLocal 都创建一个 Map，然后用线程作为 Map 的 key，要存储的局部变量作为 Map 的 value，达到各个线程的局部变量隔离的效果。这种结构会造成 Map 结构过大和内存泄露，因为 Thread 停止后无法通过 key 删除对应的数据
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ThreadLocal%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84JDK8%E5%89%8D.png#id=LBu3k&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/87afd4313ec7cf52d7ec61b78af29506.png)
 
 JDK8 以后：每个 Thread 维护一个 ThreadLocalMap，这个 Map 的 key 是 ThreadLocal 实例本身，value 是真正要存储的值
 
@@ -3330,7 +3337,7 @@ JDK8 以后：每个 Thread 维护一个 ThreadLocalMap，这个 Map 的 key 是
 - Thread 内部的 Map 是由 ThreadLocal 维护的，由 ThreadLocal 负责向 map 获取和设置线程的变量值
 - 对于不同的线程，每次获取副本值时，别的线程并不能获取到当前线程的副本值，形成副本的隔离，互不干扰
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ThreadLocal%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84JDK8%E5%90%8E.png#id=gL03c&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6867ff57f7886d848f90e292b63c22b0.png)
 
 JDK8 前后对比：
 
@@ -3636,7 +3643,7 @@ private void replaceStaleEntry(ThreadLocal<?> key, Object value, int staleSlot) 
         cleanSomeSlots(expungeStaleEntry(slotToExpunge), len);
 }
 ```
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-replaceStaleEntry%E6%B5%81%E7%A8%8B.png#id=cykKS&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02b27a45ad560f342b52f686dfe599f5.png)
 ```java
 private static int prevIndex(int i, int len) {
     // 形成一个环绕式的访问，头索引越界后置为尾索引
@@ -3823,7 +3830,7 @@ private int expungeStaleEntry(int staleSlot) {
     return i;
 }
 ```
- ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ThreadLocal探测式清理1.png#id=EPvhc&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ThreadLocal探测式清理2.png#id=dFqhU&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+ ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/14713a02ae197c2e67b46a13248027d3.png) ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bbded5cc5ba28cdee3a77d55559c0411.png) 
 
 -  启发式清理：向后循环扫描过期数据，发现过期数据调用探测式清理方法，如果连续几次的循环都没有发现过期数据，就停止扫描 
 ```java
@@ -3866,8 +3873,8 @@ private boolean cleanSomeSlots(int i, int n) {
 
 Memory leak：内存泄漏是指程序中动态分配的堆内存由于某种原因未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果，内存泄漏的堆积终将导致内存溢出
 
--  如果 key 使用强引用：使用完 ThreadLocal ，threadLocal Ref 被回收，但是 threadLocalMap 的 Entry 强引用了 threadLocal，造成 threadLocal 无法被回收，无法完全避免内存泄漏 ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ThreadLocal内存泄漏强引用.png#id=E2RG4&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
--  如果 key 使用弱引用：使用完 ThreadLocal ，threadLocal Ref 被回收，ThreadLocalMap 只持有 ThreadLocal 的弱引用，所以threadlocal 也可以被回收，此时 Entry 中的 key = null。但没有手动删除这个 Entry 或者 CurrentThread 依然运行，依然存在强引用链，value 不会被回收，而这块 value 永远不会被访问到，也会导致 value 内存泄漏 ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ThreadLocal内存泄漏弱引用.png#id=FhgF3&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+-  如果 key 使用强引用：使用完 ThreadLocal ，threadLocal Ref 被回收，但是 threadLocalMap 的 Entry 强引用了 threadLocal，造成 threadLocal 无法被回收，无法完全避免内存泄漏 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dddc1a09a6ac7181d35183cc1f0b95ca.png) 
+-  如果 key 使用弱引用：使用完 ThreadLocal ，threadLocal Ref 被回收，ThreadLocalMap 只持有 ThreadLocal 的弱引用，所以threadlocal 也可以被回收，此时 Entry 中的 key = null。但没有手动删除这个 Entry 或者 CurrentThread 依然运行，依然存在强引用链，value 不会被回收，而这块 value 永远不会被访问到，也会导致 value 内存泄漏 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7dbfb48aec43c3c428e8b054761dd559.png) 
 -  两个主要原因： 
    - 没有手动删除这个 Entry
    - CurrentThread 依然运行
@@ -4082,7 +4089,7 @@ private void enqueue(Node<E> node) {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-LinkedBlockingQueue%E5%85%A5%E9%98%9F%E6%B5%81%E7%A8%8B.png#id=F2BgB&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c6d8c94f9df2aa7543f7807737a20a4d.png) 
 
 -  再来一个节点入队 `last = last.next = node` 
 
@@ -4107,9 +4114,9 @@ private E dequeue() {
  
 
 -  `h = head` → `first = h.next`
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-LinkedBlockingQueue%E5%87%BA%E9%98%9F%E6%B5%81%E7%A8%8B1.png#id=dzynf&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03063a8d2d90a530c3bc41aab54636e7.png) 
 -  `h.next = h` → `head = first`
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-LinkedBlockingQueue%E5%87%BA%E9%98%9F%E6%B5%81%E7%A8%8B2.png#id=Z1spC&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/26784635cfba304c9b3f6739f08272e4.png) 
    - `first.item = null`：当前节点置为 Dummy 节点
 
 ---
@@ -4876,7 +4883,7 @@ RejectedExecutionHandler 下有 4 个实现类：
 
 工作原理：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png#id=NMYaW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/89caa250550efc8ea6bfcab381ae2ae0.png)
 
 1.  创建线程池，这时没有创建线程（**懒惰**），等待提交过来的任务请求，调用 execute 方法才会创建线程 
 2.  当调用 execute() 方法添加一个请求任务时，线程池会做如下判断： 
@@ -4938,7 +4945,7 @@ public static ExecutorService newSingleThreadExecutor() {
 原因：父类不能直接调用子类中的方法，需要反射或者创建对象的方式，可以调用子类静态方法 
 -  Executors.newFixedThreadPool(1) 初始时为 1，可以修改。对外暴露的是 ThreadPoolExecutor 对象，可以强转后调用 setCorePoolSize 等方法进行修改 
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-newSingleThreadExecutor.png#id=ztZcD&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0d11ffb55b15b49a37d0055536c1e32d.png)
 
 ---
 
@@ -5054,7 +5061,7 @@ private static final int COUNT_BITS = Integer.SIZE - 3;
 private static final int CAPACITY   = (1 << COUNT_BITS) - 1;
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.png#id=qfeb5&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ac8b98ebdd255a3ab024626a881d88fc.png) 
 
 -  四种状态： 
 ```java
@@ -7089,7 +7096,7 @@ AQS 核心思想：
 
 -  如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并将共享资源设置锁定状态 
 -  请求的共享资源被占用，AQS 用队列实现线程阻塞等待以及被唤醒时锁分配的机制，将暂时获取不到锁的线程加入到队列中
-CLH 是一种基于单向链表的**高性能、公平的自旋锁**，AQS 是将每条请求共享资源的线程封装成一个 CLH 锁队列的一个结点（Node）来实现锁的分配 ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-AQS原理图.png#id=Fe7fD&originHeight=401&originWidth=852&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+CLH 是一种基于单向链表的**高性能、公平的自旋锁**，AQS 是将每条请求共享资源的线程封装成一个 CLH 锁队列的一个结点（Node）来实现锁的分配 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/eff02a870ebe341788dffa9feadeb88c.png) 
 
 ---
 
@@ -7180,7 +7187,7 @@ static final class Node {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-AQS%E9%98%9F%E5%88%97%E8%AE%BE%E8%AE%A1.png#id=FfyrM&originHeight=252&originWidth=719&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a328266e357b2fc93985c8a86e8f6a76.png) 
 
 -  条件变量来实现等待、唤醒机制，支持多个条件变量，类似于 Monitor 的 WaitSet，**条件队列是单向链表** 
 ```java
@@ -7399,7 +7406,7 @@ public final void acquire(int arg) {
 ```
  
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-非公平锁1.png#id=tFYYL&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c3362862f80b3eb9291e1fdf381dc704.png)
 
 -  进入 tryAcquire 尝试获取锁逻辑，这时 state 已经是1，结果仍然失败（第二次），加锁成功有两种情况： 
    - 当前 AQS 处于无锁状态
@@ -7487,7 +7494,7 @@ private Node enq(final Node node) {
     }
 }
 ```
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-非公平锁2.png#id=FCDAr&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8ec23ccb5aa6721e3077dc4f494cd90f.png)
 
 -  线程节点加入队列成功，进入 AbstractQueuedSynchronizer#acquireQueued 逻辑阻塞线程 
    -  acquireQueued 会在一个自旋中不断尝试获得锁，失败后进入 park 阻塞 
@@ -7563,7 +7570,7 @@ private final boolean parkAndCheckInterrupt() {
 ```
 
 -  再有多个线程经历竞争失败后：
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%813.png#id=EKsOu&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/01b899e32863142b49dac5ab69200bac.png) 
 
 ---
 
@@ -7654,13 +7661,13 @@ private void unparkSuccessor(Node node) {
    - head 指向刚刚 Thread-1 所在的 Node，该 Node 会清空 Thread
    - 原本的 head 因为从链表断开，而可被垃圾回收（图中有错误，原来的头节点的 waitStatus 被改为 0 了）
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%814.png#id=xI8zl&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/792402a2513674bb1d69d227c74544b9.png)
 
 -  如果这时有其它线程来竞争**（非公平）**，例如这时有 Thread-4 来了并抢占了锁 
    - Thread-4 被设置为 exclusiveOwnerThread，state = 1
    - Thread-1 再次进入 acquireQueued 流程，获取锁失败，重新进入 park 阻塞
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%815.png#id=w3xkn&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0e6da0b02a4d1e0f969653a4f5ef8d6b.png)
 
 ---
 
@@ -8193,7 +8200,7 @@ private static final int REINTERRUPT = 1;
 private static final int THROW_IE = -1;
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F1.png#id=kj7bK&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cc9f0943985407b81fe3382a1c57b129.png) 
 
 -  **创建新的 Node 状态为 -2（Node.CONDITION）**，关联 Thread-0，加入等待队列尾部 
 ```java
@@ -8283,7 +8290,7 @@ final int fullyRelease(Node node) {
  
 
 -  fullyRelease 中会 unpark AQS 队列中的下一个节点竞争锁，假设 Thread-1 竞争成功
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F2.png#id=E89M0&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/597467b79697bf255358f41a80401798.png) 
 -  Thread-0 进入 isOnSyncQueue 逻辑判断节点**是否移动到阻塞队列**，没有就 park 阻塞 Thread-0 
 ```java
 final boolean isOnSyncQueue(Node node) {
@@ -8416,7 +8423,7 @@ final boolean transferForSignal(Node node) {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantLock-%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F3.png#id=gnmuS&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe64f516bfb0064a8a9b9cd97e5777c7.png) 
 
 -  Thread-1 释放锁，进入 unlock 流程 
 
@@ -8516,7 +8523,7 @@ public static void main(String[] args) {
 
 -  先清缓存：可能造成刚清理缓存还没有更新数据库，线程直接查询了数据库更新过期数据到缓存 
 -  先更新据库：可能造成刚更新数据库，还没清空缓存就有线程从缓存拿到了旧数据 
--  补充情况：查询线程 A 查询数据时恰好缓存数据由于时间到期失效，或是第一次查询 ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantReadWriteLock缓存.png#id=HyAC3&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+-  补充情况：查询线程 A 查询数据时恰好缓存数据由于时间到期失效，或是第一次查询 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8d5c269fbc06bcd3b54d584611e08da7.png) 
 
 可以使用读写锁进行操作
 
@@ -8836,10 +8843,10 @@ private void doAcquireShared(int arg) {
 }
 ```
 
-如果没有成功，在 doAcquireShared 内 for (;;) 循环一次，shouldParkAfterFailedAcquire 内把前驱节点的 waitStatus 改为 -1，再 for (;;) 循环一次尝试 tryAcquireShared，不成功在 parkAndCheckInterrupt() 处 park ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantReadWriteLock加锁1.png#id=e8gLN&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+如果没有成功，在 doAcquireShared 内 for (;;) 循环一次，shouldParkAfterFailedAcquire 内把前驱节点的 waitStatus 改为 -1，再 for (;;) 循环一次尝试 tryAcquireShared，不成功在 parkAndCheckInterrupt() 处 park ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0dd83ef799ed42a7217aaa0bc70cc5d9.png) 
 
 -  这种状态下，假设又有 t3 r.lock，t4 w.lock，这期间 t1 仍然持有锁，就变成了下面的样子
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantReadWriteLock%E5%8A%A0%E9%94%812.png#id=rrrwO&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3975c347e4b450cfb794833de3b0db24.png) 
 
 ---
 
@@ -8924,7 +8931,7 @@ private void doReleaseShared() {
     }
 }
 ```
- ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantReadWriteLock解锁1.png#id=d0ZwJ&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+ ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2c4a35b8fd92de4777bdd78a263f94a9.png) 
 
 -  下一个节点不是 shared 了，因此不会继续唤醒 t4 所在节点 
 -  t2 读锁解锁，进入 sync.releaseShared(1) 中，调用 tryReleaseShared(1) 让计数减一，但计数还不为零，t3 同样让计数减一，计数为零，进入doReleaseShared() 将头节点从 -1 改为 0 并唤醒下一个节点 
@@ -8956,7 +8963,7 @@ protected final boolean tryReleaseShared(int unused) {
 ```
  
 
--  t4 在 acquireQueued 中 parkAndCheckInterrupt 处恢复运行，再次 for (;;) 这次自己是头节点的临节点，并且没有其他节点竞争，tryAcquire(1) 成功，修改头结点，流程结束 ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ReentrantReadWriteLock解锁2.png#id=WDPYD&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+-  t4 在 acquireQueued 中 parkAndCheckInterrupt 处恢复运行，再次 for (;;) 这次自己是头节点的临节点，并且没有其他节点竞争，tryAcquire(1) 成功，修改头结点，流程结束 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6117e6a45aa0d82140704f010e9e7c9c.png) 
 
 ---
 
@@ -9358,7 +9365,7 @@ public CyclicBarrie(int parties, Runnable barrierAction) {
 ```
  
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-CyclicBarrier工作原理.png#id=GIxyZ&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/97b11b0468b9b14b59d95b933975c752.png)
 
 ---
 
@@ -9634,7 +9641,7 @@ private void setHeadAndPropagate(Node node, int propagate) {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Semaphore%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B1.png#id=hE5V7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f986488103dcde4da025331dd8358079.png) 
 
 -  这时 Thread-4 释放了 permits，状态如下 
 ```java
@@ -9667,7 +9674,7 @@ private void doReleaseShared() {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-Semaphore%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B2.png#id=AKkrI&originHeight=280&originWidth=959&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/92eb05534797203742cab7861d93b71d.png) 
 
 -  接下来 Thread-0 竞争成功，permits 再次设置为 0，设置自己为 head 节点，并且 unpark 接下来的共享状态的 Thread-3 节点，但由于 permits 是 0，因此 Thread-3 在尝试不成功后再次进入 park 状态 
 
@@ -9839,7 +9846,7 @@ class ThreadB extends Thread{
 4. ConcurrentHashMap、Hashtable **不允许 null 值**，HashMap 允许 null 值
 5. ConcurrentHashMap、HashMap 的初始容量为 16，Hashtable 初始容量为11，填充因子默认都是 0.75，两种 Map 扩容是当前容量翻倍：capacity _ 2，Hashtable 扩容时是容量翻倍 + 1：capacity_2 + 1
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/ConcurrentHashMap%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png#id=hS2BO&originHeight=487&originWidth=1354&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fbabba258114f312aa3e0f2ba7c28971.png)
 
 工作步骤：
 
@@ -10742,7 +10749,7 @@ private final void transfer(Node<K,V>[] tab, Node<K,V>[] nextTab) {
 ```
 
 链表处理的 LastRun 机制，**可以减少节点的创建**
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentHashMap-LastRun%E6%9C%BA%E5%88%B6.png#id=d7NKq&originHeight=526&originWidth=1488&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7ae2a92688e9ecbe06dbf47241a0e942.png) 
 
 -  helpTransfer()：帮助扩容机制 
 ```java
@@ -11070,7 +11077,7 @@ static final class COWIterator<E> implements ListIterator<E> {
 -  强一致性：当更新操作完成之后，任何多个后续进程或者线程的访问都会返回最新的更新过的值 
 -  弱一致性：系统并不保证进程或者线程的访问都会返回最新的更新过的值，也不会承诺多久之后可以读到 
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-CopyOnWriteArrayList弱一致性.png#id=r5Ceh&originHeight=337&originWidth=767&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f5519a0ef33d537d2be4b1a8cb0e7c4e.png)
 
 | 时间点 | 操作 |
 | --- | --- |
@@ -11170,7 +11177,7 @@ ConcurrentSkipListMap 提供了一种线程安全的并发访问的排序映射�
 - 对平衡树的插入和删除往往很可能导致平衡树进行一次全局的调整；而对跳表的插入和删除，**只需要对整个结构的局部进行操作**
 - 在高并发的情况下，保证整个平衡树的线程安全需要一个全局锁；对于跳表则只需要部分锁，拥有更好的性能
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentSkipListMap%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.png#id=nwlHR&originHeight=390&originWidth=1304&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bd4221c2589b85119b30b37de255cde4.png)
 
 BaseHeader 存储数据，headIndex 存储索引，纵向上**所有索引都指向链表最下面的节点**
 
@@ -11325,7 +11332,7 @@ private Node<K,V> findPredecessor(Object key, Comparator<? super K> cmp) {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentSkipListMap-Put%E6%B5%81%E7%A8%8B.png#id=YGEwN&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0fc37b4eac3efb363b1479cb85a7e66b.png) 
 
 -  put()：添加数据 
 ```java
@@ -11676,7 +11683,7 @@ final V doRemove(Object key, Object value) {
 ```
 
 经过 findPredecessor() 中的 unlink() 后索引已经被删除
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentSkipListMap-remove%E6%B5%81%E7%A8%8B.png#id=GiQi5&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5419acf437644a8bfb6421ec943b57be.png) 
 
 -  appendMarker()：添加删除标记节点 
 ```java
@@ -11845,11 +11852,11 @@ public boolean offer(E e) {
 
 图解入队：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentLinkedQueue%E5%85%A5%E9%98%9F%E6%93%8D%E4%BD%9C1.png#id=pkXj0&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/797020b91d4083a0267bdc5eb2622fef.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentLinkedQueue%E5%85%A5%E9%98%9F%E6%93%8D%E4%BD%9C2.png#id=LIN6y&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ebf9ded79588125ed916b42d737963e4.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentLinkedQueue%E5%85%A5%E9%98%9F%E6%93%8D%E4%BD%9C3.png#id=N4ZkV&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b221e53270dd335380792f807e720300.png)
 
 当 tail 节点和尾节点的距离**大于等于 1** 时（每入队两次）更新 tail，可以减少 CAS 更新 tail 节点的次数，提高入队效率
 
@@ -11908,11 +11915,11 @@ final void updateHead(Node<E> h, Node<E> p) {
 
 在更新完 head 之后，会将旧的头结点 h 的 next 域指向为 h，图中所示的虚线也就表示这个节点的自引用，被移动的节点（item 为 null 的节点）会被 GC 回收
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentLinkedQueue%E5%87%BA%E9%98%9F%E6%93%8D%E4%BD%9C1.png#id=dDPHY&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7df9e1a08e02d63f40221a99766c112b.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentLinkedQueue%E5%87%BA%E9%98%9F%E6%93%8D%E4%BD%9C2.png#id=dKMLR&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/92ff4ef093d9c345f7c99d1024f7407d.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JUC-ConcurrentLinkedQueue%E5%87%BA%E9%98%9F%E6%93%8D%E4%BD%9C3.png#id=ltuMX&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d439fc88605dd7723649a26656485e7f.png)
 
 如果这时，有一个线程来添加元素，通过 tail 获取的 next 节点则仍然是它本身，这就出现了p == q 的情况，出现该种情况之后，则会触发执行 head 的更新，将 p 节点重新指向为 head
 
@@ -12114,7 +12121,7 @@ Linux 有五种 I/O 模型：
 
 recvfrom() 用于**接收 Socket 传来的数据，并复制到应用进程的缓冲区 buf 中**，把 recvfrom() 当成系统调用
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO%E6%A8%A1%E5%9E%8B-%E9%98%BB%E5%A1%9E%E5%BC%8FIO.png#id=EkUHL&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b90f1ada0f439db6abc9eb0e96b9ee8d.png)
 
 ---
 
@@ -12124,7 +12131,7 @@ recvfrom() 用于**接收 Socket 传来的数据，并复制到应用进程的�
 
 由于 CPU 要处理更多的系统调用，因此这种模型的 CPU 利用率比较低
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO%E6%A8%A1%E5%9E%8B-%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8FIO.png#id=kxHpW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/61d85f39c6bf23c062f461932b6e0436.png)
 
 ---
 
@@ -12134,7 +12141,7 @@ recvfrom() 用于**接收 Socket 传来的数据，并复制到应用进程的�
 
 相比于非阻塞式 I/O 的轮询方式，信号驱动 I/O 的 CPU 利用率更高
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO%E6%A8%A1%E5%9E%8B-%E4%BF%A1%E5%8F%B7%E9%A9%B1%E5%8A%A8IO.png#id=F5nGA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0dfb75628b37cf386a634b38f24e837b.png)
 
 ---
 
@@ -12146,7 +12153,7 @@ IO 复用让单个进程具有处理多个 I/O 事件的能力，又被称为 Ev
 
 如果一个 Web 服务器没有 I/O 复用，那么每一个 Socket 连接都要创建一个线程去处理，如果同时有几万个连接，就需要创建相同数量的线程。相比于多进程和多线程技术，I/O 复用不需要进程线程创建和切换的开销，系统开销更小
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO%E6%A8%A1%E5%9E%8B-IO%E5%A4%8D%E7%94%A8%E6%A8%A1%E5%9E%8B.png#id=s2t6j&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/46bf51a7de6f787adb73effba77a6d3c.png)
 
 ---
 
@@ -12156,7 +12163,7 @@ IO 复用让单个进程具有处理多个 I/O 事件的能力，又被称为 Ev
 
 异步 I/O 与信号驱动 I/O 的区别在于，异步 I/O 的信号是通知应用进程 I/O 完成，而信号驱动 I/O 的信号是通知应用进程可以开始 I/O
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO%E6%A8%A1%E5%9E%8B-%E5%BC%82%E6%AD%A5IO%E6%A8%A1%E5%9E%8B.png#id=HKCtw&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/930bd3cdcf64ca8ecab2f936df458978.png)
 
 ---
 
@@ -12244,7 +12251,7 @@ while(1) {
 
 select 调用流程图：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-select%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B.png#id=KTok3&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6762a276c19f420303a1927471deb124.png)
 
 1. 使用 copy_from_user 从用户空间拷贝 fd_set 到内核空间，进程阻塞
 2. 注册回调函数 _pollwait
@@ -12432,7 +12439,7 @@ epoll 的特点：
 - 线程上下文：用户程序基地址，程序计数器、cpu cache、寄存器等，方便程序切回用户态时恢复现场
 - 内核堆栈：**系统调用函数也是要创建变量的，**这些变量在内核堆栈上分配
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81.png#id=FUBzG&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b7676147a42f8d1684fb95ff9359abcf.png)
 
 ---
 
@@ -12454,7 +12461,7 @@ epoll 的特点：
 - 执行 80 中断处理程序，找到刚刚存的系统调用号（read），先检查缓存中有没有对应的数据，没有就去磁盘中加载到内核缓冲区，然后从内核缓冲区拷贝到用户空间
 - 最后恢复到用户态，通过 thread_info 恢复现场，用户态继续执行
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E7%9A%84%E8%BF%87%E7%A8%8B.jpg#id=mlORX&originHeight=1896&originWidth=3074&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e945a074c6b849006a01ad5ac0c9df51.jpg)
 
 参考视频：[https://www.bilibili.com/video/BV19D4y1o797](https://www.bilibili.com/video/BV19D4y1o797)
 
@@ -12475,7 +12482,7 @@ DMA (Direct Memory Access) ：直接存储器访问，让外部设备不通过 C
 
 一个完整的 DMA 传输过程必须经历 DMA 请求、DMA 响应、DMA 传输、DMA 结束四个步骤：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-DMA.png#id=P7yH0&originHeight=591&originWidth=1455&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22b8914f40a7c699584422470911b97f.png)
 
 DMA 方式是一种完全由硬件进行信息传送的控制方式，通常系统总线由 CPU 管理，在 DMA 方式中，CPU 的主存控制信号被禁止使用，CPU 把总线（地址总线、数据总线、控制总线）让出来由 DMA 控制器接管，用来控制传送的字节数、判断 DMA 是否结束、以及发出 DMA 结束信号，所以 DMA 控制器必须有以下功能：
 
@@ -12498,11 +12505,11 @@ DMA 方式是一种完全由硬件进行信息传送的控制方式，通常系�
 
 流程图中的箭头反过来也成立，可以从网卡获取数据
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-BIO%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png#id=VeoG9&originHeight=594&originWidth=990&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/645d8e093b17b3aac2468fcaec97390f.png)
 
 read 调用图示：read、write 都是系统调用指令
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-缓冲区读写.png#id=bxSfZ&originHeight=731&originWidth=904&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/40042009f50252bdfa6af58b79dd62ec.png)
 
 ---
 
@@ -12517,7 +12524,7 @@ mmap（Memory Mapped Files）内存映射加 write 实现零拷贝，**零拷贝
 - 发出 mmap 系统调用，DMA 拷贝到内核缓冲区，映射到共享缓冲区；mmap 系统调用返回，无需拷贝
 - 发出 write 系统调用，将数据从内核缓冲区拷贝到内核 Socket 缓冲区；write 系统调用返回，DMA 将内核空间 Socket 缓冲区中的数据传递到协议引擎
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-mmap%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png#id=jlzJO&originHeight=613&originWidth=1135&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a74fe63f6bc858c1d8e9306933743324.png)
 
 原理：利用操作系统的 Page 来实现文件到物理内存的直接映射，完成映射后对物理内存的操作会**被同步**到硬盘上
 
@@ -12535,7 +12542,7 @@ sendfile 实现零拷贝，打开文件的文件描述符 fd 和 socket 的 fd �
 
 说明：零拷贝技术是不允许进程对文件内容作进一步的加工的，比如压缩数据再发送
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/IO-sendfile%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png#id=ZaEQk&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8960cd5f99995dd1d38f52d5f987fd8d.png)
 
 sendfile2.4 之后，sendfile 实现了更简单的方式，文件到达内核缓冲区后，不必再将数据全部复制到 socket buffer 缓冲区，而是只**将记录数据位置和长度相关等描述符信息**保存到 socket buffer，DMA 根据 Socket 缓冲区中描述符提供的位置和偏移量信息直接将内核空间缓冲区中的数据拷贝到协议引擎上（2 次复制 2 次切换）
 
@@ -12702,9 +12709,9 @@ TCP 协议的使用场景：文件上传和下载、邮件发送和接收、远�
 
 注意：**TCP 不会为没有数据的 ACK 超时重传**
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/三次握手.png#id=QFFjQ&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f1d8c2fb34cb7a9931c33d96286b995b.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/四次挥手.png#id=NGRg4&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c12a84e0d27b4d9e1a31c5d4b2c2eca0.png)
 
 推荐阅读：[https://yuanrengu.com/2020/77eef79f.html](https://yuanrengu.com/2020/77eef79f.html)
 
@@ -12738,7 +12745,7 @@ ServerSocket 类：
 
 -  构造方法：`public ServerSocket(int port)` 
 -  常用 API：`public Socket accept()`，**阻塞等待**接收一个客户端的 Socket 管道连接请求，连接成功返回一个 Socket 对象
-三次握手后 TCP 连接建立成功，服务器内核会把连接从 SYN 半连接队列（一次握手时在服务端建立的队列）中移出，移入 accept 全连接队列，等待进程调用 accept 函数时把连接取出。如果进程不能及时调用 accept 函数，就会造成 accept 队列溢出，最终导致建立好的 TCP 连接被丢弃 ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Frame/Netty-TCP三次握手.png#id=xLoq2&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+三次握手后 TCP 连接建立成功，服务器内核会把连接从 SYN 半连接队列（一次握手时在服务端建立的队列）中移出，移入 accept 全连接队列，等待进程调用 accept 函数时把连接取出。如果进程不能及时调用 accept 函数，就会造成 accept 队列溢出，最终导致建立好的 TCP 连接被丢弃 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/42057ba4f276685f5c6dd02f1d3f5cd1.png) 
 
 **相当于**客户端和服务器建立一个数据管道（虚连接，不是真正的物理连接），管道一般不用 close
 
@@ -12761,9 +12768,9 @@ ServerSocket 类：
 3. 从 Socket 通信管道中得到一个字节输入流
 4. 从字节输入流中读取客户端发来的数据
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/BIO%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6.png#id=HAhux&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/56a86fa787610165ecb93801746c3322.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/TCP-%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%9E%8B.png#id=GCrdw&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/841a14fa55807a3e558a44db52ef097a.png)
 
 - 如果输出缓冲区空间不够存放主机发送的数据，则会被阻塞，输入缓冲区同理
 - 缓冲区不属于应用程序，属于内核
@@ -13150,7 +13157,7 @@ Selector 是一个 Java NIO 组件，能够检查一个或多个 NIO 通道，�
 
 NIO 的实现框架：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/NIO%E6%A1%86%E6%9E%B6.png#id=PjQjl&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/68ba2f27bfd4ef656b26695bf2d93bbd.png)
 
 - 每个 Channel 对应一个 Buffer
 - 一个线程对应 Selector ， 一个 Selector 对应多个 Channel（连接）
@@ -13169,7 +13176,7 @@ Java NIO 系统的核心在于：通道和缓冲区，通道表示打开的 IO �
 
 缓冲区（Buffer）：缓冲区本质上是一个**可以读写数据的内存块**，用于特定基本数据类型的容器，用于与 NIO 通道进行交互，数据是从通道读入缓冲区，从缓冲区写入通道中的
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/NIO-Buffer.png#id=dJ88d&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe45187600719cac0b6a1a7cdc4c7bf4.png)
 
 **Buffer 底层是一个数组**，可以保存多个相同类型的数据，根据数据类型不同 ，有以下 Buffer 常用子类：ByteBuffer、CharBuffer、ShortBuffer、IntBuffer、LongBuffer、FloatBuffer、DoubleBuffer
 
@@ -13181,7 +13188,7 @@ Java NIO 系统的核心在于：通道和缓冲区，通道表示打开的 IO �
 -  限制 （limit）：表示缓冲区中可以操作数据的大小（limit 后数据不能进行读写），缓冲区的限制不能为负，并且不能大于其容量。写入模式，limit 等于 buffer 的容量；读取模式下，limit 等于写入的数据量 
 -  位置（position）：**下一个要读取或写入的数据的索引**，缓冲区的位置不能为负，并且不能大于其限制 
 -  标记（mark）与重置（reset）：标记是一个索引，通过 Buffer 中的 mark() 方法指定 Buffer 中一个特定的位置，可以通过调用 reset() 方法恢复到这个 position 
--  位置、限制、容量遵守以下不变式： **0 <= position <= limit <= capacity** ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/NIO-Buffer操作.png#id=ozGTG&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+-  位置、限制、容量遵守以下不变式： **0 <= position <= limit <= capacity** ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d85f7faafb0ad564b7314eb67c1e3bd8.png) 
 
 ---
 
@@ -13359,9 +13366,9 @@ Direct Memory 优点：
 
 JVM 直接内存图解：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JVM-直接内存直接缓冲区.png#id=q7VOO&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/edcf02d4b9161d12dffff1f8d400f6d6.png)
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/JVM-直接内存非直接缓冲区.png#id=fLlP7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/190cee5a90ac94a31b77eddb7ab17f2c.png)
 
 ---
 
@@ -13650,7 +13657,7 @@ Channel 的方法：**sendfile 实现零拷贝**
 1. Buffer
 2. 使用上述两种方法
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/NIO-%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6.png#id=SiiPW&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6cdd39ac1dfa9ec097b046be6e0a3a21.png)
 
 ```java
 public class ChannelTest {
@@ -13761,7 +13768,7 @@ public class ChannelTest {
 
 选择器（Selector） 是 SelectableChannle 对象的**多路复用器**，Selector 可以同时监控多个通道的状况，利用 Selector 可使一个单独的线程管理多个 Channel，**Selector 是非阻塞 IO 的核心**
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Java/NIO-Selector.png#id=LLerZ&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ec4f4c708411608c84c67434ed4a6c0b.png)
 
 - Selector 能够检测多个注册的通道上是否有事件发生（多个 Channel 以事件的方式可以注册到同一个 Selector)，如果有事件发生，就获取事件然后针对每个事件进行相应的处理，就可以只用一个单线程去管理多个通道，也就是管理多个连接和请求
 - 只有在连接/通道真正有读写事件发生时，才会进行读写，就大大地减少了系统开销，并且不必为每个连接都创建一个线程，不用去维护多个线程

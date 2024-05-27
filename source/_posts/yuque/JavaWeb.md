@@ -1,3 +1,10 @@
+---
+title: JavaWeb
+urlname: fp6ps3t3rlbygff4
+date: '2024-03-19 16:02:01'
+updated: '2024-05-13 09:06:55'
+description: HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku...
+---
 # HTML
 ## HTML入门
 ### 概述
@@ -50,7 +57,7 @@ HTML 标签可以拥有属性
 
 ### 结构
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E7%BB%93%E6%9E%84.png#id=ee34N&originHeight=432&originWidth=1215&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/779cae66bae2f8948232b78f2c564f40.png)
 
 文档结构介绍：
 
@@ -246,7 +253,7 @@ HTML 标签可以拥有属性
 
 **效果如下**：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE%E6%95%88%E6%9E%9C%E5%9B%BE.png#id=G6h8J&originHeight=845&originWidth=1312&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/566553d90a6165f430745f34ea05f386.png)
 
 ---
 
@@ -316,7 +323,7 @@ target属性取值:
 
 效果图：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML超链接效果图.png#id=GVZtD&originHeight=576&originWidth=668&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6ddd71e361b76f30c8ea41bc8d481aa.png)
 
 ---
 
@@ -425,7 +432,7 @@ button标签：表示按钮
 
 使用方式：以name属性值作为键，value属性值作为值，构成键值对提交到服务器，多个键值对浏览器使用`&`进行分隔。
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E6%A0%87%E7%AD%BEinput%E5%B1%9E%E6%80%A7-name-value.png#id=QsaJr&originHeight=578&originWidth=1323&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/57bd99b47898791bdfd8fb153575cca9.png)
 
 ##### type属性
 | 属性值 | 作用 | 备注 |
@@ -520,7 +527,7 @@ button标签：表示按钮
 </html>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E6%A0%87%E7%AD%BEinput%E5%B1%9E%E6%80%A7-type.png#id=s3JsK&originHeight=577&originWidth=658&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c7e342803c2f30ab59682a024f83414e.png)
 
 ---
 
@@ -570,7 +577,7 @@ button标签：表示按钮
 </body>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E6%A0%87%E7%AD%BEselect%E5%92%8C%E6%96%87%E6%9C%AC%E5%9F%9F%E5%B1%9E%E6%80%A7.png#id=nYWZY&originHeight=444&originWidth=527&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ec3bd161cbe0a6c50b18d8b8e72f89af.png)
 
 ---
 
@@ -599,7 +606,7 @@ button标签：表示按钮
 - tr：table row，表示表中单元的行
 - td：table data，表示表中一个单元格
 - th：table header，表格单元格的表头，通常字体样式加粗居中
-- ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE.png#id=pcHuM&originHeight=442&originWidth=778&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c6531117ac8624de87523767345ffb64.png)
 
 代码展示：
 
@@ -673,7 +680,7 @@ button标签：表示按钮
 
 效果图：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE%E8%B7%A8%E8%A1%8C%E8%B7%A8%E5%88%97%E6%95%88%E6%9E%9C%E5%9B%BE.png#id=GLOIk&originHeight=163&originWidth=566&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/93bb18e9e37ff35ae13053f978a8da35.png)
 
 ---
 
@@ -741,7 +748,7 @@ body {
 </html>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E8%83%8C%E6%99%AF%E5%9B%BE.png#id=xKp7a&originHeight=842&originWidth=1307&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5ca4ccb092aa2a9a36d6b43b38a21850.png) 
 
 -  背景重复
 [`background-repeat`]属性用于控制图像的平铺行为。可用值： 
@@ -755,7 +762,7 @@ body {
   background-repeat: repeat-x;/*水平重复*/
 }
 ```
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E8%83%8C%E6%99%AF%E8%AE%BE%E8%AE%A1.png#id=hZmQ0&originHeight=340&originWidth=1098&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fa6bdfedeadd05d1cd84b72e6074ba82.png)
 
 ---
 
@@ -774,7 +781,7 @@ body {
 <div >center</div>
 <div>right</div>
 ```
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML-div%E7%AE%80%E5%8D%95%E5%B8%83%E5%B1%80.png#id=XFb1J&originHeight=160&originWidth=813&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/95e3c0d4c198c055944387c86180fe05.png)
 
 -  class值
 可以设置宽度，浮动，背景 
@@ -874,7 +881,7 @@ clear：both；清除两侧浮动，此元素不再收浮动元素布局影响�
 </html>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML-div%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80.png#id=WFcrS&originHeight=842&originWidth=1918&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8d89b3692752b9db10d4c9e1b34fbf2e.png) 
 
 ---
 
@@ -890,7 +897,7 @@ clear：both；清除两侧浮动，此元素不再收浮动元素布局影响�
 | **footer** | 页脚元素 | 表示页面的底部 | 块元素，文档中可以定义多个 |
 
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E7%BB%93%E6%9E%84%E5%9B%BE.jpg#id=HBJa0&originHeight=615&originWidth=1233&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0ffaf7cf1e68fca9748f709e575e6b90.jpg)
 
 ---
 
@@ -953,7 +960,7 @@ clear：both；清除两侧浮动，此元素不再收浮动元素布局影响�
 </html>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTML%E6%A0%87%E7%AD%BEvideo.png#id=WamXt&originHeight=338&originWidth=855&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2c96806e5f4497076df1f81b5e9c680a.png)
 
 ---
 
@@ -1014,7 +1021,7 @@ CSS是一门基于规则的语言—你能定义用于你的网页中**特定元
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS%E7%9A%84%E7%BB%84%E6%88%90.png#id=nHzK3&originHeight=227&originWidth=665&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a5fcb40cd4be28b70ce51e13c7146ce3.png)
 
 ---
 
@@ -1417,7 +1424,7 @@ div {
 </body>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS-边框样式效果图.png#id=PXzov&originHeight=442&originWidth=828&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/09ef256c75cfc53c7389a676ca0526e2.png)
 
 ---
 
@@ -1445,7 +1452,7 @@ div {
 </html>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS%E8%BE%B9%E6%A1%86%E8%BD%AE%E5%BB%93%E6%95%88%E6%9E%9C%E5%9B%BE.png#id=hv9iV&originHeight=118&originWidth=567&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1b7f8e36d0b57c240accd1189b945edb.png)
 
 ---
 
@@ -1455,7 +1462,7 @@ div {
 
 盒子模型是通过设置**元素框**与**元素内容**和**外部元素**的边距，而进行布局的方式。
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png#id=RSwwY&originHeight=582&originWidth=625&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e786f6721208e5d48d9561366ddc0713.png)
 
 - element : 元素。
 - padding : 内边距，也有资料将其翻译为填充。
@@ -1546,7 +1553,7 @@ padding-left
 </div
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%BC%8F-%E6%95%88%E6%9E%9C%E5%9B%BE1.png#id=vFCo5&originHeight=507&originWidth=571&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/aa1a5e04ad0b4206540445d95d06f200.png) 
 
 -  增加内边距会增加元素框的总尺寸 
 ```css
@@ -1566,7 +1573,7 @@ padding-left
 </style>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%BC%8F-%E6%95%88%E6%9E%9C%E5%9B%BE2.png#id=cqeHU&originHeight=599&originWidth=636&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a5573c3c2d1a13802b78d67611b60e04.png) 
 
 ---
 
@@ -1630,7 +1637,7 @@ span{
 <span>微信</span>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/CSS-%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F%E6%95%88%E6%9E%9C%E5%9B%BE.png#id=LWuhV&originHeight=246&originWidth=858&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/38bbff1d6a00183e5ddfa7c7b1c00eea.png)
 
 ---
 
@@ -1903,7 +1910,7 @@ HTTP 和 HTTPS 的区别：
 
 HTTPS 工作流程：服务器端的公钥和私钥，用来进行非对称加密，客户端生成的随机密钥，用来进行对称加密
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTTP-HTTPS%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B.png#id=xpHum&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/76873b559a918318cc1f249989b26077.png)
 
 1. 客户端向服务器发起 HTTPS 请求，连接到服务器的 443 端口，请求携带了浏览器支持的加密算法和哈希算法，协商加密算法
 2. 服务器端会向数字证书认证机构注册公开密钥，认证机构**用 CA 私钥**对公开密钥做数字签名后绑定在数字证书（又叫公钥证书，内容有公钥，网站地址，证书颁发机构，失效日期等）
@@ -1931,7 +1938,7 @@ HTTPS 工作流程：服务器端的公钥和私钥，用来进行非对称加�
 -  请求方式 
    - POST
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTTP%E8%AF%B7%E6%B1%82%E9%83%A8%E5%88%86.png#id=BMkz9&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/106ca6c8e9e9d197bd9802605f5b96de.png)
 
    -  GET 
 ```html
@@ -2026,14 +2033,14 @@ Content-Disposition: form-data; name="password"
 
 响应部分图：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTTP%E5%93%8D%E5%BA%94%E9%83%A8%E5%88%86.png#id=pErmR&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3d17978d028f3cd0db06766f510b6dd8.png)
 
 -  响应行
 HTTP/1.1：使用协议的版本
 200：响应状态码
 OK：状态码描述 
    -  响应状态码：
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/HTTP%E7%8A%B6%E6%80%81%E5%93%8D%E5%BA%94%E7%A0%81.png#id=hPwtT&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/df6262693d8990e4f96a98ea0f223be9.png) 
 | 状态码 | 说明 |
 | --- | --- |
 | 200 | 一切都 OK，与服务器连接成功，发送请求成功 |
@@ -2127,8 +2134,8 @@ Web，在计算机领域指网络。像我们接触的 `WWW`，它是由 3 个�
 部署方式划分：一体化架构，垂直拆分架构，分布式架构，流动计算架构，微服务架构。
 
 -  C/S结构：客户端—服务器的方式。其中C代表Client，S代表服务器。C/S结构的系统设计图如下：
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/JavaEE-CS结构图.jpg#id=iONq4&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
--  B/S结构是浏览器—服务器的方式。B代表Browser，S代表服务器。B/S结构的系统设计图如下： ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/JavaEE-BS结构图.jpg#id=NFiiJ&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b1c321853514cc110d3fff97506a63ad.jpg) 
+-  B/S结构是浏览器—服务器的方式。B代表Browser，S代表服务器。B/S结构的系统设计图如下： ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/51ede853e5b535aa08cdd26c508faddd.jpg) 
 -  两种结构的区别及优劣 
    -  区别： 
       - 第一：硬件环境不同，C/S通常是建立在专用的网络或小范围的网络环境上（即局域网），且必须要安装客户端。而B/S是建立在广域网上的，适应范围强，通常有操作系统和浏览器就行。
@@ -2167,7 +2174,7 @@ Web，在计算机领域指网络。像我们接触的 `WWW`，它是由 3 个�
 
 目录结构详解：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E8%AF%A6%E8%A7%A3.png#id=w83Jt&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/4f593f3a9d7ddb9b7dc41493ce204208.png)
 
 ---
 
@@ -2205,7 +2212,7 @@ Tomcat服务器的停止文件也在二进制文件目录bin中：shutdown.bat�
 -  Address already in use : JVM_Bind：端口被占用，找到占用该端口的应用 
    -  进程不重要：使用cmd命令：netstat -a -o 查看 pid  在任务管理器中结束占用端口的进程 
    -  进程很重要：修改自己的端口号。修改的是 Tomcat 目录下`\conf\server.xml`中的配置。
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat-server.xml%E7%AB%AF%E5%8F%A3%E9%85%8D%E7%BD%AE.png#id=p1rQA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/72553914725e95ce24f5da346a566bf6.xml端口配置) 
 
 ---
 
@@ -2213,7 +2220,7 @@ Tomcat服务器的停止文件也在二进制文件目录bin中：shutdown.bat�
 
 Run -> Edit Configurations -> Templates -> Tomcat Server -> Local
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat-IDEA%E9%85%8D%E7%BD%AETomcat.png#id=P98P3&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22dc1b3087e2ab93e9e0cd88165ea0d0.png)
 
 ---
 
@@ -2248,9 +2255,9 @@ Run -> Edit Configurations -> Templates -> Tomcat Server -> Local
 #### IDEA部署
 
 -  新建工程
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat-IEDA新建工程.png#id=bfgNr&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17cf80252662a0db55b86757a6cfb69b.png) 
 -  发布工程
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat-IDEA%E5%8F%91%E5%B8%83%E5%B7%A5%E7%A8%8B.png#id=DvAXl&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9da096df165370818139b07ce8d50a67.png) 
 -  Run 
 
 ---
@@ -2276,7 +2283,7 @@ Run -> Edit Configurations -> Templates -> Tomcat Server -> Local
 
 Tomcat 核心组件架构图如下所示：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat-%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E6%9E%B6%E6%9E%84%E5%9B%BE.png#id=aAP7R&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3718ce5e9b88f0cbc221fa71d8866d60.png)
 
 组件介绍：
 
@@ -2395,7 +2402,7 @@ Socket 是使用 TCP/IP 或者 UDP 协议在服务器与客户端之间进行传
 - **HTTP 协议：是在 TCP/IP 协议之上进一步封装的一层协议，关注数据传输的格式是否规范，底层的数据传输还是运用了 Socket 和 TCP/IP**
 
 Tomcat 和 Servlet 的关系：Servlet 的运行环境叫做 Web 容器或 Servlet 服务器，**Tomcat 是 Web 应用服务器，是一个 Servlet/JSP 容器**。Tomcat 作为 Servlet 容器，负责处理客户请求，把请求传送给 Servlet，并将 Servlet 的响应传送回给客户。而 Servlet 是一种运行在支持 Java 语言的服务器上的组件，Servlet 用来扩展 Java Web 服务器功能，提供非常安全的、可移植的、易于使用的 CGI 替代品
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Tomcat%E4%B8%8EServlet%E7%9A%84%E5%85%B3%E7%B3%BB.png#id=ezt2n&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7595a6e7bda326bcbabe1cbe2a1a4fc9.png)
 
 ---
 
@@ -2409,7 +2416,7 @@ Servlet是SUN公司提供的一套规范，名称就叫Servlet规范，它也是
 2.  通过实现Servlet接口，继承GenericServlet或者HttpServlet，实现Servlet功能 
 3.  每次请求都会执行service方法，在service方法中还有参数ServletRequest和ServletResponse 
 4.  支持配置相关功能
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Servlet%E7%B1%BB%E5%85%B3%E7%B3%BB%E6%80%BB%E8%A7%86%E5%9B%BE.png#id=v9F4m&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe4e6b1ff7bc56a219f0ec9473c398ce.png) 
 
 ---
 
@@ -2417,13 +2424,13 @@ Servlet是SUN公司提供的一套规范，名称就叫Servlet规范，它也是
 
 创建 Web 工程 → 编写普通类继承 Servlet 相关类 → 重写方法
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Servlet%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B%E6%89%A7%E8%A1%8C.png#id=ojC1a&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f3a57e01dfd1c862df772ccfb665b31c.png)
 
 Servlet执行过程分析：
 
 通过浏览器发送请求，请求首先到达Tomcat服务器，由服务器解析请求URL，然后在部署的应用列表中找到应用。然后找到web.xml配置文件，在web.xml中找到FirstServlet的配置（/），找到后执行service方法，最后由FirstServlet响应客户浏览器。整个过程如下图所示：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Servlet%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E5%9B%BE.jpg#id=fzb4L&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b30dfed16c49fe1422faf68bb2579d33.jpg)
 
 ---
 
@@ -2445,7 +2452,7 @@ Servlet执行过程分析：
 
 Servlet 3.0 中的异步处理指的是允许Servlet重新发起一条新线程去调用 耗时业务方法，这样就可以避免等待
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Servlet3.0%E7%9A%84%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86.png#id=Lzeso&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/996e1a108ded22a558960c3fb2e7635c.0的异步处理)
 
 ---
 
@@ -2752,7 +2759,7 @@ public class ServletDemo8 extends HttpServlet {
  
 
 -  效果：
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/ServletConfig%E6%BC%94%E7%A4%BA.png#id=Dgq6F&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f326f5fb4d8a66dbfbd055af043102a3.png) 
 
 ---
 
@@ -2774,7 +2781,7 @@ Servlet 规范中，共有4个域对象，ServletContext 是其中一个，web �
 
 数据共享：
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/ServletContext共享数据.png#id=Zukfn&originHeight=392&originWidth=790&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/41dd24b2d9bf0c045b191a44d6c7737c.png)
 
 获取ServletContext：
 
@@ -2941,7 +2948,7 @@ public @interface WebServlet {
 
 Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Servlet%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E5%9B%BE.png#id=dzyFH&originHeight=244&originWidth=775&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6d49c257279608ae3c91359c55c4bc22.png)
 
 ---
 
@@ -2957,7 +2964,7 @@ Request 作用：
 - 请求转发
 - 作为域对象存数据
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Request%E8%AF%B7%E6%B1%82%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B1%BB%E8%A7%86%E5%9B%BE.png#id=GkWvG&originHeight=375&originWidth=704&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c77653e5c5fd2908f2b1cac960ceb760.png)
 
 ---
 
@@ -3367,7 +3374,7 @@ Response 的作用：
 
 - 请求重定向
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Response%E5%93%8D%E5%BA%94%E7%B1%BB%E8%A7%86%E5%9B%BE.png#id=QgEGG&originHeight=406&originWidth=504&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/030e7ba9b29049fe76c771ec4fc03577.png)
 
 ---
 
@@ -3541,7 +3548,7 @@ public class ServletDemo04 extends HttpServlet {
 }
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Response%E8%AE%BE%E7%BD%AE%E7%BC%93%E5%AD%98%E6%97%B6%E9%97%B4.png#id=WM4qA&originHeight=715&originWidth=1199&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b583d5d837629256b91efcdba4cb1fe4.png)
 
 ---
 
@@ -3696,7 +3703,7 @@ public class ServletDemo08 extends HttpServlet {
 3. 请求转发可以和请求域对象共享数据，数据不会丢失
 4. 请求转发浏览器地址栏不变
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%E5%AF%B9%E6%AF%94%E5%9B%BE.jpg#id=xKia6&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7e71620021619756c032200512d3b637.jpg)
 
 ---
 
@@ -3773,7 +3780,7 @@ Cookie：客户端会话管理技术，把要共享的数据保存到了客户�
 
 作用：保存客户浏览器访问网站的相关内容（需要客户端不禁用 Cookie），从而在每次访问同一个内容时，先从本地缓存获取，使资源共享，提高效率。
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Cookie%E7%B1%BB%E8%AE%B2%E8%A7%A3.png#id=uSx01&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/87a78eb05a66711291357cdac9ac4049.png)
 
 ---
 
@@ -3922,7 +3929,7 @@ HttpServletRequest类获取Session：
 | HttpSession getSession(boolean creat) | 获取HttpSession对象，未获取到是否自动创建 |
 
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Session获取的两个方法.png#id=SpGQf&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dd196167e651b41ef7f429ae464ac8b9.png)
 
 ---
 
@@ -4113,11 +4120,11 @@ JSP部署在服务器上，可以处理客户端发送的请求，并根据请�
 
 -  执行过程：
 客户端提交请求——Tomcat服务器解析请求地址——找到JSP页面——Tomcat将JSP页面翻译成Servlet的java文件——将翻译好的.java文件编译成.class文件——返回到客户浏览器上
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/JSP%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png#id=KRcYf&originHeight=585&originWidth=1227&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/baa2f98f6219508dde54478a250b4f09.png) 
 -  溯源，打开JSP翻译后的Java文件
 `public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase`，`public abstract class HttpJspBase extends HttpServlet implements HttpJspPage`，HttpJspBase是个抽象类继承HttpServlet，所以JSP本质上继承HttpServlet
 在文件中找到了输出页面的代码，本质都是用out.write()输出的JSP语句
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/Jsp%E7%9A%84%E6%9C%AC%E8%B4%A8%E8%AF%B4%E6%98%8E.png#id=kx3Tj&originHeight=585&originWidth=1768&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6d6ef90300d629cdf31c703dd566518a.png) 
 -  总结：
 JSP它是一个特殊的Servlet，主要是用于展示动态数据。它展示的方式是用流把数据输出出来，而我们在使用JSP时，涉及HTML的部分，都与HTML的用法一致，这部分称为jsp中的模板元素，决定了页面的外观。 
 
@@ -4294,7 +4301,7 @@ jsp中的隐式对象也并不是未声明，它是在翻译成.java文件时声
    - PageContextd对象**可以获取其他八个隐式对象**
    - PageContextd对象是一个局部变量，它的生命周期随着JSP的创建而诞生，随着JSP的结束而消失。每个JSP页面都有一个独立的PageContext
 -  PageContext方法如下，页面域操作的方法定义在了PageContext的父类JspContext中
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/PageContext%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3.png#id=GLym0&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/128f5c95ca0e77ce9613211ee47488d4.png) 
 
 ---
 
@@ -4315,7 +4322,7 @@ M : model， 通常用于封装数据，封装的是数据模型
 V :  view，通常用于展示数据。动态展示用jsp页面，静态数据展示用html
 C :  controller，通常用于处理请求和响应，一般指的是Servlet
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/MVC%E6%A8%A1%E5%9E%8B.png#id=RmtG9&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8a59e3d7b256784b63225d21feb3ca5f.png)
 
 ---
 
@@ -4468,7 +4475,7 @@ str：
 
 EL表达式中运算符：
 
--  关系运算符：![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6.png#id=zael7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+-  关系运算符：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/37f2baf4142c9d6926845f1154d32bc7.png) 
 -  逻辑运算符： 
 | 逻辑运算符 | 说明 |
 | --- | --- |
@@ -4513,7 +4520,7 @@ EL表达式中运算符：
 </html>
 ```
 
-![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Web/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%90%E7%AE%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%9B%BE.png#id=svwO6&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/40b5b997630dd9495435c45b84d3a65f.png)
 
 ---
 
@@ -5758,7 +5765,7 @@ function(参数列表) {
 ### DOM介绍
 DOM(Document Object Model)：文档对象模型。
 将 HTML 文档的各个组成部分，封装为对象。借助这些对象，可以对 HTML 文档进行增删改查的动态操作。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835362447-faa522f1-2bb9-4464-b328-e9118bbb5fef.png#averageHue=%23fbf8f8&clientId=u33825a4e-06f1-4&from=paste&id=u13ba21be&originHeight=444&originWidth=882&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u03144564-d2ab-4198-92a1-97921a8b29a&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cecc9d97dc12775b2df755358f015e1f.png)
 
 ---
 
@@ -5890,8 +5897,8 @@ Attribute属性的操作：
 ### 事件介绍
 事件指的就是当某些组件执行了某些操作后，会触发某些代码的执行
 
-- 常用的事件：![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835362449-04941580-cd58-4f7f-96af-6b6ea4ba649f.png#averageHue=%23c8d3e5&clientId=u33825a4e-06f1-4&from=paste&id=udba7d271&originHeight=310&originWidth=639&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uefcdc4c9-cd29-401e-9873-ac27e307253&title=)
-- 更多的事件：![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835362483-74f0abe9-8e9e-4737-ad4f-21bf45411d80.png#averageHue=%23c7d3e5&clientId=u33825a4e-06f1-4&from=paste&id=u9046de37&originHeight=312&originWidth=640&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u90ae8d66-1832-40eb-be98-2622c89e870&title=)
+- 常用的事件：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/85bc9fc3c8bf28008b4352bf941ac73c.png)
+- 更多的事件：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cf1f661952b84d2cf41d2675eab9bdf4.png)
 
 ---
 
@@ -5938,7 +5945,7 @@ Attribute属性的操作：
 ### 综合案例
 案例介绍：
 在姓名、年龄、性别三个文本框中填写信息后，添加到“学生信息表”列表（表格），点击删除后，删除该行数据，并且不需刷新
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835362506-e53ec857-3a6a-44b7-8a07-f8c7b629ebec.png#averageHue=%23f3f2f2&clientId=u33825a4e-06f1-4&from=paste&id=u1be6e309&originHeight=385&originWidth=647&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u59afe7e8-8484-41e8-8f5a-9c36dbc2103&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/95175c16d19ecdc194410f88fe4d992d.png)
 
 - 添加功能分析
    1. 为添加按钮绑定单击事件
@@ -6287,7 +6294,7 @@ JSON(JavaScript Object Notation)：是一种轻量级的数据交换格式。
 
 - 基于 ECMAScript 规范的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据
 - 简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言，易于人阅读和编写，同时也易于计算机解析和 生成，并有效的提升网络传输效率。
-- 创建格式：**name是字符串类型**![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835362471-4a18e058-025f-4429-a647-216bc6b90acd.png#averageHue=%23b6c7df&clientId=u33825a4e-06f1-4&from=paste&id=ucada6977&originHeight=197&originWidth=679&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ue06ff2b0-5f81-4406-a5dc-02c8325c365&title=)
+- 创建格式：**name是字符串类型**![](https://raw.githubusercontent.com/choodsire666/blog-img/main/138eb89922162218ce2d318a34c24a04.png)
 - json常用方法
 | **方法** | **说明** |
 | --- | --- |
@@ -6423,7 +6430,7 @@ RegExp：
 
 #### 验证用户
 使用 onsubmit 表单提交事件
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835362959-3c37b8af-0a4d-443c-bca3-8c4a5538d07b.png#averageHue=%23fbfaf9&clientId=u33825a4e-06f1-4&from=paste&id=u5058a2e5&originHeight=356&originWidth=601&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u6e54b10b-404e-4ff2-a558-7684f10fc09&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/40cd650e3e1167557772697bae4793f9.png)
 ```
 <form class="login-form" action="#" id="registered" method="get" autocomplete="off">
     <input type="text" id="username" name="username">
@@ -6462,7 +6469,7 @@ RegExp：
 ### BOM介绍
 BOM(Browser Object Model)：浏览器对象模型。
 将浏览器的各个组成部分封装成不同的对象，方便我们进行操作。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363030-a131493b-8d86-4c07-aac7-4993b4b2afbd.png#averageHue=%23faf6f6&clientId=u33825a4e-06f1-4&from=paste&id=u3657d0d4&originHeight=361&originWidth=821&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ue665ebc7-f464-4aaf-8a6e-af7f2609d9e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8f01f37e5aa06e97c6c3e1c53773a10a.png)
 
 ---
 
@@ -7002,7 +7009,7 @@ $("#btn5").click(function(){
 
 - AJAX(Asynchronous JavaScript And XML)：异步的 JavaScript 和 XML。 
 - 不是一种新技术，而是多个技术综合，用于快速创建动态网页的技术。
-- 一般的网页如果需要更新内容，必需重新加载个页面。而 AJAX 通过浏览器与服务器进行少量数据交换，就可以使网页实现异步更新。也就是在不重新加载整个页 面的情况下，对网页的部分内容进行**局部更新**。![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363178-645cdc81-be93-48b1-bce0-3023c0be653f.png#averageHue=%23faf9f9&clientId=u33825a4e-06f1-4&from=paste&id=u45c2ad28&originHeight=224&originWidth=619&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u15a02e9e-46b6-4074-a6f1-b4b3d955a0c&title=)
+- 一般的网页如果需要更新内容，必需重新加载个页面。而 AJAX 通过浏览器与服务器进行少量数据交换，就可以使网页实现异步更新。也就是在不重新加载整个页 面的情况下，对网页的部分内容进行**局部更新**。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cee096614c374802db737c833348cf24.png)
 
 ---
 
@@ -7132,7 +7139,7 @@ public class UserServlet extends HttpServlet {
 ---
 
 ## 分页知识
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363160-95c37cf9-453e-4337-835e-aa25c1e88672.png#averageHue=%23c5d2e4&clientId=u33825a4e-06f1-4&from=paste&id=ubb0cd189&originHeight=191&originWidth=573&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4c85d705-f7b8-4928-86ed-708e9b089b3&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/28bf9d916387bd16c2d08fd8a7019ce4.png)
 
 ---
 
@@ -7199,7 +7206,7 @@ let vm = new Vue({
 ### 指令介绍
 指令：是带有 v- 前缀的特殊属性，不同指令具有不同含义
 使用方法：通常编写在标签的属性上，值可以使用 JS 的表达式
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363440-a764e3f4-3ffc-4d6e-810c-50408fc9a4ab.png#averageHue=%23c7d3e4&clientId=u33825a4e-06f1-4&from=paste&id=u3b0acede&originHeight=267&originWidth=646&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4f129da1-1c92-40f2-916d-d1c00f3eb29&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/aa9f4bf751cbd29990ff02611c89b16c.png)
 
 ---
 
@@ -7352,7 +7359,7 @@ v-on：为 HTML 标签绑定事件，有简写方式
 
 - **表单绑定**v-model：在表单元素上创建双向数据绑定
 - **双向数据绑定**更新data数据，页面中的数据也会更新；更新页面数据，data数据也会更新
-- **MVVM模型(ModelViewViewModel)：是MVC模式的改进版**在前端页面中，JS对象表示Model，页面表示View，两者做到了最大限度的分离。将Model和View关联起来的就是ViewModel，它是桥梁。ViewModel负责把Model的数据同步到View显示出来，还负责把View修改的数据同步回Model。![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363667-3a66eb74-62bf-4870-80d7-2bda7dfb9461.png#averageHue=%23fbd6d5&clientId=u33825a4e-06f1-4&from=paste&id=ue4b04728&originHeight=135&originWidth=589&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u8b2ef4d0-c6e7-47ed-98ae-017f96158f8&title=)
+- **MVVM模型(ModelViewViewModel)：是MVC模式的改进版**在前端页面中，JS对象表示Model，页面表示View，两者做到了最大限度的分离。将Model和View关联起来的就是ViewModel，它是桥梁。ViewModel负责把Model的数据同步到View显示出来，还负责把View修改的数据同步回Model。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e0d930c0ffae548edbab506e5a2d3e9a.png)
 ```
 <body>
     <div id="div">
@@ -7496,8 +7503,8 @@ Vue.component(组件名称, {
 
 ## 生命周期
 
-- 生命周期![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363769-1e501c51-4549-4235-b106-3d10d162225d.png#averageHue=%23fefdfa&clientId=u33825a4e-06f1-4&from=paste&id=u905d02c7&originHeight=609&originWidth=1005&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uf65cf806-bb50-4741-ba2a-8e0ab8fda66&title=)
-- 生命周期八个阶段![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835363908-933ecfe0-58bd-469b-9200-0760c29c7c85.png#averageHue=%23cdd8e8&clientId=u33825a4e-06f1-4&from=paste&id=uc1d039ff&originHeight=349&originWidth=633&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=udf023b02-68ea-4c06-be14-c82c5632561&title=)
+- 生命周期![](https://raw.githubusercontent.com/choodsire666/blog-img/main/acee98daf00a9f3fb85705321ee07cf3.png)
+- 生命周期八个阶段![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1660890657d617cae677ffcff9bdb8f0.png)
 
 ---
 
@@ -7578,7 +7585,7 @@ HTML文件：
 
 ## 组件
 实现应用中局部功能代码和资源的集合(html/css/javascript)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710984621932-fd88da11-cef0-49f4-afdf-6544bf7ef542.png#averageHue=%23eeeeee&clientId=uf7d9840c-1b0f-4&from=paste&height=361&id=ub5ea7443&originHeight=447&originWidth=1190&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=70512&status=done&style=none&taskId=ud5666c8e-0da2-4e5d-b117-3f0bb074dd9&title=&width=959.9999692259727)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/29192650cbe9eddd401c07d37d8de0ff.png)
 作用：复用编码，简化项目编码，提升运行效率
 模块：向外提供特定功能的js程序，一般就是一个js文件
 非单文件组件：一个文件中有n个组件
@@ -7602,11 +7609,11 @@ Nginx 两个最核心的功能：高性能的静态 Web 服务器，反向代理
 
 ## 配置文件
 nginx.conf 文件时 Nginx 的主配置文件
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1710835363857-0b78a58c-d922-4afc-be22-cdf7b4e34ca0.jpeg#averageHue=%23e7e7e7&clientId=u33825a4e-06f1-4&from=paste&id=u1a0d650e&originHeight=611&originWidth=637&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u1634528b-4154-41c2-910e-7cfa73717d8&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/571f5ce8b074e6174eb6199cb4be27c0.jpeg)
 
-- main 部分![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1710835364177-e0fe1f3a-832b-4924-8512-3442e18e27fc.jpeg#averageHue=%23fdfaf2&clientId=u33825a4e-06f1-4&from=paste&id=u11c79a5b&originHeight=134&originWidth=946&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u0f197d9d-ec8f-4bdf-a172-caa57db3fe0&title=)
-- events 部分![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1710835364391-162bbc75-6d96-4dc3-97f6-32169aedfb9d.jpeg#averageHue=%23f6f1f0&clientId=u33825a4e-06f1-4&from=paste&id=u944d81f0&originHeight=128&originWidth=772&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u31c0cf39-18a1-4f32-8003-a74effbd1f3&title=)
-- server 部分![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1710835364505-dcb2bd93-e699-443f-8235-2106ec23c7cb.jpeg#averageHue=%23f4f3f3&clientId=u33825a4e-06f1-4&from=paste&id=u7efacc0f&originHeight=363&originWidth=707&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uc5264ec8-3eae-4c01-8d12-f0e2beb65a8&title=)root 设置的路径会拼接上 location 的路径，然后去最终路径寻找对应的文件
+- main 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dbfa51dcdaeb45a8d353f52b573a130e.jpeg)
+- events 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/780e9fb609e1c206b2e779579c55e9aa.jpeg)
+- server 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/77eed788b08837a70221e402bcdb3b76.jpeg)root 设置的路径会拼接上 location 的路径，然后去最终路径寻找对应的文件
 
 ---
 
@@ -7646,7 +7653,7 @@ server {
 - 提高访问速度：代理服务器都设置一个较大的硬盘缓冲区，会将部分请求的响应保存到缓冲区中，当其他用户再访问相同的信息时， 则直接由缓冲区中取出信息，传给用户，以提高访问速度
 - 隐藏客户端真实 IP：隐藏自己的 IP，免受攻击
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835364706-e73c617e-e9bb-4468-bd0c-d3fcf1f08806.png#averageHue=%23fbfbfb&clientId=u33825a4e-06f1-4&from=paste&id=u98a08adf&originHeight=516&originWidth=1085&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u2f66dfb4-da56-4200-a275-58f7dbe0d10&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/32caa202357943b2807675afa54a19d3.png)
 **反向代理（reverse proxy）**：是指以代理服务器来接受 Internet 上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给 Internet 上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器，**反向代理，其实是"代理服务器"代理了"目标服务器"，去和当前"客户端"进行交互**
 作用：
 
@@ -7655,7 +7662,7 @@ server {
 - 提高访问速度：反向代理服务器可以对于静态内容及短时间内有大量访问请求的动态内容提供缓存服务
 - 提供安全保障：反向代理服务器可以作为应用层防火墙，为网站提供对基于 Web 的攻击行为（例如 DoS/DDoS）的防护，更容易排查恶意软件等
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835364730-da0e758b-9834-4df3-b185-d11ba7a679ec.png#averageHue=%23f1f4f7&clientId=u33825a4e-06f1-4&from=paste&id=ub6fdf150&originHeight=614&originWidth=1076&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4d756c26-e8e1-4ff7-8f59-7f55ef8dfb1&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5cfcbe2fcc63b61514f48b82d1a0eca3.png)
 区别：
 
 - 正向代理其实是客户端的代理，帮助客户端访问其无法访问的服务器资源；反向代理则是服务器的代理，帮助服务器做负载均衡，安全防护等

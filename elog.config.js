@@ -28,11 +28,12 @@ module.exports = {
     local: {
       outputDir: './source/_posts/yuque',
       filename: 'title',
-      format: 'markdown',
+      format: 'matter-markdown',
+      catalog: true
     }
   },
   image: {
-    enable: false,
+    enable: true,
     platform: 'github',
     local: {
       outputDir: './docs/images',

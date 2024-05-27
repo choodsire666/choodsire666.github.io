@@ -1,3 +1,11 @@
+---
+title: BUG库
+urlname: gr7lgx
+date: '2022-08-21 09:32:55'
+updated: '2024-05-17 13:49:27'
+cover: 'https://cdn.nlark.com/yuque/0/2022/png/29688613/1661397327129-e9cce257-1a51-47d6-983f-cd6ddf4d6d47.png'
+description: Idea快捷键熟练开发环境idea导入Maven目录相信自己解决问题的能力，当下犯得每一个错误，对未来都是少走一步弯路，坚持是一种优良的传统美德。加油欧里给！！！你的知识底蕴，方法论，勤奋的品质，都是其他人足以羡慕的！编译目录让idea识别静态文件夹，ps：没有识别时webContent文件夹...
+---
 # Idea
 快捷键熟练
 # 开发环境
@@ -5,12 +13,12 @@
 相信自己解决问题的能力，当下犯得每一个错误，对未来都是少走一步弯路，坚持是一种优良的传统美德。加油欧里给！！！
 你的知识底蕴，方法论，勤奋的品质，都是其他人足以羡慕的！
 ## 编译目录
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1661397327129-e9cce257-1a51-47d6-983f-cd6ddf4d6d47.png#averageHue=%233d4145&clientId=u39ece894-3217-4&from=paste&id=ue7b7c111&originHeight=520&originWidth=1120&originalType=url&ratio=1&rotation=0&showTitle=false&size=53863&status=done&style=none&taskId=ub7d0a22f-c412-4b2f-8c20-2663271acda&title=)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f288e0b99641a9caaac776afb5639f0a.png)
 ## 让idea识别静态文件夹，
 ps：没有识别时webContent文件夹没有变成小蓝点
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1661397353718-43d4756a-fc7c-45d8-b986-094ecfe25760.png#averageHue=%233d4146&clientId=u39ece894-3217-4&from=paste&id=uedaae052&originHeight=977&originWidth=1296&originalType=url&ratio=1&rotation=0&showTitle=false&size=87391&status=done&style=none&taskId=u88daa717-195e-463d-9683-c6c89900eed&title=)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c2c332a347fda43985145e5b4a80e0a9.png)
 ## 这是配置成将会导出的war包
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1661397401402-5333475c-cfbe-4487-97fe-6e76d74e0592.png#averageHue=%233d4246&clientId=u39ece894-3217-4&from=paste&id=u51579aa9&originHeight=534&originWidth=931&originalType=url&ratio=1&rotation=0&showTitle=false&size=51713&status=done&style=none&taskId=u915548f2-44b8-421f-8de2-cde4a3a9fc4&title=)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/57b180bd6e0562fc1be2d6a2de97f4bb.png)
 # Java基础
 判断字符串是否相等时候
 异常判断
@@ -48,7 +56,7 @@ select Beijing,group_concat(Shanghai) from city group by Beijing
 
 ## 数据库的问题
 ## 新版本的数据库连接
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1661399038176-4bfe8d03-ae65-41bc-bf21-0633b49924e4.png#averageHue=%231f1f29&clientId=u39ece894-3217-4&from=paste&height=192&id=udf026e52&originHeight=238&originWidth=574&originalType=binary&ratio=1&rotation=0&showTitle=false&size=27600&status=done&style=none&taskId=u3d062cbd-9d12-4ae2-93bd-f32f76c707b&title=&width=463.05880868546916)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1dea514b2975a0143670ad7d5aed4833.png)
 版本之间要对应
 # Javaweb开发中的报错
 ## 细节上的开发错误
@@ -69,10 +77,10 @@ Value()的使用要加$才能注入进去
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
 # Spring
 # MyBatisPlus
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1715827542493-1c0ee449-3b97-4e4d-bc86-9990ce275a3d.png#averageHue=%2333343e&clientId=udc8fff46-c485-4&from=paste&height=183&id=uf066fa3a&originHeight=227&originWidth=1338&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=296368&status=done&style=none&taskId=ud9233961-43a4-40dd-af55-e22a16ecc03&title=&width=1079.394923381808)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e01b6d097edd5982524e259a523ead5c.png)
 接到需求
 查看前端发过来的数据有哪些？
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1715827678766-5d376bd6-fe51-4de3-89db-4fe7875531d9.png#averageHue=%2335343c&clientId=udc8fff46-c485-4&from=paste&height=101&id=u8ed6d7db&originHeight=125&originWidth=866&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=98377&status=done&style=none&taskId=ua03f7013-e2f9-424b-8a2e-09913426628&title=&width=698.6218263442793)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1e70743a47678e4d509051ffd4d60bb7.png)
 这是数据库表中字段对应着的属性
 
 

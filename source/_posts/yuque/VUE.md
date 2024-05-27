@@ -1,3 +1,11 @@
+---
+title: VUE
+urlname: zqezgyiyyccmpoqa
+date: '2024-03-23 10:49:34'
+updated: '2024-04-21 18:09:42'
+cover: 'https://cdn.nlark.com/yuque/0/2021/png/21919573/1624671542879-991b58be-2cb0-4467-a9d0-4c71d248246d.png?x-oss-process=image%2Fformat%2Cwebp'
+description: "笔记模板语法插值语法功能：用于解析标签体内容\t\t\t\t\t\t\t\t写法：{{xxxx}},xxx会作为表达式去解析，且可以自动读取到data中的属性指令语法功能：用于解析标签（包括：标签属性、标签体内容、绑定事件.....）\t\t\t\t\t\t\t\t举例：v-bind:href=\"xxxxxx\" 或  简写为..."
+---
 # 笔记
 ## 模板语法
 ### 插值语法
@@ -60,7 +68,7 @@
 </html>
 ```
 ## MVVM模型
-![](https://cdn.nlark.com/yuque/0/2021/png/21919573/1624671542879-991b58be-2cb0-4467-a9d0-4c71d248246d.png?x-oss-process=image%2Fformat%2Cwebp#averageHue=%23b4b3b2&from=url&id=drz3e&originHeight=654&originWidth=798&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f07a980819da2acad9fc0f9c94dfa78a.png)
 ```sql
 <!DOCTYPE html>
 <html>

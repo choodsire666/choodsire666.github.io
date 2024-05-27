@@ -29,7 +29,7 @@
       a.post-edit-link(href=theme.post_edit.url + page.source title=_p('post.edit.github') + ' - ' + page.title target="_blank")
         i.anzhiyufont.anzhiyu-icon-pencil
     if (theme.post_edit.enable && (theme.post_edit.yuque !== false))
-      a.post-edit-link(href=theme.post_edit.yuque + page.id + '/edit/' title=_p('post.edit.yuque') + ' - ' + page.title target="_blank")
+      a.post-edit-link(href=theme.post_edit.yuque + page.urlname + '/edit/' title=_p('post.edit.yuque') + ' - ' + page.title target="_blank")
         i.anzhiyufont.anzhiyu-icon-pencil
 
   #post-meta

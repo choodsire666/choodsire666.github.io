@@ -1,3 +1,11 @@
+---
+title: 算法和数据结构与GoF(设计模式)
+urlname: zcuyfd
+date: '2022-08-21 10:10:01'
+updated: '2024-05-13 18:14:02'
+cover: 'https://cdn.nlark.com/yuque/0/2022/png/29688613/1663483775754-e1bf3bd5-3ac9-4e17-a8a0-2c3ea4f17d25.png'
+description: 日常练习代码随想录leetcode100有余力剑指offer面试突击codetop做题总结1.从简单开始刷起，刷个100道2.之后的话可能从中等的开始刷起每次刷完一题给自己一点心里反馈，开心一下很牛逼。不要小看暴力算法，在暴力算法的基础上我们才能更加优化。有时候我们可能会考虑边界条件这个时候我...
+---
 日常练习
 代码随想录
 leetcode100
@@ -463,7 +471,7 @@ public class BeerDemo{
 1. 确定总共需要冒几轮：数组的长度-1
 2. 每轮两两比较几次
 
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711525459085-486a6d3e-d91b-459b-98f0-c3431de1e861.gif#averageHue=%23d2e2e8&clientId=u2e2f7bd8-c258-4&from=paste&id=ua1157968&originHeight=257&originWidth=826&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ua8ea6853-6e62-480c-9392-704872abaa7&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0a95d7192fb35ea8857c4ddfaa501a62.gif)
 ```
 // 0 1位置比较，大的放后面，然后1 2位置比较，大的继续放后面，一轮循环最后一位是最大值
 public class BubbleSort {
@@ -510,7 +518,7 @@ public class BubbleSort {
 1. 控制选择几轮：数组的长度 - 1
 2. 控制每轮从当前位置开始比较几次
 
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711525459089-5ad5ef9f-a1db-4225-9edb-04909feb6ab1.gif#averageHue=%23d0e1e8&clientId=u2e2f7bd8-c258-4&from=paste&id=u101d9ddf&originHeight=248&originWidth=811&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ufbec14a2-4393-4c54-b27a-aafb3f94ef4&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9c8ac0d20b13dceb9f635b2d4c22e2fa.gif)
 ```
 public class SelectSort {
     public static void main(String[] args) {
@@ -551,7 +559,7 @@ public class SelectSort {
 2. 将堆顶元素 R[1] 与最后一个元素 R[n] 交换，此时得到新的无序区（R1,R2,……Rn-1）和新的有序区 Rn，且满足 R[1,2…n-1]<=R[n]
 3. 交换后新的堆顶 R[1] 可能违反堆的性质，因此需要对当前无序区（R1,R2,……Rn-1）调整为新堆，然后再次将 R[1] 与无序区最后一个元素交换，得到新的无序区（R1,R2….Rn-2）和新的有序区（Rn-1,Rn），不断重复此过程直到有序区的元素个数为 n-1，则整个排序过程完成
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/29688613/1711525459339-310838b4-8448-42a2-9263-7954f79839f8.jpeg#averageHue=%23f8f7f7&clientId=u2e2f7bd8-c258-4&from=paste&id=u71e9ea8d&originHeight=501&originWidth=1048&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u3c1cc3bc-de28-4371-b998-6983f01bcfa&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/57f5481f3d6454794a78b25e1c583b83.jpeg)
 floor：向下取整
 ```
 public class HeapSort {
@@ -611,7 +619,7 @@ public class HeapSort {
 ### 插入排序
 #### 直接插入
 插入排序（Insertion Sort）：在要排序的一组数中，假定前 n-1 个数已经排好序，现在将第 n 个数插到这个有序数列中，使得这 n 个数也是排好顺序的，如此反复循环，直到全部排好顺序
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525459311-c269cb90-b5a4-4e9a-a709-f6b6a36f67c0.png#averageHue=%23f1e8e6&clientId=u2e2f7bd8-c258-4&from=paste&id=ub9c85c79&originHeight=588&originWidth=1086&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4d5a0b5f-54a7-417e-b01f-94b4f76a430&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6220324b1189d8f53d74c3e3f6c798bb.png)
 ```
 public class InsertSort {
     public static void main(String[] args) {
@@ -650,7 +658,7 @@ public class InsertSort {
 2. 对分好组的每一组数据完成插入排序
 3. 减小增长量，最小减为 1，重复第二步操作
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525459282-86d279a8-5ed7-4847-af9b-c0e6fe84b122.png#averageHue=%23f7f4ee&clientId=u2e2f7bd8-c258-4&from=paste&id=ufc095b0d&originHeight=542&originWidth=963&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u9a2daa1d-cca2-4e46-89d2-86119a89863&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5d79caa13690988e69423e11af9760d3.png)
 希尔排序的核心在于间隔序列的设定，既可以提前设定好间隔序列，也可以动态的定义间隔序列，希尔排序就是插入排序增加了间隔
 ```
 public class ShellSort {
@@ -695,11 +703,11 @@ public class ShellSort {
 2. 将相邻的两个子组进行合并成一个有序的大组
 3. 不断的重复步骤2，直到最终只有一个组为止
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525459865-f8b5fe98-3a35-45b7-bb81-8eed651e91bd.png#averageHue=%23f8f6f6&clientId=u2e2f7bd8-c258-4&from=paste&id=u4c3d976a&originHeight=793&originWidth=1216&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uc22d713c-ace1-4f3e-b45b-8d7e2d98ad8&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/133b715ae3b21604a22ffcbf8a9abc57.png)
 归并步骤：每次比较两端最小的值，把最小的值放在辅助数组的左边
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460063-cb60ee51-ab6a-4797-bc08-d42041a62552.png#averageHue=%23f9f7f5&clientId=u2e2f7bd8-c258-4&from=paste&id=u292b3b8f&originHeight=512&originWidth=1992&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u02817d02-643e-4009-8b50-1001ab2a3e5&title=)
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460116-596da888-c16c-4070-a55c-33caa6b5fb4d.png#averageHue=%23f9f6f4&clientId=u2e2f7bd8-c258-4&from=paste&id=u08f4ad06&originHeight=482&originWidth=1948&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ud7d28842-fbd3-44dd-87c2-4c5cbbefd3e&title=)
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460126-289292ed-128a-4b56-ac9d-8433a324ebc6.png#averageHue=%23f8f4f1&clientId=u2e2f7bd8-c258-4&from=paste&id=u71fe982b&originHeight=442&originWidth=1916&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u8a2ebac5-bf2a-463f-a856-4af15696175&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dc582f7f55f5d137f998577135f8a744.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e465ee97efa91212d1c3a66b1059cde5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6a4ca8fb61cfef331c43d00b708618e5.png)
 
 ---
 
@@ -744,7 +752,7 @@ public class MergeSort {
     }
 }
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460333-cc565157-2ab8-40b0-ac44-a8898d230362.png#averageHue=%23f2f2f2&clientId=u2e2f7bd8-c258-4&from=paste&id=u09cabd8d&originHeight=349&originWidth=934&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u23f20de0-3a7b-41f2-86f7-31a8bba5f0e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a9bb10c6defa2fa7a5a24b7f28b9995.png)
 用树状图来描述归并，假设元素的个数为 n，那么使用归并排序拆分的次数为 log2(n)，即层数，每次归并需要做 n 次对比，最终得出的归并排序的时间复杂度为 log2(n)*n，根据大O推导法则，忽略底数，最终归并排序的时间复杂度为 O(nlogn)
 归并排序的缺点：需要申请额外的数组空间，导致空间复杂度提升，是典型的**以空间换时间**的操作
 
@@ -758,7 +766,7 @@ public class MergeSort {
 2. 重新排序数列，所有比基准值小的摆放在基准前面，所有比基准值大的摆在基准的后面（相同的数可以到任一边），在这个分区退出之后，该基准就处于数列的中间位置，这个称为分区（partition）操作；
 3. 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序
 
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711525460522-a5df1944-9217-4bcf-8b1a-e2a576ae9eda.gif#averageHue=%23d0e1e8&clientId=u2e2f7bd8-c258-4&from=paste&id=u9c94eec1&originHeight=252&originWidth=811&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=udb723e0f-fe2b-427f-a387-e88bca11071&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3cade4b97959fc410d8a1fcc5fcb7d00.gif)
 ```
 public class QuickSort {
     public static void main(String[] args) {
@@ -813,7 +821,7 @@ public class QuickSort {
 时间复杂度：
 
 - 最优情况：每一次切分选择的基准数字刚好将当前序列等分。把数组的切分看做是一个树，共切分了 logn 次，所以，最优情况下快速排序的时间复杂度为 O(nlogn)
-- 最坏情况：每一次切分选择的基准数字是当前序列中最大数或者最小数，这使得每次切分都会有一个子组，那么总共就得切分n次，所以最坏情况下，快速排序的时间复杂度为 O(n^2)![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460575-3db38d5f-afd9-42f4-ba94-65d1b976ebb9.png#averageHue=%23faf4f4&clientId=u2e2f7bd8-c258-4&from=paste&id=ueea409fa&originHeight=360&originWidth=983&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uc85304af-61f9-42f1-88e6-6f5f789519c&title=)
+- 最坏情况：每一次切分选择的基准数字是当前序列中最大数或者最小数，这使得每次切分都会有一个子组，那么总共就得切分n次，所以最坏情况下，快速排序的时间复杂度为 O(n^2)![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1f614a8bd2503b3a16fee34cab868695.png)
 - 平均情况：每一次切分选择的基准数字不是最大值和最小值，也不是中值，这种情况用数学归纳法证明，快速排序的时间复杂度为 O(nlogn)
 
 推荐视频：[https://www.bilibili.com/video/BV1b7411N798?t=1001&p=81](https://www.bilibili.com/video/BV1b7411N798?t=1001&p=81)
@@ -826,7 +834,7 @@ public class QuickSort {
 计数排序其实是桶排序的一种特殊情况，当要排序的 n 个数据，所处的范围并不大的时候，比如最大值是 k，我们就可以把数据划分成 k 个桶，每个桶内的数据值都是相同的，省掉了桶内排序的时间
 按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优先级排序。最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前
 解释：先排低位再排高位，可以说明在高位相等的情况下低位是递增的，如果高位也是递增，则数据有序
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711525460626-65878f01-ca0a-4d64-86a0-477a66cbb806.gif#averageHue=%23ebebeb&clientId=u2e2f7bd8-c258-4&from=paste&id=u319f41d6&originHeight=574&originWidth=1012&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u73b29c4c-56ff-40e6-ad9e-7c5a1e2b452&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f09ed19f4ffbd85a45bcd804bd258a13.gif)
 实现思路：
 
 - 获得最大数的位数，可以通过将最大数变为 String 类型，再求长度
@@ -889,7 +897,7 @@ public class BucketSort {
 #### 稳定性
 稳定性：在待排序的记录序列中，存在多个具有相同的关键字的记录，若经过排序，这些记录的相对次序保持不变，即在原序列中 r[i]=r[j]，且 r[i] 在 r[j] 之前，而在排序后的序列中，r[i] 仍在 r[j] 之前，则称这种排序算法是稳定的，否则称为不稳定的
 如果一组数据只需要一次排序，则稳定性一般是没有意义的，如果一组数据需要多次排序，稳定性是有意义的。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460690-8344824b-d54c-47a7-a810-18508f0cc499.png#averageHue=%23e4e1df&clientId=u2e2f7bd8-c258-4&from=paste&id=uc8aa72e9&originHeight=489&originWidth=1144&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ufb8f5c78-4e3b-4b49-a37d-60b684040b3&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8469eed286ed2e009fb7bac27906c86c.png)
 
 - 冒泡排序：只有当 arr[i]>arr[i+1] 的时候，才会交换元素的位置，而相等的时候并不交换位置，所以冒泡排序是一种稳定排序算法
 - 选择排序：是给每个位置选择当前元素最小的，例如有数据{5(1)，8 ，5(2)， 3， 9 }，第一遍选择到的最小元素为3，所以5(1)会和3进行交换位置，此时5(1)到了5(2)后面，破坏了稳定性，所以是不稳定的排序算法
@@ -906,7 +914,7 @@ public class BucketSort {
 ---
 
 #### 算法对比
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461036-452d58b6-45d0-426d-8561-9a1bcd35060a.png#averageHue=%23e5dfd8&clientId=u2e2f7bd8-c258-4&from=paste&id=ucdcfd19c&originHeight=439&originWidth=847&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u5deb733d-d26b-45d6-bfc7-f4aa6ff4770&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e9a1d49559a3279d0fec000629f664ec.png)
 
 ---
 
@@ -960,7 +968,7 @@ public class binarySearch {
     }
 }
 ```
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711525461024-3d1a6c9b-4b71-43c0-b525-2b648bb3ed2e.gif#averageHue=%23fbfbfe&clientId=u2e2f7bd8-c258-4&from=paste&id=u86c7f0f6&originHeight=1080&originWidth=1920&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u651bff06-35ae-4431-bfdf-08961cea7f0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9e2bec07d2dd311f98cbfc4446d279b3.gif)
 查找第一个匹配的元素：
 ```
 public static int binarySearch(int[] arr, int des) {
@@ -1128,7 +1136,7 @@ public class Kmp {
 - 节点：在树结构中,每一个元素称之为节点
 - 度：每一个节点的子节点数量称之为度
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461234-533deea5-e27a-4e1b-a09d-37f26a288807.png#averageHue=%23fbfafa&clientId=u2e2f7bd8-c258-4&from=paste&id=u7b1596ce&originHeight=379&originWidth=828&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uafbd0537-3494-44df-89cb-a004206f362&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6a87d60f58b59280cb4c6d0823adafc2.png)
 
 ---
 
@@ -1141,7 +1149,7 @@ public class Kmp {
 - 右子树上所有节点的值都大于根节点的值
 - 不存在重复的节点
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461246-0dee8ec5-a2ff-48f6-9d65-90294f0bf698.png#averageHue=%23fbf9f9&clientId=u2e2f7bd8-c258-4&from=paste&id=u1d35d9a8&originHeight=363&originWidth=851&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ua8a20b29-bd23-4c35-8eb7-fdb0cc31eb3&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/32ec24df702cb84928214d1530f1b945.png)
 
 ---
 
@@ -1227,7 +1235,7 @@ private static TreeNode createBST(int[] arr) {
 }
 ```
 
-- 删除节点：要删除节点12，先找到节点19，然后移动并替换节点12![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461283-80e9da20-7f41-478d-8ea1-16de85ef2653.png#averageHue=%23f7f6f6&clientId=u2e2f7bd8-c258-4&from=paste&id=u36313794&originHeight=410&originWidth=1109&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u23aa6ac2-0166-4e8d-93d8-8f49c18a378&title=)代码链接：[https://leetcode-cn.com/submissions/detail/190232548/](https://leetcode-cn.com/submissions/detail/190232548/)
+- 删除节点：要删除节点12，先找到节点19，然后移动并替换节点12![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7e51c99320543a4f71eb99008d36186f.png)代码链接：[https://leetcode-cn.com/submissions/detail/190232548/](https://leetcode-cn.com/submissions/detail/190232548/)
 
 参考视频：[https://www.bilibili.com/video/BV1iJ411E7xW?t=756&p=86](https://www.bilibili.com/video/BV1iJ411E7xW?t=756&p=86)
 图片来源：[https://leetcode-cn.com/problems/delete-node-in-a-bst/solution/tu-jie-yi-dong-jie-dian-er-bu-shi-xiu-ga-edtn/](https://leetcode-cn.com/problems/delete-node-in-a-bst/solution/tu-jie-yi-dong-jie-dian-er-bu-shi-xiu-ga-edtn/)
@@ -1245,10 +1253,10 @@ private static TreeNode createBST(int[] arr) {
 - 旋转触发时机：当添加一个节点之后，该树不再是一颗平衡二叉树
 - 平衡二叉树和二叉查找树对比结构图
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461666-d13d366a-7010-426d-b1e1-cef0f3534810.png#averageHue=%23fcfafa&clientId=u2e2f7bd8-c258-4&from=paste&id=u9b714f3a&originHeight=328&originWidth=891&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4884a70e-e907-4490-88ff-af22be5122f&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ac6f06b6665e36ccb68a77cdd611b538.png)
 
-- 左旋：将根节点的右侧往左拉，原先的右子节点变成新的父节点，并把多余的左子节点出让，给已经降级的根节点当右子节点![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461785-b4fc7d88-8adb-49a9-a367-bf686ed4140d.png#averageHue=%23fbfbfb&clientId=u2e2f7bd8-c258-4&from=paste&id=ua3eaf689&originHeight=319&originWidth=871&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u3ad37749-ae46-4259-9b4a-c33a4e4882b&title=)
-- 右旋：将根节点的左侧往右拉，左子节点变成了新的父节点，并把多余的右子节点出让，给已经降级根节点当左子节点![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461773-e28a9e33-eb6a-46c2-9b18-490091daa37d.png#averageHue=%23fdfdfd&clientId=u2e2f7bd8-c258-4&from=paste&id=ub7596130&originHeight=350&originWidth=865&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ub7b74e87-7a9b-422f-a292-5656c18c6f2&title=)
+- 左旋：将根节点的右侧往左拉，原先的右子节点变成新的父节点，并把多余的左子节点出让，给已经降级的根节点当右子节点![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ef6c917c80916411adb1175ff2166e0c.png)
+- 右旋：将根节点的左侧往右拉，左子节点变成了新的父节点，并把多余的右子节点出让，给已经降级根节点当左子节点![](https://raw.githubusercontent.com/choodsire666/blog-img/main/431d4893d39a0f874790a981efe2c787.png)
 
 推荐文章：[https://pdai.tech/md/algorithm/alg-basic-tree-balance.html](https://pdai.tech/md/algorithm/alg-basic-tree-balance.html)
 
@@ -1274,8 +1282,8 @@ private static TreeNode createBST(int[] arr) {
 - 红黑树只是做到近似平衡，并不是严格的平衡，红黑树的插入删除比 AVL 树更便于控制，红黑树更适合于**插入修改密集型任务**
 - 红黑树整体性能略优于 AVL 树，AVL 树的旋转比红黑树的旋转多，更加难以平衡和调试，插入和删除的效率比红黑树慢
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461784-ccb90445-756c-49ce-b2c9-6a8e0840285b.png#averageHue=%23ede7e7&clientId=u2e2f7bd8-c258-4&from=paste&id=udc696a30&originHeight=256&originWidth=806&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u38995204-972e-46ed-952d-5af50101633&title=)
-红黑树添加节点的默认颜色为红色，效率高![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525461790-e2efb12e-0b5f-4e0f-98d3-1d2b4809a4f3.png#averageHue=%23f8efef&clientId=u2e2f7bd8-c258-4&from=paste&id=ube7224a5&originHeight=407&originWidth=923&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u938af3d9-197e-493c-a2c7-28b4c0fd51e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ade929bd2fac66e6221b7b08bbeae99d.png)
+红黑树添加节点的默认颜色为红色，效率高![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f1c95534cc6c9ff315e7d60d06c2eae6.png)
 **红黑树添加节点后如何保持红黑规则：**
 
 - 根节点位置
@@ -1304,16 +1312,16 @@ private static TreeNode createBST(int[] arr) {
 - 一个组中的数据对应的树和另外一个组中的数据对应的树之间没有任何联系
 - 元素在树中并没有子父级关系的硬性要求
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522124-b599204c-dc3d-4da6-bf24-6708ced60177.png#averageHue=%23faf9f9&clientId=u2e2f7bd8-c258-4&from=paste&id=u63b85cc9&originHeight=856&originWidth=1330&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u3ceb6995-e9e9-4717-adb0-e054cdbbebb&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/334092b0bb4f2c4d8301df9a91a5615f.png)
 可以高效地进行如下操作：
 
 - 查询元素 p 和元素 q 是否属于同一组
 - 合并元素 p 和元素 q 所在的组
 
 存储结构：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522132-c1cae68c-713b-4f8d-97e7-16f72f045c3c.png#averageHue=%23f6f5f5&clientId=u2e2f7bd8-c258-4&from=paste&id=uca594ca5&originHeight=317&originWidth=879&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ub56ee026-b865-4457-a264-1d72d34bb46&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6b4ff0119da601b9b86931a4eb054a8.png)
 合并方式：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522139-9b893b3c-745d-4038-b3af-a5535b83e67c.png#averageHue=%23f5f3f3&clientId=u2e2f7bd8-c258-4&from=paste&id=u5c26d733&originHeight=352&originWidth=824&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u62771636-5862-4b3e-b0e5-5928486b3dc&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/864e80e5a427d007045afde943beb87d.png)
 代码实现：
 
 - 类实现：
@@ -1400,7 +1408,7 @@ public static void main(String[] args) {
 
 #### 优化实现
 让每个索引处的节点都指向它的父节点，当 eleGroup[i] = i 时，说明 i 是根节点
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522164-ccfb3f15-d5e3-421d-84eb-efa42c530fb7.png#averageHue=%23f4f3f3&clientId=u2e2f7bd8-c258-4&from=paste&id=ucfbaa612&originHeight=294&originWidth=752&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u214a5fe6-d05a-4cb8-958d-e64521edda5&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/07c5f7cd48ae86aed4625607cf34236e.png)
 ```
 //查询p所在的分组的标识符，递归寻找父标识符，直到找到根节点
 public int findRoot(int p) {
@@ -1430,7 +1438,7 @@ public void union(int p, int q) {
 }
 ```
 平均时间复杂度为 O(N)，最坏时间复杂度是 O(N^2)
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522098-bd149c57-f339-47e7-8bb8-060585820d5d.png#averageHue=%23fcfbfb&clientId=u2e2f7bd8-c258-4&from=paste&id=u71e1df64&originHeight=388&originWidth=1162&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u21ef00dd-4dc4-4116-a0f4-9960cd05efd&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7c33f2fbc864355dcc16d79e17c29334.png)
 继续优化：路径压缩，保证每次把小树合并到大树
 ```
 public class UF_Tree_Weighted {
@@ -1495,7 +1503,7 @@ public class UF_Tree_Weighted {
 - 可以调用 union(int p,int q) 使得 p 和 q 之间连通，这样两台计算机之间就可以通信
 
 畅通工程：某省调查城镇交通状况，得到现有城镇道路统计表，表中列出了每条道路直接连通的城镇。省政府畅通工程的目标是使全省任何两个城镇间都可以实现交通，但不一定有直接的道路相连，只要互相间接通过道路可达即可，问最少还需要建设多少条道路？
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522862-14d2679e-d12b-4726-934e-cb5cb00a5ff4.png#averageHue=%23f7f5f5&clientId=u2e2f7bd8-c258-4&from=paste&id=uc2062414&originHeight=386&originWidth=837&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uc9fdde89-0c3d-4e2e-b443-8ea2c48b7d6&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/16a70e6425a7897a2fd27470b4714182.png)
 解题思路：
 
 1. 创建一个并查集 UF_Tree_Weighted(20)
@@ -1533,15 +1541,15 @@ Trie 树，也叫字典树，是一种专门处理字符串匹配的树形结构
 - 每个节点表示一个字符串中的字符，从**根节点到红色节点的一条路径表示一个字符串**
 - 红色节点并不都是叶子节点
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522915-25693f20-0f94-45e1-8d77-28a4c8c8a824.png#averageHue=%23f1ece2&clientId=u2e2f7bd8-c258-4&from=paste&id=uf7957a54&originHeight=456&originWidth=1142&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ub40ee12a-0af5-4f7b-9cc0-8b9043db328&title=)
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522932-fa97fca9-f063-47bf-aab5-72cf8c638e88.png#averageHue=%23f3ebdf&clientId=u2e2f7bd8-c258-4&from=paste&id=u925a4fac&originHeight=576&originWidth=1142&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=ub4d04669-23ba-4e48-a615-0d2fe30c736&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e24c1d433b81baee1a33762e287659a4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c5a6e89401c1f66d112ca8392b8313c6.png)
 注意：要查找的是字符串“he”，从根节点开始，沿着某条路径来匹配，可以匹配成功。但是路径的最后一个节点“e”并不是红色的，也就是说，“he”是某个字符串的前缀子串，但并不能完全匹配任何字符串
 
 ---
 
 #### 实现Trie
 通过一个下标与字符一一映射的数组，来存储子节点的指针
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522957-5abd56da-5fff-4d58-833b-8b711adf3b09.png#averageHue=%23f2eee7&clientId=u2e2f7bd8-c258-4&from=paste&id=u04b45e09&originHeight=697&originWidth=1142&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=uaabbfad0-5925-447a-83f5-d9c03729694&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6f9642c111b956055fabefea018c299a.png)
 时间复杂度是 O(n)（n 表示要查找字符串的长度）
 ```
 public class Trie {
@@ -1597,7 +1605,7 @@ public class Trie {
 
 #### 优化Trie
 Trie 树是非常耗内存，采取空间换时间的思路。Trie 树的变体有很多，可以在一定程度上解决内存消耗的问题。比如缩点优化，对只有一个子节点的节点，而且此节点不是一个串的结束节点，可以将此节点与子节点合并
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525522984-05dac539-89e6-429a-9b16-be036cb8e14b.png#averageHue=%23f4eee4&clientId=u2e2f7bd8-c258-4&from=paste&id=u2016b0ed&originHeight=581&originWidth=1142&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u75379046-0b02-42d1-9e2a-fc9b1f4b9e5&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/36f075942a1171b0fb60cc95005ff56d.png)
 参考文章：[https://time.geekbang.org/column/article/72414](https://time.geekbang.org/column/article/72414)
 
 ---
@@ -1671,14 +1679,14 @@ public class MGraph {
 ## 位图
 ### 基本介绍
 布隆过滤器：一种数据结构，是一个很长的二进制向量（位数组）和一系列随机映射函数（哈希函数），既然是二进制，每个空间存放的不是 0 就是 1，但是初始默认值都是 0，所以布隆过滤器不存数据只存状态
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525523416-e3ed5112-fdd8-4347-9c6a-6b59d09fc3d5.png#averageHue=%23f5f5f5&clientId=u2e2f7bd8-c258-4&from=paste&id=u648f3fb2&originHeight=112&originWidth=666&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u52214ecc-16c5-4944-83fa-2a80f689ba8&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ef69fb2ed062af951b65a90c77d2c141.png)
 这种数据结构是高效且性能很好的，但缺点是具有一定的错误识别率和删除难度。并且理论情况下，添加到集合中的元素越多，误报的可能性就越大
 
 ---
 
 ### 工作流程
 向布隆过滤器中添加一个元素 key 时，会通过多个 hash 函数得到多个哈希值，在位数组中把对应下标的值置为 1
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525523489-a8333c1c-824c-418e-8b5b-4bd3c7993660.png#averageHue=%23f6f6f6&clientId=u2e2f7bd8-c258-4&from=paste&id=ue761f306&originHeight=278&originWidth=889&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u202ddb73-53eb-40f2-a7cc-d582b3db8bd&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1ca7b385f83f6e00dd74ac51b8c2c6db.png)
 布隆过滤器查询一个数据，是否在二进制的集合中，查询过程如下：
 
 - 通过 K 个哈希函数计算该数据，对应计算出的 K 个 hash 值
