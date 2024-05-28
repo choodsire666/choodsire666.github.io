@@ -10,7 +10,7 @@ description: '一、部署Seata的tc-server1.下载下载seata-server地址在�
 下载seata-server地址在：[http](http://seata.io/zh-cn/blog/download.html)[://seata.io/zh-cn/blog/download](http://seata.io/zh-cn/blog/download.html)[.](http://seata.io/zh-cn/blog/download.html)[html](http://seata.io/zh-cn/blog/download.html)，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip
 ## 2.解压
 在非中文目录解压缩这个zip包，其目录结构如下：
-![image-20210622202515014.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/4535e1fbf15da618485bdd0335b0c613.png)
+![image-20210622202515014.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850541705-6f99fb03-51d2-4dac-ae97-1c70b01c1429.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdfcfa&clientId=ue46bfc92-2738-4&from=paste&height=113&id=u93b95688&originHeight=169&originWidth=411&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=21549&status=done&style=none&taskId=u9bea8272-7df4-4946-9d49-5396aec00d6&title=&width=274)
 ## 3.修改配置
 修改conf目录下的application.yml文件，内容如下：
 ```properties
@@ -67,7 +67,7 @@ seata:
 ```
 ## 4.在nacos添加配置
 特别注意，为了让tc服务的集群可以共享配置，我们选择了nacos作为统一配置中心。因此服务端配置文件`seataServer.properties`文件需要在nacos中配好。格式如下：
-![image-20220620003641290.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/48247e7728f30363f890a7dfc9224d9e.png)
+![image-20220620003641290.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850644341-5e9efaf6-791c-433b-be15-454eff638632.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_46%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23c6c6c6&clientId=ue46bfc92-2738-4&from=paste&height=445&id=u59b82fb8&originHeight=668&originWidth=1602&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=68044&status=done&style=none&taskId=u5d0bd70d-55cd-4d24-8595-c02a79dae61&title=&width=1068)
 配置内容如下：
 ```properties
 # 数据存储方式，db代表数据库
@@ -158,9 +158,9 @@ SET FOREIGN_KEY_CHECKS = 1;
 ```
 ## 6.启动TC服务
 进入bin目录，运行其中的`seata-server.bat`即可，启动成功后，seata-server应该已经注册到nacos注册中心了。打开浏览器，访问seata控制台；地址：[http://localhost:7091](http://localhost:7091)
-![image-20220620004453632.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/0d54dda429557cf7c703078754f316c9.png)
+![image-20220620004453632.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850723722-a7fb8455-1962-4768-bc12-4a92ba58c1e0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_55%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fafaf9&clientId=ue46bfc92-2738-4&from=paste&height=393&id=u9a2c3753&originHeight=589&originWidth=1917&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=65082&status=done&style=none&taskId=u4f12ea14-f999-4505-8174-f0f96f7fa25&title=&width=1278)
 打开浏览器，访问nacos地址：http://localhost:8848/nacos，然后进入服务列表页面，可以看到seata-server的信息：
-![image-20220620004558607.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/93b59bdb16941fca2f96313fa4872394.png)
+![image-20220620004558607.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850741763-1a71a240-95f8-4c4d-a8b3-705de8b13753.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_54%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23c2aa82&clientId=ue46bfc92-2738-4&from=paste&height=463&id=u0d9f7e4b&originHeight=694&originWidth=1894&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=78528&status=done&style=none&taskId=u8da45ff6-d326-4b51-b233-5088cfa7401&title=&width=1262.6666666666667)
 # 二、微服务集成seata
 需要进行分布式事务处理的每个微服务上都配置如下：
 ## 1.引入依赖
@@ -265,12 +265,12 @@ seata:
       urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/api/v1/auth/login
 ```
 进入seata2/bin目录，然后运行双击 `seata-server.bat`。打开nacos控制台，查看服务列表：
-![image-20220620202914341.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/78881e080e9b68a3e867b5f9faa76419.png)
+![image-20220620202914341.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850793427-5d9439f6-f75c-4bca-970f-da75da2f7ed3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_47%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbfbfb&clientId=ue46bfc92-2738-4&from=paste&height=288&id=ub5cf6003&originHeight=432&originWidth=1634&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=49143&status=done&style=none&taskId=u565cc925-e257-415c-9a3f-f3b89faf267&title=&width=1089.3333333333333)
 ![](assets/image-20220620202914341.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=tAjy7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![image-20220620202945657.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/d886242f9f1a5b755c857a102870535a.png)
+![image-20220620202945657.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850802016-69bd131f-ed6b-471d-8661-121657ca9d91.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_46%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23494c47&clientId=ue46bfc92-2738-4&from=paste&height=479&id=ua7cddb61&originHeight=719&originWidth=1616&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=39030&status=done&style=none&taskId=u424407bb-c51b-497f-8d76-b76b419291d&title=&width=1077.3333333333333)
 ## 2.将事务组映射配置到nacos
 接下来，我们需要将tx-service-group与cluster的映射关系都配置到nacos配置中心。新建一个配置：
-![image-20210624151507072.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/f321a00bd93e38c73b3dfbe7be665bb2.png)
+![image-20210624151507072.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678850824390-f0ee4c08-3ec4-443b-a8be-76c64e5d57d9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23ebeaea&clientId=ue46bfc92-2738-4&from=paste&height=313&id=uf60133ec&originHeight=470&originWidth=908&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=20629&status=done&style=none&taskId=u0c5a5056-7219-4154-a4c2-417395c6f78&title=&width=605.3333333333334)
 配置的内容如下：
 ```properties
 # 事务组映射关系

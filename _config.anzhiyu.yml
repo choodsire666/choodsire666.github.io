@@ -93,9 +93,13 @@ algolia_search:
   enable: true
   hits:
     per_page: 6
-  # tags:
-    # - 前端
-    # - Hexo
+  tags:
+    - idea
+    - k8s
+    - 容器
+    - 容器编排
+    - Mysql
+    - Restful
 
 
 # Docsearch

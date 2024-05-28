@@ -3,7 +3,7 @@ title: Kubernetes
 urlname: nq8yeuc58t3h09zh
 date: '2024-04-04 14:20:57'
 updated: '2024-04-05 16:15:34'
-cover: 'https://cdn.nlark.com/yuque/0/2024/png/43047777/1712211750585-c4847eb5-5d77-42a6-8a6f-3bf1037e13eb.png'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/ef0ad2457a4ed077fd9eaf6010da6806.png'
 description: Kubernetes介绍1.1 应用方式部署改变在部署应用程序的方式上，主要经历了3个时代传统部署：互联网早期，直接将应用部署在物理机上优点 简单，不需要其他技术的参与缺点 不能为程序定义资源使用边界，很难合理分配计算机资源，而且程序之间容易产生影响虚拟化部署：可以在一台物理机上运行多个虚拟机...
 ---
 ## Kubernetes介绍
@@ -287,7 +287,7 @@ Ingress 可以提供外网访问 Service 的能力。可以把某个请求地址
 ingress 需要配合 ingress controller 一起使用才能发挥作用，ingress 只是相当于路由规则的集合而已，真正实现路由功能的，是 Ingress Controller，ingress controller 和其它 k8s 组件一样，也是在 Pod 中运行。
 Ingress-nginx
 :::
- 
+
 存储
 Volume
 :::info

@@ -29,6 +29,15 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
+      # 拉取b站信息
+      - name: get bilibili
+        run: hexo bangumis -u
+      # 拉取语雀信息
+      # - name: get yuque post
+      # 生成Algolia搜索indexs
+      - name: create indexs
+        run: hexo algolia
+      # build
       - name: Build
         run: npm run build
       - name: Upload Pages artifact

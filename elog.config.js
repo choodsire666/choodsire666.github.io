@@ -29,7 +29,40 @@ module.exports = {
       outputDir: './source/_posts/yuque',
       filename: 'title',
       format: 'matter-markdown',
-      catalog: true
+      catalog: true,
+      frontMatter: {
+        enable: true,
+        include: ["title",
+          "date",
+          "updated",
+          "urlname",
+          "tags",
+          "categories",
+          "keywords",
+          "description",
+          "top_img",
+          "comments",
+          "cover",
+          "toc",
+          "toc_number",
+          "toc_style_simple",
+          "copyright",
+          "copyright_author",
+          "copyright_author_href",
+          "copyright_url",
+          "copyright_info",
+          "mathjax",
+          "katex",
+          "aplayer",
+          "highlight_shrink",
+          "aside",
+          "swiper_index",
+          "top_group_index",
+          "background"], // 只输出include包含的属性
+        exclude: [
+          "author"
+        ], // 不输出exclude包含的属性
+      }
     }
   },
   image: {
