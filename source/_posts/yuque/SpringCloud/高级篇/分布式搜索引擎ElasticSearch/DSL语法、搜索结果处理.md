@@ -67,7 +67,7 @@ GET /indexName/_search
 - 百度输入框搜索
 
 例如京东：
-![image-20210721165326938.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678878533516-63bc1795-18ca-422e-b937-36a719d5788f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_29%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f6efee&clientId=ufbeed8c6-eba3-4&from=paste&height=124&id=u5b7a99cc&originHeight=186&originWidth=1024&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=62683&status=done&style=none&taskId=ud776ff4f-d430-432a-934d-41900de5712&title=&width=682.6666666666666)
+![image-20210721165326938.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/ac3f35535f68a252958ca446416a12c7.png)
 因为是拿着词条去匹配，因此参与搜索的字段也必须是可分词的text类型的字段。
 ### 1.2.2.基本语法
 常见的全文检索查询包括：
@@ -100,7 +100,7 @@ GET /indexName/_search
 ```
 ### 1.2.3.示例
 match查询示例：
-![image-20210721170455419.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678878604720-94faa66a-b615-4b17-b3a4-d55adaf3dcdf.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_50%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d8e8e7&clientId=ufbeed8c6-eba3-4&from=paste&height=392&id=uaf174da5&originHeight=588&originWidth=1758&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=343334&status=done&style=none&taskId=ud488e6ce-d385-4c25-8478-f525aed1c80&title=&width=1172)
+![image-20210721170455419.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/8bee1d80ca3cc0359f0c40bae8534a73.png)
 ```xml
 GET /hotel182/_search
 {
@@ -113,7 +113,7 @@ GET /hotel182/_search
 ```
 
 multi_match查询示例：
-![image-20210721170720691.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678878612147-37e88cbb-e0d3-4c81-9a54-c4f7d802c05d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_50%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3f7fa&clientId=ufbeed8c6-eba3-4&from=paste&height=391&id=u0747f650&originHeight=586&originWidth=1761&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=407579&status=done&style=none&taskId=ud8cbc12e-4ae2-4063-b0fe-8afd0f62849&title=&width=1174)
+![image-20210721170720691.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/ee6773b8500f9ef9224aac413fb6f39a.png)
 ```xml
 GET /hotel182/_search
 {
@@ -152,7 +152,7 @@ GET /indexName/_search
 }
 ```
 示例：当我搜索的是精确词条时，能正确查询出结果：
-![image-20210721171655308.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879017888-d35c6002-95a7-4acd-9817-59de3e475a2d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3f7fa&clientId=ufbeed8c6-eba3-4&from=paste&height=371&id=u077d6918&originHeight=557&originWidth=1557&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=321331&status=done&style=none&taskId=u5692ffec-a931-40a2-87ad-c3a8b8a52af&title=&width=1038)
+![image-20210721171655308.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/8aa218df4c12d86a8d3116bbfe713325.png)
 ```xml
 # 精确查询：term查询
 GET /hotel182/_search
@@ -167,7 +167,7 @@ GET /hotel182/_search
 }
 ```
 但是，当我搜索的内容不是词条，而是多个词语形成的短语时，反而搜索不到：
-![image-20210721171838378.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879032856-4a363280-254d-4baa-9308-d2128a26d430.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_37%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f5f9&clientId=ufbeed8c6-eba3-4&from=paste&height=309&id=u77316d41&originHeight=463&originWidth=1307&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=161795&status=done&style=none&taskId=uf4c0fc25-3836-4718-ba0f-3673a8ef237&title=&width=871.3333333333334)
+![image-20210721171838378.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/fe32b571ea0d6abb2a0391b048dc1114.png)
 ### 1.3.2.range查询
 范围查询，一般应用在对数值类型做范围过滤的时候。比如做价格范围过滤。基本语法：
 ```json
@@ -185,7 +185,7 @@ GET /indexName/_search
 }
 ```
 示例：
-![image-20210721172307172.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879139492-38fa47be-233c-455a-9440-451d406c581e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f0f5f8&clientId=ufbeed8c6-eba3-4&from=paste&height=276&id=u3432db72&originHeight=414&originWidth=1482&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=257316&status=done&style=none&taskId=u83f661ff-57d7-4ddc-a2a0-2e970f5adc4&title=&width=988)
+![image-20210721172307172.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/e9c6534f9e14558d8fd6c6ef489c99eb.png)
 ```xml
 # 精确查询：range查询
 GET /hotel182/_search
@@ -215,10 +215,10 @@ GET /hotel182/_search
 附近的酒店：
 ![](assets/image-20210721172645103.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=CbnQU&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 附近的车：
-![image-20210721172654880.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879205482-b57e45ce-6e4d-4973-a022-6fd551fcfb5c.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%2358b8a3&clientId=ufbeed8c6-eba3-4&from=paste&height=335&id=uad961b16&originHeight=502&originWidth=295&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=94375&status=done&style=none&taskId=u7bd82d55-06c0-40d5-be0b-e633259672c&title=&width=196.66666666666666)
+![image-20210721172654880.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/d22bb8a90764c86215843ce7c91f291d.png)
 ### 1.4.1.矩形范围查询
 矩形范围查询，也就是geo_bounding_box查询，查询坐标落在某个矩形范围的所有文档：
-![DKV9HZbVS6.gif](https://cdn.nlark.com/yuque/0/2023/gif/1169676/1678879762799-89e07c7d-6540-497d-8f34-304d7d6bb811.gif#averageHue=%23bed2b7&clientId=ufbeed8c6-eba3-4&from=paste&id=u2d9374cc&originHeight=170&originWidth=336&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=164696&status=done&style=none&taskId=uc13c0e36-a872-4acb-af6a-28dc55633df&title=)
+![DKV9HZbVS6.gif](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/f6c2a3c3f069ead0e2b67f0d6a66c44f.gif)
 查询时，需要指定矩形的**左上**、**右下**两个点的坐标，然后画出一个矩形，落在该矩形内的都是符合条件的点。
 语法如下：
 ```json
@@ -260,9 +260,9 @@ GET /indexName/_search
 }
 ```
 示例，我们先搜索陆家嘴附近15km的酒店：
-![image-20210721175443234.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879810702-a89f87b8-44d6-4b0b-bff2-7eb0b5778ec9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_37%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f6f9&clientId=ufbeed8c6-eba3-4&from=paste&height=316&id=ua76239d6&originHeight=474&originWidth=1283&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=240083&status=done&style=none&taskId=u874541ad-4391-43a7-8aa6-befac2c9af5&title=&width=855.3333333333334)
+![image-20210721175443234.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/9553916891710799dce56af64c36e00c.png)
 发现共有47家酒店。然后把半径缩短到3公里：
-![image-20210721182031475.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879821906-c4d8fde7-8fee-4265-bb58-a29a9caed0b2.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_37%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9e9ea&clientId=ufbeed8c6-eba3-4&from=paste&height=313&id=ub6101213&originHeight=470&originWidth=1308&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=248020&status=done&style=none&taskId=u31218f63-8935-43e1-808e-0cb8a580e27&title=&width=872)
+![image-20210721182031475.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/56fe0803c33dd59ad44b5071d356f4ce.png)
 可以发现，搜索到的酒店数量减少到了5家。
 ## 1.5.复合查询
 复合（compound）查询：复合查询可以将其它简单查询组合起来，实现更复杂的搜索逻辑。常见的有两种：
@@ -295,11 +295,11 @@ GET /indexName/_search
 ]
 ```
 在elasticsearch中，早期使用的打分算法是TF-IDF算法，公式如下：
-![image-20210721190152134.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879860658-9a3138cb-d182-4441-975b-7e0187c5a796.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_24%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23a6a6a6&clientId=ufbeed8c6-eba3-4&from=paste&height=251&id=u6002a569&originHeight=376&originWidth=851&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=38973&status=done&style=none&taskId=uce6624ab-4a98-4e13-961a-bd918fcdf9f&title=&width=567.3333333333334)
+![image-20210721190152134.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/48c9d2c144f3e5c4baac61a019bc496d.png)
 在后来的5.1版本升级中，elasticsearch将算法改进为BM25算法，公式如下：
-![image-20210721190416214.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879870427-5242f9e4-28ca-4d78-952d-76b844082ab8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23979797&clientId=ufbeed8c6-eba3-4&from=paste&height=130&id=ucc56ab87&originHeight=195&originWidth=912&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=13901&status=done&style=none&taskId=uab0ed3e6-af66-43fd-92fd-a78782cc66c&title=&width=608)
+![image-20210721190416214.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/73c58890c04f9da5ecc4504e46fd7568.png)
 TF-IDF算法有一各缺陷，就是词条频率越高，文档得分也会越高，单个词条对文档影响较大。而BM25则会让单个词条的算分有一个上限，曲线更加平滑：
-![image-20210721190907320.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879879018-360b560d-5805-434d-a998-91b08caf69cc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_17%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f6f6f6&clientId=ufbeed8c6-eba3-4&from=paste&id=u2bba39bd&originHeight=416&originWidth=589&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=131188&status=done&style=none&taskId=u91fbd1e6-92db-469a-aedc-9d5d41e9c57&title=)
+![image-20210721190907320.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/f893bd489a35251e9b091a6379394d99.png)
 小结：elasticsearch会根据词条和文档的相关度做打分，算法由两种：
 
 - TF-IDF算法
@@ -310,7 +310,7 @@ TF-IDF算法有一各缺陷，就是词条频率越高，文档得分也会越�
 ![](assets/image-20210721191144560.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=NrmN4&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 要想认为控制相关性算分，就需要利用elasticsearch中的function score 查询了。
 #### 1）语法说明
-![image-20210721191544750.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678879919697-ad93e9b2-5eaa-404e-a32f-127b5ef5607e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f5f7f0&clientId=ufbeed8c6-eba3-4&from=paste&height=371&id=ue691f23c&originHeight=556&originWidth=1409&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=132320&status=done&style=none&taskId=ub9114130-bae0-495e-9d69-99d1da796a5&title=&width=939.3333333333334)
+![image-20210721191544750.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/cad29da1e393124cd049cdfc1773a36f.png)
 function score 查询中包含四部分内容：
 
 - **原始查询**条件：query部分，基于这个条件搜索文档，并且基于BM25算法给文档打分，**原始算分**（query score)
@@ -368,9 +368,9 @@ GET /hotel/_search
 }
 ```
 测试，在未添加算分函数时，如家得分如下：
-![image-20210721193152520.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880033433-6c1dcffa-d4fa-4580-8a48-a20b655b2e7b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_38%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f0f4f9&clientId=ufbeed8c6-eba3-4&from=paste&height=296&id=ue3e60395&originHeight=444&originWidth=1340&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=242711&status=done&style=none&taskId=udadc5c09-58f3-4b91-904a-636397e3df7&title=&width=893.3333333333334)
+![image-20210721193152520.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/b44edcca3e8f9f3291d21dedffb5b0a0.png)
 添加了算分函数后，如家得分就提升了(![](assets/image-20210721193152520.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=zOXXC&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![image-20210721193458182.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880043553-03084786-57d1-4938-a917-8c86e4ae561a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eef3f8&clientId=ufbeed8c6-eba3-4&from=paste&height=379&id=uebc52c08&originHeight=568&originWidth=1402&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=370718&status=done&style=none&taskId=uee14a047-1038-41e0-9cd2-546cda8ea42&title=&width=934.6666666666666)
+![image-20210721193458182.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/7ff0aedf44f4ade5266f72526c76bc33.png)
 ```xml
 GET /hotel182/_search
 {
@@ -450,7 +450,7 @@ GET /hotel/_search
 - 价格不大于400，用range查询，属于过滤条件，可以不参与算分。放到must_not中
 - 周围10km范围内，用geo_distance查询，属于过滤条件，可以不参与算分。放到filter中
 
-![image-20210721194744183.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880095066-56c9eb91-8b46-4e11-90ba-15f0ec3c0064.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eff4f8&clientId=ufbeed8c6-eba3-4&from=paste&height=420&id=ue8bea04e&originHeight=630&originWidth=1559&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=469807&status=done&style=none&taskId=u3f55b7e3-f74a-47a6-ac1e-9c95c19ed6a&title=&width=1039.3333333333333)
+![image-20210721194744183.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/d85eb642cf70e2fef57ac22f95a02b80.png)
 ```xml
 GET /hotel182/_search
 {
@@ -582,7 +582,7 @@ GET /indexName/_search
 **示例：**
 需求描述：实现对酒店数据按照到你的位置坐标的距离升序排序。提示：获取你的位置的经纬度的方式：[链接](https://lbs.amap.com/demo/jsapi-v2/example/map/click-to-get-lnglat/)
 假设我的位置是：31.034661，121.612282，寻找我周围距离最近的酒店。
-![image-20210721200214690.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880184268-198f7ca2-fef4-4500-bcca-f863fa1a35c4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eef2f8&clientId=ufbeed8c6-eba3-4&from=paste&height=321&id=u55bc98c7&originHeight=482&originWidth=1437&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=349942&status=done&style=none&taskId=u41c9b9a1-d3ee-413d-98b2-3535b19fe22&title=&width=958)
+![image-20210721200214690.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/e18590ffebd48b6534ee3da820f2e801.png)
 ```xml
 GET /hotel182/_search
 {
@@ -642,16 +642,16 @@ GET /hotel/_search
 }
 ```
 这里是查询990开始的数据，也就是 第990~第1000条数据。不过，elasticsearch内部分页时，必须先查询 0~1000条，然后截取其中的990 ~ 1000的这10条：
-![image-20210721200643029.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880224763-6e66572d-a34f-4387-b0fd-872f390d0d8a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbfbfb&clientId=ufbeed8c6-eba3-4&from=paste&id=u3c43679e&originHeight=291&originWidth=776&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=21206&status=done&style=none&taskId=u4e3cb942-9809-4bfc-aff1-f8941a1355a&title=)
+![image-20210721200643029.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/f068feff96deced4bfd5178504c1102f.png)
 查询TOP1000，如果es是单点模式，这并无太大影响。但是elasticsearch将来一定是集群，例如我集群有5个节点，我要查询TOP1000的数据，并不是每个节点查询200条就可以了。因为节点A的TOP200，在另一个节点可能排到10000名以外了。
 因此要想获取整个集群的TOP1000，必须先查询出每个节点的TOP1000，汇总结果后，重新排名，重新截取TOP1000。
-![image-20210721201003229.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880233684-1bfc8163-5932-4fa4-8807-27303a630414.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fafafa&clientId=ufbeed8c6-eba3-4&from=paste&id=u49d01c92&originHeight=529&originWidth=821&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=33999&status=done&style=none&taskId=u7ce10b07-1377-4044-a56e-df53d1625ef&title=)
+![image-20210721201003229.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/e9d8938a197fea11e49d9150b73abddf.png)
 那如果我要查询9900~10000的数据呢？是不是要先查询TOP10000呢？那每个节点都要查询10000条？汇总到内存中？当查询分页深度较大时，汇总数据过多，对内存和CPU会产生非常大的压力，因此elasticsearch会禁止from+ size 超过10000的请求。针对深度分页，ES提供了两种解决方案，[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/paginate-search-results.html)：
 
 - search after：分页时需要排序，原理是从上一次的排序值开始，查询下一页数据。官方推荐使用的方式。
 - scroll：原理将排序后的文档id形成快照，保存在内存。官方已经不推荐使用。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680751682838-62384c82-17db-4622-a9d7-e82dfff3be62.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_53%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eef2f6&clientId=u309a1af0-61af-4&from=paste&height=436&id=u706321cb&originHeight=654&originWidth=1854&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=170598&status=done&style=none&taskId=u6757acf0-f92b-4afc-b0d3-98e558bf26d&title=&width=1236)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/d4bf441a264da9c99cd072f7eba70be1.png)
 ### 2.2.3.小结
 分页查询的常见实现方案以及优缺点：
 
@@ -670,7 +670,7 @@ GET /hotel/_search
 ## 2.3.高亮
 ### 2.3.1.高亮原理
 什么是高亮显示呢？我们在百度，京东搜索时，关键字会变成红色，比较醒目，这叫高亮显示：
-![image-20210721202705030.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880295123-0e8940a8-58e0-4a5e-ad3f-ea1c649f93a6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f9f8f7&clientId=ufbeed8c6-eba3-4&from=paste&id=uc28da991&originHeight=475&originWidth=570&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=158358&status=done&style=none&taskId=u60ec7e6f-bfd2-421c-b163-7d0e21b6ce7&title=)
+![image-20210721202705030.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/ed0d579a1a974599f4c6044096ff744b.png)
 高亮显示的实现分为两步：
 
 - 1）给文档中的所有关键字都添加一个标签，例如`<em>`标签
@@ -702,8 +702,8 @@ GET /hotel/_search
 - 如果要对非搜索字段高亮，则需要添加一个属性：required_field_match=false
 
 **示例**：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680323530892-c5e7e504-f2b2-4abe-8a04-33eac65caa94.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_50%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23ecf1f5&clientId=ucd7cc4b2-fac6-4&from=paste&height=379&id=ub9c3642e&originHeight=568&originWidth=1768&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=149185&status=done&style=none&taskId=uda8f5d88-06a0-46f5-8049-e693128c73a&title=&width=1178.6666666666667)
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680323580815-e4baebbd-74ed-4d6e-9f95-b77efb9f1f95.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_50%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23ebf0f5&clientId=ucd7cc4b2-fac6-4&from=paste&height=399&id=ucb0cb0a5&originHeight=598&originWidth=1742&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=162696&status=done&style=none&taskId=u06a46d3d-f6ea-40a0-ad86-47cb5062c58&title=&width=1161.3333333333333)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/3a115f8e398c8f71cdcc1396cf3e47d0.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/60f3135ab7f9088c1f72981672e644a6.png)
 ```json
 GET /hotel182/_search
 {
@@ -732,7 +732,7 @@ GET /hotel182/_search
 - highlight：高亮条件
 
 示例：
-![image-20210721203657850.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880350801-186bbb05-a24b-4469-a394-304997e775d8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_23%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdfcfb&clientId=ufbeed8c6-eba3-4&from=paste&id=u915cbff3&originHeight=688&originWidth=795&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=76475&status=done&style=none&taskId=u51e93beb-d08b-496d-814f-d9881e273f5&title=)
+![image-20210721203657850.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/4797f293e64a88fdf5e16df2345f9380.png)
 # 3.RestClient查询文档
 文档的查询同样适用昨天学习的 RestHighLevelClient对象，基本步骤包括：
 
@@ -743,7 +743,7 @@ GET /hotel182/_search
 ## 3.1.快速入门
 在我们昨天学习的课程基础之上，我们继续在单测中练习。我们以match_all查询为例(这里也可新建一个单测类)
 ### 3.1.1.发起查询请求
-![image-20210721203950559.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880378724-7cc015bb-d951-42c3-9f5b-1373a7fa2a39.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3f6f0&clientId=ufbeed8c6-eba3-4&from=paste&height=291&id=u13443d58&originHeight=436&originWidth=1440&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=76773&status=done&style=none&taskId=u8691cfcb-ccd9-4d28-9096-f20b853d4ab&title=&width=960)
+![image-20210721203950559.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/6d95933ddaac690da5be06de4809a2dc.png)
 代码解读：
 
 -  第一步，创建`SearchRequest`对象，指定索引库名 
@@ -751,12 +751,12 @@ GET /hotel182/_search
    - `query()`：代表查询条件，利用`QueryBuilders.matchAllQuery()`构建一个match_all查询的DSL
 -  第三步，利用client.search()发送请求，得到响应 
 
-这里关键的API有两个，一个是`request.source()`，其中包含了查询、排序、分页、高亮等所有功能：![image-20210721215640790.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880400105-1f704aa4-ce7d-44fa-bac6-d3473d8b3237.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23edebde&clientId=ufbeed8c6-eba3-4&from=paste&id=u12b09a88&originHeight=484&originWidth=693&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=168438&status=done&style=none&taskId=u08331867-ea52-4829-9af9-6134fb446c4&title=)
+这里关键的API有两个，一个是`request.source()`，其中包含了查询、排序、分页、高亮等所有功能：![image-20210721215640790.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/d6efb67a789847b7ca61f73ab4120db8.png)
 另一个是![](assets/image-20210721215640790.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=kV4Z6&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![image-20210721215729236.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880411774-0dffcb8a-17a1-48c4-a8d3-29b342b130c4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_17%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f8f3&clientId=ufbeed8c6-eba3-4&from=paste&id=ucfaec9e9&originHeight=369&originWidth=610&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=199521&status=done&style=none&taskId=u296b9c2e-e5a8-4b77-ac70-d26c19f6335&title=)
+![image-20210721215729236.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/b0a9c6cde3eb01a3b47d4d7c36e9b892.png)
 ### 3.1.2.解析响应
 响应结果的解析：
-![image-20210721214221057.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880429785-63947b25-dcb9-4918-b80b-302625296177.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f6ef&clientId=ufbeed8c6-eba3-4&from=paste&height=465&id=u5031c423&originHeight=698&originWidth=1435&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=143502&status=done&style=none&taskId=uadd2bbf6-a613-4f23-b280-0880f7108c1&title=&width=956.6666666666666)
+![image-20210721214221057.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/db608fe1278158eada5696c8b063bd74.png)
 ![](assets/image-20210721214221057.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=lpyCz&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 - `hits`：命中的结果 
@@ -809,7 +809,7 @@ private void handleResponse(SearchResponse response) {
 
 - 代码和DSL语句映射关系
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680332204829-1ce66a13-83af-4398-ba7e-8e97e16f1d0e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_48%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbfaf8&clientId=u6f51b92f-82f1-4&from=paste&height=547&id=u06cde429&originHeight=821&originWidth=1679&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=189827&status=done&style=none&taskId=ude46496d-71da-4f6f-aee4-e8b06bd4bf8&title=&width=1119.3333333333333)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/4e33920a52c32d9bb278fd6d4606fa5e.png)
 ### 3.1.4.小结
 查询的基本步骤是：
 
@@ -823,7 +823,7 @@ private void handleResponse(SearchResponse response) {
 全文检索的match和multi_match查询与match_all的API基本一致。差别是查询条件，也就是query的部分。
 ![](assets/image-20210721215923060.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=vbuUl&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 因此，Java代码上的差异主要是request.source().query()中的参数了。同样是利用QueryBuilders提供的方法：
-![image-20210721215843099.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880477166-2553613b-24b5-4a0c-a7d2-0cdf39471fac.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f8ef&clientId=ufbeed8c6-eba3-4&from=paste&height=107&id=ue93cf8b5&originHeight=160&originWidth=717&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=17366&status=done&style=none&taskId=uf36d6bea-4707-4bf5-940d-04f82034298&title=&width=478)
+![image-20210721215843099.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/ed9c1091a636099a4df80f6103b80329.png)
 而结果解析代码则完全一致，可以抽取并共享。完整代码如下：
 ```java
 @Test
@@ -847,10 +847,10 @@ void testMatch() throws IOException {
 - range：范围查询
 
 与之前的查询相比，差异同样在查询条件，其它都一样。查询条件构造的API如下：
-![image-20210721220305140.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880511240-b1dba5c5-f8d9-484d-9016-a39dab6bbd2d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_18%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f5f8f0&clientId=ufbeed8c6-eba3-4&from=paste&height=107&id=u4cc6729f&originHeight=160&originWidth=643&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=15759&status=done&style=none&taskId=ub80fd6d5-7ce1-4a14-9c58-d595269bbff&title=&width=428.6666666666667)
+![image-20210721220305140.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/632801124223ad4a10ab73f162cfcc71.png)
 ## 3.4.布尔查询
 布尔查询是用must、must_not、filter等方式组合其它查询，代码示例如下：
-![image-20210721220927286.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880526023-0405d770-23a0-4ce6-a08f-26bd05b3a667.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f4ef&clientId=ufbeed8c6-eba3-4&from=paste&height=351&id=u4836f0db&originHeight=527&originWidth=1472&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=88625&status=done&style=none&taskId=uf5bf5ecc-811e-46d1-b7f2-97f23a470cb&title=&width=981.3333333333334)
+![image-20210721220927286.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/b4743cbbea2298be8523eb90d0fc682f.png)
 可以看到，API与其它查询的差别同样是在查询条件的构建，QueryBuilders，结果解析等其他代码完全不变。完整代码如下：
 ```java
 @Test
@@ -876,7 +876,7 @@ void testBool() throws IOException {
 会发现查不到数据，可以把城市换成：上海，价格2000，再试试就有数据返回了
 ## 3.5.排序、分页
 搜索结果的排序和分页是与query同级的参数，因此同样是使用request.source()来设置。对应的API如下：
-![image-20210721221121266.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880560898-7b133e18-8f3e-4651-ad8f-f227bfa0f2b3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f6f1&clientId=ufbeed8c6-eba3-4&from=paste&height=293&id=u84bc9e66&originHeight=440&originWidth=1456&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=66297&status=done&style=none&taskId=ue28881cd-37ce-43fe-a615-b79a73c7beb&title=&width=970.6666666666666)
+![image-20210721221121266.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/8bd5fe4eadb98d0963b5b605ad9143a7.png)
 完整代码示例：
 ```java
 @Test
@@ -907,7 +907,7 @@ void testPageAndSort() throws IOException {
 - 结果解析：结果除了要解析_source文档数据，还要解析高亮结果
 ### 3.6.1.高亮请求构建
 高亮请求的构建API如下：
-![image-20210721221744883.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880592979-9a325090-a53e-4627-81ca-c385a3840dd0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f6f9f3&clientId=ufbeed8c6-eba3-4&from=paste&height=369&id=uf41b93b3&originHeight=553&originWidth=1435&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=62535&status=done&style=none&taskId=u82ae8430-37f1-4c19-ad9d-808d69217c5&title=&width=956.6666666666666)
+![image-20210721221744883.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/bdd39bbd72a2753f4cd9bdaf5a82a43e.png)
 上述代码省略了查询条件部分，但是大家不要忘了：高亮查询**必须使用全文检索查询，并且要有搜索关键字**，将来才可以对关键字高亮。完整代码如下：
 ```java
 @Test
@@ -928,7 +928,7 @@ void testHighlight() throws IOException {
 ```
 ### 3.6.2.高亮结果解析
 高亮的结果与查询的文档结果默认是分离的，并不在一起。
-![image-20210721222057212.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880613211-63260638-29d1-4378-97ff-5507c5f70cf1.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f3ec&clientId=ufbeed8c6-eba3-4&from=paste&height=457&id=ufd46b7cb&originHeight=685&originWidth=1486&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=163086&status=done&style=none&taskId=u1f6dc4d9-cd06-4489-8faa-863e94b3136&title=&width=990.6666666666666)
+![image-20210721222057212.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/f189f170901e000bdbf415be06b8f287.png)
 因此解析高亮的代码需要额外处理：
 代码解读：
 
@@ -978,17 +978,17 @@ private void handleResponse(SearchResponse response) {
 - 酒店竞价排名
 
 启动我们提供的hotel-demo项目，其默认端口是8089，访问http://localhost:8090，就能看到项目页面了：
-![image-20210721223159598.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880642361-a16d36fa-050b-4c65-9d7a-8cc16187fd70.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbf9f6&clientId=ufbeed8c6-eba3-4&from=paste&height=461&id=ud4a75f47&originHeight=692&originWidth=1477&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=339603&status=done&style=none&taskId=u346dc74f-4901-411b-9c30-46942fe3028&title=&width=984.6666666666666)
+![image-20210721223159598.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/e7aa76d5d798de1ab7f5cc4d64746dda.png)
 ## 4.1.酒店搜索和分页
 案例需求：实现黑马旅游的酒店搜索功能，完成关键字搜索和分页
 启动项目后访问：[http://localhost:8089/](http://localhost:8089/)
 ### 4.1.1.需求分析
 在项目的首页，有一个大大的搜索框，还有分页按钮：
-![image-20210721223859419.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880660275-5474cb0e-b879-48aa-904a-793cc85b4b71.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_25%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23faf9f8&clientId=ufbeed8c6-eba3-4&from=paste&id=uc03f4904&originHeight=245&originWidth=861&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=45051&status=done&style=none&taskId=u40cc522f-b124-4a0a-a98b-cb634d0fd31&title=)
+![image-20210721223859419.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/7ccee60bbe49aa07c92bdcf475462529.png)
 点击搜索按钮，可以看到浏览器控制台发出了请求：
-![image-20210721224033789.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880672691-736a4e42-adae-4884-ab3c-4145e5c6352b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_18%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f4f4&clientId=ufbeed8c6-eba3-4&from=paste&id=u1d0690dd&originHeight=220&originWidth=641&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47778&status=done&style=none&taskId=u6fa03d8c-6584-4ce5-9f85-8c12afa055d&title=)
+![image-20210721224033789.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/44bbdb333fd4a2b1d9cc08f1a821ba55.png)
 请求参数如下：
-![image-20210721224112708.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880677348-4f960a3b-e7d0-4779-9ac2-e6aea15cbdfb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdfdfd&clientId=ufbeed8c6-eba3-4&from=paste&id=u9683da32&originHeight=204&originWidth=695&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=28171&status=done&style=none&taskId=ub6d69f99-680f-4cd5-9318-b62bdcaa508&title=)
+![image-20210721224112708.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/ac2c4f1b01a08836c96a8b04c0617501.png)
 由此可以知道，我们这个请求的信息如下：
 
 - 请求方式：POST
@@ -1160,14 +1160,14 @@ private PageResult handleResponse(SearchResponse response) {
 }
 ```
 4）重启项目后访问，发现搜索结果会出来，同时分页信息也产生了变化
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680337639209-440bc77d-6a92-413f-9fef-a0f9ce9443b4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_54%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23c89666&clientId=u6f51b92f-82f1-4&from=paste&height=599&id=ub7971169&originHeight=898&originWidth=1909&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=262309&status=done&style=none&taskId=u797cb63f-10f8-4ba6-9984-2ea627ffc9a&title=&width=1272.6666666666667)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/f719c7af810512ea466e47c04926f6b0.png)
 ## 4.2.酒店结果过滤
 需求：添加品牌、城市、星级、价格等过滤功能
 ### 4.2.1.需求分析
 在页面搜索框下面，会有一些过滤项：
-![image-20210722091940726.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880828944-714fd398-290f-41ac-af39-441ce29f2ba2.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23faf9f8&clientId=ufbeed8c6-eba3-4&from=paste&height=153&id=u2c4b2622&originHeight=230&originWidth=913&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=43651&status=done&style=none&taskId=ub0a8e82e-3148-433a-8f03-d66f56a1334&title=&width=608.6666666666666)
+![image-20210722091940726.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/d59b9f42a5ef928d0c9c4a87fedcdc5c.png)
 ![](assets/image-20210722091940726.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=deJq1&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![image-20210722092051994.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880833404-4bc7ad44-49fe-406c-8c38-6fa4c3f5bb89.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcfbfb&clientId=ufbeed8c6-eba3-4&from=paste&height=255&id=ueed5f110&originHeight=383&originWidth=354&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47603&status=done&style=none&taskId=ude9179bb-f66d-41ee-bf16-0d4a500aff3&title=&width=236)
+![image-20210722092051994.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/2dd32be2830d6eee601e7248507a1dab.png)
 ![](assets/image-20210722092051994.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=utKyM&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 - brand：品牌值
@@ -1211,7 +1211,7 @@ public class RequestParams {
 - 其它过滤条件放到filter中，不参与算分
 
 因为条件构建的逻辑比较复杂，这里先封装为一个函数：
-![image-20210722092935453.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880865408-4c2f990e-c5f8-482a-81bc-96105de34994.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f6faf2&clientId=ufbeed8c6-eba3-4&from=paste&height=447&id=uf3f72d4a&originHeight=670&originWidth=1163&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=237252&status=done&style=none&taskId=u13faee8c-576d-4761-b655-1e51f9386db&title=&width=775.3333333333334)
+![image-20210722092935453.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/a699e2869df328c4866f5f509c64e1da.png)
 buildBasicQuery的代码如下：
 ```java
 private void buildBasicQuery(RequestParams params, SearchRequest request) {
@@ -1309,13 +1309,13 @@ POST /hotel182/_search
   }
 }
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680339969416-c71eed22-279f-43a5-a55d-6d897d43e073.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_51%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eef2f6&clientId=ua6061438-0de9-4&from=paste&height=373&id=u5f31f823&originHeight=559&originWidth=1796&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=128813&status=done&style=none&taskId=u7ecce4cb-eaa9-40db-93d0-cd8fbab3935&title=&width=1197.3333333333333)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/de040936a8022f4228633d475f767ed5.png)
 ### 4.3.4.添加算分函数查询
 接下来我们就要修改查询条件了。之前是用的boolean 查询，现在要改成function_socre查询。
 function_score查询结构如下：
-![image-20210721191544750.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678881109769-fa471aee-492e-4d7b-bae0-3da471fbf127.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f5f7f0&clientId=ufbeed8c6-eba3-4&from=paste&height=371&id=u2b10b922&originHeight=556&originWidth=1409&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=132320&status=done&style=none&taskId=u2cac22bb-0e18-4808-a221-0ad3c3e8151&title=&width=939.3333333333334)
+![image-20210721191544750.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/0cd9411977feca00582047183f05bc8f.png)
 ![](assets/image-20210721191544750.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=nNIHM&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![image-20210722102850818.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678881122473-32843825-4b49-4495-bc34-5b013038b587.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f5ef&clientId=ufbeed8c6-eba3-4&from=paste&height=393&id=u654da748&originHeight=590&originWidth=1465&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=138840&status=done&style=none&taskId=ufc38347e-23c9-4864-8f58-f6098484bef&title=&width=976.6666666666666)
+![image-20210722102850818.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/c7a9da03b2671b0dbd5681153b26e380.png)
 我们可以将之前写的boolean查询作为**原始查询**条件放到query中，接下来就是添加**过滤条件**、**算分函数**、**加权模式**了。所以原来的代码依然可以沿用。
 修改`cn.itcast.hotel.service.impl`包下的`HotelService`类中的`buildBasicQuery`方法，添加算分函数查询：
 ```java
@@ -1369,7 +1369,7 @@ private void buildBasicQuery(RequestParams params, SearchRequest request) {
 }
 ```
 运行项目之后，可以发现上面ID被修改过的数据，优先排在前面
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680340116058-bf48e55d-b671-43f8-8088-0ec872592cf9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_50%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23857d69&clientId=ua6061438-0de9-4&from=paste&height=193&id=ub58a885d&originHeight=289&originWidth=1762&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=133265&status=done&style=none&taskId=ue90d7460-4dd8-4626-aaec-8d2ee9f2126&title=&width=1174.6666666666667)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/83dca69c5eccfb3541cca5e5612cfac9.png)
 ### 4.3.5.添加排序
 排序相对比较简单，注意它是跟query同级的，所以我们不放在封装的：buildBasicQuery 中，而是与其保持平级，代码如下：
 ```java
@@ -1378,14 +1378,14 @@ if (StringUtils.isNotBlank(params.getSortBy())
     request.source().sort(params.getSortBy(), SortOrder.DESC);
 }
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680340851977-7d49abcc-cbb7-435c-892e-a722a91fb6cc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_45%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdfaf7&clientId=ua6061438-0de9-4&from=paste&height=339&id=uf44dde81&originHeight=509&originWidth=1585&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=63008&status=done&style=none&taskId=u133fa866-d601-419a-b376-111fb05c28c&title=&width=1056.6666666666667)重启工程后，可以点击测试：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680340905221-13c1dfbc-f24d-4609-805a-fcd6be7a6466.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_43%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f8f5f1&clientId=ua6061438-0de9-4&from=paste&height=533&id=ud5df51d0&originHeight=800&originWidth=1510&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=250352&status=done&style=none&taskId=u6a9d4652-41b9-422a-827e-a94ec09cdcc&title=&width=1006.6666666666666)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/706580480adb79c4869f4e777a877dbc.png)重启工程后，可以点击测试：
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/c4d5f812a524c2bab921c71acc31e011.png)
 ### 4.3.6.添加高亮
 高亮的技术实现与我们单测一模一样，分别是：
 
 - 与query平级的高亮处理（因为高亮不影响数据结果集大小，所以放在哪里都可以）
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680341264805-f21c5b18-eb82-4641-af8e-d9cd5f310c53.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcfaf8&clientId=ua6061438-0de9-4&from=paste&height=491&id=u7c35d6aa&originHeight=737&originWidth=1412&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=92710&status=done&style=none&taskId=udf80eec1-1e00-4417-833b-d43796e83d6&title=&width=941.3333333333334)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/8b28dcfe415593b5b50092ed7a3fd7b1.png)
 ```java
 @Override
 public PageResult search(RequestParams params) {
@@ -1424,7 +1424,7 @@ public PageResult search(RequestParams params) {
 
 - 返回结果处理，重新设置name属性
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680341283892-7a08e199-ad94-417b-9dd4-9fb309538f46.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3e8cd&clientId=ua6061438-0de9-4&from=paste&height=457&id=u87164110&originHeight=686&originWidth=1246&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=99450&status=done&style=none&taskId=u0a8cecad-68ec-43db-865d-1aba71c258c&title=&width=830.6666666666666)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/fcf0889ca06e2666281a23736809ff11.png)
 ```java
 private PageResult handleResponse(SearchResponse searchResponse) {
 
