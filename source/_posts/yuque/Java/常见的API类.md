@@ -3,7 +3,7 @@ title: 常见的API类
 urlname: ggstmhn7xxix66dq
 date: '2024-03-14 11:07:06'
 updated: '2024-05-15 16:02:52'
-cover: ''
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png'
 description: 1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String("abc")和 String st...
 ---
 ![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Fgitee.com%2Flvweixing%2Fpictures%2Fraw%2Fmaster%2F202304242038525.png&sign=dcfa3fedd33276ed2c63bff2109e5a6116a508cbbb979826ec6c761955f09141#from=url&id=RSrB7&originHeight=2612&originWidth=1864&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&title=)
@@ -51,7 +51,7 @@ string中只有一个方法是静态的，不需要new对象
 ### String内存结构
 因此字符串对象设计不可变，那么所以字符串常量池来保存很多常量对象
 字符常量池的位置
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710124597355-538d1d59-25d6-492d-915a-d8ea74aba27f.png#averageHue=%23f7f2eb&clientId=u80adf2f2-205b-4&from=paste&id=CBsT7&originHeight=1220&originWidth=860&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=udca936ce-5c21-401f-a47c-7d30127d3ee&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png)
 内存结构分配
 ![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Fgitee.com%2Flvweixing%2Fpictures%2Fraw%2Fmaster%2F202304242038528.png&sign=6b28a0d9c017e05700ef9ab8c6f4f281b95b15c5e23acbdb09bc6169cbb8bb29#from=url&id=nBWJs&originHeight=672&originWidth=976&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&title=)
 ### 练习类型1：拼接
@@ -62,8 +62,8 @@ System.out.println(s1 == s2);
 // 内存中只有一个"hello"对象被创建，同时被s1和s2共享。
 ```
 对应内存结构为：（以下内存结构以`JDK6为例`绘制）：
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710250515164-738e7983-124f-4320-ada4-3255efb8db85.png#averageHue=%23787979&clientId=u7e15ecdd-4364-4&from=paste&height=408&id=u92f7696c&originHeight=506&originWidth=938&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=44113&status=done&style=none&taskId=u5830dbcb-ad7f-479c-8fb0-0a8d17c3a76&title=&width=756.7058580957666)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710250536098-0505175e-5c9a-4e39-a154-458de6d95f6d.png#averageHue=%2357665e&clientId=u7e15ecdd-4364-4&from=paste&height=411&id=uef206bd1&originHeight=509&originWidth=932&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=48014&status=done&style=none&taskId=u848acff0-6db6-4628-b2d0-551c9003242&title=&width=751.8655221164761)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9b0db9eb57d07e43daab7bd90c0921d9.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/2df0944fdf45ea5f9b1ddf781f7f0f63.png)
 Person p1 = new Person();
 p1.name = “Tom";
 Person p2 = new Person();
@@ -71,11 +71,11 @@ p2.name = “Tom";
 System.out.println(p1.name.equals( p2.name)); //
 System.out.println(p1.name == p2.name); //
 System.out.println(p1.name == "Tom"); //
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710250568246-4118d217-7e9b-417d-a240-63c33004e077.png#averageHue=%23358679&clientId=u7e15ecdd-4364-4&from=paste&height=419&id=u57b17f96&originHeight=520&originWidth=941&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=73338&status=done&style=none&taskId=uc8f1ad81-0012-483a-a796-25cfaf03bcf&title=&width=759.1260260854119)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/dfcff0a8f87b4e08db640f7133f5f83e.png)
 
 ### 练习类型2：new
 String str1 = “abc”; 与 String str2 = new String(“abc”);的区别？
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710250597203-2de6a40f-34d0-4adb-883b-1c176d2bc000.png#averageHue=%2392aecc&clientId=u7e15ecdd-4364-4&from=paste&height=323&id=u601f0ee3&originHeight=400&originWidth=687&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=32033&status=done&style=none&taskId=u9443ca15-5d69-49b5-bf40-d95522cf3ce&title=&width=554.2184696287758)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/b5561f502848038b69ddb319ca45abfa.png)
 str2 首先指向堆中的一个字符串对象，然后堆中字符串的value数组指向常量池中常量对象的value数组。
 > -  字符串常量存储在字符串常量池，目的是共享。 
 > -  字符串非常量对象存储在堆中。 
@@ -91,7 +91,7 @@ System.out.println(s1 == s3);//false
 System.out.println(s1 == s4);//false
 System.out.println(s3 == s4);//false
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710288071984-dd32916f-cf85-49d2-8a54-093285b3c1af.png#averageHue=%2348554c&clientId=u7bc9a499-50e9-4&from=paste&height=386&id=u1fa21b8e&originHeight=479&originWidth=656&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=67843&status=done&style=none&taskId=ubdfa7960-4b47-4f10-a2d1-c47791a77eb&title=&width=529.2100670691076)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/ba5774d577f11b6b73076b1287de45bf.png)
 ### 练习类型：intern()
 String s1 = "a";
 说明：在字符串常量池中创建了一个字面量'a'的字符串
@@ -191,13 +191,13 @@ concat方法拼接，哪怕是两个常量对象拼接，结果也是在堆。
 
 
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1665282522208-08acdcae-980d-4f0b-b17c-bdb1915f703f.png#averageHue=%23ebe9e8&clientId=u94f1379c-8268-4&from=paste&height=454&id=hSVuj&originHeight=563&originWidth=1151&originalType=binary&ratio=1&rotation=0&showTitle=false&size=140091&status=done&style=none&taskId=uad0f605e-f7bc-423d-9b23-8a1f7daccb9&title=&width=928.5377853605836)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1665282551319-8805823e-3a55-4c95-8a82-609158c6ca52.png#averageHue=%23f5f4f3&clientId=u94f1379c-8268-4&from=paste&height=425&id=E9vg9&originHeight=527&originWidth=1154&originalType=binary&ratio=1&rotation=0&showTitle=false&size=420040&status=done&style=none&taskId=uf8a78bd4-6f3e-4838-b073-d0de4cad844&title=&width=930.9579533502289)![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1665282817301-15a9f387-3345-430b-ad2e-b6f5f717f5dc.png#averageHue=%23f7f5f4&clientId=u94f1379c-8268-4&from=paste&height=453&id=LLbPg&originHeight=561&originWidth=1145&originalType=binary&ratio=1&rotation=0&showTitle=false&size=164525&status=done&style=none&taskId=ue7738ba0-752b-4f1e-a7ec-b635026b21e&title=&width=923.697449381293)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1665282961296-51d9f3f3-c3b5-4357-a2e5-f9af7cb60077.png#averageHue=%23f5f4f4&clientId=u94f1379c-8268-4&from=paste&height=448&id=RVu1f&originHeight=555&originWidth=1074&originalType=binary&ratio=1&rotation=0&showTitle=false&size=163398&status=done&style=none&taskId=uce96117f-843d-4ce1-a24d-80fd8b6e668&title=&width=866.4201402930207)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1665283332461-61b48ea2-45da-433e-b7ef-14e1ef52ec9e.png#averageHue=%23f2f2ea&clientId=u94f1379c-8268-4&from=paste&height=174&id=H2ODT&originHeight=216&originWidth=535&originalType=binary&ratio=1&rotation=0&showTitle=false&size=70122&status=done&style=none&taskId=u94f832a9-3412-4235-be64-89b98e6049b&title=&width=431.59662482008014)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/90ea9db9d3a0017645a0119aaaffd00a.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/ff2efb54b60bcff62904528bf7211c88.png)![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/0f348d9e1727fa7b14038807dd101c75.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/d108befbf6dc95121deae1cb88e62e94.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/4e1a78d07e6a1fbb098cd49e1c6f2760.png)
 ### String常用API-1
 #### 构造器
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1665283930555-debe511b-2a46-4ddd-ae37-7634de08578e.png#averageHue=%23efeddd&clientId=u94f1379c-8268-4&from=paste&height=161&id=EKA6Q&originHeight=199&originWidth=614&originalType=binary&ratio=1&rotation=0&showTitle=false&size=102549&status=done&style=none&taskId=ub8e414ac-8888-4a14-815f-963a4c76b99&title=&width=495.3277152140733)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/5a6ddaade8a2abcb4cc0ef6913d49cd6.png)
 
 - `public String()` ：初始化新创建的 String对象，以使其表示空字符序列。
 - `String(String original)`： 初始化一个新创建的 `String` 对象，使其表示一个与参数相同的字符序列；换句话说，新创建的字符串是该参数字符串的副本。
@@ -443,13 +443,13 @@ String s = new String("我喜欢学习");
 StringBuffer buffer = new StringBuffer("我喜欢学习"); 
 buffer.append("数学");
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710299647378-18f84b83-0545-44a6-b987-1c49d2c433a3.png#averageHue=%23f2f2f2&clientId=u7bc9a499-50e9-4&from=paste&height=125&id=ud9e757fc&originHeight=155&originWidth=1149&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=52804&status=done&style=none&taskId=uac105a7b-61dd-4477-ad13-220887f1bf7&title=&width=926.9243400341534)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710299664589-e2bb5915-19e4-449f-b7de-db541a4e2a0e.png#averageHue=%23fefdfc&clientId=u7bc9a499-50e9-4&from=paste&height=419&id=u87b88458&originHeight=520&originWidth=909&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=72882&status=done&style=none&taskId=uc00a4692-3967-435c-a603-beebed00f7a&title=&width=733.3109008625287)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/c0efd176e43dcee837172a4ba2b787a1.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/b4fcb3ddc1d2a50073584aa97fef5840.png)
 
 - 继承结构：
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710299852836-60d798c8-cdd6-4b8a-b347-200b4b8796d1.png#averageHue=%23f9f7f6&clientId=u7bc9a499-50e9-4&from=paste&height=111&id=u87287a84&originHeight=137&originWidth=381&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=31912&status=done&style=none&taskId=u28449008-35ce-44ce-84f3-262b345b200&title=&width=307.3613346849543)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710299860268-de9149a0-d94b-4811-9a7a-4665c8df3791.png#averageHue=%23fcfcfb&clientId=u7bc9a499-50e9-4&from=paste&height=210&id=u95e403fe&originHeight=260&originWidth=788&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=83602&status=done&style=none&taskId=ua1c09a89-7f9b-43b8-b229-fa12085badc&title=&width=635.6974586135012)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/bd156345364801cc021b7413ec514a1d.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/e59f931dec1a0e205b2f2d42ee86fadb.png)
 ![](images/image-20220405174233055.png#id=mN6Ei&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 - StringBuilder 和 StringBuffer 非常类似，均代表可变的字符序列，而且提供相关功能的方法也一样。
@@ -475,7 +475,7 @@ StringBuilder、StringBuffer的API是完全一致的，并且很多方法与Stri
 
 > -  当append和insert时，如果原来value数组长度不够，可扩容。 
 > -  如上(1)(2)(3)(4)(9)这些方法支持`方法链操作`。原理：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321310470-263bf955-2806-40e5-86d0-51eb2834ddbd.png#averageHue=%23f9f7f6&id=qfPiF&originHeight=96&originWidth=457&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/afe105300096deed0f86a5fd0a4f1632.png) 
 
 
 **2、其它API**
@@ -638,7 +638,7 @@ public void test5(){
 - **解析：** 
    - public Date parse(String source)：从给定字符串的开始解析文本，以生成一个日期。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321310578-933a7dda-0f36-40e9-9f54-04fb4b1863e8.png#averageHue=%23eaecf5&id=FDYtT&originHeight=423&originWidth=640&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/a7487547812aa9eba96e5148fa757768.png)
 
 ```java
 //格式化
@@ -662,15 +662,15 @@ public void test2() throws ParseException{
 ```
 ### 3.4 java.util.Calendar(日历)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321310669-379aefb5-ce41-4999-8e4f-a6cf42f30669.png#averageHue=%23dbbe8b&id=yP2hE&originHeight=599&originWidth=754&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/92d05bab3c25c07eda252c5646d7ea8f.png)
 
 -  Date类的API大部分被废弃了，替换为Calendar。 
 -  `Calendar` 类是一个抽象类，主用用于完成日期字段之间相互操作的功能。 
 -  获取Calendar实例的方法 
    -  使用`Calendar.getInstance()`方法
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321310767-ef0de40b-c02b-4bc9-8d9e-ba057bede9f5.png#averageHue=%23ededed&id=Ygmpr&originHeight=174&originWidth=506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/2442143b99cafb1b2068294ef5098efe.png) 
    -  调用它的子类GregorianCalendar（公历）的构造器。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321310872-16e291dd-1087-4ecb-bf33-9b00f7bac88d.png#averageHue=%23c9e6cc&id=zt05w&originHeight=89&originWidth=335&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/b65e2206986f99729ded4e85bb3f614e.png) 
 -  一个Calendar的实例是系统时间的抽象表示，可以修改或获取 YEAR、MONTH、DAY_OF_WEEK、HOUR_OF_DAY 、MINUTE、SECOND等 `日历字段`对应的时间值。 
    - public int get(int field)：返回给定日历字段的值
    - public void set(int field,int value) ：将给定的日历字段设置为指定的值
@@ -678,7 +678,7 @@ public void test2() throws ParseException{
    - public final Date getTime()：将Calendar转成Date对象
    - public final void setTime(Date date)：使用指定的Date对象重置Calendar的时间
 -  常用字段
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321310965-209f90f4-ea6f-493e-91d8-7a8608e6176e.png#averageHue=%23f9f9f9&id=lHOKi&originHeight=339&originWidth=799&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/e05f05276480a96b1b9ea6693a4ebd80.png)
 -  注意： 
    - 获取月份时：一月是0，二月是1，以此类推，12月是11
    - 获取星期时：周日是1，周二是2 ， 。。。。周六是7
@@ -854,7 +854,7 @@ public class TestLocalDateTime {
 > instant.atOffset(ZoneOffset.ofHours(8));
 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321311175-9523fd6a-b1aa-4fd0-bced-788a6b3e1a81.png#averageHue=%23e7e0bd&id=URg26&originHeight=528&originWidth=722&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/39652b36ea13f02557f574e800352d00.png)
 
 > 整个地球分为二十四时区，每个时区都有自己的本地时间。北京时区是东八区，领先UTC八个小时，在电子邮件信头的Date域记为+0800。如果在电子邮件的信头中有这么一行：
 >  
@@ -1121,7 +1121,7 @@ public void test1(){
 
 我们知道基本数据类型的数据（除boolean类型外）需要比较大小的话，之间使用比较运算符即可，但是引用数据类型是不能直接使用比较运算符来比较大小的。那么，如何解决这个问题呢？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321311294-37fe4175-92cd-4c19-ab52-81e08d010a70.png#averageHue=%23d7bc9b&id=YpReU&originHeight=526&originWidth=963&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/51fef26812fabf37eaeedeae1cafbadf.png)
 
 -  在Java中经常会涉及到对象数组的排序问题，那么就涉及到对象之间的比较问题。 
 -  Java实现对象排序的方式有两种： 
@@ -1499,7 +1499,7 @@ System.out.println(Arrays.toString(all));
 该方法的作用是请求系统进行垃圾回收。至于系统是否立刻回收，则取决于系统中垃圾回收算法的实现以及系统执行时的情况。 
    -  `String getProperty(String key)`：
 该方法的作用是获得系统中属性名为key的属性对应的值。系统中常见的属性名以及属性的作用如下表所示：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321311461-97794821-0ad9-4073-85e1-847faaccbe24.png#averageHue=%23f0f0f0&id=M1Exq&originHeight=238&originWidth=604&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/507b6313d8e5cfbb6dbd5d0b07f26e8e.png) 
 -  举例 
 
 ```java

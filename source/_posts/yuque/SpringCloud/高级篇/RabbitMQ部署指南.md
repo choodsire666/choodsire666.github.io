@@ -33,9 +33,9 @@ docker run \
 因为我们之前是基于Docker安装RabbitMQ，所以下面我们会讲解基于Docker来安装RabbitMQ插件。
 ## 2.1.下载插件
 RabbitMQ官方的插件社区地址：[链接](https://www.rabbitmq.com/community-plugins.html)，其中包含各种各样的插件，包括我们使用的DelayExchange插件：
-![image-20210713104511055.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842110515-cc71120a-20bc-4dbf-a107-30a699ab231a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcf9f7&clientId=u18d2dc85-a4cf-4&from=paste&id=ub4e5a005&originHeight=152&originWidth=714&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=18885&status=done&style=none&taskId=uca3282c6-b619-449d-9a55-a0521e653e5&title=)
+![image-20210713104511055.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/ba0e0f64d38d22e6300fad3df8adb775.png)
 读者朋友们可以去对应的GitHub页面下载3.8.9版本的插件，地址为：[插件地址](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/tag/3.8.9)，这个对应RabbitMQ的3.8.5以上版本。这里我也提供了下载好的插件：
-![image-20210713104808909.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842233715-265b8c14-76e4-4ac1-84b0-655cb7189e7e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23faf8f6&clientId=u18d2dc85-a4cf-4&from=paste&id=uad8a2609&originHeight=128&originWidth=528&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=7539&status=done&style=none&taskId=u802f28ac-435d-418c-b26b-871d2dcb02c&title=)
+![image-20210713104808909.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/d70cba208248c5b170779ed19bd0cb34.png)
 ## 2.2.上传插件
 因为我们是基于Docker安装，所以需要先查看RabbitMQ的插件目录对应的数据卷。如果不是基于Docker的读者朋友们，请参考第一章部分，重新创建Docker容器。
 我们之前设定的RabbitMQ的数据卷名称为`mq-plugins`，所以我们使用下面命令查看数据卷：
@@ -43,9 +43,9 @@ RabbitMQ官方的插件社区地址：[链接](https://www.rabbitmq.com/communit
 docker volume inspect mq-plugins
 ```
 可以得到下面结果：
-![image-20210713105135701.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842505756-3f7f4845-378c-4287-baf0-40ded3a5e2a8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_30%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23021e32&clientId=u18d2dc85-a4cf-4&from=paste&height=271&id=ud5213952&originHeight=407&originWidth=1059&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=35198&status=done&style=none&taskId=u7ca9df4e-de6e-4e19-89e8-d3b93da8bee&title=&width=706)
+![image-20210713105135701.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/a64ddab0696e51e001d73e453d9fe479.png)
 接下来，将插件上传到这个目录即可：
-![image-20210713105339785.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842508790-a38eb6a6-de97-4b54-8cd1-55bc497cab0b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_16%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23c2a062&clientId=u18d2dc85-a4cf-4&from=paste&height=107&id=u398f6100&originHeight=161&originWidth=564&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=10508&status=done&style=none&taskId=u9f7c916e-e0fb-4d80-8b73-685f2af100a&title=&width=376)
+![image-20210713105339785.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/398d65d10f7f81fd600d02ff13c6e0f7.png)
 ## 2.3.安装插件
 最后就是安装了，需要进入MQ容器内部来执行安装。我的容器名为`mq`，所以执行下面命令：
 ```shell
@@ -56,7 +56,7 @@ docker exec -it mq bash
 rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 ```
 结果如下：
-![image-20210713105829435.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842535559-753a284b-62b7-4a87-b376-1c953d4e04bb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23042034&clientId=u18d2dc85-a4cf-4&from=paste&height=298&id=uc86ab47c&originHeight=447&originWidth=1144&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=52270&status=done&style=none&taskId=u17409a99-f658-4542-97ce-7b4ab6041c3&title=&width=762.6666666666666)
+![image-20210713105829435.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/9e0e04bade7c0c03e1d492f857eeeee1.png)
 # 3.集群部署
 ## 3.1.集群分类
 在RabbitMQ的官方文档中，讲述了两种集群的配置方式：
@@ -188,23 +188,23 @@ rabbitmq:3.8-management
 ```
 ## 3.5.测试
 在mq1这个节点上添加一个队列：
-![image-20210717222833196.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842687119-12ab70a2-59d8-4b9c-a800-cebf3851794c.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f9f8f8&clientId=u18d2dc85-a4cf-4&from=paste&height=421&id=u45614b36&originHeight=631&originWidth=1201&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=66419&status=done&style=none&taskId=u286b6d5f-9700-4c6f-ae5c-2a2dddfe75d&title=&width=800.6666666666666)
+![image-20210717222833196.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/f68cede2454c387f758e79feb4be8fb5.png)
 如图，在mq2和mq3两个控制台也都能看到：
-![image-20210717223057902.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842696281-e72c02d6-a7f0-4814-856f-2dcd9ddc56ba.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_28%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7f6f6&clientId=u18d2dc85-a4cf-4&from=paste&height=225&id=ubcb02792&originHeight=337&originWidth=967&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26501&status=done&style=none&taskId=uc064c5bb-56b4-4ccb-b958-8dbfa81bdde&title=&width=644.6666666666666)
+![image-20210717223057902.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/7904e8102651376019800265fd7b6eca.png)
 ### 3.5.1.数据共享测试
 点击这个队列，进入管理页面：
-![image-20210717223421750.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842736760-c9d16f0d-4f78-49ec-a6f4-50c127996cf2.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_25%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7f7f6&clientId=u18d2dc85-a4cf-4&from=paste&height=227&id=u8dd155bf&originHeight=341&originWidth=875&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=25097&status=done&style=none&taskId=u3b4bec85-62fd-4b01-96e1-7864d68116d&title=&width=583.3333333333334)
+![image-20210717223421750.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/41531481f6d4fdff94ffb72ca32e769b.png)
 然后利用控制台发送一条消息到这个队列：
-![image-20210717223320238.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842750011-768546d6-fe19-4b20-95c4-858b5d75b227.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23faf9f9&clientId=u18d2dc85-a4cf-4&from=paste&height=361&id=u0a15baaa&originHeight=542&originWidth=956&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=34612&status=done&style=none&taskId=u7b3f7e31-80d8-419e-ad74-c02279aa81a&title=&width=637.3333333333334)
+![image-20210717223320238.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/ed9eeaca66b61a92a0bbd1d51c8fddcf.png)
 结果在mq2、mq3上都能看到这条消息：
-![image-20210717223603628.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842759140-e61ac28f-6b92-428c-a6e2-b231d62320b4.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7f6f5&clientId=u18d2dc85-a4cf-4&from=paste&height=286&id=uf62e6d02&originHeight=429&originWidth=1259&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47358&status=done&style=none&taskId=u1f14b08e-b4e2-4154-8648-d53df0afc41&title=&width=839.3333333333334)
+![image-20210717223603628.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/33479a1f332723d5594bae86e4482b02.png)
 ### 3.5.2.可用性测试
 我们让其中一台节点mq1宕机：
 ```shell
 docker stop mq1
 ```
 然后登录mq2或mq3的控制台，发现simple.queue也不可用了：
-![image-20210717223800203.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678842790064-001f17d3-b98a-4f4f-add2-7ea53c0518d9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7f6f5&clientId=u18d2dc85-a4cf-4&from=paste&height=297&id=u711740a9&originHeight=445&originWidth=1269&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=48234&status=done&style=none&taskId=ua152ddfc-02ec-45ea-b773-bb9b4d6c9d4&title=&width=846)
+![image-20210717223800203.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/54d544c75d8fe749cba795b2804eb847.png)
 说明数据并没有拷贝到mq2、mq3。显然在生产环境下是不可以的，那么如何更好的做集群设计和优化呢？
 # 4.镜像模式
 在刚刚的案例中，一旦创建队列的主机宕机，队列就会不可用。不具备高可用能力。如果要解决这个问题，必须使用官方提供的镜像集群方案。官方文档地址：[https://www.rabbitmq.com/ha.html](https://www.rabbitmq.com/ha.html)
@@ -264,33 +264,33 @@ rabbitmqctl set_policy ha-nodes "^nodes\." '{"ha-mode":"nodes","ha-params":["rab
 docker exec -it mq1 rabbitmqctl set_policy ha-two "^two\." '{"ha-mode":"exactly","ha-params":2,"ha-sync-mode":"automatic"}'
 ```
 下面，我们创建一个新的队列：
-![image-20210717231751411.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843021876-35114424-8ff4-4827-97a1-cc252248356d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f9f8f8&clientId=u18d2dc85-a4cf-4&from=paste&height=295&id=u31c4247d&originHeight=443&originWidth=1203&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=63165&status=done&style=none&taskId=ub2d53d80-10ce-4add-829c-52df3504a45&title=&width=802)
+![image-20210717231751411.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/8f5c9c9c473f064a20bc17320e1d4563.png)
 在任意一个mq控制台查看队列：
 ![](assets/image-20210717231829505.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=DEkMF&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ### 4.3.1.测试数据共享
 注意：下面的发消息，需要点击图示：+1 ，查看对应的从节点是哪个再去操作，这里我的是mq2
-![mq2.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843055611-4c7fe5a6-3250-40b9-8d97-f781b841d365.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_29%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f5f5f4&clientId=u18d2dc85-a4cf-4&from=paste&height=159&id=u7b51b892&originHeight=239&originWidth=1032&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=22409&status=done&style=none&taskId=u6895e397-3e3f-4ce0-b45a-824abefb549&title=&width=688)
+![mq2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/7dbcec9769c5c4794598bd34d1dd1de2.png)
 给two.queue发送一条消息：
-![image-20210717231958996.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843065505-e3b656b7-681b-4181-ada6-d06f8b399654.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_29%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f8f7f7&clientId=u18d2dc85-a4cf-4&from=paste&height=382&id=u8888ed48&originHeight=573&originWidth=1028&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=42680&status=done&style=none&taskId=ucb9fd798-191f-443f-b995-f0d9749ba19&title=&width=685.3333333333334)
+![image-20210717231958996.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/9e23debe53dcb477f8b4bfbaf99e78c2.png)
 然后在mq1、mq2、mq3的任意控制台查看消息：
-![image-20210717232108584.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843076466-48d98e8d-0571-445b-ab08-d61851c0edbe.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_25%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f8f7f6&clientId=u18d2dc85-a4cf-4&from=paste&height=428&id=u8e883c87&originHeight=642&originWidth=869&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=49751&status=done&style=none&taskId=ubd8ee70f-1959-4250-be1d-c5bd1802feb&title=&width=579.3333333333334)
+![image-20210717232108584.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/f34fbb74cc2863052da2bc393afce2a7.png)
 ### 4.3.2.测试高可用
 现在，我们让two.queue的主节点mq1宕机：
 ```shell
 docker stop mq1
 ```
 查看集群状态：
-![image-20210717232257420.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843098553-27ff3c86-bfaa-4fd7-b97a-1359b5b27d41.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eedcdb&clientId=u18d2dc85-a4cf-4&from=paste&height=163&id=u68630f06&originHeight=244&originWidth=1356&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=40377&status=done&style=none&taskId=u1ad9daf9-40e2-4427-af1f-b93791f6c67&title=&width=904)
+![image-20210717232257420.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/1b7c0f0bd2b44da48b411bb5c1666999.png)
 查看队列状态：
-![image-20210717232322646.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843106000-72458bbd-ab33-4325-83b4-0c18c1d33d95.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_38%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f6f4f3&clientId=u18d2dc85-a4cf-4&from=paste&height=265&id=u6a579261&originHeight=398&originWidth=1316&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=52180&status=done&style=none&taskId=u19091ab9-1a19-457c-9cbe-c52f2152cc8&title=&width=877.3333333333334)
+![image-20210717232322646.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/2a79674fc1ee3adac681977fc2fdc6f8.png)
 发现依然是健康的！并且其主节点切换到了rabbit@mq2上
 # 5.仲裁队列
 从RabbitMQ 3.8版本开始，引入了新的仲裁队列，他具备与镜像队里类似的功能，但使用更加方便。
 ## 5.1.添加仲裁队列
 在任意控制台添加一个队列，一定要选择队列类型为Quorum类型。
-![image-20210717234329640.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843133575-74531394-d52d-46f4-871a-c6811f05905a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f9f8f8&clientId=u18d2dc85-a4cf-4&from=paste&height=268&id=uf29454f7&originHeight=402&originWidth=1267&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=50092&status=done&style=none&taskId=u42743292-1921-46e6-b0f1-dfe6c42bd7b&title=&width=844.6666666666666)
+![image-20210717234329640.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/4625cefc5f28a5a2eeef0f161c76d8fa.png)
 在任意控制台查看队列：
-![image-20210717234426209.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843141781-108ffa23-85cf-4eca-9b5f-798b242852a9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f3f3&clientId=u18d2dc85-a4cf-4&from=paste&height=209&id=u71e7ad2c&originHeight=314&originWidth=1247&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=40454&status=done&style=none&taskId=u3df249ae-4544-4ad0-b797-a0815ba4102&title=&width=831.3333333333334)
+![image-20210717234426209.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/53e8b882c9d6b557f55e0345c7461b8d.png)
 可以看到，仲裁队列的 + 2字样。代表这个队列有2个镜像节点。因为仲裁队列默认的镜像数为5。如果你的集群有7个节点，那么镜像数肯定是5；而我们集群只有3个节点，因此镜像数量就是3.
 ## 5.2.测试
 可以参考对镜像集群的测试，效果是一样的。
@@ -328,7 +328,7 @@ rabbitmqctl join_cluster rabbit@mq1
 ```shell
 rabbitmqctl start_app
 ```
-![image-20210718001909492.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843188415-75673df7-e64d-44a3-a5d5-190c2ce58927.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_45%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23e4e3e2&clientId=u18d2dc85-a4cf-4&from=paste&height=203&id=u44924bcc&originHeight=305&originWidth=1579&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=74345&status=done&style=none&taskId=u4ddc2d1e-fc45-4a7c-b341-a1d29ee7009&title=&width=1052.6666666666667)
+![image-20210718001909492.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/835d00c3e2059fb3a921b7a53589caca.png)
 ### 5.3.2.增加仲裁队列副本
 我们先查看下quorum.queue这个队列目前的副本情况，进入mq1容器：
 ```shell
@@ -339,17 +339,17 @@ docker exec -it mq1 bash
 rabbitmq-queues quorum_status "quorum.queue"
 ```
 结果：
-![image-20210718002118357.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843201490-2f70c886-810b-49f2-b5f3-bbdf0f48bd26.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23042034&clientId=u18d2dc85-a4cf-4&from=paste&height=165&id=u6808b572&originHeight=247&originWidth=1158&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=19565&status=done&style=none&taskId=u66491d0c-e8a5-459b-b7b6-4d009c8ffbc&title=&width=772)
+![image-20210718002118357.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/bc2d43232b644efb01b504d86206a4fa.png)
 现在，我们让mq4也加入进来：
 ```shell
 rabbitmq-queues add_member "quorum.queue" "rabbit@mq4"
 ```
 结果：
-![image-20210718002253226.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843218873-2622ef35-9845-434c-9286-34ffb88dd318.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_24%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23072438&clientId=u18d2dc85-a4cf-4&from=paste&height=57&id=ucfe7ca98&originHeight=85&originWidth=833&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=9659&status=done&style=none&taskId=ua4f49a1a-b2a8-46c6-8b5a-f200b048b9f&title=&width=555.3333333333334)
+![image-20210718002253226.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/b6e7e95bdf40d7bec5439f22e37edbbc.png)
 再次查看：
 ```shell
 rabbitmq-queues quorum_status "quorum.queue"
 ```
-![image-20210718002342603.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843224058-b6b4ab94-44e7-4b48-a7ba-abd7d38fb8ff.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23042034&clientId=u18d2dc85-a4cf-4&from=paste&height=198&id=ua813d22a&originHeight=297&originWidth=1159&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=23316&status=done&style=none&taskId=u3a197e39-2b8f-4968-9892-0b8900f8ac1&title=&width=772.6666666666666)
+![image-20210718002342603.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/2bcddc3238c83d1dbbec219c5fde62ae.png)
 查看控制台，发现quorum.queue的镜像数量也从原来的 +2 变成了 +3：
-![image-20210718002422365.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843234549-e1ef6695-8072-459d-a698-fc24f24bf7a1.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_29%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3f3f2&clientId=u18d2dc85-a4cf-4&from=paste&height=214&id=u6eb1e1a3&originHeight=321&originWidth=1034&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=38402&status=done&style=none&taskId=u2eff5071-952d-4f85-824d-e47d16e8780&title=&width=689.3333333333334)
+![image-20210718002422365.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/5b602f1e878ceb15e456d393f5589365.png)

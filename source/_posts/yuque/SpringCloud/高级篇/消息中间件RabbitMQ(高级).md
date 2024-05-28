@@ -14,7 +14,7 @@ cover: ''
 ![](assets/image-20210718155003157.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=AQRaI&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 # 1.消息可靠性
 消息从发送，到消费者接收，会经历多个过程：
-![image-20210718155059371.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843695623-451c8084-2df8-463a-bea0-d58c4ccb632a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_42%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdf7f6&clientId=ueaed6f46-3a45-4&from=paste&height=282&id=u96a327f5&originHeight=423&originWidth=1459&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=53529&status=done&style=none&taskId=u8db96a6f-657c-4d47-a1d0-c5668d16f35&title=&width=972.6666666666666)
+![image-20210718155059371.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/23f9a553aba7c564c2d07762f6a08769.png)
 其中的每一步都可能导致消息丢失，常见的丢失原因包括：
 
 - 发送时丢失： 
@@ -43,7 +43,7 @@ RabbitMQ提供了publisher confirm机制来避免消息发送到MQ过程中丢�
 - publisher-return，发送者回执 
    - 消息投递到交换机了，但是没有路由到队列。返回ACK，及路由失败原因。
 
-![image-20210718160907166.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843768302-4e0b2dc4-bffa-49a7-8bf1-377081679bbb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbf6f6&clientId=ueaed6f46-3a45-4&from=paste&height=187&id=ue55d304b&originHeight=281&originWidth=1390&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=54565&status=done&style=none&taskId=uc8755c9f-efda-4cfa-88bb-3686f161d0f&title=&width=926.6666666666666)
+![image-20210718160907166.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/7471a1c42311f04914965d340d82991f.png)
 注意：
 ![](assets/image-20210718161707992.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=D4ge5&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ### 1.1.1.修改配置
@@ -148,7 +148,7 @@ public Queue simpleQueue(){
 }
 ```
 事实上，默认情况下，由SpringAMQP声明的队列都是持久化的。可以在RabbitMQ控制台看到持久化的队列都会带上`D`的标示：
-![image-20210718164729543.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843853388-56bf1bf2-7438-4cf9-87ab-1981f5412f79.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f5f4f3&clientId=ueaed6f46-3a45-4&from=paste&height=141&id=u2a983104&originHeight=211&originWidth=1261&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=26332&status=done&style=none&taskId=u727aa0eb-9354-408a-acf9-36e65f04d67&title=&width=840.6666666666666)
+![image-20210718164729543.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/5e3cb45a2d3ab221481ac7ff4e1f143e.png)
 ### 1.2.3.消息持久化
 利用SpringAMQP发送消息时，可以设置消息的属性（MessageProperties），指定delivery-mode：
 
@@ -156,7 +156,7 @@ public Queue simpleQueue(){
 - 2：持久化
 
 用java代码指定：
-![image-20210718165100016.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843877830-956220b7-7050-4d33-b92e-9583b56275cd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_35%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f5faf1&clientId=ueaed6f46-3a45-4&from=paste&height=330&id=u3d0be838&originHeight=495&originWidth=1236&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=157364&status=done&style=none&taskId=u2d146e5b-a5f5-41d5-8ec1-499a60c498f&title=&width=824)
+![image-20210718165100016.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/4585ec5eae40ba74a11985eb1097f5e2.png)
 默认情况下，SpringAMQP发出的任何消息都是持久化的，不用特意指定。
 ## 1.3.消费者消息确认
 RabbitMQ是**阅后即焚**机制，RabbitMQ确认消息被消费者消费后会立刻删除。而RabbitMQ是通过消费者回执来确认消费者是否成功处理消息的：消费者获取消息后，应该向RabbitMQ发送ACK回执，表明自己已经处理消息。
@@ -210,7 +210,7 @@ spring:
 在异常位置打断点，再次发送消息，程序卡在断点时，可以发现此时消息状态为unack（未确定状态）：
 ![](assets/image-20210718171705383.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=gVbLr&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 抛出异常后，因为Spring会自动返回nack，所以消息恢复至Ready状态，并且没有被RabbitMQ删除：
-![image-20210718171759179.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678843948728-2dc593a6-aacf-4181-944c-ccea691cb3f2.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f3f3&clientId=ueaed6f46-3a45-4&from=paste&height=139&id=u474ce684&originHeight=209&originWidth=1249&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=27622&status=done&style=none&taskId=u10b65931-9205-4b6f-bc03-9d646635422&title=&width=832.6666666666666)
+![image-20210718171759179.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/11b52b4910fa71f4c8e09561a9f9dcc3.png)
 ## 1.4.消费失败重试机制
 当消费者出现异常后，消息会不断requeue（重入队）到队列，再重新发送给消费者，然后再次异常，再次requeue，无限循环，导致mq的消息处理飙升，带来不必要的压力：
 ![](assets/image-20210718172746378.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=H2Twt&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
@@ -321,22 +321,22 @@ public class ErrorMessageConfig {
 
 如果这个包含死信的队列配置了`dead-letter-exchange`属性，指定了一个交换机，那么队列中的死信就会投递到这个交换机中，而这个交换机称为**死信交换机**（Dead Letter Exchange，检查DLX）。
 如图，一个消息被消费者拒绝了，变成了死信：
-![image-20210718174328383.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844040594-3d82fe3c-618b-4df9-bdf2-8fae854f0bf8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcf7f7&clientId=ueaed6f46-3a45-4&from=paste&height=236&id=u8e64baf4&originHeight=354&originWidth=1426&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=56018&status=done&style=none&taskId=u0bb16e82-ea0c-4792-ad69-14edbfc9623&title=&width=950.6666666666666)
+![image-20210718174328383.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/3e9b8e67772fb7bdd5585c5b6887ad33.png)
 因为simple.queue绑定了死信交换机 dl.direct，因此死信会投递给这个交换机：
-![image-20210718174416160.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844048423-adb18623-f07f-44a7-a506-47b9089002d0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcf7f7&clientId=ueaed6f46-3a45-4&from=paste&height=237&id=u64a6d90a&originHeight=356&originWidth=1409&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47683&status=done&style=none&taskId=u4cd9cb71-d4ad-4d0d-bfb6-b1bca50a61e&title=&width=939.3333333333334)
+![image-20210718174416160.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/2a057827730c214fb5b755eb9dff4594.png)
 如果这个死信交换机也绑定了一个队列，则消息最终会进入这个存放死信的队列：
-![image-20210718174506856.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844062126-208902f2-ca58-4ebd-a764-628a9fc4d54f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbf3f3&clientId=ueaed6f46-3a45-4&from=paste&height=242&id=udf5190bc&originHeight=363&originWidth=1437&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=62710&status=done&style=none&taskId=ubb5e7fe7-4b7d-4f9a-aca7-0d320d9c97a&title=&width=958)
+![image-20210718174506856.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/c598cce791190ff19d58d5c7720bae31.png)
 另外，队列将死信投递给死信交换机时，必须知道两个信息：
 
 - 死信交换机名称
 - 死信交换机与死信队列绑定的RoutingKey
 
 这样才能确保投递的消息能到达死信交换机，并且正确的路由到死信队列。
-![image-20210821073801398.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844350907-99988d4a-1d5a-475f-b815-fca617a58534.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23faf2f2&clientId=ueaed6f46-3a45-4&from=paste&height=230&id=uba0cbaf4&originHeight=345&originWidth=1354&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=65947&status=done&style=none&taskId=ub5cc4154-9c0c-487e-848e-51655e64abf&title=&width=902.6666666666666)
+![image-20210821073801398.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/d51ab7bfd969c134aa40f07ff45e1023.png)
 ### 2.1.2.利用死信交换机接收死信（拓展）
 在失败重试策略中，默认的RejectAndDontRequeueRecoverer会在本地重试次数耗尽后，发送reject给RabbitMQ，消息变成死信，被丢弃。
 我们可以给simple.queue添加一个死信交换机，给死信交换机绑定一个队列。这样消息变成死信后也不会丢弃，而是最终投递到死信交换机，路由到与死信交换机绑定的队列。
-![image-20210718174506856.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844361643-c6964823-28e4-484d-89ec-c1f9c91e0f00.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbf3f3&clientId=ueaed6f46-3a45-4&from=paste&height=242&id=ubc51d9d3&originHeight=363&originWidth=1437&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=62710&status=done&style=none&taskId=u81eff239-ab5b-4259-b412-2244e209fe8&title=&width=958)
+![image-20210718174506856.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/f63a8602dfe6bdb7718ff245e70c76a8.png)
 我们在consumer服务中，定义一组死信交换机、死信队列：
 ```java
 // 声明普通的 simple.queue队列，并且为其指定死信交换机：dl.direct
@@ -379,7 +379,7 @@ public Binding dlBinding(){
 - 消息所在的队列设置了超时时间
 - 消息本身设置了超时时间
 
-![image-20210718182643311.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844428650-8337a671-89d6-4acb-8a27-640d12489646.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcf5f5&clientId=ueaed6f46-3a45-4&from=paste&height=291&id=u6b46fd1b&originHeight=437&originWidth=1406&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=72924&status=done&style=none&taskId=u6083764c-2807-42fd-8c8e-0710eae4203&title=&width=937.3333333333334)
+![image-20210718182643311.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/e222060c2fb92e3a77b1b71cc4761a62.png)
 **注意：接下来的操作，一定要确保原来没有下述队列、交换机，如有请先删除干净**
 ### 2.2.1.接收超时死信的死信交换机
 在consumer服务的SpringRabbitListener中，定义一个新的消费者，并且声明 死信交换机、死信队列：
@@ -431,7 +431,7 @@ public void testTTLQueue() {
 }
 ```
 发送消息的日志：
-![image-20210718191657478.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844444774-139a1356-bf7d-4a28-add2-48369efa4c2b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f6fbf3&clientId=ueaed6f46-3a45-4&from=paste&height=125&id=ud245569c&originHeight=188&originWidth=1356&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=93131&status=done&style=none&taskId=ub4cf3c83-3dae-47b5-9349-25ad1186331&title=&width=904)
+![image-20210718191657478.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/85db0c8cd510b2394bccc68963d6aee3.png)
 查看下接收消息的日志：
 ![](assets/image-20210718191738706.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=nMMjc&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 因为队列的TTL值是10000ms，也就是10秒。可以看到消息发送与接收之间的时差刚好是10秒。
@@ -453,9 +453,9 @@ public void testTTLMsg() {
 }
 ```
 查看发送消息日志：
-![image-20210718191939140.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844470752-1c80740a-2010-4fd7-b653-51baaa6d5302.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_35%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7fbf3&clientId=ueaed6f46-3a45-4&from=paste&height=103&id=u798193cc&originHeight=155&originWidth=1211&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=72151&status=done&style=none&taskId=u4d1a41b7-e3fa-4209-9a3e-46c661823e1&title=&width=807.3333333333334)
+![image-20210718191939140.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/f1eaf94b636df249366a776970b31c71.png)
 接收消息日志：
-![image-20210718192004662.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844473338-610c173d-0b58-4f00-8c13-6918c12562ed.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7fbf4&clientId=ueaed6f46-3a45-4&from=paste&height=56&id=ud8d6a93f&originHeight=84&originWidth=1188&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=41542&status=done&style=none&taskId=u116916e4-dcdb-4d94-9aef-d19dd101a82&title=&width=792)
+![image-20210718192004662.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/cf68963c369a2bf8afe3a78863b0674b.png)
 这次，发送与接收的延迟只有5秒。说明当队列、消息都设置了TTL时，任意一个到期就会成为死信。
 ### 2.2.4.总结
 消息超时的两种方式是？
@@ -496,14 +496,14 @@ DelayExchange需要将一个交换机声明为delayed类型。当我们发送消
 ![](assets/image-20210718193831076.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=d3m66&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 #### 2）发送消息
 发送消息时，一定要携带x-delay属性，指定延迟的时间：
-![image-20210718193917009.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844586368-042cc81e-d7c0-436e-9531-5cc8ca114a7a.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f9f2&clientId=ueaed6f46-3a45-4&from=paste&height=243&id=uee822b6f&originHeight=364&originWidth=1135&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=204893&status=done&style=none&taskId=u546affec-1d9d-4fed-a6a4-dada1609a78&title=&width=756.6666666666666)
+![image-20210718193917009.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/d6fa40a1d6f3e9cb1979d764a6f396be.png)
 ### 2.3.4.总结
 延迟队列插件的使用步骤包括哪些？
 •声明一个交换机，添加delayed属性为true
 •发送消息时，添加x-delay头，值为超时时间
 # 3.惰性队列
 ## 3.1.消息堆积问题
-当生产者发送消息的速度超过了消费者处理消息的速度，就会导致队列中的消息堆积，直到队列存储消息达到上限。之后发送的消息就会成为死信，可能会被丢弃，这就是消息堆积问题。![image-20210718194040498.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844607306-d37cbb51-d86b-4636-b056-a2960708f11e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_35%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23faf3f2&clientId=ueaed6f46-3a45-4&from=paste&height=366&id=u0ce1b7ec&originHeight=549&originWidth=1226&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=57297&status=done&style=none&taskId=u56a3d3ad-167c-4590-9f4e-565c1e677c4&title=&width=817.3333333333334)
+当生产者发送消息的速度超过了消费者处理消息的速度，就会导致队列中的消息堆积，直到队列存储消息达到上限。之后发送的消息就会成为死信，可能会被丢弃，这就是消息堆积问题。![image-20210718194040498.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/85a43700e939e12f9d47236f2fe4b960.png)
 解决消息堆积有两种思路：
 
 - 增加更多消费者，提高消费速度。也就是我们之前说的work queue模式
@@ -530,9 +530,9 @@ rabbitmqctl set_policy Lazy "^lazy-queue$" '{"queue-mode":"lazy"}' --apply-to qu
 - `'{"queue-mode":"lazy"}'` ：设置队列模式为lazy模式
 - `--apply-to queues`：策略的作用对象，是所有的队列
 ### 3.2.2.基于@Bean声明lazy-queue
-![image-20210718194522223.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844638981-5eb1f270-ad61-49bf-885a-baaa4eec02a0.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_14%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f9f2&clientId=ueaed6f46-3a45-4&from=paste&id=u5293825f&originHeight=201&originWidth=499&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=43615&status=done&style=none&taskId=uc07086b9-698c-4e89-987c-3bc6d42084b&title=)
+![image-20210718194522223.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/cf573e79d95933eae0af634e8a3f3cbb.png)
 ### 3.2.3.基于@RabbitListener声明LazyQueue
-![image-20210718194539054.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844644621-55f9b723-cfc3-49b8-90fb-6bdd5367c0bf.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_21%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3f8ee&clientId=ueaed6f46-3a45-4&from=paste&id=u5c917b40&originHeight=225&originWidth=734&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=104149&status=done&style=none&taskId=uab18187b-d3cb-4db7-a96d-7582b401b3f&title=)
+![image-20210718194539054.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/a83807b76143db6c1d9c86759fdb04aa.png)
 ### 3.3.总结
 消息堆积问题的解决方案？
 
@@ -563,7 +563,7 @@ RabbitMQ的是基于Erlang语言编写，而Erlang又是一个面向并发的语
 - 队列所在节点宕机，队列中的消息就会丢失
 
 结构如图：
-![image-20210718220843323.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844677224-b30e6bdd-87b2-4325-ac6d-135a5fe307af.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_25%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fbd9c0&clientId=ueaed6f46-3a45-4&from=paste&height=321&id=uc7c183a3&originHeight=481&originWidth=881&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=44761&status=done&style=none&taskId=u1d1aaec0-a354-46af-a0fa-fd48fa3af7d&title=&width=587.3333333333334)
+![image-20210718220843323.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/169753085eecb0869c0f73606d421cda.png)
 ### 4.2.2.部署
 参考课前资料：[RabbitMQ部署指南](https://www.yuque.com/xiankanpengyouquandisitiaodongtai/diods0/lyrxkg2gpbxkf15n?view=doc_embed&inner=b8b37eb5)
 ## 4.3.镜像集群
@@ -577,7 +577,7 @@ RabbitMQ的是基于Erlang语言编写，而Erlang又是一个面向并发的语
 - 主宕机后，镜像节点会替代成新的主
 
 结构如图：
-![image-20210718221039542.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678844706400-477fc930-e72a-4d20-8774-d68a713b98dd.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_15%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3b78f&clientId=ueaed6f46-3a45-4&from=drop&id=u0b91e915&originHeight=482&originWidth=514&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=31212&status=done&style=none&taskId=u400fa6d0-1c99-4e92-8aa5-0f68d1959f1&title=)
+![image-20210718221039542.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/7e5a9e6aedc84ed4d57093288e0048fb.png)
 ### 4.3.2.部署
 参考课前资料：[RabbitMQ部署指南](https://www.yuque.com/xiankanpengyouquandisitiaodongtai/diods0/lyrxkg2gpbxkf15n?view=doc_embed&inner=b8b37eb5)
 ## 4.4.仲裁队列
