@@ -6,8 +6,9 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "sync:bili": "hexo bangumi -u",
-    "sync:post": "elog sync -e .elog.env",
+    "sync:post": "elog sync",
     "sync:algolia": "hexo algolia",
+    "sync:local": "elog sync -e .elog.env",
     "publish": "npm run clean && npm run deploy",
     "server": "hexo server"
   },
