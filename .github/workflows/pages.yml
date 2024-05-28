@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main  # default branch
+    # 允许外部仓库事件触发
+  repository_dispatch:
+    types:
+			# api中的event_type就是这个
+      - deploy
 
 jobs:
   build:
@@ -28,7 +33,9 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: npm install && npm install hexo
+        run: |
+          export TZ='Asia/Shanghai'
+          npm install --prod
       # 拉取b站信息
       - name: get bilibili
         run: hexo bangumis -u
