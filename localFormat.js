@@ -1,5 +1,5 @@
 // 0.12.0及以上版本用法
-const { matterMarkdownAdapter, request, out } = require('@elog/cli')
+const { matterMarkdownAdapter, out } = require('@elog/cli')
 
 /**
  * 自定义文档插件
@@ -8,32 +8,13 @@ const { matterMarkdownAdapter, request, out } = require('@elog/cli')
  * @return {Promise<DocDetail>} 返回处理后的文档对象
  */
 const format = async (doc, imageClient) => {
+  out.info("封面图片替换")
   const cover = doc.properties.cover
-  out.info(doc.properties.title + "的封面准备替换")
   // 将 cover 字段中的 notion 图片下载到本地
   if (imageClient)  {
     // 只有启用图床平台image.enable=true时，imageClient才能用，否则请自行实现图片上传
-    let url = ''
-    if (cover) {      
-      url = await imageClient.uploadImageFromUrl(cover, doc)
-      if (!url) {
-        let res = await request('https://www.dmoe.cc/random.php?return=json')
-        if (res.code === 200) {
-          url = res.imgurl
-        } else {
-          url = ''
-        }
-      }
-    } else {
-      let res = await request('https://www.dmoe.cc/random.php?return=json')
-      if (res.code === 200) {
-        url = res.imgurl
-      } else {
-        url = ''
-      }
-    }
+    const url = await imageClient.uploadImageFromUrl(cover, doc)
     // cover链接替换为本地图片
-    out.info(doc.properties.title + "的封面被替换为: " + url)
     doc.properties.cover = url
   }
   doc.body = matterMarkdownAdapter(doc);
