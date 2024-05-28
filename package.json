@@ -5,8 +5,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "clean:yuque": "yuque-hexo clean",
-    "sync": "yuque-hexo sync",
+    "sync:bili": "hexo bangumis -u",
     "publish": "npm run clean && npm run deploy",
     "server": "hexo server"
   },

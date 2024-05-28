@@ -37,7 +37,7 @@ jobs:
           npm install --prod
       # 拉取b站信息
       - name: get bilibili
-        run: hexo bangumis -u
+        run: npm run sync:bili
       # 拉取语雀信息
       # - name: get yuque post
       # 生成Algolia搜索indexs
