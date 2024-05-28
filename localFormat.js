@@ -13,8 +13,16 @@ const format = async (doc, imageClient) => {
   if (imageClient)  {
     // 只有启用图床平台image.enable=true时，imageClient才能用，否则请自行实现图片上传
     let url = ''
-    if (cover) {
+    if (cover) {      
       url = await imageClient.uploadImageFromUrl(cover, doc)
+      if (!url) {
+        let res = await request('https://www.dmoe.cc/random.php?return=json')
+        if (res.code === 200) {
+          url = res.imgurl
+        } else {
+          url = ''
+        }
+      }
     } else {
       let res = await request('https://www.dmoe.cc/random.php?return=json')
       if (res.code === 200) {
