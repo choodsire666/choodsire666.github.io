@@ -40,10 +40,10 @@ jobs:
         env:
           # 语雀相关环境变量          
           # 语雀（帐号密码方式）
-          YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
-          YUQUE_PASSWORD: ${{ secrets.YUQUE_PASSWORD }}          
-          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
-          YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
+          YUQUE_USERNAME: 15364618485
+          YUQUE_PASSWORD: lovefromthen1314        
+          YUQUE_LOGIN: huifeideqie-loh6o
+          YUQUE_REPO: pv8kfm
           # 图床相关环境变量，github
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ELOG_GITHUB_USER: ${{ secrets.ELOG_GITHUB_USER }}
