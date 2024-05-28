@@ -38,7 +38,7 @@ commit;
 ```
 ### 1.2 大批量插入数据
 如果一次性需要插入大批量数据(比如: 几百万的记录)，使用insert语句插入性能较低，此时可以使用MySQL数据库提供的`load`指令进行插入。操作如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/066467e55125ffaea5b3c6cbde317892.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/066467e55125ffaea5b3c6cbde317892.png)
 可以执行如下指令，将数据脚本文件中的数据加载到表结构中：
 ```sql
 -- 客户端连接服务端时，加上参数 -–local-infile 
@@ -81,7 +81,7 @@ C. load加载数据
 ```plsql
 load data local infile '/root/load_user_100w_sort.sql' into table tb_user fields terminated by ',' lines terminated by '\n' ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3cc4e2a1fe6b2cca34b45a2fcc638c4a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/3cc4e2a1fe6b2cca34b45a2fcc638c4a.png)
 我们看到，插入100w的记录，17s就完成了，性能很好。
 > 在load时，主键顺序插入性能高于乱序插入
 
@@ -90,49 +90,49 @@ load data local infile '/root/load_user_100w_sort.sql' into table tb_user fields
 在上一小节，我们提到，主键顺序插入的性能是要高于乱序插入的。 这一小节，就来介绍一下具体的原因，然后再分析一下主键又该如何设计。
 ### 2.1 数据组织方式
 在InnoDB存储引擎中，表数据都是根据主键顺序组织存放的，这种存储方式的表称为索引组织表(index organized table IOT)。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/afd21c8451505d76a4065685b2d28c05.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/afd21c8451505d76a4065685b2d28c05.png)
 行数据，都是存储在聚集索引的叶子节点上的。而我们之前也讲解过InnoDB的逻辑结构图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e022543475e72f769f0352a07c8936ca.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/e022543475e72f769f0352a07c8936ca.png)
 在InnoDB引擎中，数据行是记录在逻辑结构 page 页中的，而每一个页的大小是固定的，默认16K。那也就意味着， 一个页中所存储的行也是有限的，如果插入的数据行row在该页存储不小，将会存储到下一个页中，页与页之间会通过指针连接。
 
 ### 2.2 页分裂
 页可以为空，也可以填充一半，也可以填充100%。每个页包含了2-N行数据(如果一行数据过大，会行溢出)，根据主键排列。
 1）主键顺序插入效果
 ①. 从磁盘中申请页， 主键顺序插入
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/677e93e0ecd92b37ee6baeffa1f28a53.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/677e93e0ecd92b37ee6baeffa1f28a53.png)
 ②. 第一个页没有满，继续往第一页插入
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/398fdc4003e515b72717741e3df59f12.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/398fdc4003e515b72717741e3df59f12.png)
 ③. 当第一个也写满之后，再写入第二个页，页与页之间会通过指针连接
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6bceffd975805a6a58389a3d3c7be68.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/e6bceffd975805a6a58389a3d3c7be68.png)
 ④. 当第二页写满了，再往第三页写入
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/61dd5336a376ae417590cad0aa2d840c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/61dd5336a376ae417590cad0aa2d840c.png)
 
 2）主键乱序插入效果
 ①. 加入1#,2#页都已经写满了，存放了如图所示的数据
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055015946-4df01022-2914-4a9f-9f99-87ced3dc57dc.png#averageHue=%23b8eba2&clientId=ube2fb6bf-1489-4&errorMessage=unknown%20error&id=yp7vB&originHeight=197&originWidth=1218&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u97684242-0c68-40c1-8d6d-e213205cfda&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/807eec1354818be9306577c50d9df4e7.png)
 ②. 此时再插入id为50的记录，我们来看看会发生什么现象，会再次开启一个页，写入新的页中吗？
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a4f79bd7ade90f5f55342ac27f52566e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/a4f79bd7ade90f5f55342ac27f52566e.png)
 不会。因为，索引结构的叶子节点是有顺序的。按照顺序，应该存储在47之后。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6e352a63508c8797be90d8e44ea6c3f9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/6e352a63508c8797be90d8e44ea6c3f9.png)
 但是47所在的1#页，已经写满了，存储不了50对应的数据了。 那么此时会开辟一个新的页 3#。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b13987af059a5df019c8ba6f488b1a81.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/b13987af059a5df019c8ba6f488b1a81.png)
 但是并不会直接将50存入3#页，而是会将1#页后一半的数据，移动到3#页，然后在3#页，插入50。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0a4398321bfdc2926476412943b39a98.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/0a4398321bfdc2926476412943b39a98.png)
 移动数据，并插入id为50的数据之后，那么此时，这三个页之间的数据顺序是有问题的。 1#的下一个页，应该是3#， 3#的下一个页是2#。 所以，此时，需要重新设置链表指针。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d0832975310aea5da4e4903833165b98.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/d0832975310aea5da4e4903833165b98.png)
 上述的这种现象，称之为 "页分裂"，是比较耗费性能的操作。
 ### 2.3 页合并
 目前表中已有数据的索引结构(叶子节点)如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8505a142b22733d1897d619741c05fb5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/8505a142b22733d1897d619741c05fb5.png)
 当我们对已有数据进行删除时，具体的效果如下:
 当删除一行记录时，实际上记录并没有被物理删除，只是记录被标记（flaged）为删除并且它的空间变得允许被其他记录声明使用。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/af3afb40145d84355fedaa91241372b1.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/af3afb40145d84355fedaa91241372b1.png)
 当我们继续删除2#的数据记录
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0f674fa7f7bd1f8e9bbf5b048ef59d97.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/0f674fa7f7bd1f8e9bbf5b048ef59d97.png)
 当页中删除的记录达到 MERGE_THRESHOLD（默认为页的50%），InnoDB会开始寻找最靠近的页（前或后）看看是否可以将两个页合并以优化空间使用。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/45a491fd42211a673377b537a58e2d56.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/45a491fd42211a673377b537a58e2d56.png)
 删除数据，并将页合并之后，再次插入新的数据21，则直接插入3#页
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d9a3e9ab5f0360291c934c3dbe4aab50.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/d9a3e9ab5f0360291c934c3dbe4aab50.png)
 这个里面所发生的合并页的这个现象，就称之为 "页合并"。
 > 知识小贴士：MERGE_THRESHOLD：合并页的阈值，可以自己设置，在创建表或者创建索引时指定。
 
@@ -144,8 +144,8 @@ load data local infile '/root/load_user_100w_sort.sql' into table tb_user fields
 - 尽量不要使用UUID做主键或者是其他自然主键，如身份证号。
 - 业务操作时，避免对主键的修改。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2f4319eec14f29db626628edeca2f682.png)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/119aa256c32b61d207ac98337928699e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/2f4319eec14f29db626628edeca2f682.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/119aa256c32b61d207ac98337928699e.png)
 
 ## 3 order by优化
 MySQL的排序，有两种方式：
@@ -162,16 +162,16 @@ drop index idx_user_phone on tb_user;
 drop index idx_user_phone_name on tb_user; 
 drop index idx_user_name on tb_user;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0894b55fae4b9e7c5d3bf47b6cbc8594.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/0894b55fae4b9e7c5d3bf47b6cbc8594.png)
 B. 执行排序SQL
 ```plsql
 explain select id,age,phone from tb_user order by age ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/81010c12b684c36326232bcf1134dac6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/81010c12b684c36326232bcf1134dac6.png)
 ```plsql
 explain select id,age,phone from tb_user order by age, phone ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bbe69d41ae3c58e0017f3bb5a7fcf735.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/bbe69d41ae3c58e0017f3bb5a7fcf735.png)
 由于 age, phone 都没有索引，所以此时再排序时，出现Using filesort， 排序性能较低。
 
 C. 创建索引
@@ -184,51 +184,51 @@ D. 创建索引后，根据age, phone进行升序排序
 ```plsql
 explain select id,age,phone from tb_user order by age;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/85a52c374a924d93a5d6ee0bf232c72b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/85a52c374a924d93a5d6ee0bf232c72b.png)
 
 ```plsql
 explain select id,age,phone from tb_user order by age , phone;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1db6dfc4188a3b1946770cab3a56036e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/1db6dfc4188a3b1946770cab3a56036e.png)
 建立索引之后，再次进行排序查询，就由原来的Using filesort， 变为了 Using index，性能就是比较高的了。
 
 E. 创建索引后，根据age, phone进行降序排序
 ```plsql
 explain select id,age,phone from tb_user order by age desc , phone desc ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03db35b00aa5e7d633b0344f92f2301a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/03db35b00aa5e7d633b0344f92f2301a.png)
 也出现 Using index， 但是此时Extra中出现了 Backward index scan，这个代表反向扫描索引，因为在MySQL中我们创建的索引，默认索引的叶子节点是从小到大排序的，而此时我们查询排序时，是从大到小，所以，在扫描时，就是反向扫描，就会出现 Backward index scan。 在MySQL8版本中，支持降序索引，我们也可以创建降序索引。
 
 F. 根据phone，age进行升序排序，phone在前，age在后。
 ```plsql
 explain select id,age,phone from tb_user order by phone , age;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0b2aa693f16e2c63f6f6ce05d838b1df.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/0b2aa693f16e2c63f6f6ce05d838b1df.png)
 排序时,也需要满足最左前缀法则,否则也会出现 filesort。因为在创建索引的时候， age是第一个字段，phone是第二个字段，所以排序时，也就该按照这个顺序来，否则就会出现 Using filesort。
 
 G. 根据age, phone进行降序一个升序，一个降序
 ```plsql
 explain select id,age,phone from tb_user order by age asc , phone desc ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/807c569d7a6da1ec1af2e359db9f81bf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/807c569d7a6da1ec1af2e359db9f81bf.png)
 因为创建索引时，如果未指定顺序，默认都是按照升序排序的，而查询时，一个升序，一个降序，此时就会出现Using filesort。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b190d3205ebdc8eb50570c58bb8167d7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/b190d3205ebdc8eb50570c58bb8167d7.png)
 为了解决上述的问题，我们可以创建一个索引，这个联合索引中 age 升序排序，phone 倒序排序。
 
 H. 创建联合索引(age 升序排序，phone 倒序排序)
 ```plsql
 create index idx_user_age_phone_ad on tb_user(age asc ,phone desc);
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c4ffebabfe4210df1b6f3681fb10a8e6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/c4ffebabfe4210df1b6f3681fb10a8e6.png)
 
 J. 然后再次执行如下SQL
 ```plsql
 explain select id,age,phone from tb_user order by age asc , phone desc ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d7aed5e85c60e3e63e32d7dcda48f1c5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/d7aed5e85c60e3e63e32d7dcda48f1c5.png)
 升序/降序联合索引结构图示:
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e2a5564927c500f15ab6872b867204ec.png)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a2a9f59665dcb60f8260bcfbb86e0f4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/e2a5564927c500f15ab6872b867204ec.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/1a2a9f59665dcb60f8260bcfbb86e0f4.png)
 由上述的测试,我们得出order by优化原则:
 
 - A. 根据排序字段建立合适的索引，多字段排序时，也遵循最左前缀法则。
@@ -243,12 +243,12 @@ drop index idx_email_5 on tb_user;
 drop index idx_user_age_phone_aa on tb_user; 
 drop index idx_user_age_phone_ad on tb_user;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/eb9e405d7c213a41c7aff0a7337de8fe.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/eb9e405d7c213a41c7aff0a7337de8fe.png)
 接下来，在没有索引的情况下，执行如下SQL，查询执行计划：
 ```plsql
 explain select profession , count(*) from tb_user group by profession ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20f8c98fbb21fee54949143ddf453378.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/20f8c98fbb21fee54949143ddf453378.png)
 然后，我们在针对于 profession ， age， status 创建一个联合索引。
 ```plsql
 create index idx_user_pro_age_sta on tb_user(profession , age , status);
@@ -258,9 +258,9 @@ create index idx_user_pro_age_sta on tb_user(profession , age , status);
 ```plsql
 explain select profession , count(*) from tb_user group by profession ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cd02ef46adc50119964d445b15c09add.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/cd02ef46adc50119964d445b15c09add.png)
 再执行如下的分组查询SQL，查看执行计划：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d562890547d13f9bf3854335b6be5ab8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/d562890547d13f9bf3854335b6be5ab8.png)
 我们发现，如果仅仅根据age分组，就会出现 Using temporary ；而如果是 根据profession,age两个字段同时分组，则不会出现 Using temporary。原因是因为对于分组操作，在联合索引中，也是符合最左前缀法则的。
 
 所以，在分组操作中，我们需要通过以下两点进行优化，以提升性能：
@@ -270,7 +270,7 @@ explain select profession , count(*) from tb_user group by profession ;
 ## 5 limit优化
 在数据量比较大时，如果进行limit分页查询，在查询时，越往后，分页查询效率越低。
 我们一起来看看执行limit分页查询耗时对比：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9c07e2fa015cc2dc70e3a054043490ad.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/9c07e2fa015cc2dc70e3a054043490ad.png)
 通过测试我们会看到，越往后，分页查询效率越低，这就是分页查询的问题所在。
 
 因为，当在进行分页查询时，如果执行 limit 2000000,10 ，此时需要MySQL排序前2000010 记录，仅仅返回 2000000 - 2000010 的记录，其他记录丢弃，查询排序的代价非常大 。

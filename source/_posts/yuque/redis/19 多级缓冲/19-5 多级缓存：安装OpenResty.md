@@ -41,7 +41,7 @@ yum install -y openresty-opm
 
 ## **1.5 目录结构**
 默认情况下，OpenResty安装的目录是：/usr/local/openresty
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a7123040b940cd6d1bfc594ee22009fc.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-5 多级缓存：安装OpenResty/a7123040b940cd6d1bfc594ee22009fc.png)
 看到里面的nginx目录了吗，OpenResty就是在Nginx基础上集成了一些Lua模块。
 ## **1.6 配置nginx的环境变量**
 
@@ -64,7 +64,7 @@ source /etc/profile
 
 # 2 启动和运行
 OpenResty底层是基于Nginx的，查看OpenResty目录的nginx目录，结构与windows中安装的nginx基本一致：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cbc67a1a31b16c2f7ef4ff3428f9fabb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-5 多级缓存：安装OpenResty/cbc67a1a31b16c2f7ef4ff3428f9fabb.png)
 所以运行方式与nginx基本一致：
 ```shell
 # 启动nginx

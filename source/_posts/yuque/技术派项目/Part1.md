@@ -69,7 +69,7 @@ description: 功能整理1 前言创作来源于自己项目设计能力太弱�
 - web：这个模块是开辟HTTP接口的模块，接受客户端的请求，然后处理逻辑。
 
 下面抽象模型：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0b9f381d9070c65bb051fe33331c3410.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Part1/0b9f381d9070c65bb051fe33331c3410.png)
 **除了业务的增删改查（Create Retrieve Update Delete，下面简称CRUD）**，下面为每个模块具体探讨。
 ### 2 用户模块
 #### 2.1 注册登录
@@ -731,7 +731,7 @@ private boolean doAdmin(...) {...}
 #### 4 Spring Security的设计
 感觉整体的设计很模糊，这里提一下Spring Security的设计。
 下面是Spring Security的设计图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d5e214dff29ac4796546973469ae6988.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Part1/d5e214dff29ac4796546973469ae6988.png)
 
 - **用户安全信息管理**：关于安全的内容由SecurityContextHolder类来保存，内部由ThreadLocal实现，包括用户的角色、权限、账号和密码等。
 - **安全检验入口**：由一个Filter（Servlet的Filter类，为图片中的DelegatingFilterProxy）执行信息处理，这是一个执行链的入口，用于开启执行一系列的链式安全检验。进入某个SecurityFilter后，如果不满足具体的执行前提，会交给下一个SecurityFilter进行处理。

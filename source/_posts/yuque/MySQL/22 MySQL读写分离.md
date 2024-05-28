@@ -10,11 +10,11 @@ description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从
 # 1 介绍
 读写分离,简单地说是把对数据库的读和写操作分开,以对应不同的数据库服务器。主数据库提供写操作，从数据库提供读操作，这样能有效地减轻单台数据库的压力。
 通过MyCat即可轻易实现上述功能，不仅可以支持MySQL，也可以支持Oracle和SQL Server。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c1a928c8d11408436988cb9a6265d6cf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/c1a928c8d11408436988cb9a6265d6cf.png)
 # 2 一主一从
 ## 2.1 原理
 MySQL的主从复制，是基于二进制日志（binlog）实现的。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c15df4094702c20bd31632ce8149a730.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/c15df4094702c20bd31632ce8149a730.png)
 准备
 
 | 主机 | 角色 | 用户名 | 密码 |
@@ -50,7 +50,7 @@ MyCat控制后台数据库的读写分离和负载均衡由schema.xml文件datah
 ```
 
 上述配置的具体关联对应情况如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/32163b2f5b9b6a870cad6a031b1b339f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/32163b2f5b9b6a870cad6a031b1b339f.png)
 writeHost代表的是写操作对应的数据库，readHost代表的是读操作对应的数据库。 所以我们要想实现读写分离，就得配置writeHost关联的是主库，readHost关联的是从库。
 而仅仅配置好了writeHost以及readHost还不能完成读写分离，还需要配置一个非常重要的负责均衡的参数 balance，取值有4种，具体含义如下：
 
@@ -88,13 +88,13 @@ bin/mycat start
 ```
 然后观察，在执行增删改操作时，对应的主库及从库的数据变化。 在执行查询操作时，检查主库及从库对应的数据变化。
 在测试中，我们可以发现当主节点Master宕机之后，业务系统就只能够读，而不能写入数据了。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/627c611d17f813bc3b746496e6338320.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/627c611d17f813bc3b746496e6338320.png)
 那如何解决这个问题呢？这个时候我们就得通过另外一种主从复制结构来解决了，也就是我们接下来讲解的双主双从。
 
 # 4 双主双从
 ## 4.1 介绍
 一个主机 Master1 用于处理所有写请求，它的从机 Slave1 和另一台主机 Master2 还有它的从机 Slave2 负责所有读请求。当 Master1 主机宕机后，Master2 主机负责写请求，Master1 、Master2 互为备机。架构图如下:
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0cb8d2956c88f77f858e680598a92d1e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/0cb8d2956c88f77f858e680598a92d1e.png)
 ## 4.2 准备
 我们需要准备5台服务器，具体的服务器及软件安装情况如下：
 
@@ -115,7 +115,7 @@ systemctl disable firewalld
 ### 4.3.1 主库配置
 
 **Master1(192.168.200.211)**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0b10bb9ca4f2f27466168933658330a9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/0b10bb9ca4f2f27466168933658330a9.png)
 A. 修改配置文件 /etc/my.cnf
 ```properties
 #mysql 服务ID，保证整个集群环境中唯一，取值范围：1 – 2^32-1，默认为1 
@@ -146,10 +146,10 @@ GRANT REPLICATION SLAVE ON *.* TO 'itcast'@'%';
 
 通过指令，查看两台主库的二进制日志坐标
 show master status ;
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ffb239fd581da95d29951e8884149e03.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/ffb239fd581da95d29951e8884149e03.png)
 
 **Master2(192.168.200.213)**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a0069d8674eb58fa4218527da58c95a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/1a0069d8674eb58fa4218527da58c95a.png)
 A. 修改配置文件 /etc/my.cnf
 ```properties
 #mysql 服务ID，保证整个集群环境中唯一，取值范围：1 – 2^32-1，默认为1 
@@ -182,7 +182,7 @@ GRANT REPLICATION SLAVE ON *.* TO 'itcast'@'%';
 ```plsql
 show master status ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6fc983c212f0b5e2fc61eac08f3de404.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/6fc983c212f0b5e2fc61eac08f3de404.png)
 
 ### 4.3.2 从库配置
 uploading-image-256106.png
@@ -198,7 +198,7 @@ systemctl restart mysqld
 ```
 
 **Slave2(192.168.200.214)**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e874bfda5adb6646a7099f90524dcb73.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/e874bfda5adb6646a7099f90524dcb73.png)
 A. 修改配置文件 /etc/my.cnf
 ```properties
 #mysql 服务ID，保证整个集群环境中唯一，取值范围：1 – 232-1，默认为1 
@@ -212,7 +212,7 @@ systemctl restart mysqld
 
 ### 4.3.3 从库关联主库
 1). 两台从库配置关联的主库
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a51505a0862460ab76b1e236715ef452.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/a51505a0862460ab76b1e236715ef452.png)
 > 需要注意slave1对应的是master1，slave2对应的是master2。
 
 A. 在 slave1(192.168.200.212)上执行
@@ -231,9 +231,9 @@ start slave;
 show slave status \G;
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3d15b876a046a893d5f8798eff29887c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/3d15b876a046a893d5f8798eff29887c.png)
 2). 两台主库相互复制
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2494d27a5e9f62147e81ae28a6f0e391.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/2494d27a5e9f62147e81ae28a6f0e391.png)
 ```
 Master2 复制 Master1，Master1 复制 Master2。
 ```
@@ -318,7 +318,7 @@ MyCat控制后台数据库的读写分离和负载均衡由schema.xml文件datah
 ```
 
 具体的对应情况如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c40477e3db32c2c72342ee24c33d5add.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22 MySQL读写分离/c40477e3db32c2c72342ee24c33d5add.png)
 属性说明：
 `balance="1"` 
 

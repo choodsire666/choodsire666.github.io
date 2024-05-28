@@ -1047,10 +1047,10 @@ echo management_agent.disable_metrics_collector = false > management_agent.disab
 # 这时候就配置好了
 rabbitmqctl cluster_status
 ```
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5b674f4589203984b830fc84f82aac6c.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Rabbitmq/5b674f4589203984b830fc84f82aac6c.png)
 
 在这里添加一下镜像队列Policy(虽然不知道为什么过时了)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/170431c91d27431933b01cf085a67a10.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Rabbitmq/170431c91d27431933b01cf085a67a10.png)
 
 ### 配置HAproxy+Keepalived实现高可用
 

@@ -57,7 +57,7 @@ HTML 标签可以拥有属性
 
 ### 结构
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/779cae66bae2f8948232b78f2c564f40.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/779cae66bae2f8948232b78f2c564f40.png)
 
 文档结构介绍：
 
@@ -253,7 +253,7 @@ HTML 标签可以拥有属性
 
 **效果如下**：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/566553d90a6165f430745f34ea05f386.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/566553d90a6165f430745f34ea05f386.png)
 
 ---
 
@@ -323,7 +323,7 @@ target属性取值:
 
 效果图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6ddd71e361b76f30c8ea41bc8d481aa.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/e6ddd71e361b76f30c8ea41bc8d481aa.png)
 
 ---
 
@@ -432,7 +432,7 @@ button标签：表示按钮
 
 使用方式：以name属性值作为键，value属性值作为值，构成键值对提交到服务器，多个键值对浏览器使用`&`进行分隔。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/57bd99b47898791bdfd8fb153575cca9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/57bd99b47898791bdfd8fb153575cca9.png)
 
 ##### type属性
 | 属性值 | 作用 | 备注 |
@@ -527,7 +527,7 @@ button标签：表示按钮
 </html>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c7e342803c2f30ab59682a024f83414e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/c7e342803c2f30ab59682a024f83414e.png)
 
 ---
 
@@ -577,7 +577,7 @@ button标签：表示按钮
 </body>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ec3bd161cbe0a6c50b18d8b8e72f89af.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/ec3bd161cbe0a6c50b18d8b8e72f89af.png)
 
 ---
 
@@ -606,7 +606,7 @@ button标签：表示按钮
 - tr：table row，表示表中单元的行
 - td：table data，表示表中一个单元格
 - th：table header，表格单元格的表头，通常字体样式加粗居中
-- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c6531117ac8624de87523767345ffb64.png)
+- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/c6531117ac8624de87523767345ffb64.png)
 
 代码展示：
 
@@ -680,7 +680,7 @@ button标签：表示按钮
 
 效果图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/93bb18e9e37ff35ae13053f978a8da35.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/93bb18e9e37ff35ae13053f978a8da35.png)
 
 ---
 
@@ -748,7 +748,7 @@ body {
 </html>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5ca4ccb092aa2a9a36d6b43b38a21850.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/5ca4ccb092aa2a9a36d6b43b38a21850.png) 
 
 -  背景重复
 [`background-repeat`]属性用于控制图像的平铺行为。可用值： 
@@ -762,7 +762,7 @@ body {
   background-repeat: repeat-x;/*水平重复*/
 }
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fa6bdfedeadd05d1cd84b72e6074ba82.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/fa6bdfedeadd05d1cd84b72e6074ba82.png)
 
 ---
 
@@ -781,7 +781,7 @@ body {
 <div >center</div>
 <div>right</div>
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/95e3c0d4c198c055944387c86180fe05.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/95e3c0d4c198c055944387c86180fe05.png)
 
 -  class值
 可以设置宽度，浮动，背景 
@@ -881,7 +881,7 @@ clear：both；清除两侧浮动，此元素不再收浮动元素布局影响�
 </html>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8d89b3692752b9db10d4c9e1b34fbf2e.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/8d89b3692752b9db10d4c9e1b34fbf2e.png) 
 
 ---
 
@@ -897,7 +897,7 @@ clear：both；清除两侧浮动，此元素不再收浮动元素布局影响�
 | **footer** | 页脚元素 | 表示页面的底部 | 块元素，文档中可以定义多个 |
 
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0ffaf7cf1e68fca9748f709e575e6b90.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/0ffaf7cf1e68fca9748f709e575e6b90.jpg)
 
 ---
 
@@ -960,7 +960,7 @@ clear：both；清除两侧浮动，此元素不再收浮动元素布局影响�
 </html>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2c96806e5f4497076df1f81b5e9c680a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/2c96806e5f4497076df1f81b5e9c680a.png)
 
 ---
 
@@ -1021,7 +1021,7 @@ CSS是一门基于规则的语言—你能定义用于你的网页中**特定元
 }
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a5fcb40cd4be28b70ce51e13c7146ce3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/a5fcb40cd4be28b70ce51e13c7146ce3.png)
 
 ---
 
@@ -1424,7 +1424,7 @@ div {
 </body>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/09ef256c75cfc53c7389a676ca0526e2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/09ef256c75cfc53c7389a676ca0526e2.png)
 
 ---
 
@@ -1452,7 +1452,7 @@ div {
 </html>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1b7f8e36d0b57c240accd1189b945edb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/1b7f8e36d0b57c240accd1189b945edb.png)
 
 ---
 
@@ -1462,7 +1462,7 @@ div {
 
 盒子模型是通过设置**元素框**与**元素内容**和**外部元素**的边距，而进行布局的方式。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e786f6721208e5d48d9561366ddc0713.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/e786f6721208e5d48d9561366ddc0713.png)
 
 - element : 元素。
 - padding : 内边距，也有资料将其翻译为填充。
@@ -1553,7 +1553,7 @@ padding-left
 </div
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/aa1a5e04ad0b4206540445d95d06f200.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/aa1a5e04ad0b4206540445d95d06f200.png) 
 
 -  增加内边距会增加元素框的总尺寸 
 ```css
@@ -1573,7 +1573,7 @@ padding-left
 </style>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a5573c3c2d1a13802b78d67611b60e04.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/a5573c3c2d1a13802b78d67611b60e04.png) 
 
 ---
 
@@ -1637,7 +1637,7 @@ span{
 <span>微信</span>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/38bbff1d6a00183e5ddfa7c7b1c00eea.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/38bbff1d6a00183e5ddfa7c7b1c00eea.png)
 
 ---
 
@@ -1910,7 +1910,7 @@ HTTP 和 HTTPS 的区别：
 
 HTTPS 工作流程：服务器端的公钥和私钥，用来进行非对称加密，客户端生成的随机密钥，用来进行对称加密
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/76873b559a918318cc1f249989b26077.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/76873b559a918318cc1f249989b26077.png)
 
 1. 客户端向服务器发起 HTTPS 请求，连接到服务器的 443 端口，请求携带了浏览器支持的加密算法和哈希算法，协商加密算法
 2. 服务器端会向数字证书认证机构注册公开密钥，认证机构**用 CA 私钥**对公开密钥做数字签名后绑定在数字证书（又叫公钥证书，内容有公钥，网站地址，证书颁发机构，失效日期等）
@@ -1938,7 +1938,7 @@ HTTPS 工作流程：服务器端的公钥和私钥，用来进行非对称加�
 -  请求方式 
    - POST
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/106ca6c8e9e9d197bd9802605f5b96de.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/106ca6c8e9e9d197bd9802605f5b96de.png)
 
    -  GET 
 ```html
@@ -2033,14 +2033,14 @@ Content-Disposition: form-data; name="password"
 
 响应部分图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3d17978d028f3cd0db06766f510b6dd8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/3d17978d028f3cd0db06766f510b6dd8.png)
 
 -  响应行
 HTTP/1.1：使用协议的版本
 200：响应状态码
 OK：状态码描述 
    -  响应状态码：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/df6262693d8990e4f96a98ea0f223be9.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/df6262693d8990e4f96a98ea0f223be9.png) 
 | 状态码 | 说明 |
 | --- | --- |
 | 200 | 一切都 OK，与服务器连接成功，发送请求成功 |
@@ -2134,8 +2134,8 @@ Web，在计算机领域指网络。像我们接触的 `WWW`，它是由 3 个�
 部署方式划分：一体化架构，垂直拆分架构，分布式架构，流动计算架构，微服务架构。
 
 -  C/S结构：客户端—服务器的方式。其中C代表Client，S代表服务器。C/S结构的系统设计图如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b1c321853514cc110d3fff97506a63ad.jpg) 
--  B/S结构是浏览器—服务器的方式。B代表Browser，S代表服务器。B/S结构的系统设计图如下： ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/51ede853e5b535aa08cdd26c508faddd.jpg) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/b1c321853514cc110d3fff97506a63ad.jpg) 
+-  B/S结构是浏览器—服务器的方式。B代表Browser，S代表服务器。B/S结构的系统设计图如下： ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/51ede853e5b535aa08cdd26c508faddd.jpg) 
 -  两种结构的区别及优劣 
    -  区别： 
       - 第一：硬件环境不同，C/S通常是建立在专用的网络或小范围的网络环境上（即局域网），且必须要安装客户端。而B/S是建立在广域网上的，适应范围强，通常有操作系统和浏览器就行。
@@ -2174,7 +2174,7 @@ Web，在计算机领域指网络。像我们接触的 `WWW`，它是由 3 个�
 
 目录结构详解：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/4f593f3a9d7ddb9b7dc41493ce204208.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/4f593f3a9d7ddb9b7dc41493ce204208.png)
 
 ---
 
@@ -2212,7 +2212,7 @@ Tomcat服务器的停止文件也在二进制文件目录bin中：shutdown.bat�
 -  Address already in use : JVM_Bind：端口被占用，找到占用该端口的应用 
    -  进程不重要：使用cmd命令：netstat -a -o 查看 pid  在任务管理器中结束占用端口的进程 
    -  进程很重要：修改自己的端口号。修改的是 Tomcat 目录下`\conf\server.xml`中的配置。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/72553914725e95ce24f5da346a566bf6.xml端口配置) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/72553914725e95ce24f5da346a566bf6.xml端口配置) 
 
 ---
 
@@ -2220,7 +2220,7 @@ Tomcat服务器的停止文件也在二进制文件目录bin中：shutdown.bat�
 
 Run -> Edit Configurations -> Templates -> Tomcat Server -> Local
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22dc1b3087e2ab93e9e0cd88165ea0d0.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/22dc1b3087e2ab93e9e0cd88165ea0d0.png)
 
 ---
 
@@ -2255,9 +2255,9 @@ Run -> Edit Configurations -> Templates -> Tomcat Server -> Local
 #### IDEA部署
 
 -  新建工程
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17cf80252662a0db55b86757a6cfb69b.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/17cf80252662a0db55b86757a6cfb69b.png) 
 -  发布工程
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9da096df165370818139b07ce8d50a67.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/9da096df165370818139b07ce8d50a67.png) 
 -  Run 
 
 ---
@@ -2283,7 +2283,7 @@ Run -> Edit Configurations -> Templates -> Tomcat Server -> Local
 
 Tomcat 核心组件架构图如下所示：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3718ce5e9b88f0cbc221fa71d8866d60.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/3718ce5e9b88f0cbc221fa71d8866d60.png)
 
 组件介绍：
 
@@ -2402,7 +2402,7 @@ Socket 是使用 TCP/IP 或者 UDP 协议在服务器与客户端之间进行传
 - **HTTP 协议：是在 TCP/IP 协议之上进一步封装的一层协议，关注数据传输的格式是否规范，底层的数据传输还是运用了 Socket 和 TCP/IP**
 
 Tomcat 和 Servlet 的关系：Servlet 的运行环境叫做 Web 容器或 Servlet 服务器，**Tomcat 是 Web 应用服务器，是一个 Servlet/JSP 容器**。Tomcat 作为 Servlet 容器，负责处理客户请求，把请求传送给 Servlet，并将 Servlet 的响应传送回给客户。而 Servlet 是一种运行在支持 Java 语言的服务器上的组件，Servlet 用来扩展 Java Web 服务器功能，提供非常安全的、可移植的、易于使用的 CGI 替代品
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7595a6e7bda326bcbabe1cbe2a1a4fc9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/7595a6e7bda326bcbabe1cbe2a1a4fc9.png)
 
 ---
 
@@ -2416,7 +2416,7 @@ Servlet是SUN公司提供的一套规范，名称就叫Servlet规范，它也是
 2.  通过实现Servlet接口，继承GenericServlet或者HttpServlet，实现Servlet功能 
 3.  每次请求都会执行service方法，在service方法中还有参数ServletRequest和ServletResponse 
 4.  支持配置相关功能
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe4e6b1ff7bc56a219f0ec9473c398ce.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/fe4e6b1ff7bc56a219f0ec9473c398ce.png) 
 
 ---
 
@@ -2424,13 +2424,13 @@ Servlet是SUN公司提供的一套规范，名称就叫Servlet规范，它也是
 
 创建 Web 工程 → 编写普通类继承 Servlet 相关类 → 重写方法
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f3a57e01dfd1c862df772ccfb665b31c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/f3a57e01dfd1c862df772ccfb665b31c.png)
 
 Servlet执行过程分析：
 
 通过浏览器发送请求，请求首先到达Tomcat服务器，由服务器解析请求URL，然后在部署的应用列表中找到应用。然后找到web.xml配置文件，在web.xml中找到FirstServlet的配置（/），找到后执行service方法，最后由FirstServlet响应客户浏览器。整个过程如下图所示：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b30dfed16c49fe1422faf68bb2579d33.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/b30dfed16c49fe1422faf68bb2579d33.jpg)
 
 ---
 
@@ -2452,7 +2452,7 @@ Servlet执行过程分析：
 
 Servlet 3.0 中的异步处理指的是允许Servlet重新发起一条新线程去调用 耗时业务方法，这样就可以避免等待
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/996e1a108ded22a558960c3fb2e7635c.0的异步处理)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/996e1a108ded22a558960c3fb2e7635c.0的异步处理)
 
 ---
 
@@ -2759,7 +2759,7 @@ public class ServletDemo8 extends HttpServlet {
  
 
 -  效果：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f326f5fb4d8a66dbfbd055af043102a3.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/f326f5fb4d8a66dbfbd055af043102a3.png) 
 
 ---
 
@@ -2781,7 +2781,7 @@ Servlet 规范中，共有4个域对象，ServletContext 是其中一个，web �
 
 数据共享：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/41dd24b2d9bf0c045b191a44d6c7737c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/41dd24b2d9bf0c045b191a44d6c7737c.png)
 
 获取ServletContext：
 
@@ -2948,7 +2948,7 @@ public @interface WebServlet {
 
 Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6d49c257279608ae3c91359c55c4bc22.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/6d49c257279608ae3c91359c55c4bc22.png)
 
 ---
 
@@ -2964,7 +2964,7 @@ Request 作用：
 - 请求转发
 - 作为域对象存数据
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c77653e5c5fd2908f2b1cac960ceb760.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/c77653e5c5fd2908f2b1cac960ceb760.png)
 
 ---
 
@@ -3374,7 +3374,7 @@ Response 的作用：
 
 - 请求重定向
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/030e7ba9b29049fe76c771ec4fc03577.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/030e7ba9b29049fe76c771ec4fc03577.png)
 
 ---
 
@@ -3548,7 +3548,7 @@ public class ServletDemo04 extends HttpServlet {
 }
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b583d5d837629256b91efcdba4cb1fe4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/b583d5d837629256b91efcdba4cb1fe4.png)
 
 ---
 
@@ -3703,7 +3703,7 @@ public class ServletDemo08 extends HttpServlet {
 3. 请求转发可以和请求域对象共享数据，数据不会丢失
 4. 请求转发浏览器地址栏不变
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7e71620021619756c032200512d3b637.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/7e71620021619756c032200512d3b637.jpg)
 
 ---
 
@@ -3780,7 +3780,7 @@ Cookie：客户端会话管理技术，把要共享的数据保存到了客户�
 
 作用：保存客户浏览器访问网站的相关内容（需要客户端不禁用 Cookie），从而在每次访问同一个内容时，先从本地缓存获取，使资源共享，提高效率。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/87a78eb05a66711291357cdac9ac4049.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/87a78eb05a66711291357cdac9ac4049.png)
 
 ---
 
@@ -3929,7 +3929,7 @@ HttpServletRequest类获取Session：
 | HttpSession getSession(boolean creat) | 获取HttpSession对象，未获取到是否自动创建 |
 
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dd196167e651b41ef7f429ae464ac8b9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/dd196167e651b41ef7f429ae464ac8b9.png)
 
 ---
 
@@ -4120,11 +4120,11 @@ JSP部署在服务器上，可以处理客户端发送的请求，并根据请�
 
 -  执行过程：
 客户端提交请求——Tomcat服务器解析请求地址——找到JSP页面——Tomcat将JSP页面翻译成Servlet的java文件——将翻译好的.java文件编译成.class文件——返回到客户浏览器上
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/baa2f98f6219508dde54478a250b4f09.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/baa2f98f6219508dde54478a250b4f09.png) 
 -  溯源，打开JSP翻译后的Java文件
 `public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase`，`public abstract class HttpJspBase extends HttpServlet implements HttpJspPage`，HttpJspBase是个抽象类继承HttpServlet，所以JSP本质上继承HttpServlet
 在文件中找到了输出页面的代码，本质都是用out.write()输出的JSP语句
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6d6ef90300d629cdf31c703dd566518a.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/6d6ef90300d629cdf31c703dd566518a.png) 
 -  总结：
 JSP它是一个特殊的Servlet，主要是用于展示动态数据。它展示的方式是用流把数据输出出来，而我们在使用JSP时，涉及HTML的部分，都与HTML的用法一致，这部分称为jsp中的模板元素，决定了页面的外观。 
 
@@ -4301,7 +4301,7 @@ jsp中的隐式对象也并不是未声明，它是在翻译成.java文件时声
    - PageContextd对象**可以获取其他八个隐式对象**
    - PageContextd对象是一个局部变量，它的生命周期随着JSP的创建而诞生，随着JSP的结束而消失。每个JSP页面都有一个独立的PageContext
 -  PageContext方法如下，页面域操作的方法定义在了PageContext的父类JspContext中
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/128f5c95ca0e77ce9613211ee47488d4.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/128f5c95ca0e77ce9613211ee47488d4.png) 
 
 ---
 
@@ -4322,7 +4322,7 @@ M : model， 通常用于封装数据，封装的是数据模型
 V :  view，通常用于展示数据。动态展示用jsp页面，静态数据展示用html
 C :  controller，通常用于处理请求和响应，一般指的是Servlet
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8a59e3d7b256784b63225d21feb3ca5f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/8a59e3d7b256784b63225d21feb3ca5f.png)
 
 ---
 
@@ -4475,7 +4475,7 @@ str：
 
 EL表达式中运算符：
 
--  关系运算符：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/37f2baf4142c9d6926845f1154d32bc7.png) 
+-  关系运算符：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/37f2baf4142c9d6926845f1154d32bc7.png) 
 -  逻辑运算符： 
 | 逻辑运算符 | 说明 |
 | --- | --- |
@@ -4520,7 +4520,7 @@ EL表达式中运算符：
 </html>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/40b5b997630dd9495435c45b84d3a65f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/40b5b997630dd9495435c45b84d3a65f.png)
 
 ---
 
@@ -5765,7 +5765,7 @@ function(参数列表) {
 ### DOM介绍
 DOM(Document Object Model)：文档对象模型。
 将 HTML 文档的各个组成部分，封装为对象。借助这些对象，可以对 HTML 文档进行增删改查的动态操作。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cecc9d97dc12775b2df755358f015e1f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/cecc9d97dc12775b2df755358f015e1f.png)
 
 ---
 
@@ -5897,8 +5897,8 @@ Attribute属性的操作：
 ### 事件介绍
 事件指的就是当某些组件执行了某些操作后，会触发某些代码的执行
 
-- 常用的事件：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/85bc9fc3c8bf28008b4352bf941ac73c.png)
-- 更多的事件：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cf1f661952b84d2cf41d2675eab9bdf4.png)
+- 常用的事件：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/85bc9fc3c8bf28008b4352bf941ac73c.png)
+- 更多的事件：![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/cf1f661952b84d2cf41d2675eab9bdf4.png)
 
 ---
 
@@ -5945,7 +5945,7 @@ Attribute属性的操作：
 ### 综合案例
 案例介绍：
 在姓名、年龄、性别三个文本框中填写信息后，添加到“学生信息表”列表（表格），点击删除后，删除该行数据，并且不需刷新
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/95175c16d19ecdc194410f88fe4d992d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/95175c16d19ecdc194410f88fe4d992d.png)
 
 - 添加功能分析
    1. 为添加按钮绑定单击事件
@@ -6294,7 +6294,7 @@ JSON(JavaScript Object Notation)：是一种轻量级的数据交换格式。
 
 - 基于 ECMAScript 规范的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据
 - 简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言，易于人阅读和编写，同时也易于计算机解析和 生成，并有效的提升网络传输效率。
-- 创建格式：**name是字符串类型**![](https://raw.githubusercontent.com/choodsire666/blog-img/main/138eb89922162218ce2d318a34c24a04.png)
+- 创建格式：**name是字符串类型**![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/138eb89922162218ce2d318a34c24a04.png)
 - json常用方法
 | **方法** | **说明** |
 | --- | --- |
@@ -6430,7 +6430,7 @@ RegExp：
 
 #### 验证用户
 使用 onsubmit 表单提交事件
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/40cd650e3e1167557772697bae4793f9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/40cd650e3e1167557772697bae4793f9.png)
 ```
 <form class="login-form" action="#" id="registered" method="get" autocomplete="off">
     <input type="text" id="username" name="username">
@@ -6469,7 +6469,7 @@ RegExp：
 ### BOM介绍
 BOM(Browser Object Model)：浏览器对象模型。
 将浏览器的各个组成部分封装成不同的对象，方便我们进行操作。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8f01f37e5aa06e97c6c3e1c53773a10a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/8f01f37e5aa06e97c6c3e1c53773a10a.png)
 
 ---
 
@@ -7009,7 +7009,7 @@ $("#btn5").click(function(){
 
 - AJAX(Asynchronous JavaScript And XML)：异步的 JavaScript 和 XML。 
 - 不是一种新技术，而是多个技术综合，用于快速创建动态网页的技术。
-- 一般的网页如果需要更新内容，必需重新加载个页面。而 AJAX 通过浏览器与服务器进行少量数据交换，就可以使网页实现异步更新。也就是在不重新加载整个页 面的情况下，对网页的部分内容进行**局部更新**。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cee096614c374802db737c833348cf24.png)
+- 一般的网页如果需要更新内容，必需重新加载个页面。而 AJAX 通过浏览器与服务器进行少量数据交换，就可以使网页实现异步更新。也就是在不重新加载整个页 面的情况下，对网页的部分内容进行**局部更新**。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/cee096614c374802db737c833348cf24.png)
 
 ---
 
@@ -7139,7 +7139,7 @@ public class UserServlet extends HttpServlet {
 ---
 
 ## 分页知识
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/28bf9d916387bd16c2d08fd8a7019ce4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/28bf9d916387bd16c2d08fd8a7019ce4.png)
 
 ---
 
@@ -7206,7 +7206,7 @@ let vm = new Vue({
 ### 指令介绍
 指令：是带有 v- 前缀的特殊属性，不同指令具有不同含义
 使用方法：通常编写在标签的属性上，值可以使用 JS 的表达式
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/aa9f4bf751cbd29990ff02611c89b16c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/aa9f4bf751cbd29990ff02611c89b16c.png)
 
 ---
 
@@ -7359,7 +7359,7 @@ v-on：为 HTML 标签绑定事件，有简写方式
 
 - **表单绑定**v-model：在表单元素上创建双向数据绑定
 - **双向数据绑定**更新data数据，页面中的数据也会更新；更新页面数据，data数据也会更新
-- **MVVM模型(ModelViewViewModel)：是MVC模式的改进版**在前端页面中，JS对象表示Model，页面表示View，两者做到了最大限度的分离。将Model和View关联起来的就是ViewModel，它是桥梁。ViewModel负责把Model的数据同步到View显示出来，还负责把View修改的数据同步回Model。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e0d930c0ffae548edbab506e5a2d3e9a.png)
+- **MVVM模型(ModelViewViewModel)：是MVC模式的改进版**在前端页面中，JS对象表示Model，页面表示View，两者做到了最大限度的分离。将Model和View关联起来的就是ViewModel，它是桥梁。ViewModel负责把Model的数据同步到View显示出来，还负责把View修改的数据同步回Model。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/e0d930c0ffae548edbab506e5a2d3e9a.png)
 ```
 <body>
     <div id="div">
@@ -7503,8 +7503,8 @@ Vue.component(组件名称, {
 
 ## 生命周期
 
-- 生命周期![](https://raw.githubusercontent.com/choodsire666/blog-img/main/acee98daf00a9f3fb85705321ee07cf3.png)
-- 生命周期八个阶段![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1660890657d617cae677ffcff9bdb8f0.png)
+- 生命周期![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/acee98daf00a9f3fb85705321ee07cf3.png)
+- 生命周期八个阶段![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/1660890657d617cae677ffcff9bdb8f0.png)
 
 ---
 
@@ -7585,7 +7585,7 @@ HTML文件：
 
 ## 组件
 实现应用中局部功能代码和资源的集合(html/css/javascript)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/29192650cbe9eddd401c07d37d8de0ff.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/29192650cbe9eddd401c07d37d8de0ff.png)
 作用：复用编码，简化项目编码，提升运行效率
 模块：向外提供特定功能的js程序，一般就是一个js文件
 非单文件组件：一个文件中有n个组件
@@ -7609,11 +7609,11 @@ Nginx 两个最核心的功能：高性能的静态 Web 服务器，反向代理
 
 ## 配置文件
 nginx.conf 文件时 Nginx 的主配置文件
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/571f5ce8b074e6174eb6199cb4be27c0.jpeg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/571f5ce8b074e6174eb6199cb4be27c0.jpeg)
 
-- main 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dbfa51dcdaeb45a8d353f52b573a130e.jpeg)
-- events 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/780e9fb609e1c206b2e779579c55e9aa.jpeg)
-- server 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/77eed788b08837a70221e402bcdb3b76.jpeg)root 设置的路径会拼接上 location 的路径，然后去最终路径寻找对应的文件
+- main 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/dbfa51dcdaeb45a8d353f52b573a130e.jpeg)
+- events 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/780e9fb609e1c206b2e779579c55e9aa.jpeg)
+- server 部分![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/77eed788b08837a70221e402bcdb3b76.jpeg)root 设置的路径会拼接上 location 的路径，然后去最终路径寻找对应的文件
 
 ---
 
@@ -7653,7 +7653,7 @@ server {
 - 提高访问速度：代理服务器都设置一个较大的硬盘缓冲区，会将部分请求的响应保存到缓冲区中，当其他用户再访问相同的信息时， 则直接由缓冲区中取出信息，传给用户，以提高访问速度
 - 隐藏客户端真实 IP：隐藏自己的 IP，免受攻击
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/32caa202357943b2807675afa54a19d3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/32caa202357943b2807675afa54a19d3.png)
 **反向代理（reverse proxy）**：是指以代理服务器来接受 Internet 上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给 Internet 上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器，**反向代理，其实是"代理服务器"代理了"目标服务器"，去和当前"客户端"进行交互**
 作用：
 
@@ -7662,7 +7662,7 @@ server {
 - 提高访问速度：反向代理服务器可以对于静态内容及短时间内有大量访问请求的动态内容提供缓存服务
 - 提供安全保障：反向代理服务器可以作为应用层防火墙，为网站提供对基于 Web 的攻击行为（例如 DoS/DDoS）的防护，更容易排查恶意软件等
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5cfcbe2fcc63b61514f48b82d1a0eca3.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835364730-da0e758b-9834-4df3-b185-d11ba7a679ec.png#averageHue=%23f1f4f7&clientId=u33825a4e-06f1-4&from=paste&id=ub6fdf150&originHeight=614&originWidth=1076&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4d756c26-e8e1-4ff7-8f59-7f55ef8dfb1&title=)
 区别：
 
 - 正向代理其实是客户端的代理，帮助客户端访问其无法访问的服务器资源；反向代理则是服务器的代理，帮助服务器做负载均衡，安全防护等

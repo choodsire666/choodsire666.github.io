@@ -20,17 +20,17 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 
 在这六步操作中，又有很多操作是要去操作数据库的，而且还是一个线程串行执行， 这样就会导致我们的程序执行的很慢，所以我们需要异步程序执行，那么如何加速呢？
 在这里笔者想给大家分享一下课程内没有的思路，看看有没有小伙伴这么想，比如，我们可以不可以使用异步编排来做，或者说我开启N多线程，N多个线程，一个线程执行查询优惠卷，一个执行判断扣减库存，一个去创建订单等等，然后再统一做返回，这种做法和课程中有哪种好呢？答案是课程中的好，因为如果你采用我刚说的方式，如果访问的人很多，那么线程池中的线程可能一下子就被消耗完了，而且你使用上述方案，最大的特点在于，你觉得时效性会非常重要，但是你想想是吗？并不是，比如我只要确定他能做这件事，然后我后边慢慢做就可以了，我并不需要他一口气做完这件事，所以我们应当采用的是课程中，类似消息队列的方式来完成我们的需求，而不是使用线程池或者是异步编排的方式来完成这个需求
-![1653560986599.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e32f146b350234b81be9e4eb6e6a9bec.png)
+![1653560986599.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-2 Redis优化秒杀抢购问题/e32f146b350234b81be9e4eb6e6a9bec.png)
 优化方案：我们将耗时比较短的逻辑判断放入到redis中，比如是否库存足够，比如是否一人一单，这样的操作，只要这种逻辑可以完成，就意味着我们是一定可以下单完成的，我们只需要进行快速的逻辑判断，根本就不用等下单逻辑走完，我们直接给用户返回成功， 再在后台开一个线程，后台线程慢慢的去执行queue里边的消息，这样程序不就超级快了吗？而且也不用担心线程池消耗殆尽的问题，因为这里我们的程序中并没有手动使用任何线程池，当然这里边有两个难点
 
 - 第一个难点是我们怎么在redis中去快速校验一人一单，还有库存判断
 - 第二个难点是由于我们校验和tomct下单是两个线程，那么我们如何知道到底哪个单他最后是否成功，或者是下单完成，为了完成这件事我们在redis操作完之后，我们会将一些信息返回给前端，同时也会把这些信息丢到异步queue中去，后续操作中，可以通过这个id来查询我们tomcat中的下单逻辑是否完成了。
 
-![1653561657295.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5a90ce1c189bb8e91b09b3250cca7a0c.png)
+![1653561657295.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-2 Redis优化秒杀抢购问题/5a90ce1c189bb8e91b09b3250cca7a0c.png)
 我们现在来看看整体思路：当用户下单之后，判断库存是否充足只需要导redis中去根据key找对应的value是否大于0即可，如果不充足，则直接结束，如果充足，继续在redis中判断用户是否可以下单，如果set集合中没有这条数据，说明他可以下单，如果set集合中没有这条记录，则将userId和优惠卷存入到redis中，并且返回0，整个过程需要保证是原子性的，我们可以使用lua来操作
 当以上判断逻辑走完之后，我们可以判断当前redis中返回的结果是否是0 ，如果是0，则表示可以下单，则将之前说的信息存入到到queue中去，然后返回，然后再来个线程异步的下单，前端可以通过返回的订单id来判断是否下单成功。
 
-![1653562234886.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f5fd2aa0e8998cfc320cf6559f029c24.png)
+![1653562234886.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-2 Redis优化秒杀抢购问题/f5fd2aa0e8998cfc320cf6559f029c24.png)
 ## 2 Redis完成秒杀资格判断
 需求：
 
@@ -40,7 +40,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 -  开启线程任务，不断从阻塞队列中获取信息，实现异步下单功能
  
 
-![1656080546603.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b5fd31caf3c2f9a34f069b57eb39b1ed.png)
+![1656080546603.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-2 Redis优化秒杀抢购问题/b5fd31caf3c2f9a34f069b57eb39b1ed.png)
 VoucherServiceImpl
 ```java
 @Override

@@ -13,14 +13,14 @@ description: '笔记来源：黑马程序员Redis入门到实战教程，深度�
 
 ubuntu和Centos 都是Linux的发行版，发行版可以看成对linux包了一层壳，任何Linux发行版，其系统内核都是Linux。我们的应用都需要通过Linux内核与硬件交互
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2b9a73a376dfade00258fe9df787f457.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/2b9a73a376dfade00258fe9df787f457.png)
 
 用户的应用，比如redis，mysql等其实是没有办法去执行访问我们操作系统的硬件的，所以我们可以通过发行版的这个壳子去访问内核，再通过内核去访问计算机硬件
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a67fa030c62ac225ba8ccbad6830cbd3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/a67fa030c62ac225ba8ccbad6830cbd3.png)
 
 计算机硬件包括，如cpu，内存，网卡等等，内核（通过寻址空间）可以操作硬件的，但是内核需要不同设备的驱动，有了这些驱动之后，内核就可以去对计算机硬件去进行 内存管理，文件系统的管理，进程的管理等等
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c35abd061c89ce45847971865389709f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/c35abd061c89ce45847971865389709f.png)
 
 我们想要用户的应用来访问，计算机就必须要通过对外暴露的一些接口，才能访问到，从而简介的实现对内核的操控，但是内核本身上来说也是一个应用，所以他本身也需要一些内存，cpu等设备资源，用户应用本身也在消耗这些资源，如果不加任何限制，用户去操作随意的去操作我们的资源，就有可能导致一些冲突，甚至有可能导致我们的系统出现无法运行的问题，因此我们需要把用户和**内核隔离开**
 
@@ -28,7 +28,7 @@ ubuntu和Centos 都是Linux的发行版，发行版可以看成对linux包了一
 
 什么是寻址空间呢？我们的应用程序也好，还是内核空间也好，都是没有办法直接去物理内存的，而是通过分配一些虚拟内存映射到物理内存中，我们的内核和应用程序去访问虚拟内存的时候，就需要一个虚拟地址，这个地址是一个无符号的整数，比如一个32位的操作系统，他的带宽就是32，他的虚拟地址就是2的32次方，也就是说他寻址的范围就是0~2的32次方， 这片寻址空间对应的就是2的32个字节，就是4GB，这个4GB，会有3个GB分给用户空间，会有1GB给内核系统
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/60b6aa85282057641ad86d8e8ea6b117.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/60b6aa85282057641ad86d8e8ea6b117.png)
 
 在linux中，他们权限分成两个等级，0和3，用户空间只能执行受限的命令（Ring3），而且不能直接调用系统资源，必须通过内核提供的接口来访问内核空间可以执行特权命令（Ring0），调用一切系统资源，所以一般情况下，用户的操作是运行在用户空间，而内核运行的数据是在内核空间的，而有的情况下，一个应用程序需要去调用一些特权资源，去调用一些内核空间的操作，所以此时他俩需要在用户态和内核态之间进行切换。
 
@@ -42,7 +42,7 @@ Linux系统为了提高IO效率，会在用户空间和内核空间都加入缓�
 
 针对这个操作：我们的用户在写读数据时，会去向内核态申请，想要读取内核的数据，而内核数据要去等待驱动程序从硬件上读取数据，当从磁盘上加载到数据之后，内核会将数据写入到内核的缓冲区中，然后再将数据拷贝到用户态的buffer中，然后再返回给应用程序，整体而言，速度慢，就是这个原因，为了加速，我们希望read也好，还是wait for data也最好都不要等待，或者时间尽量的短。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/97114cc3e0d6c1d206ab5dc72a9eebdf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/97114cc3e0d6c1d206ab5dc72a9eebdf.png)
 
 ## 2.网络模型-阻塞IO
 
@@ -56,7 +56,7 @@ Linux系统为了提高IO效率，会在用户空间和内核空间都加入缓�
 
 应用程序想要去读取数据，他是无法直接去读取磁盘数据的，他需要先到内核里边去等待内核操作硬件拿到数据，这个过程就是1，是需要等待的，等到内核从磁盘上把数据加载出来之后，再把这个数据写给用户的缓存区，这个过程是2，如果是阻塞IO，那么整个过程中，用户从发起读请求开始，一直到读取到数据，都是一个阻塞状态。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3328c34e46430a663a0a5add907cabd1.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/3328c34e46430a663a0a5add907cabd1.png)
 
 具体流程如下图：
 
@@ -81,7 +81,7 @@ Linux系统为了提高IO效率，会在用户空间和内核空间都加入缓�
 
 可以看到，阻塞IO模型中，用户进程在两个阶段都是阻塞状态。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/30fc5f25315273440432f287a56a2d4c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/30fc5f25315273440432f287a56a2d4c.png)
 
 ## 3 网络模型-非阻塞IO
 
@@ -102,7 +102,7 @@ Linux系统为了提高IO效率，会在用户空间和内核空间都加入缓�
 - 拷贝完成，用户进程解除阻塞，处理数据
 - 可以看到，非阻塞IO模型中，用户进程在第一个阶段是非阻塞，第二个阶段是阻塞状态。虽然是非阻塞，但性能并没有得到提高。而且忙等机制会导致CPU空转，CPU使用率暴增。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/52dad55d59aeefc5c629246f2f822b87.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/52dad55d59aeefc5c629246f2f822b87.png)
 
 ## 4 网络模型-IO多路复用
 
@@ -153,7 +153,7 @@ Linux系统为了提高IO效率，会在用户空间和内核空间都加入缓�
 
 用IO复用模式，可以确保去读数据的时候，数据是一定存在的，他的效率比原来的阻塞IO和非阻塞IO性能都要高
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1b91cbdac01cebe21ed38044bd7cce5f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/1b91cbdac01cebe21ed38044bd7cce5f.png)
 
 IO多路复用是利用单个线程来同时监听多个FD，并在某个FD可读、可写时得到通知，从而避免无效的等待，充分利用CPU资源。不过监听FD的方式、通知的方式又有多种实现，常见的有：
 
@@ -173,7 +173,7 @@ select是Linux最早是由的I/O多路复用技术：
 
 比如要监听的数据，是1,2,5三个数据，此时会执行select函数，然后将整个fd发给内核态，内核态会去遍历用户态传递过来的数据，如果发现这里边都数据都没有就绪，就休眠，直到有数据准备好时，就会被唤醒，唤醒之后，再次遍历一遍，看看谁准备好了，然后再将处理掉没有准备好的数据，最后再将这个FD集合写回到用户态中去，此时用户态就知道了，奥，有人准备好了，但是对于用户态而言，并不知道谁处理好了，所以用户态也需要去进行遍历，然后找到对应准备好数据的节点，再去发起读请求，我们会发现，这种模式下他虽然比阻塞IO和非阻塞IO好，但是依然有些麻烦的事情， 比如说频繁的传递fd集合，频繁的去遍历FD等问题
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/22eb4d39a8f944c9f168b0a24566f3bb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/22eb4d39a8f944c9f168b0a24566f3bb.png)
 
 ## 6 网络模型-IO多路复用模型-poll模式
 
@@ -192,7 +192,7 @@ IO流程：
 - select模式中的fd_set大小固定为1024，而pollfd在内核中采用链表，理论上无上限
 - 监听FD越多，每次遍历消耗时间也越久，性能反而会下降
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a758b038b6ceac7b16360e3d8ca241f9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/a758b038b6ceac7b16360e3d8ca241f9.png)
 
 ## 7 网络模型-IO多路复用模型-epoll函数
 
@@ -257,7 +257,7 @@ epoll模式中如何解决这些问题的？
 
 3、当第二步完成后，就会调用epoll_wait函数，这个函数会去校验是否有数据准备完毕（因为数据一旦准备就绪，就会被回调函数添加到list_head中），在等待了一段时间后(可以进行配置)，如果等够了超时时间，则返回没有数据，如果有，则进一步判断当前是什么事件，如果是建立连接时间，则调用accept() 接受客户端socket，拿到建立连接的socket，然后建立起来连接，如果是其他事件，则把数据进行写出
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5bf1495675a5cd23589f0a16942d2a10.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/5bf1495675a5cd23589f0a16942d2a10.png)
 
 ## 10 网络模型-信号驱动
 
@@ -277,7 +277,7 @@ epoll模式中如何解决这些问题的？
 - 内核将数据拷贝到用户空间
 - 用户进程处理数据
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6995002f30099e8fed3c27f5e2d74fad.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/6995002f30099e8fed3c27f5e2d74fad.png)
 
 当有大量IO操作时，信号较多，SIGIO处理函数不能及时处理可能导致信号队列溢出，而且内核空间与用户空间的频繁信号交互性能也较低。
 
@@ -287,13 +287,13 @@ epoll模式中如何解决这些问题的？
 
 他会由内核将所有数据处理完成后，由内核将数据写入到用户态中，然后才算完成，所以性能极高，不会有任何阻塞，全部都由内核完成，可以看到，异步IO模型中，用户进程在两个阶段都是非阻塞状态。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9b2270cb0db4b5392ea7d3c42d33186b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/9b2270cb0db4b5392ea7d3c42d33186b.png)
 
 ### 10.2 对比
 
 最后用一幅图，来说明他们之间的区别
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/64d74b36086d457c802518f806303060.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/64d74b36086d457c802518f806303060.png)
 
 ## 11 网络模型-Redis是单线程的吗？为什么使用单线程
 
@@ -317,6 +317,6 @@ epoll模式中如何解决这些问题的？
 
 ## 12 Redis的单线程模型-Redis单线程和多线程网络模型变更
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ce3780425fde15783eb9d6c5410ee4d8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/ce3780425fde15783eb9d6c5410ee4d8.png)
 
 当我们的客户端想要去连接我们服务器，会去先到IO多路复用模型去进行排队，会有一个连接应答处理器，他会去接受读请求，然后又把读请求注册到具体模型中去，此时这些建立起来的连接，如果是客户端请求处理器去进行执行命令时，他会去把数据读取出来，然后把数据放入到client中， clinet去解析当前的命令转化为redis认识的命令，接下来就开始处理这些命令，从redis中的command中找到这些命令，然后就真正的去操作对应的数据了，当数据操作完成后，会去找到命令回复处理器，再由他将数据写出。

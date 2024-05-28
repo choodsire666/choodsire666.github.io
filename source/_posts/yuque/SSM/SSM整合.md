@@ -340,9 +340,9 @@ applicationContext.xml：
 ```
 注意：编写接口对应的 Mapper.xml 文件时，如果写SQL语句没有提示语句，可按下面的操作进行（IDEA为偷懒而生）。
 1、File--->Settings 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/74ee5157fc1f738f0629628bd03fdf91.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/74ee5157fc1f738f0629628bd03fdf91.png)
 2、将你的项目文件添加一下，再点击“ok”，“apply”即可
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9bbbd1570ed91e81866782ad7e3bda2d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/9bbbd1570ed91e81866782ad7e3bda2d.png)
  3、写SQL语句就会有提示了，又可以偷下小懒了
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/562b73b1e563df97e41df065137e19a9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/562b73b1e563df97e41df065137e19a9.png)
 4、当你写好全部配置文件，并部署好所有项目时，可以会出现下列情况，千万别放弃！！！

@@ -22,7 +22,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 我们今天会利用Caffeine框架来实现JVM进程缓存。
 **Caffeine**是一个基于Java8开发的，提供了近乎最佳命中率的高性能的本地缓存库。目前Spring内部的缓存使用的就是Caffeine。GitHub地址：[https://github.com/ben-manes/caffeine](https://github.com/ben-manes/caffeine)
 Caffeine的性能非常好，下图是官方给出的性能对比：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a7b9bdb0f7b4bd9a680010de0dcab562.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-1 多级缓存：Caffeine实现JVM进程缓存/a7b9bdb0f7b4bd9a680010de0dcab562.png)
 可以看到Caffeine的性能遥遥领先！
 
 缓存使用的基本API：

@@ -54,7 +54,7 @@ public class TransactionManagerImpl implements TransactionManager {
 ```
 ### checkXIDCounter
 在构造函数创建了一个 TransactionManager 之后，首先要对 XID 文件进行校验，以保证这是一个合法的 XID 文件。校验的方式也很简单，通过文件头的 8 字节数字反推文件的理论长度，与文件的实际长度做对比。如果不同则认为 XID 文件不合法。对于校验没有通过的，会直接通过 panic 方法，强制停机。在一些基础模块中出现错误都会如此处理，无法恢复的错误只能直接停机。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/765c9325add3db07b77422de1e4c9ad2.jpeg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/TransactionManager/765c9325add3db07b77422de1e4c9ad2.jpeg)
 ```java
 /**
  * 检查XID文件是否合法
@@ -157,7 +157,7 @@ public long begin() {
 ```
 ### updateXid
 更新事务ID状态,**commit()**和** abort() **方法就可以直接借助 **updateXID()** 方法实现。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/35c62ee1bd011aa7307ed04707157ee1.jpeg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/TransactionManager/35c62ee1bd011aa7307ed04707157ee1.jpeg)
 ```java
 // 更新xid事务的状态为status
 private void updateXID(long xid, byte status) {
@@ -188,7 +188,7 @@ private void updateXID(long xid, byte status) {
 }
 ```
 ### incrXIDCounter
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d718404d17b785f026fb0d172d2fde1d.jpeg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/TransactionManager/d718404d17b785f026fb0d172d2fde1d.jpeg)
 ```java
 // 将XID加一，并更新XID Header
 private void incrXIDCounter() {
@@ -226,7 +226,7 @@ public static byte[] long2Byte(long value) {
 ```
 ### checkXID
 **isActive()、isCommitted() **和 **isAborted()** 都是检查一个 **xid** 的状态
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/67c21e0fd3db6e3676c0595cfbcdb8bd.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/TransactionManager/67c21e0fd3db6e3676c0595cfbcdb8bd.png)
 ```java
 // 定义一个方法，接收一个事务ID（xid）和一个状态（status）作为参数
 private boolean checkXID(long xid, byte status) {

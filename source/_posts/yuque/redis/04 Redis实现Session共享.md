@@ -10,7 +10,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 ## 1 当前架构
 手机或者app端发起请求，请求我们的nginx服务器，nginx基于七层模型走的是HTTP协议，可以实现基于Lua直接绕开tomcat访问redis，也可以作为静态资源服务器，轻松扛下上万并发， 负载均衡到下游tomcat服务器，打散流量，我们都知道一台4核8G的tomcat，在优化和处理简单业务的加持下，大不了就处理1000左右的并发， 经过nginx的负载均衡分流后，利用集群支撑起整个项目，同时nginx在部署了前端项目后，更是可以做到动静分离，进一步降低tomcat服务的压力，这些功能都得靠nginx起作用，所以nginx是整个项目中重要的一环。
 在tomcat支撑起并发流量后，我们如果让tomcat直接去访问Mysql，根据经验Mysql企业级服务器只要上点并发，一般是16或32 核心cpu，32 或64G内存，像企业级mysql加上固态硬盘能够支撑的并发，大概就是4000起~7000左右，上万并发， 瞬间就会让Mysql服务器的cpu，硬盘全部打满，容易崩溃，所以我们在高并发场景下，会选择使用mysql集群，同时为了进一步降低Mysql的压力，同时增加访问的性能，我们也会加入Redis，同时使用Redis集群使得Redis对外提供更好的服务。
-![1653059409865.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c3414860801141ecb8c00ce5233b5a92.png)
+![1653059409865.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/c3414860801141ecb8c00ce5233b5a92.png)
 ## 2 基于Session实现登录流程
 发送验证码：
 
@@ -25,7 +25,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 
 1. 用户在请求时候，会从cookie中携带者JsessionId到后台，后台通过JsessionId从session中拿到用户信息，如果没有session信息，则进行拦截，如果有session信息，则将用户信息保存到threadLocal中，并且放行
 
-![1653066208144.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5f7e7a04331c6a83253d93011f20eed7.png)
+![1653066208144.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/5f7e7a04331c6a83253d93011f20eed7.png)
 ## 3 实现发送短信验证码功能
 具体逻辑上文已经分析，我们仅仅只需要按照提示的逻辑写出代码即可。
 **发送验证码**
@@ -83,13 +83,13 @@ public Result login(LoginFormDTO loginForm, HttpSession session) {
 ```
 ## 4 实现登录拦截功能
 温馨小贴士：tomcat的运行原理
-![1653068196656.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b22a400f0dc537ab3949848e29f13859.png)
+![1653068196656.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/b22a400f0dc537ab3949848e29f13859.png)
 当用户发起请求时，会访问我们像tomcat注册的端口，任何程序想要运行，都需要有一个线程对当前端口号进行监听，tomcat也不例外，当监听线程知道用户想要和tomcat连接连接时，那会由监听线程创建socket连接，socket都是成对出现的，用户通过socket像互相传递数据，当tomcat端的socket接受到数据后，此时监听线程会从tomcat的线程池中取出一个线程执行用户请求，在我们的服务部署到tomcat后，线程会找到用户想要访问的工程，然后用这个线程转发到工程中的controller，service，dao中，并且访问对应的DB，在用户执行完请求后，再统一返回，再找到tomcat端的socket，再将数据写回到用户端的socket，完成请求和响应
 通过以上讲解，我们可以得知**每个用户其实对应都是去找tomcat线程池中的一个线程来完成工作的**， 使用完成后再进行回收，既然每个请求都是独立的，所以在每个用户去访问我们的工程时，我们可以使用threadlocal来做到线程隔离，每个线程操作自己的一份数据
 
 温馨小贴士：关于threadlocal
 如果小伙伴们看过threadLocal的源码，你会发现在threadLocal中，无论是他的put方法和他的get方法， 都是先从获得当前用户的线程，然后从线程中取出线程的成员变量map，只要线程不一样，map就不一样，所以可以通过这种方式来做到线程隔离
-![1653068874258.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f51344582a434caeafe283e28ce8dd02.png)
+![1653068874258.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/f51344582a434caeafe283e28ce8dd02.png)
 **拦截器代码**
 ```java
 public class LoginInterceptor implements HandlerInterceptor {
@@ -180,11 +180,11 @@ public class UserHolder {
 2. session拷贝数据时，可能会出现延迟
 
 所以咱们后来采用的方案都是基于redis来完成，我们把session换成redis，redis数据本身就是共享的，就可以避免session共享的问题了
-![1653069893050.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/6cb95331b4abb16c63f28d65b945e8ab.png)
+![1653069893050.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/6cb95331b4abb16c63f28d65b945e8ab.png)
 ## 7 Redis代替session的业务流程
 ### 7.1 设计key的结构
 首先我们要思考一下利用redis来存储数据，那么到底使用哪种结构呢？由于存入的数据比较简单，我们可以考虑使用String，或者是使用哈希，如下图，如果使用String，同学们注意他的value，用多占用一点空间，如果使用哈希，则他的value中只会存储他数据本身，如果不是特别在意内存，其实使用String就可以啦。
-![1653319261433.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/028c040b3d146197436cec70b6eb4306.png)
+![1653319261433.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/028c040b3d146197436cec70b6eb4306.png)
 ### 7.2 设计key的具体细节
 所以我们可以使用String结构，就是一个简单的key，value键值对的方式，但是关于key的处理，session他是每个用户都有自己的session，但是redis的key是共享的，咱们就不能使用code了
 在设计这个key的时候，我们之前讲过需要满足两点
@@ -195,7 +195,7 @@ public class UserHolder {
 如果我们采用phone：手机号这个的数据来存储当然是可以的，但是如果把这样的敏感数据存储到redis中并且从页面中带过来毕竟不太合适，所以我们在后台生成一个随机串token，然后让前端带来这个token就能完成我们的整体逻辑了
 ### 7.3 整体访问流程
 当注册完成后，用户去登录会去校验用户提交的手机号和验证码，是否一致，如果一致，则根据手机号查询用户信息，不存在则新建，最后将用户数据保存到redis，并且生成token作为redis的key，当我们校验用户是否登录时，会去携带着token进行访问，从redis中取出token对应的value，判断是否存在这个数据，如果没有则拦截，如果存在则将其保存到threadLocal中，并且放行。
-## ![1653319474181.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4a2cc18f01c7d20781c72844e5069bc7.png)
+## ![1653319474181.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/4a2cc18f01c7d20781c72844e5069bc7.png)
 ## 8 基于Redis实现短信登录
 这里具体逻辑就不分析了，之前咱们已经重点分析过这个逻辑啦。
 **UserServiceImpl代码**
@@ -247,10 +247,10 @@ public Result login(LoginFormDTO loginForm, HttpSession session) {
 ## 9 解决状态登录刷新问题
 ### 9.1 初始方案思路总结
 在这个方案中，他确实可以使用对应路径的拦截，同时刷新登录token令牌的存活时间，但是现在这个拦截器他只是拦截需要被拦截的路径，假设当前用户访问了一些不需要拦截的路径，那么这个拦截器就不会生效，所以此时令牌刷新的动作实际上就不会执行，所以这个方案他是存在问题的
-![1653320822964.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/df817ee3d9f8180ba9405dbcff06681e.png)
+![1653320822964.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/df817ee3d9f8180ba9405dbcff06681e.png)
 ### 9.2 优化方案
 既然之前的拦截器无法对不需要拦截的路径生效，那么我们可以添加一个拦截器，在第一个拦截器中拦截所有的路径，把第二个拦截器做的事情放入到第一个拦截器中，同时刷新令牌，因为第一个拦截器有了threadLocal的数据，所以此时第二个拦截器只需要判断拦截器中的user对象是否存在即可，完成整体刷新功能。
-![1653320764547.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5a41e1bc1b49147a8c0963aa37b3e8fd.png)
+![1653320764547.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04 Redis实现Session共享/5a41e1bc1b49147a8c0963aa37b3e8fd.png)
 ### 9.3 代码 
 **RefreshTokenInterceptor**
 ```java

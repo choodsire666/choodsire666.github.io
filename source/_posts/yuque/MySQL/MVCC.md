@@ -25,7 +25,7 @@ create table stu(
 insert into stu(name,age) value("java",21);
 insert into stu(name,age) value("h5",28);
 ```
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0217b361135f9250f1cc5d9530941589.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/0217b361135f9250f1cc5d9530941589.png)
 
 1. **开启事务A**
 2. 开启事务B
@@ -37,24 +37,24 @@ insert into stu(name,age) value("h5",28);
 8. 在事务A中查询stu表的所有数据，加上lock in share mode(共享锁)，发现id为1的数据是最新数据
 
 在测试中我们可以看到，即使是在默认的RR隔离级别下，事务A中依然可以读取到事务B最新提交的内容，因为在查询语句后面加上了 lock in share mode 共享锁，此时是当前读操作。当然，当我们加排他锁的时候，也是当前读操作。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8713975c02d640e396f10aa1d714d40e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/8713975c02d640e396f10aa1d714d40e.png)
 
 快照读：简单的select（不加锁）就是快照读，快照读，读取的是记录数据的可见版本，有可能是历史数据，不加锁，是非阻塞读。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/db7f476c05c89898965333afbb81cd99.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/db7f476c05c89898965333afbb81cd99.png)
 
 - Read Committed：每次select，都生成一个快照读。
 - Repeatable Read：开启事务后第一个select语句才是快照读的地方。
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4b3484e94f15d362e9cd71c256732651.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/4b3484e94f15d362e9cd71c256732651.png)
 
 - Serializable：快照读会退化为当前读。
 
 测试
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/282f410f492a871a990384ce9643ab0e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/282f410f492a871a990384ce9643ab0e.png)
 在测试中,我们看到即使事务B提交了数据,事务A中也查询不到。 原因就是因为普通的select是快照读，而在当前默认的RR隔离级别下，开启事务后第一个select语句才是快照读的地方，后面执行相同的select语句都是从快照中获取数据，可能不是当前的最新数据，这样也就保证了可重复读。
 ## 4.2 隐藏字段
 ### 4.2.1 介绍
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/80020cd656d0fbb2c6cc8e2743fbd6b7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/80020cd656d0fbb2c6cc8e2743fbd6b7.png)
 当我们创建了上面的这张表，我们在查看表结构的时候，就可以显式的看到这三个字段。 实际上除了这三个字段以外，InnoDB还会自动的给我们添加三个隐藏字段及其含义分别是：
 
 | 隐藏字段 | 含义 |
@@ -731,24 +731,24 @@ admin@cg db2019 % ibd2sdi employee.ibd
 而update、delete的时候，产生的undo log日志不仅在回滚时需要，在快照读时也需要，不会立即被删除。
 ### 4.3.2 undolog 版本链
 有一张表原始数据为：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a6500b55e0b0271200c8e5489c7dcc3f.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/a6500b55e0b0271200c8e5489c7dcc3f.png)
 DB_TRX_ID : 代表最近修改事务ID，记录插入这条记录或最后一次修改该记录的事务ID，是自增的。
 DB_ROLL_PTR ： 由于这条数据是才插入的，没有被更新过，所以该字段值为null。
 
 然后，有四个并发事务同时在访问这张表。
 
 1. 第一步
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/28c35e5d132982febedd7ea528a1c5eb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/28c35e5d132982febedd7ea528a1c5eb.png)
 当事务2执行第一条修改语句时，会记录undo log日志，记录数据变更之前的样子; 然后更新记录，并且记录本次操作的事务ID，回滚指针，回滚指针用来指定如果发生回滚，回滚到哪一个版本。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/67cf79a9a4c49fb8e4a630d182c3765d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/67cf79a9a4c49fb8e4a630d182c3765d.png)
 2. 第二步
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ccf5319410a5c6314a859d14de5dff03.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/ccf5319410a5c6314a859d14de5dff03.png)
 当事务3执行第一条修改语句时，也会记录undo log日志，记录数据变更之前的样子; 然后更新记录，并且记录本次操作的事务ID，回滚指针，回滚指针用来指定如果发生回滚，回滚到哪一个版本。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7b084dd3432adedb65e5b13d2c782a78.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/7b084dd3432adedb65e5b13d2c782a78.png)
 3. 第三步
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6a99822f9e7a3d66e4f400dfb1881901.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/6a99822f9e7a3d66e4f400dfb1881901.png)
 当事务4执行第一条修改语句时，也会记录undo log日志，记录数据变更之前的样子; 然后更新记录，并且记录本次操作的事务ID，回滚指针，回滚指针用来指定如果发生回滚，回滚到哪一个版本。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9476de99bcede77ec3631c31dd497fbe.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/9476de99bcede77ec3631c31dd497fbe.png)
 
 最终我们发现，不同事务或相同事务对同一条记录进行修改，会导致该记录的undolog生成一条记录版本链表，链表的头部是最新的旧记录，链表尾部是最早的旧记录。
 ## 4.4 readview
@@ -781,37 +781,37 @@ ReadView中包含了四个核心字段：
 RC隔离级别下，在事务中每一次执行快照读时生成ReadView。
 我们就来分析事务5中，两次快照读读取数据，是如何获取数据的?
 在事务5中，查询了两次id为30的记录，由于隔离级别为Read Committed，所以每一次进行快照读都会生成一个ReadView，那么两次生成的ReadView如下。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4460d2b3fee048ed6700f19e63992590.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/4460d2b3fee048ed6700f19e63992590.png)
 那么这两次快照读在获取数据时，就需要根据所生成的ReadView以及ReadView的版本链访问规则，到undolog版本链中匹配数据，最终决定此次快照读返回的数据。
 
 1. 先来看第一次快照读具体的读取过程：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c140caec0fc35bcb64cf389b7bea4e3f.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/c140caec0fc35bcb64cf389b7bea4e3f.png)
 在进行匹配时，会从undo log的版本链，从上到下进行挨个匹配：
 
 先匹配
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08b7496ccc2803998df3a2109e686694.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/08b7496ccc2803998df3a2109e686694.png)
 这条记录，这条记录对应的trx_id为4，也就是将4带入右侧的匹配规则中。 ①不满足 ②不满足 ③不满足 ④也不满足 ，都不满足，则继续匹配undo log版本链的下一条。
 再匹配第二条
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c54b653f37541f4c0e3c28bec51a6dbd.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/c54b653f37541f4c0e3c28bec51a6dbd.png)
 这条记录对应的trx_id为3，也就是将3带入右侧的匹配规则中。①不满足 ②不满足 ③不满足 ④也不满足 ，都不满足，则继续匹配undo log版本链的下一条
 再匹配第三条
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3cecdfc22de8e8953402f267dc38161d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/3cecdfc22de8e8953402f267dc38161d.png)
 这条记录对应的trx_id为2，也就是将2带入右侧的匹配规则中。①不满足 ②满足 终止匹配，此次快照读，返回的数据就是版本链中记录的这条数据。
 
 2. 再来看第二次快照读具体的读取过程:
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4fea621cc080a0ed5be310b0040f5ce5.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/4fea621cc080a0ed5be310b0040f5ce5.png)
 在进行匹配时，会从undo log的版本链，从上到下进行挨个匹配：
 先匹配
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/152b1e53bcf8b3af80b02480f45691c5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/152b1e53bcf8b3af80b02480f45691c5.png)
 这条记录，这条记录对应的trx_id为4，也就是将4带入右侧的匹配规则中。 ①不满足 ②不满足 ③不满足 ④也不满足 ，都不满足，则继续匹配undo log版本链的下一条。
 再匹配第二条
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f65eba6400367dddcb9d9eac684b845f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/f65eba6400367dddcb9d9eac684b845f.png)
 这条记录对应的trx_id为3，也就是将3带入右侧的匹配规则中。①不满足 ②满足 。终止匹配，此次快照读，返回的数据就是版本链中记录的这条数据。
 ### 4.5.2 RR隔离级别
 RR隔离级别下，仅在事务中第一次执行快照读时生成ReadView，后续复用该ReadView。 而RR 是可重复读，在一个事务中，执行两次相同的select语句，查询到的结果是一样的。
 那MySQL是如何做到可重复读的呢? 我们简单分析一下就知道了
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/da3c93041bacf60c1bfbc4f0f4929bb8.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/da3c93041bacf60c1bfbc4f0f4929bb8.png)
 我们看到，在RR隔离级别下，只是在事务中第一次快照读时生成ReadView，后续都是复用该ReadView，那么既然ReadView都一样， ReadView的版本链匹配规则也一样， 那么最终快照读返回的结果也是一样的。
 所以呢，MVCC的实现原理就是通过 InnoDB表的隐藏字段、UndoLog 版本链、ReadView来实现的。而MVCC + 锁，则实现了事务的隔离性。 而一致性则是由redolog 与 undolog保证。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7eeab8c6b230e5e5e16a170daca10c09.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/7eeab8c6b230e5e5e16a170daca10c09.png)

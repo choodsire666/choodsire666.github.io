@@ -13,7 +13,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 **不可重试**：是指目前的分布式只能尝试一次，我们认为合理的情况是：当线程在获得锁失败后，他应该能再次尝试获得锁。
 **超时释放：**我们在加锁时增加了过期时间，这样的我们可以防止死锁，但是如果卡顿的时间超长，虽然我们采用了lua表达式防止删锁的时候，误删别人的锁，但是毕竟没有锁住，有安全隐患
 **主从一致性：** 如果Redis提供了主从集群，当我们向集群写数据时，主机需要异步的将数据同步给从机，而万一在同步过去之前，主机宕机了，就会出现死锁问题。
-![1653546070602.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ac273ad420547e46ef829ce6489e5c8d.png)
+![1653546070602.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/ac273ad420547e46ef829ce6489e5c8d.png)
 
 那么什么是Redission呢
 Redisson是一个在Redis的基础上实现的Java驻内存数据网格（In-Memory Data Grid）。它不仅提供了一系列的分布式的Java常用对象，还提供了许多分布式服务，其中就包含了各种分布式锁的实现。
@@ -179,7 +179,7 @@ void method2() {
 ```
 所以我们需要额外判断，method1和method2是否处于同一线程，如果是同一个线程，则可以拿到锁，但是state会+1，之后执行method2中的方法，释放锁，释放锁的时候也只是将state进行-1，只有减至0，才会真正释放锁
 由于我们需要额外存储一个state，所以用字符串型SET NX EX是不行的，需要用到Hash结构，但是Hash结构又没有NX这种方法，所以我们需要将原有的逻辑拆开，进行手动判断
-![1653548087334.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1b5d43941059cd45d1c0278d0fe00430.png)
+![1653548087334.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/1b5d43941059cd45d1c0278d0fe00430.png)
 为了保证原子性，所以流程图中的业务逻辑也是需要我们用Lua来实现的
 获取锁的逻辑
 ```lua
@@ -240,7 +240,7 @@ protected RFuture<Boolean> unlockInnerAsync(long threadId) {
 }
 ```
 ## 4 redission锁重试和WatchDog机制
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4d21ac4e045e103bbe9e48131cfed0a0.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/4d21ac4e045e103bbe9e48131cfed0a0.png)
 **源码流程**
 ```java
 package com.hmdp;
@@ -529,12 +529,12 @@ Redisson分布式锁的原理：
 ## 5 redission锁的MutiLock原理
 为了提高redis的可用性，我们会搭建集群或者主从，现在以主从为例
 此时我们去写命令，写在主机上， 主机会将数据同步给从机，但是假设在主机还没有来得及把数据写入到从机去的时候，此时主机宕机，哨兵会发现主机宕机，并且选举一个slave变成master，而此时新的master中实际上并没有锁信息，此时锁信息就已经丢掉了。
-![1653553998403.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/27dd9aad563cb85144de874b6a656035.png)
+![1653553998403.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/27dd9aad563cb85144de874b6a656035.png)
 为了解决这个问题，redission提出来了MutiLock锁，使用这把锁咱们就不使用主从了，每个节点的地位都是一样的， 这把锁加锁的逻辑需要写入到每一个主丛节点上，只有所有的服务器都写入成功，此时才是加锁成功，假设现在某个节点挂了，那么他去获得锁的时候，只要有一个节点拿不到，都不能算是加锁成功，就保证了加锁的可靠性。
-![1653554055048.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/717ed6c8b395872f177a18bb826fbd53.png)
+![1653554055048.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/717ed6c8b395872f177a18bb826fbd53.png)
 那么MutiLock 加锁原理是什么呢？笔者画了一幅图来说明
 当我们去设置了多个锁时，redission会将多个锁添加到一个集合中，然后用while循环去不停去尝试拿锁，但是会有一个总共的加锁时间，这个时间是用需要加锁的个数 * 1500ms ，假设有3个锁，那么时间就是4500ms，假设在这4500ms内，所有的锁都加锁成功， 那么此时才算是加锁成功，如果在4500ms有线程加锁失败，则会再次去进行重试.
-![1653553093967.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/609dce183781b83cf48b0272096e25e0.png)
+![1653553093967.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/609dce183781b83cf48b0272096e25e0.png)
 ```java
 @Configuration
 public class RedissonConfig {

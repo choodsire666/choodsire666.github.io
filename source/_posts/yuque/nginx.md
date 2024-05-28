@@ -346,7 +346,7 @@ location ~ .*/(css|js|img|images|image){
 ```
 
 #### 第七章 动静分离
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a1f773b9fa92dabe33ff7ba0a7cc19c4.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/a1f773b9fa92dabe33ff7ba0a7cc19c4.png)
 从实现的角度上大致上分为两种：
 一种是纯粹把静态文件独立成单独的域名，放在独立的服务器上。
 另一种就是动态跟静态文件混合在一起发布，通过nginx来分开
@@ -447,9 +447,9 @@ C:\Windows\System32\drivers\etc
 
 添加本地ip DNS 映射
 #### 第八章 高可用
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/43c6160e43fdaea2a85de812aa306957.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/43c6160e43fdaea2a85de812aa306957.png)
 高可用
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b6fc5f749d8a5f527bc10516af0e209e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/b6fc5f749d8a5f527bc10516af0e209e.png)
 ##### 安装keeyalived
 1.使用yum命令进行安装
 yum install keepalived -y

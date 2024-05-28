@@ -10,7 +10,7 @@ description: '一、部署Seata的tc-server1.下载下载seata-server地址在�
 下载seata-server地址在：[http](http://seata.io/zh-cn/blog/download.html)[://seata.io/zh-cn/blog/download](http://seata.io/zh-cn/blog/download.html)[.](http://seata.io/zh-cn/blog/download.html)[html](http://seata.io/zh-cn/blog/download.html)，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip
 ## 2.解压
 在非中文目录解压缩这个zip包，其目录结构如下：
-![image-20210622202515014.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4535e1fbf15da618485bdd0335b0c613.png)
+![image-20210622202515014.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/4535e1fbf15da618485bdd0335b0c613.png)
 ## 3.修改配置
 修改conf目录下的application.yml文件，内容如下：
 ```properties
@@ -67,7 +67,7 @@ seata:
 ```
 ## 4.在nacos添加配置
 特别注意，为了让tc服务的集群可以共享配置，我们选择了nacos作为统一配置中心。因此服务端配置文件`seataServer.properties`文件需要在nacos中配好。格式如下：
-![image-20220620003641290.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/48247e7728f30363f890a7dfc9224d9e.png)
+![image-20220620003641290.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/48247e7728f30363f890a7dfc9224d9e.png)
 配置内容如下：
 ```properties
 # 数据存储方式，db代表数据库
@@ -158,9 +158,9 @@ SET FOREIGN_KEY_CHECKS = 1;
 ```
 ## 6.启动TC服务
 进入bin目录，运行其中的`seata-server.bat`即可，启动成功后，seata-server应该已经注册到nacos注册中心了。打开浏览器，访问seata控制台；地址：[http://localhost:7091](http://localhost:7091)
-![image-20220620004453632.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0d54dda429557cf7c703078754f316c9.png)
+![image-20220620004453632.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/0d54dda429557cf7c703078754f316c9.png)
 打开浏览器，访问nacos地址：http://localhost:8848/nacos，然后进入服务列表页面，可以看到seata-server的信息：
-![image-20220620004558607.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/93b59bdb16941fca2f96313fa4872394.png)
+![image-20220620004558607.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/93b59bdb16941fca2f96313fa4872394.png)
 # 二、微服务集成seata
 需要进行分布式事务处理的每个微服务上都配置如下：
 ## 1.引入依赖
@@ -265,12 +265,12 @@ seata:
       urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/api/v1/auth/login
 ```
 进入seata2/bin目录，然后运行双击 `seata-server.bat`。打开nacos控制台，查看服务列表：
-![image-20220620202914341.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/78881e080e9b68a3e867b5f9faa76419.png)
+![image-20220620202914341.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/78881e080e9b68a3e867b5f9faa76419.png)
 ![](assets/image-20220620202914341.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=tAjy7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![image-20220620202945657.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d886242f9f1a5b755c857a102870535a.png)
+![image-20220620202945657.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/d886242f9f1a5b755c857a102870535a.png)
 ## 2.将事务组映射配置到nacos
 接下来，我们需要将tx-service-group与cluster的映射关系都配置到nacos配置中心。新建一个配置：
-![image-20210624151507072.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f321a00bd93e38c73b3dfbe7be665bb2.png)
+![image-20210624151507072.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/f321a00bd93e38c73b3dfbe7be665bb2.png)
 配置的内容如下：
 ```properties
 # 事务组映射关系

@@ -36,7 +36,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 
 1）基于MQ的异步通知：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c2eb2b74ace0b358669c1721868ef7d9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/c2eb2b74ace0b358669c1721868ef7d9.png)
 
 解读：
 
@@ -46,7 +46,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 依然有少量的代码侵入。
 
 2）基于Canal的通知
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/deda6dcd14ae959faf3426c44d7e0b29.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/deda6dcd14ae959faf3426c44d7e0b29.png)
 
 解读：
 
@@ -64,7 +64,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 
 Canal是基于mysql的主从同步来实现的，MySQL主从同步的原理如下：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ae293d195d34be9f86e4fd2fbebc5fcc.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/ae293d195d34be9f86e4fd2fbebc5fcc.png)
 
 - 1）MySQL master 将数据变更写入二进制日志( binary log），其中记录的数据叫做binary log events
 - 2）MySQL slave 将 master 的 binary log events拷贝到它的中继日志(relay log)
@@ -72,7 +72,7 @@ Canal是基于mysql的主从同步来实现的，MySQL主从同步的原理如�
 
 而Canal就是把自己伪装成MySQL的一个slave节点，从而监听master的binary log变化。再把得到的变化信息通知给Canal的客户端，进而完成对其它数据库的同步。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b59f9032fcf7637f6dc77d6973bc9ca5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/b59f9032fcf7637f6dc77d6973bc9ca5.png)
 
 ### 2.2.安装Canal
 
@@ -87,7 +87,7 @@ Canal是基于MySQL的主从同步功能，因此必须先开启MySQL的主从�
 1）开启binlog
 
 打开mysql容器挂载的日志文件，我的在`/tmp/mysql/conf`目录:
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6ba56b0a834b36b71eab8ae6aba42320.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/6ba56b0a834b36b71eab8ae6aba42320.png)
 
 修改文件：
 
@@ -141,7 +141,7 @@ docker restart mysql
 show master status;
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1df4525aa946c2c1588f6acc4b96a982.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/1df4525aa946c2c1588f6acc4b96a982.png)
 
 #### 2.2.2.安装Canal
 
@@ -209,7 +209,7 @@ mysql 数据解析关注的表，Perl正则表达式.
 
 Canal提供了各种语言的客户端，当Canal监听到binlog变化时，会通知Canal的客户端。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e639968bd23245e5387bc84628dc3df3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/e639968bd23245e5387bc84628dc3df3.png)
 
 我们可以利用Canal提供的Java客户端，监听Canal通知消息。当收到变化的消息时，完成对缓存的更新。
 

@@ -38,7 +38,7 @@ protected void releaseForCache(Entry entry) {
 ## 具体实现
 ### begin()
 开启一个事务，并初始化事务的结构
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8f0e82b71e9de824e45bd7cbdc7ee6a5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/VM的实现/8f0e82b71e9de824e45bd7cbdc7ee6a5.png)
 ```java
 @Override
 public long begin(int level) {
@@ -73,7 +73,7 @@ public static Transaction newTransaction(long xid, int level, Map<Long, Transact
 }
 ```
 ### commit()
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3668cf1140d63c9b6ea7193f52db103a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/VM的实现/3668cf1140d63c9b6ea7193f52db103a.png)
 ```java
 @Override
 public void commit(long xid) throws Exception {
@@ -101,7 +101,7 @@ public void commit(long xid) throws Exception {
 ```
 ### abort()
 abort 事务的方法则有两种，手动和自动。手动指的是调用 **abort()** 方法，而自动，则是在事务被检测出出现死锁时，会自动撤销回滚事务；或者出现版本跳跃时，也会自动回滚
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2d4912609d198614be7623580584894a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/VM的实现/2d4912609d198614be7623580584894a.png)
 ```java
 @Override
 // 公开的abort方法，用于中止一个事务
@@ -133,7 +133,7 @@ private void internAbort(long xid, boolean autoAborted) {
 ```
 ### read()
 read()方法读取一个 entry，需要注意判断可见性
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d7ee0162f2b143bcd35c83ceaceeb21a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/VM的实现/d7ee0162f2b143bcd35c83ceaceeb21a.png)
 ```java
 @Override
 public byte[] read(long xid, long uid) throws Exception {
@@ -185,7 +185,7 @@ public long insert(long xid, byte[] data) throws Exception {
 }
 ```
 ### delete()
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c926505220c2860a84e83eb89f740426.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/VM的实现/c926505220c2860a84e83eb89f740426.png)
 ```java
 @Override
 // 删除一个数据项的方法

@@ -7,7 +7,7 @@ cover: 'https://cdn.nlark.com/yuque/0/2024/png/29688613/1711856637559-15044093-1
 description: '前面我们学习过的ORM[Object Relational Mapping(对象关系映射)]持久层框架MyBatis，它可以帮助我们完成单表、多表、动态SQL的业务逻辑处理，与之平级的还有Hibernate，和这节我们要学习的MyBatisPlus了。1.快速入门1.1 入门案例mp.sqlm...'
 ---
 前面我们学习过的ORM[Object Relational Mapping(对象关系映射)]持久层框架MyBatis，它可以帮助我们完成单表、多表、动态SQL的业务逻辑处理，与之平级的还有Hibernate，和这节我们要学习的[MyBatisPlus](https://www.baomidou.com/)了。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f8f18f137518dd7ec0e059be510ffc2c.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/f8f18f137518dd7ec0e059be510ffc2c.png)
 # 1.快速入门
 ## 1.1 入门案例
 [mp.sql](https://www.yuque.com/attachments/yuque/0/2024/sql/29688613/1711857741135-c6f1c63e-10a0-426f-8a7f-45551208a15f.sql)
@@ -21,9 +21,9 @@ description: '前面我们学习过的ORM[Object Relational Mapping(对象关系
 - 根据id删除用户
 
 代码执行流程如下：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/21b391ce2654ef2a35c5b5fd6b883ab5.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/21b391ce2654ef2a35c5b5fd6b883ab5.png)
 当我们打开：UserMapper_20231023_150307.xml 文件后，可以看到熟悉的代码
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/23246242a79ecc214672c382f3acadf2.jpeg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/23246242a79ecc214672c382f3acadf2.jpeg)
 但是我们不禁要思考一个问题，简单的单表的增删改查，他的SQL语句基本固定，这种是否可以优化呢？当然是可以的，这就是这一小节MP要做的事情。而要引入MP框架并应用起来，遵循下面的步骤即可。
 ### 1-引入MybatisPlus的起步依赖
 MyBatisPlus官方提供了starter，其中集成了Mybatis和MybatisPlus的所有功能，并且实现了自动装配效果。因此我们可以用MybatisPlus的starter代替Mybatis的starter：
@@ -39,34 +39,34 @@ MyBatisPlus官方提供了starter，其中集成了Mybatis和MybatisPlus的所�
 ```
 ### 2-继承BaseMapper
 然后我们在自己的mapper接口中继承BaseMapper，并声明泛型对应的实体类就可以有常见的CRUD代码了。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3f1f8f03e09ad94cc043e5ab6fa1b84d.png)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c445ec5102c19ed1b14d50e66d94e1de.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/3f1f8f03e09ad94cc043e5ab6fa1b84d.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/c445ec5102c19ed1b14d50e66d94e1de.png)
 接下来我们就用MP依次替代上述增删改查的原始代码
 
 - 新增用户功能
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0aef2839f3790a16cb1b008d867da0aa.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/0aef2839f3790a16cb1b008d867da0aa.png)
 
 - 根据id查询用户
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8dd6a9b9c2fd68b1770d031523776868.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/8dd6a9b9c2fd68b1770d031523776868.png)
 
 - 根据id批量查询用户
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ef1cf7778d63dd0d19fe373645854caf.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/ef1cf7778d63dd0d19fe373645854caf.png)
 
 - 根据id更新用户
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/43b2894e0db853c0d8503b46b284a1e7.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/43b2894e0db853c0d8503b46b284a1e7.png)
 
 - 根据id删除用户
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1201374984537bb142ddd45bcb286e9b.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/1201374984537bb142ddd45bcb286e9b.png)
 整体改造完之后，我们就可以把之前：UserMapper_20231023_150307.xml 中的代码都删掉了，是不是很简洁
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3270de356423c8909539324d28f88dc7.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/3270de356423c8909539324d28f88dc7.png)
 ## 1.2 常见注解
 通过上面的案例我们可以发现mp的使用很便捷，用户基本是无感知的，那他是如何做到表跟属性值的映射的呢？MyBatisPlus通过扫描实体类，并基于**反射**获取实体类信息作为数据库表信息。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e0df49740194ece0a80d35618219d2db.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/e0df49740194ece0a80d35618219d2db.png)
 但是上述的都是正常情况，如果存在一些异常：如表名跟实体类不一样、实体类部分字段表中没有等，就可以通过一些常见注解来完成映射了，MybatisPlus中比较常用的几个注解如下：
 
 - @TableName：用来指定表名
@@ -74,9 +74,9 @@ MyBatisPlus官方提供了starter，其中集成了Mybatis和MybatisPlus的所�
 - @TableField：用来指定表中的普通字段信息
 
 假设表结构如下
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/68c98f8cde8a498818ebf649ccfd5d7e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/68c98f8cde8a498818ebf649ccfd5d7e.png)
 则对应的实体类可以映射如下
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/7444d27e81b0c82e194bf8fffd88a716.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/7444d27e81b0c82e194bf8fffd88a716.png)
 其中
 IdType枚举：
 
@@ -110,15 +110,15 @@ mybatis-plus:
 ## 2.1 条件构造器
 ### 理论分析
 MyBatisPlus支持各种复杂的where条件，可以满足日常开发的所有需求。当我们继承BaseMapper之后，就具备了一些常见的接口方法
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f29106ebf92a781af0b78dc84359bb15.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/f29106ebf92a781af0b78dc84359bb15.png)
 这里的Wrapper就是各种条件构造器，他的子类继承体系如下
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/33ce7b39c24dc65264fd4a84c092c1cb.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/33ce7b39c24dc65264fd4a84c092c1cb.png)
 
 在这个体系中，AbstractWrapper定义了各种查询的条件，如：eq、in、between、like、gt、lt等。也就是说借助于他可以完成单表各种场景的查询条件组装。那为什么他又有QueryWrapper、UpdateWrapper呢？这是因为我们一个完整的查询语句是：SELECT 字段 FROM 表名 WHERE 条件
 > QueryWrapper可以帮助我们声明要查询的具体字段，避免查询全部字段，导致IO开销过大，从而影响SQL性能的问题。同理UpdateWrapper一样，可以帮我们更新指定字段。
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b9a450625686388bb66d257e9add9b1e.png)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a8d55847a25de4f8c8eafa1199b12aac.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/b9a450625686388bb66d257e9add9b1e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/a8d55847a25de4f8c8eafa1199b12aac.png)
 ### 案例实操
 接下来我们就通过几个案例，来实际体验一下吧
 
@@ -194,7 +194,7 @@ void testUpdateWrapper() {
 我们可以利用MyBatisPlus的Wrapper来构建复杂的**Where条件**，然后自己定义SQL语句中剩下的部分。
 **需求：将id在指定范围的用户（例如1、2、4 ）的余额扣减指定值**
 正常我们的SQL语句如下
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/94bc43739f501acc65ede334a1667b45.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/94bc43739f501acc65ede334a1667b45.png)
 如果我们采用自定义的，就会将整个Where条件抽取，实现细节如下
 **①基于Wrapper构建where条件**
 ```java
@@ -231,9 +231,9 @@ void updateBalanceByIds(LambdaQueryWrapper<User> wrapper, int amount);
 ## 2.3 Service接口
 ### 理论分析
 前面我们的MP接口都是在mapper层编写的，MP也为我们提供了一些更高效的service层方法
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/cf1c20e52c24c51ec728ce1befec6e71.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/cf1c20e52c24c51ec728ce1befec6e71.png)
 比如上述的批量新增、批量更新、查询单个、批量删除、分页等都是非常实用的。而要去实现这个功能就不能像原来Mapper层一样直接继承BaseMapper了，因为接口是有实现类的，所以我们遵循下面这一套规范：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/6f44d79ef045f675a723516851884a3a.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/6f44d79ef045f675a723516851884a3a.png)
 
 - 用户的接口继承：IService
 ```java
@@ -262,7 +262,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 - maxBalance：最大余额，可以为空
 
 根据这个要求，我们不难分析出它的SQL
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/114ca8aad55d4c73d7c9b90bab4a0d78.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/114ca8aad55d4c73d7c9b90bab4a0d78.png)
 接下来我们在service层做一个简单实现
 ```java
 public List<User> queryUserList(String name, 
@@ -309,7 +309,7 @@ lambdaUpdate()
 - 配置jdbc参数，开rewriteBatchedStatements，性能最好
 
 所以这里我们先配置一下链接参数：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/900e9055b0f89a5e966d5b253b11cd34.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/900e9055b0f89a5e966d5b253b11cd34.png)
 然后编写一个批量测试的方法
 ```java
 public void batchSave() {
@@ -337,18 +337,18 @@ private List<User> initData() {
 # 3.拓展功能
 ## 3.1 代码生成
 前面我们写的这一大堆代码都是自己手动写出来的，这小节我们将借助于一个插件帮助开发们自动生成下面的代码
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4d356afca1ecefafdd8d9dc4968a1353.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/4d356afca1ecefafdd8d9dc4968a1353.png)
 首先我们安装一个插件
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4be430a212163e0c262535c6a9d8c3a3.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/4be430a212163e0c262535c6a9d8c3a3.png)
 安装之后，可以在other点击：config Database，配置数据库
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/51a72b35813282643519702797c33d34.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/51a72b35813282643519702797c33d34.png)
 然后点击：code generator，生成代码，规则如下
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/461d8c0c5beba3b48f0a0c3ca73f295e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/461d8c0c5beba3b48f0a0c3ca73f295e.png)
 ## 3.2 静态工具(了解)
 前面我们在mapper层或者service完成了各种CRUD，但是MP也提供了一个静态工具类：Db，这里面也封装了日常需要使用的接口方法，以解决：service之间相互引入，嵌套引入导致的循环依赖问题。其API如下
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10520797facfc624ae72e7020d8bc0c9.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/10520797facfc624ae72e7020d8bc0c9.png)
 当我们需要使用时，如下图即可：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d8324e642fc32503ea0f98bd3b4adef2.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/d8324e642fc32503ea0f98bd3b4adef2.png)
 ## 3.3 逻辑删除
 逻辑删除就是基于代码逻辑模拟删除效果，但并不会真正删除数据。思路如下：
 
@@ -358,11 +358,11 @@ private List<User> initData() {
 
 如逻辑删除字段为deleted：
 删除操作：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/15768bcbf2084de6505713b52e3bab45.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/15768bcbf2084de6505713b52e3bab45.png)
 查询操作：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f8077d09d0e286fb1b5bfad06f9261f1.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/f8077d09d0e286fb1b5bfad06f9261f1.png)
 MybatisPlus提供了逻辑删除功能，无需改变方法调用的方式，而是在底层帮我们自动修改CRUD的语句。我们要做的就是在application.yaml文件中配置逻辑删除的字段名称和值即可：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e191b619306def096fb56dfce989dfec.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/e191b619306def096fb56dfce989dfec.png)
 **注意**：
 逻辑删除本身也有自己的问题，比如：
 
@@ -372,10 +372,10 @@ MybatisPlus提供了逻辑删除功能，无需改变方法调用的方式，而
 因此，生产环境采用逻辑删除功能比较多，但如果数据不能删除，也可以把数据迁移到其它表中。
 ## 3.4 枚举处理器
 当数据库是status是int类型，为了实现PO类中的枚举类型变量与数据库字段的转换，我们就可以借助：@EnumValue 注解将其做映射，无需特殊处理
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/80d1c4742b89615264d2d770aac89a41.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/80d1c4742b89615264d2d770aac89a41.png)
 其实现步骤共两步
 ①给枚举中的与数据库对应value值添加@EnumValue注解
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8dde4888da9595f54a6117b28a2321cf.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/8dde4888da9595f54a6117b28a2321cf.png)
 ②在application.yml中配置全局枚举处理器：
 ```yaml
 mybatis-plus:
@@ -384,10 +384,10 @@ mybatis-plus:
 ```
 ## 3.5 JSON处理器
 当数据库中有一个JSON类型字段时，MP依然做了支持，只需要在对应属性值追加下面截图注解即可。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5762f357d41b712094e4a801858dcff8.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/5762f357d41b712094e4a801858dcff8.png)
 # 4.插件功能
 MP提供的内置拦截器如下，借助于这些拦截器我们就可以实现一些比较有意思的功能了。这里我们给大家讲解一下使用频率最高的分页插件。【项目二会使用到动态表名插件-做分库分表】
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0803d259bc7e7ee08c5ea7b32918265a.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/0803d259bc7e7ee08c5ea7b32918265a.png)
 ## 4.1 分页插件
 首先，要在配置类中注册MyBatisPlus的核心插件，同时添加分页插件：
 ```java
@@ -407,7 +407,7 @@ public class MybatisConfig {
 }
 ```
 接着，就可以使用分页的API了：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f6ea860127573fd2cec1711c54fe7e6d.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/f6ea860127573fd2cec1711c54fe7e6d.png)
 大概实现代码如下：
 ```java
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
@@ -785,7 +785,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 - 访问浏览器：[http://localhost:8080/users/pages?pageNo=1&pageSize=1](http://localhost:8080/users/pages?pageNo=1&pageSize=1)
 - 查看页面效果
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fd79dc210b1200572872392552b82bdf.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/fd79dc210b1200572872392552b82bdf.png)
 ### 7-代码重构优化
 
 - 上述的业务逻辑实现代码，可以优化如下。能优化的前提依赖于我们封装的多个方法

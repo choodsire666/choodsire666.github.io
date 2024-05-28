@@ -15,7 +15,7 @@ Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢�
 ### 2.1 集群结构和作用
 
 哨兵的结构如图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8e5b09aae861340ea8404114516e3360.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/8e5b09aae861340ea8404114516e3360.png)
 
 哨兵的作用如下：
 
@@ -28,7 +28,7 @@ Sentinel基于心跳机制监测服务状态，每隔1秒向集群的每个实�
 -  主观下线：如果某sentinel节点发现某实例未在规定时间响应，则认为该实例**主观下线**。 
 -  客观下线：若超过指定数量（quorum）的sentinel都认为该实例主观下线，则该实例**客观下线**。quorum值最好超过Sentinel实例数量的一半。 
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9517eca15c07e07ad7db6eec9c2274d8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/9517eca15c07e07ad7db6eec9c2274d8.png)
 ### 2.3 集群故障恢复原理
 一旦发现master故障，sentinel需要在salve中选择一个作为新的master，选择依据是这样的：
 
@@ -44,7 +44,7 @@ Sentinel基于心跳机制监测服务状态，每隔1秒向集群的每个实�
 - sentinel给所有其它slave发送slaveof 192.168.150.101 7002 命令，让这些slave成为新master的从节点，开始从新的master上同步数据。
 - 最后，sentinel将故障节点标记为slave，当故障节点恢复后会自动成为新的master的slave节点
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/479b92930f2bc787ddea96af4abb90f1.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/479b92930f2bc787ddea96af4abb90f1.png)
 
 ### 2.4 小结
 Sentinel的三个作用是什么？
@@ -69,7 +69,7 @@ Sentinel如何判断一个redis实例是否健康？
 ### 3.1 导入Demo工程
 
 首先，我们引入课前资料提供的Demo工程：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/64c527ed0b1fb7d756c11778821170b8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/64c527ed0b1fb7d756c11778821170b8.png)
 
 ### 3.2 引入依赖
 在项目的pom文件中引入依赖：

@@ -17,13 +17,13 @@ yum install -y gcc tcl
 ```
 然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：[redis-6.2.4.tar.gz](https://www.yuque.com/attachments/yuque/0/2024/gz/29688613/1711614690538-8492e392-5d23-47a1-9e1d-2f0a4f564254.gz?_lake_card=%7B%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2024%2Fgz%2F29688613%2F1711614690538-8492e392-5d23-47a1-9e1d-2f0a4f564254.gz%22%2C%22name%22%3A%22redis-6.2.4.tar.gz%22%2C%22size%22%3A2457940%2C%22ext%22%3A%22gz%22%2C%22source%22%3A%22%22%2C%22status%22%3A%22done%22%2C%22download%22%3Atrue%2C%22taskId%22%3A%22u44084d11-f344-4b50-9d6e-8d3c6146640%22%2C%22taskType%22%3A%22transfer%22%2C%22type%22%3A%22application%2Fx-gzip%22%2C%22mode%22%3A%22title%22%2C%22id%22%3A%22uce192a13%22%2C%22card%22%3A%22file%22%7D)
 例如，我放到了/tmp目录：
-![image-20210629114830642.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/61e2e3cf3c5f34e390148a412e17c825.png)
+![image-20210629114830642.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/61e2e3cf3c5f34e390148a412e17c825.png)
 解压缩：
 ```shell
 tar -xvf redis-6.2.4.tar.gz
 ```
 解压后：
-![image-20210629114941810.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/db679d8fab0cf9142929598d44665be9.png)
+![image-20210629114941810.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/db679d8fab0cf9142929598d44665be9.png)
 进入redis目录：
 ```shell
 cd redis-6.2.4
@@ -50,7 +50,7 @@ redis-cli shutdown
 # 2.Redis主从集群
 ## 2.1.集群结构
 我们搭建的主从集群结构如图：
-![image-20210630111505799.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8f65e4b0c5a5b82e11b84f4c6d39586d.png)
+![image-20210630111505799.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/8f65e4b0c5a5b82e11b84f4c6d39586d.png)
 共包含三个节点，一个主两个从。这里我们会在同一台虚拟机中开启3个redis实例，模拟主从集群，信息如下：
 
 | IP | PORT | 角色 |
@@ -62,7 +62,7 @@ redis-cli shutdown
 ## 2.2.准备实例和配置
 要在同一台虚拟机开启3个实例，必须准备三份不同的配置文件和目录，配置文件所在目录也就是工作目录。
 确保下面的配置已经更改（位置也别错）
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/20291adb5413ac3f3ce8723738c3032d.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/20291adb5413ac3f3ce8723738c3032d.png)
 ### 1）创建目录
 我们创建三个文件夹，名字分别叫7001、7002、7003：
 ```shell
@@ -72,7 +72,7 @@ cd /tmp
 mkdir 7001 7002 7003
 ```
 如图：
-![image-20210630113929868.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/7d39b97eab2330b1bfdd7c6383f033f3.png)
+![image-20210630113929868.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/7d39b97eab2330b1bfdd7c6383f033f3.png)
 ### 2）恢复原始配置
 修改redis-6.2.4/redis.conf文件，将其中的持久化模式改为默认的RDB模式，AOF保持关闭状态。
 ```properties
@@ -129,7 +129,7 @@ redis-server 7002/redis.conf
 redis-server 7003/redis.conf
 ```
 启动后：
-![image-20210630183914491.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a9ad78596d6d44af892693ccf689461d.png)
+![image-20210630183914491.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/a9ad78596d6d44af892693ccf689461d.png)
 如果要一键停止，可以运行下面命令：
 ```shell
 printf '%s\n' 7001 7002 7003 | xargs -I{} -t redis-cli -p {} shutdown
@@ -154,7 +154,7 @@ redis-cli -p 7002
 slaveof 192.168.206.129 7001
 ```
 执行完：exit，退出可继续执行后续命令。通过redis-cli命令连接7003，执行下面命令：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9e238baf1a7bc7e077540256b4347553.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/9e238baf1a7bc7e077540256b4347553.png)
 ```shell
 # 连接 7003
 redis-cli -p 7003
@@ -169,7 +169,7 @@ redis-cli -p 7001
 info replication
 ```
 结果：
-![image-20210630201258802.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/57b9dd6d8cf9b9f9fba9287436073f28.png)
+![image-20210630201258802.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/57b9dd6d8cf9b9f9fba9287436073f28.png)
 ## 2.5.测试
 执行下列操作以测试：
 
@@ -181,7 +181,7 @@ info replication
 # 3.搭建哨兵集群
 ## 3.1.集群结构
 这里我们搭建一个三节点形成的Sentinel集群，来监管之前的Redis主从集群。如图：
-![image-20210701215227018.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1e5af1a3574b01135b8c9b869893524b.png)
+![image-20210701215227018.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/1e5af1a3574b01135b8c9b869893524b.png)
 三个sentinel实例信息如下：
 
 | 节点 | IP | PORT |
@@ -200,7 +200,7 @@ cd /tmp
 mkdir s1 s2 s3
 ```
 如图：
-![image-20210701215534714.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c77f78f4ff9b4d68c46bf371af4bdf3b.png)
+![image-20210701215534714.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/c77f78f4ff9b4d68c46bf371af4bdf3b.png)
 然后我们在s1目录创建一个sentinel.conf文件，添加下面的内容：
 
 - cd /tmp/s1
@@ -246,7 +246,7 @@ redis-sentinel s2/sentinel.conf
 # 第3个
 redis-sentinel s3/sentinel.conf
 ```
-启动后：![image-20210701220714104.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/da975ead6f6cca8eaed8d728921047f3.png)
+启动后：![image-20210701220714104.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/da975ead6f6cca8eaed8d728921047f3.png)
 ## 3.4.测试
 
 - 停止7001（当前主节点），此时会在多个哨兵中选举出一个哨兵的master，如下
@@ -255,11 +255,11 @@ redis-sentinel s3/sentinel.conf
    - 27003投给27002
    - 因此27002变成哨兵master
 
-![步骤1-主观下线-选举哨兵master.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/7a5b48eb62b51aa5f3c98b64390e3462.png)
+![步骤1-主观下线-选举哨兵master.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/7a5b48eb62b51aa5f3c98b64390e3462.png)
 
 - 主观下线变客观下线
 
-![步骤2-主观下线变客观下线.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2af50e6612746013e34956534a18c0ea.png)
+![步骤2-主观下线变客观下线.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/2af50e6612746013e34956534a18c0ea.png)
 
 - 哨兵master自己从当前集群中的slave节点中选出一个新的master，原则是：
 ```properties
@@ -268,27 +268,27 @@ redis-sentinel s3/sentinel.conf
 3-如果slave-prority一样，则判断slave节点的offset值，越大说明数据越新，优先级越高
 4-最后是判断slave节点的运行id大小，越小优先级越高。
 ```
-![步骤3-哨兵master选举新的主节点-新主节点执行slaveof no one.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8d75d2ab1c7e3bbb308b755af67a8584.png)
+![步骤3-哨兵master选举新的主节点-新主节点执行slaveof no one.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/8d75d2ab1c7e3bbb308b755af67a8584.png)
 
 - 现有slave节点执行slave of，服从新的master节点
 
-![步骤4-现有slave节点重新分配master节点.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5c36248dff3418e5c1e2b129a5bf098d.png)
+![步骤4-现有slave节点重新分配master节点.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/5c36248dff3418e5c1e2b129a5bf098d.png)
 
 - 其余哨兵得到哨兵msater的选举通知
 
-![步骤5-其余哨兵得到通知.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/7f5b4c475c81283b916f8a581132d1da.png)
+![步骤5-其余哨兵得到通知.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/7f5b4c475c81283b916f8a581132d1da.png)
 
 - 此时我们恢复7001，会发现会做一次全量同步
 
-![步骤6-7001恢复启动并实现数据全量同步.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b45d123727404b4369712282ab0e01f5.png)
+![步骤6-7001恢复启动并实现数据全量同步.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/b45d123727404b4369712282ab0e01f5.png)
 
 - 新加入的节点，执行slave of服从当前master（此时是从配置文件中读取）
 
-![步骤7-哨兵监控执行从节点命令.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8cb99a34b17cde4a44ca8186a584b965.png)
+![步骤7-哨兵监控执行从节点命令.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/8cb99a34b17cde4a44ca8186a584b965.png)
 # 4.搭建分片集群
 ## 4.1.集群结构
 分片集群需要的节点数量较多，这里我们搭建一个最小的分片集群，包含3个master节点，每个master包含一个slave节点，结构如下
-![image-20210702164116027.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2d8653c6e68d916e7e283872cdd35910.png)
+![image-20210702164116027.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/2d8653c6e68d916e7e283872cdd35910.png)
 这里我们会在同一台虚拟机中开启6个redis实例，模拟分片集群，信息如下：
 
 | IP | PORT | 角色 |
@@ -337,7 +337,7 @@ databases 1
 # 日志
 logfile /tmp/6379/run.log
 ```
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4ad07816f9fee60c006a0a31dbc0554c.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/4ad07816f9fee60c006a0a31dbc0554c.png)
 将这个文件拷贝到每个目录下：
 ```shell
 # 进入/tmp目录
@@ -365,7 +365,7 @@ printf '%s\n' 7001 7002 7003 8001 8002 8003 | xargs -I{} -t redis-server {}/redi
 ```shell
 ps -ef | grep redis
 ```
-发现服务都已经正常启动：![image-20210702174255799.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2d6a1af50692c14747e6309d0041e377.png)
+发现服务都已经正常启动：![image-20210702174255799.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/2d6a1af50692c14747e6309d0041e377.png)
 如果要关闭所有进程，可以执行命令：
 ```shell
 ps -ef | grep redis | awk '{print $2}' | xargs kill
@@ -410,16 +410,16 @@ redis-cli --cluster create --cluster-replicas 1 192.168.206.129:7001 192.168.206
 - `--replicas 1`或者`--cluster-replicas 1` ：指定集群中每个master的副本个数为1，此时`节点总数 ÷ (replicas + 1)` 得到的就是master的数量。因此节点列表中的前n个就是master，其它节点都是slave节点，随机分配到不同master
 
 运行后的样子：
-![image-20210702181101969.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/dda545f4f4aaf1acf358631d4d822acd.png)
+![image-20210702181101969.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/dda545f4f4aaf1acf358631d4d822acd.png)
 这里输入yes，则集群开始创建：
-![image-20210702181215705.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/160d6ee5accdfe853860588cafc917cc.png)
-![创建分片集群时确认集群关系图.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/bdcd54294c0a6e37cf4c6749cf8c98f5.png)通过命令可以查看集群状态（下面端口可以是集群中的任意端口都行）：
+![image-20210702181215705.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/160d6ee5accdfe853860588cafc917cc.png)
+![创建分片集群时确认集群关系图.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/bdcd54294c0a6e37cf4c6749cf8c98f5.png)通过命令可以查看集群状态（下面端口可以是集群中的任意端口都行）：
 ```shell
 redis-cli -p 7001 cluster nodes
 ```
-![image-20210702181922809.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5568a6e6f7d4680b6285b5a026fd243c.png)
+![image-20210702181922809.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/5568a6e6f7d4680b6285b5a026fd243c.png)
 其中的映射关系分析如下图
-![分片集群日志分析.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/40d9f58f63f26cbb4ab40eb80e20ecab.png)
+![分片集群日志分析.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/40d9f58f63f26cbb4ab40eb80e20ecab.png)
 
 ## 4.5.测试
 尝试连接7001节点，存储一个数据：
@@ -440,4 +440,4 @@ set a 1
  redis-cli -c -p 7001
 ```
 这次可以了：
-![image-20210702182602145.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/30287c0894031a88e1e14aa2d323c7da.png)
+![image-20210702182602145.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/30287c0894031a88e1e14aa2d323c7da.png)

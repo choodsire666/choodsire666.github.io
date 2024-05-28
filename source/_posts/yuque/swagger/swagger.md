@@ -103,7 +103,7 @@ public class Setmeal implements Serializable {
 总之，我们想清晰的描述一个接口，就需要借助Swagger给我们提供的注解。
 ## 项目部署
 ### 部署结构
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3ccc5711ffe65132246cd7a999611735.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/swagger/3ccc5711ffe65132246cd7a999611735.png)
 前端部署服务器：nginx
 后端部署服务器：Tomcat
 

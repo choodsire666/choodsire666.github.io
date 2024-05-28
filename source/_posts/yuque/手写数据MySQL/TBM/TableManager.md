@@ -74,7 +74,7 @@ private long firstTableUid() {
 ```
 ### create()
 这里主要讲解一下 create方法，其他方法都是调用 VM 层
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bc2413ea41d49aa9e567e8a1dfb0f353.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/TableManager/bc2413ea41d49aa9e567e8a1dfb0f353.png)
 ```java
 @Override
 public byte[] create(long xid, Create create) throws Exception {

@@ -53,7 +53,7 @@ MVCC的目的就是多版本并发控制，在数据库中的实现，就是为�
 - **DB_ROLL_PTR** 7byte, 回滚指针，指向这条记录的上一个版本（存储于rollback segment里）
 - **DELETED_BIT** 1byte, 记录被更新或删除并不代表真的删除，而是删除flag变了
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/94486e8bb99fe682497cb661904bb286.png)如上图，DB_ROW_ID是数据库默认为该行记录生成的唯一隐式主键；DB_TRX_ID是当前操作该记录的事务ID； 而DB_ROLL_PTR是一个回滚指针，用于配合undo日志，指向上一个旧版本；delete flag没有展示出来。
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/94486e8bb99fe682497cb661904bb286.png)如上图，DB_ROW_ID是数据库默认为该行记录生成的唯一隐式主键；DB_TRX_ID是当前操作该记录的事务ID； 而DB_ROLL_PTR是一个回滚指针，用于配合undo日志，指向上一个旧版本；delete flag没有展示出来。
 ### undo日志
 InnoDB把这些为了回滚而记录的这些东西称之为undo log。这里需要注意的一点是，由于查询操作（SELECT）并不会修改任何用户记录，所以在查询操作执行时，并不需要记录相应的undo log。undo log主要分为3种：
 
@@ -66,7 +66,7 @@ InnoDB把这些为了回滚而记录的这些东西称之为undo log。这里需
 
 1. **比如一个有个事务插入persion表插入了一条新记录，记录如下，name为Jerry, age为24岁，隐式主键是1，事务ID和回滚指针，我们假设为NULL**
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ecb070ca5b7f1bcb9f8d5c0acb35482d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/ecb070ca5b7f1bcb9f8d5c0acb35482d.png)
 
 1. **现在来了一个事务1对该记录的name做出了修改，改为Tom**
    1. 在事务1修改该行(记录)数据时，数据库会先对该行加排他锁
@@ -74,7 +74,7 @@ InnoDB把这些为了回滚而记录的这些东西称之为undo log。这里需
    3. 拷贝完毕后，修改该行name为Tom，并且修改隐藏字段的事务ID为当前事务1的ID, 我们默认从1开始，之后递增，回滚指针指向拷贝到undo log的副本记录，即表示我的上一个版本就是它
    4. 事务提交后，释放锁
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/78039003062016e81063e2308448a8cb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/78039003062016e81063e2308448a8cb.png)
 
 1. **又来了个事务2修改person表的同一个记录，将age修改为30岁**
    1. 在事务2修改该行数据时，数据库也先为该行加锁
@@ -82,7 +82,7 @@ InnoDB把这些为了回滚而记录的这些东西称之为undo log。这里需
    3. 修改该行age为30岁，并且修改隐藏字段的事务ID为当前事务2的ID, 那就是2，回滚指针指向刚刚拷贝到undo log的副本记录
    4. 事务提交，释放锁
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cdc97b7850a4e682ab1d3a6d814f9d4f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/cdc97b7850a4e682ab1d3a6d814f9d4f.png)
 从上面，我们就可以看出，不同事务或者相同事务的对同一记录的修改，会导致该记录的undo log成为一条记录版本线性表，即链表，undo log的链首就是最新的旧记录，链尾就是最早的旧记录（当然就像之前说的该undo log的节点可能是会purge线程清除掉，向图中的第一条insert undo log，其实在事务提交之后可能就被删除丢失了，不过这里为了演示，所以还放在这里）
 ### Read View 是如何在MVCC中工作的
 说白了Read View就是事务进行快照读操作的时候生产的读视图(Read View)，在该事务执行的快照读的那一刻，会生成数据库系统当前的一个快照，记录并维护系统当前活跃事务的ID(当每个事务开启时，都会被分配一个ID, 这个ID是递增的，所以最新的事务，ID值越大)
@@ -93,17 +93,17 @@ InnoDB把这些为了回滚而记录的这些东西称之为undo log。这里需
 - max_trx_id ：这个并不是 m_ids 的最大值，而是**创建 Read View 时当前数据库中应该给下一个事务的 id 值**，也就是全局事务中最大的事务 id 值 + 1；
 - creator_trx_id ：指的是**创建该 Read View 的事务的事务 id**。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6e4c5d36dd2a0ede0dec48382a5de41.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/e6e4c5d36dd2a0ede0dec48382a5de41.png)
 知道了 Read View 的字段，我们还需要了解聚簇索引记录中的两个隐藏列。
 假设在账户余额表插入一条小林余额为 100 万的记录，然后我把这两个隐藏列也画出来，该记录的整个示意图如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/76aa40cb2a968bef472e326dcb2b61b9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/76aa40cb2a968bef472e326dcb2b61b9.png)
 对于使用 InnoDB 存储引擎的数据库表，它的聚簇索引记录中都包含下面两个隐藏列：
 
 - trx_id，当一个事务对某条聚簇索引记录进行改动时，就会**把该事务的事务 id 记录在 trx_id 隐藏列里**；
 - roll_pointer，每次对某条聚簇索引记录进行改动时，都会把旧版本的记录写入到 undo 日志中，然后**这个隐藏列是个指针，指向每一个旧版本记录**，于是就可以通过它找到修改前的记录。
 
 在创建 Read View 后，我们可以将记录中的 trx_id 划分这三种情况：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/de93d728a8211824a4d1d9da42244b6a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/de93d728a8211824a4d1d9da42244b6a.png)
 一个事务去访问记录的时候，除了自己的更新记录总是可见之外，还有这几种情况：
 
 - 如果记录的 trx_id 值小于 Read View 中的 min_trx_id 值，表示这个版本的记录是在创建 Read View **前**已经提交的事务生成的，所以该版本的记录对当前事务**可见**。
@@ -126,15 +126,15 @@ InnoDB把这些为了回滚而记录的这些东西称之为undo log。这里需
 
 - Read View 不仅仅会通过一个列表 trx_list 来维护事务 2执行快照读那刻系统正活跃的事务 ID 列表，还会有两个属性 up_limit_id（ **trx_list 列表中事务 ID 最小的 ID** ），low_limit_id ( **快照读时刻系统尚未分配的下一个事务 ID ，也就是目前已出现过的事务ID的最大值 + 1**) 。所以在这里例子中 up_limit_id 就是1，low_limit_id 就是 4 + 1 = 5，trx_list 集合的值是 1, 3，Read View 如下图
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7554cdcab87711f31be8aef166b0a5a7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/7554cdcab87711f31be8aef166b0a5a7.png)
 
 - 我们的例子中，只有事务 4 修改过该行记录，并在事务 2 执行快照读前，就提交了事务，所以当前该行当前数据的 undo log 如下图所示；我们的事务 2 在快照读该行记录的时候，就会拿该行记录的 DB_TRX_ID 去跟 up_limit_id , low_limit_id 和活跃事务 ID 列表( trx_list )进行比较，判断当前事务 2能看到该记录的版本是哪个。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a3e6c772f185c1c8b51e6e551aae47d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/1a3e6c772f185c1c8b51e6e551aae47d.png)
 
 - 所以先拿该记录 DB_TRX_ID 字段记录的事务 ID 4 去跟 Read View 的 up_limit_id 比较，看 4 是否小于 up_limit_id( 1 )，所以不符合条件，继续判断 4 是否大于等于 low_limit_id( 5 )，也不符合条件，最后判断 4 是否处于 trx_list 中的活跃事务, 最后发现事务 ID 为 4 的事务不在当前活跃事务列表中, 符合可见性条件，所以事务 4修改后提交的最新结果对事务 2 快照读时是可见的，所以事务 2 能读到的最新数据记录是事务4所提交的版本，而事务4提交的版本也是全局角度上最新的版本
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c8e4c0b561a1c8eaacd00b1d17a33507.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/c8e4c0b561a1c8eaacd00b1d17a33507.png)
 
 - 也正是 Read View 生成时机的不同，从而造成 RC , RR 级别下快照读的结果的不同
 ## MVCC 相关问题

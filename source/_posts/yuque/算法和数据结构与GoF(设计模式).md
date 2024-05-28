@@ -471,7 +471,7 @@ public class BeerDemo{
 1. 确定总共需要冒几轮：数组的长度-1
 2. 每轮两两比较几次
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0a95d7192fb35ea8857c4ddfaa501a62.gif)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/0a95d7192fb35ea8857c4ddfaa501a62.gif)
 ```
 // 0 1位置比较，大的放后面，然后1 2位置比较，大的继续放后面，一轮循环最后一位是最大值
 public class BubbleSort {
@@ -518,7 +518,7 @@ public class BubbleSort {
 1. 控制选择几轮：数组的长度 - 1
 2. 控制每轮从当前位置开始比较几次
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9c8ac0d20b13dceb9f635b2d4c22e2fa.gif)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/9c8ac0d20b13dceb9f635b2d4c22e2fa.gif)
 ```
 public class SelectSort {
     public static void main(String[] args) {
@@ -559,7 +559,7 @@ public class SelectSort {
 2. 将堆顶元素 R[1] 与最后一个元素 R[n] 交换，此时得到新的无序区（R1,R2,……Rn-1）和新的有序区 Rn，且满足 R[1,2…n-1]<=R[n]
 3. 交换后新的堆顶 R[1] 可能违反堆的性质，因此需要对当前无序区（R1,R2,……Rn-1）调整为新堆，然后再次将 R[1] 与无序区最后一个元素交换，得到新的无序区（R1,R2….Rn-2）和新的有序区（Rn-1,Rn），不断重复此过程直到有序区的元素个数为 n-1，则整个排序过程完成
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/57f5481f3d6454794a78b25e1c583b83.jpeg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/57f5481f3d6454794a78b25e1c583b83.jpeg)
 floor：向下取整
 ```
 public class HeapSort {
@@ -619,7 +619,7 @@ public class HeapSort {
 ### 插入排序
 #### 直接插入
 插入排序（Insertion Sort）：在要排序的一组数中，假定前 n-1 个数已经排好序，现在将第 n 个数插到这个有序数列中，使得这 n 个数也是排好顺序的，如此反复循环，直到全部排好顺序
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6220324b1189d8f53d74c3e3f6c798bb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/6220324b1189d8f53d74c3e3f6c798bb.png)
 ```
 public class InsertSort {
     public static void main(String[] args) {
@@ -658,7 +658,7 @@ public class InsertSort {
 2. 对分好组的每一组数据完成插入排序
 3. 减小增长量，最小减为 1，重复第二步操作
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5d79caa13690988e69423e11af9760d3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/5d79caa13690988e69423e11af9760d3.png)
 希尔排序的核心在于间隔序列的设定，既可以提前设定好间隔序列，也可以动态的定义间隔序列，希尔排序就是插入排序增加了间隔
 ```
 public class ShellSort {
@@ -703,11 +703,11 @@ public class ShellSort {
 2. 将相邻的两个子组进行合并成一个有序的大组
 3. 不断的重复步骤2，直到最终只有一个组为止
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/133b715ae3b21604a22ffcbf8a9abc57.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/133b715ae3b21604a22ffcbf8a9abc57.png)
 归并步骤：每次比较两端最小的值，把最小的值放在辅助数组的左边
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dc582f7f55f5d137f998577135f8a744.png)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e465ee97efa91212d1c3a66b1059cde5.png)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6a4ca8fb61cfef331c43d00b708618e5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/dc582f7f55f5d137f998577135f8a744.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/e465ee97efa91212d1c3a66b1059cde5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/6a4ca8fb61cfef331c43d00b708618e5.png)
 
 ---
 
@@ -752,7 +752,7 @@ public class MergeSort {
     }
 }
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a9bb10c6defa2fa7a5a24b7f28b9995.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/1a9bb10c6defa2fa7a5a24b7f28b9995.png)
 用树状图来描述归并，假设元素的个数为 n，那么使用归并排序拆分的次数为 log2(n)，即层数，每次归并需要做 n 次对比，最终得出的归并排序的时间复杂度为 log2(n)*n，根据大O推导法则，忽略底数，最终归并排序的时间复杂度为 O(nlogn)
 归并排序的缺点：需要申请额外的数组空间，导致空间复杂度提升，是典型的**以空间换时间**的操作
 
@@ -766,7 +766,7 @@ public class MergeSort {
 2. 重新排序数列，所有比基准值小的摆放在基准前面，所有比基准值大的摆在基准的后面（相同的数可以到任一边），在这个分区退出之后，该基准就处于数列的中间位置，这个称为分区（partition）操作；
 3. 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3cade4b97959fc410d8a1fcc5fcb7d00.gif)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/3cade4b97959fc410d8a1fcc5fcb7d00.gif)
 ```
 public class QuickSort {
     public static void main(String[] args) {
@@ -821,7 +821,7 @@ public class QuickSort {
 时间复杂度：
 
 - 最优情况：每一次切分选择的基准数字刚好将当前序列等分。把数组的切分看做是一个树，共切分了 logn 次，所以，最优情况下快速排序的时间复杂度为 O(nlogn)
-- 最坏情况：每一次切分选择的基准数字是当前序列中最大数或者最小数，这使得每次切分都会有一个子组，那么总共就得切分n次，所以最坏情况下，快速排序的时间复杂度为 O(n^2)![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1f614a8bd2503b3a16fee34cab868695.png)
+- 最坏情况：每一次切分选择的基准数字是当前序列中最大数或者最小数，这使得每次切分都会有一个子组，那么总共就得切分n次，所以最坏情况下，快速排序的时间复杂度为 O(n^2)![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/1f614a8bd2503b3a16fee34cab868695.png)
 - 平均情况：每一次切分选择的基准数字不是最大值和最小值，也不是中值，这种情况用数学归纳法证明，快速排序的时间复杂度为 O(nlogn)
 
 推荐视频：[https://www.bilibili.com/video/BV1b7411N798?t=1001&p=81](https://www.bilibili.com/video/BV1b7411N798?t=1001&p=81)
@@ -834,7 +834,7 @@ public class QuickSort {
 计数排序其实是桶排序的一种特殊情况，当要排序的 n 个数据，所处的范围并不大的时候，比如最大值是 k，我们就可以把数据划分成 k 个桶，每个桶内的数据值都是相同的，省掉了桶内排序的时间
 按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优先级排序。最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前
 解释：先排低位再排高位，可以说明在高位相等的情况下低位是递增的，如果高位也是递增，则数据有序
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f09ed19f4ffbd85a45bcd804bd258a13.gif)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/f09ed19f4ffbd85a45bcd804bd258a13.gif)
 实现思路：
 
 - 获得最大数的位数，可以通过将最大数变为 String 类型，再求长度
@@ -897,7 +897,7 @@ public class BucketSort {
 #### 稳定性
 稳定性：在待排序的记录序列中，存在多个具有相同的关键字的记录，若经过排序，这些记录的相对次序保持不变，即在原序列中 r[i]=r[j]，且 r[i] 在 r[j] 之前，而在排序后的序列中，r[i] 仍在 r[j] 之前，则称这种排序算法是稳定的，否则称为不稳定的
 如果一组数据只需要一次排序，则稳定性一般是没有意义的，如果一组数据需要多次排序，稳定性是有意义的。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8469eed286ed2e009fb7bac27906c86c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/8469eed286ed2e009fb7bac27906c86c.png)
 
 - 冒泡排序：只有当 arr[i]>arr[i+1] 的时候，才会交换元素的位置，而相等的时候并不交换位置，所以冒泡排序是一种稳定排序算法
 - 选择排序：是给每个位置选择当前元素最小的，例如有数据{5(1)，8 ，5(2)， 3， 9 }，第一遍选择到的最小元素为3，所以5(1)会和3进行交换位置，此时5(1)到了5(2)后面，破坏了稳定性，所以是不稳定的排序算法
@@ -914,7 +914,7 @@ public class BucketSort {
 ---
 
 #### 算法对比
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e9a1d49559a3279d0fec000629f664ec.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/e9a1d49559a3279d0fec000629f664ec.png)
 
 ---
 
@@ -968,7 +968,7 @@ public class binarySearch {
     }
 }
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9e2bec07d2dd311f98cbfc4446d279b3.gif)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/9e2bec07d2dd311f98cbfc4446d279b3.gif)
 查找第一个匹配的元素：
 ```
 public static int binarySearch(int[] arr, int des) {
@@ -1136,7 +1136,7 @@ public class Kmp {
 - 节点：在树结构中,每一个元素称之为节点
 - 度：每一个节点的子节点数量称之为度
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6a87d60f58b59280cb4c6d0823adafc2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/6a87d60f58b59280cb4c6d0823adafc2.png)
 
 ---
 
@@ -1149,7 +1149,7 @@ public class Kmp {
 - 右子树上所有节点的值都大于根节点的值
 - 不存在重复的节点
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/32ec24df702cb84928214d1530f1b945.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/32ec24df702cb84928214d1530f1b945.png)
 
 ---
 
@@ -1235,7 +1235,7 @@ private static TreeNode createBST(int[] arr) {
 }
 ```
 
-- 删除节点：要删除节点12，先找到节点19，然后移动并替换节点12![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7e51c99320543a4f71eb99008d36186f.png)代码链接：[https://leetcode-cn.com/submissions/detail/190232548/](https://leetcode-cn.com/submissions/detail/190232548/)
+- 删除节点：要删除节点12，先找到节点19，然后移动并替换节点12![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/7e51c99320543a4f71eb99008d36186f.png)代码链接：[https://leetcode-cn.com/submissions/detail/190232548/](https://leetcode-cn.com/submissions/detail/190232548/)
 
 参考视频：[https://www.bilibili.com/video/BV1iJ411E7xW?t=756&p=86](https://www.bilibili.com/video/BV1iJ411E7xW?t=756&p=86)
 图片来源：[https://leetcode-cn.com/problems/delete-node-in-a-bst/solution/tu-jie-yi-dong-jie-dian-er-bu-shi-xiu-ga-edtn/](https://leetcode-cn.com/problems/delete-node-in-a-bst/solution/tu-jie-yi-dong-jie-dian-er-bu-shi-xiu-ga-edtn/)
@@ -1253,10 +1253,10 @@ private static TreeNode createBST(int[] arr) {
 - 旋转触发时机：当添加一个节点之后，该树不再是一颗平衡二叉树
 - 平衡二叉树和二叉查找树对比结构图
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ac6f06b6665e36ccb68a77cdd611b538.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/ac6f06b6665e36ccb68a77cdd611b538.png)
 
-- 左旋：将根节点的右侧往左拉，原先的右子节点变成新的父节点，并把多余的左子节点出让，给已经降级的根节点当右子节点![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ef6c917c80916411adb1175ff2166e0c.png)
-- 右旋：将根节点的左侧往右拉，左子节点变成了新的父节点，并把多余的右子节点出让，给已经降级根节点当左子节点![](https://raw.githubusercontent.com/choodsire666/blog-img/main/431d4893d39a0f874790a981efe2c787.png)
+- 左旋：将根节点的右侧往左拉，原先的右子节点变成新的父节点，并把多余的左子节点出让，给已经降级的根节点当右子节点![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/ef6c917c80916411adb1175ff2166e0c.png)
+- 右旋：将根节点的左侧往右拉，左子节点变成了新的父节点，并把多余的右子节点出让，给已经降级根节点当左子节点![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/431d4893d39a0f874790a981efe2c787.png)
 
 推荐文章：[https://pdai.tech/md/algorithm/alg-basic-tree-balance.html](https://pdai.tech/md/algorithm/alg-basic-tree-balance.html)
 
@@ -1282,8 +1282,8 @@ private static TreeNode createBST(int[] arr) {
 - 红黑树只是做到近似平衡，并不是严格的平衡，红黑树的插入删除比 AVL 树更便于控制，红黑树更适合于**插入修改密集型任务**
 - 红黑树整体性能略优于 AVL 树，AVL 树的旋转比红黑树的旋转多，更加难以平衡和调试，插入和删除的效率比红黑树慢
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ade929bd2fac66e6221b7b08bbeae99d.png)
-红黑树添加节点的默认颜色为红色，效率高![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f1c95534cc6c9ff315e7d60d06c2eae6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/ade929bd2fac66e6221b7b08bbeae99d.png)
+红黑树添加节点的默认颜色为红色，效率高![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/f1c95534cc6c9ff315e7d60d06c2eae6.png)
 **红黑树添加节点后如何保持红黑规则：**
 
 - 根节点位置
@@ -1312,16 +1312,16 @@ private static TreeNode createBST(int[] arr) {
 - 一个组中的数据对应的树和另外一个组中的数据对应的树之间没有任何联系
 - 元素在树中并没有子父级关系的硬性要求
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/334092b0bb4f2c4d8301df9a91a5615f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/334092b0bb4f2c4d8301df9a91a5615f.png)
 可以高效地进行如下操作：
 
 - 查询元素 p 和元素 q 是否属于同一组
 - 合并元素 p 和元素 q 所在的组
 
 存储结构：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6b4ff0119da601b9b86931a4eb054a8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/e6b4ff0119da601b9b86931a4eb054a8.png)
 合并方式：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/864e80e5a427d007045afde943beb87d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/864e80e5a427d007045afde943beb87d.png)
 代码实现：
 
 - 类实现：
@@ -1408,7 +1408,7 @@ public static void main(String[] args) {
 
 #### 优化实现
 让每个索引处的节点都指向它的父节点，当 eleGroup[i] = i 时，说明 i 是根节点
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/07c5f7cd48ae86aed4625607cf34236e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/07c5f7cd48ae86aed4625607cf34236e.png)
 ```
 //查询p所在的分组的标识符，递归寻找父标识符，直到找到根节点
 public int findRoot(int p) {
@@ -1438,7 +1438,7 @@ public void union(int p, int q) {
 }
 ```
 平均时间复杂度为 O(N)，最坏时间复杂度是 O(N^2)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7c33f2fbc864355dcc16d79e17c29334.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/7c33f2fbc864355dcc16d79e17c29334.png)
 继续优化：路径压缩，保证每次把小树合并到大树
 ```
 public class UF_Tree_Weighted {
@@ -1503,7 +1503,7 @@ public class UF_Tree_Weighted {
 - 可以调用 union(int p,int q) 使得 p 和 q 之间连通，这样两台计算机之间就可以通信
 
 畅通工程：某省调查城镇交通状况，得到现有城镇道路统计表，表中列出了每条道路直接连通的城镇。省政府畅通工程的目标是使全省任何两个城镇间都可以实现交通，但不一定有直接的道路相连，只要互相间接通过道路可达即可，问最少还需要建设多少条道路？
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/16a70e6425a7897a2fd27470b4714182.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/16a70e6425a7897a2fd27470b4714182.png)
 解题思路：
 
 1. 创建一个并查集 UF_Tree_Weighted(20)
@@ -1541,15 +1541,15 @@ Trie 树，也叫字典树，是一种专门处理字符串匹配的树形结构
 - 每个节点表示一个字符串中的字符，从**根节点到红色节点的一条路径表示一个字符串**
 - 红色节点并不都是叶子节点
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e24c1d433b81baee1a33762e287659a4.png)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c5a6e89401c1f66d112ca8392b8313c6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/e24c1d433b81baee1a33762e287659a4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/c5a6e89401c1f66d112ca8392b8313c6.png)
 注意：要查找的是字符串“he”，从根节点开始，沿着某条路径来匹配，可以匹配成功。但是路径的最后一个节点“e”并不是红色的，也就是说，“he”是某个字符串的前缀子串，但并不能完全匹配任何字符串
 
 ---
 
 #### 实现Trie
 通过一个下标与字符一一映射的数组，来存储子节点的指针
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6f9642c111b956055fabefea018c299a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/6f9642c111b956055fabefea018c299a.png)
 时间复杂度是 O(n)（n 表示要查找字符串的长度）
 ```
 public class Trie {
@@ -1605,7 +1605,7 @@ public class Trie {
 
 #### 优化Trie
 Trie 树是非常耗内存，采取空间换时间的思路。Trie 树的变体有很多，可以在一定程度上解决内存消耗的问题。比如缩点优化，对只有一个子节点的节点，而且此节点不是一个串的结束节点，可以将此节点与子节点合并
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/36f075942a1171b0fb60cc95005ff56d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/36f075942a1171b0fb60cc95005ff56d.png)
 参考文章：[https://time.geekbang.org/column/article/72414](https://time.geekbang.org/column/article/72414)
 
 ---
@@ -1679,14 +1679,14 @@ public class MGraph {
 ## 位图
 ### 基本介绍
 布隆过滤器：一种数据结构，是一个很长的二进制向量（位数组）和一系列随机映射函数（哈希函数），既然是二进制，每个空间存放的不是 0 就是 1，但是初始默认值都是 0，所以布隆过滤器不存数据只存状态
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ef69fb2ed062af951b65a90c77d2c141.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/ef69fb2ed062af951b65a90c77d2c141.png)
 这种数据结构是高效且性能很好的，但缺点是具有一定的错误识别率和删除难度。并且理论情况下，添加到集合中的元素越多，误报的可能性就越大
 
 ---
 
 ### 工作流程
 向布隆过滤器中添加一个元素 key 时，会通过多个 hash 函数得到多个哈希值，在位数组中把对应下标的值置为 1
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1ca7b385f83f6e00dd74ac51b8c2c6db.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/1ca7b385f83f6e00dd74ac51b8c2c6db.png)
 布隆过滤器查询一个数据，是否在二进制的集合中，查询过程如下：
 
 - 通过 K 个哈希函数计算该数据，对应计算出的 K 个 hash 值

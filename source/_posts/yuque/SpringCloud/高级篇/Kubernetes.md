@@ -28,7 +28,7 @@ description: Kubernetes介绍1.1 应用方式部署改变在部署应用程序�
  运行程序所需的资源被容器包装，并和底层基础构架解耦
 容器化的应用程序可以跨云服务商，跨Linux操作系统发行版进行部署
 :::
- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ef0ad2457a4ed077fd9eaf6010da6806.png)
+ ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/ef0ad2457a4ed077fd9eaf6010da6806.png)
 容器化部署方式带来了很多便利，但是也会出现一些问题，比如：
 
 - 一个容器故障停机了，怎么让另外一个容器立刻启动去替补停机的容器
@@ -52,7 +52,7 @@ description: Kubernetes介绍1.1 应用方式部署改变在部署应用程序�
    - 通过Web界面查看集群状态
 - Kubernetes：Google开源的一个容器编排工具
 ### 1.2 Kubernetes简介
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bcd191aa27871e84a0d6583aaf2acae9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/bcd191aa27871e84a0d6583aaf2acae9.png)
 Kubernetes，是一个全新的基于容器的分布式架构领先方案，是谷歌严格保密十几年的密码武器–Borg系统的一个开源版本，于2014年9月发布的第一个版本。
 
 Kubernetes的本质是一组服务器集群，他可以在集群的每个节点上运行特定的程序，来对节点中的容器进行管理，他的目的就是实现资源管理的自动化，主要提供了以下功能：
@@ -65,7 +65,7 @@ Kubernetes的本质是一组服务器集群，他可以在集群的每个节点�
 - **存储编排：**Kubernetes 允许你自动挂载你选择的存储系统，例如本地存储、公共云提供商等。
 - **自动完成装箱计算: **你为 Kubernetes 提供许多节点组成的集群，在这个集群上运行容器化的任务。 你告诉 Kubernetes 每个容器需要多少 CPU 和内存 (RAM)。 Kubernetes 可以将这些容器按实际情况调度到你的节点上，以最佳方式利用你的资源。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/db0d6e785f87cc3694a3e36336878193.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/db0d6e785f87cc3694a3e36336878193.png)
 ### 1.3 kubernetes组件
 一个Kubernetes集群主要是由控制节点，工作节点构成，每个节点上安装有不同的组件。 
 Master：集群的控制平面，负责集群的决策（管理）(控制面板)
@@ -94,8 +94,8 @@ contained:
 CRI-O: 
 pod: 里面至少有一个容器, 可以有多个
 :::
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/103184591ae498b06be1478b48d8eca6.svg)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/10f1d4328436b478ad3079a3f818ca46.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/103184591ae498b06be1478b48d8eca6.svg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/10f1d4328436b478ad3079a3f818ca46.png)
 附加组件:
 :::info
 kube-dns: 负责为整个集群提供DNS服务
@@ -192,7 +192,7 @@ Kubernetes 集群中的 Pod 存在如下两种使用途径：
 - 一个 Pod 中只运行一个容器。"one-container-per-pod" 是 Kubernetes 中最常见的使用方式。此时，您可以认为 Pod 容器组是该容器的 wrapper，Kubernetes 通过 Pod 管理容器，而不是直接管理容器。
 - 一个 Pod 中运行多个需要互相协作的容器。您可以将多个紧密耦合、共享资源且始终在一起运行的容器编排在同一个 Pod 中
 :::
-![1967881-d8ad2d0b00198509.webp](https://raw.githubusercontent.com/choodsire666/blog-img/main/3d07d51cc2734c8594f58e37a9c968d2.webp)
+![1967881-d8ad2d0b00198509.webp](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/3d07d51cc2734c8594f58e37a9c968d2.webp)
 Pod中使用Pause容器来实现, 共享文件系统, 共享资源等
 
 副本
@@ -224,8 +224,8 @@ Deployment:
    - 暂停与恢复 Deployment: 多次修改, 一次滚动升级/回滚
 
 滚动升级/回滚
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b4d9f51e2b6f2e65dcf0479b9271a974.png)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/186cb5d0614d907c9314b346e3cca69e.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/b4d9f51e2b6f2e65dcf0479b9271a974.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/186cb5d0614d907c9314b346e3cca69e.png)
 
 
 **适用于有状态服务**

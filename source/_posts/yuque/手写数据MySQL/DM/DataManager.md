@@ -27,7 +27,7 @@ DataManager 是 DM 层直接对外提供方法的类，同时，也实现成 Dat
 
 1. 先通过页面编号以及偏移量生成唯一标识 uid
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/24fd398fe8f9f0c8a35015a700b7356c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/24fd398fe8f9f0c8a35015a700b7356c.png)
 ```java
 public class Types {
     public static long addressToUid(int pgno, short offset) {
@@ -40,7 +40,7 @@ public class Types {
 
 1. 从 uid 中提取出偏移量（**offset**）
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/56fd167399b06444672d882a64a1f77f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/56fd167399b06444672d882a64a1f77f.png)
 ```java
 // 从 uid 中提取出偏移量（offset），这是通过位操作实现的，偏移量是 uid 的低16位
 // & 运算：有0则0，全1才1
@@ -49,7 +49,7 @@ short offset = (short) (uid & ((1L << 16) - 1));
 
 1. 将 uid 右移32位，再获取页面编号
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e68780073f2553283f0443aed56ad6fe.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/e68780073f2553283f0443aed56ad6fe.png)
 ```java
 // 将 uid 右移32位，以便接下来提取出页面编号（pgno）
 uid >>>= 32;
@@ -89,7 +89,7 @@ protected void releaseForCache(DataItem di) {
 1. 从空文件创建首先需要对第一页进行初始化
 2. 而从已有文件创建，则需要对第一页进行校验，来判断是否需要执行恢复流程，并重新对第一页生成随机字节
 #### 从空文件创建create()
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3fdabf30741b573e80971232d7bbee99.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/3fdabf30741b573e80971232d7bbee99.png)
 ```java
 // 静态方法，用于创建DataManager实例
 public static DataManager create(String path, long mem, TransactionManager tm) {
@@ -107,7 +107,7 @@ public static DataManager create(String path, long mem, TransactionManager tm) {
 }
 ```
 #### 从已有文件创建open()
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1e97c63b524d43776dfe64b40a662f06.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/1e97c63b524d43776dfe64b40a662f06.png)
 ```java
 // 静态方法，用于打开已存在的DataManager实例
 public static DataManager open(String path, long mem, TransactionManager tm) {
@@ -167,7 +167,7 @@ protected DataItem getForCache(long uid) throws Exception {
 ```
 #### insert()
 在 **pageIndex** 中获取一个足以存储插入内容的页面的页号，获取页面后，首先需要写入插入日志，接着才可以通过 **pageX** 插入数据，并返回插入位置的偏移。最后需要将页面信息重新插入 **pageIndex**。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/92ceded06468ab27bb7126699e9f8845.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/92ceded06468ab27bb7126699e9f8845.png)
 ```java
 @Override
 public long insert(long xid, byte[] data) throws Exception {

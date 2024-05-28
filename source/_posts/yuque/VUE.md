@@ -68,7 +68,7 @@ description: "笔记模板语法插值语法功能：用于解析标签体内容
 </html>
 ```
 ## MVVM模型
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f07a980819da2acad9fc0f9c94dfa78a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/VUE/f07a980819da2acad9fc0f9c94dfa78a.png)
 ```sql
 <!DOCTYPE html>
 <html>

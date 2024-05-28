@@ -47,7 +47,7 @@ CREATE TABLE `tb_blog_comments`  (
 ```
 
 **具体发布流程**
-![1653578992639.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/7e45b4e90bfdfb8dd6b0953bfbde9956.png)
+![1653578992639.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/7e45b4e90bfdfb8dd6b0953bfbde9956.png)
 
 上传接口
 ```java
@@ -101,7 +101,7 @@ public class BlogController {
 ## 1.2 查看探店笔记
 实现查看发布探店笔记的接口
 
-![1653579931626.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8fa52ed00c5a95e95d730553e813132f.png)
+![1653579931626.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/8fa52ed00c5a95e95d730553e813132f.png)
 
 实现代码：
 ```java
@@ -130,7 +130,7 @@ public Result queryBlogLikes(@PathVariable("id") Long id) {
 ```
 问题分析：这种方式会导致一个用户无限点赞，明显是不合理的
 造成这个问题的原因是，我们现在的逻辑，发起请求只是给数据库+1，所以才会出现这个问题
-![1653581590453.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9c3a8b8516fc1e621d25947cf3120ed2.png)
+![1653581590453.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/9c3a8b8516fc1e621d25947cf3120ed2.png)
 完善点赞功能
 需求：
 
@@ -272,12 +272,12 @@ public Result likeBlog(Long id){
 ## 1.4 点赞排行榜
 在探店笔记的详情页面，应该把给该笔记点赞的人显示出来，比如最早点赞的TOP5，形成点赞排行榜
 之前的点赞是放到set集合，但是set集合是不能排序的，所以这个时候，咱们可以采用一个可以排序的set集合，就是咱们的sortedSet
-![1653805077118.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/96b9624038307ad6ffdcfa9d5630779f.png)
+![1653805077118.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/96b9624038307ad6ffdcfa9d5630779f.png)
 
 我们接下来来对比一下这些集合的区别是什么
 所有点赞的人，需要是唯一的，所以我们应当使用set或者是sortedSet
 其次我们需要排序，就可以直接锁定使用sortedSet啦
-![1653805203758.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/dc974fcf96c90de933b3df938b98288a.png)
+![1653805203758.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/dc974fcf96c90de933b3df938b98288a.png)
 修改代码
 点赞逻辑代码
 ```java
@@ -357,7 +357,7 @@ public Result queryBlogLikes(Long id) {
 # 2 好友关注
 ## 2.1 关注和取消关注
 针对用户的操作：可以对用户进行关注和取消关注功能。
-![1653806140822.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ba2aebf0fa77831b43d0a1d810a38c2c.png)
+![1653806140822.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/ba2aebf0fa77831b43d0a1d810a38c2c.png)
 
 实现思路：
 需求：基于该表数据结构，实现两个接口：
@@ -436,7 +436,7 @@ public Result follow(Long followUserId, Boolean isFollow) {
 2. 去查询用户的笔记
 
 以上两个功能和共同关注没有什么关系，大家可以自行将笔记中的代码拷贝到idea中就可以实现这两个功能了，我们的重点在于共同关注功能。
-![1653806706296.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02dd39a93288ede1f3afc4802fd3d014.png)
+![1653806706296.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/02dd39a93288ede1f3afc4802fd3d014.png)
 ```java
 // UserController 根据id查询用户
 @GetMapping("/{id}")
@@ -467,7 +467,7 @@ public Result queryBlogByUserId(
 接下来我们来看看共同关注如何实现：
 需求：利用Redis中恰当的数据结构，实现共同关注功能。在博主个人页面展示出当前用户与博主的共同关注呢。
 当然是使用我们之前学习过的set集合咯，在set集合中，有交集并集补集的api，我们可以把两人的关注的人分别放入到一个set集合中，然后再通过api去查看这两个set集合中的交集数据。
-![1653806973212.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a7b72f062e74db644a6b08ac23f82fbb.png)
+![1653806973212.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/a7b72f062e74db644a6b08ac23f82fbb.png)
 
 我们先来改造当前的关注列表
 改造原因是因为我们需要在用户关注了某位用户后，需要将数据放入到set集合中，方便后续进行共同关注，同时当取消关注时，也需要从set集合中进行删除
@@ -530,9 +530,9 @@ public Result followCommons(Long id) {
 ## 2.3 Feed流实现方案
 当我们关注了用户后，这个用户发了动态，那么我们应该把这些数据推送给用户，这个需求，其实我们又把他叫做Feed流，关注推送也叫做Feed流，直译为投喂。为用户持续的提供“沉浸式”的体验，通过无限下拉刷新获取新的信息。
 对于传统的模式的内容解锁：我们是需要用户去通过搜索引擎或者是其他的方式去解锁想要看的内容
-![1653808641260.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d8fa1a07ba474a0d9a7552a60f9f30af.png)
+![1653808641260.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/d8fa1a07ba474a0d9a7552a60f9f30af.png)
 对于新型的Feed流的的效果：不需要我们用户再去推送信息，而是系统分析用户到底想要什么，然后直接把内容推送给用户，从而使用户能够更加的节约时间，不用主动去寻找。
-![1653808993693.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b938571fe32f98dd580d8f11ffe857e7.png)
+![1653808993693.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/b938571fe32f98dd580d8f11ffe857e7.png)
 Feed流产品有两种常见模式：
 **Timeline**：不做内容筛选，简单的按照内容发布时间排序，常用于好友或关注。例如朋友圈
 
@@ -556,16 +556,16 @@ Feed流产品有两种常见模式：
 优点：比较节约空间，因为赵六在读信息时，并没有重复读取，而且读取完之后可以把他的收件箱进行清楚。
 缺点：比较延迟，当用户读取数据时才去关注的人里边去读取数据，假设用户关注了大量的用户，那么此时就会拉取海量的内容，对服务器压力巨大。
 
-![1653809450816.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9ff5683c071363bfc4c6b730b699dcb1.png)
+![1653809450816.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/9ff5683c071363bfc4c6b730b699dcb1.png)
 
 **推模式**：也叫做写扩散。
 推模式是没有写邮箱的，当张三写了一个内容，此时会主动的把张三写的内容发送到他的粉丝收件箱中去，假设此时李四再来读取，就不用再去临时拉取了
 优点：时效快，不用临时拉取
 缺点：内存压力大，假设一个大V写信息，很多人关注他， 就会写很多分数据到粉丝那边去
-![1653809875208.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/39b0fa48ad743cb49f57ed11928a52dc.png)
+![1653809875208.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/39b0fa48ad743cb49f57ed11928a52dc.png)
 **推拉结合模式**：也叫做读写混合，兼具推和拉两种模式的优点。
 推拉模式是一个折中的方案，站在发件人这一段，如果是个普通的人，那么我们采用写扩散的方式，直接把数据写入到他的粉丝中去，因为普通的人他的粉丝关注量比较小，所以这样做没有压力，如果是大V，那么他是直接将数据先写入到一份到发件箱里边去，然后再直接写一份到活跃粉丝收件箱里边去，现在站在收件人这端来看，如果是活跃粉丝，那么大V和普通的人发的都会直接写入到自己收件箱里边来，而如果是普通的粉丝，由于他们上线不是很频繁，所以等他们上线时，再从发件箱里边去拉信息。
-![1653812346852.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e6776f6e8aba242a8d73ba6cbf88e94b.png)
+![1653812346852.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/e6776f6e8aba242a8d73ba6cbf88e94b.png)
 ## 2.4 推送到粉丝收件箱
 需求：
 
@@ -576,14 +576,14 @@ Feed流产品有两种常见模式：
 Feed流中的数据会不断更新，所以数据的角标也在变化，因此不能采用传统的分页模式。
 传统了分页在feed流是不适用的，因为我们的数据会随时发生变化
 假设在t1 时刻，我们去读取第一页，此时page = 1 ，size = 5 ，那么我们拿到的就是10~6 这几条记录，假设现在t2时候又发布了一条记录，此时t3 时刻，我们来读取第二页，读取第二页传入的参数是page=2 ，size=5 ，那么此时读取到的第二页实际上是从6 开始，然后是6~2 ，那么我们就读取到了重复的数据，所以feed流的分页，不能采用原始方案来做。
-![1653813047671.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/bf86f7efd161c7954c01c398ce29b77c.png)
+![1653813047671.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/bf86f7efd161c7954c01c398ce29b77c.png)
 
 
 Feed流的滚动分页
 我们需要记录每次操作的最后一条，然后从这个位置开始去读取数据
 举个例子：我们从t1时刻开始，拿第一页数据，拿到了10~6，然后记录下当前最后一次拿取的记录，就是6，t2时刻发布了新的记录，此时这个11放到最顶上，但是不会影响我们之前记录的6，此时t3时刻来拿第二页，第二页这个时候拿数据，还是从6后一点的5去拿，就拿到了5-1的记录。我们这个地方可以采用sortedSet来做，可以进行范围查询，并且还可以记录当前获取数据时间戳最小值，就可以实现滚动分页了
 
-![1653813462834.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/41255243a47f62dea911a8940e3ed66d.png)
+![1653813462834.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/41255243a47f62dea911a8940e3ed66d.png)
 核心的意思：就是我们在保存完探店笔记后，获得到当前笔记的粉丝，然后把数据推送到粉丝的redis中去。
 ```java
 @Override
@@ -620,7 +620,7 @@ public Result saveBlog(Blog blog) {
 综上：我们的请求参数中就需要携带 lastId：上一次查询的最小时间戳 和偏移量这两个参数。
 这两个参数第一次会由前端来指定，以后的查询就根据后台结果作为条件，再次传递到后台。
 
-![1653819821591.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/bbf6c77fc59376df08e09c78b908c286.png)
+![1653819821591.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/10 Set数据结构的应用/bbf6c77fc59376df08e09c78b908c286.png)
 
 定义出来具体的返回值实体类
 ```java

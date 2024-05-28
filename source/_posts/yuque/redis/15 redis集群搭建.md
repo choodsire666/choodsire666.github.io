@@ -18,15 +18,15 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 yum install -y gcc tcl
 ```
 然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d5c8984c3b5bec7a470d6b8664cf6b31.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/d5c8984c3b5bec7a470d6b8664cf6b31.png)
 例如，我放到了/tmp目录：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/279fc45d3b5edef3d41d7d628a86cf29.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/279fc45d3b5edef3d41d7d628a86cf29.png)
 解压缩：
 ```shell
 tar -xzf redis-6.2.4.tar.gz
 ```
 解压后：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c1896bac15d2b633cb3fb2f19a09dcb3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/c1896bac15d2b633cb3fb2f19a09dcb3.png)
 
 进入redis目录：
 ```shell
@@ -62,7 +62,7 @@ redis-cli shutdown
 # 2 Redis主从集群
 ## 2.1 集群结构
 我们搭建的主从集群结构如图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/09865038b9c322de40cf27fe623bc16a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/09865038b9c322de40cf27fe623bc16a.png)
 共包含三个节点，一个主节点，两个从节点。
 这里我们会在同一台虚拟机中开启3个redis实例，模拟主从集群，信息如下：
 
@@ -83,7 +83,7 @@ cd /tmp
 mkdir 7001 7002 7003
 ```
 如图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/984b9df81e33b7d2fe33c63bb3cdd029.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/984b9df81e33b7d2fe33c63bb3cdd029.png)
 2）恢复原始配置
 修改redis-6.2.4/redis.conf文件，将其中的持久化模式改为默认的RDB模式，AOF保持关闭状态。
 ```properties
@@ -147,7 +147,7 @@ redis-server 7003/redis.conf
 ```
 
 启动后：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dce91a68440f9a00a5514967e454fd93.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/dce91a68440f9a00a5514967e454fd93.png)
 如果要一键停止，可以运行下面命令：
 ```shell
 printf '%s\n' 7001 7002 7003 | xargs -I{} -t redis-cli -p {} shutdown
@@ -190,7 +190,7 @@ info replication
 ```
 
 结果：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/50fae29bd505a3af2ab1e2075d408b5f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/50fae29bd505a3af2ab1e2075d408b5f.png)
 ## 2.5 测试
 执行下列操作以测试：
 
@@ -203,7 +203,7 @@ info replication
 ## 3.1 集群结构
 这里我们搭建一个三节点形成的Sentinel集群，来监管之前的Redis主从集群。如图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a670594a4f5672928222aaec962d6e35.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/a670594a4f5672928222aaec962d6e35.png)
 三个sentinel实例信息如下：
 
 | 节点 | IP | PORT |
@@ -223,7 +223,7 @@ mkdir s1 s2 s3
 ```
 
 如图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/97376f2831660721f24a0f03af431a53.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/97376f2831660721f24a0f03af431a53.png)
 
 然后我们在s1目录创建一个sentinel.conf文件，添加下面的内容：
 ```properties
@@ -269,23 +269,23 @@ redis-sentinel s3/sentinel.conf
 ```
 
 启动后：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/437753d9239031b78c13fcba2216c6b2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/437753d9239031b78c13fcba2216c6b2.png)
 
 ## 3.4 测试
 尝试让master节点7001宕机，查看sentinel日志：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3a8c47da986bcd5a5300b9d578ed02f3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/3a8c47da986bcd5a5300b9d578ed02f3.png)
 
 查看7003的日志：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/76ef41c4620bf0dac0836ea92fb44a17.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/76ef41c4620bf0dac0836ea92fb44a17.png)
 
 查看7002的日志：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9e4c687c7eabe6eeb703bccd744c9ecf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/9e4c687c7eabe6eeb703bccd744c9ecf.png)
 
 # 4 搭建分片集群
 ## 4.1 集群结构
 分片集群需要的节点数量较多，这里我们搭建一个最小的分片集群，包含3个master节点，每个master包含一个slave节点，结构如下：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7306a2506e28556f86d504882c41d9d4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/7306a2506e28556f86d504882c41d9d4.png)
 
 这里我们会在同一台虚拟机中开启6个redis实例，模拟分片集群，信息如下：
 
@@ -365,7 +365,7 @@ ps -ef | grep redis
 ```
 
 发现服务都已经正常启动：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/91e68e530ea403e298622ed0fb79760e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/91e68e530ea403e298622ed0fb79760e.png)
 
 如果要关闭所有进程，可以执行命令：
 ```shell
@@ -409,16 +409,16 @@ redis-cli --cluster create --cluster-replicas 1 192.168.150.101:7001 192.168.150
 - `--replicas 1`或者`--cluster-replicas 1` ：指定集群中每个master的副本个数为1，此时`节点总数 ÷ (replicas + 1)` 得到的就是master的数量。因此节点列表中的前n个就是master，其它节点都是slave节点，随机分配到不同master
 
 运行后的样子：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b350ae453d4e5b2d847eaa128d621feb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/b350ae453d4e5b2d847eaa128d621feb.png)
 
 这里输入yes，则集群开始创建：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe936cf7cdabcb2445ca2a42cc821234.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/fe936cf7cdabcb2445ca2a42cc821234.png)
 
 通过命令可以查看集群状态：
 ```shell
 redis-cli -p 7001 cluster nodes
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/522096aa8ed10e28a9adf1faec5cfc92.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/522096aa8ed10e28a9adf1faec5cfc92.png)
 
 ## 4.5 测试
 尝试连接7001节点，存储一个数据：
@@ -433,10 +433,10 @@ get num
 set a 1
 ```
 结果悲剧了：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/48690401cc5dccaa000ea5a5f795ee32.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/48690401cc5dccaa000ea5a5f795ee32.png)
 集群操作时，需要给`redis-cli`加上`-c`参数才可以：
 ```shell
 redis-cli -c -p 7001
 ```
 这次可以了：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7ca9f88be9b04899f348204e3784a628.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/7ca9f88be9b04899f348204e3784a628.png)

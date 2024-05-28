@@ -18,7 +18,7 @@ UV统计在服务端做会比较麻烦，因为要判断该用户是否已经统
 Hyperloglog（HLL）是从Loglog算法派生的概率算法，用于确定非常大的集合的基数，而不需要存储其所有值。
 相关算法原理大家可以参考：[https://juejin.cn/post/6844903785744056333#heading-0](https://juejin.cn/post/6844903785744056333#heading-0)
 Redis中的HLL是基于string结构实现的，单个HLL的内存**永远小于16kb**，**内存占用低**的令人发指！作为代价，其测量结果是概率性的，**有小于0.81％的误差**。不过对于UV统计来说，这完全可以忽略。
-![1653837988985.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e36c21a9ee47864685772785a09b0eef.png)
+![1653837988985.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/13 HyperLog数据结构的应用/e36c21a9ee47864685772785a09b0eef.png)
 ## 2 测试百万数据的统计
 测试思路：我们直接利用单元测试，向HyperLogLog中添加100万条数据，看看内存占用和统计效果如何
 ```java

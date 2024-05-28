@@ -320,7 +320,7 @@ select * from emp where gender = '男' and age between 20 and 40 order by age as
 
 # 8 执行顺序
 在讲解DQL语句的具体语法之前，我们已经讲解了DQL语句的完整语法，及编写顺序，接下来，我们要来说明的是DQL语句在执行时的执行顺序，也就是先执行那一部分，后执行那一部分。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/74fd626aed339a07ea14fa787a338f25.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/04%20SQL-DQL/74fd626aed339a07ea14fa787a338f25.png)
 验证：查询年龄大于15的员工姓名、年龄，并根据年龄进行升序排序。
 ```plsql
 select name , age from emp where age > 15 order by age asc;
@@ -336,7 +336,7 @@ select e.name , e.age from emp e where e.age > 15 order by age asc;
 select e.name ename , e.age eage from emp e where eage > 15 order by age asc;
 ```
 执行上述SQL报错了:
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e90a4b3f8a51ff49d5f2ea2ee99f82cd.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/04%20SQL-DQL/e90a4b3f8a51ff49d5f2ea2ee99f82cd.png)
 由此我们可以得出结论: from 先执行，然后执行 where ， 再执行select 。
 接下来，我们再执行如下SQL语句，查看执行效果：
 ```plsql

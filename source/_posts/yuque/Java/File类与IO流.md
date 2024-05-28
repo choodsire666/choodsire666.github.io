@@ -1,7 +1,7 @@
 ---
 
 ## 本章专题与脉络
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e408e980359d30585c699f9f10314123.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/e408e980359d30585c699f9f10314123.png)
 
 ---
 
@@ -107,7 +107,7 @@ public class FileObjectTest {
 - public long lastModified() ：获取最后一次的修改时间，毫秒值
 
 如果File对象代表的文件或目录存在，则File对象实例初始化时，就会用硬盘中对应文件或目录的属性信息（例如，时间、类型等）为File对象的属性赋值，否则除了路径和名称，File对象的其他属性将会保留默认值。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9dcc1ce1ed9fbd4351e7f6628d767ebf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/9dcc1ce1ed9fbd4351e7f6628d767ebf.png)
 举例：
 ```java
 package com.atguigu.file;
@@ -406,15 +406,15 @@ public class ListFilesTest {
 }
 ```
 ## 2. IO流原理及流的分类
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b741bbbe3b0fc9792b77ae636ea477fe.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/b741bbbe3b0fc9792b77ae636ea477fe.png)
 ### 2.1 Java IO原理
 
-- Java程序中，对于数据的输入/输出操作以“流(stream)” 的方式进行，可以看做是一种数据的流动。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c4cca33a58d3707f4e7bd0b75471a497.png)
+- Java程序中，对于数据的输入/输出操作以“流(stream)” 的方式进行，可以看做是一种数据的流动。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/c4cca33a58d3707f4e7bd0b75471a497.png)
 - I/O流中的I/O是Input/Output的缩写， I/O技术是非常实用的技术，用于处理设备之间的数据传输。如读/写文件，网络通讯等。
    - 输入input：读取外部数据（磁盘、光盘等存储设备的数据）到程序（内存）中。
    - 输出output：将程序（内存）数据输出到磁盘、光盘等存储设备中。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7ee34e6583e761a45a0f30082603400e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/7ee34e6583e761a45a0f30082603400e.png)
 ### 2.2 流的分类
 java.io包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过标准的方法输入或输出数据。
 
@@ -429,11 +429,11 @@ java.io包下提供了各种“流”类和接口，用以获取不同种类的�
    - **字符流** ：以字符为单位，读写数据的流。 
       - 以Reader、Writer结尾
 - 根据IO流的角色不同分为：**节点流**和**处理流**。
-   - **节点流**：直接从数据源或目的地读写数据![](https://raw.githubusercontent.com/choodsire666/blog-img/main/77de72fd47276f4238c080bc20e158e5.png)
-   - **处理流**：不直接连接到数据源或目的地，而是“连接”在已存在的流（节点流或处理流）之上，通过对数据的处理为程序提供更为强大的读写功能。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/27ef43e495fee1a2b86bc88b84e66639.png)
+   - **节点流**：直接从数据源或目的地读写数据![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/77de72fd47276f4238c080bc20e158e5.png)
+   - **处理流**：不直接连接到数据源或目的地，而是“连接”在已存在的流（节点流或处理流）之上，通过对数据的处理为程序提供更为强大的读写功能。![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/27ef43e495fee1a2b86bc88b84e66639.png)
 
 小结：图解
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c290255969c500774c86fa37b488bb63.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/c290255969c500774c86fa37b488bb63.png)
 ### 2.3 流的API
 
 - Java的IO流共涉及40多个类，实际上非常规则，都是从如下4个抽象基类派生的。
@@ -444,7 +444,7 @@ java.io包下提供了各种“流”类和接口，用以获取不同种类的�
 
 - 由这四个类派生出来的子类名称都是以其父类名作为子类名后缀。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2ac39f9d4f08ab684279f2e652fe00e4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/2ac39f9d4f08ab684279f2e652fe00e4.png)
 **常用的节点流：**
 
 - 文件流： FileInputStream、FileOutputStrean、FileReader、FileWriter
@@ -609,7 +609,7 @@ public class FileReaderWriterTest {
 }
 ```
 不同实现方式的类比：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f1bfd8b806a709e3ebd82d276917e99f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/f1bfd8b806a709e3ebd82d276917e99f.png)
 #### 3.2.2 FileWriter
 java.io.FileWriter类用于写出字符到文件，构造时使用系统默认的字符编码和默认字节缓冲区。
 
@@ -979,7 +979,7 @@ public class FOSWrite {
 ### 4.3 练习
 **练习：**实现图片加密操作。
 提示：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/312885ac87182ed435f700a35d8b552f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/312885ac87182ed435f700a35d8b552f.png)
 ```java
 /**
  * @author 尚硅谷-宋红康
@@ -1094,8 +1094,8 @@ public class FileSecretTest {
    - **字符缓冲流**：BufferedReader，BufferedWriter
 - 缓冲流的基本原理：在创建流对象时，内部会创建一个缓冲区数组（缺省使用8192个字节(8Kb)的缓冲区），通过缓冲区读写，减少系统IO次数，从而提高读写的效率。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0be24febcd5016bec5cb014f6a6a0bf3.png)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9eea9ef3c6337cf2b0684cbfbefebe38.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/0be24febcd5016bec5cb014f6a6a0bf3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/9eea9ef3c6337cf2b0684cbfbefebe38.png)
 ### 5.1 构造器
 
 - public BufferedInputStream(InputStream in) ：创建一个 新的字节型的缓冲输入流。
@@ -1358,9 +1358,9 @@ public class Problem {
 针对文本文件，现在使用一个字节流进行数据的读入，希望将数据显示在控制台上。此时针对包含中文的文本数据，可能会出现乱码。
 ### 6.2 转换流的理解
 **作用：转换流是字节与字符间的桥梁！**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/97636575e64d8053b42bd45c73f6f6a5.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/97636575e64d8053b42bd45c73f6f6a5.jpg)
 具体来说：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2ee535a38b474d5e2211046b9b1e0201.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/2ee535a38b474d5e2211046b9b1e0201.png)
 ### 6.3 InputStreamReader 与 OutputStreamWriter
 
 - **InputStreamReader**
@@ -1515,11 +1515,11 @@ Unicode符号范围 | UTF-8编码方式
 
 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/aabfc3ad5b917bbc720598430c741214.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/aabfc3ad5b917bbc720598430c741214.png)
 
 - 小结
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/28b35c7d4b1e72be75a39bcbd0d6e9c9.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/28b35c7d4b1e72be75a39bcbd0d6e9c9.jpg)
 注意：在中文操作系统上，ANSI（美国国家标准学会、AMERICAN NATIONAL STANDARDS INSTITUTE: ANSI）编码即为GBK；在英文操作系统上，ANSI编码即为ISO-8859-1。
 ### 6.5 练习
 把当前module下的《康师傅的话.txt》字符编码为GBK，复制到电脑桌面目录下的《寄语.txt》，
@@ -1660,7 +1660,7 @@ ObjectInputStream ois = new ObjectInputStream(fis);
 - 序列化过程：用一个字节序列可以表示一个对象，该字节序列包含该对象的类型和对象中存储的属性等信息。字节序列写出到文件之后，相当于文件中持久保存了一个对象的信息。
 - 反序列化过程：该字节序列还可以从文件中读取回来，重构对象，对它进行反序列化。对象的数据、对象的类型和对象中存储的数据信息，都可以用来在内存中创建对象。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/65061add6d48a56ca4a9c0f66081457c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/65061add6d48a56ca4a9c0f66081457c.png)
 **2、序列化机制的重要性**
 序列化是 RMI（Remote Method Invoke、远程方法调用）过程的参数和返回值都必须实现的机制，而 RMI 是 JavaEE 的基础。因此序列化机制是 JavaEE 平台的基础。
 序列化的好处，在于可将任何实现了Serializable接口的对象转化为**字节数据**，使其在保存和传输时可被还原。
@@ -1671,7 +1671,7 @@ ObjectInputStream ois = new ObjectInputStream(fis);
 - 反序列化：用ObjectInputStream类读取基本类型数据或对象的机制。方法为：
    - public final Object readObject () : 读取一个对象。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/918a68d0caf4ca5e1e3b3f59f540ac3c.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/918a68d0caf4ca5e1e3b3f59f540ac3c.jpg)
 ### 7.4 如何实现序列化机制
 如果需要让某个对象支持序列化机制，则必须让对象所属的类及其属性是可序列化的，为了让某个类是可序列化的，该类必须实现java.io.Serializable 接口。Serializable 是一个标记接口，不实现此接口的类将不会使任何状态序列化或反序列化，会抛出NotSerializableException 。
 
@@ -1904,7 +1904,7 @@ public class Employee implements Serializable {
    - 编写Save()方法保存对象到“save.bin”
    - 编写Load()方法获得对象，计算客户所需付款
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9a96e0bf2c4c639cc4db9b9b25633fd2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/9a96e0bf2c4c639cc4db9b9b25633fd2.png)
 ## 8. 其他流的使用
 ### 8.1 标准输入、输出流
 
@@ -1986,7 +1986,7 @@ private static native void setErr0(PrintStream err);
 ```
 **练习：**
 Create a program named MyInput.java: Contain the methods for reading int, double, float, boolean, short, byte and String values from the keyboard.
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9cc621f2bb51e97699c7cf518ef1e576.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/9cc621f2bb51e97699c7cf518ef1e576.png)
 ```java
 package com.atguigu.java;
 // MyInput.java: Contain the methods for reading int, double, float, boolean, short, byte and
@@ -2049,7 +2049,7 @@ public class MyInput {
 
 - 实现将基本数据类型的数据格式转化为字符串输出。
 - 打印流：PrintStream和PrintWriter
-   - 提供了一系列重载的print()和println()方法，用于多种数据类型的输出![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0b98381cdda9e890e104dcb88360f0ec.png)![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cacf96cf8a790eabf54dbbefd893f56e.png)
+   - 提供了一系列重载的print()和println()方法，用于多种数据类型的输出![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/0b98381cdda9e890e104dcb88360f0ec.png)![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/cacf96cf8a790eabf54dbbefd893f56e.png)
    - PrintStream和PrintWriter的输出不会抛出IOException异常
    - PrintStream和PrintWriter有自动flush功能
    - PrintStream 打印的所有字符都使用平台的默认字符编码转换为字节。在需要写入字符而不是写入字节的情况下，应该使用 PrintWriter 类。
@@ -2199,7 +2199,7 @@ Apahce软件基金会属于第三方，（Oracle公司第一方，我们自己�
 
 - 在导入commons-io-2.5.jar包之后，内部的API都可以使用。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e795ad1de4ede154c95d1b46675c96ee.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流**/e795ad1de4ede154c95d1b46675c96ee.png)
 
 - IOUtils类的使用
 ```java

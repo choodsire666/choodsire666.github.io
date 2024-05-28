@@ -10,23 +10,23 @@ description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从m
 # 1 介绍
 ## 1.1 问题分析
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/603a9d2fd3b8f8da7695c3f4cc92c813.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/603a9d2fd3b8f8da7695c3f4cc92c813.png)
 随着互联网及移动互联网的发展，应用系统的数据量也是成指数式增长，若采用单数据库进行数据存储，存在以下性能瓶颈：
 
 1. IO瓶颈：热点数据太多，数据库缓存不足，产生大量磁盘IO，效率较低。 请求数据太多，带宽不够，网络IO瓶颈。
 2. CPU瓶颈：排序、分组、连接查询、聚合统计等SQL会耗费大量的CPU资源，请求数太多，CPU出现瓶颈。
 
 为了解决上述问题，我们需要对数据库进行分库分表处理。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b2e540eafaeb27cf837be1f0c9f4a913.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/b2e540eafaeb27cf837be1f0c9f4a913.png)
 分库分表的中心思想都是将数据分散存储，使得单一数据库/表的数据量变小来缓解单一数据库的性能问题，从而达到提升数据库性能的目的。
 
 ## 1.2 拆分策略
 分库分表的形式，主要是两种：垂直拆分和水平拆分。而拆分的粒度，一般又分为分库和分表，所以组成的拆分策略最终如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a89476eb24c932de3199cc244113c65a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/a89476eb24c932de3199cc244113c65a.png)
 ## 1.3 垂直拆分
 
 1. 垂直分库
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/11dcc52a7e767e04b531cc51f8769fc7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/11dcc52a7e767e04b531cc51f8769fc7.png)
 垂直分库：以表为依据，根据业务将不同表拆分到不同库中。
 特点：
    - 每个库的表结构都不一样。
@@ -34,7 +34,7 @@ description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从m
    - 所有库的并集是全量数据。
 
 2. 垂直分表
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ecf4877fe9848b180ec75311edc1d7ba.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/ecf4877fe9848b180ec75311edc1d7ba.png)
 垂直分表：以字段为依据，根据字段属性将不同字段拆分到不同表中。
 特点：
    - 每个表的结构都不一样。
@@ -44,7 +44,7 @@ description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从m
 ## 1.4 水平拆分
 
 1. 水平分库
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e3178032460fb55c6844a6ebe261d4e8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/e3178032460fb55c6844a6ebe261d4e8.png)
 
 水平分库：以字段为依据，按照一定策略，将一个库的数据拆分到多个库中。
 特点：
@@ -54,7 +54,7 @@ description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从m
 - 所有库的并集是全量数据。
 
 2. 水平分表
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c7b9e742499db67c2061c3c543435055.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/c7b9e742499db67c2061c3c543435055.png)
 水平分表：以字段为依据，按照一定策略，将一个表的数据拆分到多个表中。
 特点：
    - 每个表的表结构都一样。
@@ -67,13 +67,13 @@ description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从m
 - shardingJDBC：基于AOP原理，在应用程序中对本地执行的SQL进行拦截，解析、改写、路由处理。需要自行编码配置实现，只支持java语言，性能较高。
 - MyCat：数据库分库分表中间件，不用调整代码即可实现分库分表，支持多种语言，性能不及前者。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e65f712367d9d218bf33f25c81dd931e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/e65f712367d9d218bf33f25c81dd931e.png)
 我们选择了是MyCat数据库中间件，通过MyCat中间件来完成分库分表操作。
 # 2 MyCat概述
 ## 2.1 介绍
 Mycat是开源的、活跃的、基于Java语言编写的MySQL数据库中间件。可以像使用mysql一样来使用mycat，对于开发人员来说根本感觉不到mycat的存在。
 开发人员只需要连接MyCat即可，而具体底层用到几台数据库，每一台数据库服务器里面存储了什么数据，都无需关心。 具体的分库分表的策略，只需要在MyCat中配置即可。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5371059246a68a5a2f22af83a148a693.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/5371059246a68a5a2f22af83a148a693.png)
 优势：
 
 - 性能可靠稳定
@@ -83,7 +83,7 @@ Mycat是开源的、活跃的、基于Java语言编写的MySQL数据库中间件
 
 ## 2.2 下载
 下载地址：[http://dl.mycat.org.cn/](http://dl.mycat.org.cn/)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/84c37338ee3de9a3a11fb90477d63526.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/84c37338ee3de9a3a11fb90477d63526.png)
 Mycat是采用java语言开发的开源的数据库中间件，支持Windows和Linux运行环境，下面介绍
 MyCat的Linux中的环境搭建。我们需要在准备好的服务器中安装如下软件。
 
@@ -98,7 +98,7 @@ MyCat的Linux中的环境搭建。我们需要在准备好的服务器中安装�
 | 192.168.200.214 | MySQL | 分片服务器 |
 
 ## 2.3 目录介绍
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/841db083c87fb7ef42c4e3ae0217713b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/841db083c87fb7ef42c4e3ae0217713b.png)
 
 - bin : 存放可执行文件，用于启动停止mycat
 - conf：存放mycat的配置文件
@@ -107,21 +107,21 @@ MyCat的Linux中的环境搭建。我们需要在准备好的服务器中安装�
 ## 2.4 概念介绍
 
 在MyCat的整体结构中，分为两个部分：上面的逻辑结构、下面的物理结构。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/08f66875bf133273d9afd3f7dfe21b01.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/08f66875bf133273d9afd3f7dfe21b01.png)
 在MyCat的逻辑结构主要负责逻辑库、逻辑表、分片规则、分片节点等逻辑结构的处理，而具体的数据存储还是在物理结构，也就是数据库服务器中存储的。
 在后面讲解MyCat入门以及MyCat分片时，还会讲到上面所提到的概念。
 
 # 3 MyCat入门
 ## 3.1 需求
 由于 tb_order 表中数据量很大，磁盘IO及容量都到达了瓶颈，现在需要对 tb_order 表进行数据分片，分为三个数据节点，每一个节点主机位于不同的服务器上, 具体的结构，参考下图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5270e3a2e384948aeab26180b86e3e57.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/5270e3a2e384948aeab26180b86e3e57.png)
 
 ## 3.2 环境准备
 准备3台服务器：
 192.168.200.210：MyCat中间件服务器，同时也是第一个分片服务器。
 192.168.200.213：第二个分片服务器。
 192.168.200.214：第三个分片服务器。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ebc1a897a8da42354905dc697af2fad5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/ebc1a897a8da42354905dc697af2fad5.png)
 并且在上述3台数据库中创建数据库 db01
 
 ## 3.3 配置
@@ -192,7 +192,7 @@ bin/mycat stop
 ```
 Mycat启动之后，占用端口号 8066。
 启动完毕之后，可以查看logs目录下的启动日志，查看Mycat是否启动完成。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17c1834ecd54372ec645007b2e871fec.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/17c1834ecd54372ec645007b2e871fec.png)
 ### 3.4.2 测试
 1) 连接MyCat
 通过如下指令，就可以连接并登陆MyCat。
@@ -233,7 +233,7 @@ INSERT INTO TB_ORDER(id,title) VALUES(15000001,'goods15000001');
 # 4 MyCat配置
 ## 4.1 schema.xml
 schema.xml 作为MyCat中最重要的配置文件之一 , 涵盖了MyCat的逻辑库 、 逻辑表 、 分片规则、分片节点及数据源的配置。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5bffcc0bbcdda0207e6f8c77a3018590.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/5bffcc0bbcdda0207e6f8c77a3018590.png)
 主要包含以下三组标签：
 
 - schema标签
@@ -241,7 +241,7 @@ schema.xml 作为MyCat中最重要的配置文件之一 , 涵盖了MyCat的逻�
 - datahost标签
 ### 4.1.1 schema标签
 1) schema 定义逻辑库
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8e5e6793b1d6db6f8f0e06adfaa12456.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/8e5e6793b1d6db6f8f0e06adfaa12456.png)
 schema 标签用于定义 MyCat实例中的逻辑库 , 一个MyCat实例中, 可以有多个逻辑库 , 可以通过 schema 标签来划分不同的逻辑库。MyCat中的逻辑库的概念，等同于MySQL中的database概念, 需要操作某个逻辑库下的表时, 也需要切换逻辑库(use xxx)。
 核心属性：
 
@@ -250,7 +250,7 @@ schema 标签用于定义 MyCat实例中的逻辑库 , 一个MyCat实例中, 可
 - sqlMaxLimit：如果未指定limit进行查询，列表查询模式查询多少条记录
 
 2) schema 中的table定义逻辑表
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b815f32a2aad71d71733f431ceb4a9aa.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/b815f32a2aad71d71733f431ceb4a9aa.png)
 table 标签定义了MyCat中逻辑库schema下的逻辑表 , 所有需要拆分的表都需要在table标签中定义 。
 核心属性：
 
@@ -260,7 +260,7 @@ table 标签定义了MyCat中逻辑库schema下的逻辑表 , 所有需要拆分
 - primaryKey：逻辑表对应真实表的主键
 - type：逻辑表的类型，目前逻辑表只有全局表和普通表，如果未配置，就是普通表；全局表，配置为 global
 ### 4.1.2 datanode标签
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/687dd512036b341a6c4cffcefe1c39be.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/687dd512036b341a6c4cffcefe1c39be.png)
 核心属性：
 
 - name：定义数据节点名称
@@ -268,7 +268,7 @@ table 标签定义了MyCat中逻辑库schema下的逻辑表 , 所有需要拆分
 - database：定义分片所属数据库
 
 ### 4.1.3 datahost标签
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dc344492c3ffd7cfb8213bbe1d2f2729.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/dc344492c3ffd7cfb8213bbe1d2f2729.png)
 该标签在MyCat逻辑库中作为底层标签存在, 直接定义了具体的数据库实例、读写分离、心跳语句。
 核心属性：
 
@@ -280,11 +280,11 @@ table 标签定义了MyCat中逻辑库schema下的逻辑表 , 所有需要拆分
 
 ## 4.2 rule.xml
 rule.xml中定义所有拆分表的规则, 在使用过程中可以灵活的使用分片算法, 或者对同一个分片算法使用不同的参数, 它让分片过程可配置化。主要包含两类标签：tableRule、Function。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f7f83766415cd89dfce147a4c0125954.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/f7f83766415cd89dfce147a4c0125954.png)
 ## 4.3 server.xml
 server.xml配置文件包含了MyCat的系统配置信息，主要有两个重要的标签：system、user。
 1) system标签
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/4083da0735fde57d1649c42943670aeb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/4083da0735fde57d1649c42943670aeb.png)
 主要配置MyCat中的系统配置信息，对应的系统配置项及其含义，如下：
 
 | 属性 | 取值 | 含义 |
@@ -319,18 +319,18 @@ show @[@sql.sum ](/sql.sum );  |
 
 2) user标签
 配置MyCat中的用户、访问密码，以及用户针对于逻辑库、逻辑表的权限信息，具体的权限描述方式及配置说明如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2bdf259315d2b536eaace64d328a8ddb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/2bdf259315d2b536eaace64d328a8ddb.png)
 在测试权限操作时，我们只需要将 privileges 标签的注释放开。 在 privileges 下的schema标签中配置的dml属性配置的是逻辑库的权限。 在privileges的schema下的table标签的dml属性中配置逻辑表的权限。
 # 5 MyCat分片
 ## 5.1 垂直拆分
 ### 5.1.1 场景
 在业务系统中, 涉及以下表结构 ,但是由于用户与订单每天都会产生大量的数据, 单台服务器的数据存储及处理能力是有限的, 可以对数据库表进行拆分, 原有的数据库表如下。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/56c4345672fab5a9fb7bd47358e33ef1.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/56c4345672fab5a9fb7bd47358e33ef1.png)
 现在考虑将其进行垂直分库操作，将商品相关的表拆分到一个数据库服务器，订单表拆分的一个数据库服务器，用户及省市区表拆分到一个服务器。最终结构如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b8f690e1f7b72e8a5309f1fedc615290.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/b8f690e1f7b72e8a5309f1fedc615290.png)
 ### 5.1.2 准备
 准备三台服务器，IP地址如图所示：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/359179f5e9bd945245fb38f744735b99.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/359179f5e9bd945245fb38f744735b99.png)
 并且在192.168.200.210，192.168.200.213, 192.168.200.214上面创建数据库shopping。
 
 ###  5.1.3 配置
@@ -412,7 +412,7 @@ show @[@sql.sum ](/sql.sum );  |
 ### 5.1.4 测试
 
 1. 上传测试SQL脚本到服务器的/root目录
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/be9218170a0b43f9827cc13aaf2e6385.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/be9218170a0b43f9827cc13aaf2e6385.png)
 
 2. 执行指令导入测试数据
 重新启动MyCat后，在mycat的命令行中，通过source指令导入表结构，以及对应的数据，查看数据分布情况。
@@ -421,14 +421,14 @@ source /root/shopping-table.sql
 source /root/shopping-insert.sql
 ```
 将表结构及对应的测试数据导入之后，可以检查一下各个数据库服务器中的表结构分布情况。 检查是否和我们准备工作中规划的服务器一致。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1f6f9c152fb8904e408175884609c1b0.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/1f6f9c152fb8904e408175884609c1b0.png)
 
 3. 查询用户的收件人及收件人地址信息(包含省、市、区)。 在MyCat的命令行中，当我们执行以下多表联查的SQL语句时，可以正常查询出数据。
 ```plsql
 select ua.user_id, ua.contact, p.province, c.city, r.area , ua.address from tb_user_address ua ,tb_areas_city c , tb_areas_provinces p ,tb_areas_region r 
 where ua.province_id = p.provinceid and ua.city_id = c.cityid and ua.town_id = r.areaid ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f54e6cf855072e24bbd60da15ee42daf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/f54e6cf855072e24bbd60da15ee42daf.png)
 
 4. 查询每一笔订单及订单的收件地址信息(包含省、市、区)。
 实现该需求对应的SQL语句如下：
@@ -437,7 +437,7 @@ SELECT order_id , payment ,receiver, province , city , area FROM tb_order_master
 WHERE o.receiver_province = p.provinceid AND o.receiver_city = c.cityid AND o.receiver_region = r.areaid ;
 ```
 但是现在存在一个问题，订单相关的表结构是在 192.168.200.213 数据库服务器中，而省市区的数据库表是在 192.168.200.214 数据库服务器中。那么在MyCat中执行是否可以成功呢？
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2291590d04d6d83eac6e1d4856ee6bfb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/2291590d04d6d83eac6e1d4856ee6bfb.png)
 经过测试，我们看到，SQL语句执行报错。原因就是因为MyCat在执行该SQL语句时，需要往具体的数据库服务器中路由，而当前没有一个数据库服务器完全包含了订单以及省市区的表结构，造成SQL语句失败，报错。
 对于上述的这种现象，我们如何来解决呢？ 下面我们介绍的全局表，就可以轻松解决这个问题。
 
@@ -451,7 +451,7 @@ WHERE o.receiver_province = p.provinceid AND o.receiver_city = c.cityid AND o.re
 <table name="tb_areas_region" dataNode="dn1,dn2,dn3" primaryKey="id" type="global"/>
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6663b1ba643bf8433dcf49bff9516d65.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/6663b1ba643bf8433dcf49bff9516d65.png)
 配置完毕后，重新启动MyCat。
 1). 删除原来每一个数据库服务器中的所有表结构
 2). 通过source指令，导入表及数据
@@ -465,18 +465,18 @@ source /root/shopping-insert.sql
 SELECT order_id , payment ,receiver, province , city , area FROM tb_order_master o , tb_areas_provinces p , tb_areas_city c , tb_areas_region r 
 WHERE o.receiver_province = p.provinceid AND o.receiver_city = c.cityid AND o.receiver_region = r.areaid ;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/288ed0e487db6d72417e44a6d1ef1d1b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/288ed0e487db6d72417e44a6d1ef1d1b.png)
 是可以正常执行成功的。
 5). 当在MyCat中更新全局表的时候，我们可以看到，所有分片节点中的数据都发生了变化，每个节点的全局表数据时刻保持一致。
 
 ## 5.2 水平拆分
 ### 5.2.1 场景
 在业务系统中, 有一张表(日志表), 业务系统每天都会产生大量的日志数据 , 单台服务器的数据存储及处理能力是有限的, 可以对数据库表进行拆分。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e28cd91726c8dd0a8e5ff008fd4afae5.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/e28cd91726c8dd0a8e5ff008fd4afae5.png)
 
 ### 5.2.2 准备
 准备三台服务器，具体的结构如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/418965cdb2d938892df063855b4570bf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/418965cdb2d938892df063855b4570bf.png)
 并且，在三台数据库服务器中分表创建一个数据库itcast。
 
 ### 5.2.3 配置
@@ -548,7 +548,7 @@ INSERT INTO tb_log (id, model_name, model_value, return_value, return_class, ope
 
 1. 介绍
 根据指定的字段及其配置的范围与数据节点的对应情况， 来决定该数据属于哪一个分片。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/af374564f4d88b2c8cc98d15f88c4732.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/af374564f4d88b2c8cc98d15f88c4732.png)
 
 2. 配置
 
@@ -609,7 +609,7 @@ rule.xml分片规则配置：
 ### 5.3.2 取模分片
 1) 介绍
 根据指定的字段值与节点数量进行求模运算，根据运算结果， 来决定该数据属于哪一个分片。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3dc848345330098dc89e97e04e08dd60.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/3dc848345330098dc89e97e04e08dd60.png)
 2) 配置
 schema.xml逻辑表配置：
 ```xml
@@ -653,7 +653,7 @@ rule.xml分片规则配置：
 ### 5.3.3 一致性hash分片
 1) 介绍
 所谓一致性哈希，相同的哈希因子计算值总是被划分到相同的分区表中，不会因为分区节点的增加而改变原来数据的分区位置，有效的解决了分布式数据的拓容问题。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cc607b85678a2ee0593946378a470c7c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/cc607b85678a2ee0593946378a470c7c.png)
 2) 配置
 schema.xml中逻辑表配置：
 ```xml
@@ -736,7 +736,7 @@ INSERT INTO tb_order (id, money, content) VALUES ('b978840f-6fc4-11ec-b831- 482a
 ### 5.3.4 枚举分片
 1). 介绍
 通过在配置文件中配置可能的枚举值, 指定数据分布到不同数据节点上, 本规则适用于按照省份、性别、状态拆分数据等业务 。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c623a2c0224b7c89d203438feb40f310.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/c623a2c0224b7c89d203438feb40f310.png)
 2). 配置
 schema.xml中逻辑表配置：
 ```xml
@@ -818,7 +818,7 @@ insert into tb_user (id,username ,status) values(10,'Lily',1);
 ### 5.3.5 应用指定算法
 1). 介绍
 运行阶段由应用自主决定路由到那个分片 , 直接根据字符子串（必须是数字）计算分片号。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ee2bd6bde734af7148f085447e4ec6e0.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/ee2bd6bde734af7148f085447e4ec6e0.png)
 2). 配置
 schema.xml中逻辑表配置：
 ```xml
@@ -883,7 +883,7 @@ insert into tb_app (id,name) values('0200002','TesT400001');
 ### 5.3.6 固定分片hash算法
 1). 介绍
 该算法类似于十进制的求模运算，但是为二进制的操作，例如，取 id 的二进制低 10 位 与1111111111 进行位 & 运算，位与运算最小值为 0000000000，最大值为1111111111，转换为十进制，也就是位于0-1023之间。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c3d4dd536b2a0f626fe27272b440d9d3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/c3d4dd536b2a0f626fe27272b440d9d3.png)
 特点：
 
 - 如果是求模，连续的值，分别分配到各个不同的分片；但是此算法会将连续的值可能分配到相同的分片，降低事务处理的难度。
@@ -938,7 +938,7 @@ rule.xml中分片规则配置：
 
 以上分为三个分区:0-255,256-511,512-1023
 示例说明 :
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f624247332150f3590c5f29cc963b7d4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/f624247332150f3590c5f29cc963b7d4.png)
 
 3). 测试
 配置完毕后，重新启动MyCat，然后在mycat的命令行中，执行如下SQL创建表、并插入数据，查看数据分布情况。
@@ -964,7 +964,7 @@ insert into tb_longhash (id,name,firstChar) values(9,'两匹狼','L');
 ### 5.3.7 字符串hash解析算法
 1). 介绍
 截取字符串中的指定位置的子字符串, 进行hash算法， 算出分片。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/249b61a75a31d5c1654468daaef32836.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/249b61a75a31d5c1654468daaef32836.png)
 
 2). 配置
 schema.xml中逻辑表配置：
@@ -1008,7 +1008,7 @@ rule.xml中分片规则配置：
 
 
 示例说明：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/82af1ffe709bc19c4ccdd5924c8aaf08.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/82af1ffe709bc19c4ccdd5924c8aaf08.png)
 
 3). 测试
 配置完毕后，重新启动MyCat，然后在mycat的命令行中，执行如下SQL创建表、并插入数据，查看数据分布情况。
@@ -1028,7 +1028,7 @@ INSERT INTO tb_strhash (name,content) VALUES('TOMCAT', UUID());
 ### 5.3.8 按天分片算法
 1). 介绍
 按照日期及对应的时间周期来分片。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2773907f5d65b1a280736761cbcf6d34.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/2773907f5d65b1a280736761cbcf6d34.png)
 2). 配置
 schema.xml中逻辑表配置：
 ```xml
@@ -1096,7 +1096,7 @@ insert into tb_datepart(id,name ,create_time) values(7,'Coco3','2022-01-31');
 ### 5.3.9 自然月分片
 1). 介绍
 使用场景为按照月份来分片, 每个自然月为一个分片。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/406abb08862e0a5a2eb5acfcc1596513.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/406abb08862e0a5a2eb5acfcc1596513.png)
 
 2). 配置
 schema.xml中逻辑表配置：
@@ -1165,7 +1165,7 @@ insert into tb_monthpart(id,name ,create_time) values(9,'Coco5','2022-04-30');
 # 6 MyCat管理及监控
 ## 6.1 MyCat原理
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0e44cd50018a8fc10e59cf1a86d9439d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/0e44cd50018a8fc10e59cf1a86d9439d.png)
 在MyCat中，当执行一条SQL语句时，MyCat需要进行SQL解析、分片分析、路由分析、读写分离分析等操作，最终经过一系列的分析决定将当前的SQL语句到底路由到那几个(或哪一个)节点数据库，数据库将数据执行完毕后，如果有返回的结果，则将结果返回给MyCat，最终还需要在MyCat中进行结果合并、聚合处理、排序处理、分页处理等操作，最终再将结果返回给客户端。
 
 而在MyCat的使用过程中，MyCat官方也提供了一个管理监控平台MyCat-Web（MyCat-eye）。Mycat-web 是 Mycat 可视化运维的管理和监控平台，弥补了 Mycat 在监控上的空白。帮 Mycat分担统计任务和配置管理任务。Mycat-web 引入了 ZooKeeper 作为配置中心，可以管理多个节点。Mycat-web 主要管理和监控 Mycat 的流量、连接、活动线程和内存等，具备 IP 白名单、邮件告警等模块，还可以统计 SQL 并分析慢 SQL 和高频 SQL 等。为优化 SQL 提供依据。
@@ -1215,12 +1215,12 @@ e. 访问：http://192.168.200.210:8082/mycat
 ```
 > 备注:
 如果Zookeeper与Mycat-web不在同一台服务器上 , 需要设置Zookeeper的地址 ; 在/usr/local/mycat-web/mycat-web/WEB-INF/classes/mycat.properties文件中配置 :
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/05558364c61af302778d0ce6da5c943c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/05558364c61af302778d0ce6da5c943c.png)
 
 
 ### 6.3.3 访问
 [http://192.168.200.210:8082/mycat](http://192.168.200.210:8082/mycat)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/33510eec29efd03f8210bc4579ee1a0f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/33510eec29efd03f8210bc4579ee1a0f.png)
 
 ### 6.3.4 配置
 1). 开启MyCat的实时统计功能(server.xml)
@@ -1229,19 +1229,19 @@ e. 访问：http://192.168.200.210:8082/mycat
 ```
 
 2). 在Mycat监控界面配置服务地址
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/31bf8cd93350944feb670d238fd9be29.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/31bf8cd93350944feb670d238fd9be29.png)
 
 ### 6.3.5 测试
 配置好了之后，我们可以通过MyCat执行一系列的增删改查的测试，然后过一段时间之后，打开mycat-eye的管理界面，查看mycat-eye监控到的数据信息。
 A. 性能监控
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/329be81c3f0dfbbb02654caa533920ec.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/329be81c3f0dfbbb02654caa533920ec.png)
 B. 物理节点
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/815d1d50f0e2946c4e0c464e2bc4e08e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/815d1d50f0e2946c4e0c464e2bc4e08e.png)
 C. SQL统计
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/59b94782de62b45e186cd14e63adc8bb.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/59b94782de62b45e186cd14e63adc8bb.png)
 D. SQL表分析
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f1d886a5dd35bd5064cfce3b796ce697.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/f1d886a5dd35bd5064cfce3b796ce697.png)
 E. SQL监控
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/616dfd4ffb78b21a03c30540b3a0f859.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/616dfd4ffb78b21a03c30540b3a0f859.png)
 F. 高频SQL
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/99a6cad2807abf4b1cf27d98213ba9c4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21 MySQL分库分表/99a6cad2807abf4b1cf27d98213ba9c4.png)

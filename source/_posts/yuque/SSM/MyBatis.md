@@ -18,7 +18,7 @@ description: 一、MyBatis概述1.1 框架在文献中看到的framework被翻�
 - 框架一般都以jar包的形式存在。(jar包中有class文件以及各种配置文件等。)
 - SSM三大框架的学习顺序：MyBatis、Spring、SpringMVC（仅仅是建议）
 ## 1.2 三层架构
-![三层架构.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/abbdb906d1065c6c4640ec72184588b6.png)
+![三层架构.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/abbdb906d1065c6c4640ec72184588b6.png)
 
 - 表现层（UI）：直接跟前端打交互（一是接收前端ajax请求，二是返回json数据给前端）
 - 业务逻辑层（BLL）：一是处理表现层转发过来的前端请求（也就是具体业务），二是将从持久层获取的数据返回到表现层。
@@ -113,14 +113,14 @@ while(rs.next()){
    - MyBatis本是apache的一个开源项目iBatis，2010年这个项目由apache software foundation迁移到了google code，并且改名为MyBatis。2013年11月迁移到Github。
    - iBATIS一词来源于“internet”和“abatis”的组合，是一个基于Java的持久层框架。iBATIS提供的持久层框架包括SQL Maps和Data Access Objects（DAOs）。
 - 打开mybatis代码可以看到它的包结构中包含：ibatis
-   - ![42857443-5184-45b5-8AD4-2B281C88A8CC.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e0a9ff49fac22d3e5a4ac12d95667305.png)
+   - ![42857443-5184-45b5-8AD4-2B281C88A8CC.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/e0a9ff49fac22d3e5a4ac12d95667305.png)
 - ORM：对象关系映射
    - O（Object）：Java虚拟机中的Java对象
    - R（Relational）：关系型数据库
    - M（Mapping）：将Java虚拟机中的Java对象映射到数据库表中一行记录，或是将数据库表中一行记录映射成Java虚拟机中的一个Java对象。
    - ORM图示
-      - ![C48A1A89-244D-40f4-85DB-F1E665A2EA62.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f512a4bb65cccd3d906af719deaa6571.png)
-      - ![A21555BB-55B7-4d7c-8AB0-F49B10E96BD3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/35bd6524753c43f68554ca004171a728.png)
+      - ![C48A1A89-244D-40f4-85DB-F1E665A2EA62.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/f512a4bb65cccd3d906af719deaa6571.png)
+      - ![A21555BB-55B7-4d7c-8AB0-F49B10E96BD3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/35bd6524753c43f68554ca004171a728.png)
    - MyBatis属于半自动化ORM框架。
    - Hibernate属于全自动化的ORM框架。
 - MyBatis框架特点：
@@ -135,7 +135,7 @@ while(rs.next()){
    - 提供了XML标签，支持动态SQL的编写。
    - ......
 
-![logo.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/be93e707cd56bc06420637cc02741ced.png)
+![logo.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/be93e707cd56bc06420637cc02741ced.png)
 # 二、MyBatis入门程序
 只要你会JDBC，MyBatis就可以学。
 ## 2.1 版本
@@ -154,10 +154,10 @@ while(rs.next()){
 ## 2.2 MyBatis下载
 
 - 从github上下载，地址：[https://github.com/mybatis/mybatis-3](https://github.com/mybatis/mybatis-3)
-   - ![2FFBA369-A41E-4b17-81C5-68A18B8A428F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ab7d57caaaf9cd0d31361467811f6a62.png)
-   - ![0D36080D-53BB-42ac-9E19-26260818134E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b35a08dc36d2fc3d512aa55e270ba4ab.png)
+   - ![2FFBA369-A41E-4b17-81C5-68A18B8A428F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ab7d57caaaf9cd0d31361467811f6a62.png)
+   - ![0D36080D-53BB-42ac-9E19-26260818134E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/b35a08dc36d2fc3d512aa55e270ba4ab.png)
 - 将框架以及框架的源码都下载下来，下载框架后解压，打开mybatis目录
-   - ![55C87E1A-E3AA-414f-9281-CE7D5702EA17.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ad6c9a95c527d7ac49f2ab709a3f085a.png)
+   - ![55C87E1A-E3AA-414f-9281-CE7D5702EA17.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ad6c9a95c527d7ac49f2ab709a3f085a.png)
    - 通过以上解压可以看到，框架一般都是以jar包的形式存在。我们的mybatis课程使用maven，所以这个jar我们不需要。
    - 官方手册需要。
 ## 2.3 MyBatis入门程序开发步骤
@@ -171,16 +171,16 @@ while(rs.next()){
       - produce_time：生产时间【char，年月日即可，10个长度，'2022-10-11'】
       - car_type：汽车类型（燃油车、电车、氢能源）【varchar】
    - 使用navicat for mysql工具建表
-      - ![16B6D507-440F-460f-9D1F-39653A3B6EC2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a231f538893e0373c8da808174ac138c.png)
+      - ![16B6D507-440F-460f-9D1F-39653A3B6EC2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a231f538893e0373c8da808174ac138c.png)
    - 使用navicat for mysql工具向t_car表中插入两条数据，如下：
-      - ![7E8510B9-9886-41c9-9495-0AE7888560B9.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c52d21e82013609332f3ab84961334cc.png)
+      - ![7E8510B9-9886-41c9-9495-0AE7888560B9.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/c52d21e82013609332f3ab84961334cc.png)
    - 创建Project：建议创建Empty Project，设置Java版本以及编译版本等。
-      - ![52176FB4-6DB5-4264-8940-34A3506C2A0C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2a9a866fb257b20bf216e3417adfc72c.png)
-      - ![1C8EB1AF-0465-4e2d-816A-B7FFBA2E42C4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8a38477c96cae83e84132f5ed8be2a42.png)
+      - ![52176FB4-6DB5-4264-8940-34A3506C2A0C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2a9a866fb257b20bf216e3417adfc72c.png)
+      - ![1C8EB1AF-0465-4e2d-816A-B7FFBA2E42C4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/8a38477c96cae83e84132f5ed8be2a42.png)
    - 设置IDEA的maven
-      - ![3EA79931-EE2C-46f4-BDB2-6AB99EDFCA87.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/626840d723139bcebfb574b415b0bfd9.png)
+      - ![3EA79931-EE2C-46f4-BDB2-6AB99EDFCA87.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/626840d723139bcebfb574b415b0bfd9.png)
    - 创建Module：普通的Maven Java模块
-      - ![8F6F3B34-B1F7-4fcb-9584-AF629200534F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/da9d8d5fb019fa58909485974313405b.png)
+      - ![8F6F3B34-B1F7-4fcb-9584-AF629200534F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/da9d8d5fb019fa58909485974313405b.png)
 - 步骤1：打包方式：jar（不需要war，因为mybatis封装的是jdbc。）
 ```xml
 <groupId>com.powernode</groupId>
@@ -295,8 +295,8 @@ public class MyBatisIntroductionTest {
 注意1：默认采用的事务管理器是：JDBC。JDBC事务默认是不提交的，需要手动提交。
 
 - 步骤6：运行程序，查看运行结果，以及数据库表中的数据
-   - ![211D2E7E-E62B-413a-9710-72AC1EC7D894.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2721d119c76a8d10ddcce0d80e3a2d2e.png)
-   - ![2A4C1E6E-56B8-440e-A368-F10434EACC2D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2575a72495723c2ce4225d2ca3a22c4a.png)
+   - ![211D2E7E-E62B-413a-9710-72AC1EC7D894.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2721d119c76a8d10ddcce0d80e3a2d2e.png)
+   - ![2A4C1E6E-56B8-440e-A368-F10434EACC2D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2575a72495723c2ce4225d2ca3a22c4a.png)
 ## 2.4 关于MyBatis核心配置文件的名字和路径详解
 
 - 核心配置文件的名字是随意的，因为以下的代码：
@@ -345,7 +345,7 @@ public class MyBatisConfigFilePath {
 }
 ```
 以上程序运行后，看到数据库表t_car中又新增一条数据，如下（成功了）：
-![3DD22C5B-8359-4644-853E-A27AF1D0FBBA.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fccf66427913f0e052e21ad8fb99d93a.png)
+![3DD22C5B-8359-4644-853E-A27AF1D0FBBA.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/fccf66427913f0e052e21ad8fb99d93a.png)
 经过测试说明mybatis核心配置文件的名字是随意的，存放路径也是随意的。
 虽然mybatis核心配置文件的名字不是固定的，但通常该文件的名字叫做：mybatis-config.xml
 虽然mybatis核心配置文件的路径不是固定的，但通常该文件会存放到**类路径**当中，这样让项目的移植更加健壮。
@@ -403,7 +403,7 @@ public class MyBatisCompleteCodeTest {
 }
 ```
 运行后数据库表的变化：
-![EC983E7A-7A85-4df7-B5FC-5C4FDC8EA592.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe2eaf366ba5978359a0667e23fd1e1f.png)
+![EC983E7A-7A85-4df7-B5FC-5C4FDC8EA592.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/fe2eaf366ba5978359a0667e23fd1e1f.png)
 ## 2.6 引入JUnit
 
 - JUnit是专门做单元测试的组件。
@@ -490,7 +490,7 @@ public class CarMapperTest {
 }
 ```
 执行单元测试，查看数据库表的变化：
-![AEE76A27-5761-4162-B9DB-CCE0814EC06C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4ea5ddf57ec05de0b7d748c21e126db3.png)
+![AEE76A27-5761-4162-B9DB-CCE0814EC06C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4ea5ddf57ec05de0b7d748c21e126db3.png)
 ## 2.7 引入日志框架logback
 
 - 引入日志框架的目的是为了看清楚mybatis执行的具体sql。
@@ -560,7 +560,7 @@ public class CarMapperTest {
 ```
 
 - 再次执行单元测试方法testInsertCar，查看控制台是否有sql语句输出
-   - ![E75C0BCA-F8D3-44f8-AABB-282510093C8C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9cdb45e9478d0fb3e0210443edbf91d3.png)
+   - ![E75C0BCA-F8D3-44f8-AABB-282510093C8C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/9cdb45e9478d0fb3e0210443edbf91d3.png)
 ## 2.8 MyBatis工具类SqlSessionUtil的封装
 
 - 每一次获取SqlSession对象代码太繁琐，封装一个工具类
@@ -714,7 +714,7 @@ SQL语句这样写：
 </mapper>
 ```
 **#{} 的里面必须填写map集合的key，不能随便写。**运行测试程序，查看数据库：
-![2DD856C0-9725-4073-98C4-129D86B03B35.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09eb3330ba2a8fef45add101266a2b86.png)
+![2DD856C0-9725-4073-98C4-129D86B03B35.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/09eb3330ba2a8fef45add101266a2b86.png)
 如果#{}里写的是map集合中不存在的key会有什么问题？
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -729,8 +729,8 @@ SQL语句这样写：
 </mapper>
 ```
 运行程序：
-![13079E0B-F436-4100-B4E1-BB5C3A58ADD9.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d4b82612c97a8870bde625b567595d95.png)
-![0E5B4E84-C76C-4724-87E5-D37C954D2C40.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04ff330e3c420afc6bad905d058c482b.png)
+![13079E0B-F436-4100-B4E1-BB5C3A58ADD9.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d4b82612c97a8870bde625b567595d95.png)
+![0E5B4E84-C76C-4724-87E5-D37C954D2C40.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/04ff330e3c420afc6bad905d058c482b.png)
 通过测试，看到程序并没有报错。正常执行。不过 #{kk} 的写法导致无法获取到map集合中的数据，最终导致数据库表car_num插入了NULL。
 在以上sql语句中，可以看到#{k1} #{k2} #{k3} #{k4} #{k5}的可读性太差，为了增强可读性，我们可以将Java程序做如下修改：
 ```java
@@ -755,7 +755,7 @@ SQL语句做如下修改，这样可以增强程序的可读性：
 </mapper>
 ```
 运行程序，查看数据库表：
-![B84BC4D9-24C1-4310-A5D1-DFC407BBFA8C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e78ebf4c7f2fa13e8a45d5a022e578bd.png)
+![B84BC4D9-24C1-4310-A5D1-DFC407BBFA8C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/e78ebf4c7f2fa13e8a45d5a022e578bd.png)
 使用Map集合可以传参，那使用**pojo**（简单普通的java对象）可以完成传参吗？测试一下：
 
 - 第一步：定义一个pojo类Car，提供相关属性。
@@ -879,7 +879,7 @@ public void testInsertCarByPOJO(){
 
 - 运行程序，查看数据库表：
 
-![9C093F8D-3868-435d-AA67-91B779ADF7BE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/04aca89967bcc3a019dbd12fb70ea653.png)
+![9C093F8D-3868-435d-AA67-91B779ADF7BE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/04aca89967bcc3a019dbd12fb70ea653.png)
 #{} 里写的是POJO的属性名，如果写成其他的会有问题吗？
 ```xml
 <insert id="insertCarByPOJO">
@@ -887,12 +887,12 @@ public void testInsertCarByPOJO(){
 </insert>
 ```
 运行程序，出现了以下异常：
-![BDD7D72C-B8AD-46b0-9006-9671AE65B305.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668583320-e0b198ac-df57-47f9-8520-7bb86f4b56fe.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23352e2d&clientId=ua65e35c1-ae14-4&errorMessage=unknown%20error&from=paste&height=347&id=u5ee0aa99&originHeight=347&originWidth=1548&originalType=binary&ratio=1&rotation=0&showTitle=false&size=55921&status=error&style=none&taskId=uf68ed3c1-a281-4fd0-b8d3-cab66b4db7e&title=&width=1548)
+![BDD7D72C-B8AD-46b0-9006-9671AE65B305.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ade0cd387af12c8b34940367d3283fcd.png)
 错误信息中描述：在Car类中没有找到a属性的getter方法。
 修改POJO类Car的代码，**只将getCarNum()方法名修改为getA()，其他代码不变**，如下：
-![2BD31517-18A1-40b0-ABB2-066E930366AE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2010b3086b2bb1117a92fc7be74c64d1.png)
+![2BD31517-18A1-40b0-ABB2-066E930366AE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2010b3086b2bb1117a92fc7be74c64d1.png)
 再运行程序，查看数据库表中数据：
-![17908172-C596-4d31-B3B8-09B6DDDD5C82.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4c1056e052a2d13cacf9847c67b388a5.png)
+![17908172-C596-4d31-B3B8-09B6DDDD5C82.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4c1056e052a2d13cacf9847c67b388a5.png)
 **经过测试得出结论：**
 **如果采用map集合传参，#{} 里写的是map集合的key，如果key不存在不会报错，数据库表中会插入NULL。**
 **如果采用POJO传参，#{} 里写的是get方法的方法名去掉get之后将剩下的单词首字母变小写（例如：getAge对应的是#{age}，getUserName对应的是#{userName}），如果这样的get方法不存在会报错。**
@@ -926,12 +926,12 @@ public void testDeleteByCarNum(){
 }
 ```
 运行结果：
-![2ECBA22E-ABC9-4dc1-87AD-F4842083A2CD.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/540f5a558a5f06595dc7873490b20c97.png)
+![2ECBA22E-ABC9-4dc1-87AD-F4842083A2CD.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/540f5a558a5f06595dc7873490b20c97.png)
 **注意：当占位符只有一个的时候，${} 里面的内容可以随便写。**
 ## 3.3 update（Update）
 需求：修改id=34的Car信息，car_num为102，brand为比亚迪汉，guide_price为30.23，produce_time为2018-09-10，car_type为电车
 修改前：
-![25135D96-3CD7-43f9-9E0F-7C90BCEDF28E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3f653824adbe5f87cbe90daec563400b.png)
+![25135D96-3CD7-43f9-9E0F-7C90BCEDF28E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/3f653824adbe5f87cbe90daec563400b.png)
 SQL语句如下：
 ```xml
 <update id="updateCarByPOJO">
@@ -962,8 +962,8 @@ Java代码如下：
     }
 ```
 运行结果：
-![0670B92C-E654-49a7-839C-814850A4D79A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/865971bee3fd1349eb20fe07e7113705.png)
-![7EC1586E-DB9E-47ca-A556-B8822A8F7429.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/53eceb5d168b1da043f0e70a6b54c00c.png)
+![0670B92C-E654-49a7-839C-814850A4D79A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/865971bee3fd1349eb20fe07e7113705.png)
+![7EC1586E-DB9E-47ca-A556-B8822A8F7429.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/53eceb5d168b1da043f0e70a6b54c00c.png)
 当然了，如果使用**map**传数据也是可以的。
 ## 3.4 select（Retrieve）
 select语句和其它语句不同的是：查询会有一个结果集。来看mybatis是怎么处理结果集的！！！
@@ -1000,7 +1000,7 @@ public void testSelectCarById(){
 </select>
 ```
 运行结果：
-![5006A305-0033-4c71-91F4-23B7CA955AC2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/59da01c574d573fbe62f78861e1417f8.png)
+![5006A305-0033-4c71-91F4-23B7CA955AC2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/59da01c574d573fbe62f78861e1417f8.png)
 运行后之前的异常不再出现了，这说明添加了resultType属性之后，解决了之前的异常，可以看出resultType是不能省略的。
 仔细观察控制台的日志信息，不难看出，结果查询出了一条。并且每个字段都查询到值了：Row: 1, 100, 宝马520Li, 41.00, 2022-09-01, 燃油车
 但是奇怪的是返回的Car对象，只有id和brand两个属性有值，其它属性的值都是null，这是为什么呢？我们来观察一下查询结果列名和Car类的属性名是否能一一对应：
@@ -1018,7 +1018,7 @@ Car类的属性名：id, carNum, brand, guidePrice, produceTime, carType
 </select>
 ```
 运行结果如下：
-![C08C9F72-CD0B-4848-AD33-D0DAC7078FDF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/88b8cf51de4c2c388e4b278ccdd77a00.png)
+![C08C9F72-CD0B-4848-AD33-D0DAC7078FDF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/88b8cf51de4c2c388e4b278ccdd77a00.png)
 通过测试得知，如果当查询结果的字段名和java类的属性名对应不上的话，可以采用as关键字起别名，**当然还有其它解决方案，我们后面再看**。
 ### 查询多条数据
 需求：查询所有的Car信息。
@@ -1046,7 +1046,7 @@ public void testSelectCarAll(){
 }
 ```
 运行结果如下：
-![E1B82451-6452-4e93-BD75-DC6D8B9ADD14.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b5c93a048d86473ac484d10a3cc61f30.png)
+![E1B82451-6452-4e93-BD75-DC6D8B9ADD14.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/b5c93a048d86473ac484d10a3cc61f30.png)
 ## 3.5 关于SQL Mapper的namespace
 在SQL Mapper配置文件中<mapper>标签的namespace属性可以翻译为命名空间，这个命名空间主要是为了防止sqlId冲突的。
 创建CarMapper2.xml文件，代码如下：
@@ -1107,7 +1107,7 @@ public void testNamespace(){
 }
 ```
 运行结果如下：
-![C1ED1184-132C-4393-918B-54D9645FE4B8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a120f910ef3aa0422843b3299595d13e.png)
+![C1ED1184-132C-4393-918B-54D9645FE4B8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a120f910ef3aa0422843b3299595d13e.png)
 
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659578619308-ceb8077a-94a7-4f64-b41d-e54b3c14e7fb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9d7d7&from=url&id=y8MI4&originHeight=152&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
@@ -1259,8 +1259,8 @@ public class ConfigurationTest {
 }
 ```
 执行结果：
-![FF0CD72D-D26C-4ccb-9202-593CDA8C53D8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/139f0df274c6e2f214cc6cf99e25c82a.png)
-![B8C1BB12-6CB0-4f08-A96F-560B6268C8F8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9450af6bf2ada75357cc88c987ef1bb7.png)
+![FF0CD72D-D26C-4ccb-9202-593CDA8C53D8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/139f0df274c6e2f214cc6cf99e25c82a.png)
+![B8C1BB12-6CB0-4f08-A96F-560B6268C8F8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/9450af6bf2ada75357cc88c987ef1bb7.png)
 ## 4.2 transactionManager
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -1360,13 +1360,13 @@ public void testDataSource() throws Exception{
 }
 ```
 当type是UNPOOLED，控制台输出：
-![D58DF616-529B-41c7-8C0F-8A931A380497.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2532d8ef65a8d2402f2106333df71200.png)
+![D58DF616-529B-41c7-8C0F-8A931A380497.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2532d8ef65a8d2402f2106333df71200.png)
 修改配置文件mybatis-config3.xml中的配置：
 ```xml
 <dataSource type="POOLED">
 ```
 Java测试程序不需要修改，直接执行，看控制台输出：
-![8DFDAF99-AA22-41cd-99C7-227A4667A0EB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4d481e2facc307d1af1967c7f0472eb3.png)
+![8DFDAF99-AA22-41cd-99C7-227A4667A0EB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4d481e2facc307d1af1967c7f0472eb3.png)
 通过测试得出：UNPOOLED不会使用连接池，每一次都会新建JDBC连接对象。POOLED会使用数据库连接池。【这个连接池是mybatis自己实现的。】
 ```xml
 <dataSource type="JNDI">
@@ -1412,7 +1412,7 @@ poolTimeToWait：当无法获取到空闲连接时，每隔20秒打印一次日�
 最大的空闲连接数量。默认值5，如何已经有了5个空闲连接，当第6个连接要空闲下来的时候，连接池会选择关闭该连接对象。来减少数据库的开销。
 需要根据系统的并发情况，来合理调整连接池最大连接数以及最多空闲数量。充分发挥数据库连接池的性能。【可以根据实际情况进行测试，然后调整一个合理的数量。】
 下图是默认配置：
-![9970FDF3-6A6A-4530-84A3-B72FE189124E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/afd8a324da9fb97dfa9d175c7a5b434f.png)
+![9970FDF3-6A6A-4530-84A3-B72FE189124E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/afd8a324da9fb97dfa9d175c7a5b434f.png)
 在以上配置的基础之上，可以编写java程序测试：
 ```java
 @Test
@@ -1430,7 +1430,7 @@ public void testPool() throws Exception{
   select id,car_num carNum,brand,guide_price guidePrice,produce_time produceTime,car_type carType from t_car where car_num = '100'
 </select>
 ```
-![E2C814E9-489D-4f4a-94F6-2ED5F6E56F54.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4ed9412ac9a93eb0d9178aaf68f7a42b.png)
+![E2C814E9-489D-4f4a-94F6-2ED5F6E56F54.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4ed9412ac9a93eb0d9178aaf68f7a42b.png)
 ## 4.4 properties
 mybatis提供了更加灵活的配置，连接数据库的信息可以单独写到一个属性资源文件中，假设在类的根路径下创建jdbc.properties文件，配置如下：
 ```properties
@@ -1641,7 +1641,7 @@ public class ParseXMLByDom4j {
 }
 ```
 执行结果：
-![D1EE8DEE-5612-4fc7-9C3C-EA1C260B01F4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/64e77adc9b2f493c5903703a637f697b.png)
+![D1EE8DEE-5612-4fc7-9C3C-EA1C260B01F4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/64e77adc9b2f493c5903703a637f697b.png)
 第四步：编写配置文件sqlmapper.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -1688,7 +1688,7 @@ public void testSqlMapper() throws Exception{
 }
 ```
 执行结果：
-![41A93BE0-3374-4283-97DE-152288504BE3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d5362b95abcd4b507917c5f5adc5801f.png)
+![41A93BE0-3374-4283-97DE-152288504BE3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d5362b95abcd4b507917c5f5adc5801f.png)
 ## 5.2 GodBatis
 手写框架之前，如果没有思路，可以先参考一下mybatis的客户端程序，通过客户端程序来逆推需要的类，参考代码：
 ```java
@@ -2478,13 +2478,13 @@ public Object selectOne(String sqlId, Object parameterObj){
 }
 ```
 ## 5.3 GodBatis使用Maven打包
-![23B91E36-8138-40bd-960F-685051751FBE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fa9ac60f999f60a96e48309f8dc6b4f1.png)
+![23B91E36-8138-40bd-960F-685051751FBE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/fa9ac60f999f60a96e48309f8dc6b4f1.png)
 查看本地仓库中是否已经有jar包：
-![089FD2B9-D3F2-4f62-9A64-2EC66CC8B623.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/03bfd6a1baeaa05351302605279bfdb6.png)
+![089FD2B9-D3F2-4f62-9A64-2EC66CC8B623.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/03bfd6a1baeaa05351302605279bfdb6.png)
 ## 5.4 使用GodBatis
 使用GodBatis就和使用MyBatis是一样的。
 第一步：准备数据库表t_user
-![96BB0AE2-0C47-4e24-AF86-E8B875B5B65A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5cb4c3b075a377bd6b55882b1622bb9c.png)
+![96BB0AE2-0C47-4e24-AF86-E8B875B5B65A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/5cb4c3b075a377bd6b55882b1622bb9c.png)
 第二步：创建模块，普通的Java Maven模块：godbatis-test
 第三步：引入依赖
 ```xml
@@ -2664,9 +2664,9 @@ public class GodBatisTest {
 
 ```
 第八步：运行结果
-![4766EF58-0505-4cdb-8539-D3E487D0B40D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d9fd5ffb5d6f3f2a5871608479be9d39.png)
-![DE9D2710-1999-4ef1-8F7E-822ACB17BF02.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3174bb633fcc9f00267f49369f393412.png)
-![CD0A068F-8A77-4ced-B92F-B0CCA2412B3C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/71ce40e6dae51dfa65e53c55c9be79cc.png)
+![4766EF58-0505-4cdb-8539-D3E487D0B40D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d9fd5ffb5d6f3f2a5871608479be9d39.png)
+![DE9D2710-1999-4ef1-8F7E-822ACB17BF02.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/3174bb633fcc9f00267f49369f393412.png)
+![CD0A068F-8A77-4ced-B92F-B0CCA2412B3C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/71ce40e6dae51dfa65e53c55c9be79cc.png)
 ## 5.5 总结MyBatis框架的重要实现原理
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -2708,32 +2708,32 @@ public class GodBatisTest {
 
 - bank
 ## 6.1 需求描述
-![9C2CCE44-E51B-4b1a-AD3D-176294F3B463.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ae7bc2b70796e99e348532395913ec74.png)
+![9C2CCE44-E51B-4b1a-AD3D-176294F3B463.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ae7bc2b70796e99e348532395913ec74.png)
 ## 6.2 数据库表的设计和准备数据
-![68216368-5BD6-4e0d-A567-5E725A349D0F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/cf9decc21ded0a0c9b24bec170eb6318.png)
-![EBB28A3F-32BB-431c-9C2C-03A4EB5C8ADF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f2b6973b70af023505ee8f346280a80f.png)
+![68216368-5BD6-4e0d-A567-5E725A349D0F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/cf9decc21ded0a0c9b24bec170eb6318.png)
+![EBB28A3F-32BB-431c-9C2C-03A4EB5C8ADF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/f2b6973b70af023505ee8f346280a80f.png)
 ## 6.3 实现步骤
 ### 第一步：环境搭建
 
 - IDEA中创建Maven WEB应用（**mybatis-004-web**）
 
-![B228544B-4646-41fc-BFA1-39B6E8464405.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a973fd2a443d94c09ba6c27d22223b99.png)
+![B228544B-4646-41fc-BFA1-39B6E8464405.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a973fd2a443d94c09ba6c27d22223b99.png)
 
 - IDEA配置Tomcat，这里Tomcat使用10+版本。并部署应用到tomcat。
 
-![38908B1E-AC59-4ecf-B972-7651AA58023E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ab7f21160558c18f55e5e024e6e5bafb.png)
-![9EA5CF36-E282-41d4-B544-1533AD25BB33.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2b3304c331946f5b1bde4ca9401b96e7.png)
+![38908B1E-AC59-4ecf-B972-7651AA58023E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ab7f21160558c18f55e5e024e6e5bafb.png)
+![9EA5CF36-E282-41d4-B544-1533AD25BB33.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2b3304c331946f5b1bde4ca9401b96e7.png)
 
 - 默认创建的maven web应用没有java和resources目录，包括两种解决方案
    - 第一种：自己手动加上。
 
-![5A0EC4A7-C5EB-4fcb-B74C-2A9B3A147E5B.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a2784160cb474e2cf76c5fd6c5d6a95b.png)
+![5A0EC4A7-C5EB-4fcb-B74C-2A9B3A147E5B.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a2784160cb474e2cf76c5fd6c5d6a95b.png)
 
    - 第二种：修改maven-archetype-webapp-1.4.jar中的配置文件
 
-![508D0561-6CEF-4af4-A243-0CF29B2D748B.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a350272d21c941fac705845bf30ce9c4.png)
-![3A2D1F51-98DE-4416-B196-2535C5D26E55.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/318b96cbf60fc86f537b951685953901.png)
-![7F5D0F8B-EA3B-4d79-B156-02C0D11BA2E9.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/74ed2e59110daf9271d44bd9761c05a5.png)
+![508D0561-6CEF-4af4-A243-0CF29B2D748B.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a350272d21c941fac705845bf30ce9c4.png)
+![3A2D1F51-98DE-4416-B196-2535C5D26E55.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/318b96cbf60fc86f537b951685953901.png)
+![7F5D0F8B-EA3B-4d79-B156-02C0D11BA2E9.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/74ed2e59110daf9271d44bd9761c05a5.png)
 
 - web.xml文件的版本较低，可以从tomcat10的样例文件中复制，然后修改
 ```xml
@@ -3207,9 +3207,9 @@ public class AccountController extends HttpServlet {
 
 ```
 启动服务器，打开浏览器，输入地址：http://localhost:8080/bank，测试：
-![EDF0C904-B6CB-44bf-9F9F-C69C81AE46A2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/21fc9264b38528c75596b2062fb9bb8f.png)
-![A3F83ADE-1028-49ff-9522-8595D857A421.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/62733862f1cbf3d18c46a34e96793e57.png)
-![5364CDC3-DF1A-4380-8A11-DBA050A17A77.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e79bd0d70af8a23bd261fd044f05d015.png)
+![EDF0C904-B6CB-44bf-9F9F-C69C81AE46A2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/21fc9264b38528c75596b2062fb9bb8f.png)
+![A3F83ADE-1028-49ff-9522-8595D857A421.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/62733862f1cbf3d18c46a34e96793e57.png)
+![5364CDC3-DF1A-4380-8A11-DBA050A17A77.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/e79bd0d70af8a23bd261fd044f05d015.png)
 ## 6.4 MyBatis对象作用域以及事务问题
 ### MyBatis核心对象的作用域
 #### SqlSessionFactoryBuilder
@@ -3273,10 +3273,10 @@ public class AccountServiceImpl implements AccountService {
 运行前注意看数据库表中当前的数据：
 ![5364CDC3-DF1A-4380-8A11-DBA050A17A77.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551655159-a814927f-dba4-4d81-b6a8-93bdc8511e79.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_12%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f3f1&clientId=u51da7e76-efcd-4&errorMessage=unknown%20error&from=paste&height=149&id=WtCgO&originHeight=149&originWidth=423&originalType=binary&ratio=1&rotation=0&showTitle=false&size=6303&status=error&style=none&taskId=u5029ee77-68b5-4744-9247-d7c04260a8e&title=&width=423)
 执行程序：
-![44F99896-3045-4700-BF02-33B0E2CEE73E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a37dda6e46ec13f3da7fe9e956b10888.png)
-![740BDFDF-1EA7-4134-8867-DEA8AD869800.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ea600db284497992d70df11ad13cc187.png)
+![44F99896-3045-4700-BF02-33B0E2CEE73E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a37dda6e46ec13f3da7fe9e956b10888.png)
+![740BDFDF-1EA7-4134-8867-DEA8AD869800.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ea600db284497992d70df11ad13cc187.png)
 再次查看数据库表中的数据：
-![A737B160-044F-4511-A4E5-24427A4ADABB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4ae10bc7857a7b9b2095f51f04aee798.png)
+![A737B160-044F-4511-A4E5-24427A4ADABB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4ae10bc7857a7b9b2095f51f04aee798.png)
 **傻眼了吧！！！事务出问题了，转账失败了，钱仍然是少了1万。这是什么原因呢？主要是因为service和dao中使用的SqlSession对象不是同一个。**
 怎么办？为了保证service和dao中使用的SqlSession对象是同一个，可以将SqlSession对象存放到ThreadLocal当中。修改SqlSessionUtil工具类：
 ```java
@@ -3419,10 +3419,10 @@ public class AccountServiceImpl implements AccountService {
 再测试转账成功：
 ![44F99896-3045-4700-BF02-33B0E2CEE73E.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_10%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23deb97a&clientId=u51da7e76-efcd-4&errorMessage=unknown%20error&from=paste&height=148&id=F0jzt&originHeight=148&originWidth=357&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5021&status=error&style=shadow&taskId=u17e89280-5123-4a79-a555-1f5daab2af6&title=&width=357)
 ![A3F83ADE-1028-49ff-9522-8595D857A421.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_13%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f7f6f6&clientId=u51da7e76-efcd-4&errorMessage=unknown%20error&from=paste&height=169&id=v50HW&originHeight=169&originWidth=439&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5479&status=error&style=none&taskId=u2abd5aea-252a-4cbd-b586-788c0c366ec&title=&width=439)
-![C8F84292-5B90-4014-A348-A800DD401C86.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f08c6ca6ae9f4d12afec603cb0a6be6a.png)
+![C8F84292-5B90-4014-A348-A800DD401C86.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/f08c6ca6ae9f4d12afec603cb0a6be6a.png)
 如果余额不足呢：
-![7E69C82A-F50C-4a8d-B7FF-579C3AD5750C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a8b4d51f68e013d37ca2175108b208b1.png)
-![F5CFB1B3-72F8-4960-B740-1AD2A076C499.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2fcc72402e9e8654ed98e2fbdf18deee.png)
+![7E69C82A-F50C-4a8d-B7FF-579C3AD5750C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a8b4d51f68e013d37ca2175108b208b1.png)
+![F5CFB1B3-72F8-4960-B740-1AD2A076C499.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/2fcc72402e9e8654ed98e2fbdf18deee.png)
 账户的余额依然正常：
 ![C8F84292-5B90-4014-A348-A800DD401C86.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553732975-bdd952c5-c2c8-4cda-b9f7-810120c66485.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_11%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f4f3f1&clientId=u51da7e76-efcd-4&errorMessage=unknown%20error&from=paste&height=160&id=gJxbX&originHeight=160&originWidth=371&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5711&status=error&style=shadow&taskId=u320e568e-280d-4989-8f39-fbb02ea4d65&title=&width=371)
 ## 6.5 分析当前程序存在的问题
@@ -3507,9 +3507,9 @@ public class JavassistTest {
 - --add-opens java.base/java.lang=ALL-UNNAMED
 - --add-opens java.base/sun.net.util=ALL-UNNAMED
 
-![DCBBD517-3C79-456f-817F-DB39E85661D3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/344c81708148d73d12b6744b8ab38344.png)
+![DCBBD517-3C79-456f-817F-DB39E85661D3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/344c81708148d73d12b6744b8ab38344.png)
 运行结果：
-![B602078D-41E9-4d86-8735-36291B78380F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1336300c07cbe80d1441490d912f9ae0.png)
+![B602078D-41E9-4d86-8735-36291B78380F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/1336300c07cbe80d1441490d912f9ae0.png)
 ## 7.2 使用Javassist生成DaoImpl类
 使用Javassist动态生成DaoImpl类
 ```java
@@ -3626,15 +3626,15 @@ public class GenerateDaoByJavassist {
 </mapper>
 ```
 修改service类中获取dao对象的代码：
-![0A0D47FC-3EA0-4d39-A715-836AF32DBCAB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a0e3691dc0a8511fad044fb51a89f836.png)
+![0A0D47FC-3EA0-4d39-A715-836AF32DBCAB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/a0e3691dc0a8511fad044fb51a89f836.png)
 启动服务器：**启动过程中显示，tomcat服务器自动添加了以下的两个运行参数。所以不需要再单独配置。**
-![0A086C8D-1CEF-4413-ACB7-060D1B0687F8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/eb33e35294e533dca941bd6d162bea9d.png)
+![0A086C8D-1CEF-4413-ACB7-060D1B0687F8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/eb33e35294e533dca941bd6d162bea9d.png)
 测试前数据：
-![2B1E7468-040C-4cf1-BD41-C6D64BFD3039.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0bd0e3a92f602993ee26a552ecdc2e73.png)
+![2B1E7468-040C-4cf1-BD41-C6D64BFD3039.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/0bd0e3a92f602993ee26a552ecdc2e73.png)
 打开浏览器测试：
-![032AAA55-80B6-40dd-8666-C6C2045BB788.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f8413e2d738e60a0fa6cffae3fc007fc.png)
-![A9E86E57-0344-43ea-B79C-4C2143151637.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f9d915749e7155366ddfcb1c9938dd8b.png)
-![4AE10366-C84B-4f56-A474-2ECDE3D974DF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/879a85fc5ff35edcca03c87fd37bf281.png)
+![032AAA55-80B6-40dd-8666-C6C2045BB788.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/f8413e2d738e60a0fa6cffae3fc007fc.png)
+![A9E86E57-0344-43ea-B79C-4C2143151637.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/f9d915749e7155366ddfcb1c9938dd8b.png)
+![4AE10366-C84B-4f56-A474-2ECDE3D974DF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/879a85fc5ff35edcca03c87fd37bf281.png)
 ![logo.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659578619308-ceb8077a-94a7-4f64-b41d-e54b3c14e7fb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9d7d7&clientId=u6b7aa99c-2be4-4&errorMessage=unknown%20error&from=paste&id=jJ7KS&originHeight=152&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17957&status=error&style=none&taskId=u6b6c011d-5b8c-4c26-8cd3-e70c19148ae&title=)
 # 八、MyBatis中接口代理机制及使用
 好消息！！！其实以上所讲内容mybatis内部已经实现了。直接调用以下代码即可获取dao接口的代理类：
@@ -3643,11 +3643,11 @@ AccountDao accountDao = (AccountDao)sqlSession.getMapper(AccountDao.class);
 ```
 使用以上代码的前提是：**AccountMapper.xml文件中的namespace必须和dao接口的全限定名称一致，id必须和dao接口中方法名一致。**
 将service中获取dao对象的代码再次修改，如下：
-![C9B4A2C2-99DD-456b-BE6D-A4F4AD84C876.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c1c3c06e45cb957e585f1fc2f106bcf2.png)
+![C9B4A2C2-99DD-456b-BE6D-A4F4AD84C876.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/c1c3c06e45cb957e585f1fc2f106bcf2.png)
 测试前数据：
-![2F131001-B06E-4db9-88D0-10D9F8879D56.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d70014133066127233e420fce303e004.png)
+![2F131001-B06E-4db9-88D0-10D9F8879D56.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d70014133066127233e420fce303e004.png)
 测试后数据：
-![F6242FE9-51E9-47e5-BA47-5B5049DA374C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fccb2372f7a5a7ad69150cbff7e05717.png)
+![F6242FE9-51E9-47e5-BA47-5B5049DA374C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/fccb2372f7a5a7ad69150cbff7e05717.png)
 ![logo.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659578619308-ceb8077a-94a7-4f64-b41d-e54b3c14e7fb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9d7d7&clientId=u6b7aa99c-2be4-4&errorMessage=unknown%20error&from=paste&id=ylFna&originHeight=152&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17957&status=error&style=none&taskId=u6b6c011d-5b8c-4c26-8cd3-e70c19148ae&title=)
 # 九、MyBatis小技巧
 ## 9.1 #{}和${}
@@ -3889,7 +3889,7 @@ public class CarMapperTest {
 
 ```
 执行结果：
-![5EDAF14B-4BC2-4ad1-A204-9AF8CAF39557.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/38595786e056e667c115528efaae01b3.png)
+![5EDAF14B-4BC2-4ad1-A204-9AF8CAF39557.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/38595786e056e667c115528efaae01b3.png)
 通过执行可以清楚的看到，sql语句中是带有 ? 的，这个 ? 就是大家在JDBC中所学的占位符，专门用来接收值的。
 把“燃油车”以String类型的值，传递给 ? 
 这就是 #{}，它会先进行sql语句的预编译，然后再给占位符传值
@@ -3915,9 +3915,9 @@ CarMapper.xml文件修改如下：
 </mapper>
 ```
 再次运行测试程序：
-![F8DB6119-8032-47f2-941F-ECCD4B9B5ABF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/cb82e1f0f96236deda520895f1c90a96.png)
+![F8DB6119-8032-47f2-941F-ECCD4B9B5ABF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/cb82e1f0f96236deda520895f1c90a96.png)
 出现异常了，这是为什么呢？看看生成的sql语句：
-![A978AA37-AED0-4576-8BA9-9F63ED9ECF81.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/486d4d1b3368ae47715ae6a67f67e0e2.png)
+![A978AA37-AED0-4576-8BA9-9F63ED9ECF81.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/486d4d1b3368ae47715ae6a67f67e0e2.png)
 很显然，${} 是先进行sql语句的拼接，然后再编译，出现语法错误是正常的，因为 燃油车 是一个字符串，在sql语句中应该添加单引号
 修改：
 ```xml
@@ -3940,7 +3940,7 @@ CarMapper.xml文件修改如下：
 </mapper>
 ```
 再执行测试程序：
-![E38C761A-CCCF-4764-867E-1A361BC23CEB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/34c499d7aa6cf93199895fbd3dbd7ff1.png)
+![E38C761A-CCCF-4764-867E-1A361BC23CEB.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/34c499d7aa6cf93199895fbd3dbd7ff1.png)
 通过以上测试，可以看出，对于以上这种需求来说，还是建议使用 #{} 的方式。
 原则：能用 #{} 就不用 ${}
 ### 什么情况下必须使用${}
@@ -3978,7 +3978,7 @@ public void testSelectAll(){
 }
 ```
 运行：
-![9F39C1BA-BFB5-4482-8859-A665AF9BB4F5.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/856c2c14c3427b269cfc335d903e7c04.png)
+![9F39C1BA-BFB5-4482-8859-A665AF9BB4F5.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/856c2c14c3427b269cfc335d903e7c04.png)
 报错的原因是sql语句不合法，因为采用这种方式传值，最终sql语句会是这样：
 select id,car_num as carNum,brand,guide_price as guidePrice,produce_time as produceTime,car_type as carType from t_car order by carNum 'desc'
 desc是一个关键字，不能带单引号的，所以在进行sql语句关键字拼接的时候，必须使用${}
@@ -3995,7 +3995,7 @@ desc是一个关键字，不能带单引号的，所以在进行sql语句关键�
 </select>
 ```
 再次执行测试程序：
-![BD556528-B6C2-4842-A776-37B26B3B0F43.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ded5a2cc7597557aeb2a44f39e68b210.png)
+![BD556528-B6C2-4842-A776-37B26B3B0F43.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ded5a2cc7597557aeb2a44f39e68b210.png)
 ### 拼接表名
 业务背景：实际开发中，有的表数据量非常庞大，可能会采用分表方式进行存储，比如每天生成一张表，表的名字与日期挂钩，例如：2022年8月1日生成的表：t_user20220108。2000年1月1日生成的表：t_user20000101。此时前端在进行查询的时候会提交一个具体的日期，比如前端提交的日期为：2000年1月1日，那么后端就会根据这个日期动态拼接表名为：t_user20000101。有了这个表名之后，将表名拼接到sql语句当中，返回查询结果。那么大家思考一下，拼接表名到sql语句当中应该使用#{} 还是 ${} 呢？
 使用#{}会是这样：select * from 't_car'
@@ -4025,10 +4025,10 @@ public void testSelectAllByTableName(){
 }
 ```
 执行结果：
-![28B639CD-FD3B-43bb-AB56-6130419BBAA1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4285eb8648c01b48d20192183929d2dc.png)
+![28B639CD-FD3B-43bb-AB56-6130419BBAA1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4285eb8648c01b48d20192183929d2dc.png)
 ### 批量删除
 业务背景：一次删除多条记录。
-![BF64FC68-5697-4695-AD2A-8D32297AED66.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/67c647be2d642a6711ecee9d7aa402f7.png)
+![BF64FC68-5697-4695-AD2A-8D32297AED66.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/67c647be2d642a6711ecee9d7aa402f7.png)
 对应的sql语句：
 
 - delete from t_user where id = 1 or id = 2 or id = 3;
@@ -4061,7 +4061,7 @@ public void testDeleteBatch(){
 }
 ```
 执行结果：
-![79F7AB85-F3CA-4c27-873C-CCCDA3D75779.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f9847ef56073632cc64edd48af47727d.png)
+![79F7AB85-F3CA-4c27-873C-CCCDA3D75779.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/f9847ef56073632cc64edd48af47727d.png)
 ### 模糊查询
 需求：查询奔驰系列的汽车。【只要品牌brand中含有奔驰两个字的都查询出来。】
 #### 使用${}
@@ -4092,7 +4092,7 @@ public void testSelectLikeByBrand(){
 }
 ```
 执行结果：
-![F4BB4FC0-37F3-410b-BE34-C0395C3BD0E6.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1767acc1253e20bd727c9ee46f993afd.png)
+![F4BB4FC0-37F3-410b-BE34-C0395C3BD0E6.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/1767acc1253e20bd727c9ee46f993afd.png)
 #### 使用#{}
 第一种：concat函数
 ```xml
@@ -4106,7 +4106,7 @@ public void testSelectLikeByBrand(){
 </select>
 ```
 执行结果：
-![4E799667-0AED-4926-9D08-EDCE3E8C520E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/68ae00d9748915b0c833042f8f5c18c3.png)
+![4E799667-0AED-4926-9D08-EDCE3E8C520E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/68ae00d9748915b0c833042f8f5c18c3.png)
 第二种：双引号方式
 ```xml
 <select id="selectLikeByBrand" resultType="Car">
@@ -4118,7 +4118,7 @@ public void testSelectLikeByBrand(){
   brand like "%"#{brand}"%"
 </select>
 ```
-![BCEAB30B-96ED-4cd6-BC49-1D59F0F646D1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fe885c7e5151ac8a5deb199db1dc5afb.png)
+![BCEAB30B-96ED-4cd6-BC49-1D59F0F646D1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/fe885c7e5151ac8a5deb199db1dc5afb.png)
 ## 9.2 typeAliases
 我们来观察一下CarMapper.xml中的配置信息：
 ```xml
@@ -4258,11 +4258,11 @@ SQL映射文件的配置方式包括四种：
 ```
 ## 9.4 idea配置文件模板
 mybatis-config.xml和SqlMapper.xml文件可以在IDEA中提前创建好模板，以后通过模板创建配置文件。
-![7ABBEF88-D7E3-4a73-8411-61CCA49CC3E3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/6213e0f296a1de2bdb5d9636402a5f66.png)
+![7ABBEF88-D7E3-4a73-8411-61CCA49CC3E3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/6213e0f296a1de2bdb5d9636402a5f66.png)
 ## 9.5 插入数据时获取自动生成的主键
 前提是：主键是自动生成的。
 业务背景：一个用户有多个角色。
-![E9F189EB-F5E2-465f-828C-127DB34968FE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/25e7a003c5b310282ef4cf99376965ac.png)
+![E9F189EB-F5E2-465f-828C-127DB34968FE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/25e7a003c5b310282ef4cf99376965ac.png)
 插入一条新的记录之后，自动生成了主键，而这个主键需要在其他表中使用时。
 插入一个用户数据的同时需要给该用户分配角色：需要将生成的用户的id插入到角色表的user_id字段上。
 第一种方式：可以先插入用户数据，再写一条查询语句获取id，然后再插入user_id字段。【比较麻烦】
@@ -4298,9 +4298,9 @@ public void testInsertUseGeneratedKeys(){
 # 十、MyBatis参数处理（重要，项目应用最多）
 模块名：mybatis-006-param
 表：t_student
-![2F36FCDF-464E-45b5-8F7B-09AB6B378457.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/92bf02718f0216e9a43b4ac90c167791.png)
+![2F36FCDF-464E-45b5-8F7B-09AB6B378457.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/92bf02718f0216e9a43b4ac90c167791.png)
 表中现有数据：
-![9A19F542-3229-4b71-B1B7-E2318489C588.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b8470d82c53137d4f433e535c6b5f790.png)
+![9A19F542-3229-4b71-B1B7-E2318489C588.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/b8470d82c53137d4f433e535c6b5f790.png)
 pojo类：
 ```java
 package com.powernode.mybatis.pojo;
@@ -4547,7 +4547,7 @@ public void testSelectByNameAndSex(){
 </select>
 ```
 执行结果：
-![A386812C-F031-4f63-A6CE-174B7948CA31.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0bebc730df383b3d7b310d39c9fab566.png)
+![A386812C-F031-4f63-A6CE-174B7948CA31.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/0bebc730df383b3d7b310d39c9fab566.png)
 异常信息描述了：name参数找不到，可用的参数包括[arg1, arg0, param1, param2]
 修改StudentMapper.xml配置文件：尝试使用[arg1, arg0, param1, param2]去参数
 ```xml
@@ -4557,7 +4557,7 @@ public void testSelectByNameAndSex(){
 </select>
 ```
 运行结果：
-![351B370F-7199-49d2-A54D-E42E668FE96E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/75b31bd3bfa1230550fab068010a94a8.png)
+![351B370F-7199-49d2-A54D-E42E668FE96E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/75b31bd3bfa1230550fab068010a94a8.png)
 再次尝试修改StudentMapper.xml文件
 ```xml
 <select id="selectByNameAndSex" resultType="student">
@@ -4613,7 +4613,7 @@ map.put("param2", sex);
 通过测试，一切正常。
 核心：@Param("**这里填写的其实就是map集合的key**")
 ## 10.6 @Param源码分析
-![FF11FF8F-42C2-405a-AFA4-708FC564CC46.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d1f622b32060dc20c38391fc8cf354e3.png)
+![FF11FF8F-42C2-405a-AFA4-708FC564CC46.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d1f622b32060dc20c38391fc8cf354e3.png)
 ![logo.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659578619308-ceb8077a-94a7-4f64-b41d-e54b3c14e7fb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9d7d7&clientId=u6b7aa99c-2be4-4&errorMessage=unknown%20error&from=paste&id=Q9lDv&originHeight=152&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17957&status=error&style=none&taskId=u6b6c011d-5b8c-4c26-8cd3-e70c19148ae&title=)
 # 十一、MyBatis查询语句专题（重要）
 模块名：mybatis-007-select
@@ -4681,7 +4681,7 @@ public class CarMapperTest {
 
 ```
 执行结果：
-![1977C3E7-9C65-4d2e-AFC2-8893F747F5E1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/31aea0f589983098241fc34789a79997.png)
+![1977C3E7-9C65-4d2e-AFC2-8893F747F5E1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/31aea0f589983098241fc34789a79997.png)
 **查询结果是一条的话可以使用List集合接收吗？当然可以**。
 ```java
 /**
@@ -4704,7 +4704,7 @@ public void testSelectByIdToList(){
 }
 ```
 执行结果：
-![C2F972FD-9268-4584-A11E-308355F3EF1D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ff7055228aa219bc74c1bf07a9ee4acc.png)
+![C2F972FD-9268-4584-A11E-308355F3EF1D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ff7055228aa219bc74c1bf07a9ee4acc.png)
 ## 11.2 返回List<Car>
 当查询的记录条数是多条的时候，必须使用集合接收。如果使用单个实体类接收会出现异常。
 ```java
@@ -4727,7 +4727,7 @@ public void testSelectAll(){
     cars.forEach(car -> System.out.println(car));
 }
 ```
-![4813B87A-15F2-4638-B813-1B35699BD132.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/dcb1d5612caa60528c268a4f6601fc12.png)
+![4813B87A-15F2-4638-B813-1B35699BD132.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/dcb1d5612caa60528c268a4f6601fc12.png)
 如果返回多条记录，采用单个实体类接收会怎样？
 ```java
 /**
@@ -4750,11 +4750,11 @@ public void testSelectAll2(){
 }
 ```
 执行结果：
-![8D921E96-56B6-48a2-A605-0F27EE2D38C6.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/351df8ded6610baa7d554a31113808c7.png)
+![8D921E96-56B6-48a2-A605-0F27EE2D38C6.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/351df8ded6610baa7d554a31113808c7.png)
 ## 11.3 返回Map
 当返回的数据，没有合适的实体类对应的话，可以采用Map集合接收。字段名做key，字段值做value。
 查询如果可以保证只有一条数据，则返回一个Map集合即可。
-![24B63480-BD38-4039-9958-A2A8BE5291F7.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/4693e6f9dd3a22368fe2b831cb2e4ae7.png)
+![24B63480-BD38-4039-9958-A2A8BE5291F7.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/4693e6f9dd3a22368fe2b831cb2e4ae7.png)
 ```java
 /**
  * 通过id查询一条记录，返回Map集合
@@ -4778,12 +4778,12 @@ public void testSelectByIdRetMap(){
 }
 ```
 执行结果：
-![A661326B-A8BD-43b1-BD01-EB5A4BB9FE30.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9f5afe03cd3e515ef98fa134e76b79bb.png)
+![A661326B-A8BD-43b1-BD01-EB5A4BB9FE30.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/9f5afe03cd3e515ef98fa134e76b79bb.png)
 当然，如果返回一个Map集合，可以将Map集合放到List集合中吗？当然可以，这里就不再测试了。
 反过来，如果返回的不是一条记录，是多条记录的话，只采用单个Map集合接收，这样同样会出现之前的异常：**TooManyResultsException**
 ## 11.4 返回List<Map>
 查询结果条数大于等于1条数据，则可以返回一个存储Map集合的List集合。List<Map>等同于List<Car>
-![8B951F18-A8AC-4301-96A7-77B8838C6A8F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/7b827826ad9cfc8090953af7f9123d0a.png)
+![8B951F18-A8AC-4301-96A7-77B8838C6A8F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/7b827826ad9cfc8090953af7f9123d0a.png)
 ```java
 /**
      * 查询所有的Car，返回一个List集合。List集合中存储的是Map集合。
@@ -4816,7 +4816,7 @@ public void testSelectAllRetListMap(){
 ```
 ## 11.5 返回Map<String,Map>
 **拿Car的id做key，以后取出对应的Map集合时更方便。**
-![79D7BA9E-6228-4c39-950A-D877EFCBADD1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/44d8bd57afa251a243dec1866b8b8e56.png)
+![79D7BA9E-6228-4c39-950A-D877EFCBADD1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/44d8bd57afa251a243dec1866b8b8e56.png)
 ```java
 /**
      * 获取所有的Car，返回一个Map集合。
@@ -4959,7 +4959,7 @@ public void testSelectTotal(){
     System.out.println(total);
 }
 ```
-![58FB9430-3F99-4332-80C3-E3444C00CAE5.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/6656b0e1a2125c604bd523949c9dceaa.png)
+![58FB9430-3F99-4332-80C3-E3444C00CAE5.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/6656b0e1a2125c604bd523949c9dceaa.png)
 ![logo.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659578619308-ceb8077a-94a7-4f64-b41d-e54b3c14e7fb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9d7d7&clientId=u6b7aa99c-2be4-4&errorMessage=unknown%20error&from=paste&id=rFQu0&originHeight=152&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17957&status=error&style=none&taskId=u6b6c011d-5b8c-4c26-8cd3-e70c19148ae&title=)
 # 十二、动态SQL
 有的业务场景，也需要SQL语句进行动态拼接，例如：
@@ -4973,7 +4973,7 @@ delete from t_car where id in(1,2,3,4,5,6,......这里的值是动态的，根�
 
 - 多条件查询
 
-![890B6A37-46CD-41ad-953B-B0642DA2C62F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e2bf1d105b16c7f03785fd51651b6e93.png)
+![890B6A37-46CD-41ad-953B-B0642DA2C62F.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/e2bf1d105b16c7f03785fd51651b6e93.png)
 ```sql
 select * from t_car where brand like '丰田%' and guide_price > 30 and .....;
 ```
@@ -5055,32 +5055,32 @@ public class CarMapperTest {
 
 ```
 执行结果：
-![BF43A0EF-0324-4fb2-BE63-49E1352A5DB4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0f0c3ededf054088a4f73129d0d9ef4e.png)
+![BF43A0EF-0324-4fb2-BE63-49E1352A5DB4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/0f0c3ededf054088a4f73129d0d9ef4e.png)
 如果第一个条件为空，剩下两个条件不为空，会是怎样呢？
 ```java
 List<Car> cars = mapper.selectByMultiCondition("", 20.0, "燃油车");
 ```
 执行结果：
-![3E87EFE6-A4B7-44ba-AC52-F62AC8066B08.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/6016136c028ae371325b40db2902032c.png)
+![3E87EFE6-A4B7-44ba-AC52-F62AC8066B08.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/6016136c028ae371325b40db2902032c.png)
 报错了，SQL语法有问题，where后面出现了and。这该怎么解决呢？
 
 - 可以where后面添加一个恒成立的条件。
 
-![0FC63B04-CDC3-4c0a-BA1B-BEC7C2D91F3E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/dfe4103db9cb8131b68ff71015333267.png)
+![0FC63B04-CDC3-4c0a-BA1B-BEC7C2D91F3E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/dfe4103db9cb8131b68ff71015333267.png)
 执行结果：
-![5A8B9A51-99B6-4730-884A-0B69DC19FCC4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/b70e16f445c0ea271d991f3fda074e03.png)
+![5A8B9A51-99B6-4730-884A-0B69DC19FCC4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/b70e16f445c0ea271d991f3fda074e03.png)
 如果三个条件都是空，有影响吗？
 ```java
 List<Car> cars = mapper.selectByMultiCondition("", null, "");
 ```
 执行结果：
-![CB992BC7-3C95-4c47-96BE-778863905BDD.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c30637e92acce9c275afd690e9d55df8.png)
+![CB992BC7-3C95-4c47-96BE-778863905BDD.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/c30637e92acce9c275afd690e9d55df8.png)
 三个条件都不为空呢？
 ```java
 List<Car> cars = mapper.selectByMultiCondition("丰田", 20.0, "燃油车");
 ```
 执行结果：
-![3CAAB27C-3D6E-4709-9BA6-EBB3949AA75A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/548a4d4b46d045349e58580ad28612c4.png)
+![3CAAB27C-3D6E-4709-9BA6-EBB3949AA75A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/548a4d4b46d045349e58580ad28612c4.png)
 ## 12.2 where标签
 where标签的作用：让where子句更加动态智能。
 
@@ -5123,13 +5123,13 @@ public void testSelectByMultiConditionWithWhere(){
 }
 ```
 运行结果：
-![23A6B829-113A-40e8-9E5A-731C2EFE190E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/dd0af795cbc3c776a1cb56593f8c5a05.png)
+![23A6B829-113A-40e8-9E5A-731C2EFE190E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/dd0af795cbc3c776a1cb56593f8c5a05.png)
 如果所有条件都是空呢？
 ```java
 List<Car> cars = mapper.selectByMultiConditionWithWhere("", null, "");
 ```
 运行结果：
-![BCF50EEA-97BF-46a1-95E8-2D91129E4E8B.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d2193dcd754fb37fb4bba803415e6f0c.png)
+![BCF50EEA-97BF-46a1-95E8-2D91129E4E8B.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d2193dcd754fb37fb4bba803415e6f0c.png)
 它可以自动去掉前面多余的and，那可以自动去掉前面多余的or吗？
 ```java
 List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "燃油车");
@@ -5151,7 +5151,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "燃油�
 </select>
 ```
 执行结果：
-![13CDD5F7-C25D-463f-8B56-7FF28C39ECAE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/794a4802f1d8df805c17cd6a80b5b479.png)
+![13CDD5F7-C25D-463f-8B56-7FF28C39ECAE.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/794a4802f1d8df805c17cd6a80b5b479.png)
 它可以自动去掉前面多余的and，那可以自动去掉后面多余的and吗？
 ```xml
 <select id="selectByMultiConditionWithWhere" resultType="car">
@@ -5174,7 +5174,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "燃油�
 List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "");
 ```
 运行结果：
-![B3C02137-829D-49ad-B8C7-6816D0D7EC48.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/73344400443632ff05270a1d4e847e70.png)
+![B3C02137-829D-49ad-B8C7-6816D0D7EC48.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/73344400443632ff05270a1d4e847e70.png)
 很显然，后面多余的and是不会被去除的。
 ## 12.3 trim标签
 trim标签的属性：
@@ -5217,13 +5217,13 @@ public void testSelectByMultiConditionWithTrim(){
     System.out.println(cars);
 }
 ```
-![478A3426-65FF-4f80-823D-DF5B7CF542F8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/34950a30b46d439df1f835767f75e438.png)
+![478A3426-65FF-4f80-823D-DF5B7CF542F8.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/34950a30b46d439df1f835767f75e438.png)
 如果所有条件为空，where会被加上吗？
 ```java
 List<Car> cars = mapper.selectByMultiConditionWithTrim("", null, "");
 ```
 执行结果：
-![E6EAF998-8725-4c69-B2BC-8BF65B04A85A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1fac5ef4d1214460c81c930fc4998cf4.png)
+![E6EAF998-8725-4c69-B2BC-8BF65B04A85A.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/1fac5ef4d1214460c81c930fc4998cf4.png)
 ## 12.4 set标签
 主要使用在update语句当中，用来生成set关键字，同时去掉最后多余的“,”
 比如我们只更新提交的不为空的字段，如果提交的数据是空或者""，那么这个字段我们将不更新。
@@ -5259,7 +5259,7 @@ public void testUpdateWithSet(){
 }
 ```
 执行结果：
-![846C97DE-8048-41b8-8C6F-FCA743B53812.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ccac2df2de7b046e8bc0d82c73401b51.png)
+![846C97DE-8048-41b8-8C6F-FCA743B53812.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ccac2df2de7b046e8bc0d82c73401b51.png)
 ## 12.5 choose when otherwise
 这三个标签是在一起使用的：
 ```xml
@@ -5325,7 +5325,7 @@ public void testSelectWithChoose(){
     System.out.println(cars);
 }
 ```
-![E7884930-EDE9-4743-A1A9-DBDBD76C9E1E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/506f284227fe6f64c5f64a48b21ea72b.png)
+![E7884930-EDE9-4743-A1A9-DBDBD76C9E1E.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/506f284227fe6f64c5f64a48b21ea72b.png)
 ## 12.6 foreach标签
 循环数组或集合，动态生成sql，比如这样的SQL：
 ```sql
@@ -5374,7 +5374,7 @@ public void testDeleteBatchByForeach(){
 }
 ```
 执行结果：
-![F8F6B314-E3B0-46bd-8156-F88072A01271.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e022cfff524db64c7ed8302e3cf3ebba.png)
+![F8F6B314-E3B0-46bd-8156-F88072A01271.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/e022cfff524db64c7ed8302e3cf3ebba.png)
 
 - 用or来删除
 ```java
@@ -5403,7 +5403,7 @@ public void testDeleteBatchByForeach2(){
 }
 ```
 执行结果：
-![01FA0A35-FD1D-43e8-A92D-104E98194D6C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/97921d940b1d75229185dde214da35d7.png)
+![01FA0A35-FD1D-43e8-A92D-104E98194D6C.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/97921d940b1d75229185dde214da35d7.png)
 ### 批量添加
 ```java
 /**
@@ -5435,7 +5435,7 @@ public void testInsertBatchByForeach(){
 }
 ```
 执行结果：
-![A1B37462-5261-4b46-97CA-9D703D1452AC.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d7dda5b0f561ced7bfad25832e5b8adb.png)
+![A1B37462-5261-4b46-97CA-9D703D1452AC.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/d7dda5b0f561ced7bfad25832e5b8adb.png)
 ## 12.7 sql标签与include标签
 sql标签用来声明sql片段
 include标签用来将声明的sql片段包含到某个sql语句当中
@@ -5463,8 +5463,8 @@ include标签用来将声明的sql片段包含到某个sql语句当中
 配置文件：mybatis-config.xml、logback.xml、jdbc.properties
 拷贝工具类：SqlSessionUtil
 准备数据库表：一个班级对应多个学生。班级表：t_clazz。学生表：t_student
-![C97C4534-D714-4314-A6B9-1A9D6FB32776.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3cba8b8d4ae808e7a4e61712198d7787.png)
-![F3517247-9413-4e66-A4EE-13C26BD2F5B6.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1d15335d016a3b0a17ebc73322bfda56.png)
+![C97C4534-D714-4314-A6B9-1A9D6FB32776.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/3cba8b8d4ae808e7a4e61712198d7787.png)
+![F3517247-9413-4e66-A4EE-13C26BD2F5B6.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/1d15335d016a3b0a17ebc73322bfda56.png)
 创建pojo：Student、Clazz
 ```java
 package com.powernode.mybatis.pojo;
@@ -5605,7 +5605,7 @@ public class StudentMapperTest {
 
 ```
 执行结果：
-![F25380AC-E951-46c6-99AB-38AD7A2C76F2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/bd95c3e6dc9eaf0d135f7c2229fbc4ca.png)
+![F25380AC-E951-46c6-99AB-38AD7A2C76F2.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/bd95c3e6dc9eaf0d135f7c2229fbc4ca.png)
 ### 第二种方式：association
 其他位置都不需要修改，只需要修改resultMap中的配置：association即可。
 ```xml
@@ -5673,7 +5673,7 @@ public interface ClazzMapper {
 </mapper>
 ```
 执行结果，可以很明显看到先后有两条sql语句执行：
-![64257FF9-0D4C-45ea-AF88-68DC6E19141D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ae0eb12c249d749fc1607814de5901d2.png)
+![64257FF9-0D4C-45ea-AF88-68DC6E19141D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/ae0eb12c249d749fc1607814de5901d2.png)
 分步优点：
 
 - 第一个优点：代码复用性增强。
@@ -5705,7 +5705,7 @@ public class StudentMapperTest {
     }
 }
 ```
-![243153C1-F8EC-4792-9CE6-600A819EF080.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c8c5ef15749e0e4a9d82e84ddae88204.png)
+![243153C1-F8EC-4792-9CE6-600A819EF080.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/c8c5ef15749e0e4a9d82e84ddae88204.png)
 如果后续需要使用到学生所在班级的名称，这个时候才会执行关联的sql语句，修改测试程序：
 ```java
 public class StudentMapperTest {
@@ -5723,10 +5723,10 @@ public class StudentMapperTest {
     }
 }
 ```
-![D804FEF1-B414-4d5d-AF22-CF2042FACA69.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9c8b5fa90ac1e3c55cc426d41603fb87.png)
+![D804FEF1-B414-4d5d-AF22-CF2042FACA69.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/9c8b5fa90ac1e3c55cc426d41603fb87.png)
 通过以上的执行结果可以看到，只有当使用到班级名称之后，才会执行关联的sql语句，这就是延迟加载。
 在mybatis中如何开启全局的延迟加载呢？需要setting配置，如下：
-![0253ED55-CB5E-4256-BEE2-2C9E97317809.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9e6b1d13798f1910fa024c425ad2006d.png)
+![0253ED55-CB5E-4256-BEE2-2C9E97317809.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/9e6b1d13798f1910fa024c425ad2006d.png)
 ```xml
 <settings>
   <setting name="lazyLoadingEnabled" value="true"/>
@@ -5750,7 +5750,7 @@ public class StudentMapperTest {
     }
 }
 ```
-![D804FEF1-B414-4d5d-AF22-CF2042FACA69.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c5988490c163b4fb9cdbf0a7a76a9c9d.png)
+![D804FEF1-B414-4d5d-AF22-CF2042FACA69.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/c5988490c163b4fb9cdbf0a7a76a9c9d.png)
 通过以上的测试可以看出，我们已经开启了全局延迟加载策略。
 开启全局延迟加载之后，所有的sql都会支持延迟加载，如果某个sql你不希望它支持延迟加载怎么办呢？将fetchType设置为eager：
 ```xml
@@ -5763,7 +5763,7 @@ public class StudentMapperTest {
                fetchType="eager"/>
 </resultMap>
 ```
-![16CFD580-56BB-4a69-A1DA-095C8186D398.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3ae598d83847e210770fa9f22267339d.png)
+![16CFD580-56BB-4a69-A1DA-095C8186D398.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/3ae598d83847e210770fa9f22267339d.png)
 这样的话，针对某个特定的sql，你就关闭了延迟加载机制。
 后期我们要不要开启延迟加载机制，主要看实际的业务需求是怎样的。
 ## 13.3 一对多
@@ -5847,7 +5847,7 @@ public class ClazzMapperTest {
 
 ```
 执行结果：
-![11487318-3686-4868-B14C-D9247AC31764.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/08b551c85da64e319636ee4792380090.png)
+![11487318-3686-4868-B14C-D9247AC31764.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/08b551c85da64e319636ee4792380090.png)
 ### 第二种方式：分步查询
 修改以下三个位置即可：
 ```xml
@@ -5879,7 +5879,7 @@ List<Student> selectByCid(Integer cid);
 </select>
 ```
 执行结果：
-![B663AF51-68CE-416f-AC5D-F709FCE0304D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/62368dac68f0079389fc7133d7c442df.png)
+![B663AF51-68CE-416f-AC5D-F709FCE0304D.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/62368dac68f0079389fc7133d7c442df.png)
 ## 13.4 一对多延迟加载
 一对多延迟加载机制和多对一是一样的。同样是通过两种方式：
 
@@ -5977,7 +5977,7 @@ public class CarMapperTest {
 
 ```
 执行结果：
-![79E534E9-50A8-4e62-BB88-C459ACD1B997.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8151cf50d67a6aa1021fc81b9be55cbe.png)
+![79E534E9-50A8-4e62-BB88-C459ACD1B997.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/8151cf50d67a6aa1021fc81b9be55cbe.png)
 什么情况下不走缓存？
 
 - 第一种：不同的SqlSession对象。
@@ -6002,9 +6002,9 @@ void insertAccount();
   insert into t_act values(3, 'act003', 10000)
 </insert>
 ```
-![87026BA7-38F7-41c1-86B4-8462801F93BF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/accae7af12fe3d8bada1b17e91e9ffc1.png)
+![87026BA7-38F7-41c1-86B4-8462801F93BF.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/accae7af12fe3d8bada1b17e91e9ffc1.png)
 执行结果：
-![CBCDA9A8-3949-4bd0-8D10-56888A4286C3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e0c6ef3a8353d1c0ab9e4c3f681403b8.png)
+![CBCDA9A8-3949-4bd0-8D10-56888A4286C3.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/e0c6ef3a8353d1c0ab9e4c3f681403b8.png)
 ## 14.2 二级缓存
 二级缓存的范围是SqlSessionFactory。
 使用二级缓存需要具备以下几个条件：
@@ -6042,10 +6042,10 @@ public void testSelectById2() throws Exception{
     System.out.println(car2);
 }
 ```
-![4B715968-A13F-4fee-B41B-604504A1D847.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0be9ed567f1e0cf5cf87a9d8eaa546f7.png)
+![4B715968-A13F-4fee-B41B-604504A1D847.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/0be9ed567f1e0cf5cf87a9d8eaa546f7.png)
 **二级缓存的失效：只要两次查询之间出现了增删改操作。二级缓存就会失效。【一级缓存也会失效】**
 **二级缓存的相关配置：**
-![F7BACAAD-5DD9-43e8-A2A5-5AC787BAFFB4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/69cbf2506b539865cdb91595d8941ffe.png)
+![F7BACAAD-5DD9-43e8-A2A5-5AC787BAFFB4.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/69cbf2506b539865cdb91595d8941ffe.png)
 
 1. eviction：指定从缓存中移除某个对象的淘汰算法。默认采用LRU策略。
    1. LRU：Least Recently Used。最近最少使用。优先淘汰在间隔时间内使用频率最低的对象。(其实还有一种淘汰算法LFU，最不常用。)
@@ -6120,7 +6120,7 @@ public void testSelectById2() throws Exception{
     System.out.println(car2);
 }
 ```
-![509D28EA-B111-4151-AFC3-E6D3C3BB3F52.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/47966100ac1ea138b1d396d58d9441ea.png)
+![509D28EA-B111-4151-AFC3-E6D3C3BB3F52.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/47966100ac1ea138b1d396d58d9441ea.png)
 ![logo.png](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659578619308-ceb8077a-94a7-4f64-b41d-e54b3c14e7fb.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_34%2Ctext_5Yqo5Yqb6IqC54K5%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23d9d7d7&clientId=u6b7aa99c-2be4-4&errorMessage=unknown%20error&from=paste&id=YYR3y&originHeight=152&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17957&status=error&style=none&taskId=u6b6c011d-5b8c-4c26-8cd3-e70c19148ae&title=)
 # 十五、MyBatis的逆向工程
 所谓的逆向工程是：根据数据库表逆向生成Java的pojo类，SqlMapper.xml文件，以及Mapper接口类等。
@@ -6228,7 +6228,7 @@ public void testSelectById2() throws Exception{
 </generatorConfiguration>
 ```
 ### 第四步：运行插件
-![14F24AF8-789F-4267-9694-0FDF158366C1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/dfc4e1f76265564ef06209becce1221b.png)
+![14F24AF8-789F-4267-9694-0FDF158366C1.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/dfc4e1f76265564ef06209becce1221b.png)
 ## 15.2 测试逆向工程生成的是否好用
 ### 第一步：环境准备
 
@@ -6399,7 +6399,7 @@ public class PageTest {
 
 ```
 执行结果：
-![8603C746-8E85-4cfd-9D9D-4305643249E0.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/080998bbac1372ffc4a8f2c4477acfab.png)
+![8603C746-8E85-4cfd-9D9D-4305643249E0.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/080998bbac1372ffc4a8f2c4477acfab.png)
 获取数据不难，难的是获取分页相关的数据比较难。可以借助mybatis的PageHelper插件。
 ## 16.3 PageHelper插件
 使用PageHelper插件进行分页，更加的便捷。
@@ -6471,7 +6471,7 @@ mybatis中也提供了注解式开发方式，采用注解可以减少Sql映射�
 > 使用注解来映射简单语句会使代码显得更加简洁，但对于稍微复杂一点的语句，Java 注解不仅力不从心，还会让你本就复杂的 SQL 语句更加混乱不堪。 因此，如果你需要做一些很复杂的操作，最好用 XML 来映射语句。
 
 使用注解编写复杂的SQL是这样的：
-![7B6EA744-14B7-4f41-94DC-AD005612A026.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/badcd06f7b7a0a7c67dd5c93ed16a005.png)
+![7B6EA744-14B7-4f41-94DC-AD005612A026.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/badcd06f7b7a0a7c67dd5c93ed16a005.png)
 原则：简单sql可以注解。复杂sql使用xml。
 模块名：mybatis-013-annotation
 打包方式：jar
@@ -6576,4 +6576,4 @@ public void testSelectById() throws Exception{
 }
 ```
 执行结果：
-![76ADC80A-E5F0-4805-92F2-E98A4D92EBA0.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/18d0da8c42d93fbc5c2e00fdead9b86c.png)
+![76ADC80A-E5F0-4805-92F2-E98A4D92EBA0.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis/18d0da8c42d93fbc5c2e00fdead9b86c.png)

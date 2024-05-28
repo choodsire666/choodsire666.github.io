@@ -43,7 +43,7 @@ Redis 6.0版本中，从RESP2升级到了RESP3协议，增加了更多数据类�
 
 数组：首字节是 ‘*’，后面跟上数组元素个数，再跟上元素，元素数据类型不限:
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bd5762a55a8e15d57ac949c2a0f6efa7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/bd5762a55a8e15d57ac949c2a0f6efa7.png)
 
 ## 3.1 Redis通信协议-基于Socket自定义Redis的客户端
 
@@ -164,7 +164,7 @@ public class Main {
 Redis之所以性能强，最主要的原因就是基于内存存储。然而单节点的Redis其内存大小不宜过大，会影响持久化或主从同步性能。
 我们可以通过修改配置文件来设置Redis的最大内存：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0fd1a83690fe9c628dbc98327500d078.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/0fd1a83690fe9c628dbc98327500d078.png)
 
 当内存使用达到上限时，就无法存储更多数据了。为了解决这个问题，Redis提供了一些策略实现内存回收：
 
@@ -172,15 +172,15 @@ Redis之所以性能强，最主要的原因就是基于内存存储。然而单
 
 在学习Redis缓存的时候我们说过，可以通过expire命令给Redis的key设置TTL（存活时间）：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5219a54535e4477b8899856638a8c55b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/5219a54535e4477b8899856638a8c55b.png)
 
 可以发现，当key的TTL到期以后，再次访问name返回的是nil，说明这个key已经不存在了，对应的内存也得到释放。从而起到内存回收的目的。
 
 Redis本身是一个典型的key-value内存存储数据库，因此所有的key、value都保存在之前学习过的Dict结构中。不过在其database结构体中，有两个Dict：一个用来记录key-value；另一个用来记录key-TTL。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7ce9f289386ed27ea907ccbd4fab2c17.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/7ce9f289386ed27ea907ccbd4fab2c17.png)
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bc6a84300b947c78fa082dc3a85ac41d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/bc6a84300b947c78fa082dc3a85ac41d.png)
 
 这里有两个问题需要我们思考：
 Redis是如何知道一个key是否过期呢？
@@ -193,7 +193,7 @@ Redis是如何知道一个key是否过期呢？
 
 惰性删除：顾明思议并不是在TTL到期后就立刻删除，而是在访问一个key的时候，检查该key的存活时间，如果已经过期才执行删除。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e5a809239bdb292cde072fc2dfba21e1.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/e5a809239bdb292cde072fc2dfba21e1.png)
 
 **周期删除**
 
@@ -238,7 +238,7 @@ FAST模式执行频率不固定，但两次间隔不低于2ms，每次耗时不�
 
 内存淘汰：就是当Redis内存使用达到设置的上限时，主动挑选部分key删除以释放更多内存的流程。Redis会在处理客户端命令的方法processCommand()中尝试做内存淘汰：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d700b310c03b79b0bb6d685167c6bd37.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/d700b310c03b79b0bb6d685167c6bd37.png)
 
 淘汰策略
 
@@ -258,7 +258,7 @@ Redis支持8种不同策略来选择要删除的key：
 
 Redis的数据都会被封装为RedisObject结构：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/2fd7250364fcd801612f4cbac26a59f8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/2fd7250364fcd801612f4cbac26a59f8.png)
 
 LFU的访问次数之所以叫做逻辑访问次数，是因为并不是每次key被访问都计数，而是通过运算：
 
@@ -269,4 +269,4 @@ LFU的访问次数之所以叫做逻辑访问次数，是因为并不是每次ke
 
 最后用一副图来描述当前的这个流程吧
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0190f7729b51211c4ac83e03bd0a1e7a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/0190f7729b51211c4ac83e03bd0a1e7a.png)

@@ -20,10 +20,10 @@ GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中�
 #  2 导入店铺数据到GEO
 具体场景说明：
 
-![1653822036941.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/37ccde96d269f0389045c99b6717fef5.png)
+![1653822036941.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/11 GEO数据结构的应用/37ccde96d269f0389045c99b6717fef5.png)
 
 当我们点击美食之后，会出现一系列的商家，商家中可以按照多种排序方式，我们此时关注的是距离，这个地方就需要使用到我们的GEO，向后台传入当前app收集的地址(我们此处是写死的) ，以当前坐标作为圆心，同时绑定相同的店家类型type，以及分页信息，把这几个条件传入后台，后台查询出对应的数据再返回。
-![1653822021827.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1d35daa06598f9461e74b2c8132e54df.png)
+![1653822021827.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/11 GEO数据结构的应用/1d35daa06598f9461e74b2c8132e54df.png)
 我们要做的事情是：将数据库表中的数据导入到redis中去，redis中的GEO，GEO在redis中就一个menber和一个经纬度，我们把x和y轴传入到redis做的经纬度位置去，但我们不能把所有的数据都放入到menber中去，毕竟作为redis是一个内存级数据库，如果存海量数据，redis还是力不从心，所以我们在这个地方存储他的id即可。
 但是这个时候还有一个问题，就是在redis中并没有存储type，所以我们无法根据type来对数据进行筛选，所以我们可以按照商户类型做分组，类型相同的商户作为同一组，以typeId为key存入同一个GEO集合中即可
 

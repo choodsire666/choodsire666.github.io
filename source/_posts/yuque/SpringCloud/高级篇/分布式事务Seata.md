@@ -20,7 +20,7 @@ description: 在分布式架构系统中，服务不止一个，一个完整的�
 # 1.分布式事务问题
 ## 1.1.本地事务
 本地事务，也就是传统的**单机事务**。在传统数据库事务中，必须要满足四个原则：
-![image-20210724165045186.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3c645881a8ccaec1cd44652e20ff12ea.png)
+![image-20210724165045186.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/3c645881a8ccaec1cd44652e20ff12ea.png)
 ## 1.2.分布式事务
 **分布式事务**，就是指不是在单个服务或单个数据库架构下，产生的事务，例如：
 
@@ -35,7 +35,7 @@ description: 在分布式架构系统中，服务不止一个，一个完整的�
 - 从用户账户余额扣除金额
 
 完成上面的操作需要访问三个不同的微服务和三个不同的数据库。
-![image-20210724165338958.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1301658d0147437d4f7370d03fd55db6.png)
+![image-20210724165338958.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/1301658d0147437d4f7370d03fd55db6.png)
 订单的创建、库存的扣减、账户扣款在每一个服务和数据库内是一个本地事务，可以保证ACID原则。
 但是当我们把三件事情看做一个"业务"，要满足保证“业务”的原子性，要么所有操作全部成功，要么全部失败，不允许出现部分成功部分失败的现象，这就是**分布式系统下的事务**了。此时ACID难以满足，这是分布式事务要解决的问题
 ## 1.3.演示分布式事务问题
@@ -116,9 +116,9 @@ curl --location --request POST 'http://localhost:8082/order?userId=user202103032
 如图：
 请求方式：POST
 请求地址：[http://localhost:8082/order?userId=user202103032042012&commodityCode=100202003032041&count=20&money=200](http://localhost:8082/order?userId=user202103032042012&commodityCode=100202003032041&count=20&money=200)
-![image-20210724170113404.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5ddb8ba1a6438c2039bbf63c6765e045.png)
+![image-20210724170113404.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/5ddb8ba1a6438c2039bbf63c6765e045.png)
 测试发现，当库存不足时，如果余额已经扣减，并不会回滚，出现了分布式事务问题。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/048778d3c328497724d31cd90151a016.png)	![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/24955e947a9b295bd50bf4a407895b69.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/048778d3c328497724d31cd90151a016.png)	![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/24955e947a9b295bd50bf4a407895b69.png)
 # 2.理论基础
 解决分布式事务问题，需要一些分布式系统的基础知识作为理论指导。
 ## 2.1.CAP定理
@@ -131,19 +131,19 @@ curl --location --request POST 'http://localhost:8082/order?userId=user202103032
 ### 2.1.1.一致性
 Consistency（一致性）：用户访问分布式系统中的任意节点，得到的数据必须一致。
 比如现在包含两个节点，其中的初始数据是一致的：
-![image-20210724170704694.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ac3434543b030651b5d8b2121f6327fc.png)
+![image-20210724170704694.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/ac3434543b030651b5d8b2121f6327fc.png)
 当我们修改其中一个节点的数据时，两者的数据产生了差异：
-![image-20210724170735847.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2f511936461233cc515e61b0e6e53f75.png)
+![image-20210724170735847.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/2f511936461233cc515e61b0e6e53f75.png)
 要想保住一致性，就必须实现node01 到 node02的数据 同步：
-![image-20210724170834855.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c7c65e2b00841e2d5b299f8e5b552efd.png)
+![image-20210724170834855.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/c7c65e2b00841e2d5b299f8e5b552efd.png)
 ### 2.1.2.可用性
 Availability （可用性）：用户访问集群中的任意健康节点，必须能得到响应，而不是超时或拒绝。如图，有三个节点的集群，访问任何一个都可以及时得到响应：
-![image-20210724170932072.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8b223ebbef9d4d0a3a298d131e10248f.png)
+![image-20210724170932072.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/8b223ebbef9d4d0a3a298d131e10248f.png)
 当有部分节点因为网络故障或其它原因无法访问时，代表节点不可用：
-![image-20210724171007516.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ddcc4673223ce4cfa41d25fdc3e2a137.png)
+![image-20210724171007516.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/ddcc4673223ce4cfa41d25fdc3e2a137.png)
 ### 2.1.3.分区容错
 **Partition（分区）**：因为网络故障或其它原因导致分布式系统中的部分节点与其它节点失去连接，形成独立分区。
-![image-20210724171041210.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a7b7a4572a799d4bfb074f27ac43e92a.png)
+![image-20210724171041210.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/a7b7a4572a799d4bfb074f27ac43e92a.png)
 **Tolerance（容错）**：在集群出现分区时，整个系统也要持续对外提供服务
 ### 2.1.4.矛盾
 在分布式系统中，系统间的网络不能100%保证健康，一定会有故障的时候，而服务又必须对外保证服务。因此Partition Tolerance不可避免。当节点接收到新的数据变更时，就会出现问题了：
@@ -163,11 +163,11 @@ BASE理论是对CAP的一种解决思路，包含三个思想：
 -  CP模式：各个子事务执行后互相等待，同时提交，同时回滚，达成强一致。但事务等待过程中，处于弱可用状态。 
 
 但不管是哪一种模式，都需要在子系统事务之间互相通讯，协调事务状态，也就是需要一个**事务协调者(TC)**：
-![image-20210724172123567.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05c691f0f7812fc2900b18626ac0fad2.png)
+![image-20210724172123567.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/05c691f0f7812fc2900b18626ac0fad2.png)
 这里的子系统事务，称为**分支事务**；有关联的各个分支事务在一起称为**全局事务**。
 # 3.初识Seata
 Seata是 2019 年 1 月份蚂蚁金服和阿里巴巴共同开源的分布式事务解决方案。致力于提供高性能和简单易用的分布式事务服务，为用户打造一站式的分布式解决方案。官网地址：http://seata.io/，其中的文档、播客中提供了大量的使用说明、源码分析。
-![image-20210724172225817.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/5f1d03f56906227f65ed1cfaa11d70a8.png)
+![image-20210724172225817.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/5f1d03f56906227f65ed1cfaa11d70a8.png)
 ## 3.1.Seata的架构
 Seata事务管理中有三个重要的角色：
 
@@ -176,7 +176,7 @@ Seata事务管理中有三个重要的角色：
 -  **RM (Resource Manager) -** **资源管理器：**管理分支事务处理的资源，与TC交谈以注册分支事务和报告分支事务的状态，并驱动分支事务提交或回滚。 
 
 整体的架构如图：
-![image-20210724172326452.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/2a10c9c07c90fdc5d1b8d94f0a3dfb72.png)
+![image-20210724172326452.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/2a10c9c07c90fdc5d1b8d94f0a3dfb72.png)
 Seata基于上述架构提供了四种不同的分布式事务解决方案：
 
 - XA模式：强一致性分阶段事务模式，牺牲了一定的可用性，无业务侵入
@@ -237,7 +237,7 @@ seata:
 - cluster：集群名
 
 以上四个信息，在刚才的yaml文件中都能找到：
-![image-20210724173654258.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/468a1246a5b30a41b997f21e3be49144.png)
+![image-20210724173654258.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/468a1246a5b30a41b997f21e3be49144.png)
 namespace为空，就是默认的public
 结合起来，TC服务的信息就是：public@DEFAULT_GROUP@seata-tc-server@GZ，这样就能确定TC服务集群了。然后就可以去Nacos拉取对应的实例信息了。
 ### 3.3.3.其它服务
@@ -249,9 +249,9 @@ XA 规范 是 X/Open 组织定义的分布式事务处理（DTP，Distributed Tr
 ### 4.1.1.两阶段提交
 XA是规范，目前主流数据库都实现了这种规范，实现的原理都是基于两阶段提交。
 正常情况：
-![image-20210724174102768.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ab3a1d5b1988643e65c2dbc142888be5.png)
+![image-20210724174102768.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/ab3a1d5b1988643e65c2dbc142888be5.png)
 异常情况：
-![image-20210724174234987.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8d0607aef46eb88695c5ec5f89813378.png)
+![image-20210724174234987.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/8d0607aef46eb88695c5ec5f89813378.png)
 一阶段：
 
 - 事务协调者通知每个事物参与者执行本地事务
@@ -264,7 +264,7 @@ XA是规范，目前主流数据库都实现了这种规范，实现的原理都
    - 如果一阶段任意一个参与者失败，则通知所有事务参与者回滚事务
 ### 4.1.2.Seata的XA模型
 Seata对原始的XA模式做了简单的封装和改造，以适应自己的事务模型，基本架构如图：
-![image-20210724174424070.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/da174ea7bc7dcadce05e476384a24866.png)
+![image-20210724174424070.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/da174ea7bc7dcadce05e476384a24866.png)
 RM一阶段的工作：
 	① 注册分支事务到TC
 	② 执行分支业务sql但不提交
@@ -297,14 +297,14 @@ seata:
 ```
 2）给发起全局事务的入口方法添加@GlobalTransactional注解:
 本例中是OrderServiceImpl中的create方法.
-![image-20210724174859556.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a7b5e6562dae67fa90881d4d6b455463.png)
+![image-20210724174859556.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/a7b5e6562dae67fa90881d4d6b455463.png)
 3）重启服务并测试
 重启order-service，再次测试，发现无论怎样，三个微服务都能成功回滚。
 ## 4.2.AT模式
 AT模式同样是分阶段提交的事务模型，不过缺弥补了XA模型中资源锁定周期过长的缺陷。
 ### 4.2.1.Seata的AT模型
 基本流程图：
-![image-20210724175327511.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/29af20476414867467dc694a8b394a33.png)
+![image-20210724175327511.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/29af20476414867467dc694a8b394a33.png)
 阶段一RM的工作：
 
 - 注册分支事务
@@ -350,7 +350,7 @@ AT模式下，当前分支事务执行流程如下：
 	 a）如果都成功，则立即删除快照
 	 b）如果有分支事务失败，需要回滚。读取快照数据（`{"id": 1, "money": 100}`），将快照恢复到数据库。此时数据库再次恢复为100
 流程图：
-![image-20210724180722921.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/afa6a0c5cb7a5003eec2052c85956322.png)
+![image-20210724180722921.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/afa6a0c5cb7a5003eec2052c85956322.png)
 ### 4.2.3.AT与XA的区别
 简述AT模式与XA模式最大的区别是什么？
 
@@ -359,9 +359,9 @@ AT模式下，当前分支事务执行流程如下：
 - XA模式强一致；AT模式最终一致
 ### 4.2.4.脏写问题
 在多线程并发访问AT模式的分布式事务时，有可能出现脏写问题，如图：
-![image-20210724181541234.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0ac8f1d77757444c77363a574f915088.png)
+![image-20210724181541234.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/0ac8f1d77757444c77363a574f915088.png)
 解决思路就是引入了全局锁的概念。在释放DB锁之前，先拿到全局锁。避免同一时刻有另外一个事务来操作当前数据。
-![image-20210724181843029.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/726aec24736079d60020f53bef1cfa61.png)
+![image-20210724181843029.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/726aec24736079d60020f53bef1cfa61.png)
 ### 4.2.5.优缺点
 AT模式的优点：
 
@@ -455,15 +455,15 @@ TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC
 - **阶段一（ Try ）**：检查余额是否充足，如果充足则冻结金额增加30元，可用余额扣除30
 
 初始余额：
-![image-20210724182424907.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/3df444a0ba5ed2a4d23e2f8c0eaa95a5.png)
+![image-20210724182424907.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/3df444a0ba5ed2a4d23e2f8c0eaa95a5.png)
 余额充足，可以冻结：
-![image-20210724182457951.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/bf61be71d304fea22cfd4dd2b611a0fe.png)
+![image-20210724182457951.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/bf61be71d304fea22cfd4dd2b611a0fe.png)
 此时，总金额 = 冻结金额 + 可用金额，数量依然是100不变。事务直接提交无需等待其它事务。
 
 - **阶段二（Confirm)**：假如要提交（Confirm），则冻结金额扣减30
 
 确认可以提交，不过之前可用金额已经扣减过了，这里只要清除冻结金额就好了：
-![image-20210724182706011.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/afe3780f86e8b8ebdee50187f47fda6d.png)
+![image-20210724182706011.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/afe3780f86e8b8ebdee50187f47fda6d.png)
 此时，总金额 = 冻结金额 + 可用金额 = 0 + 70  = 70元
 
 - **阶段二(Canncel)**：如果要回滚（Cancel），则冻结金额扣减30，可用余额增加30
@@ -472,7 +472,7 @@ TCC模式与AT模式非常相似，每阶段都是独立事务，不同的是TCC
 ![](assets/image-20210724182810734.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=ekYZU&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ### 4.3.2.Seata的TCC模型
 Seata中的TCC模型依然延续之前的事务架构，如图：
-![image-20210724182937713.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ee79ec61439983e7d935547be8a11fac.png)
+![image-20210724182937713.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/ee79ec61439983e7d935547be8a11fac.png)
 ### 4.3.3.优缺点
 TCC模式的每个阶段是做什么的？
 
@@ -495,7 +495,7 @@ TCC的缺点是什么？
 #### 1）空回滚
 当某分支事务的try阶段**阻塞**时，可能导致全局事务超时而触发二阶段的cancel操作。在未执行try操作时先执行了cancel操作，这时cancel不能做回滚，就是**空回滚**。
 如图：
-![image-20210724183426891.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/a77a587682a6acec3d3dcb0809796235.png)
+![image-20210724183426891.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/a77a587682a6acec3d3dcb0809796235.png)
 执行cancel操作时，应当判断try是否已经执行，如果尚未执行，则应该空回滚。
 #### 2）业务悬挂
 对于已经空回滚的业务，之前被阻塞的try操作恢复，继续执行try，就永远不可能confirm或cancel ，事务一直处于中间状态，这就是**业务悬挂**。
@@ -668,14 +668,14 @@ public class AccountTCCServiceImpl implements AccountTCCService {
 ```
 
 改造 `src/main/java/cn/itcast/account/web/AccountController.java` 如下：
-![image-20220620195501868.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/580f7ff2ead7f5c8bffd55e839de246a.png)
+![image-20220620195501868.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/580f7ff2ead7f5c8bffd55e839de246a.png)
 ## 4.4.SAGA模式
 Saga 模式是 Seata 即将开源的长事务解决方案，将由蚂蚁金服主要贡献。其理论基础是Hector & Kenneth  在1987年发表的论文[Sagas](https://microservices.io/patterns/data/saga.html)。
 Seata官网对于Saga的指南：[https://seata.io/zh-cn/docs/user/saga.html](https://seata.io/zh-cn/docs/user/saga.html)
 ### 4.4.1.原理
 在 Saga 模式下，分布式事务内有多个参与者，每一个参与者都是一个冲正补偿服务，需要用户根据业务场景实现其正向操作和逆向回滚操作。
 分布式事务执行过程中，依次执行各参与者的正向操作，如果所有正向操作均执行成功，那么分布式事务提交。如果任何一个正向操作执行失败，那么分布式事务会去退回去执行前面各参与者的逆向回滚操作，回滚已提交的参与者，使分布式事务回到初始状态。
-![image-20210724184846396.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8937924bd7111ab6b8a7c8c9a3c2bb59.png)
+![image-20210724184846396.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/8937924bd7111ab6b8a7c8c9a3c2bb59.png)
 Saga也分为两个阶段：
 
 - 一阶段：直接提交本地事务
@@ -701,14 +701,14 @@ Saga也分为两个阶段：
 - 场景：常见的业务场景
 
 如图：
-![image-20210724185021819.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ae5bb445e65157caf8a6b257e315b1c9.png)
+![image-20210724185021819.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/ae5bb445e65157caf8a6b257e315b1c9.png)
 # 5.高可用
 Seata的TC服务作为分布式事务核心，一定要保证集群的高可用性。
 ## 5.1.高可用架构模型
 搭建TC服务集群非常简单，启动多个TC服务，注册到nacos即可。
 但集群并不能确保100%安全，万一集群所在机房故障怎么办？所以如果要求较高，一般都会做异地多机房容灾。
 比如一个TC集群在广州，另一个TC集群在杭州：
-![image-20220620202137645.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/d396579f8e9e883e6a17b2d868ba2c20.png)
+![image-20220620202137645.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/d396579f8e9e883e6a17b2d868ba2c20.png)
 微服务基于事务组（tx-service-group)与TC集群的映射关系，来查找当前应该使用哪个TC集群。当GZ集群故障时，只需要将vgroup-mapping中的映射关系改成HZ。则所有微服务就会切换到HZ的TC集群了。
 ## 5.2.实现高可用
 具体实现请参考：[《seata的部署和集成.md》](https://www.yuque.com/xiankanpengyouquandisitiaodongtai/diods0/tyvzebhpluiorwpk)

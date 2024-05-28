@@ -161,6 +161,22 @@
       "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
+      "id": 162365021,
+      "doc_id": "qcrge7r13lkbwlg9",
+      "updated": 1716825118000,
+      "properties": {
+        "title": "Git、Linux、Docker",
+        "urlname": "qcrge7r13lkbwlg9",
+        "date": "2024-03-19 11:53:42",
+        "updated": "2024-05-27 23:51:58",
+        "description": "Git概述版本系统SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而开发人员工作的时候，用的都是自己的电脑，所以首先要从中央服务器下载最新的版本，然后开发，开发完后，需要把自己开发的代码提交到中央服务器。集中式版本控制工具缺点：服务器单点故障、容错性差Git 是分布式版本控制系统（..."
+      },
+      "catalog": [],
+      "realName": "Git、Linux、Docker",
+      "relativePath": "\\Git、Linux、Docker.md",
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
       "id": 90161554,
       "doc_id": "gr7lgx",
       "updated": 1715924967000,
@@ -197,22 +213,6 @@
       "realName": "业务需求",
       "relativePath": "\\yanhe_ledger\\业务需求.md",
       "docPath": "source\\_posts\\yuque\\yanhe_ledger"
-    },
-    {
-      "id": 162365021,
-      "doc_id": "qcrge7r13lkbwlg9",
-      "updated": 1715927452000,
-      "properties": {
-        "title": "Git|Linux|Docker",
-        "urlname": "qcrge7r13lkbwlg9",
-        "date": "2024-03-19 11:53:42",
-        "updated": "2024-05-17 14:30:52",
-        "description": "Git概述版本系统SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而开发人员工作的时候，用的都是自己的电脑，所以首先要从中央服务器下载最新的版本，然后开发，开发完后，需要把自己开发的代码提交到中央服务器。集中式版本控制工具缺点：服务器单点故障、容错性差Git 是分布式版本控制系统（..."
-      },
-      "catalog": [],
-      "realName": "Git!Linux!Docker",
-      "relativePath": "\\Git!Linux!Docker.md",
-      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 169935971,
@@ -311,6 +311,28 @@
       "docPath": "source\\_posts\\yuque"
     },
     {
+      "id": 161830164,
+      "doc_id": "ya82rih88q5s87o9",
+      "updated": 1715754377000,
+      "properties": {
+        "title": "SpringMVC",
+        "urlname": "ya82rih88q5s87o9",
+        "date": "2024-03-14 15:36:40",
+        "updated": "2024-05-15 14:26:17",
+        "cover": "https://www.yuque.com/api/filetransfer/images?url=http%3A%2F%2Fimgcloud.duiyi.xyz%2F%2Fdata20200522155555.png&amp;sign=2bdee9ce343324a48700f6fe21e124297b2938e3b3edb76f710c2d51f66c5885",
+        "description": "课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的..."
+      },
+      "catalog": [
+        {
+          "title": "SSM",
+          "doc_id": "ya82rih88q5s87o9"
+        }
+      ],
+      "realName": "SpringMVC",
+      "relativePath": "\\SSM\\SpringMVC.md",
+      "docPath": "source\\_posts\\yuque\\SSM"
+    },
+    {
       "id": 161780151,
       "doc_id": "ggstmhn7xxix66dq",
       "updated": 1715760172000,
@@ -332,28 +354,6 @@
       "relativePath": "\\Java\\常见的API类.md",
       "needUpdate": 1,
       "docPath": "source\\_posts\\yuque\\Java"
-    },
-    {
-      "id": 161830164,
-      "doc_id": "ya82rih88q5s87o9",
-      "updated": 1715754377000,
-      "properties": {
-        "title": "SpringMVC",
-        "urlname": "ya82rih88q5s87o9",
-        "date": "2024-03-14 15:36:40",
-        "updated": "2024-05-15 14:26:17",
-        "cover": "https://www.yuque.com/api/filetransfer/images?url=http%3A%2F%2Fimgcloud.duiyi.xyz%2F%2Fdata20200522155555.png&amp;sign=2bdee9ce343324a48700f6fe21e124297b2938e3b3edb76f710c2d51f66c5885",
-        "description": "课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的..."
-      },
-      "catalog": [
-        {
-          "title": "SSM",
-          "doc_id": "ya82rih88q5s87o9"
-        }
-      ],
-      "realName": "SpringMVC",
-      "relativePath": "\\SSM\\SpringMVC.md",
-      "docPath": "source\\_posts\\yuque\\SSM"
     },
     {
       "id": 167362001,
@@ -490,6 +490,23 @@
       "docPath": "source\\_posts\\yuque\\手写数据MySQL\\VM"
     },
     {
+      "id": 91136321,
+      "doc_id": "xuk6bl",
+      "updated": 1715442784000,
+      "properties": {
+        "title": "SpringBoot",
+        "urlname": "xuk6bl",
+        "date": "2022-08-30 08:32:56",
+        "updated": "2024-05-11 23:53:04",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1662791824056-daa8dbc9-2b79-460f-ae25-0c628dc42928.png",
+        "description": "1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot..."
+      },
+      "catalog": [],
+      "realName": "SpringBoot",
+      "relativePath": "\\SpringBoot.md",
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
       "id": 167361993,
       "doc_id": "gwquwxkqm8fd",
       "updated": 1714196780000,
@@ -513,40 +530,6 @@
       "realName": "事务的隔离级别",
       "relativePath": "\\手写数据MySQL\\VM\\事务的隔离级别.md",
       "docPath": "source\\_posts\\yuque\\手写数据MySQL\\VM"
-    },
-    {
-      "id": 91136321,
-      "doc_id": "xuk6bl",
-      "updated": 1715442784000,
-      "properties": {
-        "title": "SpringBoot",
-        "urlname": "xuk6bl",
-        "date": "2022-08-30 08:32:56",
-        "updated": "2024-05-11 23:53:04",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1662791824056-daa8dbc9-2b79-460f-ae25-0c628dc42928.png",
-        "description": "1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot..."
-      },
-      "catalog": [],
-      "realName": "SpringBoot",
-      "relativePath": "\\SpringBoot.md",
-      "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque"
-    },
-    {
-      "id": 162404549,
-      "doc_id": "fp6ps3t3rlbygff4",
-      "updated": 1715562415000,
-      "properties": {
-        "title": "JavaWeb",
-        "urlname": "fp6ps3t3rlbygff4",
-        "date": "2024-03-19 16:02:01",
-        "updated": "2024-05-13 09:06:55",
-        "description": "HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku..."
-      },
-      "catalog": [],
-      "realName": "JavaWeb",
-      "relativePath": "\\JavaWeb.md",
-      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 167361982,
@@ -597,6 +580,22 @@
       "realName": "字段与表管理",
       "relativePath": "\\手写数据MySQL\\TBM\\字段与表管理.md",
       "docPath": "source\\_posts\\yuque\\手写数据MySQL\\TBM"
+    },
+    {
+      "id": 162404549,
+      "doc_id": "fp6ps3t3rlbygff4",
+      "updated": 1715562415000,
+      "properties": {
+        "title": "JavaWeb",
+        "urlname": "fp6ps3t3rlbygff4",
+        "date": "2024-03-19 16:02:01",
+        "updated": "2024-05-13 09:06:55",
+        "description": "HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku..."
+      },
+      "catalog": [],
+      "realName": "JavaWeb",
+      "relativePath": "\\JavaWeb.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 167361958,
@@ -1081,39 +1080,6 @@
       "docPath": "source\\_posts\\yuque\\Java\\数据结构与集合源码"
     },
     {
-      "id": 161275591,
-      "doc_id": "thntx25rsgidw0u8",
-      "updated": 1713173398000,
-      "properties": {
-        "title": "技术派项目",
-        "urlname": "thntx25rsgidw0u8",
-        "date": "2024-03-10 21:22:48",
-        "updated": "2024-04-15 17:29:58",
-        "description": "1. 问答环节项目的介绍?实现的背景实现基本的业务需求使用MQ、ElasticSearch，优化项目结构和提供更优的搜索功能1.1. 项目背景技术派里面用到的都是互联网当下最流行的技术架构，骨架是通过 Spring Boot+Mybatis-Plus 搭建的，并且是前后端分离的，其中还用到了数..."
-      },
-      "catalog": [],
-      "realName": "技术派项目",
-      "relativePath": "\\技术派项目.md",
-      "docPath": "source\\_posts\\yuque"
-    },
-    {
-      "id": 162922841,
-      "doc_id": "zqezgyiyyccmpoqa",
-      "updated": 1713694182000,
-      "properties": {
-        "title": "VUE",
-        "urlname": "zqezgyiyyccmpoqa",
-        "date": "2024-03-23 10:49:34",
-        "updated": "2024-04-21 18:09:42",
-        "cover": "https://cdn.nlark.com/yuque/0/2021/png/21919573/1624671542879-991b58be-2cb0-4467-a9d0-4c71d248246d.png?x-oss-process=image%2Fformat%2Cwebp",
-        "description": "笔记模板语法插值语法功能：用于解析标签体内容\t\t\t\t\t\t\t\t写法：{{xxxx}},xxx会作为表达式去解析，且可以自动读取到data中的属性指令语法功能：用于解析标签（包括：标签属性、标签体内容、绑定事件.....）\t\t\t\t\t\t\t\t举例：v-bind:href=\"xxxxxx\" 或  简写为..."
-      },
-      "catalog": [],
-      "realName": "VUE",
-      "relativePath": "\\VUE.md",
-      "docPath": "source\\_posts\\yuque"
-    },
-    {
       "id": 161666083,
       "doc_id": "vsp1knk4g0g1",
       "updated": 1713273748000,
@@ -1138,6 +1104,39 @@
       "relativePath": "\\Java\\JDK8-17新特性\\JDK8-17新特性（上）.md",
       "needUpdate": 1,
       "docPath": "source\\_posts\\yuque\\Java\\JDK8-17新特性"
+    },
+    {
+      "id": 162922841,
+      "doc_id": "zqezgyiyyccmpoqa",
+      "updated": 1713694182000,
+      "properties": {
+        "title": "VUE",
+        "urlname": "zqezgyiyyccmpoqa",
+        "date": "2024-03-23 10:49:34",
+        "updated": "2024-04-21 18:09:42",
+        "cover": "https://cdn.nlark.com/yuque/0/2021/png/21919573/1624671542879-991b58be-2cb0-4467-a9d0-4c71d248246d.png?x-oss-process=image%2Fformat%2Cwebp",
+        "description": "笔记模板语法插值语法功能：用于解析标签体内容\t\t\t\t\t\t\t\t写法：{{xxxx}},xxx会作为表达式去解析，且可以自动读取到data中的属性指令语法功能：用于解析标签（包括：标签属性、标签体内容、绑定事件.....）\t\t\t\t\t\t\t\t举例：v-bind:href=\"xxxxxx\" 或  简写为..."
+      },
+      "catalog": [],
+      "realName": "VUE",
+      "relativePath": "\\VUE.md",
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
+      "id": 161275591,
+      "doc_id": "thntx25rsgidw0u8",
+      "updated": 1713173398000,
+      "properties": {
+        "title": "技术派项目",
+        "urlname": "thntx25rsgidw0u8",
+        "date": "2024-03-10 21:22:48",
+        "updated": "2024-04-15 17:29:58",
+        "description": "1. 问答环节项目的介绍?实现的背景实现基本的业务需求使用MQ、ElasticSearch，优化项目结构和提供更优的搜索功能1.1. 项目背景技术派里面用到的都是互联网当下最流行的技术架构，骨架是通过 Spring Boot+Mybatis-Plus 搭建的，并且是前后端分离的，其中还用到了数..."
+      },
+      "catalog": [],
+      "realName": "技术派项目",
+      "relativePath": "\\技术派项目.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 163840916,
@@ -1318,6 +1317,28 @@
       "docPath": "source\\_posts\\yuque\\Java"
     },
     {
+      "id": 161781110,
+      "doc_id": "canurtaag1nab24f",
+      "updated": 1715761410000,
+      "properties": {
+        "title": "集合**",
+        "urlname": "canurtaag1nab24f",
+        "date": "2024-03-14 11:10:08",
+        "updated": "2024-05-15 16:23:30",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1664805296233-ea954596-b3d0-4243-b897-81b06146398f.png",
+        "description": "本章专题与脉络1. 集合框架概述1.1 生活中的容器1.2 数组的特点与弊端一方面，面向对象语言对事物的体现都是以对象的形式，为了方便对多个对象的操作，就要对对象进行存储。另一方面，使用数组存储对象方面具有一些弊端，而Java 集合就像一种容器，可以动态地把多个对象的引用放入容器中。数组在内存..."
+      },
+      "catalog": [
+        {
+          "title": "Java",
+          "doc_id": "canurtaag1nab24f"
+        }
+      ],
+      "realName": "集合",
+      "relativePath": "\\Java\\集合.md",
+      "docPath": "source\\_posts\\yuque\\Java"
+    },
+    {
       "id": 161793856,
       "doc_id": "sccz1qv8gkkd",
       "updated": 1712895561000,
@@ -1362,26 +1383,25 @@
       "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
-      "id": 161781110,
-      "doc_id": "canurtaag1nab24f",
-      "updated": 1715761410000,
+      "id": 161792486,
+      "doc_id": "gg9u3gpwo4yw0l04",
+      "updated": 1712840800000,
       "properties": {
-        "title": "集合**",
-        "urlname": "canurtaag1nab24f",
-        "date": "2024-03-14 11:10:08",
-        "updated": "2024-05-15 16:23:30",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/29688613/1664805296233-ea954596-b3d0-4243-b897-81b06146398f.png",
-        "description": "本章专题与脉络1. 集合框架概述1.1 生活中的容器1.2 数组的特点与弊端一方面，面向对象语言对事物的体现都是以对象的形式，为了方便对多个对象的操作，就要对对象进行存储。另一方面，使用数组存储对象方面具有一些弊端，而Java 集合就像一种容器，可以动态地把多个对象的引用放入容器中。数组在内存..."
+        "title": "15 触发器",
+        "urlname": "gg9u3gpwo4yw0l04",
+        "date": "2024-03-14 12:12:38",
+        "updated": "2024-04-11 21:06:40",
+        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍触发器是与表有关的数据库对象，指在insert/update/delete之前(BEFORE)或之后(AFTER)，触发并执行触发器中定义的SQL语句集合。触发器的这种特性可以协助应..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "canurtaag1nab24f"
+          "title": "MySQL",
+          "doc_id": "gg9u3gpwo4yw0l04"
         }
       ],
-      "realName": "集合",
-      "relativePath": "\\Java\\集合.md",
-      "docPath": "source\\_posts\\yuque\\Java"
+      "realName": "15 触发器",
+      "relativePath": "\\MySQL\\15 触发器.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161668561,
@@ -1403,27 +1423,6 @@
       ],
       "realName": "02 SQL-DDL",
       "relativePath": "\\MySQL\\02 SQL-DDL.md",
-      "docPath": "source\\_posts\\yuque\\MySQL"
-    },
-    {
-      "id": 161792486,
-      "doc_id": "gg9u3gpwo4yw0l04",
-      "updated": 1712840800000,
-      "properties": {
-        "title": "15 触发器",
-        "urlname": "gg9u3gpwo4yw0l04",
-        "date": "2024-03-14 12:12:38",
-        "updated": "2024-04-11 21:06:40",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍触发器是与表有关的数据库对象，指在insert/update/delete之前(BEFORE)或之后(AFTER)，触发并执行触发器中定义的SQL语句集合。触发器的这种特性可以协助应..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "gg9u3gpwo4yw0l04"
-        }
-      ],
-      "realName": "15 触发器",
-      "relativePath": "\\MySQL\\15 触发器.md",
       "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
@@ -1618,6 +1617,23 @@
       "docPath": "source\\_posts\\yuque\\SpringBoot"
     },
     {
+      "id": 90169206,
+      "doc_id": "ctoz5c",
+      "updated": 1712649810000,
+      "properties": {
+        "title": "JVM",
+        "urlname": "ctoz5c",
+        "date": "2022-08-21 11:55:48",
+        "updated": "2024-04-09 16:03:30",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710733746806-89265629-4794-4205-baf1-f5c15227330a.png",
+        "description": "JVM概述基本介绍JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作特点：Java 虚拟机基于二进制字节码执行，由一套字节码指令集、一组寄存器、一个..."
+      },
+      "catalog": [],
+      "realName": "JVM",
+      "relativePath": "\\JVM.md",
+      "docPath": "source\\_posts\\yuque"
+    },
+    {
       "id": 161792674,
       "doc_id": "cnimlcxf8gntnpx1",
       "updated": 1712548271000,
@@ -1637,45 +1653,6 @@
       ],
       "realName": "18 MySQL管理工具",
       "relativePath": "\\MySQL\\18 MySQL管理工具.md",
-      "docPath": "source\\_posts\\yuque\\MySQL"
-    },
-    {
-      "id": 90169206,
-      "doc_id": "ctoz5c",
-      "updated": 1712649810000,
-      "properties": {
-        "title": "JVM",
-        "urlname": "ctoz5c",
-        "date": "2022-08-21 11:55:48",
-        "updated": "2024-04-09 16:03:30",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710733746806-89265629-4794-4205-baf1-f5c15227330a.png",
-        "description": "JVM概述基本介绍JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作特点：Java 虚拟机基于二进制字节码执行，由一套字节码指令集、一组寄存器、一个..."
-      },
-      "catalog": [],
-      "realName": "JVM",
-      "relativePath": "\\JVM.md",
-      "docPath": "source\\_posts\\yuque"
-    },
-    {
-      "id": 161672069,
-      "doc_id": "kflrk7t7h9ozf2nk",
-      "updated": 1713168477000,
-      "properties": {
-        "title": "12 SQL优化",
-        "urlname": "kflrk7t7h9ozf2nk",
-        "date": "2024-03-13 17:49:07",
-        "updated": "2024-04-15 16:07:57",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055015248-92fc1f45-105c-4d5f-b564-a46f9f3ec4b0.png",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 插入数据1.1 insert如果我们需要一次性往数据库表中插入多条记录，可以从以下三个方面进行优化。insert into tb_test values(1,'tom');  inser..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "kflrk7t7h9ozf2nk"
-        }
-      ],
-      "realName": "12 SQL优化",
-      "relativePath": "\\MySQL\\12 SQL优化.md",
       "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
@@ -1701,26 +1678,26 @@
       "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
-      "id": 163845814,
-      "doc_id": "xhhctg6hhc2ore91",
-      "updated": 1712480834000,
+      "id": 161672069,
+      "doc_id": "kflrk7t7h9ozf2nk",
+      "updated": 1713168477000,
       "properties": {
-        "title": "SSM整合",
-        "urlname": "xhhctg6hhc2ore91",
-        "date": "2024-03-31 12:04:38",
-        "updated": "2024-04-07 17:07:14",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1711858643069-c3ae1c6f-3ae6-41b5-bcad-b44e504a1f37.png",
-        "description": "前言在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。注解整合\t注解\t解释Spring\t@Autowired\tSpring提供的工具（由Spring的依赖注入工具（BeanPostProcessor、BeanFact..."
+        "title": "12 SQL优化",
+        "urlname": "kflrk7t7h9ozf2nk",
+        "date": "2024-03-13 17:49:07",
+        "updated": "2024-04-15 16:07:57",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055015248-92fc1f45-105c-4d5f-b564-a46f9f3ec4b0.png",
+        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 插入数据1.1 insert如果我们需要一次性往数据库表中插入多条记录，可以从以下三个方面进行优化。insert into tb_test values(1,'tom');  inser..."
       },
       "catalog": [
         {
-          "title": "SSM",
-          "doc_id": "xhhctg6hhc2ore91"
+          "title": "MySQL",
+          "doc_id": "kflrk7t7h9ozf2nk"
         }
       ],
-      "realName": "SSM整合",
-      "relativePath": "\\SSM\\SSM整合.md",
-      "docPath": "source\\_posts\\yuque\\SSM"
+      "realName": "12 SQL优化",
+      "relativePath": "\\MySQL\\12 SQL优化.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
       "id": 161827270,
@@ -1742,6 +1719,28 @@
       ],
       "realName": "Spring",
       "relativePath": "\\SSM\\Spring.md",
+      "docPath": "source\\_posts\\yuque\\SSM"
+    },
+    {
+      "id": 163845814,
+      "doc_id": "xhhctg6hhc2ore91",
+      "updated": 1712480834000,
+      "properties": {
+        "title": "SSM整合",
+        "urlname": "xhhctg6hhc2ore91",
+        "date": "2024-03-31 12:04:38",
+        "updated": "2024-04-07 17:07:14",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1711858643069-c3ae1c6f-3ae6-41b5-bcad-b44e504a1f37.png",
+        "description": "前言在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。注解整合\t注解\t解释Spring\t@Autowired\tSpring提供的工具（由Spring的依赖注入工具（BeanPostProcessor、BeanFact..."
+      },
+      "catalog": [
+        {
+          "title": "SSM",
+          "doc_id": "xhhctg6hhc2ore91"
+        }
+      ],
+      "realName": "SSM整合",
+      "relativePath": "\\SSM\\SSM整合.md",
       "docPath": "source\\_posts\\yuque\\SSM"
     },
     {
@@ -1833,6 +1832,28 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
+      "id": 161820140,
+      "doc_id": "auf4wvnuz7pk",
+      "updated": 1712231037000,
+      "properties": {
+        "title": "Docker实用篇",
+        "urlname": "auf4wvnuz7pk",
+        "date": "2024-03-14 14:57:03",
+        "updated": "2024-04-04 19:43:57",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399417614-93dd4d6d-db26-4487-ab7d-19cc0259ac8f.png",
+        "description": "Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "auf4wvnuz7pk"
+        }
+      ],
+      "realName": "Docker实用篇",
+      "relativePath": "\\SpringCloud\\Docker实用篇.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud"
+    },
+    {
       "id": 161665991,
       "doc_id": "vezu0hrrp9gu",
       "updated": 1712284018000,
@@ -1855,26 +1876,20 @@
       "docPath": "source\\_posts\\yuque\\Java"
     },
     {
-      "id": 161820140,
-      "doc_id": "auf4wvnuz7pk",
-      "updated": 1712231037000,
+      "id": 162405726,
+      "doc_id": "mh6nqsrgn902qzd0",
+      "updated": 1712388508000,
       "properties": {
-        "title": "Docker实用篇",
-        "urlname": "auf4wvnuz7pk",
-        "date": "2024-03-14 14:57:03",
-        "updated": "2024-04-04 19:43:57",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399417614-93dd4d6d-db26-4487-ab7d-19cc0259ac8f.png",
-        "description": "Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署..."
+        "title": "JUC",
+        "urlname": "mh6nqsrgn902qzd0",
+        "date": "2024-03-19 16:06:38",
+        "updated": "2024-04-06 15:28:28",
+        "description": "JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，..."
       },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "auf4wvnuz7pk"
-        }
-      ],
-      "realName": "Docker实用篇",
-      "relativePath": "\\SpringCloud\\Docker实用篇.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud"
+      "catalog": [],
+      "realName": "JUC",
+      "relativePath": "\\JUC.md",
+      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 164315592,
@@ -1914,22 +1929,6 @@
       "realName": "08-2 Redis优化秒杀抢购问题",
       "relativePath": "\\redis\\08-2 Redis优化秒杀抢购问题.md",
       "docPath": "source\\_posts\\yuque\\redis"
-    },
-    {
-      "id": 162405726,
-      "doc_id": "mh6nqsrgn902qzd0",
-      "updated": 1712388508000,
-      "properties": {
-        "title": "JUC",
-        "urlname": "mh6nqsrgn902qzd0",
-        "date": "2024-03-19 16:06:38",
-        "updated": "2024-04-06 15:28:28",
-        "description": "JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，..."
-      },
-      "catalog": [],
-      "realName": "JUC",
-      "relativePath": "\\JUC.md",
-      "docPath": "source\\_posts\\yuque"
     },
     {
       "id": 163841542,
@@ -2228,25 +2227,25 @@
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
-      "id": 163840913,
-      "doc_id": "qmpdgovcdm5gg74q",
-      "updated": 1714114432000,
+      "id": 163840905,
+      "doc_id": "gphkccpkqwg43dvx",
+      "updated": 1711854584000,
       "properties": {
-        "title": "14 Redis持久化",
-        "urlname": "qmpdgovcdm5gg74q",
-        "date": "2024-03-31 11:08:56",
-        "updated": "2024-04-26 14:53:52",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532308215-177308fc-c6d9-4564-bdd9-fceda380b08b.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案单机的Redis存在四大问题：Redis有两种持久化方案：RDB持久化AOF持久化1 RDB持久化RDB全称Redis Database Backup file（Redis数据备份文件），..."
+        "title": "13 HyperLog数据结构的应用",
+        "urlname": "gphkccpkqwg43dvx",
+        "date": "2024-03-31 11:08:54",
+        "updated": "2024-03-31 11:09:44",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036498331-c14ba67d-9940-4595-a3ff-5592b9832288.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次..."
       },
       "catalog": [
         {
           "title": "redis",
-          "doc_id": "qmpdgovcdm5gg74q"
+          "doc_id": "gphkccpkqwg43dvx"
         }
       ],
-      "realName": "14 Redis持久化",
-      "relativePath": "\\redis\\14 Redis持久化.md",
+      "realName": "13 HyperLog数据结构的应用",
+      "relativePath": "\\redis\\13 HyperLog数据结构的应用.md",
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
@@ -2272,28 +2271,6 @@
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
-      "id": 163840905,
-      "doc_id": "gphkccpkqwg43dvx",
-      "updated": 1711854584000,
-      "properties": {
-        "title": "13 HyperLog数据结构的应用",
-        "urlname": "gphkccpkqwg43dvx",
-        "date": "2024-03-31 11:08:54",
-        "updated": "2024-03-31 11:09:44",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036498331-c14ba67d-9940-4595-a3ff-5592b9832288.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "gphkccpkqwg43dvx"
-        }
-      ],
-      "realName": "13 HyperLog数据结构的应用",
-      "relativePath": "\\redis\\13 HyperLog数据结构的应用.md",
-      "docPath": "source\\_posts\\yuque\\redis"
-    },
-    {
       "id": 163840862,
       "doc_id": "vtfb7mek12cki3p8",
       "updated": 1712410539000,
@@ -2313,6 +2290,28 @@
       ],
       "realName": "11 GEO数据结构的应用",
       "relativePath": "\\redis\\11 GEO数据结构的应用.md",
+      "docPath": "source\\_posts\\yuque\\redis"
+    },
+    {
+      "id": 163840913,
+      "doc_id": "qmpdgovcdm5gg74q",
+      "updated": 1714114432000,
+      "properties": {
+        "title": "14 Redis持久化",
+        "urlname": "qmpdgovcdm5gg74q",
+        "date": "2024-03-31 11:08:56",
+        "updated": "2024-04-26 14:53:52",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532308215-177308fc-c6d9-4564-bdd9-fceda380b08b.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案单机的Redis存在四大问题：Redis有两种持久化方案：RDB持久化AOF持久化1 RDB持久化RDB全称Redis Database Backup file（Redis数据备份文件），..."
+      },
+      "catalog": [
+        {
+          "title": "redis",
+          "doc_id": "qmpdgovcdm5gg74q"
+        }
+      ],
+      "realName": "14 Redis持久化",
+      "relativePath": "\\redis\\14 Redis持久化.md",
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
@@ -2404,28 +2403,6 @@
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
-      "id": 161818235,
-      "doc_id": "nk0295vsa2w1",
-      "updated": 1711854340000,
-      "properties": {
-        "title": "06 Redis实现全局唯一Id",
-        "urlname": "nk0295vsa2w1",
-        "date": "2024-03-14 14:48:11",
-        "updated": "2024-03-31 11:05:40",
-        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032900159-55407570-ed06-46d3-b000-d3c84a3e2bbb.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 全局唯一ID每个店铺都可以发布优惠券：当用户抢购时，就会生成订单并保存到tb_voucher_order这张表中，而订单表如果使用数据库自增ID就存在一些问题：id的规律性太明显受单表..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "nk0295vsa2w1"
-        }
-      ],
-      "realName": "06 Redis实现全局唯一Id",
-      "relativePath": "\\redis\\06 Redis实现全局唯一Id.md",
-      "docPath": "source\\_posts\\yuque\\redis"
-    },
-    {
       "id": 163840647,
       "doc_id": "sdprcgobgfqsqtdr",
       "updated": 1711854366000,
@@ -2448,25 +2425,25 @@
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
-      "id": 161794000,
-      "doc_id": "ecdq9bgmbzav",
-      "updated": 1711854265000,
+      "id": 161818235,
+      "doc_id": "nk0295vsa2w1",
+      "updated": 1711854340000,
       "properties": {
-        "title": "04 Redis实现Session共享",
-        "urlname": "ecdq9bgmbzav",
-        "date": "2024-03-14 12:28:28",
-        "updated": "2024-03-31 11:04:25",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710390501758-cf8496d1-f3ed-41ab-a3bf-b21f99ed9bf4.png",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 当前架构手机或者app端发起请求，请求我们的nginx服务器，nginx基于七层模型走的是HTTP协议，可以实现基于Lua直接绕开tomcat访问redis，也可以作为静态资源服务器，..."
+        "title": "06 Redis实现全局唯一Id",
+        "urlname": "nk0295vsa2w1",
+        "date": "2024-03-14 14:48:11",
+        "updated": "2024-03-31 11:05:40",
+        "cover": "https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032900159-55407570-ed06-46d3-b000-d3c84a3e2bbb.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 全局唯一ID每个店铺都可以发布优惠券：当用户抢购时，就会生成订单并保存到tb_voucher_order这张表中，而订单表如果使用数据库自增ID就存在一些问题：id的规律性太明显受单表..."
       },
       "catalog": [
         {
           "title": "redis",
-          "doc_id": "ecdq9bgmbzav"
+          "doc_id": "nk0295vsa2w1"
         }
       ],
-      "realName": "04 Redis实现Session共享",
-      "relativePath": "\\redis\\04 Redis实现Session共享.md",
+      "realName": "06 Redis实现全局唯一Id",
+      "relativePath": "\\redis\\06 Redis实现全局唯一Id.md",
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
@@ -2489,6 +2466,28 @@
       ],
       "realName": "05 Redis做缓存数据库",
       "relativePath": "\\redis\\05 Redis做缓存数据库.md",
+      "docPath": "source\\_posts\\yuque\\redis"
+    },
+    {
+      "id": 161794000,
+      "doc_id": "ecdq9bgmbzav",
+      "updated": 1711854265000,
+      "properties": {
+        "title": "04 Redis实现Session共享",
+        "urlname": "ecdq9bgmbzav",
+        "date": "2024-03-14 12:28:28",
+        "updated": "2024-03-31 11:04:25",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710390501758-cf8496d1-f3ed-41ab-a3bf-b21f99ed9bf4.png",
+        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 当前架构手机或者app端发起请求，请求我们的nginx服务器，nginx基于七层模型走的是HTTP协议，可以实现基于Lua直接绕开tomcat访问redis，也可以作为静态资源服务器，..."
+      },
+      "catalog": [
+        {
+          "title": "redis",
+          "doc_id": "ecdq9bgmbzav"
+        }
+      ],
+      "realName": "04 Redis实现Session共享",
+      "relativePath": "\\redis\\04 Redis实现Session共享.md",
       "docPath": "source\\_posts\\yuque\\redis"
     },
     {
@@ -2651,36 +2650,6 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
     },
     {
-      "id": 163594692,
-      "doc_id": "wk26fg6mrpxznqa5",
-      "updated": 1711615075000,
-      "properties": {
-        "title": "1.开发篇（脚手架下载）",
-        "urlname": "wk26fg6mrpxznqa5",
-        "date": "2024-03-28 16:37:30",
-        "updated": "2024-03-28 16:37:55",
-        "cover": "https://cdn.nlark.com/yuque/0/2020/gif/1169676/1601284036559-f86c2b88-6bca-4c25-837c-595e42b80e19.gif",
-        "description": "前言近年来，云原生、Kubernetes、微服务、SpringCloud 这些名词在技术圈内不绝于耳，数据显示，使用 SpringCloud 作为微服务的框架，同时选择 Kubernetes 作为应用与基础设施运维底座的团队越来越多，这二者的搭档基本上成为了业界的主流配搭。为了顺应这一趋势，E..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "wk26fg6mrpxznqa5"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "wk26fg6mrpxznqa5"
-        },
-        {
-          "title": "SpringCloud集成K8S",
-          "doc_id": "wk26fg6mrpxznqa5"
-        }
-      ],
-      "realName": "1.开发篇（脚手架下载）",
-      "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\1.开发篇（脚手架下载）.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
-    },
-    {
       "id": 163594824,
       "doc_id": "ur02buwkmprvwubv",
       "updated": 1711615106000,
@@ -2708,6 +2677,36 @@
       ],
       "realName": "2.部署篇（开发部署）",
       "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\2.部署篇（开发部署）.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
+    },
+    {
+      "id": 163594692,
+      "doc_id": "wk26fg6mrpxznqa5",
+      "updated": 1711615075000,
+      "properties": {
+        "title": "1.开发篇（脚手架下载）",
+        "urlname": "wk26fg6mrpxznqa5",
+        "date": "2024-03-28 16:37:30",
+        "updated": "2024-03-28 16:37:55",
+        "cover": "https://cdn.nlark.com/yuque/0/2020/gif/1169676/1601284036559-f86c2b88-6bca-4c25-837c-595e42b80e19.gif",
+        "description": "前言近年来，云原生、Kubernetes、微服务、SpringCloud 这些名词在技术圈内不绝于耳，数据显示，使用 SpringCloud 作为微服务的框架，同时选择 Kubernetes 作为应用与基础设施运维底座的团队越来越多，这二者的搭档基本上成为了业界的主流配搭。为了顺应这一趋势，E..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "wk26fg6mrpxznqa5"
+        },
+        {
+          "title": "高级篇",
+          "doc_id": "wk26fg6mrpxznqa5"
+        },
+        {
+          "title": "SpringCloud集成K8S",
+          "doc_id": "wk26fg6mrpxznqa5"
+        }
+      ],
+      "realName": "1.开发篇（脚手架下载）",
+      "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\1.开发篇（脚手架下载）.md",
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
     },
     {
@@ -2771,36 +2770,6 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
-      "id": 163594258,
-      "doc_id": "wgnodz6eoyltmyx6",
-      "updated": 1711614922000,
-      "properties": {
-        "title": "索引库、文档操作",
-        "urlname": "wgnodz6eoyltmyx6",
-        "date": "2024-03-28 16:34:54",
-        "updated": "2024-03-28 16:35:22",
-        "description": "在前面读者朋友们可以了解到ES承载着和MySQL一样的“存储-查询”功能，那么就类似的会有建表语句、表结构、表数据，有了这些才可以存储-查询数据。而这些对应的在ES中是：Mapping映射（表结构-建表语句）、索引库（表本身）、文档（表数据）。本节笔者将带领大家完整上述概念的创建、使用。1.e..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "wgnodz6eoyltmyx6"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "wgnodz6eoyltmyx6"
-        },
-        {
-          "title": "分布式搜索引擎ElasticSearch",
-          "doc_id": "wgnodz6eoyltmyx6"
-        }
-      ],
-      "realName": "索引库、文档操作",
-      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\索引库、文档操作.md",
-      "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
-    },
-    {
       "id": 163594331,
       "doc_id": "tw4e1oe6q4ixiqbo",
       "updated": 1711614944000,
@@ -2860,29 +2829,34 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
-      "id": 163594032,
-      "doc_id": "nqc4fklsd6fv5pk7",
-      "updated": 1711614828000,
+      "id": 163594258,
+      "doc_id": "wgnodz6eoyltmyx6",
+      "updated": 1711614922000,
       "properties": {
-        "title": "Sentinel工作原理",
-        "urlname": "nqc4fklsd6fv5pk7",
-        "date": "2024-03-28 16:33:31",
-        "updated": "2024-03-28 16:33:48",
-        "description": "Sentinel 基本概念资源资源是 Sentinel 的关键概念。它可以是 Java 应用程序中的任何内容，例如，由应用程序提供的服务，或由应用程序调用的其它应用提供的服务，甚至可以是一段代码。在接下来的文档中，我们都会用资源来描述代码块。只要通过 Sentinel API 定义的代码，就是..."
+        "title": "索引库、文档操作",
+        "urlname": "wgnodz6eoyltmyx6",
+        "date": "2024-03-28 16:34:54",
+        "updated": "2024-03-28 16:35:22",
+        "description": "在前面读者朋友们可以了解到ES承载着和MySQL一样的“存储-查询”功能，那么就类似的会有建表语句、表结构、表数据，有了这些才可以存储-查询数据。而这些对应的在ES中是：Mapping映射（表结构-建表语句）、索引库（表本身）、文档（表数据）。本节笔者将带领大家完整上述概念的创建、使用。1.e..."
       },
       "catalog": [
         {
           "title": "SpringCloud",
-          "doc_id": "nqc4fklsd6fv5pk7"
+          "doc_id": "wgnodz6eoyltmyx6"
         },
         {
           "title": "高级篇",
-          "doc_id": "nqc4fklsd6fv5pk7"
+          "doc_id": "wgnodz6eoyltmyx6"
+        },
+        {
+          "title": "分布式搜索引擎ElasticSearch",
+          "doc_id": "wgnodz6eoyltmyx6"
         }
       ],
-      "realName": "Sentinel工作原理",
-      "relativePath": "\\SpringCloud\\高级篇\\Sentinel工作原理.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "realName": "索引库、文档操作",
+      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\索引库、文档操作.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594137,
@@ -2910,29 +2884,28 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
-      "id": 163593797,
-      "doc_id": "alw5bumbvhg6svwc",
-      "updated": 1711614775000,
+      "id": 163594032,
+      "doc_id": "nqc4fklsd6fv5pk7",
+      "updated": 1711614828000,
       "properties": {
-        "title": "Seata的部署和集成",
-        "urlname": "alw5bumbvhg6svwc",
-        "date": "2024-03-28 16:32:30",
-        "updated": "2024-03-28 16:32:55",
-        "description": "一、部署Seata的tc-server1.下载下载seata-server地址在：http://seata.io/zh-cn/blog/download.html，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip2.解压在非中文目录解压缩这个zip包，其目..."
+        "title": "Sentinel工作原理",
+        "urlname": "nqc4fklsd6fv5pk7",
+        "date": "2024-03-28 16:33:31",
+        "updated": "2024-03-28 16:33:48",
+        "description": "Sentinel 基本概念资源资源是 Sentinel 的关键概念。它可以是 Java 应用程序中的任何内容，例如，由应用程序提供的服务，或由应用程序调用的其它应用提供的服务，甚至可以是一段代码。在接下来的文档中，我们都会用资源来描述代码块。只要通过 Sentinel API 定义的代码，就是..."
       },
       "catalog": [
         {
           "title": "SpringCloud",
-          "doc_id": "alw5bumbvhg6svwc"
+          "doc_id": "nqc4fklsd6fv5pk7"
         },
         {
           "title": "高级篇",
-          "doc_id": "alw5bumbvhg6svwc"
+          "doc_id": "nqc4fklsd6fv5pk7"
         }
       ],
-      "realName": "Seata的部署和集成",
-      "relativePath": "\\SpringCloud\\高级篇\\Seata的部署和集成.md",
-      "needUpdate": 1,
+      "realName": "Sentinel工作原理",
+      "relativePath": "\\SpringCloud\\高级篇\\Sentinel工作原理.md",
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
@@ -2959,6 +2932,32 @@
       ],
       "realName": "微服务保护Sentinel",
       "relativePath": "\\SpringCloud\\高级篇\\微服务保护Sentinel.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+    },
+    {
+      "id": 163593797,
+      "doc_id": "alw5bumbvhg6svwc",
+      "updated": 1711614775000,
+      "properties": {
+        "title": "Seata的部署和集成",
+        "urlname": "alw5bumbvhg6svwc",
+        "date": "2024-03-28 16:32:30",
+        "updated": "2024-03-28 16:32:55",
+        "description": "一、部署Seata的tc-server1.下载下载seata-server地址在：http://seata.io/zh-cn/blog/download.html，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip2.解压在非中文目录解压缩这个zip包，其目..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "alw5bumbvhg6svwc"
+        },
+        {
+          "title": "高级篇",
+          "doc_id": "alw5bumbvhg6svwc"
+        }
+      ],
+      "realName": "Seata的部署和集成",
+      "relativePath": "\\SpringCloud\\高级篇\\Seata的部署和集成.md",
+      "needUpdate": 1,
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
@@ -3014,32 +3013,6 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
-      "id": 163593411,
-      "doc_id": "eyz9dwt14chnr5up",
-      "updated": 1711614648000,
-      "properties": {
-        "title": "RabbitMQ部署指南",
-        "urlname": "eyz9dwt14chnr5up",
-        "date": "2024-03-28 16:30:28",
-        "updated": "2024-03-28 16:30:48",
-        "description": "1.单机部署我们在Centos7虚拟机中使用Docker来安装。1.1.下载镜像docker pull rabbitmq:3.8-management1.2.安装MQ执行下面的命令来运行MQ容器：docker run \\  -e RABBITMQ_DEFAULT_USER=itcast \\  ..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "eyz9dwt14chnr5up"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "eyz9dwt14chnr5up"
-        }
-      ],
-      "realName": "RabbitMQ部署指南",
-      "relativePath": "\\SpringCloud\\高级篇\\RabbitMQ部署指南.md",
-      "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
-    },
-    {
       "id": 163593508,
       "doc_id": "mbewrwpdklq4ihs8",
       "updated": 1711614680000,
@@ -3066,29 +3039,30 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
-      "id": 163592130,
-      "doc_id": "gc7ulkvzqyg3l0f1",
-      "updated": 1711614230000,
+      "id": 163593411,
+      "doc_id": "eyz9dwt14chnr5up",
+      "updated": 1711614648000,
       "properties": {
-        "title": "2.SpringCloud工程部署启动",
-        "urlname": "gc7ulkvzqyg3l0f1",
-        "date": "2024-03-28 16:23:27",
-        "updated": "2024-03-28 16:23:50",
-        "description": "1.工程搭建部署方案一：完整工程导入📎cloud.zip，如无法运行尝试换未编译版：📎cloud-demo.zip下载解压上述工程，ide工具导入方案二：从零开始搭建1.工程与module创建1.1 父工程创建1.2 子module创建module名称：order-service、user..."
+        "title": "RabbitMQ部署指南",
+        "urlname": "eyz9dwt14chnr5up",
+        "date": "2024-03-28 16:30:28",
+        "updated": "2024-03-28 16:30:48",
+        "description": "1.单机部署我们在Centos7虚拟机中使用Docker来安装。1.1.下载镜像docker pull rabbitmq:3.8-management1.2.安装MQ执行下面的命令来运行MQ容器：docker run \\  -e RABBITMQ_DEFAULT_USER=itcast \\  ..."
       },
       "catalog": [
         {
           "title": "SpringCloud",
-          "doc_id": "gc7ulkvzqyg3l0f1"
+          "doc_id": "eyz9dwt14chnr5up"
         },
         {
-          "title": "基本篇",
-          "doc_id": "gc7ulkvzqyg3l0f1"
+          "title": "高级篇",
+          "doc_id": "eyz9dwt14chnr5up"
         }
       ],
-      "realName": "2.SpringCloud工程部署启动",
-      "relativePath": "\\SpringCloud\\基本篇\\2.SpringCloud工程部署启动.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
+      "realName": "RabbitMQ部署指南",
+      "relativePath": "\\SpringCloud\\高级篇\\RabbitMQ部署指南.md",
+      "needUpdate": 1,
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
       "id": 163593245,
@@ -3117,26 +3091,29 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
     },
     {
-      "id": 161782200,
-      "doc_id": "vqczqg29gvt9w7om",
-      "updated": 1711687881000,
+      "id": 163592130,
+      "doc_id": "gc7ulkvzqyg3l0f1",
+      "updated": 1711614230000,
       "properties": {
-        "title": "反射",
-        "urlname": "vqczqg29gvt9w7om",
-        "date": "2024-03-14 11:14:17",
-        "updated": "2024-03-29 12:51:21",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321333936-b0e36a3c-b88d-4db2-bf1e-5080e9840c04.png",
-        "description": "问答环节什么是反射？应用？原理？1. 反射出现的背景Java程序中，所有的对象都有两种类型：编译时类型和运行时类型，而很多时候对象的编译时类型和运行时类型不一致。 Object obj = new String(\"hello\");    obj.getClass()例如：某些变量或形参的声明类..."
+        "title": "2.SpringCloud工程部署启动",
+        "urlname": "gc7ulkvzqyg3l0f1",
+        "date": "2024-03-28 16:23:27",
+        "updated": "2024-03-28 16:23:50",
+        "description": "1.工程搭建部署方案一：完整工程导入📎cloud.zip，如无法运行尝试换未编译版：📎cloud-demo.zip下载解压上述工程，ide工具导入方案二：从零开始搭建1.工程与module创建1.1 父工程创建1.2 子module创建module名称：order-service、user..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "vqczqg29gvt9w7om"
+          "title": "SpringCloud",
+          "doc_id": "gc7ulkvzqyg3l0f1"
+        },
+        {
+          "title": "基本篇",
+          "doc_id": "gc7ulkvzqyg3l0f1"
         }
       ],
-      "realName": "反射",
-      "relativePath": "\\Java\\反射.md",
-      "docPath": "source\\_posts\\yuque\\Java"
+      "realName": "2.SpringCloud工程部署启动",
+      "relativePath": "\\SpringCloud\\基本篇\\2.SpringCloud工程部署启动.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
       "id": 155797132,
@@ -3175,6 +3152,28 @@
       "realName": "Kafka",
       "relativePath": "\\消息队列\\Kafka.md",
       "docPath": "source\\_posts\\yuque\\消息队列"
+    },
+    {
+      "id": 161782200,
+      "doc_id": "vqczqg29gvt9w7om",
+      "updated": 1711687881000,
+      "properties": {
+        "title": "反射",
+        "urlname": "vqczqg29gvt9w7om",
+        "date": "2024-03-14 11:14:17",
+        "updated": "2024-03-29 12:51:21",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710321333936-b0e36a3c-b88d-4db2-bf1e-5080e9840c04.png",
+        "description": "问答环节什么是反射？应用？原理？1. 反射出现的背景Java程序中，所有的对象都有两种类型：编译时类型和运行时类型，而很多时候对象的编译时类型和运行时类型不一致。 Object obj = new String(\"hello\");    obj.getClass()例如：某些变量或形参的声明类..."
+      },
+      "catalog": [
+        {
+          "title": "Java",
+          "doc_id": "vqczqg29gvt9w7om"
+        }
+      ],
+      "realName": "反射",
+      "relativePath": "\\Java\\反射.md",
+      "docPath": "source\\_posts\\yuque\\Java"
     },
     {
       "id": 161979985,
@@ -3277,32 +3276,6 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
-      "id": 161819746,
-      "doc_id": "springcloud01",
-      "updated": 1711614246000,
-      "properties": {
-        "title": "1.认识微服务",
-        "urlname": "springcloud01",
-        "date": "2024-03-14 14:55:27",
-        "updated": "2024-03-28 16:24:06",
-        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399319282-ad9cb403-1a3a-43a4-a7a6-d1158cc120a2.png",
-        "description": "1.认识微服务随着互联网行业的发展，对服务的要求也越来越高，服务架构也从单体架构逐渐演变为现在流行的微服务架构。这些架构之间有怎样的差别呢？1.0.学习目标了解微服务架构的优缺点1.1.单体架构单体架构：将业务的所有功能集中在一个项目中开发，打成一个包部署。单体架构的优缺点如下：优点：架构简单..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "springcloud01"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "springcloud01"
-        }
-      ],
-      "realName": "1.认识微服务",
-      "relativePath": "\\SpringCloud\\基本篇\\1.认识微服务.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
-    },
-    {
       "id": 161824023,
       "doc_id": "fkyckmrv3pxqf8r4",
       "updated": 1710400342000,
@@ -3326,6 +3299,32 @@
       ],
       "realName": "5.Nacos注册中心",
       "relativePath": "\\SpringCloud\\基本篇\\5.Nacos注册中心.md",
+      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
+    },
+    {
+      "id": 161819746,
+      "doc_id": "springcloud01",
+      "updated": 1711614246000,
+      "properties": {
+        "title": "1.认识微服务",
+        "urlname": "springcloud01",
+        "date": "2024-03-14 14:55:27",
+        "updated": "2024-03-28 16:24:06",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399319282-ad9cb403-1a3a-43a4-a7a6-d1158cc120a2.png",
+        "description": "1.认识微服务随着互联网行业的发展，对服务的要求也越来越高，服务架构也从单体架构逐渐演变为现在流行的微服务架构。这些架构之间有怎样的差别呢？1.0.学习目标了解微服务架构的优缺点1.1.单体架构单体架构：将业务的所有功能集中在一个项目中开发，打成一个包部署。单体架构的优缺点如下：优点：架构简单..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "springcloud01"
+        },
+        {
+          "title": "基本篇",
+          "doc_id": "springcloud01"
+        }
+      ],
+      "realName": "1.认识微服务",
+      "relativePath": "\\SpringCloud\\基本篇\\1.认识微服务.md",
       "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
@@ -3513,27 +3512,6 @@
       "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
-      "id": 161669138,
-      "doc_id": "uq7l94tl0gpfrk1n",
-      "updated": 1710388924000,
-      "properties": {
-        "title": "05 SQL-DCL",
-        "urlname": "uq7l94tl0gpfrk1n",
-        "date": "2024-03-13 17:30:26",
-        "updated": "2024-03-14 12:02:04",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DCL英文全称是Data Control Language(数据控制语言)，用来管理数据库用户、控制数据库的访问权限。 1 管理用户查询用户查询的结果如下: 其中 Host代表当前用户访..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "uq7l94tl0gpfrk1n"
-        }
-      ],
-      "realName": "05 SQL-DCL",
-      "relativePath": "\\MySQL\\05 SQL-DCL.md",
-      "docPath": "source\\_posts\\yuque\\MySQL"
-    },
-    {
       "id": 161668872,
       "doc_id": "neza21i4oy5v3wvf",
       "updated": 1710388617000,
@@ -3552,6 +3530,27 @@
       ],
       "realName": "03 SQL-DML",
       "relativePath": "\\MySQL\\03 SQL-DML.md",
+      "docPath": "source\\_posts\\yuque\\MySQL"
+    },
+    {
+      "id": 161669138,
+      "doc_id": "uq7l94tl0gpfrk1n",
+      "updated": 1710388924000,
+      "properties": {
+        "title": "05 SQL-DCL",
+        "urlname": "uq7l94tl0gpfrk1n",
+        "date": "2024-03-13 17:30:26",
+        "updated": "2024-03-14 12:02:04",
+        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DCL英文全称是Data Control Language(数据控制语言)，用来管理数据库用户、控制数据库的访问权限。 1 管理用户查询用户查询的结果如下: 其中 Host代表当前用户访..."
+      },
+      "catalog": [
+        {
+          "title": "MySQL",
+          "doc_id": "uq7l94tl0gpfrk1n"
+        }
+      ],
+      "realName": "05 SQL-DCL",
+      "relativePath": "\\MySQL\\05 SQL-DCL.md",
       "docPath": "source\\_posts\\yuque\\MySQL"
     },
     {
@@ -5646,7 +5645,7 @@
     },
     {
       "type": "DOC",
-      "title": "Git|Linux|Docker",
+      "title": "Git、Linux、Docker",
       "uuid": "9L0Std2U_NL-pA0J",
       "url": "qcrge7r13lkbwlg9",
       "prev_uuid": "tpE02gd-l1vz6Hw0",

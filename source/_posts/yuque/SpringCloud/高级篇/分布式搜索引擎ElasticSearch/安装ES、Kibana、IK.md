@@ -14,7 +14,7 @@ docker network create es-net
 ## 1.2.加载镜像
 这里我们采用elasticsearch的7.12.1版本的镜像，这个镜像体积非常大，接近1G。不建议大家自己pull。
 可使用资料提供的镜像tar包：
-![image-20210510165308064.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/306eeebb7475b642c7ffb5d100e59bbd.png)
+![image-20210510165308064.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/306eeebb7475b642c7ffb5d100e59bbd.png)
 将其上传到虚拟机中(任意目录，如：我们一直在用的/tmp下)，然后运行命令加载即可：
 ```shell
 # 导入数据
@@ -53,7 +53,7 @@ elasticsearch:7.12.1
 - `-p 9200:9200`：端口映射配置
 
 在浏览器中输入：[http://192.168.150.101:9200](http://192.168.150.101:9200) 即可看到elasticsearch的响应结果：
-![image-20210506101053676.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/9cec4e4ebae1de35ccedfeb114535d82.png)
+![image-20210506101053676.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/9cec4e4ebae1de35ccedfeb114535d82.png)
 # 2.部署kibana
 kibana可以给我们提供一个elasticsearch的可视化界面，便于我们学习。
 ## 2.1.部署
@@ -76,7 +76,7 @@ kibana启动一般比较慢，需要多等待一会，可以通过命令：
 docker logs -f kibana
 ```
 查看运行日志，当查看到下面的日志，说明成功：
-![image-20210109105135812.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fa3fc6f6daff30ae2374cc5d4894dc4d.png)
+![image-20210109105135812.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/fa3fc6f6daff30ae2374cc5d4894dc4d.png)
 此时，在浏览器输入地址访问：http://192.168.150.101:5601，即可看到结果
 ## 2.2.DevTools
 kibana中提供了一个DevTools界面（可以直接搜索栏搜索：Dev Tools）：
@@ -89,7 +89,7 @@ GET /_analyze
 }
 ```
 输入之后，有一个执行的按钮，执行一下就有下述的效果（这时候就已经测试出了默认分词器的效果）：
-![image-20210506102630393.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/6ad5ff7997f76ecde84a3d3b2a5795cb.png)
+![image-20210506102630393.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/6ad5ff7997f76ecde84a3d3b2a5795cb.png)
 这个界面中可以编写DSL来操作elasticsearch。并且对DSL语句有自动补全功能。
 上述分词存在明显的问题：将中文逐字分词，没有任何业务语义，因此需要借助专业的分词器
 # 3.安装IK分词器
@@ -129,10 +129,10 @@ docker volume inspect es-plugins
 说明plugins目录被挂载到了：`/var/lib/docker/volumes/es-plugins/_data`这个目录中。
 ### 2）解压缩分词器安装包
 下面我们需要把课前资料中的ik分词器解压缩，重命名为ik
-![image-20210506110249144.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ad44c0b8986015a08800d0492de6f18d.png)
+![image-20210506110249144.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/ad44c0b8986015a08800d0492de6f18d.png)
 ### 3）上传到es容器的插件数据卷中
 也就是`/var/lib/docker/volumes/es-plugins/_data`：
-![image-20210506110704293.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/163978fbd77b0f2652c0faef5e6bc69f.png)
+![image-20210506110704293.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/163978fbd77b0f2652c0faef5e6bc69f.png)
 ### 4）重启容器
 ```shell
 # 4、重启容器
@@ -229,7 +229,7 @@ GET /_analyze
 随着互联网的发展，“造词运动”也越发的频繁。出现了很多新的词语，在原有的词汇列表中并不存在。比如：“奥力给”，“传智播客” 等。
 所以我们的词汇也需要不断的更新，IK分词器提供了扩展词汇的功能。
 1）打开IK分词器config目录，找到文件：IKAnalyzer.cfg.xml
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c9f18229e31875e4db20ef2bee9fb44c.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/c9f18229e31875e4db20ef2bee9fb44c.png)
 2）在IKAnalyzer.cfg.xml配置文件内容添加：
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -253,7 +253,7 @@ docker restart es
 docker logs -f es
 ```
 日志中已经成功加载ext.dic配置文件
-![image-20201115230900504.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/8acc033554acbfe9cd36ed63d8bc6d80.png)
+![image-20201115230900504.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/8acc033554acbfe9cd36ed63d8bc6d80.png)
 5）测试效果：
 ```json
 GET /_analyze
@@ -307,7 +307,7 @@ GET /_analyze
 
 # 4.ES启动报错
 如遇下述ES启动报错问题：
-![ES启动报错.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/0c1f8751fb2ec8c874ddc3b7f3d0b845.png)
+![ES启动报错.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/0c1f8751fb2ec8c874ddc3b7f3d0b845.png)
 需要执行：curl -XDELETE ip:端口/报错信息括号中的信息，如我上述报错则执行：
 ```shell
 curl -XDELETE 192.168.37.128:9200/.KIBANA_TASK_MANAGER_7.12.1_001

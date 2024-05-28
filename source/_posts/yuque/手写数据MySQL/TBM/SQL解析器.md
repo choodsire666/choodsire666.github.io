@@ -72,7 +72,7 @@ description: '前言**Parser** 实现了对类 **SQL** 语句的结构化解析�
 - 提供了peek()和pop()方法，方便取出Token进行解析。
 - 具体的切割实现在内部，不在此段内容中赘述。
 ### peek()
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/bd048d9b38ac8fdf929e4145a273dfe9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SQL解析器/bd048d9b38ac8fdf929e4145a273dfe9.png)
 ```java
 /**
  * 获取当前的标记，如果需要的话，会生成新的标记。
@@ -204,7 +204,7 @@ private void popByte() {
 - 解析过程相对简单，仅根据第一个Token来区分语句类型，并分别处理。
 - 解析过程自己查看几遍源码即可，这里不多赘述
 ### parse()
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b460f1d07523bb63a19a9de6c066c413.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SQL解析器/b460f1d07523bb63a19a9de6c066c413.png)
 ```java
 /**
  * 解析输入的字节流，根据不同的标记（token）调用不同的解析方法，生成对应的语句对象。

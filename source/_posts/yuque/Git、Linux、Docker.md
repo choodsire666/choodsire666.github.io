@@ -1,8 +1,8 @@
 ---
-title: Git|Linux|Docker
+title: Git、Linux、Docker
 urlname: qcrge7r13lkbwlg9
 date: '2024-03-19 11:53:42'
-updated: '2024-05-17 14:30:52'
+updated: '2024-05-27 23:51:58'
 description: Git概述版本系统SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而开发人员工作的时候，用的都是自己的电脑，所以首先要从中央服务器下载最新的版本，然后开发，开发完后，需要把自己开发的代码提交到中央服务器。集中式版本控制工具缺点：服务器单点故障、容错性差Git 是分布式版本控制系统（...
 ---
 ## Git概述
@@ -93,7 +93,7 @@ GitLab（地址： [https://about.gitlab.com/](https://about.gitlab.com/) ）是
 
 ### 工作过程
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9a820560fd2fe52edfb5ccfab39d4112.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/9a820560fd2fe52edfb5ccfab39d4112.png)
 
 版本库：.git 隐藏文件夹就是版本库，版本库中存储了很多配置信息、日志信息和文件版本信息等
 
@@ -101,7 +101,7 @@ GitLab（地址： [https://about.gitlab.com/](https://about.gitlab.com/) ）是
 
 暂存区：.git 文件夹中有很多文件，其中有一个 index 文件就是暂存区，也可以叫做 stage，暂存区是一个临时保存修改文件的地方
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3d508e51348e87289fa05ca90db6a509.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/3d508e51348e87289fa05ca90db6a509.png)
 
 ---
 
@@ -174,7 +174,7 @@ pull = fetch + merge
 
 fetch 是从远程仓库更新到本地仓库，pull是从远程仓库直接更新到工作空间中
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a823a56b100e47a8c7fbfc1a31d6f846.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/a823a56b100e47a8c7fbfc1a31d6f846.png)
 
 ---
 
@@ -216,7 +216,7 @@ git push ：上传本地指定分支到远程仓库
 
 ## 版本管理
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/34d10e0ec851f563a3021be9b671c3b2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/34d10e0ec851f563a3021be9b671c3b2.png)
 
 命令：git reset --hard 版本唯一索引值
 
@@ -252,7 +252,7 @@ git merge branch-name：合并指定分支到当前分支
 
 有时候合并操作不会如此顺利。 如果你在两个不同的分支中，对同一个文件的同一个部分进行了不同的修改，Git 就没办法合并它们，同时会提示文件冲突。此时需要我们打开冲突的文件并修复冲突内容，最后执行 git add 命令来标识冲突已解决
 
-	![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6c6cb583f743493a993c792a6f2d19cd.png)
+	![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/6c6cb583f743493a993c792a6f2d19cd.png)
 
 ### 删除分支
 
@@ -321,11 +321,11 @@ File → Settings 打开设置窗口，找到 Version Control 下的 git 选项
 ### 版本管理
 
 -  版本对比
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0d88df19010cdc8813d3472326a0043d.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/0d88df19010cdc8813d3472326a0043d.png) 
 -  版本切换方式一：控制台 Version Control → Log → 右键 Reset Current Branch → Reset，这种切换会抛弃原来的提交记录
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6e1559e7ccff73c456588e8a8a8a66d5.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/6e1559e7ccff73c456588e8a8a8a66d5.png) 
 -  版本切换方式二：控制台 Version Control → Log → Revert Commit → Merge → 处理代码 → commit，这种切换会当成一个新的提交记录，之前的提交记录也都保留
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fef1d2080b7ea6301670e2e27ee114f7.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/fef1d2080b7ea6301670e2e27ee114f7.png) 
 
            ![](https://seazean.oss-cn-beijing.aliyuncs.com/img/Tool/%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E6%96%B9%E5%BC%8F%E4%BA%8C(1).png#id=VBxem&originHeight=364&originWidth=650&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
@@ -344,7 +344,7 @@ File → Settings 打开设置窗口，找到 Version Control 下的 git 选项
 
 1. VCS → Git → Push → 点击 master Define remote
 2. 将远程仓库的 url 路径复制过来 → Push
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/356c6686f179052cd92119ed5d6b8c7d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/356c6686f179052cd92119ed5d6b8c7d.png)
 
 ---
 
@@ -352,7 +352,7 @@ File → Settings 打开设置窗口，找到 Version Control 下的 git 选项
 
 File → Close Project → Checkout from Version Control → Git → 指定远程仓库的路径 → 指定本地存放的路径 → clone
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7cd22f481659c155657dd59ccd98eee3.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/7cd22f481659c155657dd59ccd98eee3.png)
 
 ---
 
@@ -364,11 +364,11 @@ File → Close Project → Checkout from Version Control → Git → 指定远�
 
 操作系统作为接口的示意图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/0ca9661b339d2eb98ca81afc3e1a61dd.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/0ca9661b339d2eb98ca81afc3e1a61dd.png)
 
 移动设备操作系统：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fd892d2cb712be7908637548f86f0ef8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/fd892d2cb712be7908637548f86f0ef8.png)
 
 ---
 
@@ -377,7 +377,7 @@ File → Close Project → Checkout from Version Control → Git → 指定远�
 ### 系统介绍
 
 从内到位依次是硬件 → 内核层 → Shell 层 → 应用层 → 用户
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8ed47fbbb1e9ebe0dbf9a95969d3ca1d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/8ed47fbbb1e9ebe0dbf9a95969d3ca1d.png)
 
 内核层：核心和基础，附着在硬件平台上，控制和管理系统内的各种资源，有效的组织进程的运行，扩展硬件的功能，提高资源利用效率，为用户提供安全可靠的应用环境。
 
@@ -389,7 +389,7 @@ Shell 层：与用户直接交互的界面。用户可以在提示符下输入�
 
 Linux 文件系统目录结构和熟知的 windows 系统有较大区别，没有各种盘符的概念。根目录只有一个/，采用层级式的树状目录结构。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/abe715a6fecc336ff170534a8bde11ca.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/abe715a6fecc336ff170534a8bde11ca.png)
 
 ---
 
@@ -400,11 +400,11 @@ Linux 文件系统目录结构和熟知的 windows 系统有较大区别，没�
 #### NAT
 
 首先设置虚拟机中 NAT 模式的选项，打开 VMware，点击编辑下的虚拟网络编辑器，设置 NAT 参数
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/702f2d8ed3548e75b540ef1a2331b1a2.jpg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/702f2d8ed3548e75b540ef1a2331b1a2.jpg)
 
 **注意**：VMware Network Adapter VMnet8 保证是启用状态
 
-	![](https://raw.githubusercontent.com/choodsire666/blog-img/main/6112909ae15924a37e32ec4af2cfdc10.jpg)
+	![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/6112909ae15924a37e32ec4af2cfdc10.jpg)
 
 #### 静态IP
 
@@ -446,7 +446,7 @@ ONBOOT设置为true在系统启动时是否激活网卡
 -  宿主机 ping 虚拟机，虚拟机 ping 宿主机 
 -  在虚拟机中访问网络，需要增加一块 NAT 网卡 
    - 【虚拟机】--【设置】--【添加】
-   -  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/16bdc43ebbfef66455ce01fc9d2dfb2a.jpg) 
+   -  ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/16bdc43ebbfef66455ce01fc9d2dfb2a.jpg) 
 
 ---
 
@@ -456,7 +456,7 @@ ONBOOT设置为true在系统启动时是否激活网卡
 
 首先执行 sudo apt-get install openssh-server 指令，接下来用 xshell 连接
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b444d35d0aafcc84cc6e8963cf9190a9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/b444d35d0aafcc84cc6e8963cf9190a9.png)
 
 先用普通用户登录，然后转成 root
 
@@ -835,7 +835,7 @@ top：用于实时显示 process 的动态
 
 `top -Hp 进程 id`：分析该进程内各线程的 CPU 使用情况
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/5e32ea0e8bbb0a4575158074979a091c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/5e32ea0e8bbb0a4575158074979a091c.png)
 
 **各进程（任务）的状态监控属性解释说明：**
 
@@ -1150,7 +1150,7 @@ mv [options] source... directory
 
 Linux 系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9de9e16693993e95ca0efab494198d26.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/9de9e16693993e95ca0efab494198d26.png)
 
 在Linux中第一个字符代表这个文件是目录、文件或链接文件等等。
 
@@ -1162,7 +1162,7 @@ Linux 系统是一种典型的多用户系统，不同的用户处于不同的�
 
 接下来的字符，以三个为一组，均为[rwx] 的三个参数组合。其中，[ r ]代表可读(read)、[ w ]代表可写(write)、[ x ]代表可执行(execute)。 要注意的是，这三个权限的位置不会改变，如果没有权限，就会出现[ - ]。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/baaa2a39a55cc3fa6902ac329601dc5d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/baaa2a39a55cc3fa6902ac329601dc5d.png)
 
 从左至右用 0-9 这些数字来表示：
 
@@ -1180,7 +1180,7 @@ Linux 系统是一种典型的多用户系统，不同的用户处于不同的�
 - 文件的【属主】有一套【读写执行权限rwx】
 - 文件的【属组】有一套【读写执行权限rwx】
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f9679ce02087c3aa62fd03e80a2af866.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/f9679ce02087c3aa62fd03e80a2af866.png)
 
 `ls -l` 可以查看文件夹下文件的详细信息, 从左到右 依次是:
 
@@ -1220,7 +1220,7 @@ mode : 权限设定字串,格式: [ugoa...][[+-=][rwxX]...][,...]
 
 文件的权限字符为：[-rwxrwxrwx]， 这九个权限是三三一组的，我们使用数字来代表各个权限
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/58eac5230357d932927f33697de6b9e1.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/58eac5230357d932927f33697de6b9e1.png)
 
 各权限的数字对照表：[r]:4、[w]:2、[x]:1、[-]:0
 
@@ -1234,7 +1234,7 @@ mode : 权限设定字串,格式: [ugoa...][[+-=][rwxX]...][,...]
 
 ##### 符号权限
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d18a9a56a42be0c1b75903b8db0af5b6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/d18a9a56a42be0c1b75903b8db0af5b6.png)
 
 - user     属主权限
 - group  属组权限
@@ -1815,7 +1815,7 @@ vim 中提供有一个 被复制文本的缓冲区
 
 -  如果 vim 异常退出, 在磁盘上可能会保存有 交换文件 
 -  下次再使用 vim 编辑文件时，会看到以下屏幕信息：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/59015ebe7eacb01aa46676edca63b43c.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/59015ebe7eacb01aa46676edca63b43c.png) 
 -  ls -a 一下，会看到隐藏的 .swp 文件，删除了此文件即可 
 
 ---
@@ -1829,7 +1829,7 @@ ln [-sf] source_filename dist_filename
 - -s：默认是实体链接，加 -s 为符号链接
 - -f：如果目标文件存在时，先删除目标文件
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/4ca04d25867b0314bb0ba6766df2178b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/4ca04d25867b0314bb0ba6766df2178b.png)
 
 **实体链接**：
 
@@ -1985,7 +1985,7 @@ ifconfig [网络设备][down up -allmulti -arp -promisc][add<地址>][del<地址
 ```
 
 -  `ifconfig`：显示激活的网卡信息  ens
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/785056cd696000ca024047fa88063579.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/785056cd696000ca024047fa88063579.png)
 ens33（或 eth0）表示第一块网卡，IP地址是 192.168.0.137，广播地址 broadcast 192.168.0.255，掩码地址netmask 255.255.255.0 ，inet6 对应的是 ipv6
 lo 是表示主机的**回坏地址**，用来测试一个网络程序，但又不想让局域网或外网的用户能够查看，只能在此台主机上运行和查看所用的网络接口 
 -  ifconfig ens33 down：关闭网卡 
@@ -2005,7 +2005,7 @@ ping [-dfnqrRv][-c<完成次数>][-i<间隔秒数>][-I<网络界面>][-l<前置�
 
 -  -c<完成次数>：设置完成要求回应的次数； 
 -  `ping -c 2 www.baidu.com`
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ff7352e237c7129d097539b7737b6eaf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/ff7352e237c7129d097539b7737b6eaf.png)
 icmp_seq：ping 序列，从1开始
 ttl：IP 生存时间值
 time：响应时间,数值越小，联通速度越快 
@@ -2061,7 +2061,7 @@ lsblk 命令的英文是 list block，即用于列出所有可用块设备的信
 命令：lsblk [参数]
 
 -  `lsblk`：以树状列出所有块设备
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/976a0475cbd9c048a3095ee19e224ae7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/976a0475cbd9c048a3095ee19e224ae7.png)
 NAME：这是块设备名
 MAJ：MIN : 本栏显示主要和次要设备号
 RM：本栏显示设备是否可移动设备，在上面设备 sr0 的 RM 值等于 1，这说明他们是可移动设备
@@ -2070,7 +2070,7 @@ RO：该项表明设备是否为只读，在本案例中，所有设备的 RO �
 TYPE：本栏显示块设备是否是磁盘或磁盘上的一个分区。在本例中，sda 和 sdb 是磁盘，而 sr0 是只读存储（rom）。
 MOUNTPOINT：本栏指出设备挂载的挂载点。 
 -  `lsblk -f`：不会列出所有空设备
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d7c9ef4bca8dd54e1087a3228dab68c7.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/d7c9ef4bca8dd54e1087a3228dab68c7.png)
 NAME表示设备名称
 FSTYPE表示文件类型
 LABEL表示设备标签
@@ -2088,7 +2088,7 @@ df 命令用于显示目前在 Linux 系统上的文件系统的磁盘使用情�
 - -h 使用人类可读的格式(预设值是不加这个选项的...)
 - --total 计算所有的数据之和
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/63f8f58b226754edc1d39efa2098df85.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/63f8f58b226754edc1d39efa2098df85.png)
 
 第一列指定文件系统的名称；第二列指定一个特定的文件系统，1K 是 1024 字节为单位的总容量；已用和可用列分别指定的容量；最后一个已用列指定使用的容量的百分比；最后一栏指定的文件系统的挂载点
 
@@ -2116,7 +2116,7 @@ mount [-fnrsvw] [-t vfstype] [-o options] device dir
 `mkdir -p /mnt/cdrom`：切换到 root 下创建一个挂载点（其实就是创建一个目录） 
 -  开始挂载
 `mount -t auto /dev/cdrom /mnt/cdrom`：通过挂载点的方式查看上面的【ISO文件内容】
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/9135c47e046b4b041a338c944a661d34.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/9135c47e046b4b041a338c944a661d34.png) 
 -  查看挂载内容：`ls -l -a ./mnt/cdrom/` 
 -  卸载 cdrom：`umount /mnt/cdrom/` 
 
@@ -2165,7 +2165,7 @@ Shell 被当成是一种脚本语言来设计，其运作方式与解释型语�
 Shell 编程跟 JavaScript、php 编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。
 
 `cat /etc/shells`：查看解释器
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e51cf6a8601add0c18103002c3050d68.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/e51cf6a8601add0c18103002c3050d68.png)
 
 Linux 的 Shell 种类众多，常见的有：
 
@@ -2820,7 +2820,7 @@ Docker 架构：
 -  **容器（Container）**：镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和对象一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等 
 -  **仓库（Repository）**：仓库可看成一个代码控制中心，用来保存镜像 
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fd1044a79ec61b457197297b629457d2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/fd1044a79ec61b457197297b629457d2.png)
 
 安装步骤：
 
@@ -2974,7 +2974,7 @@ Docker 容器和外部机器可以直接交换文件吗？
 容器之间想要进行数据交互？
 
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/ce7ecffe4bcbbbdbb0d7a7250e9a39ed.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/ce7ecffe4bcbbbdbb0d7a7250e9a39ed.png)
 
 **数据卷**：数据卷是宿主机中的一个目录或文件，当容器目录和数据卷目录绑定后，对方的修改会立即同步
 
@@ -3006,7 +3006,7 @@ docker run -it --name=c1 -v /root(or~)/data:/root/data_container centos:7
 - 多个容器挂载同一个数据卷
 - 数据卷容器
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/85548deae8192e359d8452e06edaf2df.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/85548deae8192e359d8452e06edaf2df.png)
 
 -  创建启动c3数据卷容器，使用 –v 参数设置数据卷 
 ```shell
@@ -3033,7 +3033,7 @@ docker run –it --name=c2 --volumes-from c3 centos:7 /bin/bash
 
 -  容器内的网络服务和外部机器不能直接通信，外部机器和宿主机可以直接通信，宿主机和容器可以直接通信 
 -  当容器中的网络服务需要被外部机器访问时，可以将容器中提供服务的端口映射到宿主机的端口上。外部机器访问宿主机的该端口，从而间接访问容器的服务。这种操作称为：**端口映射**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/eadb020428523d889d0561554bf9d95f.png) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/eadb020428523d889d0561554bf9d95f.png) 
 
 MySQL部署步骤：搜索mysql镜像，拉取mysql镜像，创建容器，操作容器中的mysql
 
@@ -3260,7 +3260,7 @@ Ubuntu的iso镜像文件包含bootfs和rootfs，而docker的Ubuntu镜像复用�
 
 ### 镜像制作
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/be17d918bcd223fd9329bc2b894dc0e4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/be17d918bcd223fd9329bc2b894dc0e4.png)
 
 ---
 
@@ -3342,7 +3342,7 @@ Docker Compose是一个编排多容器分布式部署的工具，提供命令集
 2.  使用 docker-compose.yml 定义组成应用的各服务 
 3.  运行 docker-compose up 启动应用 
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/86ea195db68da11b92eb80d664ccd6c0.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/86ea195db68da11b92eb80d664ccd6c0.png)
 
 ---
 
@@ -3466,7 +3466,7 @@ docker pull 私有仓库服务器ip:5000/centos:7
    - 容器虚拟化的是操作系统，虚拟机虚拟化的是硬件。
    - 传统虚拟机可以运行不同的操作系统，容器只能运行同一类型操作系统
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/d7d76cb9349525ba6b0af18f2f09051d.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/d7d76cb9349525ba6b0af18f2f09051d.png)
 
 | 特性 | 容器 | 虚拟机 |
 | --- | --- | --- |

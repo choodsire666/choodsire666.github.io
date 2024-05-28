@@ -13,12 +13,12 @@ description: Idea快捷键熟练开发环境idea导入Maven目录相信自己解
 相信自己解决问题的能力，当下犯得每一个错误，对未来都是少走一步弯路，坚持是一种优良的传统美德。加油欧里给！！！
 你的知识底蕴，方法论，勤奋的品质，都是其他人足以羡慕的！
 ## 编译目录
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/f288e0b99641a9caaac776afb5639f0a.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/f288e0b99641a9caaac776afb5639f0a.png)
 ## 让idea识别静态文件夹，
 ps：没有识别时webContent文件夹没有变成小蓝点
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/c2c332a347fda43985145e5b4a80e0a9.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/c2c332a347fda43985145e5b4a80e0a9.png)
 ## 这是配置成将会导出的war包
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/57b180bd6e0562fc1be2d6a2de97f4bb.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/57b180bd6e0562fc1be2d6a2de97f4bb.png)
 # Java基础
 判断字符串是否相等时候
 异常判断
@@ -56,7 +56,7 @@ select Beijing,group_concat(Shanghai) from city group by Beijing
 
 ## 数据库的问题
 ## 新版本的数据库连接
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1dea514b2975a0143670ad7d5aed4833.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/1dea514b2975a0143670ad7d5aed4833.png)
 版本之间要对应
 # Javaweb开发中的报错
 ## 细节上的开发错误
@@ -77,10 +77,10 @@ Value()的使用要加$才能注入进去
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
 # Spring
 # MyBatisPlus
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/e01b6d097edd5982524e259a523ead5c.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/e01b6d097edd5982524e259a523ead5c.png)
 接到需求
 查看前端发过来的数据有哪些？
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/1e70743a47678e4d509051ffd4d60bb7.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/1e70743a47678e4d509051ffd4d60bb7.png)
 这是数据库表中字段对应着的属性
 
 

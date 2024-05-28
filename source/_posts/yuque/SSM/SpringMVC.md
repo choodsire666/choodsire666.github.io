@@ -20,7 +20,7 @@ description: 课程目标理解SpringMVC核心框架流程掌握SpringMVC框架�
 2. SpringMVC框架处理器方法的参数及返回值的使用
 3. SSM框架整合的集成配置
 # 1.SpringMVC框架简介
-## ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/430e8c96fefb8a729d3cf18e1ecbaf7b.png)
+## ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringMVC/430e8c96fefb8a729d3cf18e1ecbaf7b.png)
 
 > Author：Shine
 >  
@@ -1412,7 +1412,7 @@ xhr.withCredentials=true;
 
 |  |
 | --- |
-| ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/fcf18ad5d84335495aa341eb870b8c4d.png) |
+| ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringMVC/fcf18ad5d84335495aa341eb870b8c4d.png) |
 
 
 ### 十六、Spring整合

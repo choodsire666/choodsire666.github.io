@@ -16,12 +16,12 @@ OpenResty® 是一个基于 Nginx的高性能 Web 平台，用于方便地搭建
 - 允许使用Lua**自定义业务逻辑**、**自定义库**
 
 官方网站： [https://openresty.org/cn/](https://openresty.org/cn/)
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/f8fda66bb8b2ae46eb900b395c3b31b8.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/f8fda66bb8b2ae46eb900b395c3b31b8.png)
 安装Lua可以参考:
 [19-5 多级缓存：安装OpenResty](https://www.yuque.com/u21918439/vg7knb/pf2esm?view=doc_embed)
 ## 2 OpenResty快速入门
 我们希望达到的多级缓存架构如图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/3c755a8fa46c07b7888c322f97d74516.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/3c755a8fa46c07b7888c322f97d74516.png)
 其中：
 
 -  windows上的nginx用来做反向代理服务，将前端的查询商品的ajax请求代理到OpenResty集群 
@@ -29,9 +29,9 @@ OpenResty® 是一个基于 Nginx的高性能 Web 平台，用于方便地搭建
 ### 2.1 反向代理流程
 现在，商品详情页使用的是假的商品数据。不过在浏览器中，可以看到页面有发起ajax请求查询真实商品数据。
 这个请求如下：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/a15ad373ca0b28725d6d704d373b237b.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/a15ad373ca0b28725d6d704d373b237b.png)
 请求地址是localhost，端口是80，就被windows上安装的Nginx服务给接收到了。然后代理给了OpenResty集群：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7348ed2c0cbb2e3397d1526cc1a314c2.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/7348ed2c0cbb2e3397d1526cc1a314c2.png)
 我们需要在OpenResty中编写业务，查询商品数据并返回到浏览器。
 但是这次，我们先在OpenResty接收请求，返回假的商品数据。
 ### 2.2 OpenResty监听请求
@@ -59,9 +59,9 @@ location  /api/item {
 而`content_by_lua_file lua/item.lua`则相当于调用item.lua这个文件，执行其中的业务，把结果返回给用户。相当于java中调用service。
 ### 2.3 编写item.lua
 1）在`/usr/loca/openresty/nginx`目录创建文件夹：lua
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/83b693ac3fffd6721031036206a14d4a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/83b693ac3fffd6721031036206a14d4a.png)
 2）在`/usr/loca/openresty/nginx/lua`文件夹下，新建文件：item.lua
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dcf8f31f5097a74fd1ad24ff4637a300.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/dcf8f31f5097a74fd1ad24ff4637a300.png)
 3）编写item.lua，返回假数据
 item.lua中，利用ngx.say()函数返回数据到Response中
 ```lua
@@ -73,7 +73,7 @@ nginx -s reload
 ```
 
 刷新商品页面：http://localhost/item.html?id=1001，即可看到效果：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/fed817caa7f337406c76b336b3f34c4f.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/fed817caa7f337406c76b336b3f34c4f.png)
 
 ## 3.请求参数处理
 上一节中，我们在OpenResty接收前端请求，但是返回的是假数据。
@@ -81,11 +81,11 @@ nginx -s reload
 那么如何获取前端传递的商品参数呢？
 ### 3.1 获取参数的API
 OpenResty中提供了一些API用来获取不同类型的前端请求参数：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/c33fa445a1c77f03af097b1aafee7534.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/c33fa445a1c77f03af097b1aafee7534.png)
 
 ### 3.2 获取参数并返回
 在前端发起的ajax请求如图：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7c479b2d07562750a15c9128fa3cb148.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/7c479b2d07562750a15c9128fa3cb148.png)
 可以看到商品id是以路径占位符方式传递的，因此可以利用正则表达式匹配的方式来获取ID
 1）获取商品id
 修改`/usr/loca/openresty/nginx/nginx.conf`文件中监听/api/item的代码，利用正则表达式获取ID：
@@ -116,17 +116,17 @@ nginx -s reload
 
 刷新页面可以看到结果中已经带上了ID：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e989b768ce19a93deacff37f3a9bcb0c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/e989b768ce19a93deacff37f3a9bcb0c.png)
 
 ## 4.查询Tomcat
 
 拿到商品ID后，本应去缓存中查询商品信息，不过目前我们还未建立nginx、redis缓存。因此，这里我们先根据商品id去tomcat查询商品信息。我们实现如图部分：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/e3f80b3afb809f9213bdd3edf67b716a.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/e3f80b3afb809f9213bdd3edf67b716a.png)
 
 需要注意的是，我们的OpenResty是在虚拟机，Tomcat是在Windows电脑上。两者IP一定不要搞错了。
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/dee5cf9d3b91f14ca759e27bc69967f4.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/dee5cf9d3b91f14ca759e27bc69967f4.png)
 
 ### 4.1 发送http请求的API
 
@@ -158,7 +158,7 @@ local resp = ngx.location.capture("/path",{
 
 原理如图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/1a636ac658576d22c8ebc64b5810ed47.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/1a636ac658576d22c8ebc64b5810ed47.png)
 
 ### 4.2 封装http工具
 
@@ -182,7 +182,7 @@ location /item {
 
 之前我们说过，OpenResty启动时会加载以下两个目录中的工具文件：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/75908391609719e9aef1d381775ea1d6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/75908391609719e9aef1d381775ea1d6.png)
 
 所以，自定义的http工具也需要放到这个目录下。
 
@@ -238,7 +238,7 @@ local itemStockJSON = read_http("/item/stock/".. id, nil)
 
 这里查询到的结果是json字符串，并且包含商品、库存两个json字符串，页面最终需要的是把两个json拼接为一个json：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/8e1c8b1d105d77e73c777cca0dd579a9.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/8e1c8b1d105d77e73c777cca0dd579a9.png)
 
 这就需要我们先把JSON变为lua的table，完成数据整合后，再转为JSON。
 
@@ -307,7 +307,7 @@ ngx.say(cjson.encode(item))
 ### 4.5 基于ID负载均衡
 
 刚才的代码中，我们的tomcat是单机部署。而实际开发中，tomcat一定是集群模式：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/26cc033b95a919653303aab1425eb41c.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/26cc033b95a919653303aab1425eb41c.png)
 
 因此，OpenResty需要对tomcat集群做负载均衡。
 
@@ -372,17 +372,17 @@ nginx -s reload
 
 启动两台tomcat服务：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/32cf4891fc42a0495a5f20079a6bc992.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/32cf4891fc42a0495a5f20079a6bc992.png)
 
 同时启动：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/7616c868221f8fc042a40ad69d6e1952.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/7616c868221f8fc042a40ad69d6e1952.png)
 
 清空日志后，再次访问页面，可以看到不同id的商品，访问到了不同的tomcat服务：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/08d7d35a81a62475afff926a481b3fdf.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/08d7d35a81a62475afff926a481b3fdf.png)
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02f3b8bcb7422b7561413e8e92dc1b2e.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/02f3b8bcb7422b7561413e8e92dc1b2e.png)
 
 ## 5 Redis缓存预热
 
@@ -482,7 +482,7 @@ public class RedisHandler implements InitializingBean {
 
 现在，Redis缓存已经准备就绪，我们可以再OpenResty中实现查询Redis的逻辑了。如下图红框所示：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/58eafe0e48653db51c173818c1029f88.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/58eafe0e48653db51c173818c1029f88.png)
 
 当请求进入OpenResty之后：
 
@@ -654,7 +654,7 @@ end
 
 2）而后修改商品查询、库存查询的业务：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/cc9fe39a4bb666a639980d1919eb26f6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/cc9fe39a4bb666a639980d1919eb26f6.png)
 
 3）完整的item.lua代码：
 
@@ -703,7 +703,7 @@ ngx.say(cjson.encode(item))
 
 现在，整个多级缓存中只差最后一环，也就是nginx的本地缓存了。如图：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/b85ecd9b1c113be7b29ac20acb67cfb6.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/b85ecd9b1c113be7b29ac20acb67cfb6.png)
 
 ### 7.1 本地缓存API
 
@@ -759,7 +759,7 @@ end
 
 2）修改item.lua中查询商品和库存的业务，实现最新的read_data函数：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/74a35fbb5d6789e88b8a5aaad902d0bd.png)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/74a35fbb5d6789e88b8a5aaad902d0bd.png)
 
 其实就是多了缓存时间参数，过期后nginx缓存会自动删除，下次访问即可更新缓存。
 
