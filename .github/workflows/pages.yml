@@ -69,6 +69,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
+          branch_name: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
       
       # 拉取b站信息
