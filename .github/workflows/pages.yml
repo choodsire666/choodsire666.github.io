@@ -64,7 +64,7 @@ jobs:
           git commit -m "更新文档" -a
 
       - name: 推送文章到仓库
-        uses: ad-m/github-push-action@main
+        uses: ad-m/github-push-action@master
         with:
           # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
           github_token: ${{ secrets.GITHUB_TOKEN }}
