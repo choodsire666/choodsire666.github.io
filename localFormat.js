@@ -1,5 +1,5 @@
 // 0.12.0及以上版本用法
-const { matterMarkdownAdapter, request } = require('@elog/cli')
+const { matterMarkdownAdapter, request, out } = require('@elog/cli')
 
 /**
  * 自定义文档插件
@@ -32,6 +32,7 @@ const format = async (doc, imageClient) => {
       }
     }
     // cover链接替换为本地图片
+    out.info(doc.properties.title + "的封面被替换为: " + url)
     doc.properties.cover = url
   }
   doc.body = matterMarkdownAdapter(doc);
