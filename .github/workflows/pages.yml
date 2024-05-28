@@ -1,5 +1,8 @@
 name: Pages
 
+environment:
+  name: github-pages
+
 on:
   push:
     branches:
