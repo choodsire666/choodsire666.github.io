@@ -4,6 +4,7 @@ urlname: ypvfpte531pktdzv
 date: '2024-03-28 16:36:22'
 updated: '2024-03-28 16:36:33'
 description: '集群单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。海量数据存储问题：将索引库从逻辑上拆分为N个分片（shard），存储到多个节点单点故障问题：将分片数据在不同节点备份（replica ）ES集群相关概念: 集群（cluster）：一组拥有共同的 ...'
+cover: ''
 ---
 # 集群
 单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。

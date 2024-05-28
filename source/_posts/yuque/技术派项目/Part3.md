@@ -4,6 +4,7 @@ urlname: tlag6ghucv3g0sy7
 date: '2024-04-26 16:34:33'
 updated: '2024-04-26 16:35:58'
 description: 相对于前面的2.0版本，该版本会升级更多的服务：文章搜索——ElasticSearch+Canal用户操作追踪+消息队列——Spring AOP+RocketMQ消息推送——SSE长连接待定：Spring Cloud微服务拆分业务文章敏感词替换——MyBatis的自定义人工智能的融入——第三方...
+cover: ''
 ---
 相对于前面的2.0版本，该版本会升级更多的服务：
 
