@@ -30,6 +30,7 @@ module.exports = {
       filename: 'title',
       format: 'matter-markdown',
       catalog: true,
+      formatExt: './localFormat.js',
       frontMatter: {
         enable: true,
         include: ["title",
