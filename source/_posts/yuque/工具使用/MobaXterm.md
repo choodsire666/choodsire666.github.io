@@ -2,7 +2,7 @@
 title: MobaXterm
 urlname: hoq9538sy6ah2g59
 date: '2024-05-17 13:52:35'
-updated: '2024-05-28 19:39:12'
+updated: '2024-05-28 20:06:40'
 cover: 'https://cdn.nlark.com/yuque/0/2024/png/29688613/1715925186276-36e9f6ac-78e6-408c-ba8e-cdf7a20a15cb.png'
 description: 'categories:开发工具'
 categories:
