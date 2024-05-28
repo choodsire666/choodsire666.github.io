@@ -8,6 +8,9 @@ on:
   repository_dispatch:
     types:
       - deploy
+  # 每周日凌晨2点触发更新
+  schedule:
+    - cron: '0 2 * * 0'
 
 jobs:
   build:
@@ -69,6 +72,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
+          branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
       
       # 拉取b站信息
