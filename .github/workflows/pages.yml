@@ -31,16 +31,10 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
-
-      - name: 安装pnpm
-        run: |
-          export TZ='Asia/Shanghai'
-          npm install pnpm@7.9.5 -g
-
       - name: Install Dependencies
         run: |
           export TZ='Asia/Shanghai'
-          pnpm install --prod
+          npm install --prod
       # 拉取语雀信息
       - name: 拉取语雀/Notion的文章
         env:
@@ -56,7 +50,7 @@ jobs:
           ELOG_GITHUB_REPO: ${{ secrets.ELOG_GITHUB_REPO }}
         run: |
           # 对应package.json中的script.sync
-          pnpm run sync:post
+          npm run sync:post
       
       - name: 配置Git用户名邮箱
         run: |
