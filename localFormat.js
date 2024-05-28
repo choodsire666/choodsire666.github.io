@@ -12,7 +12,7 @@ const format = async (doc, imageClient) => {
   // 将 cover 字段中的 notion 图片下载到本地
   if (imageClient)  {
     // 只有启用图床平台image.enable=true时，imageClient才能用，否则请自行实现图片上传
-    const url = ''
+    let url = ''
     if (cover) {
       url = await imageClient.uploadImageFromUrl(cover, doc)
     } else {
