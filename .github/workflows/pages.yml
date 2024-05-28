@@ -35,14 +35,48 @@ jobs:
         run: |
           export TZ='Asia/Shanghai'
           npm install --prod
+      # 拉取语雀信息
+      - name: 拉取语雀/Notion的文章
+        env:
+          # 语雀相关环境变量          
+          # 语雀（帐号密码方式）
+          YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
+          YUQUE_PASSWORD: ${{ secrets.YUQUE_PASSWORD }}          
+          YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
+          YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
+          # 图床相关环境变量，github
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ELOG_GITHUB_USER: ${{ secrets.ELOG_GITHUB_USER }}
+          ELOG_GITHUB_REPO: ${{ secrets.ELOG_GITHUB_REPO }}
+        run: |
+          # 对应package.json中的script.sync
+          npm run sync:post
+      
+      - name: 配置Git用户名邮箱
+        run: |
+          git config --global user.name "choodsire666"
+          git config --global user.email "1609981289@qq.com"
+
+      - name: 提交yuque拉取的文章到GitHub仓库
+        run: |
+          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.txt
+          git add .
+          git commit -m "更新文档" -a
+
+      - name: 推送文章到仓库
+        uses: ad-m/github-push-action@main
+        with:
+          # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      
       # 拉取b站信息
       - name: get bilibili
         run: npm run sync:bili
-      # 拉取语雀信息
-      # - name: get yuque post
+
       # 生成Algolia搜索indexs
       - name: create indexs
-        run: hexo algolia
+        run: npm run sync:algolia
+
       # build
       - name: Build
         run: npm run build

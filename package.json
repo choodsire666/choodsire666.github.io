@@ -5,7 +5,9 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "sync:bili": "hexo bangumis -u",
+    "sync:bili": "hexo bangumi -u",
+    "sync:post": "elog sync",
+    "sync:algolia": "hexo algolia",
     "publish": "npm run clean && npm run deploy",
     "server": "hexo server"
   },
