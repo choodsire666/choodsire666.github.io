@@ -3,7 +3,7 @@ title: 常见的API类
 urlname: ggstmhn7xxix66dq
 date: '2024-03-14 11:07:06'
 updated: '2024-05-15 16:02:52'
-cover: 'https://cdn.nlark.com/yuque/0/2024/png/29688613/1710124597355-538d1d59-25d6-492d-915a-d8ea74aba27f.png'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png'
 description: 1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String("abc")和 String st...
 ---
 ![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Fgitee.com%2Flvweixing%2Fpictures%2Fraw%2Fmaster%2F202304242038525.png&sign=dcfa3fedd33276ed2c63bff2109e5a6116a508cbbb979826ec6c761955f09141#from=url&id=RSrB7&originHeight=2612&originWidth=1864&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&title=)
