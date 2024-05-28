@@ -6,7 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "sync:bili": "hexo bangumi -u",
-    "sync:post": "elog sync",
+    "sync:post": "elog sync -e .elog.env",
     "sync:algolia": "hexo algolia",
     "publish": "npm run clean && npm run deploy",
     "server": "hexo server"
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@elog/cli": "^0.14.0",
     "bluebird": "^3.7.2",
     "chokidar": "^3.6.0",
     "graceful-fs": "^4.2.11",

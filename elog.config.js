@@ -68,6 +68,8 @@ module.exports = {
   image: {
     enable: true,
     platform: 'github',
+    enableForExt: true,
+    plugin: './github.js',
     local: {
       outputDir: './docs/images',
       prefixKey: '/images',
