@@ -28,7 +28,7 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: npm install pnpm && pnpm install        
+        run: npm install && npm install hexo
       # 拉取b站信息
       - name: get bilibili
         run: hexo bangumis -u
