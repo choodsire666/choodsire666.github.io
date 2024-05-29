@@ -1,5 +1,13 @@
+---
+title: 常见的API类
+urlname: ggstmhn7xxix66dq
+date: '2024-03-14 11:07:06'
+updated: '2024-05-29 15:09:55'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png'
+description: 1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String("abc")和 String st...
+---
 
-![3a604045-eb03-4ef2-a0a9-7bc65b1a24ed.png](https://cdn.nlark.com/yuque/0/2024/png/43047777/1716966516750-810e8099-7c65-482d-af87-ea7082d998a3.png#averageHue=%23eff5fa&clientId=ua287c685-ac18-4&from=paste&height=2322&id=u4dd6ea56&originHeight=2612&originWidth=1864&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=739639&status=done&style=none&taskId=uc33566f8-fc6e-459b-8a48-f1304333708&title=&width=1656.888888888889)
+![3a604045-eb03-4ef2-a0a9-7bc65b1a24ed.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/21ba6af43f710200c17d43739d972908.png)
 ## 字符串相关类之不可变字符序列String
 问答环节
 31.String 是 Java 基本数据类型吗？可以被继承吗？
