@@ -56,7 +56,6 @@
         "urlname": "vsp1knk4g0g1",
         "date": "2024-03-13 17:15:48",
         "updated": "2024-05-29 15:06:57",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/JDK8-17新特性（上）/ca19565248b1ab85234924fc9e908e0e.png",
         "description": "本章专题与脉络1. Java版本迭代概述1.1 发布特点（小步快跑，快速迭代）发行版本发行时间备注Java 1.01996.01.23Sun公司发布了Java的第一个开发工具包Java 5.02004.09.30①版本号从1.4直接更新至5.0；②平台更名为JavaSE、JavaEE、Java..."
       },
       "catalog": [
@@ -518,7 +517,6 @@
         "urlname": "ggstmhn7xxix66dq",
         "date": "2024-03-14 11:07:06",
         "updated": "2024-05-29 15:09:55",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png",
         "description": "1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String(\"abc\")和 String st..."
       },
       "catalog": [
@@ -1243,12 +1241,12 @@
     {
       "id": 167361293,
       "doc_id": "tlag6ghucv3g0sy7",
-      "updated": 1714120558000,
+      "updated": 1716967350000,
       "properties": {
         "title": "Part3",
         "urlname": "tlag6ghucv3g0sy7",
         "date": "2024-04-26 16:34:33",
-        "updated": "2024-04-26 16:35:58",
+        "updated": "2024-05-29 15:22:30",
         "description": "相对于前面的2.0版本，该版本会升级更多的服务：文章搜索——ElasticSearch+Canal用户操作追踪+消息队列——Spring AOP+RocketMQ消息推送——SSE长连接待定：Spring Cloud微服务拆分业务文章敏感词替换——MyBatis的自定义人工智能的融入——第三方..."
       },
       "catalog": [
@@ -1259,7 +1257,6 @@
       ],
       "realName": "Part3",
       "relativePath": "/技术派项目/Part3.md",
-      "needUpdate": 1,
       "docPath": "source/_posts/yuque/技术派项目"
     },
     {
@@ -1906,7 +1903,6 @@
         "urlname": "yw9hc9",
         "date": "2022-08-21 09:30:35",
         "updated": "2024-04-08 17:17:52",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/面向对象/dcfcbff060798ac1a31572d94247ff82.png",
         "description": "Java的个人笔记需要不断的更新和迭代，简短的看菜鸟教程，或者尚硅谷文档1. 面向对象1.1. 问答环节15.⾯向对象和⾯向过程的区别?16.面向对象有哪些特性17.重载（overload）和重写（override）的区别？18.访问修饰符 public、private、protected、以..."
       },
       "catalog": [
@@ -3314,7 +3310,6 @@
         "urlname": "fq0g987sh1b1zndz",
         "date": "2024-03-14 15:00:04",
         "updated": "2024-03-19 17:53:01",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/4.Ribbon负载均衡/99bdc624b44c70870126962ad2f40f11.png",
         "description": "4.Ribbon负载均衡上一节中，我们添加了@LoadBalanced注解，即可实现负载均衡功能，这是什么原理呢？4.1.负载均衡原理SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载均衡功能的。那么我们发出的请求明明是http://userservice/user/..."
       },
       "catalog": [
