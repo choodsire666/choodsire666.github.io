@@ -1,3 +1,11 @@
+---
+title: 算法和数据结构与GoF(设计模式)
+urlname: zcuyfd
+date: '2022-08-21 10:10:01'
+updated: '2024-05-13 18:14:02'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/25b5a7eec7b66e997f1a3fe8a40655ae.png'
+description: 日常练习代码随想录leetcode100有余力剑指offer面试突击codetop做题总结1.从简单开始刷起，刷个100道2.之后的话可能从中等的开始刷起每次刷完一题给自己一点心里反馈，开心一下很牛逼。不要小看暴力算法，在暴力算法的基础上我们才能更加优化。有时候我们可能会考虑边界条件这个时候我...
+---
 日常练习
 代码随想录
 leetcode100

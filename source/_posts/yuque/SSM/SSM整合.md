@@ -1,3 +1,11 @@
+---
+title: SSM整合
+urlname: xhhctg6hhc2ore91
+date: '2024-03-31 12:04:38'
+updated: '2024-04-07 17:07:14'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/74ee5157fc1f738f0629628bd03fdf91.png'
+description: "前言在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。注解整合\t注解\t解释Spring\t@Autowired\tSpring提供的工具（由Spring的依赖注入工具（BeanPostProcessor、BeanFact..."
+---
 # 前言
 在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。
 # 注解整合
@@ -332,9 +340,9 @@ applicationContext.xml：
 ```
 注意：编写接口对应的 Mapper.xml 文件时，如果写SQL语句没有提示语句，可按下面的操作进行（IDEA为偷懒而生）。
 1、File--->Settings 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711858643069-c3ae1c6f-3ae6-41b5-bcad-b44e504a1f37.png#averageHue=%233d4146&clientId=u03aee87f-4aa0-4&from=paste&id=u9224d5ad&originHeight=892&originWidth=1229&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u14aed048-fe09-4eac-98c8-09243919b8e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/74ee5157fc1f738f0629628bd03fdf91.png)
 2、将你的项目文件添加一下，再点击“ok”，“apply”即可
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711858657110-07cfddb0-c514-439c-8e6e-8af93bc12822.png#averageHue=%233d4349&clientId=u03aee87f-4aa0-4&from=paste&id=u50d2215c&originHeight=892&originWidth=1229&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u325c8bde-2f0e-40e1-9181-62223f0acad&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/9bbbd1570ed91e81866782ad7e3bda2d.png)
  3、写SQL语句就会有提示了，又可以偷下小懒了
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711858667794-fcea653f-8d19-46c5-9327-057798533fab.png#averageHue=%23384437&clientId=u03aee87f-4aa0-4&from=paste&id=ue942ee40&originHeight=233&originWidth=878&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u441239fd-2314-4d4d-a025-b2e15709ee5&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/562b73b1e563df97e41df065137e19a9.png)
 4、当你写好全部配置文件，并部署好所有项目时，可以会出现下列情况，千万别放弃！！！

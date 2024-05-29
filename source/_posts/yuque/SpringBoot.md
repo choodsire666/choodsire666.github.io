@@ -1,3 +1,11 @@
+---
+title: SpringBoot
+urlname: xuk6bl
+date: '2022-08-30 08:32:56'
+updated: '2024-05-11 23:53:04'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/c666a921096a7f02d00bf90403610e37.png'
+description: 1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot...
+---
 ## 1.SpringBoot概述和入门案例
 - SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。
 - Spring Boot的核心理念：Spring Boot的核心理念是约定大于配置，它提供了很多默认的配置和依赖管理，使得开发者可以更快速地启动和运行应用程序，同时也减少了开发者在配置方面的工作量。

@@ -1,3 +1,11 @@
+---
+title: Rabbitmq
+urlname: pz454cmh13ivgg1u
+date: '2024-03-15 16:33:28'
+updated: '2024-03-15 16:51:58'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Rabbitmq/5b674f4589203984b830fc84f82aac6c.png'
+description: '第一章 RabbitMQ介绍MQ: (Messaeg queue)消息队列发送者,只管把消息放进消息队列,并不知道接受者是谁接受者,只管从消息队列中取消息,并不知道发送者是谁从而实现了异步,提高了效率,解耦合RabbitMQ: 实现了AMQP协议的MQ,是由Erlang语言开发的需要基于Erl...'
+---
 ### 第一章 RabbitMQ介绍
 
 MQ: (Messaeg queue)消息队列
@@ -1039,10 +1047,10 @@ echo management_agent.disable_metrics_collector = false > management_agent.disab
 # 这时候就配置好了
 rabbitmqctl cluster_status
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/43047777/1710492166285-327cc967-76a9-4b62-bae3-3b8ac3c2af5f.png#averageHue=%23f6f5ed&clientId=u2834c29a-87cd-4&from=paste&height=783&id=u0ed51ba3&originHeight=979&originWidth=1668&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=153238&status=done&style=none&taskId=u007d29c5-d76b-45f5-9304-74ec2545c24&title=&width=1334.4)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Rabbitmq/5b674f4589203984b830fc84f82aac6c.png)
 
 在这里添加一下镜像队列Policy(虽然不知道为什么过时了)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/43047777/1710492188364-db9ac9ca-aaf7-4c49-87c4-47522c550fd4.png#averageHue=%23faf9f2&clientId=u2834c29a-87cd-4&from=paste&height=786&id=u10d1d899&originHeight=982&originWidth=1847&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=135214&status=done&style=none&taskId=u3f718a2b-5f83-4a22-aaca-03cdc5b3c18&title=&width=1477.6)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Rabbitmq/170431c91d27431933b01cf085a67a10.png)
 
 ### 配置HAproxy+Keepalived实现高可用
 

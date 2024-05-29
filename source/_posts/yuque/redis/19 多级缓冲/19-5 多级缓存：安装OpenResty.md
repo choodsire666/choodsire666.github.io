@@ -1,3 +1,11 @@
+---
+title: 19-5 多级缓存：安装OpenResty
+urlname: hvz3tmfghzf9xnbw
+date: '2024-03-31 11:13:27'
+updated: '2024-03-31 11:13:44'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19-5 多级缓存：安装OpenResty/a7123040b940cd6d1bfc594ee22009fc.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 安装首先你的Linux虚拟机必须联网1.1 安装开发库首先要安装OpenResty的依赖开发库，执行命令：yum install -y pcre-devel openssl-devel...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 安装
 首先你的Linux虚拟机必须联网
@@ -33,7 +41,7 @@ yum install -y openresty-opm
 
 ## **1.5 目录结构**
 默认情况下，OpenResty安装的目录是：/usr/local/openresty
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854814036-6f816c3c-2d89-4f56-950b-9e59c852faa2.png#averageHue=%23faf6ed&clientId=u9b8a0189-a85a-4&id=cciqy&originHeight=503&originWidth=261&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud957f63d-ab27-4e89-9edb-50c982ca6e0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-5 多级缓存：安装OpenResty/a7123040b940cd6d1bfc594ee22009fc.png)
 看到里面的nginx目录了吗，OpenResty就是在Nginx基础上集成了一些Lua模块。
 ## **1.6 配置nginx的环境变量**
 
@@ -56,7 +64,7 @@ source /etc/profile
 
 # 2 启动和运行
 OpenResty底层是基于Nginx的，查看OpenResty目录的nginx目录，结构与windows中安装的nginx基本一致：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854814081-e6b8d5e6-06bb-47fd-82a2-3bbcc9223235.png#averageHue=%23022c48&clientId=u9b8a0189-a85a-4&id=cy0O5&originHeight=288&originWidth=744&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u707b05bf-babe-4791-9d90-3fa6534c66d&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19-5 多级缓存：安装OpenResty/cbc67a1a31b16c2f7ef4ff3428f9fabb.png)
 所以运行方式与nginx基本一致：
 ```shell
 # 启动nginx

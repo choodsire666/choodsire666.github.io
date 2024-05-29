@@ -7662,7 +7662,7 @@ server {
 - 提高访问速度：反向代理服务器可以对于静态内容及短时间内有大量访问请求的动态内容提供缓存服务
 - 提供安全保障：反向代理服务器可以作为应用层防火墙，为网站提供对基于 Web 的攻击行为（例如 DoS/DDoS）的防护，更容易排查恶意软件等
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710835364730-da0e758b-9834-4df3-b185-d11ba7a679ec.png#averageHue=%23f1f4f7&clientId=u33825a4e-06f1-4&from=paste&id=ub6fdf150&originHeight=614&originWidth=1076&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u4d756c26-e8e1-4ff7-8f59-7f55ef8dfb1&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/5cfcbe2fcc63b61514f48b82d1a0eca3.png)
 区别：
 
 - 正向代理其实是客户端的代理，帮助客户端访问其无法访问的服务器资源；反向代理则是服务器的代理，帮助服务器做负载均衡，安全防护等

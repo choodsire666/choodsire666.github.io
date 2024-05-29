@@ -1,3 +1,11 @@
+---
+title: 20 redis最佳实践总结
+urlname: vm9s7gpksigmthd1
+date: '2024-03-31 11:09:11'
+updated: '2024-03-31 11:14:24'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/8f05e63d79e3facbbac3830da11dbe83.png'
+description: '笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redis键值设计1.1 优雅的key结构Redis的Key虽然可以自定义，但最好遵循下面的几个最佳实践约定：遵循基本格式：[业务名称]:[数据名]:[id]长度不超过44字节不包含特...'
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 Redis键值设计
 ## 1.1 优雅的key结构
@@ -8,7 +16,7 @@ Redis的Key虽然可以自定义，但最好遵循下面的几个最佳实践约
 - 不包含特殊字符
 
 例如：我们的登录业务，保存用户信息，其key可以设计成如下格式：
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329374-fe280a03-e18a-4f27-940d-02e94e5f0de9.png#averageHue=%23f7f5f5&clientId=u64f2b4b5-d350-4&id=MKllB&originHeight=143&originWidth=360&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u358afe7e-309b-4e1b-a1ba-4e97a2570bc&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/8f05e63d79e3facbbac3830da11dbe83.png)
 这样设计的好处：
 
 - 可读性强
@@ -16,7 +24,7 @@ Redis的Key虽然可以自定义，但最好遵循下面的几个最佳实践约
 - 方便管理
 - 更节省内存： key是string类型，底层编码包含int、embstr和raw三种。embstr在小于44字节使用，采用连续内存空间，内存占用更小。当字节数大于44字节时，会转为raw模式存储，在raw模式下，内存空间不是连续的，而是采用一个指针指向了另外一段内存空间，在这段空间里存储SDS内容，这样空间不连续，访问的时候性能也就会收到影响，还有可能产生内存碎片
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329368-07263042-01ff-4b24-be91-e7b5d760890d.png#averageHue=%23080706&clientId=u64f2b4b5-d350-4&id=n8x3c&originHeight=565&originWidth=805&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3d7fd40a-994a-4ea5-b992-9701e33f41a&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/d519dfabd519d649f899e8d5a0a88faf.png)
 ## 1.2 拒绝BigKey
 BigKey通常以Key的大小和Key中成员的数量来综合判定，例如：
 
@@ -25,7 +33,7 @@ BigKey通常以Key的大小和Key中成员的数量来综合判定，例如：
 - Key中成员的数据量过大：一个Hash类型的Key，它的成员数量虽然只有1,000个但这些成员的Value（值）总大小为100 MB
 
 那么如何判断元素的大小呢？redis也给我们提供了命令
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329439-2fbd81fb-7495-4a54-b4f1-100ace28d779.png#averageHue=%23060403&clientId=u64f2b4b5-d350-4&id=OHTZT&originHeight=441&originWidth=1283&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=udafa2f9d-e36e-4cd0-9ec3-ea4acbd11ed&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/6d9ced5ce52fbc8cd4e5b60fb4a8475f.png)
 推荐值：
 
 - 单个key的value小于10KB
@@ -44,10 +52,10 @@ BigKey通常以Key的大小和Key中成员的数量来综合判定，例如：
 ①** redis-cli --bigkeys**
 利用redis-cli提供的--bigkeys参数，可以遍历分析所有key，并返回Key的整体统计信息与每个数据的Top1的big key
 命令：`redis-cli -a 密码 --bigkeys`
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329519-e0f7f1b7-9ae9-458d-ba1d-364f6755abd2.png#averageHue=%230a0807&clientId=u64f2b4b5-d350-4&id=PFVdl&originHeight=561&originWidth=1089&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7ce4104c-87e8-4046-9421-e5c0b8d7f54&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/f608b9966a1efa1fd9f1e0762242170b.png)
 **② scan扫描**
 自己编程，利用scan扫描Redis中的所有key，利用strlen、hlen等命令判断key的长度（此处不建议使用MEMORY USAGE）
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329380-44e663f1-6332-41d7-9ab6-5e72ed3de3a0.png#averageHue=%23090706&clientId=u64f2b4b5-d350-4&id=TaNBv&originHeight=202&originWidth=395&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u83a55ce2-2cbe-42d8-a4ba-ed6d01c66fd&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/0198b286ac98a19c96bf82da1f01404a.png)
 scan 命令调用完后每次会返回2个元素，第一个是下一次迭代的光标，第一次光标会设置为0，当最后一次scan 返回的光标等于0时，表示整个scan遍历结束了，第二个返回的是List，一个匹配的key的数组
 ```java
 import com.heima.jedis.util.JedisConnectionFactory;
@@ -147,14 +155,14 @@ public class JedisTest {
 - 自定义工具，监控进出Redis的网络数据，超出预警值时主动告警
 - 一般阿里云搭建的云服务器就有相关监控页面
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329789-f6e94a07-28ef-417a-b441-544db0ddf6ca.png#averageHue=%23f9f9f8&clientId=u64f2b4b5-d350-4&id=l3zpF&originHeight=270&originWidth=1188&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u6cd486b9-ac2c-4faa-ba3a-68b4595f4b4&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/80efe3e4d9371eb12e765803e755d27c.png)
 ### 1.2.3 如何删除BigKey
 BigKey内存占用较多，即便时删除这样的key也需要耗费很长时间，导致Redis主线程阻塞，引发一系列问题。
 
 - redis 3.0 及以下版本 
    - 如果是集合类型，则遍历BigKey的元素，先逐个删除子元素，最后删除BigKey
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329671-dd97e8a8-b0da-4b18-af00-f67c41c08213.png#averageHue=%23f9f9f8&clientId=u64f2b4b5-d350-4&id=ZhChe&originHeight=375&originWidth=1102&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u5358cf35-528e-4783-81a2-a9aa4925b0d&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/a78d520b8e1b50eda47297652e1849a6.png)
 
 - Redis 4.0以后 
    - Redis在4.0后提供了异步删除的命令：unlink
@@ -211,7 +219,7 @@ BigKey内存占用较多，即便时删除这样的key也需要耗费很长时�
 
 - string结构底层没有太多内存优化，内存占用较多
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329861-c172e90c-1721-4dbb-b02e-117d86180cab.png#averageHue=%23042135&clientId=u64f2b4b5-d350-4&id=yiBXP&originHeight=250&originWidth=644&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u8378f41d-a519-4112-86d2-fb15f534f75&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/0f6476e457507fd7b64646bdeeaa0732.png)
 
 - 想要批量获取这些数据比较麻烦
 
@@ -230,7 +238,7 @@ BigKey内存占用较多，即便时删除这样的key也需要耗费很长时�
 |  | ..... | ..... |
 |  | id:99 | value999999 |
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041329897-f75c1af5-10f5-4b79-abc8-7f6b94f0d1c7.png#averageHue=%23052135&clientId=u64f2b4b5-d350-4&id=jNGli&originHeight=225&originWidth=575&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7572b2a3-b9ac-4ba2-bfa9-455bd18d82e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/c52244548cbd401c3fa0304170eb81e8.png)
 ```java
 package com.heima.test;
 
@@ -323,11 +331,11 @@ public class JedisTest {
 ## 2.1 Pipeline
 ### 2.1.1 客户端与redis服务器的交互
 单个命令的执行流程
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330234-16df3110-ddaa-48ed-b115-a2efbbfe4177.png#averageHue=%23f6efee&clientId=u64f2b4b5-d350-4&id=UsmQn&originHeight=369&originWidth=980&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3049c846-63c8-4b03-9414-390b76d85b6&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/88ff0a1b7b7cc7318af232b385212d1b.png)
 N条命令的执行流程
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330078-669a5002-eaae-4d56-8ada-d23aa6e06d89.png#averageHue=%23f3ecec&clientId=u64f2b4b5-d350-4&id=hIFI6&originHeight=361&originWidth=970&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ub449a9a7-9eea-4dae-9778-087656f3bf5&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/c648c396fc17f74515a1ff3136499b9f.png)
 redis处理指令是很快的，主要花费的时候在于网络传输。于是乎很容易想到将多条指令批量的传输给redis
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330279-ba5e4501-22ea-4c46-822c-da16403494ff.png#averageHue=%23f5eeee&clientId=u64f2b4b5-d350-4&id=B4ZYd&originHeight=365&originWidth=977&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud295e400-1fd9-4566-8b41-74c219d11e2&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/ec979e9fbc60839e9547833b5603e9a7.png)
 
 ### 2.1.2 MSet
 Redis提供了很多Mxxx这样的命令，可以实现批量插入数据，例如：
@@ -378,7 +386,7 @@ void testPipeline() {
 ## 2.2 集群下的批处理
 如MSET或Pipeline这样的批处理需要在一次请求中携带多条命令，而此时如果Redis是一个集群，那批处理命令的多个key必须落在一个插槽中，否则就会导致执行失败。大家可以想一想这样的要求其实很难实现，因为我们在批处理时，可能一次要插入很多条数据，这些数据很有可能不会都落在相同的节点上，这就会导致报错了
 这个时候，我们可以找到4种解决方案
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330376-ee0519c8-bed7-4e57-971f-3acfbdbfa75e.png#averageHue=%23c9b8b6&clientId=u64f2b4b5-d350-4&id=IgRPk&originHeight=596&originWidth=1470&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2eba9e5f-dfb4-44a7-aa12-1b071e7769b&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/4c163285914e32c91ec7f4a0c655cb41.png)
 
 **第一种方案**：串行执行，所以这种方式没有什么意义，当然，执行起来就很简单了，缺点就是耗时过久。
 **第二种方案**：串行slot，简单来说，就是执行前，客户端先计算一下对应的key的slot，一样slot的key就放到一个组里边，不同的，就放到不同的组里边，然后对每个组执行pipeline的批处理，他就能串行执行各个组的命令，这种做法比第一种方法耗时要少，但是缺点呢，相对来说复杂一点，所以这种方案还需要优化一下
@@ -515,16 +523,16 @@ Redis的持久化虽然可以保证数据安全，但也会带来很多额外的
 并不是很慢的查询才是慢查询，而是：在Redis执行时耗时超过某个阈值的命令，称为慢查询。
 慢查询的危害：由于Redis是单线程的，所以当客户端发出指令后，他们都会进入到redis底层的queue来执行，如果此时有一些慢查询的数据，就会导致大量请求阻塞，从而引起报错，所以我们需要解决慢查询问题。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330412-a96f72f6-a7fc-42d2-845a-ca565edaac66.png#averageHue=%23f3eded&clientId=u64f2b4b5-d350-4&id=XKwPE&originHeight=430&originWidth=1252&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u651e34e3-b6c4-41bc-b27e-1ba46764d0f&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/bd217a5fda2d3f3d4a239410e892d608.png)
 
 慢查询的阈值可以通过配置指定：
 slowlog-log-slower-than：慢查询阈值，单位是微秒。默认是10000，建议1000
 慢查询会被放入慢查询日志中，日志的长度有上限，可以通过配置指定：
 slowlog-max-len：慢查询日志（本质是一个队列）的长度。默认是128，建议1000
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330436-2bfb4c06-8e92-4d14-bfa7-569afc3490e8.png#averageHue=%23031f33&clientId=u64f2b4b5-d350-4&id=M5KL2&originHeight=216&originWidth=863&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=uadbcf610-0932-49ef-98f8-c0501a272e2&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/a418898d3ba602f98cd59c6213dfa5f7.png)
 修改这两个配置可以使用：config set命令：
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330570-fc1619f4-d911-4768-ac8a-04319c9166c8.png#averageHue=%23031f33&clientId=u64f2b4b5-d350-4&id=GzWrN&originHeight=189&originWidth=934&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=uc24e3a2e-dd11-435d-8f1a-1450d4f666f&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/059264be36085357467dd2e4a89c0e90.png)
 
 ## 4.2 如何查看慢查询
 知道了以上内容之后，那么咱们如何去查看慢查询日志列表呢：
@@ -533,7 +541,7 @@ slowlog-max-len：慢查询日志（本质是一个队列）的长度。默认�
 - slowlog get [n]：读取n条慢查询日志
 - slowlog reset：清空慢查询列表
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330629-9af622e3-095d-4894-ac58-917dfb75f1b0.png#averageHue=%23021e31&clientId=u64f2b4b5-d350-4&id=sy4sN&originHeight=287&originWidth=938&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u0e378091-6023-49b2-bf33-bb0ad8231a1&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/227bb3c0ae60a3b1da1411bdabcee6b9.png)
 # 5 服务器端优化-命令及安全配置
 安全可以说是服务器端一个非常重要的话题，如果安全出现了问题，那么一旦这个漏洞被一些坏人知道了之后，并且进行攻击，那么这就会给咱们的系统带来很多的损失，所以我们这节课就来解决这个问题。
 Redis会绑定在0.0.0.0:6379，这样将会将Redis服务暴露到公网上，而Redis如果没有做身份认证，会出现严重的安全漏洞.
@@ -577,11 +585,11 @@ Redis底层分配并不是这个key有多大，他就会分配多大，而是有
 
 - info memory：查看内存分配的情况
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330798-c48a646c-5aac-4b51-b056-16450f9d9dcc.png#averageHue=%23062237&clientId=u64f2b4b5-d350-4&id=KRPh0&originHeight=555&originWidth=566&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ubacc8e55-253f-423d-9e37-8cf84f0f429&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/2b2cd72f6c714c00323be166788e185e.png)
 
 - memory xxx：查看key的主要占用情况
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330846-89e729e1-91e7-4ef7-b40a-d6a2ffa4c93f.png#averageHue=%23042034&clientId=u64f2b4b5-d350-4&id=Ta0kJ&originHeight=559&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=uc42ce5f4-a880-4b60-8be4-9766bdb9be2&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/13dfccfda832c502a70c00ef38c8aa79.png)
 
 接下来我们看到了这些配置，最关键的缓存区内存如何定位和解决呢？
 
@@ -594,7 +602,7 @@ Redis底层分配并不是这个key有多大，他就会分配多大，而是有
 以上复制缓冲区和AOF缓冲区 不会有问题，最关键就是客户端缓冲区的问题
 客户端缓冲区：指的就是我们发送命令时，客户端用来缓存命令的一个缓冲区，也就是我们向redis输入数据的输入端缓冲区和redis向客户端返回数据的响应缓存区，输入缓冲区最大1G且不能设置，所以这一块我们根本不用担心，如果超过了这个空间，redis会直接断开，因为本来此时此刻就代表着redis处理不过来了，我们需要担心的就是输出端缓冲区
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041330943-c378d905-a225-4ba5-92c4-7c0dbfb1bb9f.png#averageHue=%23ebf1de&clientId=u64f2b4b5-d350-4&id=vOUA2&originHeight=273&originWidth=944&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u6768756c-9764-40f3-aef0-0270e6fe3d7&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/ff9844ebabacaa9c814155fa6bc00431.png)
 
 我们在使用redis过程中，处理大量的big value，那么会导致我们的输出结果过多，如果输出缓存区过大，会导致redis直接断开，而默认配置的情况下， 其实他是没有大小的，这就比较坑了，内存可能一下子被占满，会直接导致咱们的redis断开，所以解决方案有两个
 
@@ -612,7 +620,7 @@ Redis底层分配并不是这个key有多大，他就会分配多大，而是有
 
 **问题1：在Redis的默认配置中，如果发现任意一个插槽不可用，则整个集群都会停止对外服务：**
 大家可以设想一下，如果有几个slot不能使用，那么此时整个集群都不能用了，我们在开发中，其实最重要的是可用性，所以需要把如下配置修改成no，即有slot不能使用时，我们的redis集群还是可以对外提供服务
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665041331121-97fe33a0-43b9-4d08-9b89-ddfb4aa02436.png#averageHue=%23042135&clientId=u64f2b4b5-d350-4&id=FzlPb&originHeight=448&originWidth=1293&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u9fb9909b-6138-437a-a198-9e0f8711cbc&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/ca8db2e2324c7dc0fc0c08ea86644789.png)
 
 **问题2：集群带宽问题**
 集群节点之间会不断的互相Ping来确定集群中其它节点的状态。每次Ping携带的信息至少包括：

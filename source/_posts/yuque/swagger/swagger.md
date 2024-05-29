@@ -1,3 +1,11 @@
+---
+title: swagger
+urlname: wsccbdsgmg75q9mv
+date: '2024-03-15 16:17:32'
+updated: '2024-04-06 12:14:16'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/swagger/3ccc5711ffe65132246cd7a999611735.png'
+description: 'Swagger简介官网：https://swagger.io/Swagger是一个规范和完整的框架，用于生成，描述，调用和可视化RESTful风格的Web服务。功能1。使得前后端分离开发更加方便，有利于团队协作2.接口文档在线自动生成，降低后端开发人员编写接口文档的负担3.接口功能测试使用Sw...'
+---
 # Swagger
 ## 简介
 官网：[https://swagger.io/](https://swagger.io/)
@@ -95,7 +103,7 @@ public class Setmeal implements Serializable {
 总之，我们想清晰的描述一个接口，就需要借助Swagger给我们提供的注解。
 ## 项目部署
 ### 部署结构
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/29688613/1663162310969-390beff8-4f42-4064-9d03-6d1a545e8a41.png#averageHue=%23faf9f8&clientId=uda2fd6a9-8ce2-4&from=paste&id=u34480241&originHeight=559&originWidth=502&originalType=url&ratio=1&rotation=0&showTitle=false&size=67657&status=done&style=none&taskId=u326a55c2-c53b-45f0-b60b-cb3e53676d9&title=)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/swagger/3ccc5711ffe65132246cd7a999611735.png)
 前端部署服务器：nginx
 后端部署服务器：Tomcat
 

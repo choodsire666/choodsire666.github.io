@@ -1,3 +1,11 @@
+---
+title: 02 SQL-DDL
+urlname: ryb6mifnakmr6okx
+date: '2024-03-13 17:27:41'
+updated: '2024-04-14 16:31:34'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/3988a5032b96a18ed8f37b39fe74455f.png'
+description: 1. SQL简介SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一标准 。1.1. SQL通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。SQL语句可以单行或多行书写，以分号结尾。S...
+---
 # SQL简介
 SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一**标准** 。
 ## SQL通用语法
@@ -38,25 +46,25 @@ create database [ if not exists ] 数据库名 [ default charset 字符集 ] [ c
 ```plsql
 create database itcast;
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747570-d2a4b4e5-0c53-4fbe-8eb1-1ebe07453440.png#averageHue=%231e1e1d&clientId=u5c3176be-6c5e-4&id=n4lcN&originHeight=333&originWidth=1245&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ue732f21b-aaaa-4ecb-bd57-8dbb66efce0&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/3988a5032b96a18ed8f37b39fe74455f.png)
 在同一个数据库服务器中，不能创建两个名称相同的数据库，否则将会报错。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747715-8f764219-559e-422c-87c4-333cba93b387.png#averageHue=%23575756&clientId=u5c3176be-6c5e-4&id=LSiDp&originHeight=118&originWidth=1244&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3b0a3459-603f-467b-abc3-b6e1a88a9ec&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/bccabc4199f18b2ad409b80b173a4753.png)
 可以通过if not exists 参数来解决这个问题，数据库不存在, 则创建该数据库，如果存在，则不创建。
 ```plsql
 create database if not extists itcast;
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747354-03b0e252-828e-47dd-987d-319a729514dd.png#averageHue=%23282827&clientId=u5c3176be-6c5e-4&id=HSGcR&originHeight=373&originWidth=1244&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u8f79ce9b-2782-413c-b488-4630b1e6c4d&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/f16ae583d427d616a80708846bf75ce9.png)
 **案例二**. 创建一个itheima数据库，并且指定字符集
 ```plsql
 create database itheima default charset utf8mb4;
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747731-3a47cbe4-2c32-44c5-944c-9762d7597126.png#averageHue=%232a2a29&clientId=u5c3176be-6c5e-4&id=ZO3JB&originHeight=407&originWidth=1255&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud65e029b-27f7-4ab1-b57f-5c9061d67b4&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/065a598a934afc49542e4c8ae31e5f9c.png)
 **删除数据库**
 ```
 drop database [ if exists ] 数据库名 ;
 ```
 如果删除一个不存在的数据库，将会报错。此时，可以加上参数 if exists ，如果数据库存在，再执行删除，否则不执行删除。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332747764-b2f86482-f4df-4e8d-8bac-a69bf6b3865c.png#averageHue=%23363636&clientId=u5c3176be-6c5e-4&id=nC0CC&originHeight=207&originWidth=1247&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua86f3cba-a90a-460f-ab55-339875d5e5f&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/7066ee3bc0f28b8daa46d8c76095bbf3.png)
 **切换数据库**
 ```sql
 use 数据库名 ;
@@ -74,21 +82,21 @@ show tables;
 use sys;
 show tables;
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332768748-a4a15b54-6af3-4723-a69a-24bfc718a4d4.png#averageHue=%231a1a19&clientId=u5c3176be-6c5e-4&id=sUrJ2&originHeight=671&originWidth=1241&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=uae67ac3a-569e-4c51-b79b-4cbb3b46e59&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/6868cd3bd024972b83886e7d5010d398.png)
 
 **查看指定表结构**
 ```sql
 desc 表名;
 ```
 通过这条指令，我们可以查看到指定表的字段，字段的类型、是否可以为NULL，是否存在默认值等信息。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332768790-17246063-0c56-4c6d-a6c9-c4e544b92e43.png#averageHue=%232e2d2d&clientId=u5c3176be-6c5e-4&id=QTAmK&originHeight=245&originWidth=1251&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u27246850-130e-4906-b0e6-9194c5d489b&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/17f7a5eb8f4bedaa6b36a64ffb5e0b0a.png)
 
 **查询指定表的建表语句**
 ```sql
 show create table 表名 ;
 ```
 通过这条指令，主要是用来查看建表语句的，而有部分参数我们在创建表的时候，并未指定也会查询到，因为这部分是数据库的默认值，如：存储引擎、字符集等。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332768867-23f9cf2a-865c-4f07-8260-c60cc67e8a82.png#averageHue=%23242423&clientId=u5c3176be-6c5e-4&id=M3gb3&originHeight=439&originWidth=1254&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u092e5766-f32f-48c3-954b-c379d1c6182&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/c354314355a8d34de79599cc6f8640f7.png)
 
 **创建表结构**
 ```sql
@@ -103,7 +111,7 @@ CREATE TABLE 表名(
 > 注意: [...] 内为可选参数，最后一个字段后面没有逗号
 
 比如，我们创建一张表 tb_user ，对应的结构如下，那么建表语句为：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332768820-47e5dc71-8f01-4ab0-a86d-bc1542ce29ac.png#averageHue=%23f9f8f8&clientId=u5c3176be-6c5e-4&height=244&id=r1GxY&originHeight=322&originWidth=1093&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u329a6f3f-7177-4200-b005-46fc1de2708&title=&width=828)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/6b7b8bea66fee52e32c1fe48c96d43be.png)
 ```plsql
 create table tb_user( 
   id int comment '编号', 
@@ -202,7 +210,7 @@ create table emp(
 ```
 
 SQL语句编写完毕之后，就可以在MySQL的命令行中执行SQL，然后也可以通过 `desc` 指令查询表结构信息：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710332768905-0ddc2ad2-8f52-4070-9cd7-38a8653cc6ea.png#averageHue=%233a3939&clientId=u5c3176be-6c5e-4&id=s7LnG&originHeight=308&originWidth=1241&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ud1f3dd02-dc57-4294-8e6a-44e2b5f0a1b&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/efa943b0df3925a1b4a3bbdff9ac6ee6.png)
 表结构创建好了，里面的name字段是varchar类型，最大长度为10，也就意味着如果超过10将会报错，如果我们想修改这个字段的类型 或 修改字段的长度该如何操作呢？接下来再来讲解DDL语句中，如何操作表字段。
 
 **表操作-修改**

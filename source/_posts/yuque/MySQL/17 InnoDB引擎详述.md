@@ -1,7 +1,15 @@
+---
+title: 17 InnoDB引擎详述
+urlname: ixgx5y5warh2ogcm
+date: '2024-03-14 12:14:31'
+updated: '2024-04-11 15:30:30'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/a7dc648311f8549a00a3c7a7a4c0ebbd.png'
+description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 逻辑存储结构InnoDB的逻辑存储结构如下图所示:表空间：是InnoDB存储引擎逻辑结构的最高层， 如果用户启用了参数 innodb_file_per_table(在8.0版本中默认开启...'
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 逻辑存储结构
 InnoDB的逻辑存储结构如下图所示:
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055415399-3519ec15-1e58-4cc7-89fa-f2bb4261656f.png#averageHue=%2390ca54&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=Jqj3I&originHeight=628&originWidth=1221&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=udd649f0f-6b03-466c-b448-180bf692071&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/a7dc648311f8549a00a3c7a7a4c0ebbd.png)
 
 - **表空间**：是InnoDB存储引擎逻辑结构的最高层， 如果用户启用了参数 innodb_file_per_table(在8.0版本中默认开启) ，**则每张表都会有一个表空间（xxx.ibd），一个mysql实例可以对应多个表空间**，用于存储记录、索引等数据。
 - **段**：分为数据段（Leaf node segment）、索引段（Non-leaf node segment）、回滚段（Rollback segment），InnoDB是索引组织表，数据段就是B+树的叶子节点， 索引段即为B+树的非叶子节点。段用来管理多个Extent（区）。
@@ -12,13 +20,13 @@ InnoDB的逻辑存储结构如下图所示:
    - Roll_pointer：每次对某条引记录进行改动时，都会把旧的版本写入到undo日志中，然后这个隐藏列就相当于一个指针，可以通过它来找到该记录修改前的信息。
 
 关于 ibd 文件
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683627502204-bea81c80-0c01-4213-aad5-72a3bf05cad3.png#averageHue=%23f0efef&clientId=u02c6d1b8-b712-4&from=paste&height=816&id=uc5d72fb9&originHeight=1632&originWidth=2746&originalType=binary&ratio=2&rotation=0&showTitle=false&size=1331340&status=done&style=none&taskId=u322dd3ee-7077-415c-bbab-b4dceb0598c&title=&width=1373)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/1782b68ba9651c18c23c2657073e4827.png)
 # 2 架构
 ## 2.1 概述
 MySQL 5.5 版本开始，默认使用InnoDB存储引擎，它擅长事务处理，具有崩溃恢复特性，在日常开发中使用非常广泛。下面是InnoDB架构图，左侧为内存结构，右侧为磁盘结构。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683627890968-d65f97c4-7d27-4294-89b7-af438591e7d1.png#averageHue=%23e9e8e8&clientId=u02c6d1b8-b712-4&from=paste&height=646&id=u74de9910&originHeight=689&originWidth=970&originalType=binary&ratio=2&rotation=0&showTitle=false&size=588125&status=done&style=none&taskId=u5cf816e6-6465-4cca-8c19-b25cb0629c4&title=&width=910)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/96a433430d1fd1597909a8f01c7efb29.png)
 ## 2.2 内存结构
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683627973635-4caf258c-9ceb-421f-8557-b07acfc15ae3.png#averageHue=%23e2e0de&clientId=u02c6d1b8-b712-4&from=paste&height=621&id=uae30e698&originHeight=621&originWidth=296&originalType=binary&ratio=2&rotation=0&showTitle=false&size=155433&status=done&style=none&taskId=ueb11d67e-ec96-4918-975f-0134944a9cb&title=&width=296)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/383911d26bcd6d8eb511e432f6581ae4.png)
 
 在左侧的内存结构中，主要分为这么四大块儿：
 
@@ -47,7 +55,7 @@ Change Buffer，更改缓冲区（针对于非唯一二级索引页），在执�
 
 Change Buffer的意义是什么呢?
 先来看一幅图，这个是二级索引的结构图：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683681787776-0cb64dcc-c8f7-48b1-88b9-a20b7d2488a4.png#averageHue=%23f0eee9&clientId=ueeffcab6-1cbe-4&from=paste&height=437&id=u14bd485d&originHeight=410&originWidth=1022&originalType=binary&ratio=2&rotation=0&showTitle=false&size=296792&status=done&style=none&taskId=u6136747c-000c-42c9-a693-c3f2f18a33d&title=&width=1089)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/925045f806250e261d6a0a8250095d7c.png)
 与聚集索引不同，二级索引通常是非唯一的，并且以相对随机的顺序插入二级索引。同样，删除和更新可能会影响索引树中不相邻的二级索引页，如果每一次都操作磁盘，会造成大量的磁盘IO。有了ChangeBuffer之后，我们可以在缓冲池中进行合并处理，减少磁盘IO。
 
 **Adaptive Hash Index**
@@ -55,7 +63,7 @@ Change Buffer的意义是什么呢?
 InnoDB存储引擎会监控对表上各索引页的查询，如果观察到在特定的条件下hash索引可以提升速度，则建立hash索引，称之为自适应hash索引。
 自适应哈希索引，无需人工干预，是系统根据情况自动完成。
 参数： adaptive_hash_index
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683682412485-14832bfb-eedc-48a9-b6d5-85fcf1fd13e5.png#averageHue=%23efefef&clientId=ueeffcab6-1cbe-4&from=paste&height=215&id=u06a5014f&originHeight=254&originWidth=1166&originalType=binary&ratio=2&rotation=0&showTitle=false&size=86760&status=done&style=none&taskId=ue83b7fbc-6846-40df-9a3d-d173ed6c69e&title=&width=986)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/72b720722a9110ab6f6e00d6c04cd907.png)
 ON代表的是开启。
 
 **Log Buffer**
@@ -64,11 +72,11 @@ Log Buffer：日志缓冲区，用来保存要写入到磁盘中的log日志数�
 
 - innodb_log_buffer_size：缓冲区大小
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683682548017-4bd484ff-251f-41ba-a422-326a5287a808.png#averageHue=%23efefef&clientId=ueeffcab6-1cbe-4&from=paste&height=196&id=u0a6833d4&originHeight=228&originWidth=1118&originalType=binary&ratio=2&rotation=0&showTitle=false&size=73068&status=done&style=none&taskId=uf9e140ed-8222-458d-8827-e401a6ddd78&title=&width=961)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/3778f60b2aa79847277b4e4352b6e75f.png)
 
 - innodb_flush_log_at_trx_commit：日志刷新到磁盘时机，取值主要包含以下三个：
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683682704961-653cad57-1821-4636-8d51-cbaf1e37d0be.png#averageHue=%23ededed&clientId=ueeffcab6-1cbe-4&from=paste&height=241&id=ub495f46d&originHeight=246&originWidth=982&originalType=binary&ratio=2&rotation=0&showTitle=false&size=75072&status=done&style=none&taskId=u42837319-0ad6-47e5-9704-07f3e1deba4&title=&width=962)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/7bc0e86187d29017cecc98e2089f0d53.png)
 
    - 1：日志在每次事务提交时写入并刷新到磁盘，默认值。
    - 0：每秒将日志写入并刷新到磁盘一次。
@@ -76,26 +84,26 @@ Log Buffer：日志缓冲区，用来保存要写入到磁盘中的log日志数�
 
 ## 2.3 磁盘结构
 接下来，再来看看InnoDB体系结构的右边部分，也就是磁盘结构：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683682842688-e0805bb7-878d-4149-9c96-6dfb6d573e5f.png#averageHue=%23ebeaea&clientId=ueeffcab6-1cbe-4&from=paste&height=1013&id=u268a98b4&originHeight=626&originWidth=511&originalType=binary&ratio=2&rotation=0&showTitle=false&size=282837&status=done&style=none&taskId=u9b0bfbca-2baf-4ba3-a081-8c0c220edff&title=&width=826.5)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/b8bd9793d4f9a261843d54f6ff30ef90.png)
 **System Tablespace**
 系统表空间是更改缓冲区的存储区域。如果表是在系统表空间而不是每个表文件或通用表空间中创建的，它也可能包含表和索引数据。(在MySQL5.x版本中还包含InnoDB数据字典、undolog等)
 参数：innodb_data_file_path
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683682954664-865fed59-0cee-49c0-a8bc-ef7c0c7deab2.png#averageHue=%23eaeaea&clientId=ueeffcab6-1cbe-4&from=paste&height=202&id=ud734457b&originHeight=246&originWidth=1016&originalType=binary&ratio=2&rotation=0&showTitle=false&size=80500&status=done&style=none&taskId=u8685732f-eaf3-4280-b294-9961f02d525&title=&width=835)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/726703e95e73c9500b4017ffa07365b6.png)
 系统表空间，默认的文件名叫 ibdata1。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683044669-5e1e8e38-1854-4566-bfc7-956489f73615.png#averageHue=%23e9e9e9&clientId=ueeffcab6-1cbe-4&from=paste&height=505&id=u1f7cde6e&originHeight=1010&originWidth=1530&originalType=binary&ratio=2&rotation=0&showTitle=false&size=567872&status=done&style=none&taskId=ucd5c7acb-c8da-4a53-801c-8f740774ce6&title=&width=765)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/3799069d951f6d3956dc57923a7db214.png)
 由于我们的mysql是docker创建的
 ```bash
 docker run -d -p 3306:3306 -v /Users/admin/Desktop/docker-container/mysql/conf:/etc/mysql/conf.d -v /Users/admin/Desktop/docker-container/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql mysql:latest
 ```
 此文件原在 /var/lib/mysql 目录下，被我们挂载映射到 /Users/admin/Desktop/docker-container/mysql/data下，我们来看看是不是这个目录。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683237547-7433aad6-0f6a-4194-b409-051f99258083.png#averageHue=%23e8e8e8&clientId=ueeffcab6-1cbe-4&from=paste&height=581&id=u00a32ae8&originHeight=1072&originWidth=1408&originalType=binary&ratio=2&rotation=0&showTitle=false&size=571242&status=done&style=none&taskId=u1851b27c-5c96-4967-98c7-032042ed947&title=&width=763)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/fee04b46cd64f1fefa057de86586e04e.png)
 
 **File-Per-Table Tablespaces**
 如果开启了innodb_file_per_table开关 ，则**每个表的文件表空间包含单个InnoDB表的数据和索引 **，并存储在文件系统上的单个数据文件中。
 开关参数：innodb_file_per_table ，该参数默认开启。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683327459-e0906f8f-62e2-4ac0-9075-817d857fc6ae.png#averageHue=%23ececec&clientId=ueeffcab6-1cbe-4&from=paste&height=188&id=ubca3467d&originHeight=210&originWidth=852&originalType=binary&ratio=2&rotation=0&showTitle=false&size=57555&status=done&style=none&taskId=u7332c3f2-1edd-45b8-b5f6-4fe15a5605e&title=&width=764)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/349b46436e04dfec971b6da79a8ac985.png)
 那也就是说，我们每创建一个表，都会产生一个表空间文件，如图：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683379249-8f5adff4-4afc-4e60-915e-778f989fb1f7.png#averageHue=%23ececec&clientId=ueeffcab6-1cbe-4&from=paste&height=96&id=u89f2d39e&originHeight=148&originWidth=1180&originalType=binary&ratio=2&rotation=0&showTitle=false&size=62817&status=done&style=none&taskId=ued3ceaab-6495-40b1-b2eb-c55bdf141bf&title=&width=767)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/f9b1fb9bf5aea5890e778717df7caae8.png)
 
 **General Tablespaces**
 通用表空间，需要通过 CREATE TABLESPACE 语法创建通用表空间，在创建表时，可以指定该表空间。
@@ -104,35 +112,35 @@ docker run -d -p 3306:3306 -v /Users/admin/Desktop/docker-container/mysql/conf:/
 ```plsql
 CREATE TABLESPACE ts_name ADD DATAFILE 'file_name' ENGINE = engine_name;
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683618714-e1dfb886-8496-4d5c-b71b-87e80f999dba.png#averageHue=%23ededed&clientId=ueeffcab6-1cbe-4&from=paste&height=78&id=ub2eecf8d&originHeight=138&originWidth=1304&originalType=binary&ratio=2&rotation=0&showTitle=false&size=56145&status=done&style=none&taskId=u8e861b96-89d2-4e1e-b140-3e36762f396&title=&width=737)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/06b1f0239f782e5279e889599e7bc153.png)
 看看我们创立的表空间
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683694223-4f9566f0-fd8c-4d57-b670-bc29d274c9b4.png#averageHue=%23eaeaea&clientId=ueeffcab6-1cbe-4&from=paste&height=631&id=u53f487aa&originHeight=1262&originWidth=1816&originalType=binary&ratio=2&rotation=0&showTitle=false&size=769930&status=done&style=none&taskId=uf3a8ef1e-f9d8-4e40-bc6c-dc3664f74be&title=&width=908)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/faa50ffc28320c09a892a1880e1555cf.png)
 
 2. 创建表时指定表空间
 ```plsql
 CREATE TABLE xxx ... TABLESPACE ts_name;
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683683943363-f69774fe-558c-4536-b152-d197dc074475.png#averageHue=%23ebebeb&clientId=ueeffcab6-1cbe-4&from=paste&height=184&id=ua40ffe94&originHeight=324&originWidth=1606&originalType=binary&ratio=2&rotation=0&showTitle=false&size=161343&status=done&style=none&taskId=u2e2d5dfe-3a9b-4a3a-bd97-7d0955bc24f&title=&width=913)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/fea4979edeb5109662abf7fcf47c5420.png)
 
 **Undo Tablespaces**
 撤销表空间：MySQL实例在初始化时会自动创建两个默认的undo表空间（初始大小16M），用于存储undo log日志。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683684081606-07bf7547-6816-4879-842c-8d1491dc1ea3.png#averageHue=%23eae9e9&clientId=ueeffcab6-1cbe-4&from=paste&height=637&id=u7c17a2e8&originHeight=1274&originWidth=1882&originalType=binary&ratio=2&rotation=0&showTitle=false&size=790096&status=done&style=none&taskId=u276943b1-e58a-4384-a4cb-97175d3d8c4&title=&width=941)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/45d71c345ae959593457db1e07f6152a.png)
 
 **Temporary Tablespaces：临时表空间**
 InnoDB 使用会话临时表空间和全局临时表空间。存储用户创建的临时表等数据。
 
 **Doublewrite Buffer Files**
 双写缓冲区：innoDB引擎将数据页从Buffer Pool刷新到磁盘前，先将数据页写入双写缓冲区文件中，便于系统异常时恢复数据。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683684200283-9ff5a042-04aa-4e05-9166-bcd88b6acb31.png#averageHue=%23e9e8e8&clientId=ueeffcab6-1cbe-4&from=paste&height=634&id=ue8333659&originHeight=1268&originWidth=1686&originalType=binary&ratio=2&rotation=0&showTitle=false&size=738022&status=done&style=none&taskId=u8736171a-edb1-48b4-9e02-84503f7b128&title=&width=843)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/41b681d696a0cf7ba8ce7435eca3e3f0.png)
 
 **Redo Log**
 重做日志：是用来实现事务的持久性。该日志文件由两部分组成：重做日志缓冲（redo log buffer）以及重做日志文件（redo log），前者是在内存中，后者在磁盘中。当事务提交之后会把所有修改信息都会存到该日志中，用于在刷新脏页到磁盘时,发生错误时, 进行数据恢复使用。
 以循环方式写入重做日志文件，涉及两个文件：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683684412388-d575861e-d7b0-486c-8e33-4710aff03009.png#averageHue=%23f7f7f6&clientId=ueeffcab6-1cbe-4&from=paste&height=106&id=u61adb0c3&originHeight=86&originWidth=465&originalType=binary&ratio=2&rotation=0&showTitle=false&size=26819&status=done&style=none&taskId=u4a8df718-b411-4fcc-b496-26aa17ceadb&title=&width=572.5)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/3778a68ef7b4ab033cc69a9e011cdc4f.png)
 前面我们介绍了InnoDB的内存结构，以及磁盘结构，那么内存中我们所更新的数据，又是如何到磁盘中的呢？ 此时，就涉及到一组后台线程，接下来，就来介绍一些InnoDB中涉及到的后台线程。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055416429-85442c8d-2710-47ff-be9f-6be9c6d625c7.png#averageHue=%23f1f0f0&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=zKIra&originHeight=843&originWidth=1214&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u6165c27c-474e-4e79-bba4-19cd5e97461&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/3ab3878f865e0a0fec83f6feb7912c46.png)
 ##  2.4 后台线程
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683684529639-02a3b048-16af-4307-a224-4a4afdb31bdd.png#averageHue=%23f4f4f4&clientId=ueeffcab6-1cbe-4&from=paste&height=767&id=ue0a9234b&originHeight=533&originWidth=566&originalType=binary&ratio=2&rotation=0&showTitle=false&size=202135&status=done&style=none&taskId=ucffbc4d7-a5d4-4633-9167-e6e4da6e20a&title=&width=814)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/e2a0b3f656f5bcf0c08dd2f154002b73.png)
 在InnoDB的后台线程中，分为4类，分别是：
 
 - Master Thread
@@ -159,7 +167,7 @@ InnoDB 使用会话临时表空间和全局临时表空间。存储用户创建�
 ```sql
 show engine innodb status \G;
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683685054947-402f5a7d-f23e-419c-a0fd-81e9a84f13be.png#averageHue=%23eeeeee&clientId=ueeffcab6-1cbe-4&from=paste&height=891&id=ucdbff146&originHeight=1782&originWidth=2188&originalType=binary&ratio=2&rotation=0&showTitle=false&size=1081987&status=done&style=none&taskId=udcdc65a2-b8cf-4cbb-a703-a1283e14a30&title=&width=1094)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/33d8c3c454d8fa48d0cf7cc10b5d8f7f.png)
 可以看到全部采用的是aio，是异步io。
 **Purge Thread**
 主要用于回收事务已经提交了的undo log，在事务提交之后，undo log可能不用了，就用它来回收。
@@ -179,10 +187,10 @@ show engine innodb status \G;
 - 持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。
 
 那实际上，我们研究事务的原理，就是研究MySQL的InnoDB引擎是如何保证事务的这四大特性的。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055416685-ac637d77-80c6-4c23-b60d-4a092f7689ae.png#averageHue=%23fbfaf8&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=yo19l&originHeight=206&originWidth=1215&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u9c445a7e-888e-4201-9cb8-5c6f11e6eac&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/1803949761c7f0f2d93e8aba962f90cc.png)
 
 而对于这四大特性，实际上分为两个部分。 其中的原子性、一致性、持久化，实际上是由InnoDB中的两份日志来保证的，一份是redo log日志，一份是undo log日志。 而持久性是通过数据库的锁，加上MVCC来保证的。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055416795-fa6b3d32-a133-4a6e-84a8-5ccfb4cd4642.png#averageHue=%23fcfbfa&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=rw76r&originHeight=452&originWidth=1201&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=ub91e076a-cf3d-417b-9ca4-62a3d1a6a83&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/a1afed25868af9e05ace56b4badc1767.png)
 我们在讲解事务原理的时候，主要就是来研究一下redolog，undolog以及MVCC。
 ## 3.2 redo log
 重做日志，记录的是事务提交时数据页的物理修改，**是用来实现事务的持久性**。
@@ -190,9 +198,9 @@ show engine innodb status \G;
 
 如果没有redolog，可能会存在什么问题的？ 我们一起来分析一下。
 我们知道，在InnoDB引擎中的内存结构中，主要的内存区域就是缓冲池，在缓冲池中缓存了很多的数据页。 当我们在一个事务中，执行多个增删改的操作时，InnoDB引擎会先操作缓冲池中的数据，如果缓冲区没有对应的数据，会通过后台线程将磁盘中的数据加载出来，存放在缓冲区中，然后将缓冲池中的数据修改，修改后的数据页我们称为脏页。 而脏页则会在一定的时机，通过后台线程刷新到磁盘中，从而保证缓冲区与磁盘的数据一致。 而缓冲区的脏页数据并不是实时刷新的，而是一段时间之后将缓冲区的数据刷新到磁盘中，假如刷新到磁盘的过程出错了，而提示给用户事务提交成功，而数据却没有持久化下来，这就出现问题了，没有保证事务的持久性。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055417098-40328e8d-65c8-47b1-9bd2-3b54496e57b9.png#averageHue=%23faf2ea&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&height=498&id=dW8rw&originHeight=498&originWidth=1215&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u68744ea8-f166-4ec7-819c-ee4e79026d2&title=&width=1215)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/8937b118a667cf32d462e1f270da56d5.png)
 那么，如何解决上述的问题呢？ 在InnoDB中提供了一份日志 redo log，接下来我们再来分析一下，通过redolog如何解决这个问题。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055417167-8ed067c3-2be2-466d-b2ac-04c49e99c180.png#averageHue=%23faf2ea&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&height=498&id=rCDtU&originHeight=498&originWidth=1214&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u4242f9d8-b38b-49e3-b359-e5c24a0e056&title=&width=1214)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/7397c1053eafd41ee15e39b03dcd2baf.png)
 有了 redolog 之后，当对缓冲区的数据进行增删改之后，会首先将操作的数据页的变化，记录在redo log buffer中。在事务提交时，会将redo log buffer中的数据刷新到redo log磁盘文件中。过一段时间之后，如果刷新缓冲区的脏页到磁盘时，发生错误，此时就可以借助于redo log进行数据恢复，这样就保证了事务的持久性。 而如果脏页成功刷新到磁盘或或者涉及到的数据已经落盘，此时redolog就没有作用了，就可以删除了，所以存在的两个redolog文件是循环写的。
 那为什么每一次提交事务，要刷新redo log 到磁盘中呢，而不是直接将buffer pool中的脏页刷新到磁盘呢 ?
 因为在业务操作中，我们操作数据一般都是随机读写磁盘的，而不是顺序读写磁盘。 而redo log在往磁盘文件中写入数据，由于是日志文件，所以都是顺序写的。顺序写的效率，要远大于随机写。 这种先写日志的方式，称之为 WAL（Write-Ahead Logging）。

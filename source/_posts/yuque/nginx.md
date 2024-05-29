@@ -1,3 +1,11 @@
+---
+title: nginx
+urlname: wdckstlc39gx3106
+date: '2024-04-04 11:46:44'
+updated: '2024-04-04 19:35:08'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/12fd30321840ef4f55b5ccbe9e2abb4a.png'
+description: "第一章 安装安装nginxyum update\t yum install gcc openssl openssl-devel pcre pcre-devel zlib zlib-devel -y  cd /root/opt/mysoftwares tar -zxvf nginx.tar  cd..."
+---
 #### 第一章 安装
 
 ##### 安装nginx
@@ -338,7 +346,7 @@ location ~ .*/(css|js|img|images|image){
 ```
 
 #### 第七章 动静分离
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1712215479547-0f90a98f-3c1a-4dfc-be4e-bbf628f6161c.png#averageHue=%23f7fbf7&clientId=u604db47f-e3f0-4&from=paste&height=442&id=u57cfa41a&originHeight=548&originWidth=911&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=58819&status=done&style=none&taskId=ud46ea968-30ad-4c11-bf50-75517b30bd8&title=&width=734.9243461889589)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/a1f773b9fa92dabe33ff7ba0a7cc19c4.png)
 从实现的角度上大致上分为两种：
 一种是纯粹把静态文件独立成单独的域名，放在独立的服务器上。
 另一种就是动态跟静态文件混合在一起发布，通过nginx来分开
@@ -439,9 +447,9 @@ C:\Windows\System32\drivers\etc
 
 添加本地ip DNS 映射
 #### 第八章 高可用
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1712216479848-40013f78-745b-496b-9f1c-79f2c937b7fe.png#averageHue=%23f5faf6&clientId=u604db47f-e3f0-4&from=paste&height=249&id=u7bc28ab4&originHeight=309&originWidth=1121&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=77439&status=done&style=none&taskId=u70de337d-8597-474c-96dc-402ef6d8235&title=&width=904.3361054641305)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/43c6160e43fdaea2a85de812aa306957.png)
 高可用
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1712216745507-20d6227c-35e3-4b89-9ec8-1b9af00f0207.png#averageHue=%23f3f8f4&clientId=u604db47f-e3f0-4&from=paste&height=365&id=uc111e6dc&originHeight=452&originWidth=1320&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=141308&status=done&style=none&taskId=ueef4f6fd-4ae7-42d1-b5e8-e9e60b55bd6&title=&width=1064.873915443936)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/b6fc5f749d8a5f527bc10516af0e209e.png)
 ##### 安装keeyalived
 1.使用yum命令进行安装
 yum install keepalived -y

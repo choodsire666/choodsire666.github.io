@@ -1,10 +1,18 @@
+---
+title: 02 Redis命令
+urlname: sccz1qv8gkkd
+date: '2024-03-14 12:27:14'
+updated: '2024-04-12 12:19:21'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/3761450844e82aad476a8d9f086b2516.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis的中文文档：中文文档菜鸟教程官网：菜鸟教程1 Redis数据结构介绍Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样2 通用...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 Redis的中文文档：[中文文档](http://www.redis.cn/commands.html)
 菜鸟教程官网：[菜鸟教程](https://www.runoob.com/redis/redis-keys.html)
 ## 1 Redis数据结构介绍
 **Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样**
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854200739-f856afa6-e264-43ab-9f73-e147ea20098b.png#averageHue=%23edd5ac&clientId=u0575c434-da09-4&height=429&id=A0tuZ&originHeight=543&originWidth=1047&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u29095f1a-0225-4fa4-964b-f3cd3585f07&title=&width=828)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/3761450844e82aad476a8d9f086b2516.png)
 ## 2 通用命令
 **通用指令是部分数据类型的，都可以使用的指令，常见的有如下表格所示**
 
@@ -48,7 +56,7 @@ String的常见命令有如下表格所示:
 | SETNX | 添加一个String类型的键值对，前提是这个key不存在，否则不执行 |
 | SETEX | 添加一个String类型的键值对，并且指定有效期 |
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1666165318719-fee61104-55a3-4d60-bea9-cc9f406f2167.png#averageHue=%23faf9f9&clientId=ue3768dcb-f79a-4&errorMessage=unknown%20error&from=paste&height=481&id=u7796f9ba&originHeight=539&originWidth=950&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59152&status=error&style=none&taskId=u90be7044-087d-42b5-84ac-74d14c95128&title=&width=847)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/9794ee08ad4798bbcb7a4d26fc163322.png)
 Redis的key允许有多个单词形成层级结构，多个单词之间用” ：“隔开，格式如下：
 ```java
 项目名:业务名:类型:id
@@ -69,7 +77,7 @@ Redis的key允许有多个单词形成层级结构，多个单词之间用” �
 ## 3 Hash类型
 **Hash类型，也叫散列，其value是一个无序字典，类似于Java中的**`**HashMap**`**结构。**
 **Hash结构可以将对象中的每个字段独立存储，可以针对单个字段做CRUD**  
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664282986775-bc7d8041-c918-4c4a-93f1-160174f81026.png#averageHue=%23f5f4f4&clientId=u3f6f68b3-9d6e-4&errorMessage=unknown%20error&id=ZDlCe&originHeight=296&originWidth=693&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u9f86e3d3-892f-46c8-ac79-4cb3da964b6&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/a9278f4c608dd9d67a0dccbe22879a99.png)
 
 **Hash的常见命令有：**  
 
@@ -85,7 +93,7 @@ Redis的key允许有多个单词形成层级结构，多个单词之间用” �
 | HINCRBY | 让一个hash类型key的字段值自增并指定步长 |
 | HSETNX | 添加一个hash类型的key的field值，前提是这个field不存在，否则不执行 |
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1666166325919-d9de2b80-979a-4017-904e-2a06fd1fe21f.png#averageHue=%23f4f4f4&clientId=ua4f21d2c-f18d-4&errorMessage=unknown%20error&from=paste&height=647&id=u6657c10b&originHeight=351&originWidth=327&originalType=binary&ratio=1&rotation=0&showTitle=false&size=21337&status=error&style=none&taskId=u34dc3e49-7875-4540-8bcf-13f8d482536&title=&width=602.5)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/9155d26fc32a3f6f736ac5b1d1cb0135.png)
 ## 4 List类型
 **Redis中的List类型与Java中的LinkedList类似，可以看做是一个双向链表结构。既可以支持正向检索和也可以支持反向检索。**
 **特征也与**`**LinkedList**`**类似：**
@@ -107,9 +115,9 @@ List的常见命令有:
 | LRANGE key star end | 返回一段角标范围内的所有元素 |
 | BLPOP和BRPOP | 与LPOP和RPOP类似，只不过在没有元素时等待指定时间，而不是直接返回nil |
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1666166764668-e6ca1ad1-9e77-4f74-a728-68f78c724b87.png#averageHue=%23f4f4f4&clientId=u1d46ae95-ac9c-4&from=paste&height=464&id=u7b82eb20&originHeight=335&originWidth=634&originalType=binary&ratio=1&rotation=0&showTitle=false&size=35770&status=done&style=none&taskId=u1ab3029b-d03f-461b-a1dd-c06a315eeb2&title=&width=878)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/6a4c85c3c067e5895b7d1ca84aa91b57.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/gif/29688613/1711854200653-524c552f-8409-49b7-adac-b923c025e805.gif#averageHue=%23fefefe&clientId=u0575c434-da09-4&height=156&id=Veo2l&originHeight=200&originWidth=1650&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2f7357a0-8d20-4eb8-9c6b-6e25a485a5f&title=&width=1285)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/30d410c9e9ee93b9bc041f2400ec2d32.gif)
 **思考：**
 
 -  **如何利用List结构模拟一个栈?** 
@@ -141,9 +149,9 @@ Set的常见命令有：
 | SDIFF key1 key2 ... | 求key1与key2的差集 |
 | SUNION key1 key2 .. | 求key1和key2的并集 |
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1676444319009-22a73487-27a5-4a96-87c3-10b21b8e4bce.png#averageHue=%23efefef&clientId=uf1806d59-0bb1-4&from=paste&height=156&id=ue62fbd57&originHeight=156&originWidth=550&originalType=binary&ratio=1&rotation=0&showTitle=false&size=30106&status=done&style=none&taskId=u4dcdc8ef-a2b6-4074-8fe8-f62fd33b81b&title=&width=550)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/7846df8f84ad32fbc489be53af869d73.png)
 交集、差集、并集图示：
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854200803-f5c362a1-5971-4c67-a921-ce1fe31812f3.png#averageHue=%23cca772&clientId=u0575c434-da09-4&height=437&id=GhiZ9&originHeight=510&originWidth=636&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u014118f3-133c-457a-8c3c-d434cd34b73&title=&width=545)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/126745e37615272ea9f832a48ac24246.png)
 ## 6 SortedSet类型
 **Redis的SortedSet是一个可排序的set集合，与Java中的TreeSet有些类似，但底层数据结构却差别很大。SortedSet中的每一个元素都带有一个score属性，可以基于score属性对元素排序，底层的实现是一个跳表（SkipList）加 hash表。**
 **SortedSet具备下列特性：**
@@ -168,7 +176,7 @@ SortedSet的常见命令有
 | ZRANGEBYSCORE key min max | 按照score排序后，获取指定score范围内的元素 |
 | ZDIFF、ZINTER、ZUNION | 求差集、交集、并集 |
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1676444236318-5b4ab939-85c8-4b9f-a8ea-63107bbe345a.png#averageHue=%23f1f1f1&clientId=uf1806d59-0bb1-4&from=paste&height=228&id=u4ffe44e6&originHeight=262&originWidth=678&originalType=binary&ratio=1&rotation=0&showTitle=false&size=49600&status=done&style=none&taskId=ucda5da26-0707-4f4b-af21-f4fb15faa8a&title=&width=589)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/d1e4b167eef7a04a4b93e6782e7f0a01.png)
 **注意：所有的排名默认都是升序，如果要降序则在命令的Z后面添加**`**REV**`**即可**
 ## 8 BitMap类型
 BitMap的操作命令有：
@@ -181,4 +189,4 @@ BitMap的操作命令有：
 - BITOP ：将多个BitMap的结果做位运算（与 、或、异或）
 - BITPOS ：查找bit数组中指定范围内第一个0或1出现的位置
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1676447678321-45998775-0401-474a-86fd-b4d3ff8efbe4.png#averageHue=%23f5f5f5&clientId=u78fc9154-47df-4&from=paste&height=468&id=ubbc39820&originHeight=542&originWidth=1212&originalType=binary&ratio=1&rotation=0&showTitle=false&size=152127&status=done&style=none&taskId=u5880f692-4ee2-4bc5-a4c8-1d6f0452571&title=&width=1047)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/6ba4e3f5a1e8c175da83019fa32ab9c7.png)

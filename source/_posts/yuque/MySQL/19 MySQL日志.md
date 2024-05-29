@@ -1,5 +1,13 @@
+---
+title: 19 MySQL日志
+urlname: paxlvnrrtlknouur
+date: '2024-03-14 12:14:40'
+updated: '2024-04-11 15:27:16'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/5cfc22d19101872a7c55ec7d922505f4.png'
+description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 错误日志错误日志是 MySQL 中最重要的日志之一，它记录了当 mysqld 启动和停止时，以及服务器在运行过程中发生任何严重错误时的相关信息。当数据库出现任何故障导致无法正常使用时，建...
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/29688613/1712820433279-6aeeccc9-fd89-4adb-8701-beb664a51fba.png#averageHue=%23f6f1d0&clientId=u091f7977-7d1d-4&from=paste&height=334&id=u20c48982&originHeight=414&originWidth=1098&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=187392&status=done&style=none&taskId=u0846af7c-8d02-44a5-a451-595c45ce9ca&title=&width=885.7814842101832)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/c1e504b3ddf0f05402192f8fcf546079.png)
 
 ## 1 错误日志
 错误日志是 MySQL 中最重要的日志之一，它记录了当 mysqld 启动和停止时，以及服务器在运行过程中发生任何严重错误时的相关信息。当数据库出现任何故障导致无法正常使用时，建议首先查看此日志。
@@ -9,7 +17,7 @@
 show variables like '%log_error%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710389771147-d2aed234-884b-4a41-a3e5-75299d64881a.png#averageHue=%232366a2&clientId=u67d4ece0-f235-4&id=p4drz&originHeight=207&originWidth=1181&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u1d198c86-ad43-4094-b7a8-cd837c55819&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/5cfc22d19101872a7c55ec7d922505f4.png)
 ## 2 二进制日志
 ### 2.1 介绍
 二进制日志（BINLOG）记录了所有的 DDL（数据定义语言）语句和 DML（数据操纵语言）语句，但不包括数据查询（SELECT、SHOW）语句。
@@ -18,7 +26,7 @@ show variables like '%log_error%';
 
 1. 灾难时的数据恢复；
 2. MySQL的主从复制。在MySQL8版本中，默认二进制日志是开启着的，涉及到的参数如下：`show variables like '%log_bin%';`
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710389771038-78f36dae-1c15-44b7-9876-4893544bbb39.png#averageHue=%232365a0&clientId=u67d4ece0-f235-4&id=E1mpP&originHeight=417&originWidth=1231&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=uce2eb48e-e778-42ef-b497-8e85b4d3758&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/cd2241d00bbd3715d155479da485ee75.png)
 参数说明：
    - log_bin_basename：当前数据库服务器的binlog日志的基础名称(前缀)，具体的binlog文件名需要再该basename的基础上加上编号(编号从000001开始)。
    - log_bin_index：binlog的索引文件，里面记录了当前服务器关联的binlog文件有哪些。
@@ -33,7 +41,7 @@ MySQL服务器中提供了多种格式来记录二进制日志，具体格式及
 
 参数：
 `show variables like '%binlog_format%';`
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710389771151-5ee5bb4f-feab-42fb-93fe-e268cecbb9ed.png#averageHue=%232167a4&clientId=u67d4ece0-f235-4&id=JNe6S&originHeight=169&originWidth=1233&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3c522181-9912-451b-bd56-10d30079bbd&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/5ba124a715b287c0aae34c0eabea3acb.png)
 如果我们需要配置二进制日志的格式，只需要在 /etc/my.cnf 中配置 binlog_format 参数即可。
 ### 2.3 查看
 由于日志是以二进制方式存储的，不能直接读取，需要通过二进制日志查询工具 mysqlbinlog 来查看，具体语法：
@@ -64,7 +72,7 @@ show variables like '%binlog_expire_logs_seconds%';
 ```
 ## 3 查询日志
 查询日志中记录了客户端的所有操作语句，而二进制日志不包含查询数据的SQL语句。默认情况下，查询日志是未开启的。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710389771013-ae21b0d7-a0cc-4f6d-8a38-daedce5350df.png#averageHue=%23237db9&clientId=u67d4ece0-f235-4&id=ExbHg&originHeight=194&originWidth=1223&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua42b70e6-d9a3-4cd6-b1f0-7ebdfa2f77a&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/a4a215388c19bf9db7b0848a58c0c255.png)
 如果需要开启查询日志，可以修改MySQL的配置文件 /etc/my.cnf 文件，添加如下内容：
 ```properties
 #该选项用来开启查询日志 ， 可选值 ： 0 或者 1 ； 0 代表关闭， 1 代表开启 

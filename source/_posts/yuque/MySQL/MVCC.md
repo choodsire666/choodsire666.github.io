@@ -1,3 +1,11 @@
+---
+title: MVCC
+urlname: zet55u1fhb20gn4w
+date: '2024-04-08 11:53:38'
+updated: '2024-04-15 16:04:40'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/80020cd656d0fbb2c6cc8e2743fbd6b7.png'
+description: MVCC：全称 Multi-Version Concurrency Control，多版本并发控制。指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读功能。MVCC的具体实现，还需要依赖于数据库记录中的三个隐式字段、undo log日志、readV...
+---
 MVCC：全称 Multi-Version Concurrency Control，多版本并发控制。指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读功能。MVCC的具体实现，还需要依赖于数据库记录中的三个隐式字段、undo log日志、readView。
 接下来，我们再来介绍一下InnoDB引擎的表中涉及到的隐藏字段 、undolog 以及 readview，从而来介绍一下MVCC的原理。
 # **4 MVCC**
@@ -17,7 +25,7 @@ create table stu(
 insert into stu(name,age) value("java",21);
 insert into stu(name,age) value("h5",28);
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683687979340-1f321205-be1c-4fa8-8702-0b105133a1f7.png#averageHue=%23eeeeee&clientId=ucde2468f-83c7-4&from=paste&height=670&id=l5wS7&originHeight=1340&originWidth=3350&originalType=binary&ratio=2&rotation=0&showTitle=false&size=1152000&status=done&style=none&taskId=u0a8a9723-319b-4e9b-9d65-d4856aea6e4&title=&width=1675)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/0217b361135f9250f1cc5d9530941589.png)
 
 1. **开启事务A**
 2. 开启事务B
@@ -29,24 +37,24 @@ insert into stu(name,age) value("h5",28);
 8. 在事务A中查询stu表的所有数据，加上lock in share mode(共享锁)，发现id为1的数据是最新数据
 
 在测试中我们可以看到，即使是在默认的RR隔离级别下，事务A中依然可以读取到事务B最新提交的内容，因为在查询语句后面加上了 lock in share mode 共享锁，此时是当前读操作。当然，当我们加排他锁的时候，也是当前读操作。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683688307305-e26a64c8-ef59-47e1-b6d5-6f7b4c286a87.png#averageHue=%23f3f3f3&clientId=ucde2468f-83c7-4&from=paste&height=296&id=kpOJL&originHeight=592&originWidth=3318&originalType=binary&ratio=2&rotation=0&showTitle=false&size=526722&status=done&style=none&taskId=u95fab9e0-3bd4-47c5-955b-4215ed5c2d2&title=&width=1659)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/8713975c02d640e396f10aa1d714d40e.png)
 
 快照读：简单的select（不加锁）就是快照读，快照读，读取的是记录数据的可见版本，有可能是历史数据，不加锁，是非阻塞读。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683688399796-bbd51b4e-687c-419b-a3cd-3db78131ca8a.png#averageHue=%23f3f3f3&clientId=ucde2468f-83c7-4&from=paste&height=296&id=hxIQF&originHeight=592&originWidth=3344&originalType=binary&ratio=2&rotation=0&showTitle=false&size=542521&status=done&style=none&taskId=ue6e77fc3-06d6-497a-87b6-2bd18755b08&title=&width=1672)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/db7f476c05c89898965333afbb81cd99.png)
 
 - Read Committed：每次select，都生成一个快照读。
 - Repeatable Read：开启事务后第一个select语句才是快照读的地方。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683688683686-bff5c9a8-a367-467c-a8bb-93817677b55a.png#averageHue=%23eeeded&clientId=ucde2468f-83c7-4&from=paste&height=415&id=JTBYX&originHeight=830&originWidth=3344&originalType=binary&ratio=2&rotation=0&showTitle=false&size=741744&status=done&style=none&taskId=u45511127-a3b8-4a69-a739-c582e297de7&title=&width=1672)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/4b3484e94f15d362e9cd71c256732651.png)
 
 - Serializable：快照读会退化为当前读。
 
 测试
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683688875493-4ba5b778-44be-4151-8e8a-e7902da7a61c.png#averageHue=%23f3f2f2&clientId=ucde2468f-83c7-4&from=paste&height=604&id=jtdsM&originHeight=1208&originWidth=3348&originalType=binary&ratio=2&rotation=0&showTitle=false&size=1131864&status=done&style=none&taskId=ue9a3f9ad-d29d-4ae3-adaa-cbb2730a554&title=&width=1674)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/282f410f492a871a990384ce9643ab0e.png)
 在测试中,我们看到即使事务B提交了数据,事务A中也查询不到。 原因就是因为普通的select是快照读，而在当前默认的RR隔离级别下，开启事务后第一个select语句才是快照读的地方，后面执行相同的select语句都是从快照中获取数据，可能不是当前的最新数据，这样也就保证了可重复读。
 ## 4.2 隐藏字段
 ### 4.2.1 介绍
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055417475-e92bc177-bff9-425c-b3b9-277a01f1ff11.png#averageHue=%23f9f8f8&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=oYpvn&originHeight=202&originWidth=365&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u3e0f9ac0-1db0-49ff-80d7-d645d7b188a&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/80020cd656d0fbb2c6cc8e2743fbd6b7.png)
 当我们创建了上面的这张表，我们在查看表结构的时候，就可以显式的看到这三个字段。 实际上除了这三个字段以外，InnoDB还会自动的给我们添加三个隐藏字段及其含义分别是：
 
 | 隐藏字段 | 含义 |
@@ -723,24 +731,24 @@ admin@cg db2019 % ibd2sdi employee.ibd
 而update、delete的时候，产生的undo log日志不仅在回滚时需要，在快照读时也需要，不会立即被删除。
 ### 4.3.2 undolog 版本链
 有一张表原始数据为：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683792591605-cdaa8016-eba4-4189-884a-c18d216cc136.png#averageHue=%23faf3f1&clientId=uda8b01c9-b14b-4&from=paste&height=189&id=u2ca738c8&originHeight=178&originWidth=764&originalType=binary&ratio=2&rotation=0&showTitle=false&size=120796&status=done&style=none&taskId=u6c25451f-d7b1-4aec-90c0-84d59f4c32d&title=&width=811)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/a6500b55e0b0271200c8e5489c7dcc3f.png)
 DB_TRX_ID : 代表最近修改事务ID，记录插入这条记录或最后一次修改该记录的事务ID，是自增的。
 DB_ROLL_PTR ： 由于这条数据是才插入的，没有被更新过，所以该字段值为null。
 
 然后，有四个并发事务同时在访问这张表。
 
 1. 第一步
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055418613-9ada5e88-c42c-43de-8cda-6caf05ba8021.png#averageHue=%23faf8f8&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=H81s4&originHeight=375&originWidth=915&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=uf4fca036-9fdf-4eb4-8a1d-c623c5ab82d&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/28c35e5d132982febedd7ea528a1c5eb.png)
 当事务2执行第一条修改语句时，会记录undo log日志，记录数据变更之前的样子; 然后更新记录，并且记录本次操作的事务ID，回滚指针，回滚指针用来指定如果发生回滚，回滚到哪一个版本。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055418807-9dad6f89-6751-427c-92ae-408200357a75.png#averageHue=%23f9efe5&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=BJs79&originHeight=301&originWidth=927&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u05d5bdbb-2187-4b28-b298-fe92cc6305a&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/67cf79a9a4c49fb8e4a630d182c3765d.png)
 2. 第二步
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055418837-24d87388-ec70-43b3-9661-e09b1d468f07.png#averageHue=%23faf7f6&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=snxdL&originHeight=378&originWidth=905&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u4366386a-c0fe-48b6-9e1b-ad0d05f1e99&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/ccf5319410a5c6314a859d14de5dff03.png)
 当事务3执行第一条修改语句时，也会记录undo log日志，记录数据变更之前的样子; 然后更新记录，并且记录本次操作的事务ID，回滚指针，回滚指针用来指定如果发生回滚，回滚到哪一个版本。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055418930-e3379982-fda4-4fad-9e50-df8a35bad483.png#averageHue=%23f8e8db&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=Eus5e&originHeight=324&originWidth=946&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u2f8b647e-2ae5-4ba5-a046-b7673c2f670&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/7b084dd3432adedb65e5b13d2c782a78.png)
 3. 第三步
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055419078-8909c7ed-5270-46f8-827f-5beeefd2ec23.png#averageHue=%23faf6f5&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=tDqlT&originHeight=379&originWidth=901&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u4a140e42-0ff2-4a6e-aa1f-afc8a45c5fa&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/6a99822f9e7a3d66e4f400dfb1881901.png)
 当事务4执行第一条修改语句时，也会记录undo log日志，记录数据变更之前的样子; 然后更新记录，并且记录本次操作的事务ID，回滚指针，回滚指针用来指定如果发生回滚，回滚到哪一个版本。
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055419109-db5cf60b-fa2b-4f46-8454-28f870b51e01.png#averageHue=%23f8e6d6&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=DIlBp&originHeight=293&originWidth=912&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=ub844a714-5e6c-4bab-93f0-be78cc9b9b4&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/9476de99bcede77ec3631c31dd497fbe.png)
 
 最终我们发现，不同事务或相同事务对同一条记录进行修改，会导致该记录的undolog生成一条记录版本链表，链表的头部是最新的旧记录，链表尾部是最早的旧记录。
 ## 4.4 readview
@@ -773,37 +781,37 @@ ReadView中包含了四个核心字段：
 RC隔离级别下，在事务中每一次执行快照读时生成ReadView。
 我们就来分析事务5中，两次快照读读取数据，是如何获取数据的?
 在事务5中，查询了两次id为30的记录，由于隔离级别为Read Committed，所以每一次进行快照读都会生成一个ReadView，那么两次生成的ReadView如下。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683793804166-b3247e5f-ae08-48dc-8b44-74ee5d6cafb7.png#averageHue=%23f0f0f0&clientId=uda8b01c9-b14b-4&from=paste&height=327&id=u01660750&originHeight=369&originWidth=1269&originalType=binary&ratio=2&rotation=0&showTitle=false&size=397568&status=done&style=none&taskId=u9cf55d3d-10e0-44d0-b04e-ed16a0ec811&title=&width=1125.5)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/4460d2b3fee048ed6700f19e63992590.png)
 那么这两次快照读在获取数据时，就需要根据所生成的ReadView以及ReadView的版本链访问规则，到undolog版本链中匹配数据，最终决定此次快照读返回的数据。
 
 1. 先来看第一次快照读具体的读取过程：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683794144466-836a0f7c-d5ad-4613-9ae0-201f1fc2dbb1.png#averageHue=%23f4f2ef&clientId=uda8b01c9-b14b-4&from=paste&height=613&id=u27ae3912&originHeight=660&originWidth=1642&originalType=binary&ratio=2&rotation=0&showTitle=false&size=965241&status=done&style=none&taskId=ud917ce3d-0793-4054-b8ac-4f0818adea4&title=&width=1526)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/c140caec0fc35bcb64cf389b7bea4e3f.png)
 在进行匹配时，会从undo log的版本链，从上到下进行挨个匹配：
 
 先匹配
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683794204070-abbff7e6-c5d0-431e-9aae-1b7febcf416c.png#averageHue=%23c7ecc7&clientId=uda8b01c9-b14b-4&from=paste&height=114&id=u8a9401f2&originHeight=72&originWidth=370&originalType=binary&ratio=2&rotation=0&showTitle=false&size=31466&status=done&style=none&taskId=u5bb41849-e0ce-4859-a6e5-1d7e118cb15&title=&width=584)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/08b7496ccc2803998df3a2109e686694.png)
 这条记录，这条记录对应的trx_id为4，也就是将4带入右侧的匹配规则中。 ①不满足 ②不满足 ③不满足 ④也不满足 ，都不满足，则继续匹配undo log版本链的下一条。
 再匹配第二条
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055419622-42cd0608-8a70-4133-b7bc-92c6b631042f.png#averageHue=%23f6dbc3&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&height=57&id=QSx8z&originHeight=57&originWidth=646&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u09e52e90-a30d-481b-90fc-87fb8f3a272&title=&width=646)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/c54b653f37541f4c0e3c28bec51a6dbd.png)
 这条记录对应的trx_id为3，也就是将3带入右侧的匹配规则中。①不满足 ②不满足 ③不满足 ④也不满足 ，都不满足，则继续匹配undo log版本链的下一条
 再匹配第三条
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055419577-80a7e701-9c56-49c4-ade4-17e3a2cd100c.png#averageHue=%23f8e3d1&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&height=67&id=ruG42&originHeight=67&originWidth=637&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u0f3b5708-8a0f-4487-8668-f91ab4bf6dd&title=&width=637)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/3cecdfc22de8e8953402f267dc38161d.png)
 这条记录对应的trx_id为2，也就是将2带入右侧的匹配规则中。①不满足 ②满足 终止匹配，此次快照读，返回的数据就是版本链中记录的这条数据。
 
 2. 再来看第二次快照读具体的读取过程:
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683794577723-df90e2ba-bc67-4067-a856-f9cfb39d46a9.png#averageHue=%23f3f1ef&clientId=uda8b01c9-b14b-4&from=paste&height=611&id=udf81ffe3&originHeight=656&originWidth=1616&originalType=binary&ratio=2&rotation=0&showTitle=false&size=965973&status=done&style=none&taskId=u21e6fcda-d6d3-41f0-a06f-f04077b7867&title=&width=1504)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/4fea621cc080a0ed5be310b0040f5ce5.png)
 在进行匹配时，会从undo log的版本链，从上到下进行挨个匹配：
 先匹配
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055419741-59cfda8c-6e0b-4e26-85fa-f933170ede16.png#averageHue=%23e9e8e6&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=yCa7U&originHeight=133&originWidth=725&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u7561b279-cc82-465c-9e2f-ad7334e542b&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/152b1e53bcf8b3af80b02480f45691c5.png)
 这条记录，这条记录对应的trx_id为4，也就是将4带入右侧的匹配规则中。 ①不满足 ②不满足 ③不满足 ④也不满足 ，都不满足，则继续匹配undo log版本链的下一条。
 再匹配第二条
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055420094-b8804c0a-3acf-40e3-9ff5-c1b004282f6c.png#averageHue=%23f8e1ce&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&height=74&id=OTCqU&originHeight=89&originWidth=858&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u6e21c063-850b-4c87-b984-f874872c8cc&title=&width=717)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/f65eba6400367dddcb9d9eac684b845f.png)
 这条记录对应的trx_id为3，也就是将3带入右侧的匹配规则中。①不满足 ②满足 。终止匹配，此次快照读，返回的数据就是版本链中记录的这条数据。
 ### 4.5.2 RR隔离级别
 RR隔离级别下，仅在事务中第一次执行快照读时生成ReadView，后续复用该ReadView。 而RR 是可重复读，在一个事务中，执行两次相同的select语句，查询到的结果是一样的。
 那MySQL是如何做到可重复读的呢? 我们简单分析一下就知道了
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22334924/1683794976934-c56d5045-0053-4d88-a479-7e6877a85bc9.png#averageHue=%23f0f0ef&clientId=uda8b01c9-b14b-4&from=paste&height=563&id=u6f8bff17&originHeight=333&originWidth=1020&originalType=binary&ratio=2&rotation=0&showTitle=false&size=323038&status=done&style=none&taskId=u641180ce-e1d2-4f05-8f6b-27a1fbe07a6&title=&width=1723)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/da3c93041bacf60c1bfbc4f0f4929bb8.png)
 我们看到，在RR隔离级别下，只是在事务中第一次快照读时生成ReadView，后续都是复用该ReadView，那么既然ReadView都一样， ReadView的版本链匹配规则也一样， 那么最终快照读返回的结果也是一样的。
 所以呢，MVCC的实现原理就是通过 InnoDB表的隐藏字段、UndoLog 版本链、ReadView来实现的。而MVCC + 锁，则实现了事务的隔离性。 而一致性则是由redolog 与 undolog保证。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055420040-372e81e5-1d5b-4e00-ad26-456212f8eb3c.png#averageHue=%23fbf4f3&clientId=u76b53889-a52a-4&errorMessage=unknown%20error&id=OZ0fC&originHeight=493&originWidth=1183&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u23ba0303-1192-41c0-8cfd-28f35a8b57b&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/7eeab8c6b230e5e5e16a170daca10c09.png)

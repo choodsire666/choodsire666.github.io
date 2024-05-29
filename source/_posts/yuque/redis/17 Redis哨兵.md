@@ -1,3 +1,11 @@
+---
+title: 17 Redis哨兵
+urlname: cyhqyu53l5mv8q26
+date: '2024-03-31 11:09:04'
+updated: '2024-03-31 11:10:33'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/8e5b09aae861340ea8404114516e3360.png'
+description: '笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢复。1 搭建哨兵集群具体搭建流程参考另一篇文章：此处为语雀内容卡片，点击链接查看：https://www.yuque....'
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢复。
 ## 1 搭建哨兵集群
@@ -7,7 +15,7 @@ Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢�
 ### 2.1 集群结构和作用
 
 哨兵的结构如图：
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532310889-3e965b05-c2d3-4984-9372-b01a13195bc8.png#averageHue=%23f4ded5&clientId=u64bd80a6-af81-4&errorMessage=unknown%20error&height=488&id=KHon2&originHeight=617&originWidth=820&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u6fbc039f-f4e2-4e12-9d51-310835468e6&title=&width=649)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/8e5b09aae861340ea8404114516e3360.png)
 
 哨兵的作用如下：
 
@@ -20,7 +28,7 @@ Sentinel基于心跳机制监测服务状态，每隔1秒向集群的每个实�
 -  主观下线：如果某sentinel节点发现某实例未在规定时间响应，则认为该实例**主观下线**。 
 -  客观下线：若超过指定数量（quorum）的sentinel都认为该实例主观下线，则该实例**客观下线**。quorum值最好超过Sentinel实例数量的一半。 
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532310895-080dcf8e-1eb5-44bc-9710-05b49d9f0b6e.png#averageHue=%23f3d9ce&clientId=u64bd80a6-af81-4&errorMessage=unknown%20error&id=oGL7j&originHeight=409&originWidth=660&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u19e53e96-64be-46e3-a6a4-ffb4595ff20&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/9517eca15c07e07ad7db6eec9c2274d8.png)
 ### 2.3 集群故障恢复原理
 一旦发现master故障，sentinel需要在salve中选择一个作为新的master，选择依据是这样的：
 
@@ -36,7 +44,7 @@ Sentinel基于心跳机制监测服务状态，每隔1秒向集群的每个实�
 - sentinel给所有其它slave发送slaveof 192.168.150.101 7002 命令，让这些slave成为新master的从节点，开始从新的master上同步数据。
 - 最后，sentinel将故障节点标记为slave，当故障节点恢复后会自动成为新的master的slave节点
 
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532311039-b16ec1f4-d50d-4b89-a481-7d2849995581.png#averageHue=%23f6e9e6&clientId=u64bd80a6-af81-4&errorMessage=unknown%20error&id=gAynJ&originHeight=593&originWidth=838&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u121969da-71b6-4f02-9d9c-9c4638e7f1e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/479b92930f2bc787ddea96af4abb90f1.png)
 
 ### 2.4 小结
 Sentinel的三个作用是什么？
@@ -61,7 +69,7 @@ Sentinel如何判断一个redis实例是否健康？
 ### 3.1 导入Demo工程
 
 首先，我们引入课前资料提供的Demo工程：
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532311157-49bcd9e1-16d0-487b-85de-5e3534a59c3a.png#averageHue=%23fcf8eb&clientId=u64bd80a6-af81-4&errorMessage=unknown%20error&id=G9SYc&originHeight=213&originWidth=196&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u0f8cc5ee-dc40-473e-bcdb-9ac0f724168&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/64c527ed0b1fb7d756c11778821170b8.png)
 
 ### 3.2 引入依赖
 在项目的pom文件中引入依赖：

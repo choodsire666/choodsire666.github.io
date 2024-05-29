@@ -1,7 +1,15 @@
+---
+title: 12 BitMap数据结构的应用
+urlname: gz7clxxy73fyxml0
+date: '2024-03-31 11:08:43'
+updated: '2024-04-06 21:10:56'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/bb973b0ca7a81c2580580248a3eacaeb.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 BitMap功能演示我们针对签到功能完全可以通过mysql来完成，比如说以下这张表用户一次签到，就是一条记录，假如有1000万用户，平均每人每年签到次数为10次，则这张表一年的数据量为...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 BitMap功能演示
 我们针对签到功能完全可以通过mysql来完成，比如说以下这张表
-![1653823145495.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036238029-0a64b7cf-49b8-4416-ade5-7b60433f71da.png#averageHue=%23f9f8f7&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=219&id=u6dc2a7a5&originHeight=269&originWidth=879&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43912&status=error&style=none&taskId=u82baa3a6-e4b2-4f5a-be24-d69e5ff19f9&title=&width=717)
+![1653823145495.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/bb973b0ca7a81c2580580248a3eacaeb.png)
 用户一次签到，就是一条记录，假如有1000万用户，平均每人每年签到次数为10次，则这张表一年的数据量为 1亿条
 每签到一次需要使用（8 + 8 + 1 + 1 + 3 + 1）共22 字节的内存，一个月则最多需要600多字节
 我们如何能够简化一点呢？其实可以考虑小时候一个挺常见的方案，就是小时候，咱们准备一张小小的卡片，你只要签到就打上一个勾，我最后判断你是否签到，其实只需要到小卡片上看一看就知道了
@@ -9,7 +17,7 @@
 我们按月来统计用户签到信息，签到记录为1，未签到则记录为0.
 把每一个bit位对应当月的每一天，形成了映射关系。用0和1标示业务状态，这种思路就称为位图（BitMap）。这样我们就用极小的空间，来实现了大量数据的表示
 Redis中是利用string类型数据结构实现BitMap，因此最大上限是512M，转换为bit则是 2^32个bit位。
-![1653824498278.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036252837-4b0fe4dc-5802-4935-8835-aa7ea6328981.png#averageHue=%23f8f6f6&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u7d3d6f9c&originHeight=267&originWidth=1215&originalType=binary&ratio=1&rotation=0&showTitle=false&size=39901&status=error&style=none&taskId=u553cb428-3487-4caf-a63a-08fb8aa8b7a&title=)
+![1653824498278.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/ee07eb4f44751296b44a721095c86aa5.png)
 BitMap的操作命令有：
 
 - SETBIT：向指定位置（offset）存入一个0或1
@@ -23,7 +31,7 @@ BitMap的操作命令有：
 需求：实现签到接口，将当前用户当天签到信息保存到Redis中
 思路：我们可以把年和月作为bitMap的key，然后保存到一个bitMap中，每次签到就到对应的位上把数字从0变成1，只要对应是1，就表明说明这一天已经签到了，反之则没有签到。
 我们通过接口文档发现，此接口并没有传递任何的参数，没有参数怎么确实是哪一天签到呢？这个很容易，可以通过后台代码直接获取即可，然后到对应的地址上去修改bitMap。
-![1653833970361.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036358172-7d683082-1232-4049-9bff-470c9762f0d0.png#averageHue=%23e9e2e2&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=422&id=u0a8c7ed6&originHeight=590&originWidth=1184&originalType=binary&ratio=1&rotation=0&showTitle=false&size=212089&status=error&style=none&taskId=u2b9e94ff-d2ed-408b-bb65-137325f592a&title=&width=847)
+![1653833970361.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/daf0116ba9bf6665b8429a74b1791f29.png)
 **代码**
 UserController
 ```java
@@ -54,7 +62,7 @@ public Result sign() {
 ## 3 签到统计
 **问题1：**什么叫做连续签到天数？
 从最后一次签到开始向前统计，直到遇到第一次未签到为止，计算总的签到次数，就是连续签到天数。
-![1653834455899.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036416670-5191bc6d-e268-4082-aaa0-db1662376901.png#averageHue=%23fafafa&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u0d9fd422&originHeight=100&originWidth=1028&originalType=binary&ratio=1&rotation=0&showTitle=false&size=14836&status=error&style=none&taskId=ud38de6fc-b3f0-4a2f-89df-e19b9547b2a&title=)
+![1653834455899.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/a5811f844f15b2b97f6dd474c50307a7.png)
 
 Java逻辑代码：获得当前这个月的最后一次签到数据，定义一个计数器，然后不停的向前统计，直到获得第一个非0的数字即可，每得到一个非0的数字计数器+1，直到遍历完所有的数据，就可以获得当前月的签到总天数了
 
@@ -66,7 +74,7 @@ BITFIELD key GET u[dayOfMonth] 0
 注意：bitMap返回的数据是10进制，哪假如说返回一个数字8，那么我哪儿知道到底哪些是0，哪些是1呢？我们只需要让得到的10进制数字和1做与运算就可以了，因为1只有遇见1 才是1，其他数字都是0 ，我们把签到结果和1进行与操作，每与一次，就把签到结果向右移动一位，依次内推，我们就能完成逐个遍历的效果了。
 需求：**实现下面接口，统计当前用户截止当前时间在本月的连续签到天数**
 有用户有时间我们就可以组织出对应的key，此时就能找到这个用户截止这天的所有签到记录，再根据这套算法，就能统计出来他连续签到的次数了
-![1653835784444.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036426187-a4d9670c-d28b-48ec-b8b9-c457985f7f04.png#averageHue=%23cbb4b2&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=235&id=u607436e6&originHeight=279&originWidth=665&originalType=binary&ratio=1&rotation=0&showTitle=false&size=50651&status=error&style=none&taskId=ufec360cd-fac4-4ac0-9ef4-e093a019396&title=&width=561)
+![1653835784444.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/691c6b9a313aa73a15a7c20376e7385f.png)
 代码
 **UserController**
 ```java
@@ -135,10 +143,10 @@ public Result signCount() {
 
 所以我们如何解决呢？
 我们可以将数据库的数据，所对应的id写入到一个list集合中，当用户过来访问的时候，我们直接去判断list中是否包含当前的要查询的数据，如果说用户要查询的id数据并不在list集合中，则直接返回，如果list中包含对应查询的id数据，则说明不是一次缓存穿透数据，则直接放行。
-![1653836416586.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036445554-a732970c-5726-428f-bc0c-7946f4ed45c6.png#averageHue=%23f8f8f8&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=ue16811b0&originHeight=326&originWidth=1285&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44480&status=error&style=none&taskId=u8803c0d8-98c7-42f0-b9d5-2d2f3998023&title=)
+![1653836416586.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/94b140e827ea1af739351bce4e550713.png)
 现在的问题是这个主键其实并没有那么短，而是很长的一个 主键
 哪怕你单独去提取这个主键，但是在11年左右，淘宝的商品总量就已经超过10亿个
 所以如果采用以上方案，这个list也会很大，所以我们可以使用bitmap来减少list的存储空间
 我们可以把list数据抽象成一个非常大的bitmap，我们不再使用list，而是将db中的id数据利用哈希思想，比如：
 id % bitmap.size  = 算出当前这个id对应应该落在bitmap的哪个索引上，然后将这个值从0变成1，然后当用户来查询数据时，此时已经没有了list，让用户用他查询的id去用相同的哈希算法， 算出来当前这个id应当落在bitmap的哪一位，然后判断这一位是0，还是1，如果是0则表明这一位上的数据一定不存在，  采用这种方式来处理，需要重点考虑一个事情，就是误差率，所谓的误差率就是指当发生哈希冲突的时候，产生的误差。
-![1653836578970.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036464138-ccc2d737-1ad1-4d9a-8456-6bdd3715e94d.png#averageHue=%23f8f7f7&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u4fc04c0b&originHeight=549&originWidth=1302&originalType=binary&ratio=1&rotation=0&showTitle=false&size=64897&status=error&style=none&taskId=ua5d49624-f815-4857-8eef-137f76f2d0e&title=)
+![1653836578970.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/fd510299f1f647d274041a110471ed39.png)

@@ -21,7 +21,12 @@ const format = async (doc, imageClient) => {
   if (doc.properties.cover) {
     out.info("封面图片替换成功")
   } else {
-    let res = await request('https://www.dmoe.cc/random.php?return=json')
+    let res = await request('https://www.dmoe.cc/random.php?return=json')    
+    for (let prop in res) {
+      if (this.config.github.hasOwnProperty(prop)) {
+        out.info(`${prop}: ${res[prop]}`)
+      }
+    }
     if (res.code === 200) {
       doc.properties.cover = res.imgurl
     } else {

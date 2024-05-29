@@ -1,3 +1,11 @@
+---
+title: Docker实用篇
+urlname: auf4wvnuz7pk
+date: '2024-03-14 14:57:03'
+updated: '2024-04-04 19:43:57'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/ce2a14677c0bb77438302dbbd2e021e3.png'
+description: Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署...
+---
 # Docker实用篇
 
 # 0.学习目标
@@ -18,7 +26,7 @@
 -  依赖关系复杂，容易出现兼容性问题 
 -  开发、测试、生产环境有差异 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399417614-93dd4d6d-db26-4487-ab7d-19cc0259ac8f.png#averageHue=%23f3b97b&id=O1GOd&originHeight=1176&originWidth=1560&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/ce2a14677c0bb77438302dbbd2e021e3.png)
 
 例如一个项目中，部署时需要依赖于node.js、Redis、RabbitMQ、MySQL等，这些服务部署时所需要的函数库、依赖项各不相同，甚至会有冲突。给部署带来了极大的困难。
 
@@ -31,7 +39,7 @@ Docker为了解决依赖的兼容问题的，采用了两个手段：
 -  将应用的Libs（函数库）、Deps（依赖）、配置与应用一起打包 
 -  将每个应用放到一个隔离**容器**去运行，避免互相干扰 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399417840-635d759d-5c04-49eb-bd9d-e89e3ce24204.png#averageHue=%23f0a476&id=AnQ62&originHeight=1208&originWidth=1688&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/3ee8811114e63e78422f9c348bcc1d8f.png)
 
 这样打包好的应用包中，既包含应用本身，也保护应用所需要的Libs、Deps，无需再操作系统上安装这些，自然就不存在不同应用之间的兼容问题了。
 
@@ -41,7 +49,7 @@ Docker为了解决依赖的兼容问题的，采用了两个手段：
 
 要解决不同操作系统环境差异问题，必须先了解操作系统结构。以一个Ubuntu操作系统为例，结构如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399417948-2be1e51f-7c89-4eb8-8ee4-a7c224e2eead.png#averageHue=%236b563c&id=N4IfV&originHeight=1340&originWidth=2514&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/1b17e1bfb8ccba65a27c788851d05141.png)
 
 结构包括：
 
@@ -59,11 +67,11 @@ Docker为了解决依赖的兼容问题的，采用了两个手段：
 
 Ubuntu和CentOSpringBoot都是基于Linux内核，无非是系统应用不同，提供的函数库有差异：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399418214-d05a1b3c-3726-49c5-a49e-1c3abccca0cf.png#averageHue=%238a6240&id=VSQbC&originHeight=1302&originWidth=3024&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/586cc561fa4e7015a6f0b8390e04ea43.png)
 
 此时，如果将一个Ubuntu版本的MySQL应用安装到CentOS系统，MySQL在调用Ubuntu函数库时，会发现找不到或者不匹配，就会报错了：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399418462-c83845b0-a76b-4ea0-864f-46075fe32ab5.png#averageHue=%2396643f&id=LJRuv&originHeight=1436&originWidth=3020&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/e7919dec523f3a2ab7a89a1b84d5b598.png)
 
 Docker如何解决不同系统环境的问题？
 
@@ -72,7 +80,7 @@ Docker如何解决不同系统环境的问题？
 
 如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399418716-e167ebb6-e558-431a-b930-61d6892f9278.png#averageHue=%23f1eeec&id=gI5gg&originHeight=1314&originWidth=2350&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/b179f6fdc1a8998c7f4a99b33a3600fd.png)
 
 ### 1.1.4.小结
 
@@ -101,11 +109,11 @@ Docker可以让一个应用在任何操作系统中非常方便的运行。而�
 
 **Docker**仅仅是封装函数库，并没有模拟完整的操作系统，如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399418879-1a1242cb-4775-45ae-b632-cec41d095898.png#averageHue=%23e7ce95&id=mZXHR&originHeight=1292&originWidth=2246&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/f518a175bf409c6025a7e1521ee74775.png)
 
 对比来看：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399418980-78b0e26c-7773-419b-932f-74ac95912af5.png#averageHue=%23b9b9b8&id=lHL3D&originHeight=628&originWidth=1442&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/687d61042e3341de197aef9af1363647.png)
 
 小结：
 
@@ -130,7 +138,7 @@ Docker中有几个重要的概念：
 
 **容器**呢，就是将这些文件中编写的程序、函数加载到内存中允许，形成进程，只不过要隔离起来。因此一个镜像可以启动多次，形成多个容器进程。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419083-ee1be544-6a1e-488f-b468-6c70eb76664e.png#averageHue=%23d9dfca&id=JvqxU&originHeight=994&originWidth=1854&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/07df44dfa24d984d898d11c6bf54e136.png)
 
 例如你下载了一个QQ，如果我们将QQ在磁盘上的运行**文件**及其运行的操作系统依赖打包，形成QQ镜像。然后你可以启动多次，双开、甚至三开QQ，跟多个妹子聊天。
 
@@ -143,7 +151,7 @@ Docker中有几个重要的概念：
 
 我们一方面可以将自己的镜像共享到DockerHub，另一方面也可以从DockerHub拉取镜像：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419192-8b75061e-be92-4b2c-b8b1-1e0967d1f4c8.png#averageHue=%23fcf9f9&id=Vokfh&originHeight=1184&originWidth=2764&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/52297cefbd906b8478657b5a2f7ff02d.png)
 
 ### 1.3.3.Docker架构
 
@@ -156,7 +164,7 @@ Docker是一个CS架构的程序，由两部分组成：
 
 如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419292-7286be03-84ad-4aa3-96e4-e0d980fb1296.png#averageHue=%23d69845&id=sl5bL&originHeight=1070&originWidth=2634&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/050eae9985504d6c693d2214c5d6f474.png)
 
 ### 1.3.4.小结
 
@@ -181,7 +189,7 @@ DockerHub：
 
 企业部署一般都是采用Linux操作系统，而其中又数CentOS发行版占比最多，因此我们在CentOS下安装Docker。参考课前资料中的文档：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419397-0801fef4-756a-48c4-af33-5f786ee09d9c.png#averageHue=%23f9f9f8&id=FlxTL&originHeight=366&originWidth=1068&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/22d222d1a4893eb05a2096ad539c54eb.png)
 
 # 2.Docker的基本操作
 
@@ -196,7 +204,7 @@ DockerHub：
 
 如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419493-d424ae3f-b3d3-492a-abd3-1000ec23d9d6.png#averageHue=%23fbf9f8&id=JYpu7&originHeight=442&originWidth=1764&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/605d6bda481266e081e064d4f485fafa.png)
 
 这里的mysql就是repository，5.7就是tag，合一起就是镜像名称，代表5.7版本的MySQL镜像。
 
@@ -204,7 +212,7 @@ DockerHub：
 
 常见的镜像操作命令如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419630-d4e2c7fd-fd9e-413b-b0d6-d5e4573b67b0.png#averageHue=%23f9f6f4&id=FhxHc&originHeight=1428&originWidth=2786&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/4e4898d49e9c56d5e5294ff47d02d99c.png)
 
 ### 2.1.3.案例1-拉取、查看镜像
 
@@ -212,15 +220,15 @@ DockerHub：
 
 1）首先去镜像仓库搜索nginx镜像，比如[DockerHub](https://hub.docker.com/):
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419738-34fcd756-6475-468c-be67-23d958e016bf.png#averageHue=%23e6ebeb&id=Wbfxw&originHeight=222&originWidth=768&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/f2f2056d1e71300a2375020edb784f58.png)
 
 2）根据查看到的镜像名称，拉取自己需要的镜像，通过命令：docker pull nginx
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419829-0ad2b403-53f8-48b3-9a4f-3d48841a75fb.png#averageHue=%235f5957&id=Tn3Xh&originHeight=216&originWidth=864&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/55724f5dc21a5f6dc8037bf5de0d4059.png)
 
 3）通过命令：docker images 查看拉取到的镜像
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399419930-c21fc153-2941-40d2-902f-3061b6a34947.png#averageHue=%23b3c5cf&id=iWaRM&originHeight=146&originWidth=1146&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/a9ab390dbcbc4ecc183d59150d00d10c.png)
 
 ### 2.1.4.案例2-保存、导入镜像
 
@@ -236,7 +244,7 @@ docker save --help
 
 结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420028-4f43880b-f1ec-43e6-8eeb-843dd9328dda.png#averageHue=%23414141&id=dTPdH&originHeight=446&originWidth=1454&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/a6e42cce2368e39e96e201105496706e.png)
 
 命令格式：
 
@@ -254,7 +262,7 @@ docker save -o nginx.tar nginx:latest
 
 结果如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420110-e4ced9a9-e0dd-47ab-9286-04977d42a1a4.png#averageHue=%23464646&id=cOj9M&originHeight=420&originWidth=1754&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/c85e5a6bb544152225690141263931e6.png)
 
 3）使用docker load加载镜像
 
@@ -272,7 +280,7 @@ docker load -i nginx.tar
 
 结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420214-bab1b11f-b508-48f8-8fe5-397fb7f636c4.png#averageHue=%233b3a3a&id=r8S3h&originHeight=846&originWidth=1972&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/e16238f5efbc9bf7de8351e6a964f7e0.png)
 
 ### 2.1.5.练习
 
@@ -298,7 +306,7 @@ docker load -i nginx.tar
 
 容器操作的命令如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420337-06601f99-ed1a-4c74-8187-86aec30e7667.png#averageHue=%236e662a&id=FLu1m&originHeight=1272&originWidth=2590&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/64be0d39fc8902ebf95d6bc58b430ce3.png)
 
 容器保护三个状态：
 
@@ -337,7 +345,7 @@ docker run --name containerName -p 80:80 -d nginx
 
 现在，将容器的80与宿主机的80关联起来，当我们访问宿主机的80端口时，就会被映射到容器的80，这样就能访问到nginx了：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420441-833a5d60-e735-4b2e-b698-139575d5a5f0.png#averageHue=%23dbdbda&id=LlKG2&originHeight=1100&originWidth=2120&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/987806e42b3f19822770ac6613af40dc.png)
 
 ### 2.2.3.案例-进入容器，修改文件
 
@@ -364,7 +372,7 @@ docker exec -it mn bash
 
 容器内部会模拟一个独立的Linux文件系统，看起来如同一个linux服务器一样：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420538-52e1e3d1-2508-49f8-9d45-59e19b13364d.png#averageHue=%23565555&id=odyd9&originHeight=294&originWidth=1622&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/9c550f274ef7125c9a773862772b3882.png)
 
 nginx的环境、配置、运行文件全部都在这个文件系统中，包括我们要修改的html文件。
 
@@ -378,7 +386,7 @@ cd /usr/share/nginx/html
 
 查看目录下文件：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420666-ed94a10c-529d-4038-9b12-45f3a1aada9b.png#averageHue=%23656565&id=RbkMq&originHeight=226&originWidth=1346&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/33dedb9a30f0ba67a521d764bb6897f9.png)
 
 3）修改index.html的内容
 
@@ -390,7 +398,7 @@ sed -i -e 's#Welcome to nginx#传智教育欢迎您#g' -e 's#<head>#<head><meta 
 
 在浏览器访问自己的虚拟机地址，例如我的是：http://192.168.150.101，即可看到结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420766-d4395c02-7d41-48fa-8295-c176d7a1c584.png#averageHue=%23f4f4f4&id=jjXdE&originHeight=716&originWidth=1860&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/e04ed11d8aa9a3efbc310fa3b852e8b1.png)
 
 ### 2.2.4.小结
 
@@ -416,7 +424,7 @@ docker run命令的常见参数有哪些？
 
 这就是因为容器与数据（容器内文件）耦合带来的后果。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420857-bff55c7b-ee42-4377-a3a6-698d5cdee25b.png#averageHue=%23f6f6f6&id=y4RLW&originHeight=912&originWidth=2598&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/4fad60a70e3c726154e950bd88bde6c4.png)
 
 要解决这个问题，必须将数据与容器解耦，这就要用到数据卷了。
 
@@ -424,7 +432,7 @@ docker run命令的常见参数有哪些？
 
 **数据卷（volume）**是一个虚拟目录，指向宿主机文件系统中的某个目录。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399420980-b26867cf-4249-496c-81e0-406b4851b7f1.png#averageHue=%23fbc49a&id=C579A&originHeight=952&originWidth=1964&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/2958789dd6b6965d28edc4c76cc6dd20.png)
 
 一旦完成数据卷挂载，对容器的一切操作都会作用在数据卷对应的宿主机目录了。
 
@@ -464,7 +472,7 @@ docker volume ls
 
 结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421078-f35c2bd1-7825-41aa-ace1-d1b9ab1af7f5.png#averageHue=%232e2e32&id=ndA3n&originHeight=124&originWidth=1092&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/3d72f9e0a5def6f1a9fa701b67865a3a.png)
 
 ③ 查看数据卷详细信息卷
 
@@ -474,7 +482,7 @@ docker volume inspect html
 
 结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421185-ce63ad8a-cfc9-4009-96bb-99fabb847cd0.png#averageHue=%232e2e31&id=d6fMS&originHeight=242&originWidth=666&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/d4cbe032f0f098da0aa0a0e987e4758c.png)
 
 可以看到，我们创建的html这个数据卷关联的宿主机目录为`/var/lib/docker/volumes/html/_data`目录。
 
@@ -544,7 +552,7 @@ vi index.html
 
 如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421307-12c18f57-a289-4ee6-bcd1-63845ac27f9e.png#averageHue=%23faf8f7&id=HVY1y&originHeight=912&originWidth=1872&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/d293f65168705da3b4e7557cdc317ad3.png)
 
 **语法**：
 
@@ -596,7 +604,7 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 我们以MySQL为例，来看看镜像的组成结构：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421447-f73951c4-b913-46e5-a92b-715cfb3938d4.png#averageHue=%23cabfaf&id=LMn9R&originHeight=1674&originWidth=2956&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/636a9a98e1e2a1751236786bd39e5961.png)
 
 简单来说，镜像就是在系统函数库、运行环境基础上，添加应用程序文件、配置文件、依赖文件等组合，然后编写好启动脚本打包在一起形成的文件。
 
@@ -612,7 +620,7 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 **Dockerfile**就是一个文本文件，其中包含一个个的**指令(Instruction)**，用指令来说明要执行什么操作来构建镜像。每一个指令都会形成一层Layer。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421574-901d4d0d-f94a-411f-8d3e-f07ac7d42e40.png#averageHue=%23cbcbcb&id=lfUh5&originHeight=1030&originWidth=2616&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/93644299b63c85f24946eb4cde9bb345.png)
 
 更新详细语法说明，请参考官网文档： [https://docs.docker.com/engine/reference/builder](https://docs.docker.com/engine/reference/builder)
 
@@ -623,13 +631,13 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 需求：基于Ubuntu镜像构建一个新镜像，运行一个java项目
 
 -  步骤1：新建一个空文件夹docker-demo
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421674-4868976d-757a-4c75-8abd-bd8f1328690d.png#averageHue=%23fafafa&id=x5ZQE&originHeight=338&originWidth=862&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/a025237cdb23ef4f61ca92b566cb6f10.png) 
 -  步骤2：拷贝课前资料中的docker-demo.jar文件到docker-demo这个目录
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421771-1db0d05b-22b6-4daf-b585-f0743e9a4e20.png#averageHue=%23f9f8f8&id=dk44c&originHeight=338&originWidth=848&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/15170b6e1c926663cc130a2cb2818f37.png) 
 -  步骤3：拷贝课前资料中的jdk8.tar.gz文件到docker-demo这个目录
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421872-efd3fb0b-19cc-4750-8e0d-78a05e8574be.png#averageHue=%23f6f5f5&id=D1Z68&originHeight=218&originWidth=852&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/5e8342705efb73b75ba5d76577475168.png) 
 -  步骤4：拷贝课前资料提供的Dockerfile到docker-demo这个目录
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399421965-028aceee-dc1b-498b-a248-b66816fe99e0.png#averageHue=%23f5f4f4&id=Ue3M4&originHeight=222&originWidth=842&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/d985e86b392edb8fccaecaf4591fb077.png)
 其中的内容如下： 
 ```dockerfile
 # 指定基础镜像
@@ -708,7 +716,7 @@ ENTRYPOINT java -jar /tmp/app.jar
 
 Docker Compose可以基于Compose文件帮我们快速的部署分布式应用，而无需手动一个个创建和运行容器！
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422059-7e79c4e5-0e85-4e82-9a8f-8d9fc4a7f757.png#averageHue=%2320201d&id=CBzYy&originHeight=492&originWidth=450&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/f042eebd38a99d50d657d7b8f2d06bc7.png)
 
 ## 4.1.初识DockerCompose
 
@@ -763,7 +771,7 @@ DockerCompose的详细语法参考官网：[https://docs.docker.com/compose/comp
 
 查看课前资料提供的cloud-demo文件夹，里面已经编写好了docker-compose文件，而且每个微服务都准备了一个独立的目录：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422168-303d1f89-bcf5-4eb1-8f1d-20058aea3de4.png#averageHue=%23e8e7e6&id=fgMWi&originHeight=292&originWidth=694&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/bacecd59675ac313915740529c6c329b.png)
 
 内容如下：
 
@@ -810,11 +818,11 @@ services:
 
 查看mysql目录，可以看到其中已经准备好了cloud_order、cloud_user表：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422272-2d18b815-9123-4870-b948-3be48194e297.png#averageHue=%23f7f7f7&id=ZObug&originHeight=486&originWidth=1284&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/6d8058713152ae5181901cdc9dd045ba.png)
 
 查看微服务目录，可以看到都包含Dockerfile文件：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422377-5e0c31c6-a0e4-4f65-aa31-b581b388fe60.png#averageHue=%23f8f7f7&id=IXrDC&originHeight=332&originWidth=866&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/94516ba65bad44eda173916f49f9bb83.png)
 
 内容如下：
 
@@ -865,7 +873,7 @@ spring:
 
 打包后：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422486-36a563a9-19a0-438f-b164-b191585a4999.png#averageHue=%23f8f7e9&id=GODtN&originHeight=812&originWidth=896&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/e89dfe5a021dfb99dd97aa62378f299e.png)
 
 ### 4.3.4.拷贝jar包到部署目录
 
@@ -873,15 +881,15 @@ spring:
 
 user-service：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422594-b036517f-115d-4f9e-b31b-f289011ab5c8.png#averageHue=%23f7f7f7&id=zwYm5&originHeight=322&originWidth=870&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/19313e91a9a4e9662931f54ef6a1cd59.png)
 
 order-service：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422708-027c4c4d-6ccd-4d47-b67f-aa39a0825d1d.png#averageHue=%23f8f7f7&id=Rml21&originHeight=312&originWidth=854&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/2fccb0571d762e6d7f3a51616c5485da.png)
 
 gateway：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422795-9fe2a9ef-749f-43e1-938e-4da24ace0895.png#averageHue=%23f7f7f7&id=ThH4a&originHeight=312&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/f684ba91df7efef43852a2e6b085f486.png)
 
 ### 4.3.5.部署
 
@@ -889,7 +897,7 @@ gateway：
 
 上传到任意目录：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1710399422893-8ea16d60-5744-4549-938a-fec76d2569bc.png#averageHue=%23e1e1e0&id=S1Sa8&originHeight=386&originWidth=896&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/2167875adfa4b89ec96443f4aa8dd2ec.png)
 
 部署：
 

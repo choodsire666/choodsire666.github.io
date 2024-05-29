@@ -1,3 +1,11 @@
+---
+title: 13 HyperLog数据结构的应用
+urlname: gphkccpkqwg43dvx
+date: '2024-03-31 11:08:54'
+updated: '2024-03-31 11:09:44'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/13 HyperLog数据结构的应用/e36c21a9ee47864685772785a09b0eef.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 HyperLogLog
 首先我们搞懂两个概念：
@@ -10,7 +18,7 @@ UV统计在服务端做会比较麻烦，因为要判断该用户是否已经统
 Hyperloglog（HLL）是从Loglog算法派生的概率算法，用于确定非常大的集合的基数，而不需要存储其所有值。
 相关算法原理大家可以参考：[https://juejin.cn/post/6844903785744056333#heading-0](https://juejin.cn/post/6844903785744056333#heading-0)
 Redis中的HLL是基于string结构实现的，单个HLL的内存**永远小于16kb**，**内存占用低**的令人发指！作为代价，其测量结果是概率性的，**有小于0.81％的误差**。不过对于UV统计来说，这完全可以忽略。
-![1653837988985.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665036498331-c14ba67d-9940-4595-a3ff-5592b9832288.png#averageHue=%23021e31&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=297&id=u85981388&originHeight=401&originWidth=1153&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43975&status=error&style=none&taskId=u2f204620-76c7-4803-8852-ae591633a7f&title=&width=855)
+![1653837988985.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/13 HyperLog数据结构的应用/e36c21a9ee47864685772785a09b0eef.png)
 ## 2 测试百万数据的统计
 测试思路：我们直接利用单元测试，向HyperLogLog中添加100万条数据，看看内存占用和统计效果如何
 ```java

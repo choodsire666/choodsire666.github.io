@@ -1,3 +1,11 @@
+---
+title: 04 SQL-DQL
+urlname: og2o5x2o4boh22m1
+date: '2024-03-13 17:29:47'
+updated: '2024-04-14 16:33:47'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/04%20SQL-DQL/faee2a0047ce32468bc3a3cf64ae172c.png'
+description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DQL英文全称是Data Query Language(数据查询语言)，数据查询语言，用来查询数据库中表的记录。查询关键字: SELECT在一个正常的业务系统中，查询操作的频次是要远高于...'
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 # 前言
@@ -312,7 +320,7 @@ select * from emp where gender = '男' and age between 20 and 40 order by age as
 
 # 8 执行顺序
 在讲解DQL语句的具体语法之前，我们已经讲解了DQL语句的完整语法，及编写顺序，接下来，我们要来说明的是DQL语句在执行时的执行顺序，也就是先执行那一部分，后执行那一部分。
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711712107435-44742953-a9f3-4db4-a4d9-fae481d125cf.png#averageHue=%23fcf8e6&clientId=u781d5893-6023-4&height=437&id=UYQmq&originHeight=582&originWidth=1313&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3f7be3fb-495d-466a-a2ff-a5a829f58c6&title=&width=987)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/04%20SQL-DQL/74fd626aed339a07ea14fa787a338f25.png)
 验证：查询年龄大于15的员工姓名、年龄，并根据年龄进行升序排序。
 ```plsql
 select name , age from emp where age > 15 order by age asc;
@@ -328,7 +336,7 @@ select e.name , e.age from emp e where e.age > 15 order by age asc;
 select e.name ename , e.age eage from emp e where eage > 15 order by age asc;
 ```
 执行上述SQL报错了:
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711712107484-b9497fc1-35b9-4671-9dab-6665f85b64f3.png#averageHue=%23fbf7f7&clientId=u781d5893-6023-4&height=242&id=TRfxT&originHeight=288&originWidth=1300&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u61f8c3ed-86b3-40c2-b4c2-af205da5168&title=&width=1093)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/04%20SQL-DQL/e90a4b3f8a51ff49d5f2ea2ee99f82cd.png)
 由此我们可以得出结论: from 先执行，然后执行 where ， 再执行select 。
 接下来，我们再执行如下SQL语句，查看执行效果：
 ```plsql

@@ -1,3 +1,11 @@
+---
+title: 05 Redis做缓存数据库
+urlname: tk35clgh7trg
+date: '2024-03-14 12:28:29'
+updated: '2024-04-06 16:14:59'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/56cc253671ac3e39552a4900c9c0f286.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 什么是缓存?前言：什么是缓存?就像自行车。越野车的避震器举个例子：越野车，山地自行车，都拥有"避震器"，防止车体加速后因惯性，在酷似"U"字母的地形上飞跃，硬着陆导致的损害，像个弹簧一...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 什么是缓存?
 前言：什么是缓存?
@@ -21,7 +29,7 @@ Static final Map<K,V> map =  new HashMap(); //本地缓存
 缓存数据存储于代码中，而代码运行在内存中，内存的读写性能远高于磁盘，缓存可以大大降低用户访问并发量带来的服务器读写压力
 实际开发过程中，企业的数据量，少则几十万，多则几千万，这么大数据量，如果没有缓存来作为"避震器"，系统是几乎撑不住的，所以企业会大量运用到缓存技术;
 但是缓存也会增加代码复杂度和运营的成本：
-![image-20220523214414123.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665031853891-93ff0ca5-4c67-4cdb-ae82-2a861a9f2ce3.png#averageHue=%23f2e7e7&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=442&id=u36bbac15&originHeight=518&originWidth=1341&originalType=binary&ratio=1&rotation=0&showTitle=false&size=224688&status=error&style=none&taskId=u0815804d-304a-42ba-b517-4e5c50db89f&title=&width=1143)
+![image-20220523214414123.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/56cc253671ac3e39552a4900c9c0f286.png)
 ### 1.2 如何使用缓存
 实际开发中，会构筑多级缓存来使系统运行速度进一步提升，例如：本地缓存与redis中的缓存并发使用
 
@@ -30,7 +38,7 @@ Static final Map<K,V> map =  new HashMap(); //本地缓存
 - 数据库缓存：在数据库中有一片空间是 buffer pool，增改查数据都会先加载到mysql的缓存中
 - CPU缓存：当代计算机最大的问题是 cpu性能提升了，但内存读写速度没有跟上，所以为了适应当下的情况，增加了cpu的L1，L2，L3级的缓存
 
-![image-20220523212915666.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665031876923-d98dc878-c9ae-4415-a3a6-b55ac56c41ee.png#averageHue=%23fcfcfc&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u520571ba&originHeight=545&originWidth=1349&originalType=binary&ratio=1&rotation=0&showTitle=false&size=80393&status=error&style=none&taskId=ubf353356-fa1e-40a6-b981-e2fa242fddf&title=)
+![image-20220523212915666.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/2981babc56cfdbdd100fcbb03edd1195.png)
 ## 2 添加商户缓存
 在我们查询商户信息时，我们是直接操作从数据库中去进行查询的，大致逻辑是这样，直接查询数据库那肯定慢咯，所以我们需要增加缓存
 ```java
@@ -42,7 +50,7 @@ public Result queryShopById(@PathVariable("id") Long id) {
 ```
 ### 2.1 缓存模型和思路
 标准的操作方式就是查询数据库之前先查询缓存，如果缓存数据存在，则直接从缓存中返回，如果缓存数据不存在，再查询数据库，然后将数据存入redis。
-![1653322097736.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665031917967-2cc3cdff-9e9c-4c39-92fc-3f0a6c9ad6f5.png#averageHue=%23f0efef&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=495&id=u6b1bcace&originHeight=768&originWidth=1514&originalType=binary&ratio=1&rotation=0&showTitle=false&size=234366&status=error&style=none&taskId=uef57bb2f-8713-4bd3-931c-db2f6196e93&title=&width=975)
+![1653322097736.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/9cff4c4bee21ab6443bb70ee0075dbfa.png)
 代码如下
 如果缓存有，则直接返回，如果缓存不存在，则查询数据库，然后存入redis。
 ```java
@@ -76,7 +84,7 @@ public Result queryById(Long id) {
 - **超时剔除**：当我们给redis设置了过期时间ttl之后，redis会将超时的数据进行删除，方便咱们继续使用缓存
 - **主动更新**：我们可以手动调用方法把缓存删掉，通常用于解决缓存和数据库不一致问题
 
-![1653322506393.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032448986-2f6e0037-86cf-468b-bc19-69b913e37355.png#averageHue=%23e4d6d5&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=495&id=u2b9b9744&originHeight=729&originWidth=1564&originalType=binary&ratio=1&rotation=0&showTitle=false&size=258807&status=error&style=none&taskId=ue02df292-96cf-4847-9019-772e2c7a583&title=&width=1062)
+![1653322506393.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/e6c493a06d0f88f84d2d1fe85792f27d.png)
 **数据库和缓存不一致解决方案**
 由于我们的缓存的数据源来自于数据库,而数据库的数据是会发生变化的,因此,如果当数据库中数据发生变化,而缓存却没有同步,此时就会有一致性问题存在,其后果是：
 用户使用缓存中的过时数据，就会产生类似多线程数据安全问题，从而影响业务，产品口碑等；怎么解决呢？有如下几种方案
@@ -85,7 +93,7 @@ public Result queryById(Long id) {
 - Read/Write Through Pattern : 由系统本身完成，数据库与缓存的问题交由系统本身去处理
 - Write Behind Caching Pattern ：调用者只操作缓存，其他线程去异步处理数据库，实现最终一致
 
-![1653322857620.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032467135-45fdf493-921e-4ea7-a60a-005a0a8bb021.png#averageHue=%23f0efef&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=415&id=u8d498dfb&originHeight=550&originWidth=1547&originalType=binary&ratio=1&rotation=0&showTitle=false&size=155948&status=error&style=none&taskId=u1ff047f3-15d9-4623-9ad3-c4a922a30e3&title=&width=1167)
+![1653322857620.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/d51e5cf2e249350412394af82328c9f0.png)
 **数据库和缓存不一致采用什么方案？**
 综合考虑使用方案一，但是方案一调用者如何处理呢？这里有几个问题
 操作缓存和数据库时有三个问题需要考虑：
@@ -102,7 +110,7 @@ public Result queryById(Long id) {
       - 先删除缓存，再操作数据库
       - 先操作数据库，再删除缓存
 
-![1653323595206.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032483643-0051206a-e3aa-40ab-a2bd-36fb753e8d57.png#averageHue=%23f3f2f2&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=737&id=ua916f1aa&originHeight=804&originWidth=1466&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233250&status=error&style=none&taskId=ue4ee46c7-6332-4bac-8207-92a79859dcb&title=&width=1344)
+![1653323595206.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/d95038835df43b4a4c830324af6c5369.png)
 ### 3.1 实现缓存与数据库双写一致
 核心思路如下：
 修改ShopController中的业务逻辑，满足下面的需求：
@@ -174,7 +182,7 @@ public Result update(Shop shop) {
 
 假设布隆过滤器判断这个数据不存在，则直接返回
 这种方式优点在于节约内存空间，存在误判，误判原因在于：布隆过滤器走的是哈希思想，只要哈希思想，就可能存在哈希冲突
-![1653326156516.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032562758-5cd362a8-7f6d-4570-855d-8759db362d9e.png#averageHue=%23f8f7f6&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u5fba0821&originHeight=569&originWidth=1012&originalType=binary&ratio=1&rotation=0&showTitle=false&size=136034&status=error&style=none&taskId=ubd0f44d9-c618-4df0-b02f-698546d5ee2&title=)
+![1653326156516.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/73edf5030438f8e9b985f7ff823ba8f3.png)
 ### 4.1 编码解决缓存穿透问题
 核心思路如下：
 在原来的逻辑中：我们如果发现这个数据在mysql中不存在，直接就返回404了，这样是会存在缓存穿透问题的
@@ -233,7 +241,7 @@ public Result queryById(Long id) {
     return Result.ok(shop);
 }
 ```
-![1653327124561.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032586081-fe74e509-9f6b-41cf-a4f6-61b43f57ca68.png#averageHue=%23eeebeb&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u230dcc94&originHeight=682&originWidth=1570&originalType=binary&ratio=1&rotation=0&showTitle=false&size=321242&status=error&style=none&taskId=u6d81c976-99b9-48d8-9618-1adf867d283&title=)
+![1653327124561.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/59ee760ce2e65aae16ca0d0f56dad2e3.png)
 总结：
 缓存穿透产生的原因是什么？
 
@@ -256,7 +264,7 @@ public Result queryById(Long id) {
 - 给缓存业务添加降级限流策略
 - 给业务添加多级缓存
 
-![1653327884526.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032610906-adb3d828-af64-4f9f-8eb4-609e017998ce.png#averageHue=%23f3eeee&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=474&id=uc3714a77&originHeight=560&originWidth=1030&originalType=binary&ratio=1&rotation=0&showTitle=false&size=121270&status=error&style=none&taskId=u5f7dd92b-cb9e-484d-82b0-467b8d3ae42&title=&width=872)
+![1653327884526.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/95ce92f3db5628ebfa931ff3765ca4f9.png)
 
 ## 6 缓存击穿问题及解决思路
 **缓存击穿**问题也叫热点Key问题，就是一个被高并发访问并且缓存重建业务较复杂的key突然失效了，无数的请求访问会在瞬间给数据库带来巨大的冲击。
@@ -267,26 +275,26 @@ public Result queryById(Long id) {
 
 **逻辑分析**
 假设线程1在查询缓存之后，本来应该去查询数据库，然后把这个数据重新加载到缓存的，此时只要线程1走完这个逻辑，其他线程就都能从缓存中加载这些数据了，但是假设在线程1没有走完的时候，后续的线程2，线程3，线程4同时过来访问当前这个方法， 那么这些线程都不能从缓存中查询到数据，那么他们就会同一时刻来访问查询缓存，都没查到，接着同一时间去访问数据库，同时的去执行数据库代码，对数据库访问压力过大
-![1653328022622.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032634378-7dbbdaeb-74d3-4163-8b5d-f2b9858cfa74.png#averageHue=%23ecebea&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u0c7d1226&originHeight=600&originWidth=1008&originalType=binary&ratio=1&rotation=0&showTitle=false&size=158612&status=error&style=none&taskId=u28ee6d61-f55d-496e-97bc-afa99d22bf4&title=)
+![1653328022622.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/9aba4d1fbf6265cc1308a821f70b63c9.png)
 
 **解决方案1：使用互斥锁来解决**
 因为锁能实现互斥性。假设线程过来，只能一个人一个人的来访问数据库，从而避免对于数据库访问压力过大，但这也会影响查询的性能，因为此时会让查询的性能从并行变成了串行，我们可以采用tryLock方法 + double check来解决这样的问题。
 假设现在线程1过来访问，他查询缓存没有命中，但是此时他获得到了锁的资源，那么线程1就会一个人去执行逻辑，假设现在线程2过来，线程2在执行过程中，并没有获得到锁，那么线程2就可以进行到休眠，直到线程1把锁释放后，线程2获得到锁，然后再来执行逻辑，此时就能够从缓存中拿到数据了。
-![1653328288627.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032652921-deda093b-65c2-4e6f-97fd-11c4c557eb74.png#averageHue=%23ecebea&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u3de1ead1&originHeight=723&originWidth=569&originalType=binary&ratio=1&rotation=0&showTitle=false&size=144794&status=error&style=none&taskId=ubf61d3bb-2ffe-44e8-b9ef-0d21d5af44c&title=)
+![1653328288627.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/56b0ea6f82b41f6d725fea9abc636060.png)
 
 **解决方案2：逻辑过期方案**
 **方案分析**：我们之所以会出现这个缓存击穿问题，主要原因是在于我们对key设置了过期时间，假设我们不设置过期时间，其实就不会有缓存击穿的问题，但是不设置过期时间，这样数据不就一直占用我们内存了吗，我们可以采用逻辑过期方案。
 我们把过期时间设置在 redis的value中，注意：这个过期时间并不会直接作用于redis，而是我们后续通过逻辑去处理。假设线程1去查询缓存，然后从value中判断出来当前的数据已经过期了，此时线程1去获得互斥锁，那么其他线程会进行阻塞，获得了锁的线程他会开启一个 线程去进行 以前的重构数据的逻辑，直到新开的线程完成这个逻辑后，才释放锁， 而线程1直接进行返回，假设现在线程3过来访问，由于线程线程2持有着锁，所以线程3无法获得锁，线程3也直接返回数据，只有等到新开的线程2把重建数据构建完后，其他线程才能走返回正确的数据。
 这种方案巧妙在于，异步的构建缓存，缺点在于在构建完缓存之前，返回的都是脏数据。
-![1653328663897.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032671762-a2f88216-7c2f-49f2-9212-3773cf71dae7.png#averageHue=%23e9e4e3&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=uf9410970&originHeight=817&originWidth=943&originalType=binary&ratio=1&rotation=0&showTitle=false&size=248665&status=error&style=none&taskId=uc8e8e684-c524-436e-a0d3-9879fbb9b3c&title=)
+![1653328663897.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/dcf4034cb315c77d756e8f278248cff6.png)
 **两者比对**
 互斥锁方案：由于保证了互斥性，所以数据一致，且实现简单，因为仅仅只需要加一把锁而已，也没其他的事情需要操心，所以没有额外的内存消耗，缺点在于有锁就有死锁问题的发生，且只能串行执行性能肯定受到影响
 逻辑过期方案： 线程读取过程中不需要等待，性能好，有一个额外的线程持有锁去进行重构数据，但是在重构数据完成前，其他的线程只能返回之前的数据，且实现起来麻烦
-![1653357522914.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032686477-e2eb4c7b-204a-4548-9072-a38330bef1e4.png#averageHue=%23e3c8c6&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u38abfb90&originHeight=425&originWidth=1044&originalType=binary&ratio=1&rotation=0&showTitle=false&size=48877&status=error&style=none&taskId=u17918799-9ff5-4cd4-9755-49edd35cb86&title=)
+![1653357522914.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/9cbd8aefe9b8154b830c0acd07d7e59f.png)
 ### 6.1 利用互斥锁解决缓存击穿问题
 核心思路：相较于原来从缓存中查询不到数据后直接查询数据库而言，现在的方案是 进行查询之后，如果从缓存没有查询到数据，则进行互斥锁的获取，获取互斥锁后，判断是否获得到了锁，如果没有获得到，则休眠，过一会再进行尝试，直到获取到锁为止，才能进行查询
 如果获取到了锁的线程，再去进行查询，查询后将数据写入redis，再释放锁，返回数据，利用互斥锁就能保证只有一个线程去执行操作数据库的逻辑，防止缓存击穿
-![1653357860001.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032701030-e3b762bf-6d52-43ff-9084-79d9c8d04807.png#averageHue=%23f7f2f2&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u9b6908b5&originHeight=735&originWidth=1068&originalType=binary&ratio=1&rotation=0&showTitle=false&size=78129&status=error&style=none&taskId=u9d09af6b-973a-4ee6-92a6-1d81d329f23&title=)
+![1653357860001.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/2684adf9d2457f986c4292089a07dc6c.png)
 
 操作锁的代码：
 核心思路就是利用redis的setnx方法来表示获取锁，该方法含义是redis中如果没有这个key，则插入成功，返回1，在stringRedisTemplate中返回true，  如果有这个key则插入失败，则返回0，在stringRedisTemplate返回false，我们可以通过true，或者是false，来表示是否有线程成功插入key，成功插入的key的线程我们认为他就是获得到锁的线程。
@@ -354,7 +362,7 @@ private void unlock(String key) {
 ### 6.2 利用逻辑过期解决缓存击穿问题
 需求：修改根据id查询商铺的业务，基于逻辑过期方式来解决缓存击穿问题
 思路分析：当用户开始查询redis时，判断是否命中，如果没有命中则直接返回空数据，不查询数据库，而一旦命中后，将value取出，判断value中的过期时间是否满足，如果没有过期，则直接返回redis中的数据，如果过期，则在开启独立线程后直接返回之前的数据，独立线程去重构数据，重构完成后释放互斥锁。
-![1653360308731.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665032733214-c4e6abc3-80b2-492c-a565-73bd44559d13.png#averageHue=%23f8f3f3&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=ua20a6d07&originHeight=617&originWidth=1179&originalType=binary&ratio=1&rotation=0&showTitle=false&size=215482&status=error&style=none&taskId=u15aa37b0-4f68-43d5-91ae-3145b7908ba&title=)
+![1653360308731.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/360ca347d301f7763d6d2b2a7963e3ab.png)
 如果封装数据：因为现在redis中存储的数据的value需要带上过期时间，此时要么你去修改原来的实体类，要么你
 
 

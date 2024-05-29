@@ -1,3 +1,11 @@
+---
+title: Kubernetes
+urlname: nq8yeuc58t3h09zh
+date: '2024-04-04 14:20:57'
+updated: '2024-04-05 16:15:34'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/ef0ad2457a4ed077fd9eaf6010da6806.png'
+description: Kubernetes介绍1.1 应用方式部署改变在部署应用程序的方式上，主要经历了3个时代传统部署：互联网早期，直接将应用部署在物理机上优点 简单，不需要其他技术的参与缺点 不能为程序定义资源使用边界，很难合理分配计算机资源，而且程序之间容易产生影响虚拟化部署：可以在一台物理机上运行多个虚拟机...
+---
 ## Kubernetes介绍
 ### 1.1 应用方式部署改变
 在部署应用程序的方式上，主要经历了3个时代
@@ -20,7 +28,7 @@
  运行程序所需的资源被容器包装，并和底层基础构架解耦
 容器化的应用程序可以跨云服务商，跨Linux操作系统发行版进行部署
 :::
- ![](https://cdn.nlark.com/yuque/0/2024/png/43047777/1712211750585-c4847eb5-5d77-42a6-8a6f-3bf1037e13eb.png#averageHue=%23dfe1de&clientId=ucd0e6d51-66b0-4&from=paste&id=jhgPL&originHeight=409&originWidth=1118&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u15ad752d-e2b1-4467-b17f-07f26bca80e&title=)
+ ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/ef0ad2457a4ed077fd9eaf6010da6806.png)
 容器化部署方式带来了很多便利，但是也会出现一些问题，比如：
 
 - 一个容器故障停机了，怎么让另外一个容器立刻启动去替补停机的容器
@@ -44,7 +52,7 @@
    - 通过Web界面查看集群状态
 - Kubernetes：Google开源的一个容器编排工具
 ### 1.2 Kubernetes简介
-![](https://cdn.nlark.com/yuque/0/2024/png/43047777/1712211946901-ece1641c-8d4d-48a0-935d-bd3303d501ae.png#averageHue=%233a7ce2&clientId=ucd0e6d51-66b0-4&from=paste&id=uc20c1841&originHeight=239&originWidth=330&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=uf2da22a8-d110-406e-b389-f2ba253ac96&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/bcd191aa27871e84a0d6583aaf2acae9.png)
 Kubernetes，是一个全新的基于容器的分布式架构领先方案，是谷歌严格保密十几年的密码武器–Borg系统的一个开源版本，于2014年9月发布的第一个版本。
 
 Kubernetes的本质是一组服务器集群，他可以在集群的每个节点上运行特定的程序，来对节点中的容器进行管理，他的目的就是实现资源管理的自动化，主要提供了以下功能：
@@ -57,7 +65,7 @@ Kubernetes的本质是一组服务器集群，他可以在集群的每个节点�
 - **存储编排：**Kubernetes 允许你自动挂载你选择的存储系统，例如本地存储、公共云提供商等。
 - **自动完成装箱计算: **你为 Kubernetes 提供许多节点组成的集群，在这个集群上运行容器化的任务。 你告诉 Kubernetes 每个容器需要多少 CPU 和内存 (RAM)。 Kubernetes 可以将这些容器按实际情况调度到你的节点上，以最佳方式利用你的资源。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/43047777/1712212333550-54f6bab7-a468-4055-bb1e-b5076c6dcdc1.png#averageHue=%23a1d8e9&clientId=ucd0e6d51-66b0-4&from=paste&id=ua56b50e1&originHeight=572&originWidth=1099&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u9e93c4e2-e760-442b-abc4-eabebdc3ff6&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/db0d6e785f87cc3694a3e36336878193.png)
 ### 1.3 kubernetes组件
 一个Kubernetes集群主要是由控制节点，工作节点构成，每个节点上安装有不同的组件。 
 Master：集群的控制平面，负责集群的决策（管理）(控制面板)
@@ -86,8 +94,8 @@ contained:
 CRI-O: 
 pod: 里面至少有一个容器, 可以有多个
 :::
-![](https://cdn.nlark.com/yuque/0/2024/svg/43047777/1712213065036-a088d76c-a71f-418e-9330-495e6c616192.svg#clientId=ucd0e6d51-66b0-4&from=paste&id=u640f9f3c&originHeight=585&originWidth=1252&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u3d3ad11b-fa70-4e0d-a86e-af6099a1d4b&title=)
-![](https://cdn.nlark.com/yuque/0/2024/png/43047777/1712213070530-fbaae71f-758c-418b-8c71-399ff5b6fbd9.png#averageHue=%2359e495&clientId=ucd0e6d51-66b0-4&from=paste&id=uef124584&originHeight=606&originWidth=1117&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u0e0a4421-297e-47b5-a4a9-8d424854d88&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/103184591ae498b06be1478b48d8eca6.svg)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/10f1d4328436b478ad3079a3f818ca46.png)
 附加组件:
 :::info
 kube-dns: 负责为整个集群提供DNS服务
@@ -184,7 +192,7 @@ Kubernetes 集群中的 Pod 存在如下两种使用途径：
 - 一个 Pod 中只运行一个容器。"one-container-per-pod" 是 Kubernetes 中最常见的使用方式。此时，您可以认为 Pod 容器组是该容器的 wrapper，Kubernetes 通过 Pod 管理容器，而不是直接管理容器。
 - 一个 Pod 中运行多个需要互相协作的容器。您可以将多个紧密耦合、共享资源且始终在一起运行的容器编排在同一个 Pod 中
 :::
-![1967881-d8ad2d0b00198509.webp](https://cdn.nlark.com/yuque/0/2024/webp/43047777/1712218015283-ac9e0cc5-7110-48b3-821f-4cb0e5f1b5ed.webp#averageHue=%23eacc75&clientId=uf51e9c53-510b-4&from=paste&height=758&id=u783ea62e&originHeight=948&originWidth=1598&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=34942&status=done&style=none&taskId=uce841b09-9fa5-42bf-aa67-543eeb38293&title=&width=1278.4)
+![1967881-d8ad2d0b00198509.webp](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/3d07d51cc2734c8594f58e37a9c968d2.webp)
 Pod中使用Pause容器来实现, 共享文件系统, 共享资源等
 
 副本
@@ -216,8 +224,8 @@ Deployment:
    - 暂停与恢复 Deployment: 多次修改, 一次滚动升级/回滚
 
 滚动升级/回滚
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/43047777/1712218895752-36a722ce-6569-4736-bcf5-43638408eb6f.png#averageHue=%23b2c7cd&clientId=uf51e9c53-510b-4&from=paste&height=457&id=u2aa68d64&originHeight=571&originWidth=824&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=125536&status=done&style=none&taskId=uff752d3e-59bd-461c-8a62-c7b878674f7&title=&width=659.2)
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/43047777/1712218909348-2c207000-122a-478a-a990-605d6410003e.png#averageHue=%239ebdcb&clientId=uf51e9c53-510b-4&from=paste&height=441&id=u86afaa8a&originHeight=551&originWidth=797&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=118397&status=done&style=none&taskId=ue1560f09-ed1a-4fff-949b-89ef7cdbab2&title=&width=637.6)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/b4d9f51e2b6f2e65dcf0479b9271a974.png)
+![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/186cb5d0614d907c9314b346e3cca69e.png)
 
 
 **适用于有状态服务**
