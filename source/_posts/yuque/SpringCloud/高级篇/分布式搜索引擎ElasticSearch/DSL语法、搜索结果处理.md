@@ -756,7 +756,7 @@ GET /hotel182/_search
 ![image-20210721215729236.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/b0a9c6cde3eb01a3b47d4d7c36e9b892.png)
 ### 3.1.2.解析响应
 响应结果的解析：
-![image-20210721214221057.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/db608fe1278158eada5696c8b063bd74.png)
+![image-20210721214221057.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678880429785-63947b25-dcb9-4918-b80b-302625296177.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2f6ef&clientId=ufbeed8c6-eba3-4&from=paste&height=465&id=u5031c423&originHeight=698&originWidth=1435&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=143502&status=done&style=none&taskId=uadd2bbf6-a613-4f23-b280-0880f7108c1&title=&width=956.6666666666666)
 ![](assets/image-20210721214221057.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=lpyCz&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 - `hits`：命中的结果 
@@ -1309,7 +1309,7 @@ POST /hotel182/_search
   }
 }
 ```
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/de040936a8022f4228633d475f767ed5.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680339969416-c71eed22-279f-43a5-a55d-6d897d43e073.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_51%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23eef2f6&clientId=ua6061438-0de9-4&from=paste&height=373&id=u5f31f823&originHeight=559&originWidth=1796&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=128813&status=done&style=none&taskId=u7ecce4cb-eaa9-40db-93d0-cd8fbab3935&title=&width=1197.3333333333333)
 ### 4.3.4.添加算分函数查询
 接下来我们就要修改查询条件了。之前是用的boolean 查询，现在要改成function_socre查询。
 function_score查询结构如下：
@@ -1369,7 +1369,7 @@ private void buildBasicQuery(RequestParams params, SearchRequest request) {
 }
 ```
 运行项目之后，可以发现上面ID被修改过的数据，优先排在前面
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/83dca69c5eccfb3541cca5e5612cfac9.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680340116058-bf48e55d-b671-43f8-8088-0ec872592cf9.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_50%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23857d69&clientId=ua6061438-0de9-4&from=paste&height=193&id=ub58a885d&originHeight=289&originWidth=1762&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=133265&status=done&style=none&taskId=ue90d7460-4dd8-4626-aaec-8d2ee9f2126&title=&width=1174.6666666666667)
 ### 4.3.5.添加排序
 排序相对比较简单，注意它是跟query同级的，所以我们不放在封装的：buildBasicQuery 中，而是与其保持平级，代码如下：
 ```java
@@ -1378,14 +1378,14 @@ if (StringUtils.isNotBlank(params.getSortBy())
     request.source().sort(params.getSortBy(), SortOrder.DESC);
 }
 ```
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/706580480adb79c4869f4e777a877dbc.png)重启工程后，可以点击测试：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/c4d5f812a524c2bab921c71acc31e011.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680340851977-7d49abcc-cbb7-435c-892e-a722a91fb6cc.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_45%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdfaf7&clientId=ua6061438-0de9-4&from=paste&height=339&id=uf44dde81&originHeight=509&originWidth=1585&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=63008&status=done&style=none&taskId=u133fa866-d601-419a-b376-111fb05c28c&title=&width=1056.6666666666667)重启工程后，可以点击测试：
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680340905221-13c1dfbc-f24d-4609-805a-fcd6be7a6466.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_43%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f8f5f1&clientId=ua6061438-0de9-4&from=paste&height=533&id=ud5df51d0&originHeight=800&originWidth=1510&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=250352&status=done&style=none&taskId=u6a9d4652-41b9-422a-827e-a94ec09cdcc&title=&width=1006.6666666666666)
 ### 4.3.6.添加高亮
 高亮的技术实现与我们单测一模一样，分别是：
 
 - 与query平级的高亮处理（因为高亮不影响数据结果集大小，所以放在哪里都可以）
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/8b28dcfe415593b5b50092ed7a3fd7b1.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680341264805-f21c5b18-eb82-4641-af8e-d9cd5f310c53.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_40%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fcfaf8&clientId=ua6061438-0de9-4&from=paste&height=491&id=u7c35d6aa&originHeight=737&originWidth=1412&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=92710&status=done&style=none&taskId=udf80eec1-1e00-4417-833b-d43796e83d6&title=&width=941.3333333333334)
 ```java
 @Override
 public PageResult search(RequestParams params) {
@@ -1424,7 +1424,7 @@ public PageResult search(RequestParams params) {
 
 - 返回结果处理，重新设置name属性
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/fcf0889ca06e2666281a23736809ff11.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1680341283892-7a08e199-ad94-417b-9dd4-9fb309538f46.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_36%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f3e8cd&clientId=ua6061438-0de9-4&from=paste&height=457&id=u87164110&originHeight=686&originWidth=1246&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=99450&status=done&style=none&taskId=u0a8cecad-68ec-43db-865d-1aba71c258c&title=&width=830.6666666666666)
 ```java
 private PageResult handleResponse(SearchResponse searchResponse) {
 
