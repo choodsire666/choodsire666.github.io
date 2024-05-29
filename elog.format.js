@@ -23,7 +23,7 @@ const format = async (doc, imageClient) => {
   } else {
     let res = await request('https://www.dmoe.cc/random.php?return=json')    
     for (let prop in res) {
-      if (this.config.github.hasOwnProperty(prop)) {
+      if (res.hasOwnProperty(prop)) {
         out.info(`${prop}: ${res[prop]}`)
       }
     }
