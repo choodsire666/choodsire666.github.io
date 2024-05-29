@@ -21,7 +21,8 @@ const format = async (doc, imageClient) => {
   if (doc.properties.cover) {
     out.info("封面图片替换成功")
   } else {
-    let res = await request('https://www.dmoe.cc/random.php?return=json')    
+    let res = await request('https://www.dmoe.cc/random.php?return=json')   
+    res = res.data 
     for (let prop in res) {
       if (res.hasOwnProperty(prop)) {
         out.info(`${prop}: ${res[prop]}`)
