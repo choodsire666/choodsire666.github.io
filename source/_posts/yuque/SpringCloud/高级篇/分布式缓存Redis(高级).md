@@ -441,12 +441,12 @@ redis-cli --cluster reshard 192.168.206.129:7001
 确认要转移吗？输入yes：然后，通过命令查看结果：
 ![image-20210725162145497.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/922e632b74495fbe1a9bec8544f8f7e6.png)
 可以看到如下效果，目的达成：
-![image-20210725162224058.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849136775-458531d3-958a-4441-b0f6-1dd401a0671e.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23353c36&clientId=ud6eddd95-a20b-4&from=paste&height=185&id=ufe2c7d37&originHeight=278&originWidth=1451&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=499024&status=done&style=none&taskId=u75f83eb8-c85c-4f33-a3bf-38efcb829bc&title=&width=967.3333333333334)
+![image-20210725162224058.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/6a3af80f9cda8075a09565154ae55067.png)
 ### 4.3.5.转移失败修复方案
 [https://www.yuque.com/xiankanpengyouquandisitiaodongtai/diods0/admw1r0h0n90cbv7](https://www.yuque.com/xiankanpengyouquandisitiaodongtai/diods0/admw1r0h0n90cbv7)
 ## 4.4.故障转移
 集群初识状态是这样的：
-![image-20210727161152065.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849170822-2e8a8a75-0ddb-40cc-b70d-c71d49fef66b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%2358574c&clientId=ud6eddd95-a20b-4&from=paste&height=69&id=uae9dc9d7&originHeight=104&originWidth=921&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=165960&status=done&style=none&taskId=u0589dab1-b589-472e-9486-5d5588932a5&title=&width=614)
+![image-20210727161152065.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/b37f6641deeb6162519646d396e16e65.png)
 其中7001、7002、7003都是master，我们计划让7002宕机。
 ### 4.4.1.自动故障转移
 当集群中有一个master宕机会发生什么呢？我们新开一个窗口执行下面的指令
@@ -462,18 +462,18 @@ redis-cli -p 7002 shutdown
 
 - 注意查看下面的日志，可以看到8001本来是7002的从节点，有slave 7002的id
 
-![image-20210725162319490.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849200645-4ec77f14-2290-44a0-a158-b1556e361b67.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23665a47&clientId=ud6eddd95-a20b-4&from=paste&height=78&id=ue2da0fa1&originHeight=117&originWidth=1118&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=185771&status=done&style=none&taskId=uf0b6eb04-c6f0-4f75-82e2-a2b525a6225&title=&width=745.3333333333334)
+![image-20210725162319490.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/fc75d2c4577b373c7f13a07b6136aa6f.png)
 3）最后是确定下线，自动**提升一个slave为新的master**：
-![image-20210725162408979.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849212171-401d3eb6-13ad-42b7-90bb-90eacaee977b.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%236b604b&clientId=ud6eddd95-a20b-4&from=paste&height=81&id=ub24623c6&originHeight=121&originWidth=1118&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=193268&status=done&style=none&taskId=ud362cee6-3cb4-4cd8-8238-485de6e9fe1&title=&width=745.3333333333334)
+![image-20210725162408979.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/f6f17c334be6cf64a9d49981ddfb1df2.png)
 4）当7002再次启动，
 ```shell
 printf '%s\n' 7002 | xargs -I{} -t redis-server {}/redis.conf
 ```
 就会变为一个slave节点了：
-![image-20210727160803386.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849229178-defd536d-61ae-4d5b-80ac-4d8b4bd24747.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_39%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%235c5c4f&clientId=ud6eddd95-a20b-4&from=paste&height=110&id=u8720d95b&originHeight=165&originWidth=1382&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=335683&status=done&style=none&taskId=u2ae26b5d-7d4f-4e53-a5e2-1926e2b1afc&title=&width=921.3333333333334)
+![image-20210727160803386.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/4a24a116e3ceea17995a79f91633cc7d.png)
 ### 4.4.2.手动故障转移
 利用cluster failover命令可以手动让集群中的某个master宕机，切换到执行cluster failover命令的这个slave节点，实现无感知的数据迁移。其流程如下：
-![image-20210725162441407.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849243832-cf0726db-556f-436d-b8a1-8aaf2846fdf3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_22%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fdfcfb&clientId=ud6eddd95-a20b-4&from=paste&id=ud5dde28b&originHeight=591&originWidth=762&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47048&status=done&style=none&taskId=uf6dd6089-f18d-4fc7-9ffe-b0c2c91eb16&title=)
+![image-20210725162441407.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/0b19e44029e9494f201696069e03e39a.png)
 这种failover命令可以指定三种模式：
 
 - 缺省：默认的流程，如图1~6歩
@@ -488,9 +488,9 @@ redis-server 7002/redis.conf
 ```
 2）执行cluster failover命令
 如图：
-![image-20210727160037766.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849270519-f62171ca-bcfd-4800-8dd6-bad2ce522aac.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_20%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%233b3b36&clientId=ud6eddd95-a20b-4&from=paste&height=47&id=u01e14753&originHeight=71&originWidth=710&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=40647&status=done&style=none&taskId=ubfa96476-654d-46f5-bde3-a234cd10172&title=&width=473.3333333333333)
+![image-20210727160037766.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/4eea70501fb7cc5f1e2959d0f196af43.png)
 效果：
-![image-20210727161152065.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678849281571-ef91414c-f21e-45a2-a06b-a4dd57ae33c3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_26%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%2358574c&clientId=ud6eddd95-a20b-4&from=paste&height=69&id=ud913d716&originHeight=104&originWidth=921&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=165960&status=done&style=none&taskId=u9bdcf4a7-ae4f-4acb-b668-610ca7bc7e0&title=&width=614)
+![image-20210727161152065.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/70ab8f3f21e85ab3f6470f55a76252f5.png)
 ## 4.5.RedisTemplate访问分片集群
 RedisTemplate底层同样基于lettuce实现了分片集群的支持，而使用的步骤与哨兵模式基本一致：
 1）引入redis的starter依赖
