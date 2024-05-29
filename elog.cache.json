@@ -50,12 +50,13 @@
     {
       "id": 161666083,
       "doc_id": "vsp1knk4g0g1",
-      "updated": 1716894735000,
+      "updated": 1716966417000,
       "properties": {
         "title": "JDK8-17新特性（上）",
         "urlname": "vsp1knk4g0g1",
         "date": "2024-03-13 17:15:48",
-        "updated": "2024-05-28 19:12:15",
+        "updated": "2024-05-29 15:06:57",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/JDK8-17新特性（上）/ca19565248b1ab85234924fc9e908e0e.png",
         "description": "本章专题与脉络1. Java版本迭代概述1.1 发布特点（小步快跑，快速迭代）发行版本发行时间备注Java 1.01996.01.23Sun公司发布了Java的第一个开发工具包Java 5.02004.09.30①版本号从1.4直接更新至5.0；②平台更名为JavaSE、JavaEE、Java..."
       },
       "catalog": [
@@ -511,12 +512,12 @@
     {
       "id": 161780151,
       "doc_id": "ggstmhn7xxix66dq",
-      "updated": 1715760172000,
+      "updated": 1716966595000,
       "properties": {
         "title": "常见的API类",
         "urlname": "ggstmhn7xxix66dq",
         "date": "2024-03-14 11:07:06",
-        "updated": "2024-05-15 16:02:52",
+        "updated": "2024-05-29 15:09:55",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png",
         "description": "1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String(\"abc\")和 String st..."
       },
