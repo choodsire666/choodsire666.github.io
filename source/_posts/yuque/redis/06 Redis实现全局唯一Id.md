@@ -1,3 +1,11 @@
+---
+title: 06 Redis实现全局唯一Id
+urlname: nk0295vsa2w1
+date: '2024-03-14 14:48:11'
+updated: '2024-03-31 11:05:40'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/06 Redis实现全局唯一Id/e1f996055ae07923be463fe76e2837c6.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 全局唯一ID每个店铺都可以发布优惠券：当用户抢购时，就会生成订单并保存到tb_voucher_order这张表中，而订单表如果使用数据库自增ID就存在一些问题：id的规律性太明显受单表...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 全局唯一ID
 每个店铺都可以发布优惠券：

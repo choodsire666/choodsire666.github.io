@@ -1,3 +1,11 @@
+---
+title: 19 MySQL日志
+urlname: paxlvnrrtlknouur
+date: '2024-03-14 12:14:40'
+updated: '2024-04-11 15:27:16'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/5cfc22d19101872a7c55ec7d922505f4.png'
+description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 错误日志错误日志是 MySQL 中最重要的日志之一，它记录了当 mysqld 启动和停止时，以及服务器在运行过程中发生任何严重错误时的相关信息。当数据库出现任何故障导致无法正常使用时，建...
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/19 MySQL日志/c1e504b3ddf0f05402192f8fcf546079.png)
 

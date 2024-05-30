@@ -4,6 +4,7 @@ urlname: nsgd1vcw40dhn1gz
 date: '2024-03-28 16:31:22'
 updated: '2024-03-28 16:31:40'
 description: "本章是基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1.单机安装Redis首先需要安装Redis所需要的依赖：yum install -y gcc tcl然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：\U0001F4CEredis-6.2.4...."
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/cover.jpg'
 ---
 本章是基于CentOS7下的Redis集群教程，包括：
 

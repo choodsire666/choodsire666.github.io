@@ -1,3 +1,11 @@
+---
+title: Rabbitmq
+urlname: pz454cmh13ivgg1u
+date: '2024-03-15 16:33:28'
+updated: '2024-03-15 16:51:58'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Rabbitmq/5b674f4589203984b830fc84f82aac6c.png'
+description: '第一章 RabbitMQ介绍MQ: (Messaeg queue)消息队列发送者,只管把消息放进消息队列,并不知道接受者是谁接受者,只管从消息队列中取消息,并不知道发送者是谁从而实现了异步,提高了效率,解耦合RabbitMQ: 实现了AMQP协议的MQ,是由Erlang语言开发的需要基于Erl...'
+---
 ### 第一章 RabbitMQ介绍
 
 MQ: (Messaeg queue)消息队列

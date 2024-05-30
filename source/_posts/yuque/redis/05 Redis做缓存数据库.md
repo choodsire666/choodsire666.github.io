@@ -1,3 +1,11 @@
+---
+title: 05 Redis做缓存数据库
+urlname: tk35clgh7trg
+date: '2024-03-14 12:28:29'
+updated: '2024-04-06 16:14:59'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/05 Redis做缓存数据库/56cc253671ac3e39552a4900c9c0f286.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 什么是缓存?前言：什么是缓存?就像自行车。越野车的避震器举个例子：越野车，山地自行车，都拥有"避震器"，防止车体加速后因惯性，在酷似"U"字母的地形上飞跃，硬着陆导致的损害，像个弹簧一...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 什么是缓存?
 前言：什么是缓存?

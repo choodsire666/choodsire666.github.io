@@ -1,3 +1,11 @@
+---
+title: 14 Redis持久化
+urlname: qmpdgovcdm5gg74q
+date: '2024-03-31 11:08:56'
+updated: '2024-04-26 14:53:52'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/14 Redis持久化/e6e6db0a817425f9196f8cf4d001fc18.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案单机的Redis存在四大问题：Redis有两种持久化方案：RDB持久化AOF持久化1 RDB持久化RDB全称Redis Database Backup file（Redis数据备份文件），...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 单机的Redis存在四大问题：
 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/14 Redis持久化/e6e6db0a817425f9196f8cf4d001fc18.png)

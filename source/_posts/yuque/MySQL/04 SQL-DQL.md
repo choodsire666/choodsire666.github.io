@@ -1,3 +1,11 @@
+---
+title: 04 SQL-DQL
+urlname: og2o5x2o4boh22m1
+date: '2024-03-13 17:29:47'
+updated: '2024-04-14 16:33:47'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/04%20SQL-DQL/faee2a0047ce32468bc3a3cf64ae172c.png'
+description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DQL英文全称是Data Query Language(数据查询语言)，数据查询语言，用来查询数据库中表的记录。查询关键字: SELECT在一个正常的业务系统中，查询操作的频次是要远高于...'
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 # 前言

@@ -4,6 +4,7 @@ urlname: nqc4fklsd6fv5pk7
 date: '2024-03-28 16:33:31'
 updated: '2024-03-28 16:33:48'
 description: Sentinel 基本概念资源资源是 Sentinel 的关键概念。它可以是 Java 应用程序中的任何内容，例如，由应用程序提供的服务，或由应用程序调用的其它应用提供的服务，甚至可以是一段代码。在接下来的文档中，我们都会用资源来描述代码块。只要通过 Sentinel API 定义的代码，就是...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工作原理/cover.jpg'
 ---
 ## Sentinel 基本概念
 ### 资源

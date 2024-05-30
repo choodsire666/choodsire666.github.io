@@ -1,3 +1,11 @@
+---
+title: 17 InnoDB引擎详述
+urlname: ixgx5y5warh2ogcm
+date: '2024-03-14 12:14:31'
+updated: '2024-04-11 15:30:30'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/17 InnoDB引擎详述/a7dc648311f8549a00a3c7a7a4c0ebbd.png'
+description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 逻辑存储结构InnoDB的逻辑存储结构如下图所示:表空间：是InnoDB存储引擎逻辑结构的最高层， 如果用户启用了参数 innodb_file_per_table(在8.0版本中默认开启...'
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 逻辑存储结构
 InnoDB的逻辑存储结构如下图所示:

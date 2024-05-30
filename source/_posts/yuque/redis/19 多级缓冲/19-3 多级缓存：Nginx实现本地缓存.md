@@ -1,3 +1,11 @@
+---
+title: 19-3 多级缓存：Nginx实现本地缓存
+urlname: vivusc7pehivp53k
+date: '2024-03-31 11:12:52'
+updated: '2024-03-31 11:13:16'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19-3 多级缓存：Nginx实现本地缓存/f8fda66bb8b2ae46eb900b395c3b31b8.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案多级缓存的实现离不开Nginx编程，而Nginx编程又离不开OpenResty。1 安装OpenRestyOpenResty® 是一个基于 Nginx的高性能 Web 平台，用于方便地搭建...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 多级缓存的实现离不开Nginx编程，而Nginx编程又离不开OpenResty。
 ## 1 安装OpenResty

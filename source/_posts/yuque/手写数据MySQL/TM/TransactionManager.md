@@ -4,6 +4,7 @@ urlname: tm_transactionmanager
 date: '2024-04-26 16:38:32'
 updated: '2024-05-06 19:36:52'
 description: XID文件XID 的定义和规则：每个事务都有一个唯一的事务标识符 XID，从 1 开始递增，并且 XID 0 被特殊定义为超级事务（Super Transaction）。XID 0 用于表示在没有申请事务的情况下进行的操作，其状态永远是 committed。事务的状态：每个事务可以处于三种状态...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/TransactionManager/cover.jpg'
 ---
 ## XID文件
 1. **XID 的定义和规则：**

@@ -1,3 +1,11 @@
+---
+title: 19-4 多级缓存：使用Mycat做缓存同步
+urlname: gfdt7gu877h3fouz
+date: '2024-03-31 11:13:14'
+updated: '2024-03-31 11:13:27'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19-4 多级缓存：使用Mycat做缓存同步/c2eb2b74ace0b358669c1721868ef7d9.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案大多数情况下，浏览器查询到的都是缓存数据，如果缓存数据与数据库数据存在较大差异，可能会产生比较严重的后果。所以我们必须保证数据库数据、缓存数据的一致性，这就是缓存与数据库的同步。1 数据同...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 大多数情况下，浏览器查询到的都是缓存数据，如果缓存数据与数据库数据存在较大差异，可能会产生比较严重的后果。

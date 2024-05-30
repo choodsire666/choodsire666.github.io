@@ -4,6 +4,7 @@ urlname: muo43650pk21f2io
 date: '2024-04-26 16:29:33'
 updated: '2024-04-26 16:34:32'
 description: 'RedisRedis的操作技术派将Redis的操作封装在RedisClient类中，其所有方法都是静态方法，意味着可以在任何地方操作Redis。RedisClient类的内容如下：基本操作：register(RedisTemplate<String, String>) : voidnullCh...'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Part2/cover.jpg'
 ---
 # Redis
 ### Redis的操作

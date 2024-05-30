@@ -1,3 +1,10 @@
+---
+title: SpringMVC
+urlname: ya82rih88q5s87o9
+date: '2024-03-14 15:24:47'
+updated: '2024-04-08 15:05:48'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Spring/a3f97fe4e517e5f268c1dfac7da34cdf.png'
+---
 ## 课程目标
 1. 理解SpringMVC核心框架流程
 2. 掌握SpringMVC框架配置方式
@@ -18,13 +25,7 @@
 >  
 > Version：9.0.2
 
-
-[TOC]
-
 ### 一、SpringMVC
-
----
-
 #### 1.1 引言
 
 > **java开源框架，Spring Framework的一个独立模块。**
@@ -35,7 +36,6 @@
 
 
 #### 1.2 MVC架构
-
 ##### 1.2.1 概念
 | 名称 | 职责 |
 | --- | --- |
@@ -43,24 +43,14 @@
 | View | 视图：渲染数据，生成页面。对应项目中的Jsp |
 | Controller | 控制器：直接对接请求，控制MVC流程，调度模型，选择视图。对应项目中的Servlet |
 
-
 ##### 1.2.2 好处
-
->  
 > -  MVC是现下软件开发中的最流行的代码结构形态; 
 > -  人们根据负责的不同逻辑，将项目中的代码分成 M V C 3个层次; 
 > -  层次内部职责单一，层次之间耦合度低; 
 > -  符合低耦合 高内聚的设计理念。也实际有利于项目的长期维护。 
-> 
- 
-
 
 ### 二、开发流程
-
----
-
 #### 2.1 导入依赖
-
 ```xml
 <dependency>
     <groupId>org.springframework</groupId>
@@ -68,9 +58,7 @@
     <version>5.1.6.RELEASE</version>
 </dependency>
 ```
-
 #### 2.2 配置核心(前端)控制器  struts2
-
 [https://struts.apache.org/getting-started/hello-world-using-struts2.html](https://struts.apache.org/getting-started/hello-world-using-struts2.html)
 
 > 作为一个MVC框架，首先要解决的是：如何能够收到请求！
@@ -78,7 +66,6 @@
 > 所以MVC框架大都会设计一款前端控制器，选型在 Servlet 或 Filter两者之一,在框架最前沿率先工作，接收所有请求。
 >  
 > 此控制器在接收到请求后，还会负责springMVC的核心的调度管理，所以既是前端又是核心。
-
 
 ```xml
 <servlet>
@@ -97,11 +84,8 @@
     <url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
-
 #### 2.3 后端控制器
-
 > 等价于之前定义的Servlet
-
 
 ```java
 @Controller //声明这是一个控制器
@@ -119,13 +103,10 @@ public class HelloController {
 	}
 }
 ```
-
 #### 2.4 配置文件
-
 > 默认名称：核心控制器名-servet.xml     默认位置：WEB-INF
 >  
 > 随意名称：mvc.xml           随意位置：resources    但需要配置在核心控制器中
-
 
 ```xml
 <beans 	xmlns="http://www.springframework.org/schema/beans"
@@ -155,26 +136,17 @@ public class HelloController {
 	</bean>
 </beans>
 ```
-
 #### 2.5 访问
-
 ```markdown
 http://localhost：8989/hello/test1
 http://localhost：8989/hello/test2
 ```
-
 ### 三、接收请求参数
-
----
-
 #### 3.1 基本类型参数
-
 > 请求参数和方法的形参 同名即可
-
 
 > springMVC默认可以识别的日期字符串格式为： YYYY/MM/dd HH:mm:ss
 通过@DateTimeFormat可以修改默认日志格式
-
 
 ```java
 // id  name gender
@@ -188,11 +160,8 @@ public String testParam1(Integer id,
     return "index";
 }
 ```
-
 #### 3.2 实体收参【`重点`】
-
 > 请求参数和实体的属性 同名即可
-
 
 ```java
 public class User {
@@ -212,11 +181,8 @@ public String testParam2(User user){
     return "index";
 }
 ```
-
 #### 3.3 数组收参
-
 > 简单类型的 数组
-
 
 ```html
 <form action="${pageContext.request.contextPath}/param/test3">
@@ -226,7 +192,6 @@ public String testParam2(User user){
     <input type="submit" value="提交"/>
 </form>
 ```
-
 ```java
 //http://localhost:8989/.../test3?hobby=football&hobby=basketball
 @RequestMapping("/test3")
@@ -237,9 +202,7 @@ public String testParam3(String[] hobby){
     return "index";
 }
 ```
-
 #### 3.4 集合收参 【了解】分布式
-
 ```
 <form action="${pageContext.request.contextPath}/param/test4" method="post">
     id:<input type="text" name="users[0].id"/>
@@ -252,7 +215,6 @@ public String testParam3(String[] hobby){
     <input type="submit" value="提交"/>
 </form>
 ```
-
 ```java
 public class UserList {
 	//private User[] users;
@@ -271,9 +233,7 @@ public String testParam4(UserList userList){
     return "index";
 }
 ```
-
 #### 3.5 路径参数
-
 ```java
 // {id} 定义名为id的路径；【/hello/{id}】的匹配能力和【/hello/*】等价
 // http://localhost:8989/.../hello/10   {id}匹配到10
@@ -292,26 +252,19 @@ public String testParam6(@PathVariable("username") String name){//将{username}�
     return "index";
 }
 ```
-
 #### 3.6 中文乱码
-
 > 首先，页面中字符集统一
-
 
 ```
 JSP : <%@page  pageEncoding="utf-8" %>
 HTML : <meta charset="UTF-8">
 ```
-
 > 其次，tomcat中字符集设置，对get请求中，中文参数乱码有效
-
 
 ```markdown
 Tomcat配置：URIEncoding=utf-8
 ```
-
 > 最后，设置此filter，对post请求中，中文参数乱码有效
-
 
 ```xml
 <!-- 此过滤器会进行：request.setCharactorEncoding("utf-8"); -->
@@ -328,7 +281,6 @@ Tomcat配置：URIEncoding=utf-8
     <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
-
 响应乱码
 ```xml
 <mvc:annotation-driven>
@@ -345,11 +297,7 @@ Tomcat配置：URIEncoding=utf-8
     </mvc:annotation-driven>
 ```
 ### 四、跳转
-
----
-
 #### 4.1 转发
-
 ```java
 @RequestMapping("/forw")
 class ForwardController{
@@ -370,9 +318,7 @@ class ForwardController{
     }
 }
 ```
-
 #### 4.2 重定向
-
 ```java
 @RequestMapping("/redir")
 class RedirectController{
@@ -391,31 +337,22 @@ class RedirectController{
     }
 }
 ```
-
 #### 4.3 跳转细节
-
 > -  在增删改之后，为了防止请求重复提交，重定向跳转 
 > -  在查询之后，可以做转发跳转 
 
-
 ### 五、响应
-
----
-
 > C得到数据后，跳转到V，并向V传递数据。进而V中可以渲染数据，让用户看到含有数据的页面
 >  
 > 转发跳转：Request作用域
 >  
 > 重定向跳转：Session作用域
 
-
 #### 5.1 Request和Session
-
 ```
 ${requestScope.age}
 ${sessionScope.name}
 ```
-
 ```java
 //形参中 即可获得 request 和 session对象
 @RequestMapping("/test1")
@@ -427,11 +364,8 @@ public String testData(HttpSession session,HttpServletRequest req，Integer id){
     return "forward:/WEB-INF/test2.jsp";
 }
 ```
-
 #### 5.2 JSP中取值
-
 > 建议：重点复习 EL  JSTL
-
 
 ```
 //jsp中用EL表达式 取值即可
@@ -439,9 +373,7 @@ public String testData(HttpSession session,HttpServletRequest req，Integer id){
 ${sessionScope.user.birth} <br>
 ${requestScope.age}
 ```
-
 #### 5.3 Model
-
 ```java
 //model中的数据，会在V渲染之前，将数据复制一份给request
 @RequestMapping("/test")
@@ -453,9 +385,7 @@ public String testData(Model model){
 //jsp中用EL表达式 取值即可
 ${requestScope.name}
 ```
-
 #### 5.4 ModelAndView
-
 ```java
 //modelandview 可以集中管理 跳转和数据
 @RequestMapping("/test")
@@ -472,15 +402,12 @@ public ModelAndView testData(){//返回值类型为ModelAndView
 //jsp中用EL表达式 取值即可
 ${requestScope.age}
 ```
-
 #### 5.5 [@SessionAttributes ](/SessionAttributes ) （了解）
-
 >  
 > -  @SessionAttributes({"gender","name"})  ：model中的 name和gender 会存入session中 
 > -  SessionStatus 移除session 
 > 
  
-
 
 ```java
 @Controller
@@ -502,13 +429,8 @@ public class UserController {
     }
 }
 ```
-
 ### 六、静态资源
-
----
-
 #### 6.1 静态资源问题
-
 > 静态资源：html，js文件，css文件，图片文件
 
 
@@ -517,9 +439,7 @@ public class UserController {
 
 > 但，在SpringMVC中DispatcherServlet也采用了 “/” 作为url-pattern, 则项目中不会再使用全局的Serlvet，则静态资源不能完成访问。
 
-
 #### 6.2 解决方案1
-
 > DispathcerServlet采用其他的url-pattern
 >  
 > 此时，所有访问handler的路径都要以 action结尾！！
@@ -534,11 +454,8 @@ public class UserController {
     <url-pattern>*.action</url-pattern>
 </servlet-mapping>
 ```
-
 #### 6.3 解决方案2
-
 > DispathcerServlet的url-pattern依然采用 "/",但追加配置
-
 
 ```xml
 <!-- 
@@ -548,23 +465,16 @@ public class UserController {
   -->
 <mvc:default-servlet-handler/>
 ```
-
 #### 6.4 解决方案3
 > - mapping是访问路径，location是静态资源存放的路径
 > - 将/html/** 中 /**匹配到的内容，拼接到 /hhh/后
 http://..../html/a.html  访问 /hhh/a.html
 
-
 ```xml
 <mvc:resources mapping="/html/**" location="/hhh/"/>
 ```
-
 ### 七、Json处理（了解）
-
----
-
 #### 7.1 导入依赖
-
 ```xml
 <!-- Jackson springMVC默认的Json解决方案选择是 Jackson，所以只需要导入jackson的jar，即可使用。-->
 <dependency>
@@ -573,9 +483,7 @@ http://..../html/a.html  访问 /hhh/a.html
     <version>2.9.8</version>
 </dependency>
 ```
-
 #### 7.2 使用[@ResponseBody ](/ResponseBody ) 
-
 ```java
 @Controller
 public class JsonController{    
@@ -602,11 +510,8 @@ public class JsonController{
     }
 }
 ```
-
 #### 7.3 使用[@RestController ](/RestController ) 
-
 > Controller类上加了@RestController注解，等价于在类中的每个方法上都加了[@ResponseBody ](/ResponseBody ) 
-
 
 ```java
 @Controller
@@ -627,16 +532,10 @@ public class JsonController{
     }
 }
 ```
-
 #### 7.4 使用[@RequestBody ](/RequestBody ) 
-
->  
 > #### [**@RequestBody **](/RequestBody )** **, 接收Json参数
->  
-
 
 ##### 7.4.1 定义Handler
-
 ```java
 class User{
     private Integer id;
@@ -645,7 +544,6 @@ class User{
     //set get
 }
 ```
-
 ```java
 @RequestMapping("/users")
 public String addUser(@RequestBody User user){//@RequestBody将请求体中的json数据转换为java对象
@@ -654,19 +552,15 @@ public String addUser(@RequestBody User user){//@RequestBody将请求体中的js
     return "index";
 }
 ```
-
 注意 ：1、 采用@RequestBody 首先得设置 请求头content-type:application/json
 2、你的参数必须是json格式
-
 ##### 7.4.2 Ajax发送json
-
 ```javascript
 var xhr = new XMLHttpRequest();
 xhr.open("post","${pageContext.request.contextPath}/users?"+new Date().getTime());
 xhr.setRequestHeader("content-type","application/json");//设置请求头
 xhr.send('{"id":1,"name":"shine","gender":"true"}');//传递json串
 ```
-
 ```javascript
 //ajax
 var user = {id:1,name:"shine"};
@@ -680,8 +574,6 @@ $.ajax({
     }
 });
 ```
-
-
 ##### 7.4.3 @RequestParam  
 1、支持三种请求方式：parms、from-data，x-www-form-urlencoded;
 
@@ -689,13 +581,9 @@ prams: url?username=admin&pwd=123456
 from-data: username=admin,pwd=123456
 
 x-www-form-urlencoded:{username:"admin",pwd:"123456"}
-
 #### 7.5 Jackson常用注解 （了解）
-
 ##### 7.5.1 日期格式化
-
 > @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
-
 
 ```java
 public class User{
@@ -707,11 +595,8 @@ public class User{
     get/set
 }
 ```
-
 ##### 7.5.2 属性名修改
-
 > @JsonProperty("new_name")
-
 
 ```java
 public class User{
@@ -723,11 +608,8 @@ public class User{
 }
 输出的json：{“new_id”:xx,"name":"xx"}
 ```
-
 ##### 7.5.3 属性忽略
-
 > [@JsonIgnore ](/JsonIgnore ) 
-
 
 ```java
 public class User{
@@ -739,14 +621,11 @@ public class User{
 }
 输出json时: {"id":xx}
 ```
-
 ##### 7.5.4 null和empty属性排除
-
 > Jackson 默认会输出null值的属性，如果不需要，可以排除。
 >  
 > @JsonInclude(JsonInclude.Include.NON_NULL) //null值 属性不输出
 @JsonInclude(value= JsonInclude.Include.NON_EMPTY) // empty属性不输出( 空串，长度为0的集合，null值)
-
 
 ```java
 public class User{
@@ -760,11 +639,8 @@ public class User{
 }
 如果name=null,且 hobby长度为0，则输出json时：{"id":xx}
 ```
-
 ##### 7.5.5 自定义序列化
-
 > [@JsonSerialize(using ](/JsonSerialize(using ) = MySerializer.class) // 使用MySerializer输出某属性 
-
 
 ```java
 public class User {
@@ -777,7 +653,6 @@ public class User {
 }
 则输出json时：{"id":xx,"name":"xxx","salary":10000.13}
 ```
-
 ```java
 public class MySerializer extends JsonSerializer<Double> {
 
@@ -791,11 +666,8 @@ public class MySerializer extends JsonSerializer<Double> {
     }
 }
 ```
-
 #### 7.6 FastJson
-
 ##### 7.6.1 导入依赖
-
 ```xml
 <!-- FastJson -->
 <dependency>
@@ -804,9 +676,7 @@ public class MySerializer extends JsonSerializer<Double> {
     <version>1.2.54</version>
 </dependency>
 ```
-
 ##### 7.6.2 安装FastJson
-
 ```xml
 <mvc:annotation-driven>
     <!-- 安装FastJson,转换器 -->
@@ -822,7 +692,6 @@ public class MySerializer extends JsonSerializer<Double> {
     </mvc:message-converters>
 </mvc:annotation-driven>
 ```
-
 ```javascript
 // 获取子页面的iframe
 var iframe = window['layui-layer-iframe' + index];
@@ -837,15 +706,10 @@ window.child = function (e){
             $("#password").val(e.password)
         }
 ```
-
 ##### 7.6.3 使用
-
 > [@ResponseBody ](/ResponseBody )  [@RequestBody ](/RequestBody ) [@RestController ](/RestController ) 使用方法不变 
 
-
 ##### 7.6.4 常用注解
-
->  
 > - 日期格式化：@JSONField(format="yyyy/MM/dd")
 > - 属性名修改：@JSONField(name="birth"）
 > - 忽略属性：[@JSONField(serialize ](/JSONField(serialize ) = false) 
@@ -854,9 +718,6 @@ window.child = function (e){
 > 
  
 > - 自定义序列化：[@JSONField(serializeUsing ](/JSONField(serializeUsing ) = MySerializer2.class) 
-> 
- 
-
 
 ```java
 public class User implements Serializable{
@@ -873,7 +734,6 @@ public class User implements Serializable{
 	...
 }
 ```
-
 ```java
 public class MySerializer2 implements ObjectSerializer {
     @Override
@@ -885,23 +745,16 @@ public class MySerializer2 implements ObjectSerializer {
     }
 }
 ```
-
 ```java
 new User(1，null，null，new Date()，100.5);
 // 如上对象，转换json：
 {NAME:""，city:null，"birth":"2020/12/12"，"salary":"100.5元"}
 ```
-
 ### 八、异常解析器
-
----
-
 #### 8.1 现有方案，分散处理
-
 > Controller中的每个Handler自己处理异常
 >  
 > 此种处理方案，异常处理逻辑，分散在各个handler中，不利于集中管理
-
 
 ```java
 public String xxx(){
@@ -916,15 +769,12 @@ public String xxx(){
     }
 }
 ```
-
 #### 8.2 异常解析器，统一处理（重点）
-
 > Controller中的每个Handler不再自己处理异常，而是直接throws所有异常。
 >  
 > 定义一个“异常解析器” 集中捕获处理 所有异常
 >  
 > 此种方案，在集中管理异常方面，更有优势！
-
 
 ```java
 public class MyExResolver implements HandlerExceptionResolver{
@@ -950,25 +800,16 @@ public class MyExResolver implements HandlerExceptionResolver{
 	}
 }
 ```
-
 ```xml
 <!-- 声明异常解析器 -->	
 <bean class="com.baizhi.exception.resolver.MyExResolver"></bean>
 ```
-
 ### 九、拦截器（非重点）
-
----
-
 #### 9.1 作用
-
 > 作用：抽取handler中的冗余功能
 
-
 #### 9.2 定义拦截器
-
 > 执行顺序： preHandle--postHandle--afterCompletion
-
 
 ```java
 public class MyInter1 implements HandlerInterceptor{
@@ -999,9 +840,7 @@ public class MyInter1 implements HandlerInterceptor{
 	}
 }
 ```
-
 #### 9.3 配置拦截路径
-
 ```xml
 <mvc:interceptors>
     <mvc:interceptor>
@@ -1014,13 +853,8 @@ public class MyInter1 implements HandlerInterceptor{
     </mvc:interceptor>
 </mvc:interceptors>
 ```
-
 ### 十、上传
-
----
-
 #### 10.1 导入jar
-
 ```xml
 <dependency>
     <groupId>commons-io</groupId>
@@ -1040,9 +874,7 @@ public class MyInter1 implements HandlerInterceptor{
     </exclusions>
 </dependency>
 ```
-
 #### 10.2 表单
-
 ```html
 <form action="${pageContext.request.contextPath }/upload/test1" method="post" 
       enctype="multipart/form-data">
@@ -1050,9 +882,7 @@ public class MyInter1 implements HandlerInterceptor{
   <input type="submit" value="提交"/>
 </form>
 ```
-
 #### 10.3 上传解析器
-
 ```xml
 <!-- 上传解析器 
 	     id必须是：“multipartResolver”
@@ -1063,9 +893,7 @@ public class MyInter1 implements HandlerInterceptor{
     <property name="maxUploadSize" value="1048576"></property>
 </bean>
 ```
-
 #### 10.4 Handler
-
 ```java
 @RequestMapping("/test1")
 public String hello1(String username,MultipartFile source,HttpSession session) { 
@@ -1090,19 +918,12 @@ public String hello1(String username,MultipartFile source,HttpSession session) {
     return "index";
 }
 ```
-
 ### 十一、下载
-
----
-
 #### 11.1 超链
-
 ```html
 <a href="${pageContext.request.contextPath}/download/test1?name=Koala.jpg">下载</a>
 ```
-
 #### 11.2 Handler
-
 ```java
 @RequestMapping("/test1")
 public void hello1(String name,HttpSession session,HttpServletResponse response){
@@ -1124,18 +945,11 @@ public void hello1(String name,HttpSession session,HttpServletResponse response)
     //上一步，已经是响应了,所以此handler直接是void
 }
 ```
-
 ### 十二、验证码
-
----
-
 #### 12.1 作用
-
 > 防止暴力攻击，前端安全保障
 
-
 #### 12.2 导入jar
-
 ```xml
 <!-- Kaptcha -->
 <dependency>    
@@ -1150,9 +964,7 @@ public void hello1(String name,HttpSession session,HttpServletResponse response)
   </exclusions>
 </dependency>
 ```
-
 #### 12.3 声明验证码组件
-
 ```xml
 <servlet>
     <servlet-name>cap</servlet-name>
@@ -1184,9 +996,7 @@ public void hello1(String name,HttpSession session,HttpServletResponse response)
     <url-pattern>/captcha</url-pattern>
   </servlet-mapping>
 ```
-
 #### 12.4 Page
-
 ```html
 <img src="${pageContext.request.contextPath}/captcha" style="width:85px" id="cap"/>
 <script>
@@ -1199,13 +1009,8 @@ public void hello1(String name,HttpSession session,HttpServletResponse response)
     });
 </script>
 ```
-
 ### 十三、REST（重要点）
-
----
-
 #### 13.1 开发风格
-
 > 是一种开发风格，遵从此风格开发软件，符合REST风格，则RESTFUL。
 
 
@@ -1213,8 +1018,6 @@ public void hello1(String name,HttpSession session,HttpServletResponse response)
 >  
 > - 每个资源都有唯一的标识(URL)
 > - 不同的行为，使用对应的http-method
-> 
- 
 
 | 访问标识 | 资源 |
 | --- | --- |
@@ -1231,7 +1034,6 @@ public void hello1(String name,HttpSession session,HttpServletResponse response)
 | GET | [http://localhost:8989/xxx/users/1](http://localhost:8989/xxx/users/1) | 查询用户1 |
 | GET | [http://localhost:8989/xxx/users/1/orders](http://localhost:8989/xxx/users/1/orders) | 查询用户1的所有订单 |
 | POST | [http://localhost:8989/xxx/users/1/orders](http://localhost:8989/xxx/users/1/orders) | 在用户1的所有订单中增加一个 |
-
 
 #### 13.2 优点
 
@@ -1335,9 +1137,6 @@ public class RestController {
 ```
 
 ### 十四、跨域请求
-
----
-
 #### 14.1 域
 
 > 域：协议+IP+端口
@@ -1399,18 +1198,12 @@ xhr.withCredentials=true;
 ```
 
 ### 十五、SpringMVC执行流程
-
----
-
 |  |
 | --- |
 | ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringMVC/fcf18ad5d84335495aa341eb870b8c4d.png) |
 
 
 ### 十六、Spring整合
-
----
-
 #### 16.1 整合思路
 
 > 此时项目中有两个工厂

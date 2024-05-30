@@ -1,3 +1,11 @@
+---
+title: 02 Redis命令
+urlname: sccz1qv8gkkd
+date: '2024-03-14 12:27:14'
+updated: '2024-04-12 12:19:21'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/02 Redis命令/3761450844e82aad476a8d9f086b2516.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis的中文文档：中文文档菜鸟教程官网：菜鸟教程1 Redis数据结构介绍Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样2 通用...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 Redis的中文文档：[中文文档](http://www.redis.cn/commands.html)

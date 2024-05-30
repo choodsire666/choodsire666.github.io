@@ -4,6 +4,7 @@ urlname: eyz9dwt14chnr5up
 date: '2024-03-28 16:30:28'
 updated: '2024-03-28 16:30:48'
 description: '1.单机部署我们在Centos7虚拟机中使用Docker来安装。1.1.下载镜像docker pull rabbitmq:3.8-management1.2.安装MQ执行下面的命令来运行MQ容器：docker run \  -e RABBITMQ_DEFAULT_USER=itcast \  ...'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/cover.jpg'
 ---
 # 1.单机部署
 我们在Centos7虚拟机中使用Docker来安装。

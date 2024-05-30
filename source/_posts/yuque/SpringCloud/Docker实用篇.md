@@ -1,3 +1,11 @@
+---
+title: Docker实用篇
+urlname: auf4wvnuz7pk
+date: '2024-03-14 14:57:03'
+updated: '2024-04-04 19:43:57'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/ce2a14677c0bb77438302dbbd2e021e3.png'
+description: Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署...
+---
 # Docker实用篇
 
 # 0.学习目标

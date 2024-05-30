@@ -1,3 +1,11 @@
+---
+title: MVCC
+urlname: zet55u1fhb20gn4w
+date: '2024-04-08 11:53:38'
+updated: '2024-04-15 16:04:40'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC/80020cd656d0fbb2c6cc8e2743fbd6b7.png'
+description: MVCC：全称 Multi-Version Concurrency Control，多版本并发控制。指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读功能。MVCC的具体实现，还需要依赖于数据库记录中的三个隐式字段、undo log日志、readV...
+---
 MVCC：全称 Multi-Version Concurrency Control，多版本并发控制。指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读功能。MVCC的具体实现，还需要依赖于数据库记录中的三个隐式字段、undo log日志、readView。
 接下来，我们再来介绍一下InnoDB引擎的表中涉及到的隐藏字段 、undolog 以及 readview，从而来介绍一下MVCC的原理。
 # **4 MVCC**

@@ -4,6 +4,7 @@ urlname: clmzhcqg36gqzt00
 date: '2024-04-08 12:35:09'
 updated: '2024-04-08 14:03:16'
 description: '容器初始化入口 AbstractApplicationContextAbstractApplicationContext#refresh()public void refresh() throws BeansException, IllegalStateException {     sync...'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot启动原理/cover.jpg'
 ---
 
 1. 容器初始化入口 AbstractApplicationContext

@@ -4,6 +4,7 @@ urlname: mh6nqsrgn902qzd0
 date: '2024-03-19 16:06:38'
 updated: '2024-04-06 15:28:28'
 description: JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/JUC/cover.jpg'
 ---
 # JUC
 

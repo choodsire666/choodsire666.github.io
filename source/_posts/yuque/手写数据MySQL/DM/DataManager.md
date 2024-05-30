@@ -4,6 +4,7 @@ urlname: dm_datamanager
 date: '2024-04-26 16:38:15'
 updated: '2024-04-27 13:38:42'
 description: 基本介绍DataManager（DM）是数据库管理系统中的一层，主要负责底层数据的管理和操作。其功能和作用包括：数据缓存和管理：DataManager 实现了对 DataItem 对象的缓存管理，通过缓存管理，可以提高数据的访问效率，并减少对底层存储的频繁访问，从而提高系统的性能。数据访问和操...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/DataManager/cover.jpg'
 ---
 ## 基本介绍
 DataManager（DM）是数据库管理系统中的一层，主要负责底层数据的管理和操作。其功能和作用包括：

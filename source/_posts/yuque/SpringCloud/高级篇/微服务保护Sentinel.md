@@ -1,3 +1,11 @@
+---
+title: 微服务保护Sentinel
+urlname: lgg8wwk93pd4lw68
+date: '2024-03-28 16:33:02'
+updated: '2024-03-28 16:33:32'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/微服务保护Sentinel/2dc45ec7a08ed5b1f86d1527ddc03725.jpeg'
+description: 目标了解雪崩产生的原因及常见解决方案能够完成Sentinel部署并整合微服务能够实现Sentinel限流效果（三种模式+三种效果）能够完成Feign整合Sentinel了解线程隔离实现方案，了解Sentinel断路器状态机流转能够完成Sentinel线程隔离和熔断降级能够实现Sentinel授...
+---
 # 目标
 - 了解雪崩产生的原因及常见解决方案
 - 能够完成Sentinel部署并整合微服务

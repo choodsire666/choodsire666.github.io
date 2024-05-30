@@ -1,3 +1,11 @@
+---
+title: 21-2 原理解析：Redis通信协议
+urlname: lgbseibermgcbznb
+date: '2024-03-31 11:16:11'
+updated: '2024-04-15 16:05:32'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/21-2 原理解析：Redis通信协议/bd5762a55a8e15d57ac949c2a0f6efa7.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案3 Redis通信协议-RESP协议Redis是一个CS架构的软件，通信一般分两步（不包括pipeline和PubSub）：客户端（client）向服务端（server）发送一条命令服务端...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 3 Redis通信协议-RESP协议
 

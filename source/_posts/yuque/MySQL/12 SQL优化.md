@@ -1,3 +1,11 @@
+---
+title: 12 SQL优化
+urlname: kflrk7t7h9ozf2nk
+date: '2024-03-13 17:49:07'
+updated: '2024-04-15 16:07:57'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/066467e55125ffaea5b3c6cbde317892.png'
+description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 插入数据1.1 insert如果我们需要一次性往数据库表中插入多条记录，可以从以下三个方面进行优化。insert into tb_test values(1,''tom'');  inser...'
+---
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 插入数据
 ### 1.1 insert
@@ -176,7 +184,7 @@ D. 创建索引后，根据age, phone进行升序排序
 ```plsql
 explain select id,age,phone from tb_user order by age;
 ```
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/12 SQL优化/85a52c374a924d93a5d6ee0bf232c72b.png)
+![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665055018144-ec405e5d-f888-4acb-a325-066475a8a9a0.png#averageHue=%23889f9a&clientId=ube2fb6bf-1489-4&errorMessage=unknown%20error&id=sCTwa&originHeight=185&originWidth=1218&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u8a33fd04-39ff-4fc8-a540-5c92781666c&title=)
 
 ```plsql
 explain select id,age,phone from tb_user order by age , phone;

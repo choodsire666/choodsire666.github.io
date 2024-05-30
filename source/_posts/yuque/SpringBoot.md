@@ -1,3 +1,11 @@
+---
+title: SpringBoot
+urlname: xuk6bl
+date: '2022-08-30 08:32:56'
+updated: '2024-05-11 23:53:04'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/c666a921096a7f02d00bf90403610e37.png'
+description: 1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot...
+---
 ## 1.SpringBoot概述和入门案例
 - SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。
 - Spring Boot的核心理念：Spring Boot的核心理念是约定大于配置，它提供了很多默认的配置和依赖管理，使得开发者可以更快速地启动和运行应用程序，同时也减少了开发者在配置方面的工作量。
@@ -3279,13 +3287,13 @@ Thymeleaf的主要应用场景是在服务器端渲染Web页面，特别适用�
 - 在application.properties中进行Thymeleaf相关配置：
    - ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/2e887db667da84d94c1f845f2c1683c7.png)
 - 在resources/templates目录创建一个index.html页面(Thymeleaf模板文件)
-   - ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/704c9596f47b95949913f91dd69aabd6.png)
+   - ![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703602849293-1f623aa6-10b9-43a9-8592-c992db8f83b1.png#averageHue=%232f2c2b&clientId=ue2d5eb3e-05b2-4&from=paste&height=253&id=ua54f1a1f&originHeight=380&originWidth=1022&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=40356&status=done&style=none&taskId=ua3bef98d-521a-45c1-80ba-4ce7cd9dc67&title=&width=681.3333333333334)
    - 上述代码中的"xmlns:th="http://www.thymeleaf.org""用于引入Thymeleaf模板引擎，关键字“th”标签是Thymeleaf提供的标签，“th:text”用于动态显示标签文本内容。除此之外Thymeleaf模板还提供了很多标签，我们会在后续内容中进行讲解。
 - 编写跳转页面的控制层类PageController：
-   - ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/94c48a47a423a83be36911465d6bbbeb.png)
+   - ![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703602640143-ddaa3dc5-d05b-4619-98e4-a9e483607b2c.png#averageHue=%232d2c2c&clientId=ue2d5eb3e-05b2-4&from=paste&height=209&id=u4bca5067&originHeight=313&originWidth=1160&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=32468&status=done&style=none&taskId=u17758fd7-4811-4793-a528-e55abf58a9c&title=&width=773.3333333333334)
    - 此处使用了SpringMVC框架中的**Model**接口，通过使用Model，可以将数据从控制器传递到视图，实现动态的、与业务逻辑相关的页面展示，以便在视图中渲染并呈现给用户。
 - 测试页面显示结果(postman请求http://localhost:8080/hello)：
-   - ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/f044f3f28c214caea8388b0a0fed3fee.png)
+   - ![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703603059113-dd72d63b-a9bb-4774-8c3e-3af5c5b7bcb4.png#averageHue=%23fdfcfb&clientId=ue2d5eb3e-05b2-4&from=paste&height=581&id=uecdf9413&originHeight=871&originWidth=1296&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=92235&status=done&style=none&taskId=u87f6b63f-eacc-41e3-81b0-c80edbb4eab&title=&width=864)
    - 可以看到Thymeleaf模板引擎解析成功，成功地将我们输入的动态数据传输到了html页面。
 
 以上是一个简单的SpringBoot与Thymeleaf的集成示例。通过这个示例我们能够了解在SpringBoot中如何使用Thymeleaf模板引擎，接下来我们来更加深入的学习Thymeleaf相关知识。
@@ -3364,7 +3372,7 @@ xmlns:th="http://www.thymeleaf.org"
 <script th:src="@{/js/script.js}"></script>
 ```
 需要说明的是，上述操作是以HTML为基础嵌入了Thymeleaf模板引擎，并使用th:*属性进行了页面需求开发。这种Thymeleaf模板页面虽然与纯HTML页面基本相似，但已经不是一个标准的HTML5页面了，这是因为在Thymeleaf页面中使用的th:*属性是HTML5规范所不允许的。如果我们想要使用Thymeleaf页面进行纯HTML5的页面开发，可以使用data-th-*属性替换th:*属性进行页面开发，例如使用data-th-text 将表达式的结果应用到元素的 data-text 数据属性上：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/e415c84bc89fb75dcf44255bdb434422.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703604913377-439d10de-1ddb-4ba5-aea9-edddeef2dd6f.png#averageHue=%232f2c2b&clientId=u63d50e9c-7c39-4&from=paste&height=269&id=u916e9dde&originHeight=403&originWidth=940&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=44121&status=done&style=none&taskId=u73e1aed8-080f-4fe8-b228-e5f9defadfb&title=&width=626.6666666666666)
 上述代码中，使用标准HTML5语法格式嵌入了Thymeleaf模板引擎进行页面动态数据展示。在使用data-th-*属性时，不需要引入Thymeleaf标签，并且属性名要使用data-th-*的形式。不过使用这种方式不会出现属性的快捷提示，对于开发来说比较麻烦，因此在实际开发中，相对推荐使用Thymeleaf标签的形式进行模板引擎页面的开发。
 #### （3).**Thymeleaf标准表达式**
 Thymeleaf模板引擎提供了多种标签表达式语法，以下是最常用的简单表示式语法：
@@ -3382,33 +3390,33 @@ Thymeleaf模板引擎提供了多种标签表达式语法，以下是最常用�
 变量表达式${...}的作用是从web作用域里面取到对应的值，作用域包括** request、session、application**。
 示例如下：
 实体类：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/fcdc83db4b35b48031479823b41ba058.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703610153063-7ec41d8e-79bc-421d-bf90-5a0bf8d9ace5.png#averageHue=%232c2b2b&clientId=u63d50e9c-7c39-4&from=paste&height=311&id=u9fcb649a&originHeight=466&originWidth=1163&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=39177&status=done&style=none&taskId=u6ee2532b-a236-467c-b555-03af1286f6e&title=&width=775.3333333333334)
 控制层接口：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/4058542ebb3f4cbb2c76bb4936811753.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703609817186-aa5ea76c-abc8-4f47-b51d-4f942da48f55.png#averageHue=%232d2c2b&clientId=u63d50e9c-7c39-4&from=paste&height=282&id=u52d67205&originHeight=423&originWidth=1349&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=71740&status=done&style=none&taskId=u13f4a1c0-6b1e-45cd-8a08-f59fe2bc9e7&title=&width=899.3333333333334)
 html文件：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/edb23f53603c325ddb2677a599f38ed6.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703609874790-e4978b52-29a3-4eef-b604-77029ed77a3c.png#averageHue=%232c2b2b&clientId=u63d50e9c-7c39-4&from=paste&height=664&id=ufe733ddd&originHeight=996&originWidth=1341&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=137666&status=done&style=none&taskId=u8a6b6f56-a00c-432d-8c8f-e25f13d3fd7&title=&width=894)
 测试结果：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/ab37963df4b3ada7a4f03cfb5ffa6098.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703609945014-3b63f519-f6b1-43d4-b5a2-dd313d1e6919.png#averageHue=%23fbfbfb&clientId=u63d50e9c-7c39-4&from=paste&height=582&id=u59c4c662&originHeight=873&originWidth=1330&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=103368&status=done&style=none&taskId=udf06b2b9-aae0-4c7d-a756-1b2105d210d&title=&width=886.6666666666666)
 **选择变量表达式：**
 使用变量表达式${...}来取request、session、application作用域上的属性时，可以发现，我们需要重复编写user1、session.user2和application.use3三次，如果user对象的属性有十几个怎么办？显然写十几次相同的代码不是我们想要解决方案。针对这种问题，Thymeleaf提供了**选择变量表达式***{...}来解决：
 可以将上述的html页面替换为以下结构：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/7e81d4dd5b22726c09d305a2beea5a81.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703610091240-2534a280-d46b-4459-9ada-8c64b8fa6300.png#averageHue=%232c2b2b&clientId=u63d50e9c-7c39-4&from=paste&height=659&id=ub5c19020&originHeight=988&originWidth=1352&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=137833&status=done&style=none&taskId=ued06de62-2054-4de2-af39-e2b776fb78a&title=&width=901.3333333333334)
 修改控制层接口访问上述html文件，html文件能正确接收到接口传入的数据。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/5d681ae51f028e98c879da253a406100.png)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/8b860ecd23effb44ad0630152a7dfbd1.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703610310210-17c91646-b9bc-4995-bb7a-2b0401a46f39.png#averageHue=%232e2c2b&clientId=u63d50e9c-7c39-4&from=paste&height=278&id=uabc282ef&originHeight=417&originWidth=1161&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=70942&status=done&style=none&taskId=ue3eed00c-87f1-4693-8b07-949b1526ca7&title=&width=774)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703610341567-a874b0da-f9c8-424d-a434-896b1af42310.png#averageHue=%23fbfbfb&clientId=u63d50e9c-7c39-4&from=paste&height=535&id=u25f70ccc&originHeight=803&originWidth=1339&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=99028&status=done&style=none&taskId=u97db6944-d0c0-4175-aded-5e8e4787139&title=&width=892.6666666666666)
 **消息表达式：**
 消息表达式#{...}主要用于Thymeleaf模板页面国际化内容的动态替换和展示。使用消息表达式#{...}进行国际化设置时，还需要提供一些国际化配置文件。后续章节会进行国际化登陆页面的开发，会进行详细说明，此处了解即可。
 **链接URL表达式：**
 链接表达式@{...}一般用于页面跳转或者资源的引入，在Web开发中占据着非常重要的地位，并且使用也非常频繁,接下来我们通过一个页面跳转的示例来展示链接表达式的功能。
 在控制层中创建"/home"与"/user"两个接口，访问"/home"进入网站主页，访问"/user"进入用户详情列表，这里我们通过访问主页页面跳转的形式访问"/user"进入用户详情列表。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/f6c53c053e0d0c77387c0152f8da3403.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703753702487-9cb736e2-a099-49e7-9a74-aec6f117e47a.png#averageHue=%232c2c2b&clientId=u72a73f85-6c37-4&from=paste&height=267&id=u34b4f1f9&originHeight=401&originWidth=1238&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47698&status=done&style=none&taskId=uc1a20cfc-c8b1-4e1e-9dc4-a9f3dcd4f48&title=&width=825.3333333333334)
 创建Thymeleaf模板 (src/main/resources/templates/home.html 和 src/main/resources/templates/user_details.html):
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/ebb0e8240e66486a30049bb8ff5fe0bb.png)
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/8642511a18c9b6bed2d0bbded551db26.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703753804554-9eb12396-4d56-4ffd-85f8-99f9ee8ea30e.png#averageHue=%232c2b2b&clientId=u72a73f85-6c37-4&from=paste&height=357&id=u7fe78c68&originHeight=535&originWidth=1124&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=50721&status=done&style=none&taskId=u358ac37e-aec5-4dba-84fa-47b76c70129&title=&width=749.3333333333334)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703753814945-ebcb9de4-a156-4527-a419-fe5cf6af643b.png#averageHue=%232d2c2c&clientId=u72a73f85-6c37-4&from=paste&height=295&id=ueef8a484&originHeight=443&originWidth=1174&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47217&status=done&style=none&taskId=u8921142f-77cc-4ab3-8ee9-5ed8ed8ae4a&title=&width=782.6666666666666)
 运行SpringBoot项目，并在Web浏览器中访问 http://localhost:8080/home。可以看到 "欢迎访问主页" 的消息和指向 "用户详情" 页面的链接。点击链接将跳转到用户详情页面，其中展示了带参数的另一个动态链接。
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/ed3ea1b193312d9176d03b53d3b31f62.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703753964689-479a17e5-5fe7-40fb-9a95-2d41346eeef3.png#averageHue=%23edd8ca&clientId=u72a73f85-6c37-4&from=paste&height=281&id=u832b1792&originHeight=422&originWidth=1418&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=32605&status=done&style=none&taskId=uaa4d5f95-3821-40e5-8ca0-3ad4453c9ec&title=&width=945.3333333333334)
 
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/SpringBoot/a69198ed72f96be9e827ad25d8b3c4ac.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/33318872/1703753977451-4ef339f7-31f7-4f2d-874f-1ec367b4227c.png#averageHue=%23efded3&clientId=u72a73f85-6c37-4&from=paste&height=343&id=u409fbbfd&originHeight=514&originWidth=1428&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=31505&status=done&style=none&taskId=u04794cde-77ca-4979-ae9d-3f34ee27327&title=&width=952)
 这个示例演示了在Thymeleaf中使用 @{...} 创建带有和不带参数的动态链接。实际的URL由Spring MVC控制器处理，Thymeleaf用于在HTML模板中生成动态链接。
 **片段表达式：**
 片段表达式~{...}用于引用片段。片段是可以在多个模板中重复使用的一部分HTML代码。其中，最常见的用法是使用th:insert或th:replace属性插入片段。下面我们通过一个示例来展示片段表达式的功能。

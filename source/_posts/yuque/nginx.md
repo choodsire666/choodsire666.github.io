@@ -1,3 +1,11 @@
+---
+title: nginx
+urlname: wdckstlc39gx3106
+date: '2024-04-04 11:46:44'
+updated: '2024-04-04 19:35:08'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/nginx/12fd30321840ef4f55b5ccbe9e2abb4a.png'
+description: "第一章 安装安装nginxyum update\t yum install gcc openssl openssl-devel pcre pcre-devel zlib zlib-devel -y  cd /root/opt/mysoftwares tar -zxvf nginx.tar  cd..."
+---
 #### 第一章 安装
 
 ##### 安装nginx

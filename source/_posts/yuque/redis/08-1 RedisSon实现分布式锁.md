@@ -1,3 +1,11 @@
+---
+title: 08-1 RedisSon实现分布式锁
+urlname: dxwft57m9i6qprxs
+date: '2024-03-31 11:07:14'
+updated: '2024-04-15 16:17:45'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/08-1 RedisSon实现分布式锁/ac273ad420547e46ef829ce6489e5c8d.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redission功能介绍基于SETNX实现的分布式锁存在下面的问题：重入问题：重入问题是指 获得锁的线程可以再次进入到相同的锁的代码块中，可重入锁的意义在于防止死锁，比如HashTa...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 Redission功能介绍
 基于SETNX实现的分布式锁存在下面的问题：

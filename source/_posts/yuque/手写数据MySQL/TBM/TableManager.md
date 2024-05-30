@@ -3,6 +3,7 @@ title: TableManager
 urlname: tbm_tablemanager
 date: '2024-04-26 16:38:29'
 updated: '2024-04-26 16:38:37'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/TableManager/cover.jpg'
 ---
 ## 基本定义
 - **TableManager**中的方法直接返回执行结果，比如错误信息或者可读的结果信息的字节数组。

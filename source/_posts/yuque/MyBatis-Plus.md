@@ -1,3 +1,11 @@
+---
+title: MyBatis-Plus
+urlname: yozncwtghxzg9gwr
+date: '2024-03-31 11:38:38'
+updated: '2024-05-21 15:30:34'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/b17e30230d4d0ab04dfbeeca32d489bd.png'
+description: '前面我们学习过的ORM[Object Relational Mapping(对象关系映射)]持久层框架MyBatis，它可以帮助我们完成单表、多表、动态SQL的业务逻辑处理，与之平级的还有Hibernate，和这节我们要学习的MyBatisPlus了。1.快速入门1.1 入门案例mp.sqlm...'
+---
 前面我们学习过的ORM[Object Relational Mapping(对象关系映射)]持久层框架MyBatis，它可以帮助我们完成单表、多表、动态SQL的业务逻辑处理，与之平级的还有Hibernate，和这节我们要学习的[MyBatisPlus](https://www.baomidou.com/)了。
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/MyBatis-Plus/f8f18f137518dd7ec0e059be510ffc2c.png)
 # 1.快速入门

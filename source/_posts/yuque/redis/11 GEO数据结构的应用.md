@@ -1,3 +1,11 @@
+---
+title: 11 GEO数据结构的应用
+urlname: vtfb7mek12cki3p8
+date: '2024-03-31 11:08:24'
+updated: '2024-04-06 21:35:39'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/11 GEO数据结构的应用/37ccde96d269f0389045c99b6717fef5.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 GEO数据结构的基本用法GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中加入了对GEO的支持，允许存储地理坐标信息，帮助我们根据经纬度来检索数据。常见...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 GEO数据结构的基本用法
 GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中加入了对GEO的支持，允许存储地理坐标信息，帮助我们根据经纬度来检索数据。常见的命令有：

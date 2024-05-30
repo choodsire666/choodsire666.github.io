@@ -1,3 +1,11 @@
+---
+title: 13 HyperLog数据结构的应用
+urlname: gphkccpkqwg43dvx
+date: '2024-03-31 11:08:54'
+updated: '2024-03-31 11:09:44'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/13 HyperLog数据结构的应用/e36c21a9ee47864685772785a09b0eef.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 HyperLogLog
 首先我们搞懂两个概念：

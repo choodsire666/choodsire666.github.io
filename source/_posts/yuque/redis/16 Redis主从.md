@@ -1,3 +1,11 @@
+---
+title: 16 Redis主从
+urlname: aret1itgm2f1wb54
+date: '2024-03-31 11:09:01'
+updated: '2024-03-31 11:10:20'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/16 Redis主从/4ca19da5febf8a820f42a6034f6c1099.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 搭建主从架构单节点Redis的并发能力是有上限的，要进一步提高Redis的并发能力，就需要搭建主从集群，实现读写分离。具体搭建流程参考另一篇文章：此处为语雀内容卡片，点击链接查看：ht...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 搭建主从架构
 单节点Redis的并发能力是有上限的，要进一步提高Redis的并发能力，就需要搭建主从集群，实现读写分离。

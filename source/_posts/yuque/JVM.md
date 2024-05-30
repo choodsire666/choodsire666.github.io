@@ -1,3 +1,11 @@
+---
+title: JVM
+urlname: ctoz5c
+date: '2022-08-21 11:55:48'
+updated: '2024-04-09 16:03:30'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/JVM/5ccd3f663525c00245cc41a3ab795312.png'
+description: JVM概述基本介绍JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作特点：Java 虚拟机基于二进制字节码执行，由一套字节码指令集、一组寄存器、一个...
+---
 ## JVM概述
 ### 基本介绍
 JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作

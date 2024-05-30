@@ -4,6 +4,7 @@ urlname: demgaggh1tyqt5m1
 date: '2024-03-28 16:34:09'
 updated: '2024-03-28 16:34:22'
 description: 1.初识elasticsearch1.1.了解ES1.1.1.elasticsearch的作用elasticsearch是一款非常强大的开源搜索引擎，具备非常多强大功能，可以帮助我们从海量数据中快速找到需要的内容，例如： 在GitHub搜索代码 在电商网站搜索商品 在百度搜索答案 在打车软件搜...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式搜索引擎ElasticSearch/cover.jpg'
 ---
 # 1.初识elasticsearch
 ## 1.1.了解ES

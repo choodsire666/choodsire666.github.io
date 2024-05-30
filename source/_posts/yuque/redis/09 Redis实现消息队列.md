@@ -1,3 +1,11 @@
+---
+title: 09 Redis实现消息队列
+urlname: crgnles3h9qs8wbb
+date: '2024-03-31 11:06:10'
+updated: '2024-03-31 11:07:14'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/321f16f59ce8e471ccc6723efbf7e176.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 认识消息队列什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：消息队列：存储和管理消息，也被称为消息代理（Message Broker）生产者：发送消息到消...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 认识消息队列
 什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：

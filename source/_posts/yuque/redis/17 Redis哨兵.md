@@ -1,3 +1,11 @@
+---
+title: 17 Redis哨兵
+urlname: cyhqyu53l5mv8q26
+date: '2024-03-31 11:09:04'
+updated: '2024-03-31 11:10:33'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/17 Redis哨兵/8e5b09aae861340ea8404114516e3360.png'
+description: '笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢复。1 搭建哨兵集群具体搭建流程参考另一篇文章：此处为语雀内容卡片，点击链接查看：https://www.yuque....'
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢复。
 ## 1 搭建哨兵集群

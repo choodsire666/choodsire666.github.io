@@ -1,3 +1,11 @@
+---
+title: 19-5 多级缓存：安装OpenResty
+urlname: hvz3tmfghzf9xnbw
+date: '2024-03-31 11:13:27'
+updated: '2024-03-31 11:13:44'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19-5 多级缓存：安装OpenResty/a7123040b940cd6d1bfc594ee22009fc.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 安装首先你的Linux虚拟机必须联网1.1 安装开发库首先要安装OpenResty的依赖开发库，执行命令：yum install -y pcre-devel openssl-devel...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 安装
 首先你的Linux虚拟机必须联网

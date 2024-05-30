@@ -4,6 +4,7 @@ urlname: alw5bumbvhg6svwc
 date: '2024-03-28 16:32:30'
 updated: '2024-03-28 16:32:55'
 description: '一、部署Seata的tc-server1.下载下载seata-server地址在：http://seata.io/zh-cn/blog/download.html，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip2.解压在非中文目录解压缩这个zip包，其目...'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/cover.jpg'
 ---
 # 一、部署Seata的tc-server
 ## 1.下载

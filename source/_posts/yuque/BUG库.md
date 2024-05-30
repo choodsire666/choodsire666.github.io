@@ -1,3 +1,11 @@
+---
+title: BUG库
+urlname: gr7lgx
+date: '2022-08-21 09:32:55'
+updated: '2024-05-17 13:49:27'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/BUG库/f288e0b99641a9caaac776afb5639f0a.png'
+description: Idea快捷键熟练开发环境idea导入Maven目录相信自己解决问题的能力，当下犯得每一个错误，对未来都是少走一步弯路，坚持是一种优良的传统美德。加油欧里给！！！你的知识底蕴，方法论，勤奋的品质，都是其他人足以羡慕的！编译目录让idea识别静态文件夹，ps：没有识别时webContent文件夹...
+---
 # Idea
 快捷键熟练
 # 开发环境

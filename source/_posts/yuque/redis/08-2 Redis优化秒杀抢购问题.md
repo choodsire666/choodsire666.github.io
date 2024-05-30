@@ -1,3 +1,11 @@
+---
+title: 08-2 Redis优化秒杀抢购问题
+urlname: nylfastdkcisb7b5
+date: '2024-03-31 11:06:07'
+updated: '2024-04-02 15:29:02'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/08-2 Redis优化秒杀抢购问题/e32f146b350234b81be9e4eb6e6a9bec.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 异步秒杀思路我们来回顾一下下单流程当用户发起请求，此时会请求nginx，nginx会访问到tomcat，而tomcat中的程序，会进行串行操作，分成如下几个步骤查询优惠卷判断秒杀库存是...
+---
 **笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**
 ## 1 异步秒杀思路
 我们来回顾一下下单流程

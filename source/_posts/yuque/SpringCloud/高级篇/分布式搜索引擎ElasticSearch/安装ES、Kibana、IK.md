@@ -4,6 +4,7 @@ urlname: ifimpohoq0z5f1kg
 date: '2024-03-28 16:34:30'
 updated: '2024-03-28 16:34:52'
 description: 1.部署单点es1.1.创建网络因为我们还需要部署kibana容器，因此需要让es和kibana容器互联。这里先创建一个网络：docker network create es-net1.2.加载镜像这里我们采用elasticsearch的7.12.1版本的镜像，这个镜像体积非常大，接近1G。不...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/安装ES、Kibana、IK/cover.jpg'
 ---
 # 1.部署单点es
 ## 1.1.创建网络

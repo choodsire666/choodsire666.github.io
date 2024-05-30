@@ -1,3 +1,11 @@
+---
+title: File类与IO流
+urlname: owzkih229syvx62w
+date: '2024-03-14 11:12:30'
+updated: '2024-05-28 19:07:06'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流/9ae11b212046e1cdb5290fae40b91327.png'
+description: 本章专题与脉络1. java.io.File类的使用1.1 概述File类及本章下的各种流，都定义在java.io包下。一个File对象代表硬盘或网络中可能存在的一个文件或者文件目录（俗称文件夹），与平台无关。（体会万事万物皆对象）File 能新建、删除、重命名文件和目录，但 File 不能访...
+---
 ## 本章专题与脉络
 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/File类与IO流/e408e980359d30585c699f9f10314123.png)
 

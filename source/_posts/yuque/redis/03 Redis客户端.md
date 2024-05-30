@@ -1,3 +1,11 @@
+---
+title: 03 Redis客户端
+urlname: dgzghz1qgltp
+date: '2024-03-14 12:28:20'
+updated: '2024-03-31 11:03:59'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/180ebb865a96183f1e0f5da8f221388f.png'
+description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：命令行客户端图形化桌面客户端编程客户端1 命令行客户端 Redis安装完成后就自带了命...
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：

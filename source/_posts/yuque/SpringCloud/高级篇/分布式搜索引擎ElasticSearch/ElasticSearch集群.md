@@ -2,8 +2,9 @@
 title: ElasticSearch集群
 urlname: ypvfpte531pktdzv
 date: '2024-03-28 16:36:22'
-updated: '2024-05-29 16:37:39'
+updated: '2024-05-30 11:00:45'
 description: '集群单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。海量数据存储问题：将索引库从逻辑上拆分为N个分片（shard），存储到多个节点单点故障问题：将分片数据在不同节点备份（replica ）ES集群相关概念: 集群（cluster）：一组拥有共同的 ...'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/cover.jpg'
 ---
 # 集群
 单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。
@@ -121,7 +122,6 @@ sysctl -p
 docker-compose up -d
 ```
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/94c727fdce36b1a502578112ffa104bc.png)
-
 可以通过：docker logs -f es02查看启动日志，会发现左侧CPU基本打满
 通过docker ps查看应用是否启动完成（状态都是up）
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/d25b76d0ee426d69158d1f4d5e5e4927.png)
@@ -237,13 +237,11 @@ elasticsearch的查询分成两个阶段：
 1）例如一个集群结构如图：
 ![image-20210723225945963.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/f37cc54b8907c475ab61a3f927ccb179.png)
 现在，node1是主节点，其它两个节点是从节点。
-2）突然，node1发生了故障：
-![](assets/image-20210723230020574.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=Xrwt7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+2）突然，node1发生了故障
 宕机后的第一件事，需要重新选主，例如选中了node2：
 ![image-20210723230055974.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/5bb39d6dfee893a0638b88688b7a7b15.png)
 node2成为主节点后，会检测集群监控状态，发现：shard-1、shard-0没有副本节点。因此需要将node1上的数据迁移到node2、node3：
 ![image-20210723230216642.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/13ffbced076a7447616ae865c46b087a.png)
-![](assets/image-20210723230216642.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_9%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#id=uFB3r&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/dddaa19d99fa15aa8e46e569499b74b5.png)
 去cerebro查看也都正常
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/ElasticSearch集群/0cc32384d60d91a220a243840663df6c.png)

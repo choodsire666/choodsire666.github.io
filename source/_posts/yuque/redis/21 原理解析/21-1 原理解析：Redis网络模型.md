@@ -1,3 +1,11 @@
+---
+title: 21-1 原理解析：Redis网络模型
+urlname: no4zmm07qs3nhfci
+date: '2024-03-31 11:15:24'
+updated: '2024-03-31 11:16:01'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/21-1 原理解析：Redis网络模型/2b9a73a376dfade00258fe9df787f457.png'
+description: '笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 用户空间和内核态空间服务器大多都采用Linux系统，这里我们以Linux为例来讲解:ubuntu和Centos 都是Linux的发行版，发行版可以看成对linux包了一层壳，任何Lin...'
+---
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 用户空间和内核态空间
 

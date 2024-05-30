@@ -4,6 +4,7 @@ urlname: tw4e1oe6q4ixiqbo
 date: '2024-03-28 16:35:21'
 updated: '2024-03-28 16:35:44'
 description: 在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。1.DSL查询文档elasticsearch的查询依然是基...
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/cover.jpg'
 ---
 > 在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。
 

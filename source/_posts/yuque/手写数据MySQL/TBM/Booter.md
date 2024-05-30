@@ -3,6 +3,7 @@ title: Booter
 urlname: tbm_booter
 date: '2024-04-26 16:38:26'
 updated: '2024-04-26 16:38:26'
+cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Booter/cover.jpg'
 ---
 ## 前言
 ### 启动信息管理
