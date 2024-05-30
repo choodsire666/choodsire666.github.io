@@ -127,9 +127,9 @@
         }
       ],
       "realName": "常见的API类",
-      "relativePath": "\\Java\\常见的API类.md",
+      "relativePath": "/Java/常见的API类.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\Java"
+      "docPath": "source/_posts/yuque/Java"
     },
     {
       "id": 90161472,
@@ -150,9 +150,9 @@
         }
       ],
       "realName": "面向对象",
-      "relativePath": "\\Java\\面向对象.md",
+      "relativePath": "/Java/面向对象.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\Java"
+      "docPath": "source/_posts/yuque/Java"
     },
     {
       "id": 161666013,
@@ -2068,9 +2068,9 @@
         }
       ],
       "realName": "数据结构与集合源码",
-      "relativePath": "\\Java\\数据结构与集合源码.md",
+      "relativePath": "/Java/数据结构与集合源码.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\Java"
+      "docPath": "source/_posts/yuque/Java"
     },
     {
       "id": 161820140,
@@ -2871,9 +2871,9 @@
         }
       ],
       "realName": "索引库、文档操作",
-      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\索引库、文档操作.md",
+      "relativePath": "/SpringCloud/高级篇/分布式搜索引擎ElasticSearch/索引库、文档操作.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇/分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594331,
@@ -2902,9 +2902,9 @@
         }
       ],
       "realName": "DSL语法、搜索结果处理",
-      "relativePath": "\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch\\DSL语法、搜索结果处理.md",
+      "relativePath": "/SpringCloud/高级篇/分布式搜索引擎ElasticSearch/DSL语法、搜索结果处理.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\分布式搜索引擎ElasticSearch"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇/分布式搜索引擎ElasticSearch"
     },
     {
       "id": 163594190,
@@ -3037,9 +3037,9 @@
         }
       ],
       "realName": "Seata的部署和集成",
-      "relativePath": "\\SpringCloud\\高级篇\\Seata的部署和集成.md",
+      "relativePath": "/SpringCloud/高级篇/Seata的部署和集成.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
     },
     {
       "id": 163593697,
@@ -3064,9 +3064,9 @@
         }
       ],
       "realName": "分布式事务Seata",
-      "relativePath": "\\SpringCloud\\高级篇\\分布式事务Seata.md",
+      "relativePath": "/SpringCloud/高级篇/分布式事务Seata.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
     },
     {
       "id": 163593580,
@@ -3091,9 +3091,9 @@
         }
       ],
       "realName": "Redis集群部署指南",
-      "relativePath": "\\SpringCloud\\高级篇\\Redis集群部署指南.md",
+      "relativePath": "/SpringCloud/高级篇/Redis集群部署指南.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
     },
     {
       "id": 163593508,
@@ -3118,9 +3118,9 @@
         }
       ],
       "realName": "分布式缓存Redis(高级)",
-      "relativePath": "\\SpringCloud\\高级篇\\分布式缓存Redis(高级).md",
+      "relativePath": "/SpringCloud/高级篇/分布式缓存Redis(高级).md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
     },
     {
       "id": 163593411,
@@ -3145,9 +3145,9 @@
         }
       ],
       "realName": "RabbitMQ部署指南",
-      "relativePath": "\\SpringCloud\\高级篇\\RabbitMQ部署指南.md",
+      "relativePath": "/SpringCloud/高级篇/RabbitMQ部署指南.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
     },
     {
       "id": 155797132,
@@ -3189,9 +3189,9 @@
         }
       ],
       "realName": "消息中间件RabbitMQ(高级)",
-      "relativePath": "\\SpringCloud\\高级篇\\消息中间件RabbitMQ(高级).md",
+      "relativePath": "/SpringCloud/高级篇/消息中间件RabbitMQ(高级).md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇"
+      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
     },
     {
       "id": 161782200,
@@ -3408,9 +3408,9 @@
         }
       ],
       "realName": "4.Ribbon负载均衡",
-      "relativePath": "\\SpringCloud\\基本篇\\4.Ribbon负载均衡.md",
+      "relativePath": "/SpringCloud/基本篇/4.Ribbon负载均衡.md",
       "needUpdate": 1,
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
+      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
     },
     {
       "id": 161792700,
