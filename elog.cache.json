@@ -705,12 +705,12 @@
     {
       "id": 161830164,
       "doc_id": "ya82rih88q5s87o9",
-      "updated": 1717047224000,
+      "updated": 1717048670000,
       "properties": {
         "title": "SpringMVC",
         "urlname": "ya82rih88q5s87o9",
         "date": "2024-03-14 15:36:40",
-        "updated": "2024-05-30 13:33:44",
+        "updated": "2024-05-30 13:57:50",
         "description": "课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的..."
       },
       "catalog": [
@@ -720,8 +720,8 @@
         }
       ],
       "realName": "SpringMVC",
-      "relativePath": "\\SSM\\SpringMVC.md",
-      "docPath": "source\\_posts\\yuque\\SSM"
+      "relativePath": "/SSM/SpringMVC.md",
+      "docPath": "source/_posts/yuque/SSM"
     },
     {
       "id": 90163434,
@@ -3286,32 +3286,6 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
-      "id": 161825343,
-      "doc_id": "wnumbdx07cm8l44e",
-      "updated": 1710400689000,
-      "properties": {
-        "title": "7.Feign远程调用",
-        "urlname": "wnumbdx07cm8l44e",
-        "date": "2024-03-14 15:17:01",
-        "updated": "2024-03-14 15:18:09",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/7.Feign远程调用/1d54decb109d52d00795a9d6d77c6ffb.png",
-        "description": "2.Feign远程调用先来看我们以前利用RestTemplate发起远程调用的代码：存在下面的问题：•代码可读性差，编程体验不统一•参数复杂URL难以维护Feign是一个声明式的http客户端，官方地址：https://github.com/OpenFeign/feign其作用就是帮助我们优雅..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "wnumbdx07cm8l44e"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "wnumbdx07cm8l44e"
-        }
-      ],
-      "realName": "7.Feign远程调用",
-      "relativePath": "\\SpringCloud\\基本篇\\7.Feign远程调用.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
-    },
-    {
       "id": 161824369,
       "doc_id": "xx57hazlf9kgulgl",
       "updated": 1710400650000,
@@ -3335,32 +3309,6 @@
       ],
       "realName": "6.Nacos配置管理",
       "relativePath": "\\SpringCloud\\基本篇\\6.Nacos配置管理.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
-    },
-    {
-      "id": 161824023,
-      "doc_id": "fkyckmrv3pxqf8r4",
-      "updated": 1710400342000,
-      "properties": {
-        "title": "5.Nacos注册中心",
-        "urlname": "fkyckmrv3pxqf8r4",
-        "date": "2024-03-14 15:12:08",
-        "updated": "2024-03-14 15:12:22",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/5.Nacos注册中心/d3545c6de2f5a310ab60b100cbc21a62.png",
-        "description": "5.Nacos注册中心国内公司一般都推崇阿里巴巴的技术，比如注册中心，SpringCloudAlibaba也推出了一个名为Nacos的注册中心。5.1.认识和安装NacosNacos是阿里巴巴的产品，现在是SpringCloud中的一个组件。相比Eureka功能更加丰富，在国内受欢迎程度较高。..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "fkyckmrv3pxqf8r4"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "fkyckmrv3pxqf8r4"
-        }
-      ],
-      "realName": "5.Nacos注册中心",
-      "relativePath": "\\SpringCloud\\基本篇\\5.Nacos注册中心.md",
       "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
     },
     {
@@ -3599,6 +3547,30 @@
       "realName": "消息队列",
       "relativePath": "\\消息队列.md",
       "docPath": "source\\_posts\\yuque"
+    },
+    {
+      "id": 171963506,
+      "doc_id": "lpuuqw7sfzg0",
+      "updated": 1717220334000,
+      "properties": {
+        "title": "Nacos��װָ��",
+        "urlname": "lpuuqw7sfzg0",
+        "date": "2024-06-01 13:38:49",
+        "updated": "2024-06-01 13:38:54"
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "lpuuqw7sfzg0"
+        },
+        {
+          "title": "基本篇",
+          "doc_id": "lpuuqw7sfzg0"
+        }
+      ],
+      "realName": "Nacos��װָ��",
+      "relativePath": "/SpringCloud/基本篇/Nacos��װָ��.md",
+      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
     }
   ],
   "catalog": [
@@ -5184,7 +5156,7 @@
       "url": "",
       "prev_uuid": "tpE02gd-l1vz6Hw0",
       "sibling_uuid": "bEbttVX5IGogkpeK",
-      "child_uuid": "2K3qD4rUf1HPHmQJ",
+      "child_uuid": "KOilh4ldIcO4m6Vw",
       "parent_uuid": "tpE02gd-l1vz6Hw0",
       "doc_id": "",
       "level": 1,
@@ -5194,10 +5166,25 @@
     },
     {
       "type": "DOC",
+      "title": "Nacos��װָ��",
+      "uuid": "KOilh4ldIcO4m6Vw",
+      "url": "lpuuqw7sfzg0",
+      "prev_uuid": "LpyGiOqkKYrQHU16",
+      "sibling_uuid": "2K3qD4rUf1HPHmQJ",
+      "child_uuid": "",
+      "parent_uuid": "LpyGiOqkKYrQHU16",
+      "doc_id": 171963506,
+      "level": 2,
+      "id": 171963506,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
       "title": "1.认识微服务",
       "uuid": "2K3qD4rUf1HPHmQJ",
       "url": "springcloud01",
-      "prev_uuid": "LpyGiOqkKYrQHU16",
+      "prev_uuid": "KOilh4ldIcO4m6Vw",
       "sibling_uuid": "QPmeOHuezPjYCttp",
       "child_uuid": "",
       "parent_uuid": "LpyGiOqkKYrQHU16",
