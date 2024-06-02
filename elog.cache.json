@@ -3382,6 +3382,31 @@
       "realName": "消息队列",
       "relativePath": "\\消息队列.md",
       "docPath": "source\\_posts\\yuque"
+    },
+    {
+      "id": 161820140,
+      "doc_id": "auf4wvnuz7pk",
+      "updated": 1717317639000,
+      "properties": {
+        "title": "9.Docker实用篇",
+        "urlname": "auf4wvnuz7pk",
+        "date": "2024-03-14 14:57:03",
+        "updated": "2024-06-02 16:40:39",
+        "description": "Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署..."
+      },
+      "catalog": [
+        {
+          "title": "SpringCloud",
+          "doc_id": "auf4wvnuz7pk"
+        },
+        {
+          "title": "基本篇",
+          "doc_id": "auf4wvnuz7pk"
+        }
+      ],
+      "realName": "9.Docker实用篇",
+      "relativePath": "/SpringCloud/基本篇/9.Docker实用篇.md",
+      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
     }
   ],
   "catalog": [
@@ -5222,7 +5247,7 @@
       "url": "",
       "prev_uuid": "LpyGiOqkKYrQHU16",
       "sibling_uuid": "",
-      "child_uuid": "mK_bUXL7DR5ygbLD",
+      "child_uuid": "DllnHh04VYHPxD8C",
       "parent_uuid": "tpE02gd-l1vz6Hw0",
       "doc_id": "",
       "level": 1,
@@ -5232,26 +5257,11 @@
     },
     {
       "type": "DOC",
-      "title": "Sentinel工作原理",
-      "uuid": "mK_bUXL7DR5ygbLD",
-      "url": "nqc4fklsd6fv5pk7",
-      "prev_uuid": "bEbttVX5IGogkpeK",
-      "sibling_uuid": "DllnHh04VYHPxD8C",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163594032,
-      "level": 2,
-      "id": 163594032,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
       "title": "微服务保护Sentinel",
       "uuid": "DllnHh04VYHPxD8C",
       "url": "lgg8wwk93pd4lw68",
-      "prev_uuid": "mK_bUXL7DR5ygbLD",
-      "sibling_uuid": "JEGAyOMVwHacmR3b",
+      "prev_uuid": "bEbttVX5IGogkpeK",
+      "sibling_uuid": "mK_bUXL7DR5ygbLD",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
       "doc_id": 163593916,
@@ -5262,10 +5272,25 @@
     },
     {
       "type": "DOC",
+      "title": "Sentinel工作原理",
+      "uuid": "mK_bUXL7DR5ygbLD",
+      "url": "nqc4fklsd6fv5pk7",
+      "prev_uuid": "DllnHh04VYHPxD8C",
+      "sibling_uuid": "JEGAyOMVwHacmR3b",
+      "child_uuid": "",
+      "parent_uuid": "bEbttVX5IGogkpeK",
+      "doc_id": 163594032,
+      "level": 2,
+      "id": 163594032,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
       "title": "消息中间件RabbitMQ(高级)",
       "uuid": "JEGAyOMVwHacmR3b",
       "url": "yzchuzvgkp5t2qgg",
-      "prev_uuid": "DllnHh04VYHPxD8C",
+      "prev_uuid": "mK_bUXL7DR5ygbLD",
       "sibling_uuid": "FXl6Wh5SxbdYEo9a",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
