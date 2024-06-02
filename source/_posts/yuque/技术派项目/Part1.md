@@ -1,11 +1,3 @@
----
-title: Part1
-urlname: readme
-date: '2024-04-26 16:06:01'
-updated: '2024-04-26 16:29:38'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Part1/0b9f381d9070c65bb051fe33331c3410.png'
-description: 功能整理1 前言创作来源于自己项目设计能力太弱，利用技术派深入项目设计。在阅读此整合内容前，你需要下面的能力： 理解Spring的基本知识——IoC、AOP 使用Spring Boot配合MyBatis操作MySQL SQL的基本使用 能够使用Spring Boot搭建一个简单的人员的增删改查...
----
 # 功能整理
 ### 1 前言
 创作来源于自己项目设计能力太弱，利用技术派深入项目设计。

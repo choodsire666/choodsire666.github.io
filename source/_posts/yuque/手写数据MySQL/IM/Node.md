@@ -3,7 +3,6 @@ title: Node
 urlname: im_node
 date: '2024-04-26 16:38:24'
 updated: '2024-04-26 16:38:26'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Node/cover.jpg'
 ---
 ### 基本结构
 ```latex

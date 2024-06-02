@@ -4,7 +4,6 @@ urlname: vk0vy43agufm
 date: '2024-04-26 16:38:27'
 updated: '2024-04-27 13:44:37'
 description: '前言**Parser** 实现了对类 **SQL** 语句的结构化解析，将语句中包含的信息封装为对应语句的类，这些类可见 **top.guoziyang.mydb.backend.parser.statement** 包。<begin statement>     begin [isolati...'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/SQL解析器/cover.jpg'
 ---
 ## 前言
 **Parser** 实现了对类 **SQL** 语句的结构化解析，将语句中包含的信息封装为对应语句的类，这些类可见 **top.guoziyang.mydb.backend.parser.statement** 包。

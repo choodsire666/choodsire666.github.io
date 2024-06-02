@@ -1,11 +1,3 @@
----
-title: 19-1 多级缓存：Caffeine实现JVM进程缓存
-urlname: lc0ggswhhlgyymau
-date: '2024-03-31 11:12:25'
-updated: '2024-03-31 11:12:37'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/19-1 多级缓存：Caffeine实现JVM进程缓存/a7b9bdb0f7b4bd9a680010de0dcab562.png'
-description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 初识Caffeine缓存在日常开发中启动至关重要的作用，由于是存储在内存中，数据的读取速度是非常快的，能大量减少对数据库的访问，减少数据库的压力。我们把缓存分为两类： 分布式缓存，例如...
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 初识Caffeine
 缓存在日常开发中启动至关重要的作用，由于是存储在内存中，数据的读取速度是非常快的，能大量减少对数据库的访问，减少数据库的压力。我们把缓存分为两类：

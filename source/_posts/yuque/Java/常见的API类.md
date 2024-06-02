@@ -1,11 +1,3 @@
----
-title: 常见的API类
-urlname: ggstmhn7xxix66dq
-date: '2024-03-14 11:07:06'
-updated: '2024-05-29 15:09:55'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png'
-description: 1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String("abc")和 String st...
----
 
 ![3a604045-eb03-4ef2-a0a9-7bc65b1a24ed.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/21ba6af43f710200c17d43739d972908.png)
 ## 字符串相关类之不可变字符序列String

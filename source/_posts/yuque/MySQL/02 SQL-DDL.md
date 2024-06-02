@@ -1,11 +1,3 @@
----
-title: 02 SQL-DDL
-urlname: ryb6mifnakmr6okx
-date: '2024-03-13 17:27:41'
-updated: '2024-04-14 16:31:34'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/02%20SQL-DDL/3988a5032b96a18ed8f37b39fe74455f.png'
-description: 1. SQL简介SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一标准 。1.1. SQL通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。SQL语句可以单行或多行书写，以分号结尾。S...
----
 # SQL简介
 SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一**标准** 。
 ## SQL通用语法

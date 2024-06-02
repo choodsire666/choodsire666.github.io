@@ -1,11 +1,3 @@
----
-title: Kubernetes
-urlname: nq8yeuc58t3h09zh
-date: '2024-04-04 14:20:57'
-updated: '2024-04-05 16:15:34'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Kubernetes/ef0ad2457a4ed077fd9eaf6010da6806.png'
-description: Kubernetes介绍1.1 应用方式部署改变在部署应用程序的方式上，主要经历了3个时代传统部署：互联网早期，直接将应用部署在物理机上优点 简单，不需要其他技术的参与缺点 不能为程序定义资源使用边界，很难合理分配计算机资源，而且程序之间容易产生影响虚拟化部署：可以在一台物理机上运行多个虚拟机...
----
 ## Kubernetes介绍
 ### 1.1 应用方式部署改变
 在部署应用程序的方式上，主要经历了3个时代

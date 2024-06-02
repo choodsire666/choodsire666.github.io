@@ -4,7 +4,6 @@ urlname: nqc4fklsd6fv5pk7
 date: '2024-03-28 16:33:31'
 updated: '2024-03-28 16:33:48'
 description: Sentinel 基本概念资源资源是 Sentinel 的关键概念。它可以是 Java 应用程序中的任何内容，例如，由应用程序提供的服务，或由应用程序调用的其它应用提供的服务，甚至可以是一段代码。在接下来的文档中，我们都会用资源来描述代码块。只要通过 Sentinel API 定义的代码，就是...
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工作原理/cover.jpg'
 ---
 ## Sentinel 基本概念
 ### 资源
@@ -15,7 +14,7 @@ cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工
 ## Sentinel 功能和设计理念
 ### 流量控制
 流量控制在网络传输中是一个常用的概念，它用于调整网络包的发送数据。然而，从系统稳定性角度考虑，在处理请求的速度上，也有非常多的讲究。任意时间到来的请求往往是随机不可控的，而系统的处理能力是有限的。我们需要根据系统的处理能力对流量进行控制。Sentinel 作为一个调配器，可以根据需要把随机的请求调整成合适的形状，如下图所示：
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工作原理/ed39785f4e7473772425e3dcc4b4737f.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1673859686867-cbc4a0ef-8fa0-4ef0-a675-57c8e1570649.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_31%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23fefefe&clientId=ub4663306-a537-4&from=paste&id=u8eda77e2&originHeight=500&originWidth=1100&originalType=url&ratio=1&rotation=0&showTitle=false&size=119417&status=done&style=none&taskId=ua6a1d8d6-babb-4a9b-b4fe-612cac7d85d&title=)
 流量控制有以下几个角度:
 
 - 资源的调用关系，例如资源的调用链路，资源和资源之间的关系；
@@ -26,7 +25,7 @@ Sentinel 的设计理念是让您自由选择控制的角度，并进行灵活�
 ### 熔断降级
 #### 什么是熔断降级
 除了流量控制以外，降低调用链路中的不稳定资源也是 Sentinel 的使命之一。由于调用关系的复杂性，如果调用链路中的某个资源出现了不稳定，最终会导致请求发生堆积。这个问题和 [Hystrix](https://github.com/Netflix/Hystrix/wiki#what-problem-does-hystrix-solve) 里面描述的问题是一样的。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工作原理/05e1a04f243476085f71294c796b53c7.png)
+![](https://cdn.nlark.com/yuque/0/2023/png/1169676/1673859687062-fffa865f-ee0b-45e6-905c-8cf445660a33.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f17c72&clientId=ub4663306-a537-4&from=paste&id=u6625d10f&originHeight=708&originWidth=1132&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ub4c3e27e-031a-491f-8518-364e470f82f&title=)
 Sentinel 和 Hystrix 的原则是一致的: 当调用链路中某个资源出现不稳定，例如，表现为 timeout，异常比例升高的时候，则对这个资源的调用进行限制，并让请求快速失败，避免影响到其它的资源，最终产生雪崩的效果。
 #### 熔断降级设计理念
 在限制的手段上，Sentinel 和 Hystrix 采取了完全不一样的方法。
@@ -55,9 +54,9 @@ Sentinel 同时提供[系统维度的自适应保护能力](https://sentinelguar
 - SystemSlot 则通过系统的状态，例如 load1 等，来控制总的入口流量；
 
 总体的框架如下:
-![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工作原理/d6aca7f203295e7d35a9282f2f782975.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1673859754397-cd033ce1-d3c9-44ca-921e-c4487ad3b851.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_81%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23bef494&clientId=ub4663306-a537-4&from=paste&id=u6acf637f&originHeight=1961&originWidth=2830&originalType=url&ratio=1&rotation=0&showTitle=false&size=657387&status=done&style=none&taskId=ubbd65ef9-5a87-482c-84ac-4c9ab106f6b&title=)
 Sentinel 将 ProcessorSlot 作为 SPI 接口进行扩展（1.7.2 版本以前 SlotChainBuilder 作为 SPI），使得 Slot Chain 具备了扩展的能力。您可以自行加入自定义的 slot 并编排 slot 间的顺序，从而可以给 Sentinel 添加自定义的功能。
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Sentinel工作原理/d6f0ed0527602d81e86143c3836addc6.png)
+![](https://cdn.nlark.com/yuque/0/2023/png/1169676/1673859733145-702233eb-05e4-4c58-a859-17410bbd8d1d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23f2e7dd&clientId=ub4663306-a537-4&from=paste&id=ua05502f0&originHeight=358&originWidth=1128&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ua568b0e5-768f-472c-8155-c70615435cf&title=)
 ## 更多
 
 - [Sentinel 核心类解析](https://github.com/alibaba/Sentinel/wiki/Sentinel-%E6%A0%B8%E5%BF%83%E7%B1%BB%E8%A7%A3%E6%9E%90)

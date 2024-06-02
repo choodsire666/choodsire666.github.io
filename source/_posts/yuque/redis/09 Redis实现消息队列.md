@@ -1,11 +1,3 @@
----
-title: 09 Redis实现消息队列
-urlname: crgnles3h9qs8wbb
-date: '2024-03-31 11:06:10'
-updated: '2024-03-31 11:07:14'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/321f16f59ce8e471ccc6723efbf7e176.png'
-description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 认识消息队列什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：消息队列：存储和管理消息，也被称为消息代理（Message Broker）生产者：发送消息到消...
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 认识消息队列
 什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：
@@ -14,7 +6,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 - **生产者**：发送消息到消息队列
 - **消费者**：从消息队列获取消息并处理消息
 
-![1653574849336.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/321f16f59ce8e471ccc6723efbf7e176.png)
+![1653574849336.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035717181-8b47a0ff-5513-4fd4-889c-e51fc9e98c3c.png#averageHue=%23f8f6f2&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u71112072&originHeight=377&originWidth=1128&originalType=binary&ratio=1&rotation=0&showTitle=false&size=90473&status=error&style=none&taskId=uf3c338db-7534-4334-91d0-00700638636&title=)
 
 使用队列的好处在于**解耦：**所谓解耦，举一个生活中的例子就是：快递员(生产者)把快递放到快递柜里边(Message Queue)去，我们(消费者)从快递柜里边去拿东西，这就是一个异步，如果耦合，那么这个快递员相当于直接把快递交给你，这事固然好，但是万一你不在家，那么快递员就会一直等你，这就浪费了快递员的时间，所以这种思想在我们日常开发中，是非常有必要的。
 这种场景在我们秒杀中就变成了：我们下单之后，利用redis去进行校验下单条件，再通过队列把消息发送出去，然后再启动一个线程去消费这个消息，完成解耦，同时也加快我们的响应速度。
@@ -24,7 +16,7 @@ description: 笔记来源：黑马程序员Redis入门到实战教程，深度�
 消息队列（Message Queue），字面意思就是存放消息的队列。而Redis的list数据结构是一个双向链表，很容易模拟出队列效果。
 队列是入口和出口不在一边，因此我们可以利用：LPUSH 结合 RPOP、或者 RPUSH 结合 LPOP来实现。
 不过要注意的是，当队列中没有消息时RPOP或LPOP操作会返回null，并不像JVM的阻塞队列那样会阻塞并等待消息。因此这里应该使用BRPOP或者BLPOP来实现阻塞效果。
-![1653575176451.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/e31c3b16f1d55475f19398af9ef9d1b0.png)
+![1653575176451.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035733158-2fcdab7e-3f92-4e10-9532-de647874c7ca.png#averageHue=%23c3c693&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=ub6df21a2&originHeight=181&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&size=61540&status=error&style=none&taskId=u0e1ed61c-be19-454b-9a76-be598c5577a&title=)
 
 基于List的消息队列有哪些优缺点？
 **优点**：
@@ -42,7 +34,7 @@ PubSub（发布订阅）是Redis2.0版本引入的消息传递模型。顾名思
 **SUBSCRIBE channel [channel] **：订阅一个或多个频道
 **PUBLISH channel msg **：向一个频道发送消息
 **PSUBSCRIBE pattern[pattern] **：订阅与pattern格式匹配的所有频道
-![1653575506373.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/e034f20bfb37aa12d05af2ce0298ca9b.png)
+![1653575506373.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035743818-242cdb17-46f8-44dc-95e0-9d22345e8e7e.png#averageHue=%23fcfafa&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=ub77c9869&originHeight=451&originWidth=1377&originalType=binary&ratio=1&rotation=0&showTitle=false&size=102450&status=error&style=none&taskId=ubd7d36ca-89f2-4ea4-9746-12a1dec1ce4&title=)
 
 基于PubSub的消息队列有哪些优缺点？
 **优点：**
@@ -57,19 +49,19 @@ PubSub（发布订阅）是Redis2.0版本引入的消息传递模型。顾名思
 ## 4 基于Stream的消息队列
 Stream 是 Redis 5.0 引入的一种新数据类型，可以实现一个功能非常完善的消息队列。
 发送消息的命令：
-![1653577301737.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/2e32ff7d350eddfef1e2d079b88cc87c.png)
+![1653577301737.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035759466-0a91ba72-6453-4199-896d-b40cc0e678d9.png#averageHue=%23122d3e&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=ue67ed6e1&originHeight=207&originWidth=1507&originalType=binary&ratio=1&rotation=0&showTitle=false&size=251118&status=error&style=none&taskId=u07486c23-dcc1-413e-9bbe-17e8bd5c124&title=)
 
 例如：
-![1653577349691.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/81869ee6ac1f2fe6fb4a96db1fba15be.png)
+![1653577349691.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035766719-009fdf3f-cf0e-4d85-92ac-e172aad61b89.png#averageHue=%23052033&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=163&id=uf6dd3e7f&originHeight=189&originWidth=1508&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115440&status=error&style=none&taskId=ue15c0e7f-d1a5-42c2-9ca5-76ff094cb06&title=&width=1303)
 
 读取消息的方式之一：XREAD
-![1653577445413.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/52c2271b0a34cd57edc551e47eb95aed.png)
+![1653577445413.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035775886-37efa9d8-71f1-4d29-8495-2e81580403ba.png#averageHue=%23132b3f&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&height=268&id=uefffedbb&originHeight=296&originWidth=1418&originalType=binary&ratio=1&rotation=0&showTitle=false&size=324972&status=error&style=none&taskId=ub67a812a-e1e5-4a65-8cd8-6317412e2ca&title=&width=1285)
 
 例如，使用XREAD读取第一个消息：
-![1653577643629.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/23560aa92e7e6fd367494939992265c7.png)
+![1653577643629.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035785098-c45be5f3-2343-4c0e-9475-264f08c94986.png#averageHue=%23021e31&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u4a4ecbc4&originHeight=250&originWidth=1093&originalType=binary&ratio=1&rotation=0&showTitle=false&size=21482&status=error&style=none&taskId=u9fb63b26-2794-44c0-b66b-42848b002a9&title=)
 
 XREAD阻塞方式，读取最新的消息：
-![1653577659166.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/2278a6b2ab9c47d085ec6367ec75435e.png)
+![1653577659166.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035795482-3a9d1e85-46a6-4837-a2d6-47390e1facf3.png#averageHue=%23031e32&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=ub4de59c0&originHeight=106&originWidth=978&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10980&status=error&style=none&taskId=u12cf54fa-6ebc-4d42-a28f-9e701e4f16d&title=)
 
 在业务开发中，我们可以循环的调用XREAD阻塞方式来查询最新消息，从而实现持续监听队列的效果，伪代码如下
 ```java
@@ -93,7 +85,7 @@ STREAM类型消息队列的XREAD命令特点：
 - 有消息漏读的风险
 ## 5 基于Stream的消息队列-消费者组
 消费者组（Consumer Group）：将多个消费者划分到一个组中，监听同一个队列。具备下列特点：
-![1653577801668.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/bb701fbe547e7561ae344b8f1846b73e.png)
+![1653577801668.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035817331-0e06a588-0f3d-42f4-b7b4-523ca928f47b.png#averageHue=%23f9f8f7&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u99d3b0ef&originHeight=327&originWidth=979&originalType=binary&ratio=1&rotation=0&showTitle=false&size=73868&status=error&style=none&taskId=u1f901af2-4c25-49ac-a8b4-0daa0649a51&title=)
 
 **创建消费者组**
 ```java
@@ -172,7 +164,7 @@ STREAM类型消息队列的XREADGROUP命令特点：
 - 有消息确认机制，保证消息至少被消费一次
 
 最后我们来个小对比
-![1653578560691.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/09 Redis实现消息队列/c81a3a88d646bbd909c83b1e102cbab1.png)
+![1653578560691.png](https://cdn.nlark.com/yuque/0/2022/png/22334924/1665035868026-55886ed0-648a-42dc-b90c-f64a6b7da200.png#averageHue=%23d9c4c3&clientId=u94722be3-b773-4&errorMessage=unknown%20error&from=drop&id=u60dada44&originHeight=426&originWidth=968&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59907&status=error&style=none&taskId=u1aa71aa7-fd2d-48a1-a640-fcb8459be03&title=)
 ## 6 Stream结构作为消息队列实现异步秒杀下单
 需求：
 

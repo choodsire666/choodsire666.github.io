@@ -1,11 +1,3 @@
----
-title: 18 Redis分片
-urlname: qqxngbrgz4a3d50p
-date: '2024-03-31 11:09:06'
-updated: '2024-03-31 11:10:46'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/18 Redis分片/dc3b5fa097e1762d3536db6066bcb2be.png'
-description: '笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 搭建分片集群主从和哨兵可以解决高可用、高并发读的问题。但是依然有两个问题没有解决： 海量数据存储问题  高并发写的问题 使用分片集群可以解决上述问题，如图:分片集群特征： 集群中有多个...'
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 搭建分片集群
 主从和哨兵可以解决高可用、高并发读的问题。但是依然有两个问题没有解决：
@@ -119,7 +111,7 @@ redis-cli -p 7001 cluster nodes
 具体命令如下：
 
 建立连接：
-![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664532312805-9892d1d5-e713-47e6-a0b0-26e1b085c3d1.png#averageHue=%233c4a4d&clientId=u64bd80a6-af81-4&errorMessage=unknown%20error&id=DG7iF&originHeight=37&originWidth=883&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=ua6983adc-cd7a-4188-9ab5-ad3de21b6bc&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/18 Redis分片/c8fa07cbd6e5f56a780c06855da5a5df.png)
 
 得到下面的反馈：
 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/18 Redis分片/098e225c0a92cb3b871bdd364ff56f0b.png)

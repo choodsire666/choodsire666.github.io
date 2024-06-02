@@ -4,7 +4,6 @@ urlname: 5108f05c89e919710e1fdea889cce09f
 date: '2024-04-26 16:38:40'
 updated: '2024-05-13 23:02:26'
 description: 前提概要什么是MVCC？MVCCMVCC，全称 Multi-Version Concurrency Control ，即多版本并发控制。MVCC 是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。MVCC 在 MySQL InnoDB 中的实现主要...
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/MVCC版本控制/cover.jpg'
 ---
 ## 前提概要
 ### 什么是MVCC？

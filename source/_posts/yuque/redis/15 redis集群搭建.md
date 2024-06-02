@@ -1,11 +1,3 @@
----
-title: 15 redis集群搭建
-urlname: nsr40eau65k75qa0
-date: '2024-03-31 11:08:58'
-updated: '2024-04-15 16:19:58'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/15 redis集群搭建/d5c8984c3b5bec7a470d6b8664cf6b31.png'
-description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1 单机安装Redis首先需要安装Redis所需要的依赖：yum install -y g...
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 基于CentOS7下的Redis集群教程，包括：
 

@@ -3,7 +3,6 @@ title: Server 和 Client的实现
 urlname: ae79a7f61ab73df79279a251026c70c2
 date: '2024-04-26 16:38:47'
 updated: '2024-04-27 13:40:04'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Server 和 Client的实现/cover.jpg'
 ---
 Server 和 Client，都是使用了Java 的 socket；这一块内容属于 Java 网络编程的，可以通过 [二哥的进阶之路]() 学习；
 ## Server

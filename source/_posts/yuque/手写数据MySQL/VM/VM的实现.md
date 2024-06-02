@@ -4,7 +4,6 @@ urlname: epraosr1r73g
 date: '2024-04-26 16:38:33'
 updated: '2024-04-27 13:45:39'
 description: 'VM的基本定义VM 层通过 VersionManager 接口，向上层提供功能，如下：public interface VersionManager {     byte[] read(long xid, long uid) throws Exception;     long insert(...'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/VM的实现/cover.jpg'
 ---
 ## VM的基本定义
 VM 层通过 VersionManager 接口，向上层提供功能，如下：

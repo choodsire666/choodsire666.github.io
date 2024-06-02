@@ -4,7 +4,6 @@ urlname: mu96n728o1hw
 date: '2024-04-26 16:38:46'
 updated: '2024-04-27 13:39:51'
 description: '前言在MYDB 中传输数据使用了一种特殊的二进制格式，用于客户端和通信端之间的通信。在数据的传输和接受之前，会通过Package进行数据的加密以及解密：**[Flag] [Data]**若 flag 为 0，表示发送的是数据，那么 data 即为这份数据本身，err 就为空若 flag 为 1...'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/C_S通信/cover.jpg'
 ---
 ## 前言
 在MYDB 中传输数据使用了一种特殊的二进制格式，用于客户端和通信端之间的通信。在数据的传输和接受之前，会通过Package进行数据的加密以及解密：

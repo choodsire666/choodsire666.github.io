@@ -4,7 +4,6 @@ urlname: qcrge7r13lkbwlg9
 date: '2024-03-19 11:53:42'
 updated: '2024-05-27 23:51:58'
 description: Git概述版本系统SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而开发人员工作的时候，用的都是自己的电脑，所以首先要从中央服务器下载最新的版本，然后开发，开发完后，需要把自己开发的代码提交到中央服务器。集中式版本控制工具缺点：服务器单点故障、容错性差Git 是分布式版本控制系统（...
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Git、Linux、Docker/cover.jpg'
 ---
 ## Git概述
 ### 版本系统
