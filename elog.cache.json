@@ -428,49 +428,6 @@
       "docPath": "source\\_posts\\yuque\\工具使用"
     },
     {
-      "id": 161819746,
-      "doc_id": "springcloud01",
-      "updated": 1716883870000,
-      "properties": {
-        "title": "1.认识微服务",
-        "urlname": "springcloud01",
-        "date": "2024-03-14 14:55:27",
-        "updated": "2024-05-28 16:11:10",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/1.认识微服务/f157fd7db76249db77879ea3f2e2de06.png",
-        "description": "1.认识微服务随着互联网行业的发展，对服务的要求也越来越高，服务架构也从单体架构逐渐演变为现在流行的微服务架构。这些架构之间有怎样的差别呢？1.0.学习目标了解微服务架构的优缺点1.1.单体架构单体架构：将业务的所有功能集中在一个项目中开发，打成一个包部署。单体架构的优缺点如下：优点：架构简单..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "springcloud01"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "springcloud01"
-        }
-      ],
-      "realName": "1.认识微服务",
-      "relativePath": "\\SpringCloud\\基本篇\\1.认识微服务.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
-    },
-    {
-      "id": 169310275,
-      "doc_id": "rud7yqbfaig1h5m7",
-      "updated": 1716430300000,
-      "properties": {
-        "title": "工作周报",
-        "urlname": "rud7yqbfaig1h5m7",
-        "date": "2024-05-12 12:02:22",
-        "updated": "2024-05-23 10:11:40",
-        "description": "日期：2024-5-12本周重点1.任务进展本周完成了哪些任务、整体进度如何。本周完成了XXX需求开发，已经提测。项目整体进度比预期延迟1d，预计下周三可以开始正式测试。2.相关数据呈现相关数据以及背后的原因（如有）。本周日均 UV 3000，同比上周上涨20%。原因是周二投放的运营活动生效，...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/工作周报/cover.jpg"
-      },
-      "catalog": [],
-      "realName": "工作周报",
-      "relativePath": "\\工作周报.md",
-      "docPath": "source\\_posts\\yuque"
-    },
-    {
       "id": 90161528,
       "doc_id": "hug0bw",
       "updated": 1716368390000,
@@ -485,23 +442,6 @@
       "catalog": [],
       "realName": "疑问",
       "relativePath": "\\疑问.md",
-      "docPath": "source\\_posts\\yuque"
-    },
-    {
-      "id": 169310315,
-      "doc_id": "tl585wa8vvht98bd",
-      "updated": 1716426849000,
-      "properties": {
-        "title": "工作日报",
-        "urlname": "tl585wa8vvht98bd",
-        "date": "2024-05-12 12:03:18",
-        "updated": "2024-05-23 09:14:09",
-        "description": "💡  字多 ≠ 有价值      周报不是为了表现工作量，而是给团队提供最基本的“信息透明”。尽量挑选重要信息来写。日期：2024-5-131.任务进展今天完成了哪些任务、整体进度如何。今天完成了XXX需求开发，已经提测。项目整体进度比预期延迟1d，预计下周三可以开始正式测试。思考有什么想法...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/工作日报/cover.jpg"
-      },
-      "catalog": [],
-      "realName": "工作日报",
-      "relativePath": "\\工作日报.md",
       "docPath": "source\\_posts\\yuque"
     },
     {
@@ -2073,28 +2013,6 @@
       "docPath": "source/_posts/yuque/Java"
     },
     {
-      "id": 161820140,
-      "doc_id": "auf4wvnuz7pk",
-      "updated": 1712231037000,
-      "properties": {
-        "title": "Docker实用篇",
-        "urlname": "auf4wvnuz7pk",
-        "date": "2024-03-14 14:57:03",
-        "updated": "2024-04-04 19:43:57",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Docker实用篇/ce2a14677c0bb77438302dbbd2e021e3.png",
-        "description": "Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "auf4wvnuz7pk"
-        }
-      ],
-      "realName": "Docker实用篇",
-      "relativePath": "\\SpringCloud\\Docker实用篇.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud"
-    },
-    {
       "id": 162405726,
       "doc_id": "mh6nqsrgn902qzd0",
       "updated": 1712388508000,
@@ -2815,36 +2733,6 @@
       "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
     },
     {
-      "id": 163594692,
-      "doc_id": "wk26fg6mrpxznqa5",
-      "updated": 1711615075000,
-      "properties": {
-        "title": "1.开发篇（脚手架下载）",
-        "urlname": "wk26fg6mrpxznqa5",
-        "date": "2024-03-28 16:37:30",
-        "updated": "2024-03-28 16:37:55",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/1.开发篇（脚手架下载）/277661a671ab9a2c9ce6811abfce6157.gif",
-        "description": "前言近年来，云原生、Kubernetes、微服务、SpringCloud 这些名词在技术圈内不绝于耳，数据显示，使用 SpringCloud 作为微服务的框架，同时选择 Kubernetes 作为应用与基础设施运维底座的团队越来越多，这二者的搭档基本上成为了业界的主流配搭。为了顺应这一趋势，E..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "wk26fg6mrpxznqa5"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "wk26fg6mrpxznqa5"
-        },
-        {
-          "title": "SpringCloud集成K8S",
-          "doc_id": "wk26fg6mrpxznqa5"
-        }
-      ],
-      "realName": "1.开发篇（脚手架下载）",
-      "relativePath": "\\SpringCloud\\高级篇\\SpringCloud集成K8S\\1.开发篇（脚手架下载）.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\高级篇\\SpringCloud集成K8S"
-    },
-    {
       "id": 163594258,
       "doc_id": "wgnodz6eoyltmyx6",
       "updated": 1711614922000,
@@ -2862,18 +2750,18 @@
           "doc_id": "wgnodz6eoyltmyx6"
         },
         {
-          "title": "高级篇",
+          "title": "基本篇",
           "doc_id": "wgnodz6eoyltmyx6"
         },
         {
-          "title": "分布式搜索引擎ElasticSearch",
+          "title": "11.ElasticSearch",
           "doc_id": "wgnodz6eoyltmyx6"
         }
       ],
       "realName": "索引库、文档操作",
-      "relativePath": "/SpringCloud/高级篇/分布式搜索引擎ElasticSearch/索引库、文档操作.md",
+      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/索引库、文档操作.md",
       "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇/分布式搜索引擎ElasticSearch"
+      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
     },
     {
       "id": 163594331,
@@ -2893,18 +2781,18 @@
           "doc_id": "tw4e1oe6q4ixiqbo"
         },
         {
-          "title": "高级篇",
+          "title": "基本篇",
           "doc_id": "tw4e1oe6q4ixiqbo"
         },
         {
-          "title": "分布式搜索引擎ElasticSearch",
+          "title": "11.ElasticSearch",
           "doc_id": "tw4e1oe6q4ixiqbo"
         }
       ],
       "realName": "DSL语法、搜索结果处理",
-      "relativePath": "/SpringCloud/高级篇/分布式搜索引擎ElasticSearch/DSL语法、搜索结果处理.md",
+      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/DSL语法、搜索结果处理.md",
       "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇/分布式搜索引擎ElasticSearch"
+      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
     },
     {
       "id": 163594190,
@@ -3260,32 +3148,6 @@
       "docPath": "source\\_posts\\yuque\\消息队列"
     },
     {
-      "id": 161825610,
-      "doc_id": "ti46goms25o2fm6g",
-      "updated": 1710400726000,
-      "properties": {
-        "title": "8.Gateway服务网关",
-        "urlname": "ti46goms25o2fm6g",
-        "date": "2024-03-14 15:18:08",
-        "updated": "2024-03-14 15:18:46",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/8.Gateway服务网关/acb55a93b5ce87b415a10b38452458c3.png",
-        "description": "3.Gateway服务网关Spring Cloud Gateway 是 Spring Cloud 的一个全新项目，该项目是基于 Spring 5.0，Spring Boot 2.0 和 Project Reactor 等响应式编程和事件流技术开发的网关，它旨在为微服务架构提供一种简单有效的统一..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "ti46goms25o2fm6g"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "ti46goms25o2fm6g"
-        }
-      ],
-      "realName": "8.Gateway服务网关",
-      "relativePath": "\\SpringCloud\\基本篇\\8.Gateway服务网关.md",
-      "docPath": "source\\_posts\\yuque\\SpringCloud\\基本篇"
-    },
-    {
       "id": 161824369,
       "doc_id": "xx57hazlf9kgulgl",
       "updated": 1710400650000,
@@ -3332,33 +3194,6 @@
       "realName": "MyBatis",
       "relativePath": "\\SSM\\MyBatis.md",
       "docPath": "source\\_posts\\yuque\\SSM"
-    },
-    {
-      "id": 161820852,
-      "doc_id": "fq0g987sh1b1zndz",
-      "updated": 1710841981000,
-      "properties": {
-        "title": "4.Ribbon负载均衡",
-        "urlname": "fq0g987sh1b1zndz",
-        "date": "2024-03-14 15:00:04",
-        "updated": "2024-03-19 17:53:01",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/4.Ribbon负载均衡/99bdc624b44c70870126962ad2f40f11.png",
-        "description": "4.Ribbon负载均衡上一节中，我们添加了@LoadBalanced注解，即可实现负载均衡功能，这是什么原理呢？4.1.负载均衡原理SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载均衡功能的。那么我们发出的请求明明是http://userservice/user/..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "fq0g987sh1b1zndz"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "fq0g987sh1b1zndz"
-        }
-      ],
-      "realName": "4.Ribbon负载均衡",
-      "relativePath": "/SpringCloud/基本篇/4.Ribbon负载均衡.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
     },
     {
       "id": 161792700,
@@ -3547,30 +3382,6 @@
       "realName": "消息队列",
       "relativePath": "\\消息队列.md",
       "docPath": "source\\_posts\\yuque"
-    },
-    {
-      "id": 171963506,
-      "doc_id": "lpuuqw7sfzg0",
-      "updated": 1717220334000,
-      "properties": {
-        "title": "Nacos��װָ��",
-        "urlname": "lpuuqw7sfzg0",
-        "date": "2024-06-01 13:38:49",
-        "updated": "2024-06-01 13:38:54"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "lpuuqw7sfzg0"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "lpuuqw7sfzg0"
-        }
-      ],
-      "realName": "Nacos��װָ��",
-      "relativePath": "/SpringCloud/基本篇/Nacos��װָ��.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
     }
   ],
   "catalog": [
@@ -3580,7 +3391,7 @@
       "uuid": "joc8sWOcvrLRI1Us",
       "url": "hug0bw",
       "prev_uuid": "",
-      "sibling_uuid": "HzIrnnc3In2dTU_t",
+      "sibling_uuid": "E9WzsVdcCkHhqPEC",
       "child_uuid": "",
       "parent_uuid": "",
       "doc_id": 90161528,
@@ -3591,40 +3402,10 @@
     },
     {
       "type": "DOC",
-      "title": "工作日报",
-      "uuid": "HzIrnnc3In2dTU_t",
-      "url": "tl585wa8vvht98bd",
-      "prev_uuid": "joc8sWOcvrLRI1Us",
-      "sibling_uuid": "lmBHbMgOhq0HKKnj",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 169310315,
-      "level": 0,
-      "id": 169310315,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "工作周报",
-      "uuid": "lmBHbMgOhq0HKKnj",
-      "url": "rud7yqbfaig1h5m7",
-      "prev_uuid": "HzIrnnc3In2dTU_t",
-      "sibling_uuid": "E9WzsVdcCkHhqPEC",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 169310275,
-      "level": 0,
-      "id": 169310275,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
       "title": "学习思考和方法总结",
       "uuid": "E9WzsVdcCkHhqPEC",
       "url": "uf5stb4mwdltpwxg",
-      "prev_uuid": "lmBHbMgOhq0HKKnj",
+      "prev_uuid": "joc8sWOcvrLRI1Us",
       "sibling_uuid": "E2tp9JS15ricYDHf",
       "child_uuid": "",
       "parent_uuid": "",
@@ -5156,7 +4937,7 @@
       "url": "",
       "prev_uuid": "tpE02gd-l1vz6Hw0",
       "sibling_uuid": "bEbttVX5IGogkpeK",
-      "child_uuid": "KOilh4ldIcO4m6Vw",
+      "child_uuid": "2K3qD4rUf1HPHmQJ",
       "parent_uuid": "tpE02gd-l1vz6Hw0",
       "doc_id": "",
       "level": 1,
@@ -5166,25 +4947,10 @@
     },
     {
       "type": "DOC",
-      "title": "Nacos��װָ��",
-      "uuid": "KOilh4ldIcO4m6Vw",
-      "url": "lpuuqw7sfzg0",
-      "prev_uuid": "LpyGiOqkKYrQHU16",
-      "sibling_uuid": "2K3qD4rUf1HPHmQJ",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 171963506,
-      "level": 2,
-      "id": 171963506,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
       "title": "1.认识微服务",
       "uuid": "2K3qD4rUf1HPHmQJ",
       "url": "springcloud01",
-      "prev_uuid": "KOilh4ldIcO4m6Vw",
+      "prev_uuid": "LpyGiOqkKYrQHU16",
       "sibling_uuid": "QPmeOHuezPjYCttp",
       "child_uuid": "",
       "parent_uuid": "LpyGiOqkKYrQHU16",
@@ -5246,11 +5012,26 @@
       "url": "fkyckmrv3pxqf8r4",
       "prev_uuid": "nbnS8mGd2w41BOZu",
       "sibling_uuid": "WYNRcsVbptDJddM0",
-      "child_uuid": "",
+      "child_uuid": "KOilh4ldIcO4m6Vw",
       "parent_uuid": "LpyGiOqkKYrQHU16",
       "doc_id": 161824023,
       "level": 2,
       "id": 161824023,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "Nacos安装",
+      "uuid": "KOilh4ldIcO4m6Vw",
+      "url": "lpuuqw7sfzg0",
+      "prev_uuid": "nPsdIVZAHyu_TTqy",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "nPsdIVZAHyu_TTqy",
+      "doc_id": 171963506,
+      "level": 3,
+      "id": 171963506,
       "open_window": 1,
       "visible": 1
     },
@@ -5290,7 +5071,7 @@
       "uuid": "Z5y4eZlJPypmqhgq",
       "url": "ti46goms25o2fm6g",
       "prev_uuid": "rJqN33MOf-mCB74s",
-      "sibling_uuid": "",
+      "sibling_uuid": "RS_G_9ZXgMpRjlRW",
       "child_uuid": "",
       "parent_uuid": "LpyGiOqkKYrQHU16",
       "doc_id": 161825610,
@@ -5300,13 +5081,148 @@
       "visible": 1
     },
     {
+      "type": "DOC",
+      "title": "9.Docker实用篇",
+      "uuid": "RS_G_9ZXgMpRjlRW",
+      "url": "auf4wvnuz7pk",
+      "prev_uuid": "Z5y4eZlJPypmqhgq",
+      "sibling_uuid": "xK7__hQuMrJmZBkX",
+      "child_uuid": "",
+      "parent_uuid": "LpyGiOqkKYrQHU16",
+      "doc_id": 161820140,
+      "level": 2,
+      "id": 161820140,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "10.RabbitMQ",
+      "uuid": "xK7__hQuMrJmZBkX",
+      "url": "xlmpvfo480movxdz",
+      "prev_uuid": "RS_G_9ZXgMpRjlRW",
+      "sibling_uuid": "HxtORdJLEnVTDHGQ",
+      "child_uuid": "",
+      "parent_uuid": "LpyGiOqkKYrQHU16",
+      "doc_id": 171984821,
+      "level": 2,
+      "id": 171984821,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
+      "type": "TITLE",
+      "title": "11.ElasticSearch",
+      "uuid": "HxtORdJLEnVTDHGQ",
+      "url": "",
+      "prev_uuid": "xK7__hQuMrJmZBkX",
+      "sibling_uuid": "",
+      "child_uuid": "8rdxDlzC0Lp69ufq",
+      "parent_uuid": "LpyGiOqkKYrQHU16",
+      "doc_id": "",
+      "level": 2,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "分布式搜索引擎ElasticSearch",
+      "uuid": "8rdxDlzC0Lp69ufq",
+      "url": "demgaggh1tyqt5m1",
+      "prev_uuid": "HxtORdJLEnVTDHGQ",
+      "sibling_uuid": "Aphi2u70DDzuyd4x",
+      "child_uuid": "",
+      "parent_uuid": "HxtORdJLEnVTDHGQ",
+      "doc_id": 163594137,
+      "level": 3,
+      "id": 163594137,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "数据聚合、自动补全、数据同步",
+      "uuid": "Aphi2u70DDzuyd4x",
+      "url": "oisxazvr4ygky7pr",
+      "prev_uuid": "8rdxDlzC0Lp69ufq",
+      "sibling_uuid": "zksY7pKZYtS3JFYb",
+      "child_uuid": "",
+      "parent_uuid": "HxtORdJLEnVTDHGQ",
+      "doc_id": 163594384,
+      "level": 3,
+      "id": 163594384,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "DSL语法、搜索结果处理",
+      "uuid": "zksY7pKZYtS3JFYb",
+      "url": "tw4e1oe6q4ixiqbo",
+      "prev_uuid": "Aphi2u70DDzuyd4x",
+      "sibling_uuid": "ADkU7Y4DIyxMu2gw",
+      "child_uuid": "",
+      "parent_uuid": "HxtORdJLEnVTDHGQ",
+      "doc_id": 163594331,
+      "level": 3,
+      "id": 163594331,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "索引库、文档操作",
+      "uuid": "ADkU7Y4DIyxMu2gw",
+      "url": "wgnodz6eoyltmyx6",
+      "prev_uuid": "zksY7pKZYtS3JFYb",
+      "sibling_uuid": "J-S61ooocEOW5rT5",
+      "child_uuid": "",
+      "parent_uuid": "HxtORdJLEnVTDHGQ",
+      "doc_id": 163594258,
+      "level": 3,
+      "id": 163594258,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "安装ES、Kibana、IK",
+      "uuid": "J-S61ooocEOW5rT5",
+      "url": "ifimpohoq0z5f1kg",
+      "prev_uuid": "ADkU7Y4DIyxMu2gw",
+      "sibling_uuid": "jBCWazlETo06IJSy",
+      "child_uuid": "",
+      "parent_uuid": "HxtORdJLEnVTDHGQ",
+      "doc_id": 163594190,
+      "level": 3,
+      "id": 163594190,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "ElasticSearch集群",
+      "uuid": "jBCWazlETo06IJSy",
+      "url": "ypvfpte531pktdzv",
+      "prev_uuid": "J-S61ooocEOW5rT5",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "HxtORdJLEnVTDHGQ",
+      "doc_id": 163594490,
+      "level": 3,
+      "id": 163594490,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
       "type": "TITLE",
       "title": "高级篇",
       "uuid": "bEbttVX5IGogkpeK",
       "url": "",
       "prev_uuid": "LpyGiOqkKYrQHU16",
-      "sibling_uuid": "RS_G_9ZXgMpRjlRW",
-      "child_uuid": "lBD9kyQA41vAA8V4",
+      "sibling_uuid": "",
+      "child_uuid": "mK_bUXL7DR5ygbLD",
       "parent_uuid": "tpE02gd-l1vz6Hw0",
       "doc_id": "",
       "level": 1,
@@ -5316,16 +5232,46 @@
     },
     {
       "type": "DOC",
-      "title": "Kubernetes",
-      "uuid": "lBD9kyQA41vAA8V4",
-      "url": "nq8yeuc58t3h09zh",
+      "title": "Sentinel工作原理",
+      "uuid": "mK_bUXL7DR5ygbLD",
+      "url": "nqc4fklsd6fv5pk7",
       "prev_uuid": "bEbttVX5IGogkpeK",
+      "sibling_uuid": "DllnHh04VYHPxD8C",
+      "child_uuid": "",
+      "parent_uuid": "bEbttVX5IGogkpeK",
+      "doc_id": 163594032,
+      "level": 2,
+      "id": 163594032,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "微服务保护Sentinel",
+      "uuid": "DllnHh04VYHPxD8C",
+      "url": "lgg8wwk93pd4lw68",
+      "prev_uuid": "mK_bUXL7DR5ygbLD",
+      "sibling_uuid": "JEGAyOMVwHacmR3b",
+      "child_uuid": "",
+      "parent_uuid": "bEbttVX5IGogkpeK",
+      "doc_id": 163593916,
+      "level": 2,
+      "id": 163593916,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "消息中间件RabbitMQ(高级)",
+      "uuid": "JEGAyOMVwHacmR3b",
+      "url": "yzchuzvgkp5t2qgg",
+      "prev_uuid": "DllnHh04VYHPxD8C",
       "sibling_uuid": "FXl6Wh5SxbdYEo9a",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 164323370,
+      "doc_id": 163593245,
       "level": 2,
-      "id": 164323370,
+      "id": 163593245,
       "open_window": 1,
       "visible": 1
     },
@@ -5334,8 +5280,8 @@
       "title": "SpringCloud集成K8S",
       "uuid": "FXl6Wh5SxbdYEo9a",
       "url": "",
-      "prev_uuid": "lBD9kyQA41vAA8V4",
-      "sibling_uuid": "JEGAyOMVwHacmR3b",
+      "prev_uuid": "JEGAyOMVwHacmR3b",
+      "sibling_uuid": "uQUEu9K42ip9gZUk",
       "child_uuid": "_jVtVYGBEi5SKovy",
       "parent_uuid": "bEbttVX5IGogkpeK",
       "doc_id": "",
@@ -5391,16 +5337,16 @@
     },
     {
       "type": "DOC",
-      "title": "消息中间件RabbitMQ(高级)",
-      "uuid": "JEGAyOMVwHacmR3b",
-      "url": "yzchuzvgkp5t2qgg",
+      "title": "分布式事务Seata",
+      "uuid": "uQUEu9K42ip9gZUk",
+      "url": "sfr3tv4tl2l6fp8c",
       "prev_uuid": "FXl6Wh5SxbdYEo9a",
       "sibling_uuid": "a5AS2ggNA-waCNH7",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593245,
+      "doc_id": 163593697,
       "level": 2,
-      "id": 163593245,
+      "id": 163593697,
       "open_window": 1,
       "visible": 1
     },
@@ -5409,7 +5355,7 @@
       "title": "RabbitMQ部署指南",
       "uuid": "a5AS2ggNA-waCNH7",
       "url": "eyz9dwt14chnr5up",
-      "prev_uuid": "JEGAyOMVwHacmR3b",
+      "prev_uuid": "uQUEu9K42ip9gZUk",
       "sibling_uuid": "JB7lNWOaqsAv48jB",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
@@ -5425,7 +5371,7 @@
       "uuid": "JB7lNWOaqsAv48jB",
       "url": "mbewrwpdklq4ihs8",
       "prev_uuid": "a5AS2ggNA-waCNH7",
-      "sibling_uuid": "np6gqO0H4g1p1DgE",
+      "sibling_uuid": "lBD9kyQA41vAA8V4",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
       "doc_id": 163593508,
@@ -5436,11 +5382,26 @@
     },
     {
       "type": "DOC",
+      "title": "Kubernetes",
+      "uuid": "lBD9kyQA41vAA8V4",
+      "url": "nq8yeuc58t3h09zh",
+      "prev_uuid": "JB7lNWOaqsAv48jB",
+      "sibling_uuid": "np6gqO0H4g1p1DgE",
+      "child_uuid": "",
+      "parent_uuid": "bEbttVX5IGogkpeK",
+      "doc_id": 164323370,
+      "level": 2,
+      "id": 164323370,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
       "title": "Redis集群部署指南",
       "uuid": "np6gqO0H4g1p1DgE",
       "url": "nsgd1vcw40dhn1gz",
-      "prev_uuid": "JB7lNWOaqsAv48jB",
-      "sibling_uuid": "uQUEu9K42ip9gZUk",
+      "prev_uuid": "lBD9kyQA41vAA8V4",
+      "sibling_uuid": "l4oTOib6hLw7GryP",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
       "doc_id": 163593580,
@@ -5451,166 +5412,16 @@
     },
     {
       "type": "DOC",
-      "title": "分布式事务Seata",
-      "uuid": "uQUEu9K42ip9gZUk",
-      "url": "sfr3tv4tl2l6fp8c",
-      "prev_uuid": "np6gqO0H4g1p1DgE",
-      "sibling_uuid": "l4oTOib6hLw7GryP",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593697,
-      "level": 2,
-      "id": 163593697,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
       "title": "Seata的部署和集成",
       "uuid": "l4oTOib6hLw7GryP",
       "url": "alw5bumbvhg6svwc",
-      "prev_uuid": "uQUEu9K42ip9gZUk",
-      "sibling_uuid": "DllnHh04VYHPxD8C",
+      "prev_uuid": "np6gqO0H4g1p1DgE",
+      "sibling_uuid": "",
       "child_uuid": "",
       "parent_uuid": "bEbttVX5IGogkpeK",
       "doc_id": 163593797,
       "level": 2,
       "id": 163593797,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "微服务保护Sentinel",
-      "uuid": "DllnHh04VYHPxD8C",
-      "url": "lgg8wwk93pd4lw68",
-      "prev_uuid": "l4oTOib6hLw7GryP",
-      "sibling_uuid": "mK_bUXL7DR5ygbLD",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593916,
-      "level": 2,
-      "id": 163593916,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Sentinel工作原理",
-      "uuid": "mK_bUXL7DR5ygbLD",
-      "url": "nqc4fklsd6fv5pk7",
-      "prev_uuid": "DllnHh04VYHPxD8C",
-      "sibling_uuid": "8rdxDlzC0Lp69ufq",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163594032,
-      "level": 2,
-      "id": 163594032,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "分布式搜索引擎ElasticSearch",
-      "uuid": "8rdxDlzC0Lp69ufq",
-      "url": "demgaggh1tyqt5m1",
-      "prev_uuid": "mK_bUXL7DR5ygbLD",
-      "sibling_uuid": "",
-      "child_uuid": "jBCWazlETo06IJSy",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163594137,
-      "level": 2,
-      "id": 163594137,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "ElasticSearch集群",
-      "uuid": "jBCWazlETo06IJSy",
-      "url": "ypvfpte531pktdzv",
-      "prev_uuid": "8rdxDlzC0Lp69ufq",
-      "sibling_uuid": "J-S61ooocEOW5rT5",
-      "child_uuid": "",
-      "parent_uuid": "8rdxDlzC0Lp69ufq",
-      "doc_id": 163594490,
-      "level": 3,
-      "id": 163594490,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "安装ES、Kibana、IK",
-      "uuid": "J-S61ooocEOW5rT5",
-      "url": "ifimpohoq0z5f1kg",
-      "prev_uuid": "jBCWazlETo06IJSy",
-      "sibling_uuid": "ADkU7Y4DIyxMu2gw",
-      "child_uuid": "",
-      "parent_uuid": "8rdxDlzC0Lp69ufq",
-      "doc_id": 163594190,
-      "level": 3,
-      "id": 163594190,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "索引库、文档操作",
-      "uuid": "ADkU7Y4DIyxMu2gw",
-      "url": "wgnodz6eoyltmyx6",
-      "prev_uuid": "J-S61ooocEOW5rT5",
-      "sibling_uuid": "zksY7pKZYtS3JFYb",
-      "child_uuid": "",
-      "parent_uuid": "8rdxDlzC0Lp69ufq",
-      "doc_id": 163594258,
-      "level": 3,
-      "id": 163594258,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "DSL语法、搜索结果处理",
-      "uuid": "zksY7pKZYtS3JFYb",
-      "url": "tw4e1oe6q4ixiqbo",
-      "prev_uuid": "ADkU7Y4DIyxMu2gw",
-      "sibling_uuid": "Aphi2u70DDzuyd4x",
-      "child_uuid": "",
-      "parent_uuid": "8rdxDlzC0Lp69ufq",
-      "doc_id": 163594331,
-      "level": 3,
-      "id": 163594331,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "数据聚合、自动补全、数据同步",
-      "uuid": "Aphi2u70DDzuyd4x",
-      "url": "oisxazvr4ygky7pr",
-      "prev_uuid": "zksY7pKZYtS3JFYb",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "8rdxDlzC0Lp69ufq",
-      "doc_id": 163594384,
-      "level": 3,
-      "id": 163594384,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Docker实用篇",
-      "uuid": "RS_G_9ZXgMpRjlRW",
-      "url": "auf4wvnuz7pk",
-      "prev_uuid": "bEbttVX5IGogkpeK",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "tpE02gd-l1vz6Hw0",
-      "doc_id": 161820140,
-      "level": 1,
-      "id": 161820140,
       "open_window": 1,
       "visible": 1
     },
