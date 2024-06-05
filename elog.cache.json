@@ -159,6 +159,7 @@
         "urlname": "yw9hc9",
         "date": "2022-08-21 09:30:35",
         "updated": "2024-05-29 16:26:03",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/面向对象/dcfcbff060798ac1a31572d94247ff82.png",
         "description": "Java的个人笔记需要不断的更新和迭代，简短的看菜鸟教程，或者尚硅谷文档1. 面向对象1.1. 问答环节15.⾯向对象和⾯向过程的区别?16.面向对象有哪些特性17.重载（overload）和重写（override）的区别？18.访问修饰符 public、private、protected、以..."
       },
       "catalog": [
@@ -181,6 +182,7 @@
         "urlname": "ggstmhn7xxix66dq",
         "date": "2024-03-14 11:07:06",
         "updated": "2024-05-29 15:09:55",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/常见的API类/9f6c0dd72bbbe89ea4427ed4ea73fb78.png",
         "description": "1. 字符串相关类之不可变字符序列String问答环节31.String 是 Java 基本数据类型吗？可以被继承吗？32.String 和 StringBuilder、StringBuffer 的区别？33.String str1 = new String(\"abc\")和 String st..."
       },
       "catalog": [
@@ -238,27 +240,6 @@
       "realName": "MobaXterm",
       "relativePath": "/工具使用/MobaXterm.md",
       "docPath": "source/_posts/yuque/工具使用"
-    },
-    {
-      "id": 161781613,
-      "doc_id": "feh743izkd1zxumk",
-      "updated": 1716894710000,
-      "properties": {
-        "title": "泛型",
-        "urlname": "feh743izkd1zxumk",
-        "date": "2024-03-14 11:11:54",
-        "updated": "2024-05-28 19:11:50",
-        "description": "第13章_泛型(Generic)讲师：尚硅谷-宋红康（江湖人称：康师傅）官网：http://www.atguigu.com本章专题与脉络1. 泛型概述1.1 生活中的例子举例1：中药店，每个抽屉外面贴着标签举例2：超市购物架上很多瓶子，每个瓶子装的是什么，有标签举例3：家庭厨房中：Java中的..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "feh743izkd1zxumk"
-        }
-      ],
-      "realName": "泛型",
-      "relativePath": "/Java/泛型.md",
-      "docPath": "source/_posts/yuque/Java"
     },
     {
       "id": 163839013,
@@ -1824,27 +1805,6 @@
       "docPath": "source/_posts/yuque/MySQL"
     },
     {
-      "id": 163845814,
-      "doc_id": "xhhctg6hhc2ore91",
-      "updated": 1712480834000,
-      "properties": {
-        "title": "SSM整合",
-        "urlname": "xhhctg6hhc2ore91",
-        "date": "2024-03-31 12:04:38",
-        "updated": "2024-04-07 17:07:14",
-        "description": "前言在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。注解整合\t注解\t解释Spring\t@Autowired\tSpring提供的工具（由Spring的依赖注入工具（BeanPostProcessor、BeanFact..."
-      },
-      "catalog": [
-        {
-          "title": "SSM",
-          "doc_id": "xhhctg6hhc2ore91"
-        }
-      ],
-      "realName": "SSM整合",
-      "relativePath": "/SSM/SSM整合.md",
-      "docPath": "source/_posts/yuque/SSM"
-    },
-    {
       "id": 161827270,
       "doc_id": "xa1s89kud2du5kiu",
       "updated": 1712559948000,
@@ -1936,7 +1896,8 @@
         "urlname": "vezu0hrrp9gu",
         "date": "2024-03-13 17:15:25",
         "updated": "2024-04-05 10:26:58",
-        "description": "第14章_数据结构与集合源码本章专题与脉络1. 数据结构剖析我们举一个形象的例子来理解数据结构的作用：战场：程序运行所需的软件、硬件环境 敌人：项目或模块的功能需求 指挥官：编写程序的程序员 士兵和装备：一行一行的代码 战术和策略：数据结构上图：没有战术，打仗事倍功半上图：有战术，打仗事半功倍..."
+        "description": "第14章_数据结构与集合源码本章专题与脉络1. 数据结构剖析我们举一个形象的例子来理解数据结构的作用：战场：程序运行所需的软件、硬件环境 敌人：项目或模块的功能需求 指挥官：编写程序的程序员 士兵和装备：一行一行的代码 战术和策略：数据结构上图：没有战术，打仗事倍功半上图：有战术，打仗事半功倍...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/数据结构与集合源码/cover.jpg"
       },
       "catalog": [
         {
@@ -2647,7 +2608,8 @@
         "urlname": "wgnodz6eoyltmyx6",
         "date": "2024-03-28 16:34:54",
         "updated": "2024-03-28 16:35:22",
-        "description": "在前面读者朋友们可以了解到ES承载着和MySQL一样的“存储-查询”功能，那么就类似的会有建表语句、表结构、表数据，有了这些才可以存储-查询数据。而这些对应的在ES中是：Mapping映射（表结构-建表语句）、索引库（表本身）、文档（表数据）。本节笔者将带领大家完整上述概念的创建、使用。1.e..."
+        "description": "在前面读者朋友们可以了解到ES承载着和MySQL一样的“存储-查询”功能，那么就类似的会有建表语句、表结构、表数据，有了这些才可以存储-查询数据。而这些对应的在ES中是：Mapping映射（表结构-建表语句）、索引库（表本身）、文档（表数据）。本节笔者将带领大家完整上述概念的创建、使用。1.e...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/索引库、文档操作/cover.jpg"
       },
       "catalog": [
         {
@@ -2677,7 +2639,8 @@
         "urlname": "tw4e1oe6q4ixiqbo",
         "date": "2024-03-28 16:35:21",
         "updated": "2024-03-28 16:35:44",
-        "description": "在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。1.DSL查询文档elasticsearch的查询依然是基..."
+        "description": "在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。1.DSL查询文档elasticsearch的查询依然是基...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/cover.jpg"
       },
       "catalog": [
         {
@@ -2815,7 +2778,8 @@
         "urlname": "alw5bumbvhg6svwc",
         "date": "2024-03-28 16:32:30",
         "updated": "2024-03-28 16:32:55",
-        "description": "一、部署Seata的tc-server1.下载下载seata-server地址在：http://seata.io/zh-cn/blog/download.html，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip2.解压在非中文目录解压缩这个zip包，其目..."
+        "description": "一、部署Seata的tc-server1.下载下载seata-server地址在：http://seata.io/zh-cn/blog/download.html，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip2.解压在非中文目录解压缩这个zip包，其目...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/cover.jpg"
       },
       "catalog": [
         {
@@ -2841,7 +2805,8 @@
         "urlname": "sfr3tv4tl2l6fp8c",
         "date": "2024-03-28 16:32:00",
         "updated": "2024-03-28 16:32:25",
-        "description": "在分布式架构系统中，服务不止一个，一个完整的业务链路肯定也不止调用一个服务，此时每个服务都有自己的数据库增删改查，而每一个写操作对应一个本地事务。如果想要确保全部的业务状态一致，也就意味着需要所有的本地事务状态一致，这在我们之前的学习中肯定是不具备的，如何做到跨服务、跨数据源的事务一致性将是本..."
+        "description": "在分布式架构系统中，服务不止一个，一个完整的业务链路肯定也不止调用一个服务，此时每个服务都有自己的数据库增删改查，而每一个写操作对应一个本地事务。如果想要确保全部的业务状态一致，也就意味着需要所有的本地事务状态一致，这在我们之前的学习中肯定是不具备的，如何做到跨服务、跨数据源的事务一致性将是本...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/cover.jpg"
       },
       "catalog": [
         {
@@ -2867,7 +2832,8 @@
         "urlname": "nsgd1vcw40dhn1gz",
         "date": "2024-03-28 16:31:22",
         "updated": "2024-03-28 16:31:40",
-        "description": "本章是基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1.单机安装Redis首先需要安装Redis所需要的依赖：yum install -y gcc tcl然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：📎redis-6.2.4...."
+        "description": "本章是基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1.单机安装Redis首先需要安装Redis所需要的依赖：yum install -y gcc tcl然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：📎redis-6.2.4....",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/cover.jpg"
       },
       "catalog": [
         {
@@ -2893,7 +2859,8 @@
         "urlname": "mbewrwpdklq4ihs8",
         "date": "2024-03-28 16:31:02",
         "updated": "2024-03-28 16:31:20",
-        "description": "作为分布式系统中，必不可少的非结构化存储中间件，Redis在小型、中型、大型乃至高并发系统中均有自己发挥的场合，除了基础数据结构（String/Hash/Set/ZSet/List）的增删改查操作，在真正的生产环境中我们如何避免数据的丢失？如何避免单点的性能瓶颈？如何搭建合适的集群架构？本节笔..."
+        "description": "作为分布式系统中，必不可少的非结构化存储中间件，Redis在小型、中型、大型乃至高并发系统中均有自己发挥的场合，除了基础数据结构（String/Hash/Set/ZSet/List）的增删改查操作，在真正的生产环境中我们如何避免数据的丢失？如何避免单点的性能瓶颈？如何搭建合适的集群架构？本节笔...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/cover.jpg"
       },
       "catalog": [
         {
@@ -2919,7 +2886,8 @@
         "urlname": "eyz9dwt14chnr5up",
         "date": "2024-03-28 16:30:28",
         "updated": "2024-03-28 16:30:48",
-        "description": "1.单机部署我们在Centos7虚拟机中使用Docker来安装。1.1.下载镜像docker pull rabbitmq:3.8-management1.2.安装MQ执行下面的命令来运行MQ容器：docker run \\  -e RABBITMQ_DEFAULT_USER=itcast \\  ..."
+        "description": "1.单机部署我们在Centos7虚拟机中使用Docker来安装。1.1.下载镜像docker pull rabbitmq:3.8-management1.2.安装MQ执行下面的命令来运行MQ容器：docker run \\  -e RABBITMQ_DEFAULT_USER=itcast \\  ...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/cover.jpg"
       },
       "catalog": [
         {
@@ -2945,7 +2913,8 @@
         "urlname": "yzchuzvgkp5t2qgg",
         "date": "2024-03-28 16:29:29",
         "updated": "2024-03-28 16:29:54",
-        "description": "消息中间件，作为分布式系统中必不可少的一部分，在前面我们学习过其基本的消息发送、消费（跳转链接），但是读者朋友们肯定也知道，真正的生产环境可不是简单的发送消息这么简单。如何避免消息丢失？如何满足特殊场景下的消息延迟消费？如何解决消费能力不足？如何搭建集群？等等本节笔者将从消息的可靠性出发，解决..."
+        "description": "消息中间件，作为分布式系统中必不可少的一部分，在前面我们学习过其基本的消息发送、消费（跳转链接），但是读者朋友们肯定也知道，真正的生产环境可不是简单的发送消息这么简单。如何避免消息丢失？如何满足特殊场景下的消息延迟消费？如何解决消费能力不足？如何搭建集群？等等本节笔者将从消息的可靠性出发，解决...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/cover.jpg"
       },
       "catalog": [
         {
@@ -3265,6 +3234,27 @@
       "realName": "消息队列",
       "relativePath": "/消息队列.md",
       "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 172484238,
+      "doc_id": "vuo8nyrign5okmoh",
+      "updated": 1717557800000,
+      "properties": {
+        "title": "正则表达式",
+        "urlname": "vuo8nyrign5okmoh",
+        "date": "2024-06-05 11:12:46",
+        "updated": "2024-06-05 11:23:20",
+        "description": "什么是正则表达式正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。一个正则表达式是一种从左到右匹配主体字符串的模式，常使用缩写的术语“regex”或“regexp”。正则表达式语法基本匹配正则表达式其实就是在执行搜索时的格式，它由一些字母和数字组合而成。..."
+      },
+      "catalog": [
+        {
+          "title": "工具使用",
+          "doc_id": "vuo8nyrign5okmoh"
+        }
+      ],
+      "realName": "正则表达式",
+      "relativePath": "/工具使用/正则表达式.md",
+      "docPath": "source/_posts/yuque/工具使用"
     }
   ],
   "catalog": [
@@ -3335,7 +3325,7 @@
       "url": "",
       "prev_uuid": "E2tp9JS15ricYDHf",
       "sibling_uuid": "aKNTqk4nhCXgDB9T",
-      "child_uuid": "cmYEz68AjiGu089T",
+      "child_uuid": "IcE9z-lxCLkmXzOF",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3345,10 +3335,25 @@
     },
     {
       "type": "DOC",
+      "title": "正则表达式",
+      "uuid": "IcE9z-lxCLkmXzOF",
+      "url": "vuo8nyrign5okmoh",
+      "prev_uuid": "BFAxsTghCmCSoQDC",
+      "sibling_uuid": "cmYEz68AjiGu089T",
+      "child_uuid": "",
+      "parent_uuid": "BFAxsTghCmCSoQDC",
+      "doc_id": 172484238,
+      "level": 1,
+      "id": 172484238,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
       "title": "MobaXterm",
       "uuid": "cmYEz68AjiGu089T",
       "url": "hoq9538sy6ah2g59",
-      "prev_uuid": "BFAxsTghCmCSoQDC",
+      "prev_uuid": "IcE9z-lxCLkmXzOF",
       "sibling_uuid": "uwhKUtWlRa69fUIf",
       "child_uuid": "",
       "parent_uuid": "BFAxsTghCmCSoQDC",
