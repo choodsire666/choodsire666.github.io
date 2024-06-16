@@ -1584,27 +1584,6 @@
       "docPath": "source/_posts/yuque/MySQL"
     },
     {
-      "id": 161668561,
-      "doc_id": "ryb6mifnakmr6okx",
-      "updated": 1713083494000,
-      "properties": {
-        "title": "02 SQL-DDL",
-        "urlname": "ryb6mifnakmr6okx",
-        "date": "2024-03-13 17:27:41",
-        "updated": "2024-04-14 16:31:34",
-        "description": "1. SQL简介SQL：全称 Structured Query Language，结构化查询语言。操作关系型数据库的编程语言，定义了一套操作关系型数据库统一标准 。1.1. SQL通用语法在学习具体的SQL语句之前，先来了解一下SQL语言的同于语法。SQL语句可以单行或多行书写，以分号结尾。S..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "ryb6mifnakmr6okx"
-        }
-      ],
-      "realName": "02 SQL-DDL",
-      "relativePath": "/MySQL/02 SQL-DDL.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
       "id": 161792684,
       "doc_id": "paxlvnrrtlknouur",
       "updated": 1712820436000,
@@ -3234,41 +3213,35 @@
       "realName": "消息队列",
       "relativePath": "/消息队列.md",
       "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 172484238,
-      "doc_id": "vuo8nyrign5okmoh",
-      "updated": 1717557800000,
-      "properties": {
-        "title": "正则表达式",
-        "urlname": "vuo8nyrign5okmoh",
-        "date": "2024-06-05 11:12:46",
-        "updated": "2024-06-05 11:23:20",
-        "description": "什么是正则表达式正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。一个正则表达式是一种从左到右匹配主体字符串的模式，常使用缩写的术语“regex”或“regexp”。正则表达式语法基本匹配正则表达式其实就是在执行搜索时的格式，它由一些字母和数字组合而成。..."
-      },
-      "catalog": [
-        {
-          "title": "工具使用",
-          "doc_id": "vuo8nyrign5okmoh"
-        }
-      ],
-      "realName": "正则表达式",
-      "relativePath": "/工具使用/正则表达式.md",
-      "docPath": "source/_posts/yuque/工具使用"
     }
   ],
   "catalog": [
     {
-      "type": "DOC",
-      "title": "无标题文档",
-      "uuid": "fpI7cVQVus7kGy7R",
-      "url": "pm9l8io2mkif1wky",
+      "type": "TITLE",
+      "title": "知识碎片",
+      "uuid": "6RKeZLtjt1Fxg8LL",
+      "url": "",
       "prev_uuid": "",
       "sibling_uuid": "joc8sWOcvrLRI1Us",
-      "child_uuid": "",
+      "child_uuid": "fpI7cVQVus7kGy7R",
       "parent_uuid": "",
-      "doc_id": 172937069,
+      "doc_id": "",
       "level": 0,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "window下载安装并使用nvm",
+      "uuid": "fpI7cVQVus7kGy7R",
+      "url": "pm9l8io2mkif1wky",
+      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "6RKeZLtjt1Fxg8LL",
+      "doc_id": 172937069,
+      "level": 1,
       "id": 172937069,
       "open_window": 1,
       "visible": 0
@@ -3278,7 +3251,7 @@
       "title": "疑问",
       "uuid": "joc8sWOcvrLRI1Us",
       "url": "hug0bw",
-      "prev_uuid": "fpI7cVQVus7kGy7R",
+      "prev_uuid": "6RKeZLtjt1Fxg8LL",
       "sibling_uuid": "E9WzsVdcCkHhqPEC",
       "child_uuid": "",
       "parent_uuid": "",
