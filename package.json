@@ -43,7 +43,7 @@
     "picocolors": "^1.0.1",
     "pug": "^3.0.3",
     "save-dev": "0.0.1-security",
-    "yuque-tools": "^2.3.4"
+    "yuque-tools": "^2.3.5"
   },
   "yuqueConfig": {
     "postPath": "source/_posts/yuque",
