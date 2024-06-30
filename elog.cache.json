@@ -151,29 +151,6 @@
       "docPath": "source/_posts/yuque/技术派项目"
     },
     {
-      "id": 90161472,
-      "doc_id": "yw9hc9",
-      "updated": 1716971163000,
-      "properties": {
-        "title": "面向对象",
-        "urlname": "yw9hc9",
-        "date": "2022-08-21 09:30:35",
-        "updated": "2024-05-29 16:26:03",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/面向对象/dcfcbff060798ac1a31572d94247ff82.png",
-        "description": "Java的个人笔记需要不断的更新和迭代，简短的看菜鸟教程，或者尚硅谷文档1. 面向对象1.1. 问答环节15.⾯向对象和⾯向过程的区别?16.面向对象有哪些特性17.重载（overload）和重写（override）的区别？18.访问修饰符 public、private、protected、以..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "yw9hc9"
-        }
-      ],
-      "realName": "面向对象",
-      "relativePath": "/Java/面向对象.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/Java"
-    },
-    {
       "id": 161666013,
       "doc_id": "pqrf8cvoggds",
       "updated": 1716966295000,
@@ -367,38 +344,6 @@
       "realName": "Apifox",
       "relativePath": "/工具使用/Apifox.md",
       "docPath": "source/_posts/yuque/工具使用"
-    },
-    {
-      "id": 90161528,
-      "doc_id": "hug0bw",
-      "updated": 1716368390000,
-      "properties": {
-        "title": "疑问",
-        "urlname": "hug0bw",
-        "date": "2022-08-21 09:32:12",
-        "updated": "2024-05-22 16:59:50",
-        "description": "啥时候用int或者Integer1） 所有的POJO类属性必须使用包装数据类型。2） RPC方法的返回值和参数必须使用包装数据类型。3） 所有的局部变量推荐使用基本数据类型。两者之间的区别：最本质的区别：基本数据类型不是对象，包装类型是对象存储位置不同：基本类型是直接将变量值存储在栈中，而包装..."
-      },
-      "catalog": [],
-      "realName": "疑问",
-      "relativePath": "/疑问.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 105678488,
-      "doc_id": "uf5stb4mwdltpwxg",
-      "updated": 1716188996000,
-      "properties": {
-        "title": "学习思考和方法总结",
-        "urlname": "uf5stb4mwdltpwxg",
-        "date": "2022-11-10 14:43:42",
-        "updated": "2024-05-20 15:09:56",
-        "description": "学一门技术的方法流程1.通过看一个简短的视频了解整个技术的全貌2.通过看培训结构视频理解不了的地方去看书去做补充书和视频结合起来3.最重要的是通过实践应用得到更多的体会。      总结：明确目标，大出着眼，项目导向，小处着手耐心的去看错误，看到错误就应该想到可能出现的错误的原因是什么？过一段..."
-      },
-      "catalog": [],
-      "realName": "学习思考和方法总结",
-      "relativePath": "/学习思考和方法总结.md",
-      "docPath": "source/_posts/yuque"
     },
     {
       "id": 161666037,
@@ -3002,15 +2947,138 @@
       "realName": "消息队列",
       "relativePath": "/消息队列.md",
       "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 175778449,
+      "doc_id": "un7037zybf9zox8y",
+      "updated": 1719709164000,
+      "properties": {
+        "title": "聊天话术技巧",
+        "urlname": "un7037zybf9zox8y",
+        "date": "2024-06-30 08:57:39",
+        "updated": "2024-06-30 08:59:24",
+        "description": "1. 拒绝话术直接但礼貌的拒绝“非常感谢你的邀请/提议/好意，但我经过考虑后，觉得不太能接受。希望你能理解。”解释原因的拒绝“非常感谢你的邀请，但我已经有了其他安排，无法参加。希望你能找到更合适的人选。”“你的建议很有创意，但我目前的项目方向与此不太符合，所以无法采纳。不过，我会把你的建议记录..."
+      },
+      "catalog": [],
+      "realName": "聊天话术技巧",
+      "relativePath": "/聊天话术技巧.md",
+      "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 169310275,
+      "doc_id": "rud7yqbfaig1h5m7",
+      "updated": 1719199756000,
+      "properties": {
+        "title": "工作周报",
+        "urlname": "rud7yqbfaig1h5m7",
+        "date": "2024-05-12 12:02:22",
+        "updated": "2024-06-24 11:29:16",
+        "description": "日期：2024-5-12本周重点1.任务进展本周完成了哪些任务、整体进度如何。本周完成了XXX需求开发，已经提测。项目整体进度比预期延迟1d，预计下周三可以开始正式测试。2.相关数据呈现相关数据以及背后的原因（如有）。本周日均 UV 3000，同比上周上涨20%。原因是周二投放的运营活动生效，...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/工作周报/cover.jpg"
+      },
+      "catalog": [],
+      "realName": "工作周报",
+      "relativePath": "/工作周报.md",
+      "docPath": "source/_posts/yuque"
     }
   ],
   "catalog": [
+    {
+      "type": "DOC",
+      "title": "聊天话术技巧",
+      "uuid": "RVh6iMLvq2JvLP6i",
+      "url": "un7037zybf9zox8y",
+      "prev_uuid": "",
+      "sibling_uuid": "-XW0agqk2cw3u0KM",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 175778449,
+      "level": 0,
+      "id": 175778449,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "TITLE",
+      "title": "AI答题应用平台",
+      "uuid": "-XW0agqk2cw3u0KM",
+      "url": "",
+      "prev_uuid": "RVh6iMLvq2JvLP6i",
+      "sibling_uuid": "HzIrnnc3In2dTU_t",
+      "child_uuid": "Nt5zi99EqL1vDeJH",
+      "parent_uuid": "",
+      "doc_id": "",
+      "level": 0,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "MBTI性格测试小程序",
+      "uuid": "Nt5zi99EqL1vDeJH",
+      "url": "cfk72cqrsb7cvgz7",
+      "prev_uuid": "-XW0agqk2cw3u0KM",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "-XW0agqk2cw3u0KM",
+      "doc_id": 175324904,
+      "level": 1,
+      "id": 175324904,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
+      "type": "DOC",
+      "title": "工作日报",
+      "uuid": "HzIrnnc3In2dTU_t",
+      "url": "tl585wa8vvht98bd",
+      "prev_uuid": "-XW0agqk2cw3u0KM",
+      "sibling_uuid": "lmBHbMgOhq0HKKnj",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 169310315,
+      "level": 0,
+      "id": 169310315,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "工作周报",
+      "uuid": "lmBHbMgOhq0HKKnj",
+      "url": "rud7yqbfaig1h5m7",
+      "prev_uuid": "HzIrnnc3In2dTU_t",
+      "sibling_uuid": "d9VPkbs_B8hMU4Z0",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 169310275,
+      "level": 0,
+      "id": 169310275,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "面试总结和面经复盘",
+      "uuid": "d9VPkbs_B8hMU4Z0",
+      "url": "mxka9f7icg4smq0d",
+      "prev_uuid": "lmBHbMgOhq0HKKnj",
+      "sibling_uuid": "EwMCpmVLjKGjC_3Q",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 167359204,
+      "level": 0,
+      "id": 167359204,
+      "open_window": 1,
+      "visible": 1
+    },
     {
       "type": "TITLE",
       "title": "盲盒交友",
       "uuid": "EwMCpmVLjKGjC_3Q",
       "url": "",
-      "prev_uuid": "",
+      "prev_uuid": "d9VPkbs_B8hMU4Z0",
       "sibling_uuid": "SHzFUE7xx2mlyVxV",
       "child_uuid": "",
       "parent_uuid": "",
