@@ -23,7 +23,7 @@
     "graceful-fs": "^4.2.11",
     "hexo": "^7.0.0",
     "hexo-algoliasearch": "^2.0.1",
-    "hexo-bilibili-bangumi": "^1.9.0",
+    "hexo-bilibili-bangumi": "^1.10.0",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-deployer-git": "^4.0.0",
     "hexo-fs": "^4.1.3",
