@@ -413,27 +413,6 @@
       "docPath": "source/_posts/yuque/yanhe_ledger"
     },
     {
-      "id": 169935971,
-      "doc_id": "cngkw69nkcxankym",
-      "updated": 1715852305000,
-      "properties": {
-        "title": "远程连接",
-        "urlname": "cngkw69nkcxankym",
-        "date": "2024-05-16 17:36:53",
-        "updated": "2024-05-16 17:38:25",
-        "description": "公司window远程宝塔环境mstscMicrosoft terminal services client"
-      },
-      "catalog": [
-        {
-          "title": "工具使用",
-          "doc_id": "cngkw69nkcxankym"
-        }
-      ],
-      "realName": "远程连接",
-      "relativePath": "/工具使用/远程连接.md",
-      "docPath": "source/_posts/yuque/工具使用"
-    },
-    {
       "id": 169874586,
       "doc_id": "lnmfvn3d0zuzh03f",
       "updated": 1715828488000,
@@ -1313,27 +1292,6 @@
       "docPath": "source/_posts/yuque/redis"
     },
     {
-      "id": 161669422,
-      "doc_id": "kqh45fhrkh1nhpng",
-      "updated": 1713085980000,
-      "properties": {
-        "title": "08 多表查询",
-        "urlname": "kqh45fhrkh1nhpng",
-        "date": "2024-03-13 17:32:07",
-        "updated": "2024-04-14 17:13:00",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 多表关系项目开发中，在进行数据库表结构设计时，会根据业务需求及业务模块之间的关系，分析并设计表结构，由于业务之间相互关联，所以各个表结构之间也存在着各种联系，基本上分为三种：●一对多(多..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "kqh45fhrkh1nhpng"
-        }
-      ],
-      "realName": "08 多表查询",
-      "relativePath": "/MySQL/08 多表查询.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
       "id": 161792492,
       "doc_id": "gxpo437gg8au84fs",
       "updated": 1712844694000,
@@ -1532,27 +1490,6 @@
       "realName": "JVM",
       "relativePath": "/JVM.md",
       "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 161669014,
-      "doc_id": "og2o5x2o4boh22m1",
-      "updated": 1713083627000,
-      "properties": {
-        "title": "04 SQL-DQL",
-        "urlname": "og2o5x2o4boh22m1",
-        "date": "2024-03-13 17:29:47",
-        "updated": "2024-04-14 16:33:47",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DQL英文全称是Data Query Language(数据查询语言)，数据查询语言，用来查询数据库中表的记录。查询关键字: SELECT在一个正常的业务系统中，查询操作的频次是要远高于..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "og2o5x2o4boh22m1"
-        }
-      ],
-      "realName": "04 SQL-DQL",
-      "relativePath": "/MySQL/04 SQL-DQL.md",
-      "docPath": "source/_posts/yuque/MySQL"
     },
     {
       "id": 161672069,
@@ -2231,27 +2168,6 @@
       ],
       "realName": "04 Redis实现Session共享",
       "relativePath": "/redis/04 Redis实现Session共享.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 161794003,
-      "doc_id": "tk35clgh7trg",
-      "updated": 1712391299000,
-      "properties": {
-        "title": "05 Redis做缓存数据库",
-        "urlname": "tk35clgh7trg",
-        "date": "2024-03-14 12:28:29",
-        "updated": "2024-04-06 16:14:59",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 什么是缓存?前言：什么是缓存?就像自行车。越野车的避震器举个例子：越野车，山地自行车，都拥有\"避震器\"，防止车体加速后因惯性，在酷似\"U\"字母的地形上飞跃，硬着陆导致的损害，像个弹簧一..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "tk35clgh7trg"
-        }
-      ],
-      "realName": "05 Redis做缓存数据库",
-      "relativePath": "/redis/05 Redis做缓存数据库.md",
       "docPath": "source/_posts/yuque/redis"
     },
     {
@@ -2951,17 +2867,17 @@
     {
       "id": 175778449,
       "doc_id": "un7037zybf9zox8y",
-      "updated": 1719709164000,
+      "updated": 1720273246000,
       "properties": {
-        "title": "聊天话术技巧",
+        "title": "真诚才是必杀技",
         "urlname": "un7037zybf9zox8y",
         "date": "2024-06-30 08:57:39",
-        "updated": "2024-06-30 08:59:24",
-        "description": "1. 拒绝话术直接但礼貌的拒绝“非常感谢你的邀请/提议/好意，但我经过考虑后，觉得不太能接受。希望你能理解。”解释原因的拒绝“非常感谢你的邀请，但我已经有了其他安排，无法参加。希望你能找到更合适的人选。”“你的建议很有创意，但我目前的项目方向与此不太符合，所以无法采纳。不过，我会把你的建议记录..."
+        "updated": "2024-07-06 21:40:46",
+        "description": "1. 对话1.1.  兴趣爱好模板   示例对话：  A: 你喜欢什么样的音乐？ B: 我喜欢摇滚音乐，尤其是老鹰乐队。你呢？A: 我也喜欢摇滚，不过我更喜欢流行音乐。最近有什么好听的歌曲推荐吗？这种模板可以应用于各种兴趣爱好领域，如音乐、电影、书籍、运动等。1.2. 工作和职业模板 示例对话..."
       },
       "catalog": [],
-      "realName": "聊天话术技巧",
-      "relativePath": "/聊天话术技巧.md",
+      "realName": "真诚才是必杀技",
+      "relativePath": "/真诚才是必杀技.md",
       "docPath": "source/_posts/yuque"
     },
     {
@@ -2980,21 +2896,70 @@
       "realName": "工作周报",
       "relativePath": "/工作周报.md",
       "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 176792605,
+      "doc_id": "cgtabta5gk8qi32g",
+      "updated": 1720270507000,
+      "properties": {
+        "title": "项目准则",
+        "urlname": "cgtabta5gk8qi32g",
+        "date": "2024-07-06 15:06:34",
+        "updated": "2024-07-06 20:55:07",
+        "description": "1. 需求和准则需求文档:明确客户提供的详细的需求文档。包括功能需求，非功能需求，用户故事范围定义:明确项目的范围，避免需求不断增加导致项目延期或超预算。  2. 指定计划和时间表项目急的两个小时前做完。项目计划:"
+      },
+      "catalog": [],
+      "realName": "项目准则",
+      "relativePath": "/项目准则.md",
+      "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 90161528,
+      "doc_id": "hug0bw",
+      "updated": 1720172919000,
+      "properties": {
+        "title": "好问题才有好思路",
+        "urlname": "hug0bw",
+        "date": "2022-08-21 09:32:12",
+        "updated": "2024-07-05 17:48:39",
+        "description": "啥时候用int或者Integer1） 所有的POJO类属性必须使用包装数据类型。2） RPC方法的返回值和参数必须使用包装数据类型。3） 所有的局部变量推荐使用基本数据类型。两者之间的区别：最本质的区别：基本数据类型不是对象，包装类型是对象存储位置不同：基本类型是直接将变量值存储在栈中，而包装..."
+      },
+      "catalog": [],
+      "realName": "好问题才有好思路",
+      "relativePath": "/好问题才有好思路.md",
+      "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 169310315,
+      "doc_id": "tl585wa8vvht98bd",
+      "updated": 1719992955000,
+      "properties": {
+        "title": "工作日报",
+        "urlname": "tl585wa8vvht98bd",
+        "date": "2024-05-12 12:03:18",
+        "updated": "2024-07-03 15:49:15",
+        "description": "💡  字多 ≠ 有价值      周报不是为了表现工作量，而是给团队提供最基本的“信息透明”。尽量挑选重要信息来写。任务0任务1任务2网站同步2024-06-27csdn发布2024-06-272024-06-27日期：2024-5-131.任务进展今天完成了哪些任务、整体进度如何。今天完成...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/工作日报/cover.jpg"
+      },
+      "catalog": [],
+      "realName": "工作日报",
+      "relativePath": "/工作日报.md",
+      "docPath": "source/_posts/yuque"
     }
   ],
   "catalog": [
     {
       "type": "DOC",
-      "title": "聊天话术技巧",
-      "uuid": "RVh6iMLvq2JvLP6i",
-      "url": "un7037zybf9zox8y",
+      "title": "项目准则",
+      "uuid": "7b6u54z338Y7TTOZ",
+      "url": "cgtabta5gk8qi32g",
       "prev_uuid": "",
       "sibling_uuid": "-XW0agqk2cw3u0KM",
       "child_uuid": "",
       "parent_uuid": "",
-      "doc_id": 175778449,
+      "doc_id": 176792605,
       "level": 0,
-      "id": 175778449,
+      "id": 176792605,
       "open_window": 1,
       "visible": 1
     },
@@ -3003,7 +2968,7 @@
       "title": "AI答题应用平台",
       "uuid": "-XW0agqk2cw3u0KM",
       "url": "",
-      "prev_uuid": "RVh6iMLvq2JvLP6i",
+      "prev_uuid": "7b6u54z338Y7TTOZ",
       "sibling_uuid": "HzIrnnc3In2dTU_t",
       "child_uuid": "Nt5zi99EqL1vDeJH",
       "parent_uuid": "",
@@ -3079,7 +3044,7 @@
       "uuid": "EwMCpmVLjKGjC_3Q",
       "url": "",
       "prev_uuid": "d9VPkbs_B8hMU4Z0",
-      "sibling_uuid": "SHzFUE7xx2mlyVxV",
+      "sibling_uuid": "6RKeZLtjt1Fxg8LL",
       "child_uuid": "",
       "parent_uuid": "",
       "doc_id": "",
@@ -3087,30 +3052,15 @@
       "id": "",
       "open_window": 1,
       "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Linux",
-      "uuid": "SHzFUE7xx2mlyVxV",
-      "url": "zu5ulb7mvz8pldzk",
-      "prev_uuid": "EwMCpmVLjKGjC_3Q",
-      "sibling_uuid": "6RKeZLtjt1Fxg8LL",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 174034403,
-      "level": 0,
-      "id": 174034403,
-      "open_window": 1,
-      "visible": 0
     },
     {
       "type": "TITLE",
       "title": "知识碎片",
       "uuid": "6RKeZLtjt1Fxg8LL",
       "url": "",
-      "prev_uuid": "SHzFUE7xx2mlyVxV",
-      "sibling_uuid": "joc8sWOcvrLRI1Us",
-      "child_uuid": "KLItO4YurBgVqH4G",
+      "prev_uuid": "EwMCpmVLjKGjC_3Q",
+      "sibling_uuid": "RVh6iMLvq2JvLP6i",
+      "child_uuid": "xsv3X5SixuSyKzuo",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3120,10 +3070,40 @@
     },
     {
       "type": "DOC",
+      "title": "MQTT",
+      "uuid": "xsv3X5SixuSyKzuo",
+      "url": "ebqhgmgbhw0x5o66",
+      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "sibling_uuid": "glivvt_0lljZxRXG",
+      "child_uuid": "",
+      "parent_uuid": "6RKeZLtjt1Fxg8LL",
+      "doc_id": 176451846,
+      "level": 1,
+      "id": 176451846,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
+      "type": "DOC",
+      "title": "数据库命名规范",
+      "uuid": "glivvt_0lljZxRXG",
+      "url": "flna4v7p66fp2epl",
+      "prev_uuid": "xsv3X5SixuSyKzuo",
+      "sibling_uuid": "KLItO4YurBgVqH4G",
+      "child_uuid": "",
+      "parent_uuid": "6RKeZLtjt1Fxg8LL",
+      "doc_id": 176131255,
+      "level": 1,
+      "id": 176131255,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
+      "type": "DOC",
       "title": "Java开发手册",
       "uuid": "KLItO4YurBgVqH4G",
       "url": "qlczurzcz91agki7",
-      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "prev_uuid": "glivvt_0lljZxRXG",
       "sibling_uuid": "cRL0tjOhz3ik8nrV",
       "child_uuid": "",
       "parent_uuid": "6RKeZLtjt1Fxg8LL",
@@ -3165,10 +3145,25 @@
     },
     {
       "type": "DOC",
-      "title": "疑问",
+      "title": "真诚才是必杀技",
+      "uuid": "RVh6iMLvq2JvLP6i",
+      "url": "un7037zybf9zox8y",
+      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "sibling_uuid": "joc8sWOcvrLRI1Us",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 175778449,
+      "level": 0,
+      "id": 175778449,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "好问题才有好思路",
       "uuid": "joc8sWOcvrLRI1Us",
       "url": "hug0bw",
-      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "prev_uuid": "RVh6iMLvq2JvLP6i",
       "sibling_uuid": "E9WzsVdcCkHhqPEC",
       "child_uuid": "",
       "parent_uuid": "",
@@ -3184,7 +3179,7 @@
       "uuid": "E9WzsVdcCkHhqPEC",
       "url": "uf5stb4mwdltpwxg",
       "prev_uuid": "joc8sWOcvrLRI1Us",
-      "sibling_uuid": "E2tp9JS15ricYDHf",
+      "sibling_uuid": "SHzFUE7xx2mlyVxV",
       "child_uuid": "",
       "parent_uuid": "",
       "doc_id": 105678488,
@@ -3194,11 +3189,26 @@
       "visible": 1
     },
     {
+      "type": "DOC",
+      "title": "Linux",
+      "uuid": "SHzFUE7xx2mlyVxV",
+      "url": "zu5ulb7mvz8pldzk",
+      "prev_uuid": "E9WzsVdcCkHhqPEC",
+      "sibling_uuid": "E2tp9JS15ricYDHf",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 174034403,
+      "level": 0,
+      "id": 174034403,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
       "type": "TITLE",
       "title": "yanhe_ledger",
       "uuid": "E2tp9JS15ricYDHf",
       "url": "",
-      "prev_uuid": "E9WzsVdcCkHhqPEC",
+      "prev_uuid": "SHzFUE7xx2mlyVxV",
       "sibling_uuid": "BFAxsTghCmCSoQDC",
       "child_uuid": "Flw3ZH3gqHgb5e1W",
       "parent_uuid": "",
