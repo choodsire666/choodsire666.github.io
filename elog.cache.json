@@ -1418,22 +1418,6 @@
       "docPath": "source/_posts/yuque/MySQL"
     },
     {
-      "id": 161701146,
-      "doc_id": "pi47vowmpkt91p32",
-      "updated": 1712568323000,
-      "properties": {
-        "title": "计算机网络和操作系统",
-        "urlname": "pi47vowmpkt91p32",
-        "date": "2024-03-13 21:37:32",
-        "updated": "2024-04-08 17:25:23",
-        "description": "基础篇TCP/IP 网络模型有哪几层？应用层最上层的，也是我们能直接接触到的就是应用层（Application Layer），我们电脑或手机使用的应用软件都是在应用层实现。那么，当两个不同设备的应用需要通信的时候，应用就把应用数据传给下一层，也就是传输层。所以，应用层只需要专注于为用户提供应用..."
-      },
-      "catalog": [],
-      "realName": "计算机网络和操作系统",
-      "relativePath": "/计算机网络和操作系统.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
       "id": 164680157,
       "doc_id": "clmzhcqg36gqzt00",
       "updated": 1712556196000,
@@ -2900,57 +2884,24 @@
     {
       "id": 176792605,
       "doc_id": "cgtabta5gk8qi32g",
-      "updated": 1720270507000,
+      "updated": 1720744584000,
       "properties": {
-        "title": "项目准则",
+        "title": "工作准则",
         "urlname": "cgtabta5gk8qi32g",
         "date": "2024-07-06 15:06:34",
-        "updated": "2024-07-06 20:55:07",
-        "description": "1. 需求和准则需求文档:明确客户提供的详细的需求文档。包括功能需求，非功能需求，用户故事范围定义:明确项目的范围，避免需求不断增加导致项目延期或超预算。  2. 指定计划和时间表项目急的两个小时前做完。项目计划:"
+        "updated": "2024-07-12 08:36:24",
+        "description": "项目模板化用一下，学一下，总结一下，下次直接用。学习成本低作为项目负责人的角度：1. 项目概述项目名称：项目的正式名称。项目简介：简要描述项目的背景和目的。项目目标：明确项目的具体目标和预期成果。2. 项目范围范围定义：项目的边界和限制，明确项目包含和不包含的内容。功能列表：详细列出项目中所有..."
       },
       "catalog": [],
-      "realName": "项目准则",
-      "relativePath": "/项目准则.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 90161528,
-      "doc_id": "hug0bw",
-      "updated": 1720172919000,
-      "properties": {
-        "title": "好问题才有好思路",
-        "urlname": "hug0bw",
-        "date": "2022-08-21 09:32:12",
-        "updated": "2024-07-05 17:48:39",
-        "description": "啥时候用int或者Integer1） 所有的POJO类属性必须使用包装数据类型。2） RPC方法的返回值和参数必须使用包装数据类型。3） 所有的局部变量推荐使用基本数据类型。两者之间的区别：最本质的区别：基本数据类型不是对象，包装类型是对象存储位置不同：基本类型是直接将变量值存储在栈中，而包装..."
-      },
-      "catalog": [],
-      "realName": "好问题才有好思路",
-      "relativePath": "/好问题才有好思路.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 169310315,
-      "doc_id": "tl585wa8vvht98bd",
-      "updated": 1719992955000,
-      "properties": {
-        "title": "工作日报",
-        "urlname": "tl585wa8vvht98bd",
-        "date": "2024-05-12 12:03:18",
-        "updated": "2024-07-03 15:49:15",
-        "description": "💡  字多 ≠ 有价值      周报不是为了表现工作量，而是给团队提供最基本的“信息透明”。尽量挑选重要信息来写。任务0任务1任务2网站同步2024-06-27csdn发布2024-06-272024-06-27日期：2024-5-131.任务进展今天完成了哪些任务、整体进度如何。今天完成...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/工作日报/cover.jpg"
-      },
-      "catalog": [],
-      "realName": "工作日报",
-      "relativePath": "/工作日报.md",
+      "realName": "工作准则",
+      "relativePath": "/工作准则.md",
       "docPath": "source/_posts/yuque"
     }
   ],
   "catalog": [
     {
       "type": "DOC",
-      "title": "项目准则",
+      "title": "工作准则",
       "uuid": "7b6u54z338Y7TTOZ",
       "url": "cgtabta5gk8qi32g",
       "prev_uuid": "",
