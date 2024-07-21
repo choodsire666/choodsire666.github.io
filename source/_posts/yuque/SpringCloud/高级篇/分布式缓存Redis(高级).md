@@ -407,7 +407,7 @@ redis-cli --cluster add-node  192.168.206.129:7004 192.168.206.129:7001
 redis-cli -p 7001 cluster nodes
 ```
 如图，7004加入了集群，并且默认是一个master节点：
-![image-20210725161007099.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/772b070507a2d7c419080d7a6feb93f3.png)
+![image-20210725161007099.png](https://cdn.nlark.com/yuque/0/2023/png/1169676/1678848956538-b49f6a37-dd36-43c9-80f4-cd51035b74b3.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_44%2Ctext_5rK554K45bCP5rOi%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10#averageHue=%23284558&clientId=ud6eddd95-a20b-4&from=paste&height=161&id=ua46308de&originHeight=242&originWidth=1551&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=395894&status=done&style=none&taskId=u09c3b035-d1cb-454e-a96e-b8ba19efbb8&title=&width=1034)
 但是，可以看到7004节点的插槽数量为0，因此没有任何数据可以存储到7004上
 ### 4.3.4.转移插槽
 我们要将num存储到7004节点，因此需要先看看num的插槽是多少：

@@ -392,27 +392,6 @@
       "docPath": "source/_posts/yuque/工具使用"
     },
     {
-      "id": 170007503,
-      "doc_id": "qa8ptd958ebyaic0",
-      "updated": 1715910920000,
-      "properties": {
-        "title": "业务需求",
-        "urlname": "qa8ptd958ebyaic0",
-        "date": "2024-05-17 09:54:23",
-        "updated": "2024-05-17 09:55:20",
-        "description": "1.先查出用户有哪些船闸2.在查出船闸下面有哪些检查点"
-      },
-      "catalog": [
-        {
-          "title": "yanhe_ledger",
-          "doc_id": "qa8ptd958ebyaic0"
-        }
-      ],
-      "realName": "业务需求",
-      "relativePath": "/yanhe_ledger/业务需求.md",
-      "docPath": "source/_posts/yuque/yanhe_ledger"
-    },
-    {
       "id": 169874586,
       "doc_id": "lnmfvn3d0zuzh03f",
       "updated": 1715828488000,
@@ -2884,12 +2863,12 @@
     {
       "id": 176792605,
       "doc_id": "cgtabta5gk8qi32g",
-      "updated": 1720744584000,
+      "updated": 1721178580000,
       "properties": {
         "title": "工作准则",
         "urlname": "cgtabta5gk8qi32g",
         "date": "2024-07-06 15:06:34",
-        "updated": "2024-07-12 08:36:24",
+        "updated": "2024-07-17 09:09:40",
         "description": "项目模板化用一下，学一下，总结一下，下次直接用。学习成本低作为项目负责人的角度：1. 项目概述项目名称：项目的正式名称。项目简介：简要描述项目的背景和目的。项目目标：明确项目的具体目标和预期成果。2. 项目范围范围定义：项目的边界和限制，明确项目包含和不包含的内容。功能列表：详细列出项目中所有..."
       },
       "catalog": [],
@@ -2900,11 +2879,41 @@
   ],
   "catalog": [
     {
+      "type": "TITLE",
+      "title": "C语言",
+      "uuid": "i3a1eBEPFQ70TxYf",
+      "url": "",
+      "prev_uuid": "",
+      "sibling_uuid": "7b6u54z338Y7TTOZ",
+      "child_uuid": "H5BupYNVSJmcwBOC",
+      "parent_uuid": "",
+      "doc_id": "",
+      "level": 0,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "基础",
+      "uuid": "H5BupYNVSJmcwBOC",
+      "url": "gy50e8m1viwp39k2",
+      "prev_uuid": "i3a1eBEPFQ70TxYf",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "i3a1eBEPFQ70TxYf",
+      "doc_id": 178220775,
+      "level": 1,
+      "id": 178220775,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
       "type": "DOC",
       "title": "工作准则",
       "uuid": "7b6u54z338Y7TTOZ",
       "url": "cgtabta5gk8qi32g",
-      "prev_uuid": "",
+      "prev_uuid": "i3a1eBEPFQ70TxYf",
       "sibling_uuid": "-XW0agqk2cw3u0KM",
       "child_uuid": "",
       "parent_uuid": "",
@@ -3011,7 +3020,7 @@
       "url": "",
       "prev_uuid": "EwMCpmVLjKGjC_3Q",
       "sibling_uuid": "RVh6iMLvq2JvLP6i",
-      "child_uuid": "xsv3X5SixuSyKzuo",
+      "child_uuid": "2NgblzlgE33dRcDi",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3021,10 +3030,25 @@
     },
     {
       "type": "DOC",
+      "title": "SpringBoot集成websocket",
+      "uuid": "2NgblzlgE33dRcDi",
+      "url": "tuk1vcdwudwaguk7",
+      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "sibling_uuid": "xsv3X5SixuSyKzuo",
+      "child_uuid": "",
+      "parent_uuid": "6RKeZLtjt1Fxg8LL",
+      "doc_id": 178648341,
+      "level": 1,
+      "id": 178648341,
+      "open_window": 1,
+      "visible": 0
+    },
+    {
+      "type": "DOC",
       "title": "MQTT",
       "uuid": "xsv3X5SixuSyKzuo",
       "url": "ebqhgmgbhw0x5o66",
-      "prev_uuid": "6RKeZLtjt1Fxg8LL",
+      "prev_uuid": "2NgblzlgE33dRcDi",
       "sibling_uuid": "glivvt_0lljZxRXG",
       "child_uuid": "",
       "parent_uuid": "6RKeZLtjt1Fxg8LL",
@@ -3145,7 +3169,7 @@
       "uuid": "SHzFUE7xx2mlyVxV",
       "url": "zu5ulb7mvz8pldzk",
       "prev_uuid": "E9WzsVdcCkHhqPEC",
-      "sibling_uuid": "E2tp9JS15ricYDHf",
+      "sibling_uuid": "BFAxsTghCmCSoQDC",
       "child_uuid": "",
       "parent_uuid": "",
       "doc_id": 174034403,
@@ -3156,40 +3180,10 @@
     },
     {
       "type": "TITLE",
-      "title": "yanhe_ledger",
-      "uuid": "E2tp9JS15ricYDHf",
-      "url": "",
-      "prev_uuid": "SHzFUE7xx2mlyVxV",
-      "sibling_uuid": "BFAxsTghCmCSoQDC",
-      "child_uuid": "Flw3ZH3gqHgb5e1W",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "业务需求",
-      "uuid": "Flw3ZH3gqHgb5e1W",
-      "url": "qa8ptd958ebyaic0",
-      "prev_uuid": "E2tp9JS15ricYDHf",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "E2tp9JS15ricYDHf",
-      "doc_id": 170007503,
-      "level": 1,
-      "id": 170007503,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
       "title": "工具使用",
       "uuid": "BFAxsTghCmCSoQDC",
       "url": "",
-      "prev_uuid": "E2tp9JS15ricYDHf",
+      "prev_uuid": "SHzFUE7xx2mlyVxV",
       "sibling_uuid": "aKNTqk4nhCXgDB9T",
       "child_uuid": "IcE9z-lxCLkmXzOF",
       "parent_uuid": "",
