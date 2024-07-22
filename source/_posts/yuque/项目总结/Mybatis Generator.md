@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Mybatis Generator
 urlname: pqt9x5cfmt0u23u0
@@ -6,6 +7,8 @@ updated: '2024-07-02 17:56:06'
 cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Mybatis%20Generator/3c7367976dcbc4a26c68fbbbddef2212.png'
 description: Mybatis Generator是Mybatis提供的生成代码的工具，支持多种插件。导入依赖：  <dependencies>     <!--Mybatis-->     <dependency>       <groupId>org.mybatis.spring.boot</groupI...
 ---
+=======
+>>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
 Mybatis Generator是Mybatis提供的生成代码的工具，支持多种插件。
 
 1. 导入依赖：
@@ -141,7 +144,11 @@ Mybatis Generator是Mybatis提供的生成代码的工具，支持多种插件�
 
 3. 配置启动项：
 
+<<<<<<< HEAD
 ![image.png](https://raw.githubusercontent.com/choodsire666/blog-img/main/Mybatis%20Generator/3c7367976dcbc4a26c68fbbbddef2212.png)
+=======
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/43047777/1719912046502-4fdcecc9-c047-4dee-8a41-b5fd0aa8e194.png#averageHue=%233d4144&clientId=u8825eee7-d7f0-4&from=paste&height=751&id=u1c06f934&originHeight=845&originWidth=1304&originalType=binary&ratio=1.125&rotation=0&showTitle=false&size=72146&status=done&style=none&taskId=uca62be86-dc12-4983-b63b-e7750f1b640&title=&width=1159.111111111111)
+>>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
 
 TypeHandler：
 ```java

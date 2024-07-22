@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Bean的生命周期
 urlname: liwtvoyyd090t4y9
@@ -7,6 +8,9 @@ cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Bean的生�
 description: '[BeanFactoryPostProcessor - postProcessBeanFactory()] [environment, systemProperties, systemEnvironment, applicationStartup, org.springframework.co...'
 ---
 ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/Bean的生命周期/bee66244cd34923dd2813ab32e59c576.jpeg)
+=======
+![](https://cdn.nlark.com/yuque/0/2024/jpeg/43047777/1714815464994-80191d73-07f3-423b-a7f1-7160279c7c14.jpeg)
+>>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
 
 ```shell
 [BeanFactoryPostProcessor - postProcessBeanFactory()] [environment, systemProperties, systemEnvironment, applicationStartup, org.springframework.context.annotation.internalConfigurationAnnotationProcessor, org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry, org.springframework.context.event.internalEventListenerProcessor, yootkBeanFactoryPostProcessor, org.springframework.context.event.internalEventListenerFactory]
