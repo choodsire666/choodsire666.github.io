@@ -9,12 +9,8 @@
         "urlname": "paen8kf6e7bepzf5",
         "date": "2024-07-22 16:32:46",
         "updated": "2024-07-22 16:48:25",
-<<<<<<< HEAD
         "description": "分布式系统是指在网络互通的各个计算机中的组件，它们直接互相协同作用。为什么需要有分布式系统呢？升级单机处理能力的性价比越来越低单机处理能力存在瓶颈处于稳定性和可用性的考虑根据摩尔定律：每隔18个月，集成电路上可容纳的晶体管数目会增加一倍，且性能也将提升一倍。这也就是说，在一定的时间点，我要提升...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式系统/cover.jpg"
-=======
-        "description": "分布式系统是指在网络互通的各个计算机中的组件，它们直接互相协同作用。为什么需要有分布式系统呢？升级单机处理能力的性价比越来越低单机处理能力存在瓶颈处于稳定性和可用性的考虑根据摩尔定律：每隔18个月，集成电路上可容纳的晶体管数目会增加一倍，且性能也将提升一倍。这也就是说，在一定的时间点，我要提升..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -23,13 +19,8 @@
         }
       ],
       "realName": "分布式系统",
-<<<<<<< HEAD
-      "relativePath": "\\系统架构\\分布式系统.md",
-      "docPath": "source\\_posts\\yuque\\系统架构"
-=======
       "relativePath": "/系统架构/分布式系统.md",
       "docPath": "source/_posts/yuque/系统架构"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 176482838,
@@ -40,12 +31,8 @@
         "urlname": "um7ock1xq86oqzzz",
         "date": "2024-07-04 12:42:18",
         "updated": "2024-07-04 15:15:29",
-<<<<<<< HEAD
         "description": "Kaptcha 是一个开源项目，由 Google 提供支持。它以简洁和可定制为特点，帮助初学者轻松了解验证码生成的原理和实现方式。下面是 Kaptcha 的几个主要特点：简单易用：Kaptcha 提供了非常简单的 API 接口，几行代码就可以生成和显示验证码图像。可定制性强：尽管 Kaptch...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/生成验证码/cover.jpg"
-=======
-        "description": "Kaptcha 是一个开源项目，由 Google 提供支持。它以简洁和可定制为特点，帮助初学者轻松了解验证码生成的原理和实现方式。下面是 Kaptcha 的几个主要特点：简单易用：Kaptcha 提供了非常简单的 API 接口，几行代码就可以生成和显示验证码图像。可定制性强：尽管 Kaptch..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -54,13 +41,8 @@
         }
       ],
       "realName": "生成验证码",
-<<<<<<< HEAD
-      "relativePath": "\\项目总结\\生成验证码.md",
-      "docPath": "source\\_posts\\yuque\\项目总结"
-=======
       "relativePath": "/项目总结/生成验证码.md",
       "docPath": "source/_posts/yuque/项目总结"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 175951115,
@@ -71,12 +53,8 @@
         "urlname": "mungbnpyyb5lvyqt",
         "date": "2024-07-01 12:31:54",
         "updated": "2024-07-22 13:06:48",
-<<<<<<< HEAD
         "description": "快速排序快速排序import java.io.IOException; import java.io.BufferedReader; import java.io.InputStreamReader; import java.util.StringTokenizer;  public clas...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/算法模板/cover.jpg"
-=======
-        "description": "快速排序快速排序import java.io.IOException; import java.io.BufferedReader; import java.io.InputStreamReader; import java.util.StringTokenizer;  public clas..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -85,13 +63,8 @@
         }
       ],
       "realName": "算法模板",
-<<<<<<< HEAD
-      "relativePath": "\\算法\\算法模板.md",
-      "docPath": "source\\_posts\\yuque\\算法"
-=======
       "relativePath": "/算法/算法模板.md",
       "docPath": "source/_posts/yuque/算法"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 176481200,
@@ -102,12 +75,8 @@
         "urlname": "itglllecih4yrrue",
         "date": "2024-07-04 12:37:07",
         "updated": "2024-07-04 12:42:19",
-<<<<<<< HEAD
         "description": "package com.choodsire666.litemall.admin.service;  import com.choodsire666.litemall.core.util.IpUtil; import com.choodsire666.litemall.db.domain.Adm...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/记录操作日志/cover.jpg"
-=======
-        "description": "package com.choodsire666.litemall.admin.service;  import com.choodsire666.litemall.core.util.IpUtil; import com.choodsire666.litemall.db.domain.Adm..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -116,13 +85,8 @@
         }
       ],
       "realName": "记录操作日志",
-<<<<<<< HEAD
-      "relativePath": "\\项目总结\\记录操作日志.md",
-      "docPath": "source\\_posts\\yuque\\项目总结"
-=======
       "relativePath": "/项目总结/记录操作日志.md",
       "docPath": "source/_posts/yuque/项目总结"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 176313678,
@@ -133,10 +97,7 @@
         "urlname": "vx49qt1s6b5545el",
         "date": "2024-07-03 14:48:00",
         "updated": "2024-07-03 15:23:37",
-<<<<<<< HEAD
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/加密算法/6e698af8c7dedfd48312d07838a9d3e5.png",
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
         "description": "对称加密算法基本原理同一密钥：加密和解密都使用相同的密钥。这意味着加密过程中用来转换明文为密文的密钥，和解密过程中用来还原密文为明文的密钥是相同的。快速效率：对称加密算法通常比非对称加密算法更快，适合处理大量数据。密钥分发：由于同一密钥必须在发送方和接收方之间共享，如何安全地分发密钥是对称加密..."
       },
       "catalog": [
@@ -146,13 +107,8 @@
         }
       ],
       "realName": "加密算法",
-<<<<<<< HEAD
-      "relativePath": "\\项目总结\\加密算法.md",
-      "docPath": "source\\_posts\\yuque\\项目总结"
-=======
       "relativePath": "/项目总结/加密算法.md",
       "docPath": "source/_posts/yuque/项目总结"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 176192434,
@@ -163,12 +119,8 @@
         "urlname": "iow44pagpr9zh7cl",
         "date": "2024-07-02 18:08:12",
         "updated": "2024-07-02 18:40:21",
-<<<<<<< HEAD
         "description": "package com.choodsire666.litemall.core.util;  import org.apache.commons.logging.Log; import org.apache.commons.logging.LogFactory;  import javax.se...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/自定义IpUtil/cover.jpg"
-=======
-        "description": "package com.choodsire666.litemall.core.util;  import org.apache.commons.logging.Log; import org.apache.commons.logging.LogFactory;  import javax.se..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -177,43 +129,8 @@
         }
       ],
       "realName": "自定义IpUtil",
-<<<<<<< HEAD
-      "relativePath": "\\项目总结\\自定义IpUtil.md",
-      "docPath": "source\\_posts\\yuque\\项目总结"
-=======
       "relativePath": "/项目总结/自定义IpUtil.md",
       "docPath": "source/_posts/yuque/项目总结"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
-    },
-    {
-      "id": 176182485,
-      "doc_id": "pqt9x5cfmt0u23u0",
-      "updated": 1719914166000,
-      "properties": {
-        "title": "Mybatis Generator",
-        "urlname": "pqt9x5cfmt0u23u0",
-        "date": "2024-07-02 17:15:13",
-        "updated": "2024-07-02 17:56:06",
-<<<<<<< HEAD
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Mybatis%20Generator/3c7367976dcbc4a26c68fbbbddef2212.png",
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
-        "description": "Mybatis Generator是Mybatis提供的生成代码的工具，支持多种插件。导入依赖：  <dependencies>     <!--Mybatis-->     <dependency>       <groupId>org.mybatis.spring.boot</groupI..."
-      },
-      "catalog": [
-        {
-          "title": "项目总结",
-          "doc_id": "pqt9x5cfmt0u23u0"
-        }
-      ],
-      "realName": "Mybatis Generator",
-<<<<<<< HEAD
-      "relativePath": "\\项目总结\\Mybatis Generator.md",
-      "docPath": "source\\_posts\\yuque\\项目总结"
-=======
-      "relativePath": "/项目总结/Mybatis Generator.md",
-      "docPath": "source/_posts/yuque/项目总结"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 176182562,
@@ -224,12 +141,8 @@
         "urlname": "yyl7csi7os1y6ukt",
         "date": "2024-07-02 17:15:36",
         "updated": "2024-07-02 20:25:59",
-<<<<<<< HEAD
         "description": "ObjectMapper类自定义JacksonUtil工具类package com.choodsire666.litemall.core.util;  import com.fasterxml.jackson.core.JsonProcessingException; import com.f...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Jackson/cover.jpg"
-=======
-        "description": "ObjectMapper类自定义JacksonUtil工具类package com.choodsire666.litemall.core.util;  import com.fasterxml.jackson.core.JsonProcessingException; import com.f..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -238,9 +151,52 @@
         }
       ],
       "realName": "Jackson",
-<<<<<<< HEAD
-      "relativePath": "\\项目总结\\Jackson.md",
-      "docPath": "source\\_posts\\yuque\\项目总结"
+      "relativePath": "/项目总结/Jackson.md",
+      "docPath": "source/_posts/yuque/项目总结"
+    },
+    {
+      "id": 176182485,
+      "doc_id": "pqt9x5cfmt0u23u0",
+      "updated": 1719914166000,
+      "properties": {
+        "title": "Mybatis Generator",
+        "urlname": "pqt9x5cfmt0u23u0",
+        "date": "2024-07-02 17:15:13",
+        "updated": "2024-07-02 17:56:06",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Mybatis%20Generator/3c7367976dcbc4a26c68fbbbddef2212.png",
+        "description": "Mybatis Generator是Mybatis提供的生成代码的工具，支持多种插件。导入依赖：  <dependencies>     <!--Mybatis-->     <dependency>       <groupId>org.mybatis.spring.boot</groupI..."
+      },
+      "catalog": [
+        {
+          "title": "项目总结",
+          "doc_id": "pqt9x5cfmt0u23u0"
+        }
+      ],
+      "realName": "Mybatis Generator",
+      "relativePath": "/项目总结/Mybatis Generator.md",
+      "docPath": "source/_posts/yuque/项目总结"
+    },
+    {
+      "id": 176015793,
+      "doc_id": "hzocgmqfnmggcavn",
+      "updated": 1719829124000,
+      "properties": {
+        "title": "日期时间存储方式",
+        "urlname": "hzocgmqfnmggcavn",
+        "date": "2024-07-01 18:13:36",
+        "updated": "2024-07-01 18:18:44",
+        "description": "存储日期和时间通常采用DATE, DATETIME, TIMESTAMP数据类型进行存储。它们的区别如下图所示：数据类型存储格式存储空间范围是否支持时区自动更新DATEYYYY-MM-DD3个字节1000-01-01 到 9999-12-31否否DATETIMEYYYY-MM-DD HH:MM...",
+        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/日期时间存储方式/cover.jpg"
+      },
+      "catalog": [
+        {
+          "title": "Mysql",
+          "doc_id": "hzocgmqfnmggcavn"
+        }
+      ],
+      "realName": "日期时间存储方式",
+      "relativePath": "/Mysql/日期时间存储方式.md",
+      "docPath": "source/_posts/yuque/Mysql"
     },
     {
       "id": 175801859,
@@ -261,64 +217,8 @@
         }
       ],
       "realName": "概述",
-      "relativePath": "\\UML\\概述.md",
-      "docPath": "source\\_posts\\yuque\\UML"
-=======
-      "relativePath": "/项目总结/Jackson.md",
-      "docPath": "source/_posts/yuque/项目总结"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
-    },
-    {
-      "id": 176015793,
-      "doc_id": "hzocgmqfnmggcavn",
-      "updated": 1719829124000,
-      "properties": {
-        "title": "日期时间存储方式",
-        "urlname": "hzocgmqfnmggcavn",
-        "date": "2024-07-01 18:13:36",
-        "updated": "2024-07-01 18:18:44",
-<<<<<<< HEAD
-        "description": "存储日期和时间通常采用DATE, DATETIME, TIMESTAMP数据类型进行存储。它们的区别如下图所示：数据类型存储格式存储空间范围是否支持时区自动更新DATEYYYY-MM-DD3个字节1000-01-01 到 9999-12-31否否DATETIMEYYYY-MM-DD HH:MM...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/日期时间存储方式/cover.jpg"
-=======
-        "description": "存储日期和时间通常采用DATE, DATETIME, TIMESTAMP数据类型进行存储。它们的区别如下图所示：数据类型存储格式存储空间范围是否支持时区自动更新DATEYYYY-MM-DD3个字节1000-01-01 到 9999-12-31否否DATETIMEYYYY-MM-DD HH:MM..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
-      },
-      "catalog": [
-        {
-          "title": "Mysql",
-          "doc_id": "hzocgmqfnmggcavn"
-        }
-      ],
-      "realName": "日期时间存储方式",
-<<<<<<< HEAD
-      "relativePath": "\\Mysql\\日期时间存储方式.md",
-      "docPath": "source\\_posts\\yuque\\Mysql"
-=======
-      "relativePath": "/Mysql/日期时间存储方式.md",
-      "docPath": "source/_posts/yuque/Mysql"
-    },
-    {
-      "id": 175801859,
-      "doc_id": "ggf4zhqrt5xged1k",
-      "updated": 1719828807000,
-      "properties": {
-        "title": "概述",
-        "urlname": "ggf4zhqrt5xged1k",
-        "date": "2024-06-30 15:23:16",
-        "updated": "2024-07-01 18:13:27",
-        "description": "UML（Unified Model Language）统一建模语言。UML中包含结构体，行为图。其中结构图中包含类图，部署图，对象图，"
-      },
-      "catalog": [
-        {
-          "title": "UML",
-          "doc_id": "ggf4zhqrt5xged1k"
-        }
-      ],
-      "realName": "概述",
       "relativePath": "/UML/概述.md",
       "docPath": "source/_posts/yuque/UML"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 175789873,
@@ -329,12 +229,8 @@
         "urlname": "vareg4hky8e5bi1c",
         "date": "2024-06-30 12:08:18",
         "updated": "2024-06-30 12:33:14",
-<<<<<<< HEAD
         "description": "举例子：Java中的包装类中的valueOf方法，通过静态方法valueOf来创建或返回实例对象。public static Boolean valueOf(boolean b) {     return (b ? Boolean.True : Boolean.False); }优点：与构造函...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/考虑使用静态工厂方法代替构造函数/cover.jpg"
-=======
-        "description": "举例子：Java中的包装类中的valueOf方法，通过静态方法valueOf来创建或返回实例对象。public static Boolean valueOf(boolean b) {     return (b ? Boolean.True : Boolean.False); }优点：与构造函..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -343,13 +239,8 @@
         }
       ],
       "realName": "考虑使用静态工厂方法代替构造函数",
-<<<<<<< HEAD
-      "relativePath": "\\Effective Java\\考虑使用静态工厂方法代替构造函数.md",
-      "docPath": "source\\_posts\\yuque\\Effective Java"
-=======
       "relativePath": "/Effective Java/考虑使用静态工厂方法代替构造函数.md",
       "docPath": "source/_posts/yuque/Effective Java"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 175475211,
@@ -360,12 +251,8 @@
         "urlname": "aht6aaet92nohbq4",
         "date": "2024-06-27 17:49:56",
         "updated": "2024-06-27 22:28:42",
-<<<<<<< HEAD
         "description": "爬楼梯假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？示例 1：输入：n = 2输出：2解释：有两种方法可以爬到楼顶。1 阶 + 1 阶2 阶 示例 2：输入：n = 3输出：3解释：有三种方法可以爬到楼顶。1 阶 + 1 阶...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/动态规划/cover.jpg"
-=======
-        "description": "爬楼梯假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？示例 1：输入：n = 2输出：2解释：有两种方法可以爬到楼顶。1 阶 + 1 阶2 阶 示例 2：输入：n = 3输出：3解释：有三种方法可以爬到楼顶。1 阶 + 1 阶..."
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
       },
       "catalog": [
         {
@@ -374,13 +261,8 @@
         }
       ],
       "realName": "动态规划",
-<<<<<<< HEAD
-      "relativePath": "\\Leetcode刷题笔记\\动态规划.md",
-      "docPath": "source\\_posts\\yuque\\Leetcode刷题笔记"
-=======
       "relativePath": "/Leetcode刷题笔记/动态规划.md",
       "docPath": "source/_posts/yuque/Leetcode刷题笔记"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 175414033,
@@ -391,10 +273,7 @@
         "urlname": "ogg1l0ugagai6pok",
         "date": "2024-06-27 11:08:58",
         "updated": "2024-06-27 12:34:46",
-<<<<<<< HEAD
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/数据结构概述/a52faa477957f8157d4b172354fa371e.png",
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
         "description": "数据结构研究的是数据的逻辑结构和数据的物理结构以及它们之间的相互关系。即数据的逻辑结构、数据的存储结构和数据的操作，只有这三个方面的内容完全相同，才能成为完全相同的数据结构。其中数据为何物呢？数据是由数据元素，数据对象和数据类型组成的。其中数据元素又包含了多个数据项。student表（数据对象..."
       },
       "catalog": [
@@ -404,13 +283,8 @@
         }
       ],
       "realName": "数据结构概述",
-<<<<<<< HEAD
-      "relativePath": "\\数据结构\\数据结构概述.md",
-      "docPath": "source\\_posts\\yuque\\数据结构"
-=======
       "relativePath": "/数据结构/数据结构概述.md",
       "docPath": "source/_posts/yuque/数据结构"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 168232672,
@@ -421,22 +295,13 @@
         "urlname": "gavw0zv066enu3ge",
         "date": "2024-05-04 14:39:10",
         "updated": "2024-06-25 13:36:02",
-<<<<<<< HEAD
         "description": "类别注解说明Bean的声明@Component定义基础层的通用组件, 没有明确的角色@Service定义业务逻辑层的服务组件@Repository在数据访问层定义数据资源服务@Controller在展示层使用, 用于定义控制器Bean的注入@Autowried服务依赖注入, byType注入,...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Spring的常用注解/cover.jpg"
       },
       "catalog": [],
       "realName": "Spring的常用注解",
-      "relativePath": "\\Spring的常用注解.md",
-      "docPath": "source\\_posts\\yuque"
-=======
-        "description": "类别注解说明Bean的声明@Component定义基础层的通用组件, 没有明确的角色@Service定义业务逻辑层的服务组件@Repository在数据访问层定义数据资源服务@Controller在展示层使用, 用于定义控制器Bean的注入@Autowried服务依赖注入, byType注入,..."
-      },
-      "catalog": [],
-      "realName": "Spring的常用注解",
       "relativePath": "/Spring的常用注解.md",
       "docPath": "source/_posts/yuque"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 168238202,
@@ -447,21 +312,13 @@
         "urlname": "liwtvoyyd090t4y9",
         "date": "2024-05-04 16:07:10",
         "updated": "2024-05-04 19:50:41",
-<<<<<<< HEAD
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Bean的生命周期/a5b6415999fa3177270fff6798797167.jpeg",
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
         "description": "[BeanFactoryPostProcessor - postProcessBeanFactory()] [environment, systemProperties, systemEnvironment, applicationStartup, org.springframework.co..."
       },
       "catalog": [],
       "realName": "Bean的生命周期",
-<<<<<<< HEAD
-      "relativePath": "\\Bean的生命周期.md",
-      "docPath": "source\\_posts\\yuque"
-=======
       "relativePath": "/Bean的生命周期.md",
       "docPath": "source/_posts/yuque"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     },
     {
       "id": 168244528,
@@ -472,22 +329,13 @@
         "urlname": "empp2z8whcw2fbq8",
         "date": "2024-05-04 17:42:47",
         "updated": "2024-05-05 19:27:56",
-<<<<<<< HEAD
         "description": "public AnnotationConfigApplicationContext() {     // 记录启动步骤     StartupStep createAnnotatedBeanDefReader = this.getApplicationStartup().start(\"spri...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Spring容器的启动/cover.jpg"
       },
       "catalog": [],
       "realName": "Spring容器的启动",
-      "relativePath": "\\Spring容器的启动.md",
-      "docPath": "source\\_posts\\yuque"
-=======
-        "description": "public AnnotationConfigApplicationContext() {     // 记录启动步骤     StartupStep createAnnotatedBeanDefReader = this.getApplicationStartup().start(\"spri..."
-      },
-      "catalog": [],
-      "realName": "Spring容器的启动",
       "relativePath": "/Spring容器的启动.md",
       "docPath": "source/_posts/yuque"
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
     }
   ],
   "catalog": [

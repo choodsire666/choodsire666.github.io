@@ -4,10 +4,7 @@ urlname: gavw0zv066enu3ge
 date: '2024-05-04 14:39:10'
 updated: '2024-06-25 13:36:02'
 description: '类别注解说明Bean的声明@Component定义基础层的通用组件, 没有明确的角色@Service定义业务逻辑层的服务组件@Repository在数据访问层定义数据资源服务@Controller在展示层使用, 用于定义控制器Bean的注入@Autowried服务依赖注入, byType注入,...'
-<<<<<<< HEAD
 cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Spring的常用注解/cover.jpg'
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
 ---
 | 类别 | 注解 | 说明 |
 | --- | --- | --- |

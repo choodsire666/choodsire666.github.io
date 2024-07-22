@@ -4,10 +4,7 @@ urlname: empp2z8whcw2fbq8
 date: '2024-05-04 17:42:47'
 updated: '2024-05-05 19:27:56'
 description: 'public AnnotationConfigApplicationContext() {     // 记录启动步骤     StartupStep createAnnotatedBeanDefReader = this.getApplicationStartup().start("spri...'
-<<<<<<< HEAD
 cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Spring容器的启动/cover.jpg'
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
 ---
 ```java
 public AnnotationConfigApplicationContext() {

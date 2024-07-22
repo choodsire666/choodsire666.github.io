@@ -4,10 +4,7 @@ urlname: yyl7csi7os1y6ukt
 date: '2024-07-02 17:15:36'
 updated: '2024-07-02 20:25:59'
 description: ObjectMapper类自定义JacksonUtil工具类package com.choodsire666.litemall.core.util;  import com.fasterxml.jackson.core.JsonProcessingException; import com.f...
-<<<<<<< HEAD
 cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Jackson/cover.jpg'
-=======
->>>>>>> ee8b37783db2fa282a79ff054e90d8905a434a4c
 ---
 ObjectMapper类
 
