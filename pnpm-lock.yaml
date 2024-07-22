@@ -12,8 +12,8 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1
       '@elog/cli':
-        specifier: ^0.14.0
-        version: 0.14.0
+        specifier: ^0.14.2
+        version: 0.14.2(proxy-agent@5.0.0)
       bluebird:
         specifier: ^3.7.2
         version: 3.7.2
@@ -95,7 +95,7 @@ importers:
     devDependencies:
       yuque-hexo:
         specifier: ^1.9.5
-        version: 1.9.5
+        version: 1.9.5(proxy-agent@5.0.0)
 
 packages:
 
@@ -168,65 +168,65 @@ packages:
     resolution: {integrity: sha512-6mQNsaLeXTw0nxYUYu+NSa4Hx4BlF1x1x8/PMFbiR+GBSr+2DkECc69b8hgy2frEodNcvPffeH8YfWd3LI6jhQ==}
     engines: {node: '>=6.9.0'}
 
-  '@elog/cli@0.14.0':
-    resolution: {integrity: sha512-8lwPy1bksPm7/01SLHb+JBX9JaupqHp8NZzlIbKhjscpPOROaEUCjM0PhfyH+ynMD+Urc1ndXwpdFRQppyFq3w==}
+  '@elog/cli@0.14.2':
+    resolution: {integrity: sha512-PGYfTscJa4QvzEo7so2/gtqpjqKD6yS7nandJVM+DEgM8LXHhQ/G1dDc7SYoOYYnkbfCtctXeEyeUnd/06CRfQ==}
     engines: {node: '>=14'}
     hasBin: true
 
-  '@elog/core@0.14.0':
-    resolution: {integrity: sha512-+sHWcMzf2taq21GfqMICM5FRAfF8afALPZ8ahq6RePNHjBPQ2RIG3iqfjx9xoigAwYPxQ27WIKhPLJbTSmT5FA==}
+  '@elog/core@0.14.2':
+    resolution: {integrity: sha512-vfDl57JIaZ2nA+ZOcVM7f+yt6VmlEMGvlaqNM4vwwijDOArnk9AjUl9azkcSo9UIG6nKeYpI2ynt5s32bFTWnw==}
 
-  '@elog/deploy@0.14.0':
-    resolution: {integrity: sha512-iC5bAgd9bZyRUePSQnqQa9ALJaWhocCD7wJBrZ6uqkpI+xIqU5nxZu9UJCHET59M+BqO0mSbvYKiT/uZTu0gEg==}
+  '@elog/deploy@0.14.2':
+    resolution: {integrity: sha512-YEkaQnTlM9/hGBAlNuH9n1gyeh/1M/Wh7/8n2IKsxRbyoNsH9VGMqmWuqjz1tehM1niY+JmwvS88JDLXFuEyUg==}
 
-  '@elog/plugin-adapter@0.14.0':
-    resolution: {integrity: sha512-r305gbuVO74HJhm80JJSaw56DDj80WmtpPXd4yT8X5TxBgnTZqlK9TMWjE+O7pEwXyw6d0Q+H9YD7jjOxumvJQ==}
+  '@elog/plugin-adapter@0.14.2':
+    resolution: {integrity: sha512-H9rg2YOm2xeU071lWhSg72OkjatHwdCVVIDH9bHsfaOA20jCP6+RiqjtRMQHU4tckWdN6TRn6lyi0wWpr98x7Q==}
 
-  '@elog/plugin-image@0.14.0':
-    resolution: {integrity: sha512-IhoKgWV8YLhQzooqCDbHvPVS8ykasaMHBAl2W8K3I+iE8N+1XwCi1RFsUcmQ6Rcb6lJdJq7GwvqSRdHu5YOi3A==}
+  '@elog/plugin-image@0.14.2':
+    resolution: {integrity: sha512-NG5uslgINI7oz5iqwXJLsKWGrw33kYjlY77xuCo5Bxhp8SXvjg4c7Jfq/L/FBNB4xYEALHYROZ7s84CAQK2REg==}
 
-  '@elog/sdk-confluence@0.14.0':
-    resolution: {integrity: sha512-HD/cQvCu+2zoQ2/ioxhDarFOY16CfXCu7pS+jhKhjPZC2edqqsk6nnomBlaMlnIIsCJWJzAxvgKn64BSAo++Iw==}
+  '@elog/sdk-confluence@0.14.2':
+    resolution: {integrity: sha512-ML0SxroB1hM8iK5AwWmKmgcU9lO0SDGH48RMOgLgzpkWbcFUxpVCZ3wtsf7zydVQZHv59zf7pep2nOrItXC9Tg==}
 
-  '@elog/sdk-feishu@0.14.0':
-    resolution: {integrity: sha512-IqN1oPI814NduyqXniFN6WcJizY/84nzo4g82ME2yIqYtKNUYwgO9dR7WyucEdt2qIHgCfu0f9RU7GulvAd4MQ==}
+  '@elog/sdk-feishu@0.14.2':
+    resolution: {integrity: sha512-xoeXQ0Ml/LKdKdxN2tZ2IbzyE7hZ54hRnLm4RTnox5hz4xv3N8LKCf7vekhlEXFcZ2+Pa2drtlnI9+Y1FtGkVQ==}
 
-  '@elog/sdk-flowus@0.14.0':
-    resolution: {integrity: sha512-J3XytEd7i2PR8esictUwQAJwrBbECxaq5sftdeZoEBR8LzcjtcUF9180JlpB16WxUzMMgqHHlx/sfR6BUyNwhQ==}
+  '@elog/sdk-flowus@0.14.2':
+    resolution: {integrity: sha512-KOolMi+12YYtBUpnRf/VGFxUDqTUxZXgoWBbzqcfPKFA+Cw8wWJw/WWV82Sr7bEMshbTbWGJbiKwWHKYcK9fCA==}
 
-  '@elog/sdk-halo@0.14.0':
-    resolution: {integrity: sha512-gKXEw+EsX+1HiRanQKyqSw2Epz6fulNJ9n4mmQs9Es+7/Jo9QdEy6bPtGt57tnG8VLQYmlCPNwyjXr+IEp/7cA==}
+  '@elog/sdk-halo@0.14.2':
+    resolution: {integrity: sha512-jSFxFxX7fp+N4xFFiJimkpO6JxwwnD7LLHCRwBzyTRSAb03rU9/xf6lTI7FalouAFtR+T/c1QTrETJUoML+G5g==}
 
-  '@elog/sdk-notion@0.14.0':
-    resolution: {integrity: sha512-qmuuzgOS7j9KH3PUHDF1SWi0517PRWABGEE6JHROiM+UiXCkTdsu+Ar/FPFTJgxzK9vwAgL+9TccTN5edd06gg==}
+  '@elog/sdk-notion@0.14.2':
+    resolution: {integrity: sha512-3OVdIpYHQQCLZK+42U9cMPc+k+KHZrWBUs8JLaJQf8IIPCCIyJrwL5ca0+oJfSvsRHAjPLE6+CsxwHKE3xpKEA==}
 
-  '@elog/sdk-wolai@0.14.0':
-    resolution: {integrity: sha512-KSC2SaLOVWd1eMiIfZaxrGgrjhP4rablWzqCpiAjQ8ZZvL61Lr2PVKQIdL3in46m2MhMw1wKh6CYeTSRT4+kEQ==}
+  '@elog/sdk-wolai@0.14.2':
+    resolution: {integrity: sha512-mTRtH1Wb4TLi6yC+eLdEHkNgkpGbCT7gGZD4VzCGgMhBGnl3PDomS+KK7gEtTtd+Si593dd7NmHCY/hH337CEw==}
 
-  '@elog/sdk-wordpress@0.14.0':
-    resolution: {integrity: sha512-JR9zGwKDXjmhQSScVZtjn6WtwnG+x52xctLTbJ3BBY8I1/G0NyOVIKoysaYUmFRtcNgvO2rL7rzKL3Ff2WwXOw==}
+  '@elog/sdk-wordpress@0.14.2':
+    resolution: {integrity: sha512-vXpNFda/9yLWVmVJeuSkOa1lVIUdZcUVF9c5+sB6/E0xwRencbhWNJ2HrO5enfS0I6z1sKUm7+54eHXQwSaK7A==}
 
-  '@elog/sdk-yuque@0.14.0':
-    resolution: {integrity: sha512-daSe4/Wi80Pqd4t/Kb8mVso2HolJMINqhUnjV4zifKn9gAFb2IBxVbmtHmvgC2nY4dxgCdpU5s104M6hYBVrkA==}
+  '@elog/sdk-yuque@0.14.2':
+    resolution: {integrity: sha512-0Ae60aV2ZMHsNIT22OE9gP+JP/uBB8GiNn7NliYjmHa5TN4WwrAIpIk+FvdcMe/efcnmbZy4ws40SKMTOQgqeQ==}
 
-  '@elog/shared@0.14.0':
-    resolution: {integrity: sha512-IxJTFs1JUoVfJiwFDE5p6Xf9DdvY3rWCOLiMAHu+gfF/gA6043THOSbcoxfMYuMueMpZLbdvyI9WEWL24t2NBA==}
+  '@elog/shared@0.14.2':
+    resolution: {integrity: sha512-mcO8ZrvTxzPDkPtXA6SwNj4dT/yD2GyAubUo0dsKsL1B+PU7du5UKjOpMLNtjSLiBPYlqFDYh41SFQDPIVpLNw==}
 
-  '@elog/types@0.14.0':
-    resolution: {integrity: sha512-KPoD2ZU1k9kPuyLO5QoKywvnZjCSRyEP5LwwXIKX93yHLqcAG+gGQwPl3pLlLPHQC+SCRxTMywVOe6BAT7NmHQ==}
+  '@elog/types@0.14.2':
+    resolution: {integrity: sha512-kvkfUx/A8s6lgLMr9EA+6J5juGem/kjMbKQiZzihrsUKrkinYUQR5KcvFGvVeP1mxiCXc18JCc23QAuUZAaVcw==}
 
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@feishux/api@0.3.1':
-    resolution: {integrity: sha512-s6/tql5yU8YKepwRV9dTNw2tnNGUZZ+KEgJxiGo4aOq9iVrF6gdHbLaZN/C8tw2iGZ6l0BcMBpWrY5sLMJeVuw==}
+  '@feishux/api@0.3.2':
+    resolution: {integrity: sha512-QMGlHd5JfPqRqHCJJ2XWyEfhg1jLUZhxCgZnZ+2+IjwANQ82y8MPj8BQPrBKxWorll3JGOGE6VD22/G3DwZT5Q==}
 
-  '@feishux/doc-to-md@0.3.1':
-    resolution: {integrity: sha512-SQ/4+bbhyxyjJPanFmKhmoe1NRI64kSZMI/5In5oxKmPNRKfKRAxi4KZhh544HxCHCdcotkvME07Eq3jgDzUaw==}
+  '@feishux/doc-to-md@0.3.2':
+    resolution: {integrity: sha512-d7w2eG7nzgD39Q5mAGn/soXs+jcm6xABedEDiXbGTb2NetszISyr6T+uA1J5fa/KG0ZjPpCATDV9uAJhlhw6DQ==}
 
-  '@feishux/shared@0.3.1':
-    resolution: {integrity: sha512-r8G54TAF96jG/UHreOR1lFg0QSqttI4cbBxWVOzEEI7zFk3UuEfJ2LEOKeAqbA0tQIy6mK2ysq7E/FFn7/Qb/A==}
+  '@feishux/shared@0.3.2':
+    resolution: {integrity: sha512-cnpFIjOCF8usEZu5Tne1hLSHzWMdjauQrpQLWkBpHHjMsafH7+yJ0ldKaTBs/AEEWBP/gev+ULtYrr54x8HtLg==}
 
   '@flowusx/flowus-client@0.0.5-beta.4':
     resolution: {integrity: sha512-LF50P4PMFCLXjXjnp8alT0VTfvPyUgT7PcGg05sI8O6IqBX7JorqQw3trxyxvcSKO58eprn01a6NQeN5L2BYwA==}
@@ -1250,6 +1250,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -1504,6 +1505,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -3157,10 +3159,10 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.5
       to-fast-properties: 2.0.0
 
-  '@elog/cli@0.14.0':
+  '@elog/cli@0.14.2(proxy-agent@5.0.0)':
     dependencies:
-      '@elog/core': 0.14.0
-      '@elog/shared': 0.14.0
+      '@elog/core': 0.14.2(proxy-agent@5.0.0)
+      '@elog/shared': 0.14.2
       commander: 9.5.0
       dotenv: 16.4.5
       fs-extra: 11.2.0
@@ -3176,17 +3178,17 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@elog/core@0.14.0':
+  '@elog/core@0.14.2(proxy-agent@5.0.0)':
     dependencies:
-      '@elog/deploy': 0.14.0
-      '@elog/plugin-image': 0.14.0
-      '@elog/sdk-feishu': 0.14.0
-      '@elog/sdk-flowus': 0.14.0
-      '@elog/sdk-notion': 0.14.0
-      '@elog/sdk-wolai': 0.14.0
-      '@elog/sdk-yuque': 0.14.0
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/deploy': 0.14.2
+      '@elog/plugin-image': 0.14.2(proxy-agent@5.0.0)
+      '@elog/sdk-feishu': 0.14.2
+      '@elog/sdk-flowus': 0.14.2
+      '@elog/sdk-notion': 0.14.2
+      '@elog/sdk-wolai': 0.14.2
+      '@elog/sdk-yuque': 0.14.2
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -3196,24 +3198,24 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@elog/deploy@0.14.0':
+  '@elog/deploy@0.14.2':
     dependencies:
-      '@elog/plugin-adapter': 0.14.0
-      '@elog/sdk-confluence': 0.14.0
-      '@elog/sdk-halo': 0.14.0
-      '@elog/sdk-wordpress': 0.14.0
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/plugin-adapter': 0.14.2
+      '@elog/sdk-confluence': 0.14.2
+      '@elog/sdk-halo': 0.14.2
+      '@elog/sdk-wordpress': 0.14.2
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       filenamify: 4.3.0
       mkdirp: 1.0.4
       transliteration: 2.3.5
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/plugin-adapter@0.14.0':
+  '@elog/plugin-adapter@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       gray-matter: 4.0.3
       highlight.js: 11.9.0
       markdown-it: 13.0.2
@@ -3221,60 +3223,61 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/plugin-image@0.14.0':
+  '@elog/plugin-image@0.14.2(proxy-agent@5.0.0)':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
-      ali-oss: 6.20.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
+      ali-oss: 6.20.0(proxy-agent@5.0.0)
       cos-nodejs-sdk-v5: 2.14.0
       mkdirp: 1.0.4
-      qiniu: 7.12.0
+      qiniu: 7.12.0(proxy-agent@5.0.0)
+      tiny-async-pool: 1.3.0
       upyun: 3.4.6(debug@3.2.7)
     transitivePeerDependencies:
       - debug
       - proxy-agent
       - supports-color
 
-  '@elog/sdk-confluence@0.14.0':
+  '@elog/sdk-confluence@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/sdk-feishu@0.14.0':
+  '@elog/sdk-feishu@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@feishux/api': 0.3.1
-      '@feishux/doc-to-md': 0.3.1
-      '@feishux/shared': 0.3.1
+      '@elog/shared': 0.14.2
+      '@feishux/api': 0.3.2
+      '@feishux/doc-to-md': 0.3.2
+      '@feishux/shared': 0.3.2
       front-matter: 4.0.2
       tiny-async-pool: 1.3.0
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/sdk-flowus@0.14.0':
+  '@elog/sdk-flowus@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
+      '@elog/shared': 0.14.2
       '@flowusx/flowus-client': 0.0.5-beta.4
       '@flowusx/flowus-to-md': 0.0.5-beta.5
       tiny-async-pool: 1.3.0
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/sdk-halo@0.14.0':
+  '@elog/sdk-halo@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       '@halo-dev/api-client': 2.10.0
       formstream: 1.4.0
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/sdk-notion@0.14.0':
+  '@elog/sdk-notion@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       '@notionhq/client': 2.2.15
       notion-to-md: 3.1.1
       tiny-async-pool: 1.3.0
@@ -3282,28 +3285,28 @@ snapshots:
       - encoding
       - supports-color
 
-  '@elog/sdk-wolai@0.14.0':
+  '@elog/sdk-wolai@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       front-matter: 4.0.2
       tiny-async-pool: 1.3.0
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/sdk-wordpress@0.14.0':
+  '@elog/sdk-wordpress@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       '@types/wpapi': 1.1.4
       wpapi: 1.2.2
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/sdk-yuque@0.14.0':
+  '@elog/sdk-yuque@0.14.2':
     dependencies:
-      '@elog/shared': 0.14.0
-      '@elog/types': 0.14.0
+      '@elog/shared': 0.14.2
+      '@elog/types': 0.14.2
       front-matter: 4.0.2
       jsdom: 21.1.2
       jsencrypt-node: 1.0.4
@@ -3318,7 +3321,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@elog/shared@0.14.0':
+  '@elog/shared@0.14.2':
     dependencies:
       chalk: 4.1.2
       dayjs: 1.11.11
@@ -3330,21 +3333,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@elog/types@0.14.0': {}
+  '@elog/types@0.14.2': {}
 
   '@fastify/busboy@2.1.1': {}
 
-  '@feishux/api@0.3.1':
+  '@feishux/api@0.3.2':
     dependencies:
-      '@feishux/shared': 0.3.1
+      '@feishux/shared': 0.3.2
 
-  '@feishux/doc-to-md@0.3.1':
+  '@feishux/doc-to-md@0.3.2':
     dependencies:
-      '@feishux/api': 0.3.1
-      '@feishux/shared': 0.3.1
+      '@feishux/api': 0.3.2
+      '@feishux/shared': 0.3.2
       markdown-table: 2.0.0
 
-  '@feishux/shared@0.3.1':
+  '@feishux/shared@0.3.2':
     dependencies:
       chalk: 4.1.2
       lodash: 4.17.21
@@ -3455,11 +3458,11 @@ snapshots:
 
   '@types/yargs@12.0.20': {}
 
-  '@yuque/sdk@1.1.1':
+  '@yuque/sdk@1.1.1(proxy-agent@5.0.0)':
     dependencies:
       debug: 4.3.4
       extend2: 1.0.1
-      urllib: 2.41.0
+      urllib: 2.41.0(proxy-agent@5.0.0)
     transitivePeerDependencies:
       - proxy-agent
       - supports-color
@@ -3503,7 +3506,7 @@ snapshots:
       humanize-ms: 1.2.1
 
   ajv-formats@1.6.1(ajv@7.2.4):
-    dependencies:
+    optionalDependencies:
       ajv: 7.2.4
 
   ajv@6.12.6:
@@ -3537,7 +3540,7 @@ snapshots:
       '@algolia/requester-node-http': 4.20.0
       '@algolia/transporter': 4.20.0
 
-  ali-oss@6.17.0:
+  ali-oss@6.17.0(proxy-agent@5.0.0):
     dependencies:
       address: 1.2.2
       agentkeepalive: 3.5.3
@@ -3560,14 +3563,14 @@ snapshots:
       sdk-base: 2.0.1
       stream-http: 2.8.2
       stream-wormhole: 1.1.0
-      urllib: 2.41.0
+      urllib: 2.41.0(proxy-agent@5.0.0)
       utility: 1.18.0
       xml2js: 0.4.23
     transitivePeerDependencies:
       - proxy-agent
       - supports-color
 
-  ali-oss@6.20.0:
+  ali-oss@6.20.0(proxy-agent@5.0.0):
     dependencies:
       address: 1.2.2
       agentkeepalive: 3.5.3
@@ -3591,7 +3594,7 @@ snapshots:
       sdk-base: 2.0.1
       stream-http: 2.8.2
       stream-wormhole: 1.1.0
-      urllib: 2.41.0
+      urllib: 2.41.0(proxy-agent@5.0.0)
       utility: 1.18.0
       xml2js: 0.6.2
     transitivePeerDependencies:
@@ -4342,7 +4345,7 @@ snapshots:
       locate-path: 3.0.0
 
   follow-redirects@1.15.6(debug@3.2.7):
-    dependencies:
+    optionalDependencies:
       debug: 3.2.7
 
   foreground-child@3.1.1:
@@ -5381,8 +5384,9 @@ snapshots:
     dependencies:
       a-sync-waterfall: 1.0.1
       asap: 2.0.6
-      chokidar: 3.6.0
       commander: 5.1.0
+    optionalDependencies:
+      chokidar: 3.6.0
 
   nwsapi@2.2.10: {}
 
@@ -5688,7 +5692,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  qiniu@7.12.0:
+  qiniu@7.12.0(proxy-agent@5.0.0):
     dependencies:
       agentkeepalive: 4.5.0
       before: 0.0.1
@@ -5701,7 +5705,7 @@ snapshots:
       mockdate: 3.0.5
       tunnel-agent: 0.6.0
       typescript: 4.9.5
-      urllib: 2.41.0
+      urllib: 2.41.0(proxy-agent@5.0.0)
     transitivePeerDependencies:
       - proxy-agent
       - supports-color
@@ -6356,7 +6360,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  urllib@2.41.0:
+  urllib@2.41.0(proxy-agent@5.0.0):
     dependencies:
       any-promise: 1.3.0
       content-type: 1.0.5
@@ -6372,6 +6376,8 @@ snapshots:
       qs: 6.12.1
       statuses: 1.5.0
       utility: 1.18.0
+    optionalDependencies:
+      proxy-agent: 5.0.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6594,10 +6600,10 @@ snapshots:
 
   ylru@1.4.0: {}
 
-  yuque-hexo@1.9.5:
+  yuque-hexo@1.9.5(proxy-agent@5.0.0):
     dependencies:
-      '@yuque/sdk': 1.1.1
-      ali-oss: 6.17.0
+      '@yuque/sdk': 1.1.1(proxy-agent@5.0.0)
+      ali-oss: 6.17.0(proxy-agent@5.0.0)
       chalk: 2.4.2
       common-bin: 2.9.2
       cos-nodejs-sdk-v5: 2.14.0
@@ -6611,13 +6617,13 @@ snapshots:
       mkdirp: 1.0.4
       moment: 2.30.1
       prettier: 2.8.8
-      qiniu: 7.12.0
+      qiniu: 7.12.0(proxy-agent@5.0.0)
       queue: 4.5.1
       rimraf: 2.7.1
       superagent: 7.1.6
       update-check: 1.5.4
       upyun: 3.4.6(debug@3.2.7)
-      urllib: 2.41.0
+      urllib: 2.41.0(proxy-agent@5.0.0)
     transitivePeerDependencies:
       - proxy-agent
       - supports-color
