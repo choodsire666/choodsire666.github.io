@@ -1,11 +1,3 @@
----
-title: 算法和数据结构与GoF(设计模式)
-urlname: zcuyfd
-date: '2022-08-21 10:10:01'
-updated: '2024-05-13 18:14:02'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/25b5a7eec7b66e997f1a3fe8a40655ae.png'
-description: 日常练习代码随想录leetcode100有余力剑指offer面试突击codetop做题总结1.从简单开始刷起，刷个100道2.之后的话可能从中等的开始刷起每次刷完一题给自己一点心里反馈，开心一下很牛逼。不要小看暴力算法，在暴力算法的基础上我们才能更加优化。有时候我们可能会考虑边界条件这个时候我...
----
 日常练习
 代码随想录
 leetcode100
@@ -752,7 +744,7 @@ public class MergeSort {
     }
 }
 ```
-![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711525460333-cc565157-2ab8-40b0-ac44-a8898d230362.png#averageHue=%23f2f2f2&clientId=u2e2f7bd8-c258-4&from=paste&id=u09cabd8d&originHeight=349&originWidth=934&originalType=url&ratio=1.2395833730697632&rotation=0&showTitle=false&status=done&style=none&taskId=u23f20de0-3a7b-41f2-86f7-31a8bba5f0e&title=)
+![](https://raw.githubusercontent.com/choodsire666/blog-img/main/算法和数据结构与GoF(设计模式)/1a9bb10c6defa2fa7a5a24b7f28b9995.png)
 用树状图来描述归并，假设元素的个数为 n，那么使用归并排序拆分的次数为 log2(n)，即层数，每次归并需要做 n 次对比，最终得出的归并排序的时间复杂度为 log2(n)*n，根据大O推导法则，忽略底数，最终归并排序的时间复杂度为 O(nlogn)
 归并排序的缺点：需要申请额外的数组空间，导致空间复杂度提升，是典型的**以空间换时间**的操作
 

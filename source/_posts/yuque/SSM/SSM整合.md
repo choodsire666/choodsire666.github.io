@@ -1,11 +1,3 @@
----
-title: SSM整合
-urlname: xhhctg6hhc2ore91
-date: '2024-03-31 12:04:38'
-updated: '2024-04-07 17:07:14'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/SSM整合/74ee5157fc1f738f0629628bd03fdf91.png'
-description: "前言在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。注解整合\t注解\t解释Spring\t@Autowired\tSpring提供的工具（由Spring的依赖注入工具（BeanPostProcessor、BeanFact..."
----
 # 前言
 在做SSM项目时，发现配置文件很多，而且代码日后可以复用（便于以后能够快速复制粘贴），所以记录下来，供以后开发和学习（偷懒）用。
 # 注解整合

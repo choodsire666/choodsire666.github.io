@@ -1,11 +1,3 @@
----
-title: 20 redis最佳实践总结
-urlname: vm9s7gpksigmthd1
-date: '2024-03-31 11:09:11'
-updated: '2024-03-31 11:14:24'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/20 redis最佳实践总结/8f05e63d79e3facbbac3830da11dbe83.png'
-description: '笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redis键值设计1.1 优雅的key结构Redis的Key虽然可以自定义，但最好遵循下面的几个最佳实践约定：遵循基本格式：[业务名称]:[数据名]:[id]长度不超过44字节不包含特...'
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 # 1 Redis键值设计
 ## 1.1 优雅的key结构

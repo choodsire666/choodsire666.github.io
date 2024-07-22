@@ -4,7 +4,6 @@ urlname: fp6ps3t3rlbygff4
 date: '2024-03-19 16:02:01'
 updated: '2024-05-13 09:06:55'
 description: HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku...
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/JavaWeb/cover.jpg'
 ---
 # HTML
 ## HTML入门

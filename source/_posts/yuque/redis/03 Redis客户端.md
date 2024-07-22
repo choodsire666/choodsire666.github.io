@@ -1,11 +1,3 @@
----
-title: 03 Redis客户端
-urlname: dgzghz1qgltp
-date: '2024-03-14 12:28:20'
-updated: '2024-03-31 11:03:59'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/180ebb865a96183f1e0f5da8f221388f.png'
-description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：命令行客户端图形化桌面客户端编程客户端1 命令行客户端 Redis安装完成后就自带了命...
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：
@@ -29,13 +21,13 @@ redis-cli [options] [commonds]
    - `ping`：与redis服务端做心跳测试，服务端正常会返回`pong`
    - 不指定commond时，会进入`redis-cli`的交互控制台：
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/5dad7b043c88bbca22124fe1cdca7a37.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232150-864b4920-bab5-4db3-8504-7d70203d15a9.png#averageHue=%23021e31&clientId=ue9b12b69-c25a-4&height=291&id=Gdp6K&originHeight=387&originWidth=1593&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u9a5a08f7-f51d-4f72-ad5c-ab8500788e2&title=&width=1196)
 ## 2 图形化客户端
 下载地址：[https://pan.baidu.com/s/1sxQTOt-A5MCvVZnlgDf0eA?pwd=1234](https://pan.baidu.com/s/1sxQTOt-A5MCvVZnlgDf0eA?pwd=1234)
 ①  **如何连接到Redis** 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/432301b4d9a7baba85ba6f42c14a790e.png) 
+![](https://cdn.nlark.com/yuque/0/2022/png/22334924/1664283624189-28cca076-09b2-49fc-bf35-49a05716fb0d.png#averageHue=%23f3f0f0&clientId=u3f6f68b3-9d6e-4&errorMessage=unknown%20error&height=575&id=sC618&originHeight=827&originWidth=1177&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none&taskId=u9a34ed25-d034-40c0-868b-79ae9836052&title=&width=818) 
 **② 连接成功后如图所示**
- ![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/8f41ae4236033571f2d17dda4e4e17bc.png) 
+ ![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232181-85528e1d-f28f-4f7d-85be-0bc63895e1bb.png#averageHue=%23f3eeed&clientId=ue9b12b69-c25a-4&height=577&id=FgNoa&originHeight=832&originWidth=1179&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=uba3e0b41-ec58-40f7-915f-f6e6cee8cbd&title=&width=818) 
 ## 3 Java客户端
 ### 3.1 Jedis快速入门
 Jedis的官网地址： [Jedis官网](https://github.com/redis/jedis)，我们先来个快速入门：
@@ -98,7 +90,7 @@ public void testString(){
 ```
  
 **⑤ 执行**`**testString()**`**方法后测试结果如图所示**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/500d704cc431d7689799749a69bed8ef.png) 
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232188-02adcbd2-5e7c-482a-9af0-1edf6511abc0.png#averageHue=%23f1e6e5&clientId=ue9b12b69-c25a-4&id=oOqYf&originHeight=201&originWidth=808&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u3866f050-78f3-48e0-a6a5-41b35985e8d&title=) 
 
 ### 3.2 Jedis连接池
 **Jedis本身是线程不安全的，并且频繁的创建和销毁连接会有性能损耗，因此我们推荐大家使用Jedis连接池代替Jedis的直连方式**
@@ -135,11 +127,11 @@ public class JedisConnectionFactory {
 - 支持基于Redis的JDKCollection实现
 
 SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中：
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/7ac72f9888d53935164202464d744a1e.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232197-af6c253b-03e7-4300-8db5-8ac6f41ad8b1.png#averageHue=%23d0bebc&clientId=ue9b12b69-c25a-4&height=318&id=Ulkb3&originHeight=364&originWidth=1091&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u659aa71d-8914-4bf0-962d-4c27307cb26&title=&width=952)
 ### 3.4  SpringDataRedis快速入门
 `**SpringBoot**`**已经提供了对**`**SpringDataRedis**`**的支持，使用非常简单**
 **① 首先新建一个Spring Boot工程**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/c2c58b4d4022ec5c778194a4889fbfae.png) 
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232148-c776b971-2652-4258-9833-05fe29d7a360.png#averageHue=%23f3eeee&clientId=ue9b12b69-c25a-4&id=E3yhK&originHeight=594&originWidth=1042&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u4477bccc-1706-47c8-8b8c-c0aef67a6b1&title=) 
 **② 然后引入连接池依赖** 
 ```xml
 <!--连接池依赖-->
@@ -187,7 +179,7 @@ class RedisDemoApplicationTests {
 ```
 ### 3.5 RedisSerializer配置
 **RedisTemplate可以接收任意Object作为值写入Redis，只不过写入前会把Object序列化为字节形式，**`**默认是采用JDK序列化**`**，得到的结果是这样的**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/fc4840a338d162c4e127ba96ed757c4d.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232598-5f0e9ba5-5991-4344-b3d3-be6112d64c66.png#averageHue=%23d5c8c7&clientId=ue9b12b69-c25a-4&id=j0I4K&originHeight=248&originWidth=784&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u57d4ae99-9936-4449-8174-7bba6cd5def&title=)
 **缺点：**
 
 - 可读性差
@@ -223,7 +215,7 @@ public class RedisConfig {
 }
 ```
 **② 此时我们已经将RedisTemplate的key设置为**`**String序列化**`**，value设置为**`**Json序列化**`**的方式，再来执行方法测试**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/1b32ca47c9df32591883987f5690fd27.png) 
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232621-1a6b80dc-d1b7-4a86-aae2-b27b890955ba.png#averageHue=%23d7cecc&clientId=ue9b12b69-c25a-4&id=pHJHn&originHeight=244&originWidth=785&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ufeb0bbcf-264f-4438-aee0-02f151b0b3d&title=) 
 **③ 由于我们设置的value序列化方式是Json的，因此我们可以直接向redis中插入一个对象** 
 ```java
 @Test
@@ -234,13 +226,13 @@ void testSaveUser() {
 }
 ```
 
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/ce8ac56d1982960a3df0179721f4d543.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232638-fd101d2d-9598-4c82-ace0-6df3f549e2a2.png#averageHue=%23e0d7d6&clientId=ue9b12b69-c25a-4&id=pUWKy&originHeight=333&originWidth=788&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u1b526fb7-2b9e-4743-9e39-1e82fab7bb9&title=)
 尽管Json序列化可以满足我们的需求，但是依旧存在一些问题。
 如上图所示，为了在反序列化时知道对象的类型，JSON序列化器会将类的class类型写入json结果中，存入Redis，会带来额外的内存开销。
 那么我们如何解决这个问题呢？我们可以通过下文的`StringRedisTemplate`来解决这个问题。 
 ### 3.6	StringRedisTemplate
 **为了节省内存空间，我们并不会使用JSON序列化器来处理value，而是统一使用String序列化器，要求只能存储String类型的key和value。当需要存储Java对象时，手动完成对象的序列化和反序列化。**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/a84b1b4f6c83c4cc912ed3668d1877cd.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232715-430eb9c0-0c67-4283-9256-5cb85a2f3e27.png#averageHue=%23f1e8e7&clientId=ue9b12b69-c25a-4&id=oWfnA&originHeight=385&originWidth=1161&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2ec135db-f224-4df3-8897-277ca0cc0d3&title=)
 **Spring默认提供了一个StringRedisTemplate类，它的key和value的序列化方式默认就是String方式。省去了我们自定义RedisTemplate的过程**
 **① 我们可以直接编写一个测试类使用StringRedisTemplate来执行以下方法** 
 ```java
@@ -270,7 +262,7 @@ class RedisStringTemplateTest {
 ```
  
 **② 执行完毕回到Redis的图形化客户端查看结果**
-![](https://raw.githubusercontent.com/choodsire666/blog-img/main/03 Redis客户端/0c614dbbe4142f074fd5c053a41965b7.png) 
+![](https://cdn.nlark.com/yuque/0/2024/png/29688613/1711854232777-2bc32d5e-4cd1-4715-ad47-bcb700a072ee.png#averageHue=%23dfd5d4&clientId=ue9b12b69-c25a-4&id=J5hQG&originHeight=302&originWidth=786&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u2fe57611-6a7b-4268-9998-969fcdc9d40&title=) 
 ### 3.7 总结
 RedisTemplate的两种序列化实践方案，两种方案各有各的优缺点，可以根据实际情况选择使用。
 方案一：

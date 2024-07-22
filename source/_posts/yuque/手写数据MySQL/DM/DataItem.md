@@ -3,7 +3,6 @@ title: DataItem
 urlname: dm_dataitem
 date: '2024-04-26 16:38:14'
 updated: '2024-04-26 16:38:24'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/DataItem/cover.jpg'
 ---
 ## 基本介绍
 DataItem 是一个数据抽象层，它提供了一种在上层模块和底层数据存储之间进行交互的接口。其功能和作用主要包括：

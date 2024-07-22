@@ -3,7 +3,6 @@ title: 两端锁协议-2PL
 urlname: laqrkbyx19f1
 date: '2024-04-26 16:38:43'
 updated: '2024-04-27 13:48:37'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/两端锁协议-2PL/cover.jpg'
 ---
 ## 前置知识
 ### 共享锁（Share Lock）

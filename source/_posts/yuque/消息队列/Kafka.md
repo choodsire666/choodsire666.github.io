@@ -4,7 +4,6 @@ urlname: en74nvgltz2kkh16
 date: '2024-03-15 16:52:06'
 updated: '2024-03-15 17:01:55'
 description: 'Kafka集群第一种方式搭建zookeeper集群version: ''3''  # 定义了一个网络, 用于和kafka位于同一个网络 networks:   zk-net:     name: "zk-net"     driver: bridge  services:   zoo1:     ...'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Kafka/cover.jpg'
 ---
 
 ### Kafka集群

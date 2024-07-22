@@ -4,7 +4,6 @@ urlname: neza21i4oy5v3wvf
 date: '2024-03-13 17:29:06'
 updated: '2024-03-14 11:56:57'
 description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括DML英文全称是Data Manipulation Language(数据操作语言)，用来对数据库中表的数据记录进行增、删、改操作。●添加数据（INSERT）●修改数据（UPDATE）●删除...
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/03%20SQL-DML/cover.jpg'
 ---
 
 **笔记来源：**[黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)

@@ -1,11 +1,3 @@
----
-title: VUE
-urlname: zqezgyiyyccmpoqa
-date: '2024-03-23 10:49:34'
-updated: '2024-04-21 18:09:42'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/VUE/f07a980819da2acad9fc0f9c94dfa78a.png'
-description: "笔记模板语法插值语法功能：用于解析标签体内容\t\t\t\t\t\t\t\t写法：{{xxxx}},xxx会作为表达式去解析，且可以自动读取到data中的属性指令语法功能：用于解析标签（包括：标签属性、标签体内容、绑定事件.....）\t\t\t\t\t\t\t\t举例：v-bind:href=\"xxxxxx\" 或  简写为..."
----
 # 笔记
 ## 模板语法
 ### 插值语法

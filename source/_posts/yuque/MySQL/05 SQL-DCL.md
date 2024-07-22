@@ -4,7 +4,6 @@ urlname: uq7l94tl0gpfrk1n
 date: '2024-03-13 17:30:26'
 updated: '2024-03-14 12:02:04'
 description: '笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DCL英文全称是Data Control Language(数据控制语言)，用来管理数据库用户、控制数据库的访问权限。 1 管理用户查询用户查询的结果如下: 其中 Host代表当前用户访...'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/05%20SQL-DCL/cover.jpg'
 ---
 **笔记来源：**[黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 

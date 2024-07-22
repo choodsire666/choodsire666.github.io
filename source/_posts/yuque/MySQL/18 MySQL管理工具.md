@@ -1,11 +1,3 @@
----
-title: 18 MySQL管理工具
-urlname: cnimlcxf8gntnpx1
-date: '2024-03-14 12:14:33'
-updated: '2024-04-08 11:51:11'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/18 MySQL管理工具/fef64476cdf2c1c168f3bd62cebe375f.png'
-description: 笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言Mysql数据库安装完成后，自带了一下四个数据库，具体作用如下：数据库含义mysql存储MySQL服务器正常运行所需要的各种信息 （时区、主从、用户、权限等）information_sc...
----
 **笔记来源：**[**黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括**](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 
 **前言**

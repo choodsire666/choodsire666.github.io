@@ -1,9 +1,9 @@
 ---
 title: SpringMVC
 urlname: ya82rih88q5s87o9
-date: '2024-03-14 15:24:47'
-updated: '2024-04-08 15:05:48'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/Spring/a3f97fe4e517e5f268c1dfac7da34cdf.png'
+date: '2024-03-14 15:36:40'
+updated: '2024-05-30 13:57:50'
+description: 课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的...
 ---
 ## 课程目标
 1. 理解SpringMVC核心框架流程

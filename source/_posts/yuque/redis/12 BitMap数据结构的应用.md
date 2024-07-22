@@ -1,11 +1,3 @@
----
-title: 12 BitMap数据结构的应用
-urlname: gz7clxxy73fyxml0
-date: '2024-03-31 11:08:43'
-updated: '2024-04-06 21:10:56'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/12 BitMap数据结构的应用/bb973b0ca7a81c2580580248a3eacaeb.png'
-description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 BitMap功能演示我们针对签到功能完全可以通过mysql来完成，比如说以下这张表用户一次签到，就是一条记录，假如有1000万用户，平均每人每年签到次数为10次，则这张表一年的数据量为...
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 BitMap功能演示
 我们针对签到功能完全可以通过mysql来完成，比如说以下这张表

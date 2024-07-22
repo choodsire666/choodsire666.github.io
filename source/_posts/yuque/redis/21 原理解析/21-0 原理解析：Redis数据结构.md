@@ -1,11 +1,3 @@
----
-title: 21-0 原理解析：Redis数据结构
-urlname: tofz0i0332r43b9b
-date: '2024-03-31 11:14:36'
-updated: '2024-03-31 11:14:54'
-cover: 'https://raw.githubusercontent.com/choodsire666/blog-img/main/21-0 原理解析：Redis数据结构/ac88c67d150889ec4aa0bcf6ff26b664.png'
-description: 笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redis数据结构-动态字符串我们都知道Redis中保存的Key是字符串，value往往是字符串或者字符串的集合。可见字符串是Redis中最常用的一种数据结构。不过Redis没有直接使...
----
 **笔记来源：**[**黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案**](https://www.bilibili.com/video/BV1cr4y1671t/?spm_id_from=333.337.search-card.all.click&vd_source=e8046ccbdc793e09a75eb61fe8e84a30)
 ## 1 Redis数据结构-动态字符串
 我们都知道Redis中保存的Key是字符串，value往往是字符串或者字符串的集合。可见字符串是Redis中最常用的一种数据结构。
