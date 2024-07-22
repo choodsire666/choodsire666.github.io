@@ -1,2891 +1,336 @@
 {
   "docs": [
     {
-      "id": 161830164,
-      "doc_id": "ya82rih88q5s87o9",
-      "updated": 1717048670000,
+      "id": 178982855,
+      "doc_id": "paen8kf6e7bepzf5",
+      "updated": 1721638105000,
       "properties": {
-        "title": "SpringMVC",
-        "urlname": "ya82rih88q5s87o9",
-        "date": "2024-03-14 15:36:40",
-        "updated": "2024-05-30 13:57:50",
-        "description": "课程目标理解SpringMVC核心框架流程掌握SpringMVC框架配置方式掌握SpringMVC的处理器方法参数与返回值的使用掌握SpringMVC实现文件上传功能掌握SpringMVC拦截器的使用了解RESTful互联网软件架构规范掌握SSM框架集成的配置课程重点SpringMVC的配置的..."
+        "title": "分布式系统",
+        "urlname": "paen8kf6e7bepzf5",
+        "date": "2024-07-22 16:32:46",
+        "updated": "2024-07-22 16:48:25",
+        "description": "分布式系统是指在网络互通的各个计算机中的组件，它们直接互相协同作用。为什么需要有分布式系统呢？升级单机处理能力的性价比越来越低单机处理能力存在瓶颈处于稳定性和可用性的考虑根据摩尔定律：每隔18个月，集成电路上可容纳的晶体管数目会增加一倍，且性能也将提升一倍。这也就是说，在一定的时间点，我要提升..."
       },
       "catalog": [
         {
-          "title": "SSM",
-          "doc_id": "ya82rih88q5s87o9"
+          "title": "系统架构",
+          "doc_id": "paen8kf6e7bepzf5"
         }
       ],
-      "realName": "SpringMVC",
-      "relativePath": "/SSM/SpringMVC.md",
-      "docPath": "source/_posts/yuque/SSM"
+      "realName": "分布式系统",
+      "relativePath": "/系统架构/分布式系统.md",
+      "docPath": "source/_posts/yuque/系统架构"
     },
     {
-      "id": 161820140,
-      "doc_id": "auf4wvnuz7pk",
-      "updated": 1717317639000,
+      "id": 176482838,
+      "doc_id": "um7ock1xq86oqzzz",
+      "updated": 1720077329000,
       "properties": {
-        "title": "9.Docker实用篇",
-        "urlname": "auf4wvnuz7pk",
-        "date": "2024-03-14 14:57:03",
-        "updated": "2024-06-02 16:40:39",
-        "description": "Docker实用篇0.学习目标1.初识Docker1.1.什么是Docker微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题1.1.1.应用部署..."
+        "title": "生成验证码",
+        "urlname": "um7ock1xq86oqzzz",
+        "date": "2024-07-04 12:42:18",
+        "updated": "2024-07-04 15:15:29",
+        "description": "Kaptcha 是一个开源项目，由 Google 提供支持。它以简洁和可定制为特点，帮助初学者轻松了解验证码生成的原理和实现方式。下面是 Kaptcha 的几个主要特点：简单易用：Kaptcha 提供了非常简单的 API 接口，几行代码就可以生成和显示验证码图像。可定制性强：尽管 Kaptch..."
       },
       "catalog": [
         {
-          "title": "SpringCloud",
-          "doc_id": "auf4wvnuz7pk"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "auf4wvnuz7pk"
+          "title": "项目总结",
+          "doc_id": "um7ock1xq86oqzzz"
         }
       ],
-      "realName": "9.Docker实用篇",
-      "relativePath": "/SpringCloud/基本篇/9.Docker实用篇.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
+      "realName": "生成验证码",
+      "relativePath": "/项目总结/生成验证码.md",
+      "docPath": "source/_posts/yuque/项目总结"
     },
     {
-      "id": 161666083,
-      "doc_id": "vsp1knk4g0g1",
-      "updated": 1717047383000,
+      "id": 175951115,
+      "doc_id": "mungbnpyyb5lvyqt",
+      "updated": 1721624808000,
       "properties": {
-        "title": "JDK8-17新特性（上）",
-        "urlname": "vsp1knk4g0g1",
-        "date": "2024-03-13 17:15:48",
-        "updated": "2024-05-30 13:36:23",
-        "description": "本章专题与脉络1. Java版本迭代概述1.1 发布特点（小步快跑，快速迭代）发行版本发行时间备注Java 1.01996.01.23Sun公司发布了Java的第一个开发工具包Java 5.02004.09.30①版本号从1.4直接更新至5.0；②平台更名为JavaSE、JavaEE、Java..."
+        "title": "算法模板",
+        "urlname": "mungbnpyyb5lvyqt",
+        "date": "2024-07-01 12:31:54",
+        "updated": "2024-07-22 13:06:48",
+        "description": "快速排序快速排序import java.io.IOException; import java.io.BufferedReader; import java.io.InputStreamReader; import java.util.StringTokenizer;  public clas..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "vsp1knk4g0g1"
-        },
-        {
-          "title": "JDK8-17新特性",
-          "doc_id": "vsp1knk4g0g1"
+          "title": "算法",
+          "doc_id": "mungbnpyyb5lvyqt"
         }
       ],
-      "realName": "JDK8-17新特性（上）",
-      "relativePath": "/Java/JDK8-17新特性/JDK8-17新特性（上）.md",
-      "docPath": "source/_posts/yuque/Java/JDK8-17新特性"
+      "realName": "算法模板",
+      "relativePath": "/算法/算法模板.md",
+      "docPath": "source/_posts/yuque/算法"
     },
     {
-      "id": 163594490,
-      "doc_id": "ypvfpte531pktdzv",
-      "updated": 1717038045000,
+      "id": 176481200,
+      "doc_id": "itglllecih4yrrue",
+      "updated": 1720068139000,
       "properties": {
-        "title": "ElasticSearch集群",
-        "urlname": "ypvfpte531pktdzv",
-        "date": "2024-03-28 16:36:22",
-        "updated": "2024-05-30 11:00:45",
-        "description": "集群单机的elasticsearch做数据存储，必然面临两个问题：海量数据存储问题、单点故障问题。海量数据存储问题：将索引库从逻辑上拆分为N个分片（shard），存储到多个节点单点故障问题：将分片数据在不同节点备份（replica ）ES集群相关概念: 集群（cluster）：一组拥有共同的 ..."
+        "title": "记录操作日志",
+        "urlname": "itglllecih4yrrue",
+        "date": "2024-07-04 12:37:07",
+        "updated": "2024-07-04 12:42:19",
+        "description": "package com.choodsire666.litemall.admin.service;  import com.choodsire666.litemall.core.util.IpUtil; import com.choodsire666.litemall.db.domain.Adm..."
       },
       "catalog": [
         {
-          "title": "SpringCloud",
-          "doc_id": "ypvfpte531pktdzv"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "ypvfpte531pktdzv"
-        },
-        {
-          "title": "11.ElasticSearch",
-          "doc_id": "ypvfpte531pktdzv"
+          "title": "项目总结",
+          "doc_id": "itglllecih4yrrue"
         }
       ],
-      "realName": "ElasticSearch集群",
-      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/ElasticSearch集群.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
+      "realName": "记录操作日志",
+      "relativePath": "/项目总结/记录操作日志.md",
+      "docPath": "source/_posts/yuque/项目总结"
     },
     {
-      "id": 163594384,
-      "doc_id": "oisxazvr4ygky7pr",
-      "updated": 1716972110000,
+      "id": 176313678,
+      "doc_id": "vx49qt1s6b5545el",
+      "updated": 1719991417000,
       "properties": {
-        "title": "数据聚合、自动补全、数据同步",
-        "urlname": "oisxazvr4ygky7pr",
-        "date": "2024-03-28 16:35:42",
-        "updated": "2024-05-29 16:41:50",
-        "description": "1.数据聚合聚合（aggregations）可以让我们极其方便的实现对数据的统计、分析、运算。例如：什么品牌的手机最受欢迎？这些手机的平均价格、最高价格、最低价格？这些手机每月的销售情况如何？实现这些统计功能的比数据库的sql要方便的多，而且查询速度非常快，可以实现近实时搜索效果。1.1.聚合..."
+        "title": "加密算法",
+        "urlname": "vx49qt1s6b5545el",
+        "date": "2024-07-03 14:48:00",
+        "updated": "2024-07-03 15:23:37",
+        "description": "对称加密算法基本原理同一密钥：加密和解密都使用相同的密钥。这意味着加密过程中用来转换明文为密文的密钥，和解密过程中用来还原密文为明文的密钥是相同的。快速效率：对称加密算法通常比非对称加密算法更快，适合处理大量数据。密钥分发：由于同一密钥必须在发送方和接收方之间共享，如何安全地分发密钥是对称加密..."
       },
       "catalog": [
         {
-          "title": "SpringCloud",
-          "doc_id": "oisxazvr4ygky7pr"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "oisxazvr4ygky7pr"
-        },
-        {
-          "title": "11.ElasticSearch",
-          "doc_id": "oisxazvr4ygky7pr"
+          "title": "项目总结",
+          "doc_id": "vx49qt1s6b5545el"
         }
       ],
-      "realName": "数据聚合、自动补全、数据同步",
-      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/数据聚合、自动补全、数据同步.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
+      "realName": "加密算法",
+      "relativePath": "/项目总结/加密算法.md",
+      "docPath": "source/_posts/yuque/项目总结"
     },
     {
-      "id": 167361293,
-      "doc_id": "tlag6ghucv3g0sy7",
-      "updated": 1716967350000,
+      "id": 176192434,
+      "doc_id": "iow44pagpr9zh7cl",
+      "updated": 1719916821000,
       "properties": {
-        "title": "Part3",
-        "urlname": "tlag6ghucv3g0sy7",
-        "date": "2024-04-26 16:34:33",
-        "updated": "2024-05-29 15:22:30",
-        "description": "相对于前面的2.0版本，该版本会升级更多的服务：文章搜索——ElasticSearch+Canal用户操作追踪+消息队列——Spring AOP+RocketMQ消息推送——SSE长连接待定：Spring Cloud微服务拆分业务文章敏感词替换——MyBatis的自定义人工智能的融入——第三方..."
+        "title": "自定义IpUtil",
+        "urlname": "iow44pagpr9zh7cl",
+        "date": "2024-07-02 18:08:12",
+        "updated": "2024-07-02 18:40:21",
+        "description": "package com.choodsire666.litemall.core.util;  import org.apache.commons.logging.Log; import org.apache.commons.logging.LogFactory;  import javax.se..."
       },
       "catalog": [
         {
-          "title": "技术派项目",
-          "doc_id": "tlag6ghucv3g0sy7"
+          "title": "项目总结",
+          "doc_id": "iow44pagpr9zh7cl"
         }
       ],
-      "realName": "Part3",
-      "relativePath": "/技术派项目/Part3.md",
-      "docPath": "source/_posts/yuque/技术派项目"
+      "realName": "自定义IpUtil",
+      "relativePath": "/项目总结/自定义IpUtil.md",
+      "docPath": "source/_posts/yuque/项目总结"
     },
     {
-      "id": 161666013,
-      "doc_id": "pqrf8cvoggds",
-      "updated": 1716966295000,
+      "id": 176182485,
+      "doc_id": "pqt9x5cfmt0u23u0",
+      "updated": 1719914166000,
       "properties": {
-        "title": "网络编程",
-        "urlname": "pqrf8cvoggds",
-        "date": "2024-03-13 17:15:33",
-        "updated": "2024-05-29 15:04:55",
-        "description": "本章专题与脉络1. 网络编程概述Java是 Internet 上的语言，它从语言级上提供了对网络应用程序的支持，程序员能够很容易开发常见的网络应用程序。Java提供的网络类库，可以实现无痛的网络连接，联网的底层细节被隐藏在 Java 的本机安装系统里，由 JVM 进行控制。并且 Java 实现..."
+        "title": "Mybatis Generator",
+        "urlname": "pqt9x5cfmt0u23u0",
+        "date": "2024-07-02 17:15:13",
+        "updated": "2024-07-02 17:56:06",
+        "description": "Mybatis Generator是Mybatis提供的生成代码的工具，支持多种插件。导入依赖：  <dependencies>     <!--Mybatis-->     <dependency>       <groupId>org.mybatis.spring.boot</groupI..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "pqrf8cvoggds"
+          "title": "项目总结",
+          "doc_id": "pqt9x5cfmt0u23u0"
         }
       ],
-      "realName": "网络编程",
-      "relativePath": "/Java/网络编程.md",
-      "docPath": "source/_posts/yuque/Java"
+      "realName": "Mybatis Generator",
+      "relativePath": "/项目总结/Mybatis Generator.md",
+      "docPath": "source/_posts/yuque/项目总结"
     },
     {
-      "id": 163839013,
-      "doc_id": "dn0sow0d3pxdk7bf",
-      "updated": 1716894690000,
+      "id": 176182562,
+      "doc_id": "yyl7csi7os1y6ukt",
+      "updated": 1719923159000,
       "properties": {
-        "title": "流程控制语句",
-        "urlname": "dn0sow0d3pxdk7bf",
-        "date": "2024-03-31 10:45:57",
-        "updated": "2024-05-28 19:11:30",
-        "description": "本章专题与脉络流程控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。程序设计中规定的三种流程结构，即：顺序结构程序从上到下逐行地执行，中间没有任何判断和跳转。分支结构根据条件，选择性地执行某段代码。有if…else和switch-case两种分支语句。循..."
+        "title": "Jackson",
+        "urlname": "yyl7csi7os1y6ukt",
+        "date": "2024-07-02 17:15:36",
+        "updated": "2024-07-02 20:25:59",
+        "description": "ObjectMapper类自定义JacksonUtil工具类package com.choodsire666.litemall.core.util;  import com.fasterxml.jackson.core.JsonProcessingException; import com.f..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "dn0sow0d3pxdk7bf"
+          "title": "项目总结",
+          "doc_id": "yyl7csi7os1y6ukt"
         }
       ],
-      "realName": "流程控制语句",
-      "relativePath": "/Java/流程控制语句.md",
-      "docPath": "source/_posts/yuque/Java"
+      "realName": "Jackson",
+      "relativePath": "/项目总结/Jackson.md",
+      "docPath": "source/_posts/yuque/项目总结"
     },
     {
-      "id": 161776955,
-      "doc_id": "um7lilrkavmww4r4",
-      "updated": 1716894672000,
+      "id": 175801859,
+      "doc_id": "ggf4zhqrt5xged1k",
+      "updated": 1719828807000,
       "properties": {
-        "title": "异常",
-        "urlname": "um7lilrkavmww4r4",
-        "date": "2024-03-14 10:55:41",
-        "updated": "2024-05-28 19:11:12",
-        "description": "本章专题与脉络1. 异常概述1.1 什么是生活的异常男主角小明每天开车上班，正常车程1小时。但是，不出意外的话，可能会出现意外。出现意外，即为异常情况。我们会做相应的处理。如果不处理，到不了公司。处理完了，就可以正常开车去公司。1.2 什么是程序的异常在使用计算机语言进行项目开发的过程中，即使..."
+        "title": "概述",
+        "urlname": "ggf4zhqrt5xged1k",
+        "date": "2024-06-30 15:23:16",
+        "updated": "2024-07-01 18:13:27",
+        "description": "UML（Unified Model Language）统一建模语言。UML中包含结构体，行为图。其中结构图中包含类图，部署图，对象图，"
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "um7lilrkavmww4r4"
+          "title": "UML",
+          "doc_id": "ggf4zhqrt5xged1k"
         }
       ],
-      "realName": "异常",
-      "relativePath": "/Java/异常.md",
-      "docPath": "source/_posts/yuque/Java"
+      "realName": "概述",
+      "relativePath": "/UML/概述.md",
+      "docPath": "source/_posts/yuque/UML"
     },
     {
-      "id": 161776380,
-      "doc_id": "iea26vb0n13x9kdb",
-      "updated": 1716894682000,
+      "id": 176015793,
+      "doc_id": "hzocgmqfnmggcavn",
+      "updated": 1719829124000,
       "properties": {
-        "title": "变量与运算符",
-        "urlname": "iea26vb0n13x9kdb",
-        "date": "2024-03-14 10:53:13",
-        "updated": "2024-05-28 19:11:22",
-        "description": "个人笔记需要不断的迭代本章专题与脉络1. 关键字（keyword）定义：被Java语言赋予了特殊含义，用做专门用途的字符串（或单词）HelloWorld案例中，出现的关键字有 class、public 、 static 、 void 等，这些单词已经被Java定义好了。特点：全部关键字都是小写..."
+        "title": "日期时间存储方式",
+        "urlname": "hzocgmqfnmggcavn",
+        "date": "2024-07-01 18:13:36",
+        "updated": "2024-07-01 18:18:44",
+        "description": "存储日期和时间通常采用DATE, DATETIME, TIMESTAMP数据类型进行存储。它们的区别如下图所示：数据类型存储格式存储空间范围是否支持时区自动更新DATEYYYY-MM-DD3个字节1000-01-01 到 9999-12-31否否DATETIMEYYYY-MM-DD HH:MM..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "iea26vb0n13x9kdb"
+          "title": "Mysql",
+          "doc_id": "hzocgmqfnmggcavn"
         }
       ],
-      "realName": "变量与运算符",
-      "relativePath": "/Java/变量与运算符.md",
-      "docPath": "source/_posts/yuque/Java"
+      "realName": "日期时间存储方式",
+      "relativePath": "/Mysql/日期时间存储方式.md",
+      "docPath": "source/_posts/yuque/Mysql"
     },
     {
-      "id": 161661313,
-      "doc_id": "dx44u12yyxklvoss",
-      "updated": 1716894539000,
+      "id": 175789873,
+      "doc_id": "vareg4hky8e5bi1c",
+      "updated": 1719721994000,
       "properties": {
-        "title": "01数据库概述",
-        "urlname": "dx44u12yyxklvoss",
-        "date": "2024-03-13 16:53:33",
-        "updated": "2024-05-28 19:08:59",
-        "description": "数据库概述",
-        "tags": [
-          "Mysql"
-        ],
-        "categories": [
-          "Mysql"
-        ]
+        "title": "考虑使用静态工厂方法代替构造函数",
+        "urlname": "vareg4hky8e5bi1c",
+        "date": "2024-06-30 12:08:18",
+        "updated": "2024-06-30 12:33:14",
+        "description": "举例子：Java中的包装类中的valueOf方法，通过静态方法valueOf来创建或返回实例对象。public static Boolean valueOf(boolean b) {     return (b ? Boolean.True : Boolean.False); }优点：与构造函..."
       },
       "catalog": [
         {
-          "title": "MySQL",
-          "doc_id": "dx44u12yyxklvoss"
+          "title": "Effective Java",
+          "doc_id": "vareg4hky8e5bi1c"
         }
       ],
-      "realName": "01数据库概述",
-      "relativePath": "/MySQL/01数据库概述.md",
-      "docPath": "source/_posts/yuque/MySQL"
+      "realName": "考虑使用静态工厂方法代替构造函数",
+      "relativePath": "/Effective Java/考虑使用静态工厂方法代替构造函数.md",
+      "docPath": "source/_posts/yuque/Effective Java"
     },
     {
-      "id": 161778299,
-      "doc_id": "kteschpgkis7pmxd",
-      "updated": 1716894436000,
+      "id": 175475211,
+      "doc_id": "aht6aaet92nohbq4",
+      "updated": 1719498522000,
       "properties": {
-        "title": "多线程",
-        "urlname": "kteschpgkis7pmxd",
-        "date": "2024-03-14 11:00:43",
-        "updated": "2024-05-28 19:07:16",
-        "description": "本章专题与脉络我们之前学习的程序在没有跳转语句的情况下，都是由上至下沿着一条路径依次执行。现在想要设计一个程序，可以同时有多条执行路径同时执行。比如，一边游戏，一边qq聊天，一边听歌，怎么设计？要解决上述问题，需要使用多进程或者多线程来解决。1. 相关概念1.1 程序、进程与线程程序（prog..."
+        "title": "动态规划",
+        "urlname": "aht6aaet92nohbq4",
+        "date": "2024-06-27 17:49:56",
+        "updated": "2024-06-27 22:28:42",
+        "description": "爬楼梯假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？示例 1：输入：n = 2输出：2解释：有两种方法可以爬到楼顶。1 阶 + 1 阶2 阶 示例 2：输入：n = 3输出：3解释：有三种方法可以爬到楼顶。1 阶 + 1 阶..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "kteschpgkis7pmxd"
+          "title": "Leetcode刷题笔记",
+          "doc_id": "aht6aaet92nohbq4"
         }
       ],
-      "realName": "多线程",
-      "relativePath": "/Java/多线程.md",
-      "docPath": "source/_posts/yuque/Java"
+      "realName": "动态规划",
+      "relativePath": "/Leetcode刷题笔记/动态规划.md",
+      "docPath": "source/_posts/yuque/Leetcode刷题笔记"
     },
     {
-      "id": 161781110,
-      "doc_id": "canurtaag1nab24f",
-      "updated": 1716894415000,
+      "id": 175414033,
+      "doc_id": "ogg1l0ugagai6pok",
+      "updated": 1719462886000,
       "properties": {
-        "title": "集合",
-        "urlname": "canurtaag1nab24f",
-        "date": "2024-03-14 11:10:08",
-        "updated": "2024-05-28 19:06:55",
-        "description": "本章专题与脉络1. 集合框架概述1.1 生活中的容器1.2 数组的特点与弊端一方面，面向对象语言对事物的体现都是以对象的形式，为了方便对多个对象的操作，就要对对象进行存储。另一方面，使用数组存储对象方面具有一些弊端，而Java 集合就像一种容器，可以动态地把多个对象的引用放入容器中。数组在内存..."
+        "title": "数据结构概述",
+        "urlname": "ogg1l0ugagai6pok",
+        "date": "2024-06-27 11:08:58",
+        "updated": "2024-06-27 12:34:46",
+        "description": "数据结构研究的是数据的逻辑结构和数据的物理结构以及它们之间的相互关系。即数据的逻辑结构、数据的存储结构和数据的操作，只有这三个方面的内容完全相同，才能成为完全相同的数据结构。其中数据为何物呢？数据是由数据元素，数据对象和数据类型组成的。其中数据元素又包含了多个数据项。student表（数据对象..."
       },
       "catalog": [
         {
-          "title": "Java",
-          "doc_id": "canurtaag1nab24f"
+          "title": "数据结构",
+          "doc_id": "ogg1l0ugagai6pok"
         }
       ],
-      "realName": "集合",
-      "relativePath": "/Java/集合.md",
-      "docPath": "source/_posts/yuque/Java"
+      "realName": "数据结构概述",
+      "relativePath": "/数据结构/数据结构概述.md",
+      "docPath": "source/_posts/yuque/数据结构"
     },
     {
-      "id": 163839063,
-      "doc_id": "biy56ikwqt2udhy8",
-      "updated": 1716894396000,
+      "id": 168232672,
+      "doc_id": "gavw0zv066enu3ge",
+      "updated": 1719293762000,
       "properties": {
-        "title": "数组",
-        "urlname": "biy56ikwqt2udhy8",
-        "date": "2024-03-31 10:46:30",
-        "updated": "2024-05-28 19:06:36",
-        "description": "本章专题与脉络1. 数组的概述1.1 为什么需要数组需求分析1：需要统计某公司50个员工的工资情况，例如计算平均工资、找到最高工资等。用之前知识，首先需要声明50个变量来分别记录每位员工的工资，这样会很麻烦。因此我们可以将所有的数据全部存储到一个容器中统一管理，并使用容器进行计算。需求分析2：..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "biy56ikwqt2udhy8"
-        }
-      ],
-      "realName": "数组",
-      "relativePath": "/Java/数组.md",
-      "docPath": "source/_posts/yuque/Java"
-    },
-    {
-      "id": 169783268,
-      "doc_id": "xkaago63defr5vzf",
-      "updated": 1716867925000,
-      "properties": {
-        "title": "Apifox",
-        "urlname": "xkaago63defr5vzf",
-        "date": "2024-05-15 18:01:47",
-        "updated": "2024-05-28 11:45:25",
-        "description": "tags:Restfulcategories:开发工具"
-      },
-      "catalog": [
-        {
-          "title": "工具使用",
-          "doc_id": "xkaago63defr5vzf"
-        }
-      ],
-      "realName": "Apifox",
-      "relativePath": "/工具使用/Apifox.md",
-      "docPath": "source/_posts/yuque/工具使用"
-    },
-    {
-      "id": 161666037,
-      "doc_id": "brykk7yxi6t2",
-      "updated": 1716111383000,
-      "properties": {
-        "title": "JDK8-17新特性（下）",
-        "urlname": "brykk7yxi6t2",
-        "date": "2024-03-13 17:15:40",
-        "updated": "2024-05-19 17:36:23",
-        "description": "第18章_JDK8-17新特性（下）6. 新语法结构新的语法结构，为我们勾勒出了 Java 语法进化的一个趋势，将开发者从复杂、繁琐的低层次抽象中逐渐解放出来，以更高层次、更优雅的抽象，既降低代码量，又避免意外编程错误的出现，进而提高代码质量和开发效率。6.1 Java的REPL工具： jSh..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "brykk7yxi6t2"
-        },
-        {
-          "title": "JDK8-17新特性",
-          "doc_id": "brykk7yxi6t2"
-        }
-      ],
-      "realName": "JDK8-17新特性（下）",
-      "relativePath": "/Java/JDK8-17新特性/JDK8-17新特性（下）.md",
-      "docPath": "source/_posts/yuque/Java/JDK8-17新特性"
-    },
-    {
-      "id": 170041006,
-      "doc_id": "fkx3so55htytx3xv",
-      "updated": 1715925006000,
-      "properties": {
-        "title": "IDEA",
-        "urlname": "fkx3so55htytx3xv",
-        "date": "2024-05-17 13:49:17",
-        "updated": "2024-05-17 13:50:06",
-        "description": "快捷键的熟练代码块整体下移"
-      },
-      "catalog": [
-        {
-          "title": "工具使用",
-          "doc_id": "fkx3so55htytx3xv"
-        }
-      ],
-      "realName": "IDEA",
-      "relativePath": "/工具使用/IDEA.md",
-      "docPath": "source/_posts/yuque/工具使用"
-    },
-    {
-      "id": 169874586,
-      "doc_id": "lnmfvn3d0zuzh03f",
-      "updated": 1715828488000,
-      "properties": {
-        "title": "CollectionUtils",
-        "urlname": "lnmfvn3d0zuzh03f",
-        "date": "2024-05-16 10:56:30",
-        "updated": "2024-05-16 11:01:28",
-        "description": "import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;检验集合是否为空isEmpty检验集合是否不为空isNotEmpty判断map是否为空isEmpty\t判断map是否不为空isNotEmpty"
-      },
-      "catalog": [
-        {
-          "title": "工具使用",
-          "doc_id": "lnmfvn3d0zuzh03f"
-        }
-      ],
-      "realName": "CollectionUtils",
-      "relativePath": "/工具使用/CollectionUtils.md",
-      "docPath": "source/_posts/yuque/工具使用"
-    },
-    {
-      "id": 163843757,
-      "doc_id": "yozncwtghxzg9gwr",
-      "updated": 1716276634000,
-      "properties": {
-        "title": "MyBatis-Plus",
-        "urlname": "yozncwtghxzg9gwr",
-        "date": "2024-03-31 11:38:38",
-        "updated": "2024-05-21 15:30:34",
-        "description": "前面我们学习过的ORM[Object Relational Mapping(对象关系映射)]持久层框架MyBatis，它可以帮助我们完成单表、多表、动态SQL的业务逻辑处理，与之平级的还有Hibernate，和这节我们要学习的MyBatisPlus了。1.快速入门1.1 入门案例mp.sqlm..."
+        "title": "Spring的常用注解",
+        "urlname": "gavw0zv066enu3ge",
+        "date": "2024-05-04 14:39:10",
+        "updated": "2024-06-25 13:36:02",
+        "description": "类别注解说明Bean的声明@Component定义基础层的通用组件, 没有明确的角色@Service定义业务逻辑层的服务组件@Repository在数据访问层定义数据资源服务@Controller在展示层使用, 用于定义控制器Bean的注入@Autowried服务依赖注入, byType注入,..."
       },
       "catalog": [],
-      "realName": "MyBatis-Plus",
-      "relativePath": "/MyBatis-Plus.md",
+      "realName": "Spring的常用注解",
+      "relativePath": "/Spring的常用注解.md",
       "docPath": "source/_posts/yuque"
     },
     {
-      "id": 169737425,
-      "doc_id": "mk2dsz9o053qcbtb",
-      "updated": 1715751290000,
+      "id": 168238202,
+      "doc_id": "liwtvoyyd090t4y9",
+      "updated": 1714823441000,
       "properties": {
-        "title": "smartlock",
-        "urlname": "mk2dsz9o053qcbtb",
-        "date": "2024-05-15 13:33:57",
-        "updated": "2024-05-15 13:34:50"
+        "title": "Bean的生命周期",
+        "urlname": "liwtvoyyd090t4y9",
+        "date": "2024-05-04 16:07:10",
+        "updated": "2024-05-04 19:50:41",
+        "description": "[BeanFactoryPostProcessor - postProcessBeanFactory()] [environment, systemProperties, systemEnvironment, applicationStartup, org.springframework.co..."
       },
       "catalog": [],
-      "realName": "smartlock",
-      "relativePath": "/smartlock.md",
+      "realName": "Bean的生命周期",
+      "relativePath": "/Bean的生命周期.md",
       "docPath": "source/_posts/yuque"
     },
     {
-      "id": 167362001,
-      "doc_id": "5108f05c89e919710e1fdea889cce09f",
-      "updated": 1715612546000,
+      "id": 168244528,
+      "doc_id": "empp2z8whcw2fbq8",
+      "updated": 1714908476000,
       "properties": {
-        "title": "MVCC版本控制",
-        "urlname": "5108f05c89e919710e1fdea889cce09f",
-        "date": "2024-04-26 16:38:40",
-        "updated": "2024-05-13 23:02:26",
-        "description": "前提概要什么是MVCC？MVCCMVCC，全称 Multi-Version Concurrency Control ，即多版本并发控制。MVCC 是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。MVCC 在 MySQL InnoDB 中的实现主要..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "5108f05c89e919710e1fdea889cce09f"
-        },
-        {
-          "title": "知识点",
-          "doc_id": "5108f05c89e919710e1fdea889cce09f"
-        }
-      ],
-      "realName": "MVCC版本控制",
-      "relativePath": "/手写数据MySQL/知识点/MVCC版本控制.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/知识点"
-    },
-    {
-      "id": 167361922,
-      "doc_id": "uhy686i29cqv",
-      "updated": 1714995630000,
-      "properties": {
-        "title": "日志文件",
-        "urlname": "uhy686i29cqv",
-        "date": "2024-04-26 16:38:18",
-        "updated": "2024-05-06 19:40:30",
-        "description": "MYDB提供了崩溃后的数据恢复功能，DM层在每次对底层数据进行操作时，都会记录一条日志到磁盘上。在数据库崩溃之后，再次重启时，可以根据日志的内容，恢复数据文件，保证其一致性；日志读写日志的二进制文件，按照如下的格式进行排布：[XChecksum][Log1][Log2][Log3]...[Lo..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "uhy686i29cqv"
-        },
-        {
-          "title": "DM",
-          "doc_id": "uhy686i29cqv"
-        }
-      ],
-      "realName": "日志文件",
-      "relativePath": "/手写数据MySQL/DM/日志文件.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167361974,
-      "doc_id": "tm_transactionmanager",
-      "updated": 1714995412000,
-      "properties": {
-        "title": "TransactionManager",
-        "urlname": "tm_transactionmanager",
-        "date": "2024-04-26 16:38:32",
-        "updated": "2024-05-06 19:36:52",
-        "description": "XID文件XID 的定义和规则：每个事务都有一个唯一的事务标识符 XID，从 1 开始递增，并且 XID 0 被特殊定义为超级事务（Super Transaction）。XID 0 用于表示在没有申请事务的情况下进行的操作，其状态永远是 committed。事务的状态：每个事务可以处于三种状态..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "tm_transactionmanager"
-        },
-        {
-          "title": "TM",
-          "doc_id": "tm_transactionmanager"
-        }
-      ],
-      "realName": "TransactionManager",
-      "relativePath": "/手写数据MySQL/TM/TransactionManager.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/TM"
-    },
-    {
-      "id": 168434071,
-      "doc_id": "katc0uet492tyfkv",
-      "updated": 1714989199000,
-      "properties": {
-        "title": "LIMS",
-        "urlname": "katc0uet492tyfkv",
-        "date": "2024-05-06 12:50:30",
-        "updated": "2024-05-06 17:53:19",
-        "description": "数据库设计ins_order 一个订单ins_sample 样本ins_product 订单对应的检验项目问题：1.Git提拉推先git commit git pull git push"
+        "title": "Spring容器的启动",
+        "urlname": "empp2z8whcw2fbq8",
+        "date": "2024-05-04 17:42:47",
+        "updated": "2024-05-05 19:27:56",
+        "description": "public AnnotationConfigApplicationContext() {     // 记录启动步骤     StartupStep createAnnotatedBeanDefReader = this.getApplicationStartup().start(\"spri..."
       },
       "catalog": [],
-      "realName": "LIMS",
-      "relativePath": "/LIMS.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 167361997,
-      "doc_id": "rgzd0b6cootl",
-      "updated": 1714196805000,
-      "properties": {
-        "title": "死锁的检测",
-        "urlname": "rgzd0b6cootl",
-        "date": "2024-04-26 16:38:38",
-        "updated": "2024-04-27 13:46:45",
-        "description": "版本跳跃问题版本跳跃问题是指在多版本并发控制（MVCC）中，一个事务要修改某个数据项时，可能会出现跳过中间版本直接修改最新版本的情况，从而产生逻辑上的错误。解决版本跳跃的关键在于检查最新版本的创建者对当前事务是否可见。如果当前事务要修改的数据已经被另一个事务修改并且对当前事务不可见，就要求当前..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "rgzd0b6cootl"
-        },
-        {
-          "title": "VM",
-          "doc_id": "rgzd0b6cootl"
-        }
-      ],
-      "realName": "死锁的检测",
-      "relativePath": "/手写数据MySQL/VM/死锁的检测.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/VM"
-    },
-    {
-      "id": 91136321,
-      "doc_id": "xuk6bl",
-      "updated": 1715442784000,
-      "properties": {
-        "title": "SpringBoot",
-        "urlname": "xuk6bl",
-        "date": "2022-08-30 08:32:56",
-        "updated": "2024-05-11 23:53:04",
-        "description": "1.SpringBoot概述和入门案例SpringBoot定位：Spring Boot是一个基于Spring框架的轻量级、快速开发的框架，它简化了基于Spring的应用程序的搭建和开发过程，让开发者可以更快速、更方便地构建和部署应用程序。Spring Boot的核心理念：Spring Boot..."
-      },
-      "catalog": [],
-      "realName": "SpringBoot",
-      "relativePath": "/SpringBoot.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 167361993,
-      "doc_id": "gwquwxkqm8fd",
-      "updated": 1714196780000,
-      "properties": {
-        "title": "事务的隔离级别",
-        "urlname": "gwquwxkqm8fd",
-        "date": "2024-04-26 16:38:36",
-        "updated": "2024-04-27 13:46:20",
-        "description": "读提交在数据库中，“读提交”（Read Committed）是一种事务隔离级别，表示在读取数据时，事务只能读取已经提交的事务产生的数据。这意味着当一个事务正在读取数据时，如果其他事务正在修改相同的数据，它只能读取已经被提交的修改，而无法读取尚未提交的修改。在MYDB中实现读提交，主要为了防止级..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "gwquwxkqm8fd"
-        },
-        {
-          "title": "VM",
-          "doc_id": "gwquwxkqm8fd"
-        }
-      ],
-      "realName": "事务的隔离级别",
-      "relativePath": "/手写数据MySQL/VM/事务的隔离级别.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/VM"
-    },
-    {
-      "id": 167361982,
-      "doc_id": "epraosr1r73g",
-      "updated": 1714196739000,
-      "properties": {
-        "title": "VM的实现",
-        "urlname": "epraosr1r73g",
-        "date": "2024-04-26 16:38:33",
-        "updated": "2024-04-27 13:45:39",
-        "description": "VM的基本定义VM 层通过 VersionManager 接口，向上层提供功能，如下：public interface VersionManager {     byte[] read(long xid, long uid) throws Exception;     long insert(..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "epraosr1r73g"
-        },
-        {
-          "title": "VM",
-          "doc_id": "epraosr1r73g"
-        }
-      ],
-      "realName": "VM的实现",
-      "relativePath": "/手写数据MySQL/VM/VM的实现.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/VM"
-    },
-    {
-      "id": 167361971,
-      "doc_id": "tb45gfx04rud",
-      "updated": 1714196722000,
-      "properties": {
-        "title": "字段与表管理",
-        "urlname": "tb45gfx04rud",
-        "date": "2024-04-26 16:38:30",
-        "updated": "2024-04-27 13:45:22",
-        "description": "结构数据数据存储结构： 表和字段的信息以二进制形式存储在数据库的 Entry 中。字段信息表示： 字段的二进制表示包含字段名（FieldName）、字段类型（TypeName）和索引UID（IndexUid）。 字段名和字段类型以及其他信息都以字节形式的字符串存储。**[FieldName] ..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "tb45gfx04rud"
-        },
-        {
-          "title": "TBM",
-          "doc_id": "tb45gfx04rud"
-        }
-      ],
-      "realName": "字段与表管理",
-      "relativePath": "/手写数据MySQL/TBM/字段与表管理.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/TBM"
-    },
-    {
-      "id": 162404549,
-      "doc_id": "fp6ps3t3rlbygff4",
-      "updated": 1715562415000,
-      "properties": {
-        "title": "JavaWeb",
-        "urlname": "fp6ps3t3rlbygff4",
-        "date": "2024-03-19 16:02:01",
-        "updated": "2024-05-13 09:06:55",
-        "description": "HTMLHTML入门概述HTML（超文本标记语言—HyperText Markup Language）是构成 Web 世界的基础，是一种用来告知浏览器如何组织页面的标记语言 超文本 Hypertext，是指连接单个或者多个网站间的网页的链接。通过链接，就能访问互联网中的内容  标记 Marku..."
-      },
-      "catalog": [],
-      "realName": "JavaWeb",
-      "relativePath": "/JavaWeb.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 167361958,
-      "doc_id": "vk0vy43agufm",
-      "updated": 1714196677000,
-      "properties": {
-        "title": "SQL解析器",
-        "urlname": "vk0vy43agufm",
-        "date": "2024-04-26 16:38:27",
-        "updated": "2024-04-27 13:44:37",
-        "description": "前言**Parser** 实现了对类 **SQL** 语句的结构化解析，将语句中包含的信息封装为对应语句的类，这些类可见 **top.guoziyang.mydb.backend.parser.statement** 包。<begin statement>     begin [isolati..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "vk0vy43agufm"
-        },
-        {
-          "title": "TBM",
-          "doc_id": "vk0vy43agufm"
-        }
-      ],
-      "realName": "SQL解析器",
-      "relativePath": "/手写数据MySQL/TBM/SQL解析器.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/TBM"
-    },
-    {
-      "id": 167361929,
-      "doc_id": "lbn946pi7gqb",
-      "updated": 1714196620000,
-      "properties": {
-        "title": "页面缓冲",
-        "urlname": "lbn946pi7gqb",
-        "date": "2024-04-26 16:38:21",
-        "updated": "2024-04-27 13:43:40",
-        "description": "页面缓存数据库中实现页面缓存的相关设计和实现。页面结构定义： 页面（Page）是存储在内存中的数据单元，其结构包括： pageNumber：页面的页号，从1开始计数。data：实际包含的字节数据。dirty：标志着页面是否是脏页面，在缓存驱逐时，脏页面需要被写回磁盘。lock：用于页面的锁。P..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "lbn946pi7gqb"
-        },
-        {
-          "title": "DM",
-          "doc_id": "lbn946pi7gqb"
-        }
-      ],
-      "realName": "页面缓冲",
-      "relativePath": "/手写数据MySQL/DM/页面缓冲.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167361926,
-      "doc_id": "gi926xqutm44",
-      "updated": 1714196587000,
-      "properties": {
-        "title": "引用计数缓存框架",
-        "urlname": "gi926xqutm44",
-        "date": "2024-04-26 16:38:20",
-        "updated": "2024-04-27 13:43:07",
-        "description": "引用计数缓存框架原文WHY NOT LRU?由于分页管理和数据项（DataItem）管理都涉及缓存，这里设计一个更通用的缓存框架。看到这里，估计你们也开始犯嘀咕了，为啥使用引用计数策略，而不使用 “极为先进的” LRU 策略呢？这里首先从缓存的接口设计说起，如果使用 LRU 缓存，那么只需要设..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "gi926xqutm44"
-        },
-        {
-          "title": "DM",
-          "doc_id": "gi926xqutm44"
-        }
-      ],
-      "realName": "引用计数缓存框架",
-      "relativePath": "/手写数据MySQL/DM/引用计数缓存框架.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167362020,
-      "doc_id": "mu96n728o1hw",
-      "updated": 1714196391000,
-      "properties": {
-        "title": "C_S通信",
-        "urlname": "mu96n728o1hw",
-        "date": "2024-04-26 16:38:46",
-        "updated": "2024-04-27 13:39:51",
-        "description": "前言在MYDB 中传输数据使用了一种特殊的二进制格式，用于客户端和通信端之间的通信。在数据的传输和接受之前，会通过Package进行数据的加密以及解密：**[Flag] [Data]**若 flag 为 0，表示发送的是数据，那么 data 即为这份数据本身，err 就为空若 flag 为 1..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "mu96n728o1hw"
-        },
-        {
-          "title": "服务端和客户端",
-          "doc_id": "mu96n728o1hw"
-        }
-      ],
-      "realName": "C_S通信",
-      "relativePath": "/手写数据MySQL/服务端和客户端/C_S通信.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/服务端和客户端"
-    },
-    {
-      "id": 167361918,
-      "doc_id": "pff583gz5nqg",
-      "updated": 1714196541000,
-      "properties": {
-        "title": "页面索引",
-        "urlname": "pff583gz5nqg",
-        "date": "2024-04-26 16:38:17",
-        "updated": "2024-04-27 13:42:21",
-        "description": "基本介绍这个页面索引的设计用于提高在数据库中进行插入操作时的效率。它缓存了每一页的空闲空间信息，以便在进行插入操作时能够快速找到合适的页面，而无需遍历磁盘或者缓存中的所有页面。具体来说，页面索引将每一页划分为一定数量的区间（这里是40个区间），并且在数据库启动时，会遍历所有页面，将每个页面的空..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "pff583gz5nqg"
-        },
-        {
-          "title": "DM",
-          "doc_id": "pff583gz5nqg"
-        }
-      ],
-      "realName": "页面索引",
-      "relativePath": "/手写数据MySQL/DM/页面索引.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167361915,
-      "doc_id": "dm_datamanager",
-      "updated": 1714196322000,
-      "properties": {
-        "title": "DataManager",
-        "urlname": "dm_datamanager",
-        "date": "2024-04-26 16:38:15",
-        "updated": "2024-04-27 13:38:42",
-        "description": "基本介绍DataManager（DM）是数据库管理系统中的一层，主要负责底层数据的管理和操作。其功能和作用包括：数据缓存和管理：DataManager 实现了对 DataItem 对象的缓存管理，通过缓存管理，可以提高数据的访问效率，并减少对底层存储的频繁访问，从而提高系统的性能。数据访问和操..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "dm_datamanager"
-        },
-        {
-          "title": "DM",
-          "doc_id": "dm_datamanager"
-        }
-      ],
-      "realName": "DataManager",
-      "relativePath": "/手写数据MySQL/DM/DataManager.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167362013,
-      "doc_id": "yh3wlg51r0gt",
-      "updated": 1714196956000,
-      "properties": {
-        "title": "事务管理",
-        "urlname": "yh3wlg51r0gt",
-        "date": "2024-04-26 16:38:44",
-        "updated": "2024-04-27 13:49:16",
-        "description": "事务的隔离级别事务有哪些特性？这里事务是基于MySQL的，在MySQL中，我们常见的 InnoDB是支持事务的。但不是所有的引擎都能支持事务，比如 MySQL 原生的 MyISAM 引擎就不支持事务，也正是这样，所以大多数的 MySQL 的引擎都是使用 InnoDB；事务必须遵守一下4个特征原..."
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "yh3wlg51r0gt"
-        },
-        {
-          "title": "知识点",
-          "doc_id": "yh3wlg51r0gt"
-        }
-      ],
-      "realName": "事务管理",
-      "relativePath": "/手写数据MySQL/知识点/事务管理.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/知识点"
-    },
-    {
-      "id": 167362025,
-      "doc_id": "ae79a7f61ab73df79279a251026c70c2",
-      "updated": 1714196404000,
-      "properties": {
-        "title": "Server 和 Client的实现",
-        "urlname": "ae79a7f61ab73df79279a251026c70c2",
-        "date": "2024-04-26 16:38:47",
-        "updated": "2024-04-27 13:40:04"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "ae79a7f61ab73df79279a251026c70c2"
-        },
-        {
-          "title": "服务端和客户端",
-          "doc_id": "ae79a7f61ab73df79279a251026c70c2"
-        }
-      ],
-      "realName": "Server 和 Client的实现",
-      "relativePath": "/手写数据MySQL/服务端和客户端/Server 和 Client的实现.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/服务端和客户端"
-    },
-    {
-      "id": 167362007,
-      "doc_id": "sb8d0kohc28q",
-      "updated": 1714196886000,
-      "properties": {
-        "title": "基本知识点",
-        "urlname": "sb8d0kohc28q",
-        "date": "2024-04-26 16:38:41",
-        "updated": "2024-04-27 13:48:06"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "sb8d0kohc28q"
-        },
-        {
-          "title": "知识点",
-          "doc_id": "sb8d0kohc28q"
-        }
-      ],
-      "realName": "基本知识点",
-      "relativePath": "/手写数据MySQL/知识点/基本知识点.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/知识点"
-    },
-    {
-      "id": 167362011,
-      "doc_id": "laqrkbyx19f1",
-      "updated": 1714196917000,
-      "properties": {
-        "title": "两端锁协议-2PL",
-        "urlname": "laqrkbyx19f1",
-        "date": "2024-04-26 16:38:43",
-        "updated": "2024-04-27 13:48:37"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "laqrkbyx19f1"
-        },
-        {
-          "title": "知识点",
-          "doc_id": "laqrkbyx19f1"
-        }
-      ],
-      "realName": "两端锁协议-2PL",
-      "relativePath": "/手写数据MySQL/知识点/两端锁协议-2PL.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/知识点"
-    },
-    {
-      "id": 167361987,
-      "doc_id": "58494d78ed44e5bac3e4b48606f1e9f2",
-      "updated": 1714196761000,
-      "properties": {
-        "title": "版本的记录",
-        "urlname": "58494d78ed44e5bac3e4b48606f1e9f2",
-        "date": "2024-04-26 16:38:35",
-        "updated": "2024-04-27 13:46:01"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "58494d78ed44e5bac3e4b48606f1e9f2"
-        },
-        {
-          "title": "VM",
-          "doc_id": "58494d78ed44e5bac3e4b48606f1e9f2"
-        }
-      ],
-      "realName": "版本的记录",
-      "relativePath": "/手写数据MySQL/VM/版本的记录.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/VM"
-    },
-    {
-      "id": 167361965,
-      "doc_id": "tbm_tablemanager",
-      "updated": 1714120717000,
-      "properties": {
-        "title": "TableManager",
-        "urlname": "tbm_tablemanager",
-        "date": "2024-04-26 16:38:29",
-        "updated": "2024-04-26 16:38:37"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "tbm_tablemanager"
-        },
-        {
-          "title": "TBM",
-          "doc_id": "tbm_tablemanager"
-        }
-      ],
-      "realName": "TableManager",
-      "relativePath": "/手写数据MySQL/TBM/TableManager.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/TBM"
-    },
-    {
-      "id": 167361951,
-      "doc_id": "tbm_booter",
-      "updated": 1714120706000,
-      "properties": {
-        "title": "Booter",
-        "urlname": "tbm_booter",
-        "date": "2024-04-26 16:38:26",
-        "updated": "2024-04-26 16:38:26"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "tbm_booter"
-        },
-        {
-          "title": "TBM",
-          "doc_id": "tbm_booter"
-        }
-      ],
-      "realName": "Booter",
-      "relativePath": "/手写数据MySQL/TBM/Booter.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/TBM"
-    },
-    {
-      "id": 167361945,
-      "doc_id": "im_node",
-      "updated": 1714120706000,
-      "properties": {
-        "title": "Node",
-        "urlname": "im_node",
-        "date": "2024-04-26 16:38:24",
-        "updated": "2024-04-26 16:38:26"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "im_node"
-        },
-        {
-          "title": "IM",
-          "doc_id": "im_node"
-        }
-      ],
-      "realName": "Node",
-      "relativePath": "/手写数据MySQL/IM/Node.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/IM"
-    },
-    {
-      "id": 167361938,
-      "doc_id": "ggghg5mgmlci",
-      "updated": 1714196640000,
-      "properties": {
-        "title": "共享内存数组",
-        "urlname": "ggghg5mgmlci",
-        "date": "2024-04-26 16:38:23",
-        "updated": "2024-04-27 13:44:00"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "ggghg5mgmlci"
-        },
-        {
-          "title": "DM",
-          "doc_id": "ggghg5mgmlci"
-        }
-      ],
-      "realName": "共享内存数组",
-      "relativePath": "/手写数据MySQL/DM/共享内存数组.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167361911,
-      "doc_id": "dm_dataitem",
-      "updated": 1714120704000,
-      "properties": {
-        "title": "DataItem",
-        "urlname": "dm_dataitem",
-        "date": "2024-04-26 16:38:14",
-        "updated": "2024-04-26 16:38:24"
-      },
-      "catalog": [
-        {
-          "title": "手写数据MySQL",
-          "doc_id": "dm_dataitem"
-        },
-        {
-          "title": "DM",
-          "doc_id": "dm_dataitem"
-        }
-      ],
-      "realName": "DataItem",
-      "relativePath": "/手写数据MySQL/DM/DataItem.md",
-      "docPath": "source/_posts/yuque/手写数据MySQL/DM"
-    },
-    {
-      "id": 167360341,
-      "doc_id": "muo43650pk21f2io",
-      "updated": 1714120472000,
-      "properties": {
-        "title": "Part2",
-        "urlname": "muo43650pk21f2io",
-        "date": "2024-04-26 16:29:33",
-        "updated": "2024-04-26 16:34:32",
-        "description": "RedisRedis的操作技术派将Redis的操作封装在RedisClient类中，其所有方法都是静态方法，意味着可以在任何地方操作Redis。RedisClient类的内容如下：基本操作：register(RedisTemplate<String, String>) : voidnullCh..."
-      },
-      "catalog": [
-        {
-          "title": "技术派项目",
-          "doc_id": "muo43650pk21f2io"
-        }
-      ],
-      "realName": "Part2",
-      "relativePath": "/技术派项目/Part2.md",
-      "docPath": "source/_posts/yuque/技术派项目"
-    },
-    {
-      "id": 161989000,
-      "doc_id": "eox6riw224fbbud6",
-      "updated": 1713778595000,
-      "properties": {
-        "title": "集合",
-        "urlname": "eox6riw224fbbud6",
-        "date": "2024-03-15 17:22:46",
-        "updated": "2024-04-22 17:36:35",
-        "description": "Iterator接口用于迭代会触发fail-in-fast机制 ConcurrentModificationException\tboolean hasNext();     E next();     default void remove() {         throw new Unsu..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "eox6riw224fbbud6"
-        },
-        {
-          "title": "数据结构与集合源码",
-          "doc_id": "eox6riw224fbbud6"
-        }
-      ],
-      "realName": "集合",
-      "relativePath": "/Java/数据结构与集合源码/集合.md",
-      "docPath": "source/_posts/yuque/Java/数据结构与集合源码"
-    },
-    {
-      "id": 161275591,
-      "doc_id": "thntx25rsgidw0u8",
-      "updated": 1713173398000,
-      "properties": {
-        "title": "技术派项目",
-        "urlname": "thntx25rsgidw0u8",
-        "date": "2024-03-10 21:22:48",
-        "updated": "2024-04-15 17:29:58",
-        "description": "1. 问答环节项目的介绍?实现的背景实现基本的业务需求使用MQ、ElasticSearch，优化项目结构和提供更优的搜索功能1.1. 项目背景技术派里面用到的都是互联网当下最流行的技术架构，骨架是通过 Spring Boot+Mybatis-Plus 搭建的，并且是前后端分离的，其中还用到了数..."
-      },
-      "catalog": [],
-      "realName": "技术派项目",
-      "relativePath": "/技术派项目.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 163840916,
-      "doc_id": "nsr40eau65k75qa0",
-      "updated": 1713169198000,
-      "properties": {
-        "title": "15 redis集群搭建",
-        "urlname": "nsr40eau65k75qa0",
-        "date": "2024-03-31 11:08:58",
-        "updated": "2024-04-15 16:19:58",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1 单机安装Redis首先需要安装Redis所需要的依赖：yum install -y g..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "nsr40eau65k75qa0"
-        }
-      ],
-      "realName": "15 redis集群搭建",
-      "relativePath": "/redis/15 redis集群搭建.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163841613,
-      "doc_id": "lgbseibermgcbznb",
-      "updated": 1713168332000,
-      "properties": {
-        "title": "21-2 原理解析：Redis通信协议",
-        "urlname": "lgbseibermgcbznb",
-        "date": "2024-03-31 11:16:11",
-        "updated": "2024-04-15 16:05:32",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案3 Redis通信协议-RESP协议Redis是一个CS架构的软件，通信一般分两步（不包括pipeline和PubSub）：客户端（client）向服务端（server）发送一条命令服务端..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "lgbseibermgcbznb"
-        },
-        {
-          "title": "21 原理解析",
-          "doc_id": "lgbseibermgcbznb"
-        }
-      ],
-      "realName": "21-2 原理解析：Redis通信协议",
-      "relativePath": "/redis/21 原理解析/21-2 原理解析：Redis通信协议.md",
-      "docPath": "source/_posts/yuque/redis/21 原理解析"
-    },
-    {
-      "id": 161669600,
-      "doc_id": "wrgazsca6l923zq3",
-      "updated": 1713166969000,
-      "properties": {
-        "title": "10 存储引擎概述",
-        "urlname": "wrgazsca6l923zq3",
-        "date": "2024-03-13 17:33:03",
-        "updated": "2024-04-15 15:42:49",
-        "description": "1 MySQL体系结构●连接层：最上层是一些客户端和链接服务，包含本地sock 通信和大多数基于客户端/服务端工具实现的类似于TCP/IP的通信。主要完成一些类似于连接处理、授权认证、及相关的安全方案。在该层上引入了线程池的概念，为通过认证安全接入的客户端提供线程。同样在该层上可以实现基于SS..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "wrgazsca6l923zq3"
-        }
-      ],
-      "realName": "10 存储引擎概述",
-      "relativePath": "/MySQL/10 存储引擎概述.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161669342,
-      "doc_id": "lkechbpu779kxpds",
-      "updated": 1713165686000,
-      "properties": {
-        "title": "07 约束",
-        "urlname": "lkechbpu779kxpds",
-        "date": "2024-03-13 17:31:40",
-        "updated": "2024-04-15 15:21:26",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 概述概念：约束是作用于表中字段上的规则，用于限制存储在表中的数据。 目的：保证数据库中数据的正确、有效性和完整性。分类约束描述关键字非空约束限制该字段的数据不能为nullNOT NULL..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "lkechbpu779kxpds"
-        }
-      ],
-      "realName": "07 约束",
-      "relativePath": "/MySQL/07 约束.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161669751,
-      "doc_id": "lyggwtbsqb4t5x2o",
-      "updated": 1713167736000,
-      "properties": {
-        "title": "11 索引详述",
-        "urlname": "lyggwtbsqb4t5x2o",
-        "date": "2024-03-13 17:33:52",
-        "updated": "2024-04-15 15:55:36",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 索引概述1.1 介绍索引（index）是帮助MySQL高效获取数据的数据结构(有序)。在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据， ..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "lyggwtbsqb4t5x2o"
-        }
-      ],
-      "realName": "11 索引详述",
-      "relativePath": "/MySQL/11 索引详述.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161669267,
-      "doc_id": "ckgrc733viowi918",
-      "updated": 1713085195000,
-      "properties": {
-        "title": "06 非聚合函数",
-        "urlname": "ckgrc733viowi918",
-        "date": "2024-03-13 17:31:13",
-        "updated": "2024-04-14 16:59:55",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括函数是指一段可以直接被另一段程序调用的程序或代码。 也就意味着，这一段程序或代码在MySQL中已经给我们提供了，我们要做的就是在合适的业务场景调用对应的函数完成对应的业务需求即可。 那么，函..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "ckgrc733viowi918"
-        }
-      ],
-      "realName": "06 非聚合函数",
-      "relativePath": "/MySQL/06 非聚合函数.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161793856,
-      "doc_id": "sccz1qv8gkkd",
-      "updated": 1712895561000,
-      "properties": {
-        "title": "02 Redis命令",
-        "urlname": "sccz1qv8gkkd",
-        "date": "2024-03-14 12:27:14",
-        "updated": "2024-04-12 12:19:21",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis的中文文档：中文文档菜鸟教程官网：菜鸟教程1 Redis数据结构介绍Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样2 通用..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "sccz1qv8gkkd"
-        }
-      ],
-      "realName": "02 Redis命令",
-      "relativePath": "/redis/02 Redis命令.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 161792492,
-      "doc_id": "gxpo437gg8au84fs",
-      "updated": 1712844694000,
-      "properties": {
-        "title": "16 锁",
-        "urlname": "gxpo437gg8au84fs",
-        "date": "2024-03-14 12:12:40",
-        "updated": "2024-04-11 22:11:34",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言锁是计算机协调多个进程或线程并发访问某一资源的机制。在数据库中，除传统的计算资源（CPU、RAM、I/O）的争用以外，数据也是一种供许多用户共享的资源。如何保证数据并发访问的一致性、有效..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "gxpo437gg8au84fs"
-        }
-      ],
-      "realName": "16 锁",
-      "relativePath": "/MySQL/16 锁.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161792486,
-      "doc_id": "gg9u3gpwo4yw0l04",
-      "updated": 1712840800000,
-      "properties": {
-        "title": "15 触发器",
-        "urlname": "gg9u3gpwo4yw0l04",
-        "date": "2024-03-14 12:12:38",
-        "updated": "2024-04-11 21:06:40",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍触发器是与表有关的数据库对象，指在insert/update/delete之前(BEFORE)或之后(AFTER)，触发并执行触发器中定义的SQL语句集合。触发器的这种特性可以协助应..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "gg9u3gpwo4yw0l04"
-        }
-      ],
-      "realName": "15 触发器",
-      "relativePath": "/MySQL/15 触发器.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161792684,
-      "doc_id": "paxlvnrrtlknouur",
-      "updated": 1712820436000,
-      "properties": {
-        "title": "19 MySQL日志",
-        "urlname": "paxlvnrrtlknouur",
-        "date": "2024-03-14 12:14:40",
-        "updated": "2024-04-11 15:27:16",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 错误日志错误日志是 MySQL 中最重要的日志之一，它记录了当 mysqld 启动和停止时，以及服务器在运行过程中发生任何严重错误时的相关信息。当数据库出现任何故障导致无法正常使用时，建..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "paxlvnrrtlknouur"
-        }
-      ],
-      "realName": "19 MySQL日志",
-      "relativePath": "/MySQL/19 MySQL日志.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 164676667,
-      "doc_id": "zet55u1fhb20gn4w",
-      "updated": 1713168280000,
-      "properties": {
-        "title": "MVCC",
-        "urlname": "zet55u1fhb20gn4w",
-        "date": "2024-04-08 11:53:38",
-        "updated": "2024-04-15 16:04:40",
-        "description": "MVCC：全称 Multi-Version Concurrency Control，多版本并发控制。指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读功能。MVCC的具体实现，还需要依赖于数据库记录中的三个隐式字段、undo log日志、readV..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "zet55u1fhb20gn4w"
-        }
-      ],
-      "realName": "MVCC",
-      "relativePath": "/MySQL/MVCC.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161792669,
-      "doc_id": "ixgx5y5warh2ogcm",
-      "updated": 1712820630000,
-      "properties": {
-        "title": "17 InnoDB引擎详述",
-        "urlname": "ixgx5y5warh2ogcm",
-        "date": "2024-03-14 12:14:31",
-        "updated": "2024-04-11 15:30:30",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 逻辑存储结构InnoDB的逻辑存储结构如下图所示:表空间：是InnoDB存储引擎逻辑结构的最高层， 如果用户启用了参数 innodb_file_per_table(在8.0版本中默认开启..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "ixgx5y5warh2ogcm"
-        }
-      ],
-      "realName": "17 InnoDB引擎详述",
-      "relativePath": "/MySQL/17 InnoDB引擎详述.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161669490,
-      "doc_id": "dngtpspqb15m7mzi",
-      "updated": 1712820370000,
-      "properties": {
-        "title": "09 事务",
-        "urlname": "dngtpspqb15m7mzi",
-        "date": "2024-03-13 17:32:33",
-        "updated": "2024-04-11 15:26:10",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 事务简介事务是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。就比如: 张三给李四转账100..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "dngtpspqb15m7mzi"
-        }
-      ],
-      "realName": "09 事务",
-      "relativePath": "/MySQL/09 事务.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 164680157,
-      "doc_id": "clmzhcqg36gqzt00",
-      "updated": 1712556196000,
-      "properties": {
-        "title": "SpringBoot启动原理",
-        "urlname": "clmzhcqg36gqzt00",
-        "date": "2024-04-08 12:35:09",
-        "updated": "2024-04-08 14:03:16",
-        "description": "容器初始化入口 AbstractApplicationContextAbstractApplicationContext#refresh()public void refresh() throws BeansException, IllegalStateException {     sync..."
-      },
-      "catalog": [
-        {
-          "title": "SpringBoot",
-          "doc_id": "clmzhcqg36gqzt00"
-        }
-      ],
-      "realName": "SpringBoot启动原理",
-      "relativePath": "/SpringBoot/SpringBoot启动原理.md",
-      "docPath": "source/_posts/yuque/SpringBoot"
-    },
-    {
-      "id": 161792674,
-      "doc_id": "cnimlcxf8gntnpx1",
-      "updated": 1712548271000,
-      "properties": {
-        "title": "18 MySQL管理工具",
-        "urlname": "cnimlcxf8gntnpx1",
-        "date": "2024-03-14 12:14:33",
-        "updated": "2024-04-08 11:51:11",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言Mysql数据库安装完成后，自带了一下四个数据库，具体作用如下：数据库含义mysql存储MySQL服务器正常运行所需要的各种信息 （时区、主从、用户、权限等）information_sc..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "cnimlcxf8gntnpx1"
-        }
-      ],
-      "realName": "18 MySQL管理工具",
-      "relativePath": "/MySQL/18 MySQL管理工具.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 90169206,
-      "doc_id": "ctoz5c",
-      "updated": 1712649810000,
-      "properties": {
-        "title": "JVM",
-        "urlname": "ctoz5c",
-        "date": "2022-08-21 11:55:48",
-        "updated": "2024-04-09 16:03:30",
-        "description": "JVM概述基本介绍JVM：全称 Java Virtual Machine，即 Java 虚拟机，一种规范，本身是一个虚拟计算机，直接和操作系统进行交互，与硬件不直接交互，而操作系统可以帮我们完成和硬件进行交互的工作特点：Java 虚拟机基于二进制字节码执行，由一套字节码指令集、一组寄存器、一个..."
-      },
-      "catalog": [],
-      "realName": "JVM",
-      "relativePath": "/JVM.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 161672069,
-      "doc_id": "kflrk7t7h9ozf2nk",
-      "updated": 1713168477000,
-      "properties": {
-        "title": "12 SQL优化",
-        "urlname": "kflrk7t7h9ozf2nk",
-        "date": "2024-03-13 17:49:07",
-        "updated": "2024-04-15 16:07:57",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 插入数据1.1 insert如果我们需要一次性往数据库表中插入多条记录，可以从以下三个方面进行优化。insert into tb_test values(1,'tom');  inser..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "kflrk7t7h9ozf2nk"
-        }
-      ],
-      "realName": "12 SQL优化",
-      "relativePath": "/MySQL/12 SQL优化.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161827270,
-      "doc_id": "xa1s89kud2du5kiu",
-      "updated": 1712559948000,
-      "properties": {
-        "title": "Spring",
-        "urlname": "xa1s89kud2du5kiu",
-        "date": "2024-03-14 15:24:47",
-        "updated": "2024-04-08 15:05:48",
-        "description": "一、Spring启示录阅读以下代码：package com.powernode.oa.controller;  import com.powernode.oa.service.UserService; import com.powernode.oa.service.impl.UserServi..."
-      },
-      "catalog": [
-        {
-          "title": "SSM",
-          "doc_id": "xa1s89kud2du5kiu"
-        }
-      ],
-      "realName": "Spring",
-      "relativePath": "/SSM/Spring.md",
-      "docPath": "source/_posts/yuque/SSM"
-    },
-    {
-      "id": 161977026,
-      "doc_id": "wsccbdsgmg75q9mv",
-      "updated": 1712376856000,
-      "properties": {
-        "title": "swagger",
-        "urlname": "wsccbdsgmg75q9mv",
-        "date": "2024-03-15 16:17:32",
-        "updated": "2024-04-06 12:14:16",
-        "description": "Swagger简介官网：https://swagger.io/Swagger是一个规范和完整的框架，用于生成，描述，调用和可视化RESTful风格的Web服务。功能1。使得前后端分离开发更加方便，有利于团队协作2.接口文档在线自动生成，降低后端开发人员编写接口文档的负担3.接口功能测试使用Sw..."
-      },
-      "catalog": [
-        {
-          "title": "swagger",
-          "doc_id": "wsccbdsgmg75q9mv"
-        }
-      ],
-      "realName": "swagger",
-      "relativePath": "/swagger/swagger.md",
-      "docPath": "source/_posts/yuque/swagger"
-    },
-    {
-      "id": 92083438,
-      "doc_id": "zma336",
-      "updated": 1712376788000,
-      "properties": {
-        "title": "项目优化技术",
-        "urlname": "zma336",
-        "date": "2022-09-06 14:25:14",
-        "updated": "2024-04-06 12:13:08",
-        "description": "SpringCache简介Spring Cache是一个框架，实现了基于注解的缓冲功能，只需要简单的加一个注解，就能实现缓冲功能，大大简化我们业务中操作缓冲的代码。spring cache只是提供了一层抽象，底层可以切换不同的cache实现。具体就是通过CacheManger接口统一不同的缓冲..."
-      },
-      "catalog": [],
-      "realName": "项目优化技术",
-      "relativePath": "/项目优化技术.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 164323370,
-      "doc_id": "nq8yeuc58t3h09zh",
-      "updated": 1712304934000,
-      "properties": {
-        "title": "Kubernetes",
-        "urlname": "nq8yeuc58t3h09zh",
-        "date": "2024-04-04 14:20:57",
-        "updated": "2024-04-05 16:15:34",
-        "description": "Kubernetes介绍1.1 应用方式部署改变在部署应用程序的方式上，主要经历了3个时代传统部署：互联网早期，直接将应用部署在物理机上优点 简单，不需要其他技术的参与缺点 不能为程序定义资源使用边界，很难合理分配计算机资源，而且程序之间容易产生影响虚拟化部署：可以在一台物理机上运行多个虚拟机..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "nq8yeuc58t3h09zh"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "nq8yeuc58t3h09zh"
-        }
-      ],
-      "realName": "Kubernetes",
-      "relativePath": "/SpringCloud/高级篇/Kubernetes.md",
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 161665991,
-      "doc_id": "vezu0hrrp9gu",
-      "updated": 1712284018000,
-      "properties": {
-        "title": "数据结构与集合源码",
-        "urlname": "vezu0hrrp9gu",
-        "date": "2024-03-13 17:15:25",
-        "updated": "2024-04-05 10:26:58",
-        "description": "第14章_数据结构与集合源码本章专题与脉络1. 数据结构剖析我们举一个形象的例子来理解数据结构的作用：战场：程序运行所需的软件、硬件环境 敌人：项目或模块的功能需求 指挥官：编写程序的程序员 士兵和装备：一行一行的代码 战术和策略：数据结构上图：没有战术，打仗事倍功半上图：有战术，打仗事半功倍...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/数据结构与集合源码/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "vezu0hrrp9gu"
-        }
-      ],
-      "realName": "数据结构与集合源码",
-      "relativePath": "/Java/数据结构与集合源码.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/Java"
-    },
-    {
-      "id": 162405726,
-      "doc_id": "mh6nqsrgn902qzd0",
-      "updated": 1712388508000,
-      "properties": {
-        "title": "JUC",
-        "urlname": "mh6nqsrgn902qzd0",
-        "date": "2024-03-19 16:06:38",
-        "updated": "2024-04-06 15:28:28",
-        "description": "JUC进程概述进程：程序是静止的，进程实体的运行过程就是进程，是系统进行资源分配的基本单位进程的特征：并发性、异步性、动态性、独立性、结构性线程：线程是属于进程的，是一个基本的 CPU 执行单元，是程序执行流的最小单元。线程是进程中的一个实体，是系统独立调度的基本单位，线程本身不拥有系统资源，..."
-      },
-      "catalog": [],
-      "realName": "JUC",
-      "relativePath": "/JUC.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 163840679,
-      "doc_id": "nylfastdkcisb7b5",
-      "updated": 1712042942000,
-      "properties": {
-        "title": "08-2 Redis优化秒杀抢购问题",
-        "urlname": "nylfastdkcisb7b5",
-        "date": "2024-03-31 11:06:07",
-        "updated": "2024-04-02 15:29:02",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 异步秒杀思路我们来回顾一下下单流程当用户发起请求，此时会请求nginx，nginx会访问到tomcat，而tomcat中的程序，会进行串行操作，分成如下几个步骤查询优惠卷判断秒杀库存是..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "nylfastdkcisb7b5"
-        }
-      ],
-      "realName": "08-2 Redis优化秒杀抢购问题",
-      "relativePath": "/redis/08-2 Redis优化秒杀抢购问题.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163841542,
-      "doc_id": "no4zmm07qs3nhfci",
-      "updated": 1711854961000,
-      "properties": {
-        "title": "21-1 原理解析：Redis网络模型",
-        "urlname": "no4zmm07qs3nhfci",
-        "date": "2024-03-31 11:15:24",
-        "updated": "2024-03-31 11:16:01",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 用户空间和内核态空间服务器大多都采用Linux系统，这里我们以Linux为例来讲解:ubuntu和Centos 都是Linux的发行版，发行版可以看成对linux包了一层壳，任何Lin..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "no4zmm07qs3nhfci"
-        },
-        {
-          "title": "21 原理解析",
-          "doc_id": "no4zmm07qs3nhfci"
-        }
-      ],
-      "realName": "21-1 原理解析：Redis网络模型",
-      "relativePath": "/redis/21 原理解析/21-1 原理解析：Redis网络模型.md",
-      "docPath": "source/_posts/yuque/redis/21 原理解析"
-    },
-    {
-      "id": 163841448,
-      "doc_id": "tofz0i0332r43b9b",
-      "updated": 1711854894000,
-      "properties": {
-        "title": "21-0 原理解析：Redis数据结构",
-        "urlname": "tofz0i0332r43b9b",
-        "date": "2024-03-31 11:14:36",
-        "updated": "2024-03-31 11:14:54",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redis数据结构-动态字符串我们都知道Redis中保存的Key是字符串，value往往是字符串或者字符串的集合。可见字符串是Redis中最常用的一种数据结构。不过Redis没有直接使..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "tofz0i0332r43b9b"
-        },
-        {
-          "title": "21 原理解析",
-          "doc_id": "tofz0i0332r43b9b"
-        }
-      ],
-      "realName": "21-0 原理解析：Redis数据结构",
-      "relativePath": "/redis/21 原理解析/21-0 原理解析：Redis数据结构.md",
-      "docPath": "source/_posts/yuque/redis/21 原理解析"
-    },
-    {
-      "id": 163840937,
-      "doc_id": "vm9s7gpksigmthd1",
-      "updated": 1711854864000,
-      "properties": {
-        "title": "20 redis最佳实践总结",
-        "urlname": "vm9s7gpksigmthd1",
-        "date": "2024-03-31 11:09:11",
-        "updated": "2024-03-31 11:14:24",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redis键值设计1.1 优雅的key结构Redis的Key虽然可以自定义，但最好遵循下面的几个最佳实践约定：遵循基本格式：[业务名称]:[数据名]:[id]长度不超过44字节不包含特..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "vm9s7gpksigmthd1"
-        }
-      ],
-      "realName": "20 redis最佳实践总结",
-      "relativePath": "/redis/20 redis最佳实践总结.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163841331,
-      "doc_id": "hvz3tmfghzf9xnbw",
-      "updated": 1711854824000,
-      "properties": {
-        "title": "19-5 多级缓存：安装OpenResty",
-        "urlname": "hvz3tmfghzf9xnbw",
-        "date": "2024-03-31 11:13:27",
-        "updated": "2024-03-31 11:13:44",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 安装首先你的Linux虚拟机必须联网1.1 安装开发库首先要安装OpenResty的依赖开发库，执行命令：yum install -y pcre-devel openssl-devel..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "hvz3tmfghzf9xnbw"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "hvz3tmfghzf9xnbw"
-        }
-      ],
-      "realName": "19-5 多级缓存：安装OpenResty",
-      "relativePath": "/redis/19 多级缓冲/19-5 多级缓存：安装OpenResty.md",
-      "docPath": "source/_posts/yuque/redis/19 多级缓冲"
-    },
-    {
-      "id": 163841265,
-      "doc_id": "vivusc7pehivp53k",
-      "updated": 1711854796000,
-      "properties": {
-        "title": "19-3 多级缓存：Nginx实现本地缓存",
-        "urlname": "vivusc7pehivp53k",
-        "date": "2024-03-31 11:12:52",
-        "updated": "2024-03-31 11:13:16",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案多级缓存的实现离不开Nginx编程，而Nginx编程又离不开OpenResty。1 安装OpenRestyOpenResty® 是一个基于 Nginx的高性能 Web 平台，用于方便地搭建..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "vivusc7pehivp53k"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "vivusc7pehivp53k"
-        }
-      ],
-      "realName": "19-3 多级缓存：Nginx实现本地缓存",
-      "relativePath": "/redis/19 多级缓冲/19-3 多级缓存：Nginx实现本地缓存.md",
-      "docPath": "source/_posts/yuque/redis/19 多级缓冲"
-    },
-    {
-      "id": 163841253,
-      "doc_id": "wavanbw8rgchraw7",
-      "updated": 1711854773000,
-      "properties": {
-        "title": "19-2 多级缓存：Lua脚本入门",
-        "urlname": "wavanbw8rgchraw7",
-        "date": "2024-03-31 11:12:43",
-        "updated": "2024-03-31 11:12:53",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Nginx编程需要用到Lua语言，因此我们必须先入门Lua的基本语法。1 初识LuaLua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放， 其设计目的是为了嵌入应用程序中，..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "wavanbw8rgchraw7"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "wavanbw8rgchraw7"
-        }
-      ],
-      "realName": "19-2 多级缓存：Lua脚本入门",
-      "relativePath": "/redis/19 多级缓冲/19-2 多级缓存：Lua脚本入门.md",
-      "docPath": "source/_posts/yuque/redis/19 多级缓冲"
-    },
-    {
-      "id": 163841310,
-      "doc_id": "gfdt7gu877h3fouz",
-      "updated": 1711854807000,
-      "properties": {
-        "title": "19-4 多级缓存：使用Mycat做缓存同步",
-        "urlname": "gfdt7gu877h3fouz",
-        "date": "2024-03-31 11:13:14",
-        "updated": "2024-03-31 11:13:27",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案大多数情况下，浏览器查询到的都是缓存数据，如果缓存数据与数据库数据存在较大差异，可能会产生比较严重的后果。所以我们必须保证数据库数据、缓存数据的一致性，这就是缓存与数据库的同步。1 数据同..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "gfdt7gu877h3fouz"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "gfdt7gu877h3fouz"
-        }
-      ],
-      "realName": "19-4 多级缓存：使用Mycat做缓存同步",
-      "relativePath": "/redis/19 多级缓冲/19-4 多级缓存：使用Mycat做缓存同步.md",
-      "docPath": "source/_posts/yuque/redis/19 多级缓冲"
-    },
-    {
-      "id": 163841228,
-      "doc_id": "lc0ggswhhlgyymau",
-      "updated": 1711854757000,
-      "properties": {
-        "title": "19-1 多级缓存：Caffeine实现JVM进程缓存",
-        "urlname": "lc0ggswhhlgyymau",
-        "date": "2024-03-31 11:12:25",
-        "updated": "2024-03-31 11:12:37",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 初识Caffeine缓存在日常开发中启动至关重要的作用，由于是存储在内存中，数据的读取速度是非常快的，能大量减少对数据库的访问，减少数据库的压力。我们把缓存分为两类： 分布式缓存，例如..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "lc0ggswhhlgyymau"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "lc0ggswhhlgyymau"
-        }
-      ],
-      "realName": "19-1 多级缓存：Caffeine实现JVM进程缓存",
-      "relativePath": "/redis/19 多级缓冲/19-1 多级缓存：Caffeine实现JVM进程缓存.md",
-      "docPath": "source/_posts/yuque/redis/19 多级缓冲"
-    },
-    {
-      "id": 163840935,
-      "doc_id": "btg6wpsb5fxdldbl",
-      "updated": 1711854744000,
-      "properties": {
-        "title": "19-0 多级缓存：概述",
-        "urlname": "btg6wpsb5fxdldbl",
-        "date": "2024-03-31 11:09:09",
-        "updated": "2024-03-31 11:12:24",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案什么是多级缓存传统的缓存策略一般是请求到达Tomcat后，笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案什么是多级缓存传统的缓存..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "btg6wpsb5fxdldbl"
-        },
-        {
-          "title": "19 多级缓冲",
-          "doc_id": "btg6wpsb5fxdldbl"
-        }
-      ],
-      "realName": "19-0 多级缓存：概述",
-      "relativePath": "/redis/19 多级缓冲/19-0 多级缓存：概述.md",
-      "docPath": "source/_posts/yuque/redis/19 多级缓冲"
-    },
-    {
-      "id": 163840932,
-      "doc_id": "qqxngbrgz4a3d50p",
-      "updated": 1711854646000,
-      "properties": {
-        "title": "18 Redis分片",
-        "urlname": "qqxngbrgz4a3d50p",
-        "date": "2024-03-31 11:09:06",
-        "updated": "2024-03-31 11:10:46",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 搭建分片集群主从和哨兵可以解决高可用、高并发读的问题。但是依然有两个问题没有解决： 海量数据存储问题  高并发写的问题 使用分片集群可以解决上述问题，如图:分片集群特征： 集群中有多个..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "qqxngbrgz4a3d50p"
-        }
-      ],
-      "realName": "18 Redis分片",
-      "relativePath": "/redis/18 Redis分片.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840925,
-      "doc_id": "cyhqyu53l5mv8q26",
-      "updated": 1711854633000,
-      "properties": {
-        "title": "17 Redis哨兵",
-        "urlname": "cyhqyu53l5mv8q26",
-        "date": "2024-03-31 11:09:04",
-        "updated": "2024-03-31 11:10:33",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案Redis提供了哨兵（Sentinel）机制来实现主从集群的自动故障恢复。1 搭建哨兵集群具体搭建流程参考另一篇文章：此处为语雀内容卡片，点击链接查看：https://www.yuque...."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "cyhqyu53l5mv8q26"
-        }
-      ],
-      "realName": "17 Redis哨兵",
-      "relativePath": "/redis/17 Redis哨兵.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840920,
-      "doc_id": "aret1itgm2f1wb54",
-      "updated": 1711854620000,
-      "properties": {
-        "title": "16 Redis主从",
-        "urlname": "aret1itgm2f1wb54",
-        "date": "2024-03-31 11:09:01",
-        "updated": "2024-03-31 11:10:20",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 搭建主从架构单节点Redis的并发能力是有上限的，要进一步提高Redis的并发能力，就需要搭建主从集群，实现读写分离。具体搭建流程参考另一篇文章：此处为语雀内容卡片，点击链接查看：ht..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "aret1itgm2f1wb54"
-        }
-      ],
-      "realName": "16 Redis主从",
-      "relativePath": "/redis/16 Redis主从.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840913,
-      "doc_id": "qmpdgovcdm5gg74q",
-      "updated": 1714114432000,
-      "properties": {
-        "title": "14 Redis持久化",
-        "urlname": "qmpdgovcdm5gg74q",
-        "date": "2024-03-31 11:08:56",
-        "updated": "2024-04-26 14:53:52",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案单机的Redis存在四大问题：Redis有两种持久化方案：RDB持久化AOF持久化1 RDB持久化RDB全称Redis Database Backup file（Redis数据备份文件），..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "qmpdgovcdm5gg74q"
-        }
-      ],
-      "realName": "14 Redis持久化",
-      "relativePath": "/redis/14 Redis持久化.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840905,
-      "doc_id": "gphkccpkqwg43dvx",
-      "updated": 1711854584000,
-      "properties": {
-        "title": "13 HyperLog数据结构的应用",
-        "urlname": "gphkccpkqwg43dvx",
-        "date": "2024-03-31 11:08:54",
-        "updated": "2024-03-31 11:09:44",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 HyperLogLog首先我们搞懂两个概念：UV：全称Unique Visitor，也叫独立访客量，是指通过互联网访问、浏览这个网页的自然人。1天内同一个用户多次访问该网站，只记录1次..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "gphkccpkqwg43dvx"
-        }
-      ],
-      "realName": "13 HyperLog数据结构的应用",
-      "relativePath": "/redis/13 HyperLog数据结构的应用.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840895,
-      "doc_id": "gz7clxxy73fyxml0",
-      "updated": 1712409056000,
-      "properties": {
-        "title": "12 BitMap数据结构的应用",
-        "urlname": "gz7clxxy73fyxml0",
-        "date": "2024-03-31 11:08:43",
-        "updated": "2024-04-06 21:10:56",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 BitMap功能演示我们针对签到功能完全可以通过mysql来完成，比如说以下这张表用户一次签到，就是一条记录，假如有1000万用户，平均每人每年签到次数为10次，则这张表一年的数据量为..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "gz7clxxy73fyxml0"
-        }
-      ],
-      "realName": "12 BitMap数据结构的应用",
-      "relativePath": "/redis/12 BitMap数据结构的应用.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840862,
-      "doc_id": "vtfb7mek12cki3p8",
-      "updated": 1712410539000,
-      "properties": {
-        "title": "11 GEO数据结构的应用",
-        "urlname": "vtfb7mek12cki3p8",
-        "date": "2024-03-31 11:08:24",
-        "updated": "2024-04-06 21:35:39",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 GEO数据结构的基本用法GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中加入了对GEO的支持，允许存储地理坐标信息，帮助我们根据经纬度来检索数据。常见..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "vtfb7mek12cki3p8"
-        }
-      ],
-      "realName": "11 GEO数据结构的应用",
-      "relativePath": "/redis/11 GEO数据结构的应用.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840833,
-      "doc_id": "anaan3lqvpzzr16s",
-      "updated": 1711854492000,
-      "properties": {
-        "title": "10 Set数据结构的应用",
-        "urlname": "anaan3lqvpzzr16s",
-        "date": "2024-03-31 11:07:59",
-        "updated": "2024-03-31 11:08:12",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 达人探店1.1 发布探店笔记发布探店笔记探店笔记类似点评网站的评价，往往是图文结合。对应的表有两个：tb_blog：探店笔记表，包含笔记中的标题、文字、图片等DROP TABLE IF..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "anaan3lqvpzzr16s"
-        }
-      ],
-      "realName": "10 Set数据结构的应用",
-      "relativePath": "/redis/10 Set数据结构的应用.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840775,
-      "doc_id": "dxwft57m9i6qprxs",
-      "updated": 1713169065000,
-      "properties": {
-        "title": "08-1 RedisSon实现分布式锁",
-        "urlname": "dxwft57m9i6qprxs",
-        "date": "2024-03-31 11:07:14",
-        "updated": "2024-04-15 16:17:45",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 Redission功能介绍基于SETNX实现的分布式锁存在下面的问题：重入问题：重入问题是指 获得锁的线程可以再次进入到相同的锁的代码块中，可重入锁的意义在于防止死锁，比如HashTa..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "dxwft57m9i6qprxs"
-        }
-      ],
-      "realName": "08-1 RedisSon实现分布式锁",
-      "relativePath": "/redis/08-1 RedisSon实现分布式锁.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840682,
-      "doc_id": "crgnles3h9qs8wbb",
-      "updated": 1711854434000,
-      "properties": {
-        "title": "09 Redis实现消息队列",
-        "urlname": "crgnles3h9qs8wbb",
-        "date": "2024-03-31 11:06:10",
-        "updated": "2024-03-31 11:07:14",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 认识消息队列什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：消息队列：存储和管理消息，也被称为消息代理（Message Broker）生产者：发送消息到消..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "crgnles3h9qs8wbb"
-        }
-      ],
-      "realName": "09 Redis实现消息队列",
-      "relativePath": "/redis/09 Redis实现消息队列.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840675,
-      "doc_id": "gqkg4l9lcmt9na7p",
-      "updated": 1711854386000,
-      "properties": {
-        "title": "08 自定义分布式锁",
-        "urlname": "gqkg4l9lcmt9na7p",
-        "date": "2024-03-31 11:06:04",
-        "updated": "2024-03-31 11:06:26",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 基本原理和实现方式对比分布式锁：满足分布式系统或集群模式下多进程可见并且互斥的锁。分布式锁的核心思想就是让大家都使用同一把锁，只要大家使用的是同一把锁，那么我们就能锁住线程，不让线程进..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "gqkg4l9lcmt9na7p"
-        }
-      ],
-      "realName": "08 自定义分布式锁",
-      "relativePath": "/redis/08 自定义分布式锁.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163840647,
-      "doc_id": "sdprcgobgfqsqtdr",
-      "updated": 1711854366000,
-      "properties": {
-        "title": "07 乐观锁和悲观锁解决秒杀抢购问题",
-        "urlname": "sdprcgobgfqsqtdr",
-        "date": "2024-03-31 11:05:38",
-        "updated": "2024-03-31 11:06:06",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 添加优惠卷每个店铺都可以发布优惠券，分为平价券和特价券。平价券可以任意购买，而特价券需要秒杀抢购：tb_voucher：优惠券的基本信息，优惠金额、使用规则等tb_seckill_vo..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "sdprcgobgfqsqtdr"
-        }
-      ],
-      "realName": "07 乐观锁和悲观锁解决秒杀抢购问题",
-      "relativePath": "/redis/07 乐观锁和悲观锁解决秒杀抢购问题.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 161818235,
-      "doc_id": "nk0295vsa2w1",
-      "updated": 1711854340000,
-      "properties": {
-        "title": "06 Redis实现全局唯一Id",
-        "urlname": "nk0295vsa2w1",
-        "date": "2024-03-14 14:48:11",
-        "updated": "2024-03-31 11:05:40",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 全局唯一ID每个店铺都可以发布优惠券：当用户抢购时，就会生成订单并保存到tb_voucher_order这张表中，而订单表如果使用数据库自增ID就存在一些问题：id的规律性太明显受单表..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "nk0295vsa2w1"
-        }
-      ],
-      "realName": "06 Redis实现全局唯一Id",
-      "relativePath": "/redis/06 Redis实现全局唯一Id.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 161794000,
-      "doc_id": "ecdq9bgmbzav",
-      "updated": 1711854265000,
-      "properties": {
-        "title": "04 Redis实现Session共享",
-        "urlname": "ecdq9bgmbzav",
-        "date": "2024-03-14 12:28:28",
-        "updated": "2024-03-31 11:04:25",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案1 当前架构手机或者app端发起请求，请求我们的nginx服务器，nginx基于七层模型走的是HTTP协议，可以实现基于Lua直接绕开tomcat访问redis，也可以作为静态资源服务器，..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "ecdq9bgmbzav"
-        }
-      ],
-      "realName": "04 Redis实现Session共享",
-      "relativePath": "/redis/04 Redis实现Session共享.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 161793987,
-      "doc_id": "dgzghz1qgltp",
-      "updated": 1711854239000,
-      "properties": {
-        "title": "03 Redis客户端",
-        "urlname": "dgzghz1qgltp",
-        "date": "2024-03-14 12:28:20",
-        "updated": "2024-03-31 11:03:59",
-        "description": "笔记来源：黑马程序员Redis入门到实战教程，深度透析redis底层原理+redis分布式锁+企业解决方案安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：命令行客户端图形化桌面客户端编程客户端1 命令行客户端 Redis安装完成后就自带了命..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "dgzghz1qgltp"
-        }
-      ],
-      "realName": "03 Redis客户端",
-      "relativePath": "/redis/03 Redis客户端.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 161793641,
-      "doc_id": "redis",
-      "updated": 1711854190000,
-      "properties": {
-        "title": "01 入门介绍",
-        "urlname": "redis",
-        "date": "2024-03-14 12:25:00",
-        "updated": "2024-03-31 11:03:10",
-        "description": "基础篇Redis问答环节1.说说什么是 Redis?2.Redis 可以用来干什么？3.Redis 有哪些数据结构？4.Redis 为什么快呢？5.能说一下 I/O 多路复用吗？6. Redis 为什么早期选择单线程？7.Redis6.0 使用多线程是怎么回事?笔记来源：黑马程序员Redis入..."
-      },
-      "catalog": [
-        {
-          "title": "redis",
-          "doc_id": "redis"
-        }
-      ],
-      "realName": "01 入门介绍",
-      "relativePath": "/redis/01 入门介绍.md",
-      "docPath": "source/_posts/yuque/redis"
-    },
-    {
-      "id": 163594887,
-      "doc_id": "pmvdgsqgacchxti1",
-      "updated": 1711615136000,
-      "properties": {
-        "title": "3.部署篇(工具部署)",
-        "urlname": "pmvdgsqgacchxti1",
-        "date": "2024-03-28 16:38:38",
-        "updated": "2024-03-28 16:38:56",
-        "description": "导读：上一篇文章《SpringCloud 应用在 Kubernetes 上的最佳实践 — 部署篇(开发部署）》我们介绍了从 IDE 插件内介绍了如何进行应用部署的方式，除此之外，目前 EDAS 还支持了额外的工具对其他场景进行覆盖，这一篇内容主要就是介绍 EDAS 上围绕部署的工具体系。相关文..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "pmvdgsqgacchxti1"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "pmvdgsqgacchxti1"
-        },
-        {
-          "title": "SpringCloud集成K8S",
-          "doc_id": "pmvdgsqgacchxti1"
-        }
-      ],
-      "realName": "3.部署篇(工具部署)",
-      "relativePath": "/SpringCloud/高级篇/SpringCloud集成K8S/3.部署篇(工具部署).md",
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇/SpringCloud集成K8S"
-    },
-    {
-      "id": 163594824,
-      "doc_id": "ur02buwkmprvwubv",
-      "updated": 1711615106000,
-      "properties": {
-        "title": "2.部署篇（开发部署）",
-        "urlname": "ur02buwkmprvwubv",
-        "date": "2024-03-28 16:38:15",
-        "updated": "2024-03-28 16:38:26",
-        "description": "导读：在上一篇文章《SpringCloud 应用在 Kubernetes 上的云上实践 - 开发篇》中讲到可以通过两个工具，轻松地将一个 SpringCloud 应用从初始化到本地运行。本篇文章，我们将介绍如何将上一篇文章中提到的应用在云上跑起来。初始化集群为了将应用运行在云端，首先我们需要一..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "ur02buwkmprvwubv"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "ur02buwkmprvwubv"
-        },
-        {
-          "title": "SpringCloud集成K8S",
-          "doc_id": "ur02buwkmprvwubv"
-        }
-      ],
-      "realName": "2.部署篇（开发部署）",
-      "relativePath": "/SpringCloud/高级篇/SpringCloud集成K8S/2.部署篇（开发部署）.md",
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇/SpringCloud集成K8S"
-    },
-    {
-      "id": 163594258,
-      "doc_id": "wgnodz6eoyltmyx6",
-      "updated": 1711614922000,
-      "properties": {
-        "title": "索引库、文档操作",
-        "urlname": "wgnodz6eoyltmyx6",
-        "date": "2024-03-28 16:34:54",
-        "updated": "2024-03-28 16:35:22",
-        "description": "在前面读者朋友们可以了解到ES承载着和MySQL一样的“存储-查询”功能，那么就类似的会有建表语句、表结构、表数据，有了这些才可以存储-查询数据。而这些对应的在ES中是：Mapping映射（表结构-建表语句）、索引库（表本身）、文档（表数据）。本节笔者将带领大家完整上述概念的创建、使用。1.e...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/索引库、文档操作/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "wgnodz6eoyltmyx6"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "wgnodz6eoyltmyx6"
-        },
-        {
-          "title": "11.ElasticSearch",
-          "doc_id": "wgnodz6eoyltmyx6"
-        }
-      ],
-      "realName": "索引库、文档操作",
-      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/索引库、文档操作.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
-    },
-    {
-      "id": 163594331,
-      "doc_id": "tw4e1oe6q4ixiqbo",
-      "updated": 1711614944000,
-      "properties": {
-        "title": "DSL语法、搜索结果处理",
-        "urlname": "tw4e1oe6q4ixiqbo",
-        "date": "2024-03-28 16:35:21",
-        "updated": "2024-03-28 16:35:44",
-        "description": "在前面的学习中，笔者带领大家完成海量数据导入ES，实现了ES基本的存储功能，但是我们知道ES最擅长的还是搜索、数据分析。所以本节笔者将继续带领大家研究一下ES的数据搜索功能，同上节一样，继续分别采用DSL和RestClient实现搜索。1.DSL查询文档elasticsearch的查询依然是基...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/DSL语法、搜索结果处理/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "tw4e1oe6q4ixiqbo"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "tw4e1oe6q4ixiqbo"
-        },
-        {
-          "title": "11.ElasticSearch",
-          "doc_id": "tw4e1oe6q4ixiqbo"
-        }
-      ],
-      "realName": "DSL语法、搜索结果处理",
-      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/DSL语法、搜索结果处理.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
-    },
-    {
-      "id": 163594190,
-      "doc_id": "ifimpohoq0z5f1kg",
-      "updated": 1711614892000,
-      "properties": {
-        "title": "安装ES、Kibana、IK",
-        "urlname": "ifimpohoq0z5f1kg",
-        "date": "2024-03-28 16:34:30",
-        "updated": "2024-03-28 16:34:52",
-        "description": "1.部署单点es1.1.创建网络因为我们还需要部署kibana容器，因此需要让es和kibana容器互联。这里先创建一个网络：docker network create es-net1.2.加载镜像这里我们采用elasticsearch的7.12.1版本的镜像，这个镜像体积非常大，接近1G。不..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "ifimpohoq0z5f1kg"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "ifimpohoq0z5f1kg"
-        },
-        {
-          "title": "11.ElasticSearch",
-          "doc_id": "ifimpohoq0z5f1kg"
-        }
-      ],
-      "realName": "安装ES、Kibana、IK",
-      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/安装ES、Kibana、IK.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
-    },
-    {
-      "id": 163594137,
-      "doc_id": "demgaggh1tyqt5m1",
-      "updated": 1711614862000,
-      "properties": {
-        "title": "分布式搜索引擎ElasticSearch",
-        "urlname": "demgaggh1tyqt5m1",
-        "date": "2024-03-28 16:34:09",
-        "updated": "2024-03-28 16:34:22",
-        "description": "1.初识elasticsearch1.1.了解ES1.1.1.elasticsearch的作用elasticsearch是一款非常强大的开源搜索引擎，具备非常多强大功能，可以帮助我们从海量数据中快速找到需要的内容，例如： 在GitHub搜索代码 在电商网站搜索商品 在百度搜索答案 在打车软件搜..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "demgaggh1tyqt5m1"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "demgaggh1tyqt5m1"
-        },
-        {
-          "title": "11.ElasticSearch",
-          "doc_id": "demgaggh1tyqt5m1"
-        }
-      ],
-      "realName": "分布式搜索引擎ElasticSearch",
-      "relativePath": "/SpringCloud/基本篇/11.ElasticSearch/分布式搜索引擎ElasticSearch.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇/11.ElasticSearch"
-    },
-    {
-      "id": 163594032,
-      "doc_id": "nqc4fklsd6fv5pk7",
-      "updated": 1711614828000,
-      "properties": {
-        "title": "Sentinel工作原理",
-        "urlname": "nqc4fklsd6fv5pk7",
-        "date": "2024-03-28 16:33:31",
-        "updated": "2024-03-28 16:33:48",
-        "description": "Sentinel 基本概念资源资源是 Sentinel 的关键概念。它可以是 Java 应用程序中的任何内容，例如，由应用程序提供的服务，或由应用程序调用的其它应用提供的服务，甚至可以是一段代码。在接下来的文档中，我们都会用资源来描述代码块。只要通过 Sentinel API 定义的代码，就是..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "nqc4fklsd6fv5pk7"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "nqc4fklsd6fv5pk7"
-        }
-      ],
-      "realName": "Sentinel工作原理",
-      "relativePath": "/SpringCloud/高级篇/Sentinel工作原理.md",
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593916,
-      "doc_id": "lgg8wwk93pd4lw68",
-      "updated": 1711614812000,
-      "properties": {
-        "title": "微服务保护Sentinel",
-        "urlname": "lgg8wwk93pd4lw68",
-        "date": "2024-03-28 16:33:02",
-        "updated": "2024-03-28 16:33:32",
-        "description": "目标了解雪崩产生的原因及常见解决方案能够完成Sentinel部署并整合微服务能够实现Sentinel限流效果（三种模式+三种效果）能够完成Feign整合Sentinel了解线程隔离实现方案，了解Sentinel断路器状态机流转能够完成Sentinel线程隔离和熔断降级能够实现Sentinel授..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "lgg8wwk93pd4lw68"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "lgg8wwk93pd4lw68"
-        }
-      ],
-      "realName": "微服务保护Sentinel",
-      "relativePath": "/SpringCloud/高级篇/微服务保护Sentinel.md",
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593797,
-      "doc_id": "alw5bumbvhg6svwc",
-      "updated": 1711614775000,
-      "properties": {
-        "title": "Seata的部署和集成",
-        "urlname": "alw5bumbvhg6svwc",
-        "date": "2024-03-28 16:32:30",
-        "updated": "2024-03-28 16:32:55",
-        "description": "一、部署Seata的tc-server1.下载下载seata-server地址在：http://seata.io/zh-cn/blog/download.html，版本：1.5.1。或使用提供好的资料中的：seata-server-1.5.1.zip2.解压在非中文目录解压缩这个zip包，其目...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Seata的部署和集成/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "alw5bumbvhg6svwc"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "alw5bumbvhg6svwc"
-        }
-      ],
-      "realName": "Seata的部署和集成",
-      "relativePath": "/SpringCloud/高级篇/Seata的部署和集成.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593697,
-      "doc_id": "sfr3tv4tl2l6fp8c",
-      "updated": 1711614745000,
-      "properties": {
-        "title": "分布式事务Seata",
-        "urlname": "sfr3tv4tl2l6fp8c",
-        "date": "2024-03-28 16:32:00",
-        "updated": "2024-03-28 16:32:25",
-        "description": "在分布式架构系统中，服务不止一个，一个完整的业务链路肯定也不止调用一个服务，此时每个服务都有自己的数据库增删改查，而每一个写操作对应一个本地事务。如果想要确保全部的业务状态一致，也就意味着需要所有的本地事务状态一致，这在我们之前的学习中肯定是不具备的，如何做到跨服务、跨数据源的事务一致性将是本...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式事务Seata/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "sfr3tv4tl2l6fp8c"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "sfr3tv4tl2l6fp8c"
-        }
-      ],
-      "realName": "分布式事务Seata",
-      "relativePath": "/SpringCloud/高级篇/分布式事务Seata.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593580,
-      "doc_id": "nsgd1vcw40dhn1gz",
-      "updated": 1711614700000,
-      "properties": {
-        "title": "Redis集群部署指南",
-        "urlname": "nsgd1vcw40dhn1gz",
-        "date": "2024-03-28 16:31:22",
-        "updated": "2024-03-28 16:31:40",
-        "description": "本章是基于CentOS7下的Redis集群教程，包括：单机安装RedisRedis主从Redis分片集群1.单机安装Redis首先需要安装Redis所需要的依赖：yum install -y gcc tcl然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：📎redis-6.2.4....",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/Redis集群部署指南/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "nsgd1vcw40dhn1gz"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "nsgd1vcw40dhn1gz"
-        }
-      ],
-      "realName": "Redis集群部署指南",
-      "relativePath": "/SpringCloud/高级篇/Redis集群部署指南.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593508,
-      "doc_id": "mbewrwpdklq4ihs8",
-      "updated": 1711614680000,
-      "properties": {
-        "title": "分布式缓存Redis(高级)",
-        "urlname": "mbewrwpdklq4ihs8",
-        "date": "2024-03-28 16:31:02",
-        "updated": "2024-03-28 16:31:20",
-        "description": "作为分布式系统中，必不可少的非结构化存储中间件，Redis在小型、中型、大型乃至高并发系统中均有自己发挥的场合，除了基础数据结构（String/Hash/Set/ZSet/List）的增删改查操作，在真正的生产环境中我们如何避免数据的丢失？如何避免单点的性能瓶颈？如何搭建合适的集群架构？本节笔...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/分布式缓存Redis(高级)/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "mbewrwpdklq4ihs8"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "mbewrwpdklq4ihs8"
-        }
-      ],
-      "realName": "分布式缓存Redis(高级)",
-      "relativePath": "/SpringCloud/高级篇/分布式缓存Redis(高级).md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593411,
-      "doc_id": "eyz9dwt14chnr5up",
-      "updated": 1711614648000,
-      "properties": {
-        "title": "RabbitMQ部署指南",
-        "urlname": "eyz9dwt14chnr5up",
-        "date": "2024-03-28 16:30:28",
-        "updated": "2024-03-28 16:30:48",
-        "description": "1.单机部署我们在Centos7虚拟机中使用Docker来安装。1.1.下载镜像docker pull rabbitmq:3.8-management1.2.安装MQ执行下面的命令来运行MQ容器：docker run \\  -e RABBITMQ_DEFAULT_USER=itcast \\  ...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/RabbitMQ部署指南/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "eyz9dwt14chnr5up"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "eyz9dwt14chnr5up"
-        }
-      ],
-      "realName": "RabbitMQ部署指南",
-      "relativePath": "/SpringCloud/高级篇/RabbitMQ部署指南.md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 163593245,
-      "doc_id": "yzchuzvgkp5t2qgg",
-      "updated": 1711614594000,
-      "properties": {
-        "title": "消息中间件RabbitMQ(高级)",
-        "urlname": "yzchuzvgkp5t2qgg",
-        "date": "2024-03-28 16:29:29",
-        "updated": "2024-03-28 16:29:54",
-        "description": "消息中间件，作为分布式系统中必不可少的一部分，在前面我们学习过其基本的消息发送、消费（跳转链接），但是读者朋友们肯定也知道，真正的生产环境可不是简单的发送消息这么简单。如何避免消息丢失？如何满足特殊场景下的消息延迟消费？如何解决消费能力不足？如何搭建集群？等等本节笔者将从消息的可靠性出发，解决...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/消息中间件RabbitMQ(高级)/cover.jpg"
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "yzchuzvgkp5t2qgg"
-        },
-        {
-          "title": "高级篇",
-          "doc_id": "yzchuzvgkp5t2qgg"
-        }
-      ],
-      "realName": "消息中间件RabbitMQ(高级)",
-      "relativePath": "/SpringCloud/高级篇/消息中间件RabbitMQ(高级).md",
-      "needUpdate": 1,
-      "docPath": "source/_posts/yuque/SpringCloud/高级篇"
-    },
-    {
-      "id": 155797132,
-      "doc_id": "lvs8h5illwcpvnnn",
-      "updated": 1715827971000,
-      "properties": {
-        "title": "资料和计划",
-        "urlname": "lvs8h5illwcpvnnn",
-        "date": "2024-01-12 16:56:02",
-        "updated": "2024-05-16 10:52:51",
-        "description": "JavaSE变量，数据类型，运算符控制语句面向对象编程异常机制Java常用类集合IO流多线程网络编程反射MySQLDQL DDL DML DCl 约束 事务 索引JDBCVUEJavaWebAJAXLinuxJava框架MavenMybatisSpring6SpringMVCGitCRMRed..."
-      },
-      "catalog": [],
-      "realName": "资料和计划",
-      "relativePath": "/资料和计划.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 161782200,
-      "doc_id": "vqczqg29gvt9w7om",
-      "updated": 1711687881000,
-      "properties": {
-        "title": "反射",
-        "urlname": "vqczqg29gvt9w7om",
-        "date": "2024-03-14 11:14:17",
-        "updated": "2024-03-29 12:51:21",
-        "description": "问答环节什么是反射？应用？原理？1. 反射出现的背景Java程序中，所有的对象都有两种类型：编译时类型和运行时类型，而很多时候对象的编译时类型和运行时类型不一致。 Object obj = new String(\"hello\");    obj.getClass()例如：某些变量或形参的声明类..."
-      },
-      "catalog": [
-        {
-          "title": "Java",
-          "doc_id": "vqczqg29gvt9w7om"
-        }
-      ],
-      "realName": "反射",
-      "relativePath": "/Java/反射.md",
-      "docPath": "source/_posts/yuque/Java"
-    },
-    {
-      "id": 161983402,
-      "doc_id": "en74nvgltz2kkh16",
-      "updated": 1710493315000,
-      "properties": {
-        "title": "Kafka",
-        "urlname": "en74nvgltz2kkh16",
-        "date": "2024-03-15 16:52:06",
-        "updated": "2024-03-15 17:01:55",
-        "description": "Kafka集群第一种方式搭建zookeeper集群version: '3'  # 定义了一个网络, 用于和kafka位于同一个网络 networks:   zk-net:     name: \"zk-net\"     driver: bridge  services:   zoo1:     ..."
-      },
-      "catalog": [
-        {
-          "title": "消息队列",
-          "doc_id": "en74nvgltz2kkh16"
-        }
-      ],
-      "realName": "Kafka",
-      "relativePath": "/消息队列/Kafka.md",
-      "docPath": "source/_posts/yuque/消息队列"
-    },
-    {
-      "id": 161824369,
-      "doc_id": "xx57hazlf9kgulgl",
-      "updated": 1710400650000,
-      "properties": {
-        "title": "6.Nacos配置管理",
-        "urlname": "xx57hazlf9kgulgl",
-        "date": "2024-03-14 15:13:29",
-        "updated": "2024-03-14 15:17:30",
-        "description": "1.Nacos配置管理Nacos除了可以做注册中心，同样可以做配置管理来使用。1.1.统一配置管理当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。Nacos一方面可以将配置集中管理，另一方可..."
-      },
-      "catalog": [
-        {
-          "title": "SpringCloud",
-          "doc_id": "xx57hazlf9kgulgl"
-        },
-        {
-          "title": "基本篇",
-          "doc_id": "xx57hazlf9kgulgl"
-        }
-      ],
-      "realName": "6.Nacos配置管理",
-      "relativePath": "/SpringCloud/基本篇/6.Nacos配置管理.md",
-      "docPath": "source/_posts/yuque/SpringCloud/基本篇"
-    },
-    {
-      "id": 161792700,
-      "doc_id": "rh6snb7ns43hgwbl",
-      "updated": 1710389869000,
-      "properties": {
-        "title": "22 MySQL读写分离",
-        "urlname": "rh6snb7ns43hgwbl",
-        "date": "2024-03-14 12:14:46",
-        "updated": "2024-03-14 12:17:49",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍读写分离,简单地说是把对数据库的读和写操作分开,以对应不同的数据库服务器。主数据库提供写操作，从数据库提供读操作，这样能有效地减轻单台数据库的压力。通过MyCat即可轻易实现上述功能..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "rh6snb7ns43hgwbl"
-        }
-      ],
-      "realName": "22 MySQL读写分离",
-      "relativePath": "/MySQL/22 MySQL读写分离.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161792687,
-      "doc_id": "ed4ii1vuy595qgim",
-      "updated": 1710576963000,
-      "properties": {
-        "title": "20 主从复制",
-        "urlname": "ed4ii1vuy595qgim",
-        "date": "2024-03-14 12:14:42",
-        "updated": "2024-03-16 16:16:03",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 概述主从复制是指将主数据库的 DDL 和 DML 操作通过二进制日志传到从库服务器中，然后在从库上对这些日志重新执行（也叫重做），从而使得从库和主库的数据保持同步。MySQL支持一台主库..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "ed4ii1vuy595qgim"
-        }
-      ],
-      "realName": "20 主从复制",
-      "relativePath": "/MySQL/20 主从复制.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161792696,
-      "doc_id": "wx79qbh5pgh25inz",
-      "updated": 1710389847000,
-      "properties": {
-        "title": "21 MySQL分库分表",
-        "urlname": "wx79qbh5pgh25inz",
-        "date": "2024-03-14 12:14:44",
-        "updated": "2024-03-14 12:17:27",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍1.1 问题分析随着互联网及移动互联网的发展，应用系统的数据量也是成指数式增长，若采用单数据库进行数据存储，存在以下性能瓶颈：IO瓶颈：热点数据太多，数据库缓存不足，产生大量磁盘IO..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "wx79qbh5pgh25inz"
-        }
-      ],
-      "realName": "21 MySQL分库分表",
-      "relativePath": "/MySQL/21 MySQL分库分表.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161792481,
-      "doc_id": "vovxtc2fr88k1icl",
-      "updated": 1715509578000,
-      "properties": {
-        "title": "14 储存过程",
-        "urlname": "vovxtc2fr88k1icl",
-        "date": "2024-03-14 12:12:36",
-        "updated": "2024-05-12 18:26:18",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍存储过程是事先经过编译并存储在数据库中的一段 SQL 语句的集合，调用存储过程可以简化应用开发人员的很多工作，减少数据在数据库和应用服务器之间的传输，对于提高数据处理的效率是有好处的..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "vovxtc2fr88k1icl"
-        }
-      ],
-      "realName": "14 储存过程",
-      "relativePath": "/MySQL/14 储存过程.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161829288,
-      "doc_id": "wtu242yw5rgrmmzf",
-      "updated": 1716183807000,
-      "properties": {
-        "title": "MyBatis",
-        "urlname": "wtu242yw5rgrmmzf",
-        "date": "2024-03-14 15:32:53",
-        "updated": "2024-05-20 13:43:27",
-        "description": "一、MyBatis概述1.1 框架在文献中看到的framework被翻译为框架Java常用框架：SSM三大框架：Spring + SpringMVC + MyBatisSpringBootSpringCloud等。框架其实就是对通用代码的封装，提前写好了一堆接口和类，我们可以在做项目的时候直接..."
-      },
-      "catalog": [
-        {
-          "title": "SSM",
-          "doc_id": "wtu242yw5rgrmmzf"
-        }
-      ],
-      "realName": "MyBatis",
-      "relativePath": "/SSM/MyBatis.md",
-      "docPath": "source/_posts/yuque/SSM"
-    },
-    {
-      "id": 161792471,
-      "doc_id": "lflduyytxtdhnwrb",
-      "updated": 1710558652000,
-      "properties": {
-        "title": "13 视图详述",
-        "urlname": "lflduyytxtdhnwrb",
-        "date": "2024-03-14 12:12:32",
-        "updated": "2024-03-16 11:10:52",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括1 介绍视图（View）是一种虚拟存在的表。视图中的数据并不在数据库中实际存在，行和列数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的。通俗的讲，视图只保存了查询的SQL逻辑，..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "lflduyytxtdhnwrb"
-        }
-      ],
-      "realName": "13 视图详述",
-      "relativePath": "/MySQL/13 视图详述.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 161669138,
-      "doc_id": "uq7l94tl0gpfrk1n",
-      "updated": 1710388924000,
-      "properties": {
-        "title": "05 SQL-DCL",
-        "urlname": "uq7l94tl0gpfrk1n",
-        "date": "2024-03-13 17:30:26",
-        "updated": "2024-03-14 12:02:04",
-        "description": "笔记来源：黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括前言DCL英文全称是Data Control Language(数据控制语言)，用来管理数据库用户、控制数据库的访问权限。 1 管理用户查询用户查询的结果如下: 其中 Host代表当前用户访..."
-      },
-      "catalog": [
-        {
-          "title": "MySQL",
-          "doc_id": "uq7l94tl0gpfrk1n"
-        }
-      ],
-      "realName": "05 SQL-DCL",
-      "relativePath": "/MySQL/05 SQL-DCL.md",
-      "docPath": "source/_posts/yuque/MySQL"
-    },
-    {
-      "id": 93950898,
-      "doc_id": "nw8vcs",
-      "updated": 1710337421000,
-      "properties": {
-        "title": "Java仿牛客社区",
-        "urlname": "nw8vcs",
-        "date": "2022-09-21 09:08:55",
-        "updated": "2024-03-13 21:43:41",
-        "description": "Spring入门依赖注入当有两个符合条件的bean都要注入时就会发生冲突单例模式只创建一次Bean作用域注解Scopeprototype装配第三方的类，需要使用configuration注解通过bean装配使用诸如 <script>alert('papapa')</script> 这样的名称，..."
-      },
-      "catalog": [],
-      "realName": "Java仿牛客社区",
-      "relativePath": "/Java仿牛客社区.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 93148888,
-      "doc_id": "bww7qf",
-      "updated": 1709558208000,
-      "properties": {
-        "title": "消息队列",
-        "urlname": "bww7qf",
-        "date": "2022-09-15 15:25:14",
-        "updated": "2024-03-04 21:16:48",
-        "description": "MQ简介 字面意思本质是个队列，FIFO先入先出，只不过队列中存放的内容是message而已，还是一种跨进程的通信机制，用于上下游传递消息。在互联网架构中，MQ是一种非常常见的上下游“逻辑解耦+物理解耦”的消息通信服务。使用了MQ之后，消息发送上游只需要依赖MQ,不用依赖其它服务为什么要用MQ..."
-      },
-      "catalog": [],
-      "realName": "消息队列",
-      "relativePath": "/消息队列.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 175778449,
-      "doc_id": "un7037zybf9zox8y",
-      "updated": 1720273246000,
-      "properties": {
-        "title": "真诚才是必杀技",
-        "urlname": "un7037zybf9zox8y",
-        "date": "2024-06-30 08:57:39",
-        "updated": "2024-07-06 21:40:46",
-        "description": "1. 对话1.1.  兴趣爱好模板   示例对话：  A: 你喜欢什么样的音乐？ B: 我喜欢摇滚音乐，尤其是老鹰乐队。你呢？A: 我也喜欢摇滚，不过我更喜欢流行音乐。最近有什么好听的歌曲推荐吗？这种模板可以应用于各种兴趣爱好领域，如音乐、电影、书籍、运动等。1.2. 工作和职业模板 示例对话..."
-      },
-      "catalog": [],
-      "realName": "真诚才是必杀技",
-      "relativePath": "/真诚才是必杀技.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 169310275,
-      "doc_id": "rud7yqbfaig1h5m7",
-      "updated": 1719199756000,
-      "properties": {
-        "title": "工作周报",
-        "urlname": "rud7yqbfaig1h5m7",
-        "date": "2024-05-12 12:02:22",
-        "updated": "2024-06-24 11:29:16",
-        "description": "日期：2024-5-12本周重点1.任务进展本周完成了哪些任务、整体进度如何。本周完成了XXX需求开发，已经提测。项目整体进度比预期延迟1d，预计下周三可以开始正式测试。2.相关数据呈现相关数据以及背后的原因（如有）。本周日均 UV 3000，同比上周上涨20%。原因是周二投放的运营活动生效，...",
-        "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/工作周报/cover.jpg"
-      },
-      "catalog": [],
-      "realName": "工作周报",
-      "relativePath": "/工作周报.md",
-      "docPath": "source/_posts/yuque"
-    },
-    {
-      "id": 176792605,
-      "doc_id": "cgtabta5gk8qi32g",
-      "updated": 1721178580000,
-      "properties": {
-        "title": "工作准则",
-        "urlname": "cgtabta5gk8qi32g",
-        "date": "2024-07-06 15:06:34",
-        "updated": "2024-07-17 09:09:40",
-        "description": "项目模板化用一下，学一下，总结一下，下次直接用。学习成本低作为项目负责人的角度：1. 项目概述项目名称：项目的正式名称。项目简介：简要描述项目的背景和目的。项目目标：明确项目的具体目标和预期成果。2. 项目范围范围定义：项目的边界和限制，明确项目包含和不包含的内容。功能列表：详细列出项目中所有..."
-      },
-      "catalog": [],
-      "realName": "工作准则",
-      "relativePath": "/工作准则.md",
+      "realName": "Spring容器的启动",
+      "relativePath": "/Spring容器的启动.md",
       "docPath": "source/_posts/yuque"
     }
   ],
   "catalog": [
     {
       "type": "TITLE",
-      "title": "C语言",
-      "uuid": "i3a1eBEPFQ70TxYf",
+      "title": "系统架构",
+      "uuid": "FcznZIORZxWkRtl1",
       "url": "",
       "prev_uuid": "",
-      "sibling_uuid": "7b6u54z338Y7TTOZ",
-      "child_uuid": "H5BupYNVSJmcwBOC",
+      "sibling_uuid": "WJWBlvG4tCQmp5RV",
+      "child_uuid": "tze4cwaLyBSgUhD1",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -2895,42 +340,147 @@
     },
     {
       "type": "DOC",
-      "title": "基础",
-      "uuid": "H5BupYNVSJmcwBOC",
-      "url": "gy50e8m1viwp39k2",
-      "prev_uuid": "i3a1eBEPFQ70TxYf",
+      "title": "分布式系统",
+      "uuid": "tze4cwaLyBSgUhD1",
+      "url": "paen8kf6e7bepzf5",
+      "prev_uuid": "FcznZIORZxWkRtl1",
       "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "i3a1eBEPFQ70TxYf",
-      "doc_id": 178220775,
+      "parent_uuid": "FcznZIORZxWkRtl1",
+      "doc_id": 178982855,
       "level": 1,
-      "id": 178220775,
+      "id": 178982855,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "TITLE",
+      "title": "项目总结",
+      "uuid": "WJWBlvG4tCQmp5RV",
+      "url": "",
+      "prev_uuid": "FcznZIORZxWkRtl1",
+      "sibling_uuid": "JwAlcEK15VUjJ3_I",
+      "child_uuid": "BTEu_ICM5ny8L5lh",
+      "parent_uuid": "",
+      "doc_id": "",
+      "level": 0,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "生成验证码",
+      "uuid": "BTEu_ICM5ny8L5lh",
+      "url": "um7ock1xq86oqzzz",
+      "prev_uuid": "WJWBlvG4tCQmp5RV",
+      "sibling_uuid": "KdqR2qUuaa9yNN_m",
+      "child_uuid": "",
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176482838,
+      "level": 1,
+      "id": 176482838,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "记录操作日志",
+      "uuid": "KdqR2qUuaa9yNN_m",
+      "url": "itglllecih4yrrue",
+      "prev_uuid": "BTEu_ICM5ny8L5lh",
+      "sibling_uuid": "TgQm0DXBExepQawR",
+      "child_uuid": "",
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176481200,
+      "level": 1,
+      "id": 176481200,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "加密算法",
+      "uuid": "TgQm0DXBExepQawR",
+      "url": "vx49qt1s6b5545el",
+      "prev_uuid": "KdqR2qUuaa9yNN_m",
+      "sibling_uuid": "opm7dGYkHm61ZRjB",
+      "child_uuid": "",
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176313678,
+      "level": 1,
+      "id": 176313678,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "自定义IpUtil",
+      "uuid": "opm7dGYkHm61ZRjB",
+      "url": "iow44pagpr9zh7cl",
+      "prev_uuid": "TgQm0DXBExepQawR",
+      "sibling_uuid": "mUUZV2jBRCMUqu-u",
+      "child_uuid": "",
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176192434,
+      "level": 1,
+      "id": 176192434,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "Shiro",
+      "uuid": "mUUZV2jBRCMUqu-u",
+      "url": "sav9lagrfa1z1sp1",
+      "prev_uuid": "opm7dGYkHm61ZRjB",
+      "sibling_uuid": "d0Gh743LF1x-2wTE",
+      "child_uuid": "",
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176182624,
+      "level": 1,
+      "id": 176182624,
       "open_window": 1,
       "visible": 0
     },
     {
       "type": "DOC",
-      "title": "工作准则",
-      "uuid": "7b6u54z338Y7TTOZ",
-      "url": "cgtabta5gk8qi32g",
-      "prev_uuid": "i3a1eBEPFQ70TxYf",
-      "sibling_uuid": "-XW0agqk2cw3u0KM",
+      "title": "Jackson",
+      "uuid": "d0Gh743LF1x-2wTE",
+      "url": "yyl7csi7os1y6ukt",
+      "prev_uuid": "mUUZV2jBRCMUqu-u",
+      "sibling_uuid": "cl5lRnGCftT39-Zj",
       "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 176792605,
-      "level": 0,
-      "id": 176792605,
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176182562,
+      "level": 1,
+      "id": 176182562,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "Mybatis Generator",
+      "uuid": "cl5lRnGCftT39-Zj",
+      "url": "pqt9x5cfmt0u23u0",
+      "prev_uuid": "d0Gh743LF1x-2wTE",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "WJWBlvG4tCQmp5RV",
+      "doc_id": 176182485,
+      "level": 1,
+      "id": 176182485,
       "open_window": 1,
       "visible": 1
     },
     {
       "type": "TITLE",
-      "title": "AI答题应用平台",
-      "uuid": "-XW0agqk2cw3u0KM",
+      "title": "Mysql",
+      "uuid": "JwAlcEK15VUjJ3_I",
       "url": "",
-      "prev_uuid": "7b6u54z338Y7TTOZ",
-      "sibling_uuid": "HzIrnnc3In2dTU_t",
-      "child_uuid": "Nt5zi99EqL1vDeJH",
+      "prev_uuid": "WJWBlvG4tCQmp5RV",
+      "sibling_uuid": "yInU83QXHpF9mTCK",
+      "child_uuid": "pLc9v_Tqp6wUPbEP",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -2940,87 +490,27 @@
     },
     {
       "type": "DOC",
-      "title": "MBTI性格测试小程序",
-      "uuid": "Nt5zi99EqL1vDeJH",
-      "url": "cfk72cqrsb7cvgz7",
-      "prev_uuid": "-XW0agqk2cw3u0KM",
+      "title": "日期时间存储方式",
+      "uuid": "pLc9v_Tqp6wUPbEP",
+      "url": "hzocgmqfnmggcavn",
+      "prev_uuid": "JwAlcEK15VUjJ3_I",
       "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "-XW0agqk2cw3u0KM",
-      "doc_id": 175324904,
+      "parent_uuid": "JwAlcEK15VUjJ3_I",
+      "doc_id": 176015793,
       "level": 1,
-      "id": 175324904,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "工作日报",
-      "uuid": "HzIrnnc3In2dTU_t",
-      "url": "tl585wa8vvht98bd",
-      "prev_uuid": "-XW0agqk2cw3u0KM",
-      "sibling_uuid": "lmBHbMgOhq0HKKnj",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 169310315,
-      "level": 0,
-      "id": 169310315,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "工作周报",
-      "uuid": "lmBHbMgOhq0HKKnj",
-      "url": "rud7yqbfaig1h5m7",
-      "prev_uuid": "HzIrnnc3In2dTU_t",
-      "sibling_uuid": "d9VPkbs_B8hMU4Z0",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 169310275,
-      "level": 0,
-      "id": 169310275,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "面试总结和面经复盘",
-      "uuid": "d9VPkbs_B8hMU4Z0",
-      "url": "mxka9f7icg4smq0d",
-      "prev_uuid": "lmBHbMgOhq0HKKnj",
-      "sibling_uuid": "EwMCpmVLjKGjC_3Q",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 167359204,
-      "level": 0,
-      "id": 167359204,
+      "id": 176015793,
       "open_window": 1,
       "visible": 1
     },
     {
       "type": "TITLE",
-      "title": "盲盒交友",
-      "uuid": "EwMCpmVLjKGjC_3Q",
+      "title": "算法",
+      "uuid": "yInU83QXHpF9mTCK",
       "url": "",
-      "prev_uuid": "d9VPkbs_B8hMU4Z0",
-      "sibling_uuid": "6RKeZLtjt1Fxg8LL",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "知识碎片",
-      "uuid": "6RKeZLtjt1Fxg8LL",
-      "url": "",
-      "prev_uuid": "EwMCpmVLjKGjC_3Q",
-      "sibling_uuid": "RVh6iMLvq2JvLP6i",
-      "child_uuid": "2NgblzlgE33dRcDi",
+      "prev_uuid": "JwAlcEK15VUjJ3_I",
+      "sibling_uuid": "O3ggrKF40q18wh3n",
+      "child_uuid": "L6aNneDBh0qreHBz",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3030,162 +520,27 @@
     },
     {
       "type": "DOC",
-      "title": "SpringBoot集成websocket",
-      "uuid": "2NgblzlgE33dRcDi",
-      "url": "tuk1vcdwudwaguk7",
-      "prev_uuid": "6RKeZLtjt1Fxg8LL",
-      "sibling_uuid": "xsv3X5SixuSyKzuo",
-      "child_uuid": "",
-      "parent_uuid": "6RKeZLtjt1Fxg8LL",
-      "doc_id": 178648341,
-      "level": 1,
-      "id": 178648341,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "MQTT",
-      "uuid": "xsv3X5SixuSyKzuo",
-      "url": "ebqhgmgbhw0x5o66",
-      "prev_uuid": "2NgblzlgE33dRcDi",
-      "sibling_uuid": "glivvt_0lljZxRXG",
-      "child_uuid": "",
-      "parent_uuid": "6RKeZLtjt1Fxg8LL",
-      "doc_id": 176451846,
-      "level": 1,
-      "id": 176451846,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "数据库命名规范",
-      "uuid": "glivvt_0lljZxRXG",
-      "url": "flna4v7p66fp2epl",
-      "prev_uuid": "xsv3X5SixuSyKzuo",
-      "sibling_uuid": "KLItO4YurBgVqH4G",
-      "child_uuid": "",
-      "parent_uuid": "6RKeZLtjt1Fxg8LL",
-      "doc_id": 176131255,
-      "level": 1,
-      "id": 176131255,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "Java开发手册",
-      "uuid": "KLItO4YurBgVqH4G",
-      "url": "qlczurzcz91agki7",
-      "prev_uuid": "glivvt_0lljZxRXG",
-      "sibling_uuid": "cRL0tjOhz3ik8nrV",
-      "child_uuid": "",
-      "parent_uuid": "6RKeZLtjt1Fxg8LL",
-      "doc_id": 174288928,
-      "level": 1,
-      "id": 174288928,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "Junit使用",
-      "uuid": "cRL0tjOhz3ik8nrV",
-      "url": "bgxghbiaxid32x53",
-      "prev_uuid": "KLItO4YurBgVqH4G",
-      "sibling_uuid": "fpI7cVQVus7kGy7R",
-      "child_uuid": "",
-      "parent_uuid": "6RKeZLtjt1Fxg8LL",
-      "doc_id": 173979914,
-      "level": 1,
-      "id": 173979914,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "window下载安装并使用nvm",
-      "uuid": "fpI7cVQVus7kGy7R",
-      "url": "pm9l8io2mkif1wky",
-      "prev_uuid": "cRL0tjOhz3ik8nrV",
+      "title": "算法模板",
+      "uuid": "L6aNneDBh0qreHBz",
+      "url": "mungbnpyyb5lvyqt",
+      "prev_uuid": "yInU83QXHpF9mTCK",
       "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "6RKeZLtjt1Fxg8LL",
-      "doc_id": 172937069,
+      "parent_uuid": "yInU83QXHpF9mTCK",
+      "doc_id": 175951115,
       "level": 1,
-      "id": 172937069,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "真诚才是必杀技",
-      "uuid": "RVh6iMLvq2JvLP6i",
-      "url": "un7037zybf9zox8y",
-      "prev_uuid": "6RKeZLtjt1Fxg8LL",
-      "sibling_uuid": "joc8sWOcvrLRI1Us",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 175778449,
-      "level": 0,
-      "id": 175778449,
+      "id": 175951115,
       "open_window": 1,
       "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "好问题才有好思路",
-      "uuid": "joc8sWOcvrLRI1Us",
-      "url": "hug0bw",
-      "prev_uuid": "RVh6iMLvq2JvLP6i",
-      "sibling_uuid": "E9WzsVdcCkHhqPEC",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 90161528,
-      "level": 0,
-      "id": 90161528,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "学习思考和方法总结",
-      "uuid": "E9WzsVdcCkHhqPEC",
-      "url": "uf5stb4mwdltpwxg",
-      "prev_uuid": "joc8sWOcvrLRI1Us",
-      "sibling_uuid": "SHzFUE7xx2mlyVxV",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 105678488,
-      "level": 0,
-      "id": 105678488,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Linux",
-      "uuid": "SHzFUE7xx2mlyVxV",
-      "url": "zu5ulb7mvz8pldzk",
-      "prev_uuid": "E9WzsVdcCkHhqPEC",
-      "sibling_uuid": "BFAxsTghCmCSoQDC",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 174034403,
-      "level": 0,
-      "id": 174034403,
-      "open_window": 1,
-      "visible": 0
     },
     {
       "type": "TITLE",
-      "title": "工具使用",
-      "uuid": "BFAxsTghCmCSoQDC",
+      "title": "UML",
+      "uuid": "O3ggrKF40q18wh3n",
       "url": "",
-      "prev_uuid": "SHzFUE7xx2mlyVxV",
-      "sibling_uuid": "aKNTqk4nhCXgDB9T",
-      "child_uuid": "IcE9z-lxCLkmXzOF",
+      "prev_uuid": "yInU83QXHpF9mTCK",
+      "sibling_uuid": "XGOikCCO0hMt2KRH",
+      "child_uuid": "2aTZ-fK4hCkCc3_r",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3195,117 +550,27 @@
     },
     {
       "type": "DOC",
-      "title": "正则表达式",
-      "uuid": "IcE9z-lxCLkmXzOF",
-      "url": "vuo8nyrign5okmoh",
-      "prev_uuid": "BFAxsTghCmCSoQDC",
-      "sibling_uuid": "cmYEz68AjiGu089T",
-      "child_uuid": "",
-      "parent_uuid": "BFAxsTghCmCSoQDC",
-      "doc_id": 172484238,
-      "level": 1,
-      "id": 172484238,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "MobaXterm",
-      "uuid": "cmYEz68AjiGu089T",
-      "url": "hoq9538sy6ah2g59",
-      "prev_uuid": "IcE9z-lxCLkmXzOF",
-      "sibling_uuid": "uwhKUtWlRa69fUIf",
-      "child_uuid": "",
-      "parent_uuid": "BFAxsTghCmCSoQDC",
-      "doc_id": 170041447,
-      "level": 1,
-      "id": 170041447,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "IDEA",
-      "uuid": "uwhKUtWlRa69fUIf",
-      "url": "fkx3so55htytx3xv",
-      "prev_uuid": "cmYEz68AjiGu089T",
-      "sibling_uuid": "OYOghIw-A8v7Q1pl",
-      "child_uuid": "",
-      "parent_uuid": "BFAxsTghCmCSoQDC",
-      "doc_id": 170041006,
-      "level": 1,
-      "id": 170041006,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "远程连接",
-      "uuid": "OYOghIw-A8v7Q1pl",
-      "url": "cngkw69nkcxankym",
-      "prev_uuid": "uwhKUtWlRa69fUIf",
-      "sibling_uuid": "EsYgwgVY14Abn2q2",
-      "child_uuid": "",
-      "parent_uuid": "BFAxsTghCmCSoQDC",
-      "doc_id": 169935971,
-      "level": 1,
-      "id": 169935971,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "CollectionUtils",
-      "uuid": "EsYgwgVY14Abn2q2",
-      "url": "lnmfvn3d0zuzh03f",
-      "prev_uuid": "OYOghIw-A8v7Q1pl",
-      "sibling_uuid": "nszSHO6bBQpdZCf1",
-      "child_uuid": "",
-      "parent_uuid": "BFAxsTghCmCSoQDC",
-      "doc_id": 169874586,
-      "level": 1,
-      "id": 169874586,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Apifox",
-      "uuid": "nszSHO6bBQpdZCf1",
-      "url": "xkaago63defr5vzf",
-      "prev_uuid": "EsYgwgVY14Abn2q2",
+      "title": "概述",
+      "uuid": "2aTZ-fK4hCkCc3_r",
+      "url": "ggf4zhqrt5xged1k",
+      "prev_uuid": "O3ggrKF40q18wh3n",
       "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "BFAxsTghCmCSoQDC",
-      "doc_id": 169783268,
+      "parent_uuid": "O3ggrKF40q18wh3n",
+      "doc_id": 175801859,
       "level": 1,
-      "id": 169783268,
+      "id": 175801859,
       "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "BUG库",
-      "uuid": "aKNTqk4nhCXgDB9T",
-      "url": "gr7lgx",
-      "prev_uuid": "BFAxsTghCmCSoQDC",
-      "sibling_uuid": "dnVLpb_uS7EU6SgS",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 90161554,
-      "level": 0,
-      "id": 90161554,
-      "open_window": 0,
       "visible": 1
     },
     {
       "type": "TITLE",
-      "title": "权限管理系统",
-      "uuid": "dnVLpb_uS7EU6SgS",
+      "title": "Effective Java",
+      "uuid": "XGOikCCO0hMt2KRH",
       "url": "",
-      "prev_uuid": "aKNTqk4nhCXgDB9T",
-      "sibling_uuid": "73Q4Ml0NBsCE3-Tg",
-      "child_uuid": "",
+      "prev_uuid": "O3ggrKF40q18wh3n",
+      "sibling_uuid": "OWW-sRov5c65PNQF",
+      "child_uuid": "aVYl8oDnoQlBXLBo",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3315,42 +580,27 @@
     },
     {
       "type": "DOC",
-      "title": "smartlock",
-      "uuid": "73Q4Ml0NBsCE3-Tg",
-      "url": "mk2dsz9o053qcbtb",
-      "prev_uuid": "dnVLpb_uS7EU6SgS",
-      "sibling_uuid": "pCpp22iy7BM8ovNz",
+      "title": "考虑使用静态工厂方法代替构造函数",
+      "uuid": "aVYl8oDnoQlBXLBo",
+      "url": "vareg4hky8e5bi1c",
+      "prev_uuid": "XGOikCCO0hMt2KRH",
+      "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 169737425,
-      "level": 0,
-      "id": 169737425,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "LIMS",
-      "uuid": "pCpp22iy7BM8ovNz",
-      "url": "katc0uet492tyfkv",
-      "prev_uuid": "73Q4Ml0NBsCE3-Tg",
-      "sibling_uuid": "iEpC7jjI7Y9nkjYn",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 168434071,
-      "level": 0,
-      "id": 168434071,
+      "parent_uuid": "XGOikCCO0hMt2KRH",
+      "doc_id": 175789873,
+      "level": 1,
+      "id": 175789873,
       "open_window": 1,
       "visible": 1
     },
     {
       "type": "TITLE",
-      "title": "Java",
-      "uuid": "iEpC7jjI7Y9nkjYn",
+      "title": "Leetcode刷题笔记",
+      "uuid": "OWW-sRov5c65PNQF",
       "url": "",
-      "prev_uuid": "pCpp22iy7BM8ovNz",
-      "sibling_uuid": "4vbPro0hfFPPwOh3",
-      "child_uuid": "qx3_xADeUh7Fl6H5",
+      "prev_uuid": "XGOikCCO0hMt2KRH",
+      "sibling_uuid": "5S2UN6mkVpJYI7ze",
+      "child_uuid": "-_NkKmQxZvdO1a7o",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3360,267 +610,27 @@
     },
     {
       "type": "DOC",
-      "title": "变量与运算符",
-      "uuid": "qx3_xADeUh7Fl6H5",
-      "url": "iea26vb0n13x9kdb",
-      "prev_uuid": "iEpC7jjI7Y9nkjYn",
-      "sibling_uuid": "GhOA6qOx4rXbjzPP",
+      "title": "动态规划",
+      "uuid": "-_NkKmQxZvdO1a7o",
+      "url": "aht6aaet92nohbq4",
+      "prev_uuid": "OWW-sRov5c65PNQF",
+      "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161776380,
+      "parent_uuid": "OWW-sRov5c65PNQF",
+      "doc_id": 175475211,
       "level": 1,
-      "id": 161776380,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "流程控制语句",
-      "uuid": "GhOA6qOx4rXbjzPP",
-      "url": "dn0sow0d3pxdk7bf",
-      "prev_uuid": "qx3_xADeUh7Fl6H5",
-      "sibling_uuid": "3MfSqtkjIMdIniZ4",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 163839013,
-      "level": 1,
-      "id": 163839013,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "数组",
-      "uuid": "3MfSqtkjIMdIniZ4",
-      "url": "biy56ikwqt2udhy8",
-      "prev_uuid": "GhOA6qOx4rXbjzPP",
-      "sibling_uuid": "BcR_DLMVe9yQov1O",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 163839063,
-      "level": 1,
-      "id": 163839063,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "面向对象",
-      "uuid": "BcR_DLMVe9yQov1O",
-      "url": "yw9hc9",
-      "prev_uuid": "3MfSqtkjIMdIniZ4",
-      "sibling_uuid": "oGGisrDCcGf2T2iu",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 90161472,
-      "level": 1,
-      "id": 90161472,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "异常",
-      "uuid": "oGGisrDCcGf2T2iu",
-      "url": "um7lilrkavmww4r4",
-      "prev_uuid": "BcR_DLMVe9yQov1O",
-      "sibling_uuid": "PoYI2nw3aJ3xNPbg",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161776955,
-      "level": 1,
-      "id": 161776955,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "常见的API类",
-      "uuid": "PoYI2nw3aJ3xNPbg",
-      "url": "ggstmhn7xxix66dq",
-      "prev_uuid": "oGGisrDCcGf2T2iu",
-      "sibling_uuid": "q8DRrwaGyKItc01p",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161780151,
-      "level": 1,
-      "id": 161780151,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "泛型",
-      "uuid": "q8DRrwaGyKItc01p",
-      "url": "feh743izkd1zxumk",
-      "prev_uuid": "PoYI2nw3aJ3xNPbg",
-      "sibling_uuid": "rkQGLUAV4bn4hPVs",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161781613,
-      "level": 1,
-      "id": 161781613,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "反射",
-      "uuid": "rkQGLUAV4bn4hPVs",
-      "url": "vqczqg29gvt9w7om",
-      "prev_uuid": "q8DRrwaGyKItc01p",
-      "sibling_uuid": "ZC2NwJNIBGD8_qga",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161782200,
-      "level": 1,
-      "id": 161782200,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "集合",
-      "uuid": "ZC2NwJNIBGD8_qga",
-      "url": "canurtaag1nab24f",
-      "prev_uuid": "rkQGLUAV4bn4hPVs",
-      "sibling_uuid": "LX32VB94W-KA6BqF",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161781110,
-      "level": 1,
-      "id": 161781110,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "File类与IO流",
-      "uuid": "LX32VB94W-KA6BqF",
-      "url": "owzkih229syvx62w",
-      "prev_uuid": "ZC2NwJNIBGD8_qga",
-      "sibling_uuid": "X9fmu4I4WOiFjsHt",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161781771,
-      "level": 1,
-      "id": 161781771,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "多线程",
-      "uuid": "X9fmu4I4WOiFjsHt",
-      "url": "kteschpgkis7pmxd",
-      "prev_uuid": "LX32VB94W-KA6BqF",
-      "sibling_uuid": "PczBifMlgV5fTKUR",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161778299,
-      "level": 1,
-      "id": 161778299,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "网络编程",
-      "uuid": "PczBifMlgV5fTKUR",
-      "url": "pqrf8cvoggds",
-      "prev_uuid": "X9fmu4I4WOiFjsHt",
-      "sibling_uuid": "_GAUfHL-JMBBqT3H",
-      "child_uuid": "",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161666013,
-      "level": 1,
-      "id": 161666013,
+      "id": 175475211,
       "open_window": 1,
       "visible": 1
     },
     {
       "type": "TITLE",
-      "title": "JDK8-17新特性",
-      "uuid": "_GAUfHL-JMBBqT3H",
+      "title": "数据结构",
+      "uuid": "5S2UN6mkVpJYI7ze",
       "url": "",
-      "prev_uuid": "PczBifMlgV5fTKUR",
-      "sibling_uuid": "-YBGTb69PaZXOJ8s",
-      "child_uuid": "AhDZO0WK5fXp0WgY",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "JDK8-17新特性（上）",
-      "uuid": "AhDZO0WK5fXp0WgY",
-      "url": "vsp1knk4g0g1",
-      "prev_uuid": "_GAUfHL-JMBBqT3H",
-      "sibling_uuid": "wgqPGl3uC66CgNRO",
-      "child_uuid": "",
-      "parent_uuid": "_GAUfHL-JMBBqT3H",
-      "doc_id": 161666083,
-      "level": 2,
-      "id": 161666083,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "JDK8-17新特性（下）",
-      "uuid": "wgqPGl3uC66CgNRO",
-      "url": "brykk7yxi6t2",
-      "prev_uuid": "AhDZO0WK5fXp0WgY",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "_GAUfHL-JMBBqT3H",
-      "doc_id": 161666037,
-      "level": 2,
-      "id": 161666037,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "数据结构与集合源码",
-      "uuid": "-YBGTb69PaZXOJ8s",
-      "url": "vezu0hrrp9gu",
-      "prev_uuid": "_GAUfHL-JMBBqT3H",
-      "sibling_uuid": "",
-      "child_uuid": "YsCDC-wZ7C8wezM-",
-      "parent_uuid": "iEpC7jjI7Y9nkjYn",
-      "doc_id": 161665991,
-      "level": 1,
-      "id": 161665991,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "集合",
-      "uuid": "YsCDC-wZ7C8wezM-",
-      "url": "eox6riw224fbbud6",
-      "prev_uuid": "-YBGTb69PaZXOJ8s",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "-YBGTb69PaZXOJ8s",
-      "doc_id": 161989000,
-      "level": 2,
-      "id": 161989000,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "MySQL",
-      "uuid": "4vbPro0hfFPPwOh3",
-      "url": "",
-      "prev_uuid": "iEpC7jjI7Y9nkjYn",
-      "sibling_uuid": "D4LRRMvrbUbQffE3",
-      "child_uuid": "3AAuPQbYTq0AWDuz",
+      "prev_uuid": "OWW-sRov5c65PNQF",
+      "sibling_uuid": "nYQZDMsY_2w-jMNF",
+      "child_uuid": "xyV5mjbTzBxWivzZ",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -3630,2267 +640,62 @@
     },
     {
       "type": "DOC",
-      "title": "01 数据库概述",
-      "uuid": "3AAuPQbYTq0AWDuz",
-      "url": "dx44u12yyxklvoss",
-      "prev_uuid": "4vbPro0hfFPPwOh3",
-      "sibling_uuid": "iQ_OXG--AuAGFJiu",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161661313,
-      "level": 1,
-      "id": 161661313,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "02 SQL-DDL",
-      "uuid": "iQ_OXG--AuAGFJiu",
-      "url": "ryb6mifnakmr6okx",
-      "prev_uuid": "3AAuPQbYTq0AWDuz",
-      "sibling_uuid": "L5UPpnopUzkfGAt2",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161668561,
-      "level": 1,
-      "id": 161668561,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "03 SQL-DML",
-      "uuid": "L5UPpnopUzkfGAt2",
-      "url": "neza21i4oy5v3wvf",
-      "prev_uuid": "iQ_OXG--AuAGFJiu",
-      "sibling_uuid": "7-WesD3wJOC-Jce1",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161668872,
-      "level": 1,
-      "id": 161668872,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "04 SQL-DQL",
-      "uuid": "7-WesD3wJOC-Jce1",
-      "url": "og2o5x2o4boh22m1",
-      "prev_uuid": "L5UPpnopUzkfGAt2",
-      "sibling_uuid": "6N6VM2N0IjOAAAra",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669014,
-      "level": 1,
-      "id": 161669014,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "05 SQL-DCL",
-      "uuid": "6N6VM2N0IjOAAAra",
-      "url": "uq7l94tl0gpfrk1n",
-      "prev_uuid": "7-WesD3wJOC-Jce1",
-      "sibling_uuid": "56F-mBP6BvsUshyw",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669138,
-      "level": 1,
-      "id": 161669138,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "06 非聚合函数",
-      "uuid": "56F-mBP6BvsUshyw",
-      "url": "ckgrc733viowi918",
-      "prev_uuid": "6N6VM2N0IjOAAAra",
-      "sibling_uuid": "ynX7gXjmg8Jdut4l",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669267,
-      "level": 1,
-      "id": 161669267,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "07 约束",
-      "uuid": "ynX7gXjmg8Jdut4l",
-      "url": "lkechbpu779kxpds",
-      "prev_uuid": "56F-mBP6BvsUshyw",
-      "sibling_uuid": "mzDrNmKYXI88_nXJ",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669342,
-      "level": 1,
-      "id": 161669342,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "08 多表查询",
-      "uuid": "mzDrNmKYXI88_nXJ",
-      "url": "kqh45fhrkh1nhpng",
-      "prev_uuid": "ynX7gXjmg8Jdut4l",
-      "sibling_uuid": "ezEs48b3CjoGuUhQ",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669422,
-      "level": 1,
-      "id": 161669422,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "09 事务",
-      "uuid": "ezEs48b3CjoGuUhQ",
-      "url": "dngtpspqb15m7mzi",
-      "prev_uuid": "mzDrNmKYXI88_nXJ",
-      "sibling_uuid": "zUCe9ScZqAW3CrdJ",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669490,
-      "level": 1,
-      "id": 161669490,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "10 存储引擎概述",
-      "uuid": "zUCe9ScZqAW3CrdJ",
-      "url": "wrgazsca6l923zq3",
-      "prev_uuid": "ezEs48b3CjoGuUhQ",
-      "sibling_uuid": "_20Iyf1ksvOOgIQZ",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669600,
-      "level": 1,
-      "id": 161669600,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "11 索引详述",
-      "uuid": "_20Iyf1ksvOOgIQZ",
-      "url": "lyggwtbsqb4t5x2o",
-      "prev_uuid": "zUCe9ScZqAW3CrdJ",
-      "sibling_uuid": "35ilaa5Jbq4A_3Td",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161669751,
-      "level": 1,
-      "id": 161669751,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "12 SQL优化",
-      "uuid": "35ilaa5Jbq4A_3Td",
-      "url": "kflrk7t7h9ozf2nk",
-      "prev_uuid": "_20Iyf1ksvOOgIQZ",
-      "sibling_uuid": "qfQCMbNanh19zVlr",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161672069,
-      "level": 1,
-      "id": 161672069,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "13 视图详述",
-      "uuid": "qfQCMbNanh19zVlr",
-      "url": "lflduyytxtdhnwrb",
-      "prev_uuid": "35ilaa5Jbq4A_3Td",
-      "sibling_uuid": "MfnbVrtV5p7Qo6KR",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792471,
-      "level": 1,
-      "id": 161792471,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "14 储存过程",
-      "uuid": "MfnbVrtV5p7Qo6KR",
-      "url": "vovxtc2fr88k1icl",
-      "prev_uuid": "qfQCMbNanh19zVlr",
-      "sibling_uuid": "f0iz4Fgd4h9UHyl5",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792481,
-      "level": 1,
-      "id": 161792481,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "15 触发器",
-      "uuid": "f0iz4Fgd4h9UHyl5",
-      "url": "gg9u3gpwo4yw0l04",
-      "prev_uuid": "MfnbVrtV5p7Qo6KR",
-      "sibling_uuid": "I_GD3SLnqcD6oywJ",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792486,
-      "level": 1,
-      "id": 161792486,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "16 锁",
-      "uuid": "I_GD3SLnqcD6oywJ",
-      "url": "gxpo437gg8au84fs",
-      "prev_uuid": "f0iz4Fgd4h9UHyl5",
-      "sibling_uuid": "xPT3jeRJvHf_Ksva",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792492,
-      "level": 1,
-      "id": 161792492,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "17 InnoDB引擎详述",
-      "uuid": "xPT3jeRJvHf_Ksva",
-      "url": "ixgx5y5warh2ogcm",
-      "prev_uuid": "I_GD3SLnqcD6oywJ",
-      "sibling_uuid": "lnY2oZWpqxIXxiBU",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792669,
-      "level": 1,
-      "id": 161792669,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "MVCC",
-      "uuid": "lnY2oZWpqxIXxiBU",
-      "url": "zet55u1fhb20gn4w",
-      "prev_uuid": "xPT3jeRJvHf_Ksva",
-      "sibling_uuid": "JxmVrLiDAB5A50ms",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 164676667,
-      "level": 1,
-      "id": 164676667,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "18 MySQL管理工具",
-      "uuid": "JxmVrLiDAB5A50ms",
-      "url": "cnimlcxf8gntnpx1",
-      "prev_uuid": "lnY2oZWpqxIXxiBU",
-      "sibling_uuid": "29o1dmoclFFmoY7s",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792674,
-      "level": 1,
-      "id": 161792674,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19 MySQL日志",
-      "uuid": "29o1dmoclFFmoY7s",
-      "url": "paxlvnrrtlknouur",
-      "prev_uuid": "JxmVrLiDAB5A50ms",
-      "sibling_uuid": "MzCh09T2sWqs313e",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792684,
-      "level": 1,
-      "id": 161792684,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "20 主从复制",
-      "uuid": "MzCh09T2sWqs313e",
-      "url": "ed4ii1vuy595qgim",
-      "prev_uuid": "29o1dmoclFFmoY7s",
-      "sibling_uuid": "piL5VpLPcXH0Zxkl",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792687,
-      "level": 1,
-      "id": 161792687,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "21 MySQL分库分表",
-      "uuid": "piL5VpLPcXH0Zxkl",
-      "url": "wx79qbh5pgh25inz",
-      "prev_uuid": "MzCh09T2sWqs313e",
-      "sibling_uuid": "dqOz3FPr3xIC5hZz",
-      "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792696,
-      "level": 1,
-      "id": 161792696,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "22 MySQL读写分离",
-      "uuid": "dqOz3FPr3xIC5hZz",
-      "url": "rh6snb7ns43hgwbl",
-      "prev_uuid": "piL5VpLPcXH0Zxkl",
+      "title": "数据结构概述",
+      "uuid": "xyV5mjbTzBxWivzZ",
+      "url": "ogg1l0ugagai6pok",
+      "prev_uuid": "5S2UN6mkVpJYI7ze",
       "sibling_uuid": "",
       "child_uuid": "",
-      "parent_uuid": "4vbPro0hfFPPwOh3",
-      "doc_id": 161792700,
+      "parent_uuid": "5S2UN6mkVpJYI7ze",
+      "doc_id": 175414033,
       "level": 1,
-      "id": 161792700,
+      "id": 175414033,
       "open_window": 1,
       "visible": 1
     },
     {
       "type": "DOC",
-      "title": "JavaWeb",
-      "uuid": "D4LRRMvrbUbQffE3",
-      "url": "fp6ps3t3rlbygff4",
-      "prev_uuid": "4vbPro0hfFPPwOh3",
-      "sibling_uuid": "HNflOzRfRp_dmy7p",
+      "title": "Spring容器的启动",
+      "uuid": "nYQZDMsY_2w-jMNF",
+      "url": "empp2z8whcw2fbq8",
+      "prev_uuid": "5S2UN6mkVpJYI7ze",
+      "sibling_uuid": "0vVWkRVspsBfWaRu",
       "child_uuid": "",
       "parent_uuid": "",
-      "doc_id": 162404549,
+      "doc_id": 168244528,
       "level": 0,
-      "id": 162404549,
+      "id": 168244528,
       "open_window": 1,
       "visible": 1
     },
     {
       "type": "DOC",
-      "title": "VUE",
-      "uuid": "HNflOzRfRp_dmy7p",
-      "url": "zqezgyiyyccmpoqa",
-      "prev_uuid": "D4LRRMvrbUbQffE3",
-      "sibling_uuid": "uN4Z1wklLWEcWCCd",
+      "title": "Bean的生命周期",
+      "uuid": "0vVWkRVspsBfWaRu",
+      "url": "liwtvoyyd090t4y9",
+      "prev_uuid": "nYQZDMsY_2w-jMNF",
+      "sibling_uuid": "fvaeEx47Q4fpJ7C6",
       "child_uuid": "",
       "parent_uuid": "",
-      "doc_id": 162922841,
+      "doc_id": 168238202,
       "level": 0,
-      "id": 162922841,
+      "id": 168238202,
       "open_window": 1,
       "visible": 1
     },
     {
-      "type": "TITLE",
-      "title": "SSM",
-      "uuid": "uN4Z1wklLWEcWCCd",
-      "url": "",
-      "prev_uuid": "HNflOzRfRp_dmy7p",
-      "sibling_uuid": "taMH6bqIQj6VRZAT",
-      "child_uuid": "sMwaDktee1bsQbbR",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Spring",
-      "uuid": "sMwaDktee1bsQbbR",
-      "url": "xa1s89kud2du5kiu",
-      "prev_uuid": "uN4Z1wklLWEcWCCd",
-      "sibling_uuid": "fJeXTEIudrgTIdYd",
-      "child_uuid": "",
-      "parent_uuid": "uN4Z1wklLWEcWCCd",
-      "doc_id": 161827270,
-      "level": 1,
-      "id": 161827270,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "MyBatis",
-      "uuid": "fJeXTEIudrgTIdYd",
-      "url": "wtu242yw5rgrmmzf",
-      "prev_uuid": "sMwaDktee1bsQbbR",
-      "sibling_uuid": "Pu2hpNt9_Y2nJVcc",
-      "child_uuid": "",
-      "parent_uuid": "uN4Z1wklLWEcWCCd",
-      "doc_id": 161829288,
-      "level": 1,
-      "id": 161829288,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "SpringMVC",
-      "uuid": "Pu2hpNt9_Y2nJVcc",
-      "url": "ya82rih88q5s87o9",
-      "prev_uuid": "fJeXTEIudrgTIdYd",
-      "sibling_uuid": "wgdPxxDgrjEOW014",
-      "child_uuid": "",
-      "parent_uuid": "uN4Z1wklLWEcWCCd",
-      "doc_id": 161830164,
-      "level": 1,
-      "id": 161830164,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "SSM整合",
-      "uuid": "wgdPxxDgrjEOW014",
-      "url": "xhhctg6hhc2ore91",
-      "prev_uuid": "Pu2hpNt9_Y2nJVcc",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "uN4Z1wklLWEcWCCd",
-      "doc_id": 163845814,
-      "level": 1,
-      "id": 163845814,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "redis",
-      "uuid": "taMH6bqIQj6VRZAT",
-      "url": "",
-      "prev_uuid": "uN4Z1wklLWEcWCCd",
-      "sibling_uuid": "pt3D2WTHyP083ApV",
-      "child_uuid": "h1dHMKGPvkh-jIUl",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "01 入门介绍",
-      "uuid": "h1dHMKGPvkh-jIUl",
-      "url": "redis",
-      "prev_uuid": "taMH6bqIQj6VRZAT",
-      "sibling_uuid": "tgDopqZFEabIonna",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 161793641,
-      "level": 1,
-      "id": 161793641,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "02 Redis命令",
-      "uuid": "tgDopqZFEabIonna",
-      "url": "sccz1qv8gkkd",
-      "prev_uuid": "h1dHMKGPvkh-jIUl",
-      "sibling_uuid": "k6k3s3V9jV-W4zYd",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 161793856,
-      "level": 1,
-      "id": 161793856,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "03 Redis客户端",
-      "uuid": "k6k3s3V9jV-W4zYd",
-      "url": "dgzghz1qgltp",
-      "prev_uuid": "tgDopqZFEabIonna",
-      "sibling_uuid": "U6kokpEgWXnVgvkV",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 161793987,
-      "level": 1,
-      "id": 161793987,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "04 Redis实现Session共享",
-      "uuid": "U6kokpEgWXnVgvkV",
-      "url": "ecdq9bgmbzav",
-      "prev_uuid": "k6k3s3V9jV-W4zYd",
-      "sibling_uuid": "B5uRfxENb0Yjby5d",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 161794000,
-      "level": 1,
-      "id": 161794000,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "05 Redis做缓存数据库",
-      "uuid": "B5uRfxENb0Yjby5d",
-      "url": "tk35clgh7trg",
-      "prev_uuid": "U6kokpEgWXnVgvkV",
-      "sibling_uuid": "fHS9snbC0DBLNRpK",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 161794003,
-      "level": 1,
-      "id": 161794003,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "06 Redis实现全局唯一Id",
-      "uuid": "fHS9snbC0DBLNRpK",
-      "url": "nk0295vsa2w1",
-      "prev_uuid": "B5uRfxENb0Yjby5d",
-      "sibling_uuid": "LajTAAqLyko3_0p4",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 161818235,
-      "level": 1,
-      "id": 161818235,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "07 乐观锁和悲观锁解决秒杀抢购问题",
-      "uuid": "LajTAAqLyko3_0p4",
-      "url": "sdprcgobgfqsqtdr",
-      "prev_uuid": "fHS9snbC0DBLNRpK",
-      "sibling_uuid": "pR0a6HpJVVYEgNUA",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840647,
-      "level": 1,
-      "id": 163840647,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "08 自定义分布式锁",
-      "uuid": "pR0a6HpJVVYEgNUA",
-      "url": "gqkg4l9lcmt9na7p",
-      "prev_uuid": "LajTAAqLyko3_0p4",
-      "sibling_uuid": "R_Dq5nSrWZkn1BCl",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840675,
-      "level": 1,
-      "id": 163840675,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "08-1 RedisSon实现分布式锁",
-      "uuid": "R_Dq5nSrWZkn1BCl",
-      "url": "dxwft57m9i6qprxs",
-      "prev_uuid": "pR0a6HpJVVYEgNUA",
-      "sibling_uuid": "wrs99dW6x02YHfDZ",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840775,
-      "level": 1,
-      "id": 163840775,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "08-2 Redis优化秒杀抢购问题",
-      "uuid": "wrs99dW6x02YHfDZ",
-      "url": "nylfastdkcisb7b5",
-      "prev_uuid": "R_Dq5nSrWZkn1BCl",
-      "sibling_uuid": "NeUqFQ0ZqeV2r4UK",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840679,
-      "level": 1,
-      "id": 163840679,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "09 Redis实现消息队列",
-      "uuid": "NeUqFQ0ZqeV2r4UK",
-      "url": "crgnles3h9qs8wbb",
-      "prev_uuid": "wrs99dW6x02YHfDZ",
-      "sibling_uuid": "u3KlbQJkaxFnZ2xA",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840682,
-      "level": 1,
-      "id": 163840682,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "10 Set数据结构的应用",
-      "uuid": "u3KlbQJkaxFnZ2xA",
-      "url": "anaan3lqvpzzr16s",
-      "prev_uuid": "NeUqFQ0ZqeV2r4UK",
-      "sibling_uuid": "O5N3SVk2NxO4_gUr",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840833,
-      "level": 1,
-      "id": 163840833,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "11 GEO数据结构的应用",
-      "uuid": "O5N3SVk2NxO4_gUr",
-      "url": "vtfb7mek12cki3p8",
-      "prev_uuid": "u3KlbQJkaxFnZ2xA",
-      "sibling_uuid": "NkgbmRihJDJ_9cdb",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840862,
-      "level": 1,
-      "id": 163840862,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "12 BitMap数据结构的应用",
-      "uuid": "NkgbmRihJDJ_9cdb",
-      "url": "gz7clxxy73fyxml0",
-      "prev_uuid": "O5N3SVk2NxO4_gUr",
-      "sibling_uuid": "qi2zvr2EV8uEgrEg",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840895,
-      "level": 1,
-      "id": 163840895,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "13 HyperLog数据结构的应用",
-      "uuid": "qi2zvr2EV8uEgrEg",
-      "url": "gphkccpkqwg43dvx",
-      "prev_uuid": "NkgbmRihJDJ_9cdb",
-      "sibling_uuid": "G0MtfXB0iOGQFvDQ",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840905,
-      "level": 1,
-      "id": 163840905,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "14 Redis持久化",
-      "uuid": "G0MtfXB0iOGQFvDQ",
-      "url": "qmpdgovcdm5gg74q",
-      "prev_uuid": "qi2zvr2EV8uEgrEg",
-      "sibling_uuid": "o6maGj2L_dLbkFLl",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840913,
-      "level": 1,
-      "id": 163840913,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "15 redis集群搭建",
-      "uuid": "o6maGj2L_dLbkFLl",
-      "url": "nsr40eau65k75qa0",
-      "prev_uuid": "G0MtfXB0iOGQFvDQ",
-      "sibling_uuid": "fiAWxDZ_MwLSJpRk",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840916,
-      "level": 1,
-      "id": 163840916,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "16 Redis主从",
-      "uuid": "fiAWxDZ_MwLSJpRk",
-      "url": "aret1itgm2f1wb54",
-      "prev_uuid": "o6maGj2L_dLbkFLl",
-      "sibling_uuid": "hulWrHYNMNgnXX51",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840920,
-      "level": 1,
-      "id": 163840920,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "17 Redis哨兵",
-      "uuid": "hulWrHYNMNgnXX51",
-      "url": "cyhqyu53l5mv8q26",
-      "prev_uuid": "fiAWxDZ_MwLSJpRk",
-      "sibling_uuid": "gawu_zVIBNLIu1i6",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840925,
-      "level": 1,
-      "id": 163840925,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "18 Redis分片",
-      "uuid": "gawu_zVIBNLIu1i6",
-      "url": "qqxngbrgz4a3d50p",
-      "prev_uuid": "hulWrHYNMNgnXX51",
-      "sibling_uuid": "Vtfr-36fahVSscqP",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840932,
-      "level": 1,
-      "id": 163840932,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "19 多级缓冲",
-      "uuid": "Vtfr-36fahVSscqP",
-      "url": "",
-      "prev_uuid": "gawu_zVIBNLIu1i6",
-      "sibling_uuid": "vQT3GI38kkSdE7xv",
-      "child_uuid": "NQ70InSiDMREDmO6",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19-0 多级缓存：概述",
-      "uuid": "NQ70InSiDMREDmO6",
-      "url": "btg6wpsb5fxdldbl",
-      "prev_uuid": "Vtfr-36fahVSscqP",
-      "sibling_uuid": "DUa3SCSjR6bvFCW_",
-      "child_uuid": "",
-      "parent_uuid": "Vtfr-36fahVSscqP",
-      "doc_id": 163840935,
-      "level": 2,
-      "id": 163840935,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19-1 多级缓存：Caffeine实现JVM进程缓存",
-      "uuid": "DUa3SCSjR6bvFCW_",
-      "url": "lc0ggswhhlgyymau",
-      "prev_uuid": "NQ70InSiDMREDmO6",
-      "sibling_uuid": "DY4zf--nLROVM3Q8",
-      "child_uuid": "",
-      "parent_uuid": "Vtfr-36fahVSscqP",
-      "doc_id": 163841228,
-      "level": 2,
-      "id": 163841228,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19-2 多级缓存：Lua脚本入门",
-      "uuid": "DY4zf--nLROVM3Q8",
-      "url": "wavanbw8rgchraw7",
-      "prev_uuid": "DUa3SCSjR6bvFCW_",
-      "sibling_uuid": "TNHKfS9APs6SGYQm",
-      "child_uuid": "",
-      "parent_uuid": "Vtfr-36fahVSscqP",
-      "doc_id": 163841253,
-      "level": 2,
-      "id": 163841253,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19-3 多级缓存：Nginx实现本地缓存",
-      "uuid": "TNHKfS9APs6SGYQm",
-      "url": "vivusc7pehivp53k",
-      "prev_uuid": "DY4zf--nLROVM3Q8",
-      "sibling_uuid": "BeIb-xHdZN8DYIQl",
-      "child_uuid": "",
-      "parent_uuid": "Vtfr-36fahVSscqP",
-      "doc_id": 163841265,
-      "level": 2,
-      "id": 163841265,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19-4 多级缓存：使用Mycat做缓存同步",
-      "uuid": "BeIb-xHdZN8DYIQl",
-      "url": "gfdt7gu877h3fouz",
-      "prev_uuid": "TNHKfS9APs6SGYQm",
-      "sibling_uuid": "1G5Ii-psSEHef8os",
-      "child_uuid": "",
-      "parent_uuid": "Vtfr-36fahVSscqP",
-      "doc_id": 163841310,
-      "level": 2,
-      "id": 163841310,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "19-5 多级缓存：安装OpenResty",
-      "uuid": "1G5Ii-psSEHef8os",
-      "url": "hvz3tmfghzf9xnbw",
-      "prev_uuid": "BeIb-xHdZN8DYIQl",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "Vtfr-36fahVSscqP",
-      "doc_id": 163841331,
-      "level": 2,
-      "id": 163841331,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "20 redis最佳实践总结",
-      "uuid": "vQT3GI38kkSdE7xv",
-      "url": "vm9s7gpksigmthd1",
-      "prev_uuid": "Vtfr-36fahVSscqP",
-      "sibling_uuid": "3liCe_bDV7gVJ3Pw",
-      "child_uuid": "",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": 163840937,
-      "level": 1,
-      "id": 163840937,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "21 原理解析",
-      "uuid": "3liCe_bDV7gVJ3Pw",
-      "url": "",
-      "prev_uuid": "vQT3GI38kkSdE7xv",
-      "sibling_uuid": "",
-      "child_uuid": "nG21spyV_nGrA7-i",
-      "parent_uuid": "taMH6bqIQj6VRZAT",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "21-2 原理解析：Redis通信协议",
-      "uuid": "nG21spyV_nGrA7-i",
-      "url": "lgbseibermgcbznb",
-      "prev_uuid": "3liCe_bDV7gVJ3Pw",
-      "sibling_uuid": "_8hW-s9jaEh2neT8",
-      "child_uuid": "",
-      "parent_uuid": "3liCe_bDV7gVJ3Pw",
-      "doc_id": 163841613,
-      "level": 2,
-      "id": 163841613,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "21-0 原理解析：Redis数据结构",
-      "uuid": "_8hW-s9jaEh2neT8",
-      "url": "tofz0i0332r43b9b",
-      "prev_uuid": "nG21spyV_nGrA7-i",
-      "sibling_uuid": "fyomXJXS1A195tYP",
-      "child_uuid": "",
-      "parent_uuid": "3liCe_bDV7gVJ3Pw",
-      "doc_id": 163841448,
-      "level": 2,
-      "id": 163841448,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "21-1 原理解析：Redis网络模型",
-      "uuid": "fyomXJXS1A195tYP",
-      "url": "no4zmm07qs3nhfci",
-      "prev_uuid": "_8hW-s9jaEh2neT8",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "3liCe_bDV7gVJ3Pw",
-      "doc_id": 163841542,
-      "level": 2,
-      "id": 163841542,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "SpringBoot",
-      "uuid": "pt3D2WTHyP083ApV",
-      "url": "xuk6bl",
-      "prev_uuid": "taMH6bqIQj6VRZAT",
-      "sibling_uuid": "dDbolZxN4gIWIxcH",
-      "child_uuid": "iYzBXykdt0pppwPM",
-      "parent_uuid": "",
-      "doc_id": 91136321,
-      "level": 0,
-      "id": 91136321,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "SpringBoot启动原理",
-      "uuid": "iYzBXykdt0pppwPM",
-      "url": "clmzhcqg36gqzt00",
-      "prev_uuid": "pt3D2WTHyP083ApV",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "pt3D2WTHyP083ApV",
-      "doc_id": 164680157,
-      "level": 1,
-      "id": 164680157,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "MyBatis-Plus",
-      "uuid": "dDbolZxN4gIWIxcH",
-      "url": "yozncwtghxzg9gwr",
-      "prev_uuid": "pt3D2WTHyP083ApV",
-      "sibling_uuid": "TAczEZ1Jii_u42nq",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 163843757,
-      "level": 0,
-      "id": 163843757,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "消息队列",
-      "uuid": "TAczEZ1Jii_u42nq",
-      "url": "bww7qf",
-      "prev_uuid": "dDbolZxN4gIWIxcH",
-      "sibling_uuid": "tpE02gd-l1vz6Hw0",
-      "child_uuid": "Bodv_ZohXH8KN6vm",
-      "parent_uuid": "",
-      "doc_id": 93148888,
-      "level": 0,
-      "id": 93148888,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "RocketMQ",
-      "uuid": "Bodv_ZohXH8KN6vm",
-      "url": "nc3vfiw3x5yn193f",
-      "prev_uuid": "TAczEZ1Jii_u42nq",
-      "sibling_uuid": "lGnmyL98Ey-laq2A",
-      "child_uuid": "",
-      "parent_uuid": "TAczEZ1Jii_u42nq",
-      "doc_id": 174056304,
-      "level": 1,
-      "id": 174056304,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "DOC",
-      "title": "Kafka",
-      "uuid": "lGnmyL98Ey-laq2A",
-      "url": "en74nvgltz2kkh16",
-      "prev_uuid": "Bodv_ZohXH8KN6vm",
-      "sibling_uuid": "jBhVp3ayZKyASnzt",
-      "child_uuid": "",
-      "parent_uuid": "TAczEZ1Jii_u42nq",
-      "doc_id": 161983402,
-      "level": 1,
-      "id": 161983402,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Rabbitmq",
-      "uuid": "jBhVp3ayZKyASnzt",
-      "url": "pz454cmh13ivgg1u",
-      "prev_uuid": "lGnmyL98Ey-laq2A",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "TAczEZ1Jii_u42nq",
-      "doc_id": 161979985,
-      "level": 1,
-      "id": 161979985,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "SpringCloud",
-      "uuid": "tpE02gd-l1vz6Hw0",
-      "url": "",
-      "prev_uuid": "TAczEZ1Jii_u42nq",
-      "sibling_uuid": "CB99lq_3Co2043gs",
-      "child_uuid": "LpyGiOqkKYrQHU16",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "基本篇",
-      "uuid": "LpyGiOqkKYrQHU16",
-      "url": "",
-      "prev_uuid": "tpE02gd-l1vz6Hw0",
-      "sibling_uuid": "bEbttVX5IGogkpeK",
-      "child_uuid": "2K3qD4rUf1HPHmQJ",
-      "parent_uuid": "tpE02gd-l1vz6Hw0",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "1.认识微服务",
-      "uuid": "2K3qD4rUf1HPHmQJ",
-      "url": "springcloud01",
-      "prev_uuid": "LpyGiOqkKYrQHU16",
-      "sibling_uuid": "QPmeOHuezPjYCttp",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161819746,
-      "level": 2,
-      "id": 161819746,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "2.SpringCloud工程部署启动",
-      "uuid": "QPmeOHuezPjYCttp",
-      "url": "gc7ulkvzqyg3l0f1",
-      "prev_uuid": "2K3qD4rUf1HPHmQJ",
-      "sibling_uuid": "edghuBHFnJW_W9UJ",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 163592130,
-      "level": 2,
-      "id": 163592130,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "3.Eureka注册中心",
-      "uuid": "edghuBHFnJW_W9UJ",
-      "url": "waswrrgin37m21m9",
-      "prev_uuid": "QPmeOHuezPjYCttp",
-      "sibling_uuid": "nbnS8mGd2w41BOZu",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161820387,
-      "level": 2,
-      "id": 161820387,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "4.Ribbon负载均衡",
-      "uuid": "nbnS8mGd2w41BOZu",
-      "url": "fq0g987sh1b1zndz",
-      "prev_uuid": "edghuBHFnJW_W9UJ",
-      "sibling_uuid": "nPsdIVZAHyu_TTqy",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161820852,
-      "level": 2,
-      "id": 161820852,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "5.Nacos注册中心",
-      "uuid": "nPsdIVZAHyu_TTqy",
-      "url": "fkyckmrv3pxqf8r4",
-      "prev_uuid": "nbnS8mGd2w41BOZu",
-      "sibling_uuid": "WYNRcsVbptDJddM0",
-      "child_uuid": "KOilh4ldIcO4m6Vw",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161824023,
-      "level": 2,
-      "id": 161824023,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Nacos安装",
-      "uuid": "KOilh4ldIcO4m6Vw",
-      "url": "lpuuqw7sfzg0",
-      "prev_uuid": "nPsdIVZAHyu_TTqy",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "nPsdIVZAHyu_TTqy",
-      "doc_id": 171963506,
-      "level": 3,
-      "id": 171963506,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "6.Nacos配置管理",
-      "uuid": "WYNRcsVbptDJddM0",
-      "url": "xx57hazlf9kgulgl",
-      "prev_uuid": "nPsdIVZAHyu_TTqy",
-      "sibling_uuid": "rJqN33MOf-mCB74s",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161824369,
-      "level": 2,
-      "id": 161824369,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "7.Feign远程调用",
-      "uuid": "rJqN33MOf-mCB74s",
-      "url": "wnumbdx07cm8l44e",
-      "prev_uuid": "WYNRcsVbptDJddM0",
-      "sibling_uuid": "Z5y4eZlJPypmqhgq",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161825343,
-      "level": 2,
-      "id": 161825343,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "8.Gateway服务网关",
-      "uuid": "Z5y4eZlJPypmqhgq",
-      "url": "ti46goms25o2fm6g",
-      "prev_uuid": "rJqN33MOf-mCB74s",
-      "sibling_uuid": "RS_G_9ZXgMpRjlRW",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161825610,
-      "level": 2,
-      "id": 161825610,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "9.Docker实用篇",
-      "uuid": "RS_G_9ZXgMpRjlRW",
-      "url": "auf4wvnuz7pk",
-      "prev_uuid": "Z5y4eZlJPypmqhgq",
-      "sibling_uuid": "xK7__hQuMrJmZBkX",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 161820140,
-      "level": 2,
-      "id": 161820140,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "10.RabbitMQ",
-      "uuid": "xK7__hQuMrJmZBkX",
-      "url": "xlmpvfo480movxdz",
-      "prev_uuid": "RS_G_9ZXgMpRjlRW",
-      "sibling_uuid": "HxtORdJLEnVTDHGQ",
-      "child_uuid": "",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": 171984821,
-      "level": 2,
-      "id": 171984821,
-      "open_window": 1,
-      "visible": 0
-    },
-    {
-      "type": "TITLE",
-      "title": "11.ElasticSearch",
-      "uuid": "HxtORdJLEnVTDHGQ",
-      "url": "",
-      "prev_uuid": "xK7__hQuMrJmZBkX",
-      "sibling_uuid": "",
-      "child_uuid": "8rdxDlzC0Lp69ufq",
-      "parent_uuid": "LpyGiOqkKYrQHU16",
-      "doc_id": "",
-      "level": 2,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "分布式搜索引擎ElasticSearch",
-      "uuid": "8rdxDlzC0Lp69ufq",
-      "url": "demgaggh1tyqt5m1",
-      "prev_uuid": "HxtORdJLEnVTDHGQ",
-      "sibling_uuid": "Aphi2u70DDzuyd4x",
-      "child_uuid": "",
-      "parent_uuid": "HxtORdJLEnVTDHGQ",
-      "doc_id": 163594137,
-      "level": 3,
-      "id": 163594137,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "数据聚合、自动补全、数据同步",
-      "uuid": "Aphi2u70DDzuyd4x",
-      "url": "oisxazvr4ygky7pr",
-      "prev_uuid": "8rdxDlzC0Lp69ufq",
-      "sibling_uuid": "zksY7pKZYtS3JFYb",
-      "child_uuid": "",
-      "parent_uuid": "HxtORdJLEnVTDHGQ",
-      "doc_id": 163594384,
-      "level": 3,
-      "id": 163594384,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "DSL语法、搜索结果处理",
-      "uuid": "zksY7pKZYtS3JFYb",
-      "url": "tw4e1oe6q4ixiqbo",
-      "prev_uuid": "Aphi2u70DDzuyd4x",
-      "sibling_uuid": "ADkU7Y4DIyxMu2gw",
-      "child_uuid": "",
-      "parent_uuid": "HxtORdJLEnVTDHGQ",
-      "doc_id": 163594331,
-      "level": 3,
-      "id": 163594331,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "索引库、文档操作",
-      "uuid": "ADkU7Y4DIyxMu2gw",
-      "url": "wgnodz6eoyltmyx6",
-      "prev_uuid": "zksY7pKZYtS3JFYb",
-      "sibling_uuid": "J-S61ooocEOW5rT5",
-      "child_uuid": "",
-      "parent_uuid": "HxtORdJLEnVTDHGQ",
-      "doc_id": 163594258,
-      "level": 3,
-      "id": 163594258,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "安装ES、Kibana、IK",
-      "uuid": "J-S61ooocEOW5rT5",
-      "url": "ifimpohoq0z5f1kg",
-      "prev_uuid": "ADkU7Y4DIyxMu2gw",
-      "sibling_uuid": "jBCWazlETo06IJSy",
-      "child_uuid": "",
-      "parent_uuid": "HxtORdJLEnVTDHGQ",
-      "doc_id": 163594190,
-      "level": 3,
-      "id": 163594190,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "ElasticSearch集群",
-      "uuid": "jBCWazlETo06IJSy",
-      "url": "ypvfpte531pktdzv",
-      "prev_uuid": "J-S61ooocEOW5rT5",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "HxtORdJLEnVTDHGQ",
-      "doc_id": 163594490,
-      "level": 3,
-      "id": 163594490,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "高级篇",
-      "uuid": "bEbttVX5IGogkpeK",
-      "url": "",
-      "prev_uuid": "LpyGiOqkKYrQHU16",
-      "sibling_uuid": "",
-      "child_uuid": "DllnHh04VYHPxD8C",
-      "parent_uuid": "tpE02gd-l1vz6Hw0",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "微服务保护Sentinel",
-      "uuid": "DllnHh04VYHPxD8C",
-      "url": "lgg8wwk93pd4lw68",
-      "prev_uuid": "bEbttVX5IGogkpeK",
-      "sibling_uuid": "mK_bUXL7DR5ygbLD",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593916,
-      "level": 2,
-      "id": 163593916,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Sentinel工作原理",
-      "uuid": "mK_bUXL7DR5ygbLD",
-      "url": "nqc4fklsd6fv5pk7",
-      "prev_uuid": "DllnHh04VYHPxD8C",
-      "sibling_uuid": "JEGAyOMVwHacmR3b",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163594032,
-      "level": 2,
-      "id": 163594032,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "消息中间件RabbitMQ(高级)",
-      "uuid": "JEGAyOMVwHacmR3b",
-      "url": "yzchuzvgkp5t2qgg",
-      "prev_uuid": "mK_bUXL7DR5ygbLD",
-      "sibling_uuid": "FXl6Wh5SxbdYEo9a",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593245,
-      "level": 2,
-      "id": 163593245,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "SpringCloud集成K8S",
-      "uuid": "FXl6Wh5SxbdYEo9a",
-      "url": "",
-      "prev_uuid": "JEGAyOMVwHacmR3b",
-      "sibling_uuid": "uQUEu9K42ip9gZUk",
-      "child_uuid": "_jVtVYGBEi5SKovy",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": "",
-      "level": 2,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "1.开发篇（脚手架下载）",
-      "uuid": "_jVtVYGBEi5SKovy",
-      "url": "wk26fg6mrpxznqa5",
-      "prev_uuid": "FXl6Wh5SxbdYEo9a",
-      "sibling_uuid": "OVNxE3cW4KZg_ZKj",
-      "child_uuid": "",
-      "parent_uuid": "FXl6Wh5SxbdYEo9a",
-      "doc_id": 163594692,
-      "level": 3,
-      "id": 163594692,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "2.部署篇（开发部署）",
-      "uuid": "OVNxE3cW4KZg_ZKj",
-      "url": "ur02buwkmprvwubv",
-      "prev_uuid": "_jVtVYGBEi5SKovy",
-      "sibling_uuid": "HH4aUMH6zJwWq0k6",
-      "child_uuid": "",
-      "parent_uuid": "FXl6Wh5SxbdYEo9a",
-      "doc_id": 163594824,
-      "level": 3,
-      "id": 163594824,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "3.部署篇(工具部署)",
-      "uuid": "HH4aUMH6zJwWq0k6",
-      "url": "pmvdgsqgacchxti1",
-      "prev_uuid": "OVNxE3cW4KZg_ZKj",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "FXl6Wh5SxbdYEo9a",
-      "doc_id": 163594887,
-      "level": 3,
-      "id": 163594887,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "分布式事务Seata",
-      "uuid": "uQUEu9K42ip9gZUk",
-      "url": "sfr3tv4tl2l6fp8c",
-      "prev_uuid": "FXl6Wh5SxbdYEo9a",
-      "sibling_uuid": "a5AS2ggNA-waCNH7",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593697,
-      "level": 2,
-      "id": 163593697,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "RabbitMQ部署指南",
-      "uuid": "a5AS2ggNA-waCNH7",
-      "url": "eyz9dwt14chnr5up",
-      "prev_uuid": "uQUEu9K42ip9gZUk",
-      "sibling_uuid": "JB7lNWOaqsAv48jB",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593411,
-      "level": 2,
-      "id": 163593411,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "分布式缓存Redis(高级)",
-      "uuid": "JB7lNWOaqsAv48jB",
-      "url": "mbewrwpdklq4ihs8",
-      "prev_uuid": "a5AS2ggNA-waCNH7",
-      "sibling_uuid": "lBD9kyQA41vAA8V4",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593508,
-      "level": 2,
-      "id": 163593508,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Kubernetes",
-      "uuid": "lBD9kyQA41vAA8V4",
-      "url": "nq8yeuc58t3h09zh",
-      "prev_uuid": "JB7lNWOaqsAv48jB",
-      "sibling_uuid": "np6gqO0H4g1p1DgE",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 164323370,
-      "level": 2,
-      "id": 164323370,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Redis集群部署指南",
-      "uuid": "np6gqO0H4g1p1DgE",
-      "url": "nsgd1vcw40dhn1gz",
-      "prev_uuid": "lBD9kyQA41vAA8V4",
-      "sibling_uuid": "l4oTOib6hLw7GryP",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593580,
-      "level": 2,
-      "id": 163593580,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Seata的部署和集成",
-      "uuid": "l4oTOib6hLw7GryP",
-      "url": "alw5bumbvhg6svwc",
-      "prev_uuid": "np6gqO0H4g1p1DgE",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "bEbttVX5IGogkpeK",
-      "doc_id": 163593797,
-      "level": 2,
-      "id": 163593797,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Git 分布式版本控制",
-      "uuid": "CB99lq_3Co2043gs",
-      "url": "givsucgtlxmt",
-      "prev_uuid": "tpE02gd-l1vz6Hw0",
-      "sibling_uuid": "9L0Std2U_NL-pA0J",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 172936402,
-      "level": 0,
-      "id": 172936402,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Linux、Docker",
-      "uuid": "9L0Std2U_NL-pA0J",
-      "url": "qcrge7r13lkbwlg9",
-      "prev_uuid": "CB99lq_3Co2043gs",
-      "sibling_uuid": "7bn-UdTqrLn4VJd7",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 162365021,
-      "level": 0,
-      "id": 162365021,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "swagger",
-      "uuid": "7bn-UdTqrLn4VJd7",
-      "url": "",
-      "prev_uuid": "9L0Std2U_NL-pA0J",
-      "sibling_uuid": "i9bhWx-cn_KaJC08",
-      "child_uuid": "-D7D6ifDCPBk4Jvq",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "swagger",
-      "uuid": "-D7D6ifDCPBk4Jvq",
-      "url": "wsccbdsgmg75q9mv",
-      "prev_uuid": "7bn-UdTqrLn4VJd7",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "7bn-UdTqrLn4VJd7",
-      "doc_id": 161977026,
-      "level": 1,
-      "id": 161977026,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "项目优化技术",
-      "uuid": "i9bhWx-cn_KaJC08",
-      "url": "zma336",
-      "prev_uuid": "7bn-UdTqrLn4VJd7",
-      "sibling_uuid": "qt0o5Rfr1zQA8_hQ",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 92083438,
-      "level": 0,
-      "id": 92083438,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "nginx",
-      "uuid": "qt0o5Rfr1zQA8_hQ",
-      "url": "wdckstlc39gx3106",
-      "prev_uuid": "i9bhWx-cn_KaJC08",
-      "sibling_uuid": "QXk-iAhYYBfCs9Rj",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 164315592,
-      "level": 0,
-      "id": 164315592,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "JVM",
-      "uuid": "QXk-iAhYYBfCs9Rj",
-      "url": "ctoz5c",
-      "prev_uuid": "qt0o5Rfr1zQA8_hQ",
-      "sibling_uuid": "VSfae_iplVOMP65Q",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 90169206,
-      "level": 0,
-      "id": 90169206,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "JUC",
-      "uuid": "VSfae_iplVOMP65Q",
-      "url": "mh6nqsrgn902qzd0",
-      "prev_uuid": "QXk-iAhYYBfCs9Rj",
-      "sibling_uuid": "dkfACTrwv43NZnXf",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 162405726,
-      "level": 0,
-      "id": 162405726,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "计算机网络和操作系统",
-      "uuid": "dkfACTrwv43NZnXf",
-      "url": "pi47vowmpkt91p32",
-      "prev_uuid": "VSfae_iplVOMP65Q",
-      "sibling_uuid": "yPSvy5X7pLCYVODh",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 161701146,
-      "level": 0,
-      "id": 161701146,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "算法和数据结构与GoF(设计模式)",
-      "uuid": "yPSvy5X7pLCYVODh",
-      "url": "zcuyfd",
-      "prev_uuid": "dkfACTrwv43NZnXf",
-      "sibling_uuid": "JDmcos1oxVJPTlO6",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 90163434,
-      "level": 0,
-      "id": 90163434,
-      "open_window": 0,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "资料和计划",
-      "uuid": "JDmcos1oxVJPTlO6",
-      "url": "lvs8h5illwcpvnnn",
-      "prev_uuid": "yPSvy5X7pLCYVODh",
-      "sibling_uuid": "CqE6aXQivubND7uL",
-      "child_uuid": "",
-      "parent_uuid": "",
-      "doc_id": 155797132,
-      "level": 0,
-      "id": 155797132,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "手写数据MySQL",
-      "uuid": "CqE6aXQivubND7uL",
-      "url": "",
-      "prev_uuid": "JDmcos1oxVJPTlO6",
-      "sibling_uuid": "GipJB_wVTiJfxQGD",
-      "child_uuid": "aPBt0lV62aMf5IPv",
-      "parent_uuid": "",
-      "doc_id": "",
-      "level": 0,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "DM",
-      "uuid": "aPBt0lV62aMf5IPv",
-      "url": "",
-      "prev_uuid": "CqE6aXQivubND7uL",
-      "sibling_uuid": "axFmDs0FEClMVddS",
-      "child_uuid": "DkloXye6zDSzZPiQ",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "DataItem",
-      "uuid": "DkloXye6zDSzZPiQ",
-      "url": "dm_dataitem",
-      "prev_uuid": "aPBt0lV62aMf5IPv",
-      "sibling_uuid": "cIMxDzrO4vJ-cTwE",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361911,
-      "level": 2,
-      "id": 167361911,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "DataManager",
-      "uuid": "cIMxDzrO4vJ-cTwE",
-      "url": "dm_datamanager",
-      "prev_uuid": "DkloXye6zDSzZPiQ",
-      "sibling_uuid": "r08ZS3hpCh00dc0Z",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361915,
-      "level": 2,
-      "id": 167361915,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "页面索引",
-      "uuid": "r08ZS3hpCh00dc0Z",
-      "url": "pff583gz5nqg",
-      "prev_uuid": "cIMxDzrO4vJ-cTwE",
-      "sibling_uuid": "rBB8xpcB2vpjbrY4",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361918,
-      "level": 2,
-      "id": 167361918,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "日志文件",
-      "uuid": "rBB8xpcB2vpjbrY4",
-      "url": "uhy686i29cqv",
-      "prev_uuid": "r08ZS3hpCh00dc0Z",
-      "sibling_uuid": "Bcom90jSb7K-vYMa",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361922,
-      "level": 2,
-      "id": 167361922,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "引用计数缓存框架",
-      "uuid": "Bcom90jSb7K-vYMa",
-      "url": "gi926xqutm44",
-      "prev_uuid": "rBB8xpcB2vpjbrY4",
-      "sibling_uuid": "NJW5U90bqESgGCj7",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361926,
-      "level": 2,
-      "id": 167361926,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "页面缓冲",
-      "uuid": "NJW5U90bqESgGCj7",
-      "url": "lbn946pi7gqb",
-      "prev_uuid": "Bcom90jSb7K-vYMa",
-      "sibling_uuid": "RIZOmbUqNWeVu26l",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361929,
-      "level": 2,
-      "id": 167361929,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "共享内存数组",
-      "uuid": "RIZOmbUqNWeVu26l",
-      "url": "ggghg5mgmlci",
-      "prev_uuid": "NJW5U90bqESgGCj7",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "aPBt0lV62aMf5IPv",
-      "doc_id": 167361938,
-      "level": 2,
-      "id": 167361938,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "IM",
-      "uuid": "axFmDs0FEClMVddS",
-      "url": "",
-      "prev_uuid": "aPBt0lV62aMf5IPv",
-      "sibling_uuid": "x1XFlCKWAa334k5t",
-      "child_uuid": "stq5_TDuCtldFYbz",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Node",
-      "uuid": "stq5_TDuCtldFYbz",
-      "url": "im_node",
-      "prev_uuid": "axFmDs0FEClMVddS",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "axFmDs0FEClMVddS",
-      "doc_id": 167361945,
-      "level": 2,
-      "id": 167361945,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "TBM",
-      "uuid": "x1XFlCKWAa334k5t",
-      "url": "",
-      "prev_uuid": "axFmDs0FEClMVddS",
-      "sibling_uuid": "SqfE1tNOrHx8v7f-",
-      "child_uuid": "IX85Bh5V5w5NTwxq",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Booter",
-      "uuid": "IX85Bh5V5w5NTwxq",
-      "url": "tbm_booter",
-      "prev_uuid": "x1XFlCKWAa334k5t",
-      "sibling_uuid": "aKFq9IPG0Q12EDlV",
-      "child_uuid": "",
-      "parent_uuid": "x1XFlCKWAa334k5t",
-      "doc_id": 167361951,
-      "level": 2,
-      "id": 167361951,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "SQL解析器",
-      "uuid": "aKFq9IPG0Q12EDlV",
-      "url": "vk0vy43agufm",
-      "prev_uuid": "IX85Bh5V5w5NTwxq",
-      "sibling_uuid": "I80Cj3gLFZwILKP8",
-      "child_uuid": "",
-      "parent_uuid": "x1XFlCKWAa334k5t",
-      "doc_id": 167361958,
-      "level": 2,
-      "id": 167361958,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "TableManager",
-      "uuid": "I80Cj3gLFZwILKP8",
-      "url": "tbm_tablemanager",
-      "prev_uuid": "aKFq9IPG0Q12EDlV",
-      "sibling_uuid": "xr65GF6pOmOZKqay",
-      "child_uuid": "",
-      "parent_uuid": "x1XFlCKWAa334k5t",
-      "doc_id": 167361965,
-      "level": 2,
-      "id": 167361965,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "字段与表管理",
-      "uuid": "xr65GF6pOmOZKqay",
-      "url": "tb45gfx04rud",
-      "prev_uuid": "I80Cj3gLFZwILKP8",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "x1XFlCKWAa334k5t",
-      "doc_id": 167361971,
-      "level": 2,
-      "id": 167361971,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "TM",
-      "uuid": "SqfE1tNOrHx8v7f-",
-      "url": "",
-      "prev_uuid": "x1XFlCKWAa334k5t",
-      "sibling_uuid": "DdXYegdqD8NsD-MT",
-      "child_uuid": "WhKzuL8q4IU6d59o",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "TransactionManager",
-      "uuid": "WhKzuL8q4IU6d59o",
-      "url": "tm_transactionmanager",
-      "prev_uuid": "SqfE1tNOrHx8v7f-",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "SqfE1tNOrHx8v7f-",
-      "doc_id": 167361974,
-      "level": 2,
-      "id": 167361974,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "VM",
-      "uuid": "DdXYegdqD8NsD-MT",
-      "url": "",
-      "prev_uuid": "SqfE1tNOrHx8v7f-",
-      "sibling_uuid": "YIl0gKT0hs3MJ5gd",
-      "child_uuid": "0srnD1RYMYWTv9kS",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "VM的实现",
-      "uuid": "0srnD1RYMYWTv9kS",
-      "url": "epraosr1r73g",
-      "prev_uuid": "DdXYegdqD8NsD-MT",
-      "sibling_uuid": "yxuokAKyZRwDH_rD",
-      "child_uuid": "",
-      "parent_uuid": "DdXYegdqD8NsD-MT",
-      "doc_id": 167361982,
-      "level": 2,
-      "id": 167361982,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "版本的记录",
-      "uuid": "yxuokAKyZRwDH_rD",
-      "url": "58494d78ed44e5bac3e4b48606f1e9f2",
-      "prev_uuid": "0srnD1RYMYWTv9kS",
-      "sibling_uuid": "o2sZI-jUr4x2fKu2",
-      "child_uuid": "",
-      "parent_uuid": "DdXYegdqD8NsD-MT",
-      "doc_id": 167361987,
-      "level": 2,
-      "id": 167361987,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "事务的隔离级别",
-      "uuid": "o2sZI-jUr4x2fKu2",
-      "url": "gwquwxkqm8fd",
-      "prev_uuid": "yxuokAKyZRwDH_rD",
-      "sibling_uuid": "8DJuaUD6JT7FjAhZ",
-      "child_uuid": "",
-      "parent_uuid": "DdXYegdqD8NsD-MT",
-      "doc_id": 167361993,
-      "level": 2,
-      "id": 167361993,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "死锁的检测",
-      "uuid": "8DJuaUD6JT7FjAhZ",
-      "url": "rgzd0b6cootl",
-      "prev_uuid": "o2sZI-jUr4x2fKu2",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "DdXYegdqD8NsD-MT",
-      "doc_id": 167361997,
-      "level": 2,
-      "id": 167361997,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "知识点",
-      "uuid": "YIl0gKT0hs3MJ5gd",
-      "url": "",
-      "prev_uuid": "DdXYegdqD8NsD-MT",
-      "sibling_uuid": "SGjVbYKsabnO6uI6",
-      "child_uuid": "w0fq1PplQjq0xjXr",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "MVCC版本控制",
-      "uuid": "w0fq1PplQjq0xjXr",
-      "url": "5108f05c89e919710e1fdea889cce09f",
-      "prev_uuid": "YIl0gKT0hs3MJ5gd",
-      "sibling_uuid": "5_Nt1V5GzQl3qhsH",
-      "child_uuid": "",
-      "parent_uuid": "YIl0gKT0hs3MJ5gd",
-      "doc_id": 167362001,
-      "level": 2,
-      "id": 167362001,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "基本知识点",
-      "uuid": "5_Nt1V5GzQl3qhsH",
-      "url": "sb8d0kohc28q",
-      "prev_uuid": "w0fq1PplQjq0xjXr",
-      "sibling_uuid": "CZliiZJ07Spcq8x8",
-      "child_uuid": "",
-      "parent_uuid": "YIl0gKT0hs3MJ5gd",
-      "doc_id": 167362007,
-      "level": 2,
-      "id": 167362007,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "两端锁协议-2PL",
-      "uuid": "CZliiZJ07Spcq8x8",
-      "url": "laqrkbyx19f1",
-      "prev_uuid": "5_Nt1V5GzQl3qhsH",
-      "sibling_uuid": "s9bS93wTJbG1niQM",
-      "child_uuid": "",
-      "parent_uuid": "YIl0gKT0hs3MJ5gd",
-      "doc_id": 167362011,
-      "level": 2,
-      "id": 167362011,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "事务管理",
-      "uuid": "s9bS93wTJbG1niQM",
-      "url": "yh3wlg51r0gt",
-      "prev_uuid": "CZliiZJ07Spcq8x8",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "YIl0gKT0hs3MJ5gd",
-      "doc_id": 167362013,
-      "level": 2,
-      "id": 167362013,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "TITLE",
-      "title": "服务端和客户端",
-      "uuid": "SGjVbYKsabnO6uI6",
-      "url": "",
-      "prev_uuid": "YIl0gKT0hs3MJ5gd",
-      "sibling_uuid": "",
-      "child_uuid": "xFY0kgsisIP8fkNc",
-      "parent_uuid": "CqE6aXQivubND7uL",
-      "doc_id": "",
-      "level": 1,
-      "id": "",
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "C_S通信",
-      "uuid": "xFY0kgsisIP8fkNc",
-      "url": "mu96n728o1hw",
-      "prev_uuid": "SGjVbYKsabnO6uI6",
-      "sibling_uuid": "Gi0KQXrJktXAd47J",
-      "child_uuid": "",
-      "parent_uuid": "SGjVbYKsabnO6uI6",
-      "doc_id": 167362020,
-      "level": 2,
-      "id": 167362020,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Server 和 Client的实现",
-      "uuid": "Gi0KQXrJktXAd47J",
-      "url": "ae79a7f61ab73df79279a251026c70c2",
-      "prev_uuid": "xFY0kgsisIP8fkNc",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "SGjVbYKsabnO6uI6",
-      "doc_id": 167362025,
-      "level": 2,
-      "id": 167362025,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "技术派项目",
-      "uuid": "GipJB_wVTiJfxQGD",
-      "url": "thntx25rsgidw0u8",
-      "prev_uuid": "CqE6aXQivubND7uL",
-      "sibling_uuid": "iBFnzHAqzKbUJVmM",
-      "child_uuid": "SxHX4bTfGjPgxCua",
-      "parent_uuid": "",
-      "doc_id": 161275591,
-      "level": 0,
-      "id": 161275591,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Part1",
-      "uuid": "SxHX4bTfGjPgxCua",
-      "url": "readme",
-      "prev_uuid": "GipJB_wVTiJfxQGD",
-      "sibling_uuid": "hlVBhBRL7nw-ZFa8",
-      "child_uuid": "",
-      "parent_uuid": "GipJB_wVTiJfxQGD",
-      "doc_id": 167356387,
-      "level": 1,
-      "id": 167356387,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Part2",
-      "uuid": "hlVBhBRL7nw-ZFa8",
-      "url": "muo43650pk21f2io",
-      "prev_uuid": "SxHX4bTfGjPgxCua",
-      "sibling_uuid": "-PNpkG64wWQ8KIYb",
-      "child_uuid": "",
-      "parent_uuid": "GipJB_wVTiJfxQGD",
-      "doc_id": 167360341,
-      "level": 1,
-      "id": 167360341,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
-      "type": "DOC",
-      "title": "Part3",
-      "uuid": "-PNpkG64wWQ8KIYb",
-      "url": "tlag6ghucv3g0sy7",
-      "prev_uuid": "hlVBhBRL7nw-ZFa8",
-      "sibling_uuid": "",
-      "child_uuid": "",
-      "parent_uuid": "GipJB_wVTiJfxQGD",
-      "doc_id": 167361293,
-      "level": 1,
-      "id": 167361293,
-      "open_window": 1,
-      "visible": 1
-    },
-    {
       "type": "DOC",
-      "title": "Java仿牛客社区",
-      "uuid": "iBFnzHAqzKbUJVmM",
-      "url": "nw8vcs",
-      "prev_uuid": "GipJB_wVTiJfxQGD",
+      "title": "Spring的常用注解",
+      "uuid": "fvaeEx47Q4fpJ7C6",
+      "url": "gavw0zv066enu3ge",
+      "prev_uuid": "0vVWkRVspsBfWaRu",
       "sibling_uuid": "",
       "child_uuid": "",
       "parent_uuid": "",
-      "doc_id": 93950898,
+      "doc_id": 168232672,
       "level": 0,
-      "id": 93950898,
-      "open_window": 0,
+      "id": 168232672,
+      "open_window": 1,
       "visible": 1
     }
   ]
