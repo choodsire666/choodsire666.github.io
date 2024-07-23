@@ -1,3 +1,4 @@
 git add .
-git commit -m %1%
+echo date
+git commit -m date
 git push
