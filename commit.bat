@@ -1,4 +1,5 @@
 git add .
-echo date
-git commit -m date
+echo %date%
+git commit -m "%date%"
 git push
+pause
