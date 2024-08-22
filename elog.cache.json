@@ -340,12 +340,12 @@
     {
       "id": 183350577,
       "doc_id": "agttl2ua7sthd8f5",
-      "updated": 1724317014000,
+      "updated": 1724318237000,
       "properties": {
         "title": "ClassLoader",
         "urlname": "agttl2ua7sthd8f5",
         "date": "2024-08-22 11:24:46",
-        "updated": "2024-08-22 16:56:54",
+        "updated": "2024-08-22 17:17:17",
         "description": "概述类加载器ClassLoader的作用：java.lang.ClassLoader 是 Java 运行时环境中非常关键的一个组件，它的主要职责是根据应用程序的需求动态地加载 .class 文件（即字节码文件）到 Java 虚拟机 (JVM) 中。以下是 ClassLoader 的几个主要作用..."
       },
       "catalog": [
