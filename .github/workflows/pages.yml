@@ -61,13 +61,6 @@ jobs:
         run: |
           git config --global user.name "choodsire666"
           git config --global user.email "1609981289@qq.com"
-
-      - name: 拉取代码
-        uses: ad-m/github-pull-action@master
-        with:
-          # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: 提交yuque拉取的文章到GitHub仓库
         run: |
