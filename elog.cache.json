@@ -47,12 +47,12 @@
     {
       "id": 175951115,
       "doc_id": "mungbnpyyb5lvyqt",
-      "updated": 1722664518000,
+      "updated": 1724292499000,
       "properties": {
         "title": "算法模板",
         "urlname": "mungbnpyyb5lvyqt",
         "date": "2024-07-01 12:31:54",
-        "updated": "2024-08-03 13:55:18",
+        "updated": "2024-08-22 10:08:19",
         "description": "快速排序快速排序import java.io.IOException; import java.io.BufferedReader; import java.io.InputStreamReader; import java.util.StringTokenizer;  public clas...",
         "cover": "https://raw.githubusercontent.com/choodsire666/blog-img/main/算法模板/cover.jpg"
       },
@@ -336,15 +336,102 @@
       "realName": "Spring容器的启动",
       "relativePath": "/Spring容器的启动.md",
       "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 183350577,
+      "doc_id": "agttl2ua7sthd8f5",
+      "updated": 1724317014000,
+      "properties": {
+        "title": "ClassLoader",
+        "urlname": "agttl2ua7sthd8f5",
+        "date": "2024-08-22 11:24:46",
+        "updated": "2024-08-22 16:56:54",
+        "description": "概述类加载器ClassLoader的作用：java.lang.ClassLoader 是 Java 运行时环境中非常关键的一个组件，它的主要职责是根据应用程序的需求动态地加载 .class 文件（即字节码文件）到 Java 虚拟机 (JVM) 中。以下是 ClassLoader 的几个主要作用..."
+      },
+      "catalog": [
+        {
+          "title": "JVM",
+          "doc_id": "agttl2ua7sthd8f5"
+        }
+      ],
+      "realName": "ClassLoader",
+      "relativePath": "/JVM/ClassLoader.md",
+      "docPath": "source/_posts/yuque/JVM"
+    },
+    {
+      "id": 183334141,
+      "doc_id": "ziqmr5g0f5fkx5iv",
+      "updated": 1724297084000,
+      "properties": {
+        "title": ".class字节码文件",
+        "urlname": "ziqmr5g0f5fkx5iv",
+        "date": "2024-08-22 10:13:56",
+        "updated": "2024-08-22 11:24:44",
+        "description": "文件内容解释其中采用汇编语言。通过反汇编Oolong生成。magic number： cafebabe/ / 52是jdk8minor version: 两字节 major version: 两字节constants pool sizeconstants pool：UTF8：2字节长度，n个自..."
+      },
+      "catalog": [
+        {
+          "title": "JVM",
+          "doc_id": "ziqmr5g0f5fkx5iv"
+        }
+      ],
+      "realName": "class字节码文件",
+      "relativePath": "/JVM/class字节码文件.md",
+      "docPath": "source/_posts/yuque/JVM"
     }
   ],
   "catalog": [
     {
       "type": "TITLE",
+      "title": "JVM",
+      "uuid": "5xkH2VlKloQXrw66",
+      "url": "",
+      "prev_uuid": "",
+      "sibling_uuid": "FcznZIORZxWkRtl1",
+      "child_uuid": "LX09WZTORdWsHE-q",
+      "parent_uuid": "",
+      "doc_id": "",
+      "level": 0,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "ClassLoader",
+      "uuid": "LX09WZTORdWsHE-q",
+      "url": "agttl2ua7sthd8f5",
+      "prev_uuid": "5xkH2VlKloQXrw66",
+      "sibling_uuid": "4tz1MqzqbXeJbOPf",
+      "child_uuid": "",
+      "parent_uuid": "5xkH2VlKloQXrw66",
+      "doc_id": 183350577,
+      "level": 1,
+      "id": 183350577,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": ".class字节码文件",
+      "uuid": "4tz1MqzqbXeJbOPf",
+      "url": "ziqmr5g0f5fkx5iv",
+      "prev_uuid": "LX09WZTORdWsHE-q",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "5xkH2VlKloQXrw66",
+      "doc_id": 183334141,
+      "level": 1,
+      "id": 183334141,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "TITLE",
       "title": "系统架构",
       "uuid": "FcznZIORZxWkRtl1",
       "url": "",
-      "prev_uuid": "",
+      "prev_uuid": "5xkH2VlKloQXrw66",
       "sibling_uuid": "WJWBlvG4tCQmp5RV",
       "child_uuid": "tze4cwaLyBSgUhD1",
       "parent_uuid": "",
