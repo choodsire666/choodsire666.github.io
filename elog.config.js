@@ -113,7 +113,7 @@ module.exports = {
       repo: process.env.ELOG_GITHUB_REPO,
       prefixKey: '',
       branch: 'main',
-      host: '',      
+      host: 'http://raw.githubusercontent.com',      
       secretExt: '', // 可选
     }
   }

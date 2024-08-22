@@ -428,9 +428,9 @@ footer:
   runtime:
     enable: true
     launch_time: 11/12/2021 12:00:00 # 网站上线时间
-    work_img: https://raw.githubusercontent.com/choodsire666/blog-img/main/零异星-疯狂输出中.svg
+    work_img: https://raw.gitmirror.com/choodsire666/blog-img/main/零异星-疯狂输出中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://raw.githubusercontent.com/choodsire666/blog-img/main/零异星-下班啦.svg
+    offduty_img: https://raw.gitmirror.com/choodsire666/blog-img/main/零异星-下班啦.svg
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -1221,7 +1221,7 @@ rightClickMenu:
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
   enable: false
-  img: https://raw.githubusercontent.com/choodsire666/blog-img/main/202405241847080.png
+  img: https://raw.gitmirror.com/choodsire666/blog-img/main/202405241847080.png
 
 # 动效
 dynamicEffect:
