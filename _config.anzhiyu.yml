@@ -1050,11 +1050,11 @@ home_top:
   subTitle: 万物可爱。
   siteText: https://choodsire666.github.io/
   category:
-    # - name: 前端
-    #   path: /categories/前端开发/
-    #   shadow: var(--anzhiyu-shadow-blue)
-    #   class: blue
-    #   icon: anzhiyu-icon-dove
+    - name: jvm
+      path: /categories/jvm/
+      shadow: var(--anzhiyu-shadow-blue)
+      class: blue
+      icon: anzhiyu-icon-dove
     # - name: 大学
     #   path: /categories/大学生涯/
     #   shadow: var(--anzhiyu-shadow-red)
