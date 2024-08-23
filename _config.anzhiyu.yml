@@ -32,10 +32,10 @@ nav:
           link: https://choodsire666.github.io/
           icon: /img/favicon.ico
     # - title: 项目
-      # item:
-      #  - name: 安知鱼图床
-      #    link: https://image.anheyu.com/
-      #    icon: https://image.anheyu.com/favicon.ico
+    # item:
+    #  - name: 安知鱼图床
+    #    link: https://image.anheyu.com/
+    #    icon: https://image.anheyu.com/favicon.ico
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -100,7 +100,6 @@ algolia_search:
     - 容器编排
     - Mysql
     - Restful
-
 
 # Docsearch
 # Apply and Docs: see https://docsearch.algolia.com/
@@ -318,7 +317,7 @@ addtoany:
 
 comments:
   # Up to two comments system, the first will be shown as default
-  # Choose: Valine/Waline/Twikoo/Artalk    
+  # Choose: Valine/Waline/Twikoo/Artalk
   use: valine
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -335,14 +334,14 @@ valine:
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: https://3yptclsq.lc-cn-n1-shared.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /img/comment_bg.png # valine background
-  placeholder: '请输入QQ邮箱以便自动获取头像和用户名'
+  placeholder: "请输入QQ邮箱以便自动获取头像和用户名"
   visitor: false
   emojiCDN: https://i0.hdslb.com/bfs/emote/
   enableQQ: true
   recordIP: true
   lang: zh-CN
   pageSize: 10
-  meta: ['nick','mail','link']
+  meta: ["nick", "mail", "link"]
   option:
 
 # waline - A simple comment system with backend support fork from Valine
@@ -368,13 +367,12 @@ twikoo:
 # https://giscus.app/
 giscus:
   repo: choodsire666/choodsire666.github.io
-  repo_id: R_kgDOL-6PGA  
+  repo_id: R_kgDOL-6PGA
   category_id: DIC_kwDOL-6PGM4Cfk_w
-  theme: 
+  theme:
     light: light
     dark: dark
   option:
-
 
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
@@ -428,9 +426,9 @@ footer:
   runtime:
     enable: true
     launch_time: 11/12/2021 12:00:00 # 网站上线时间
-    work_img: https://raw.gitmirror.com/choodsire666/blog-img/main/零异星-疯狂输出中.svg
+    work_img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/main/零异星-疯狂输出中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://raw.gitmirror.com/choodsire666/blog-img/main/零异星-下班啦.svg
+    offduty_img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/main/零异星-下班啦.svg
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -1126,8 +1124,8 @@ comment_barrage_config:
 # https://github.com/metowolf/MetingJS
 nav_music:
   enable: true
-  console_widescreen_music: true # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示  
-  # server: netease  
+  console_widescreen_music: true # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
+  # server: netease
   volume: 0.7 # 默认音量
   id: 2474877243
   server: netease
@@ -1221,7 +1219,7 @@ rightClickMenu:
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
   enable: false
-  img: https://raw.gitmirror.com/choodsire666/blog-img/main/202405241847080.png
+  img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/main/202405241847080.png
 
 # 动效
 dynamicEffect:
@@ -1248,11 +1246,11 @@ CDN:
   # The CDN provider of internal scripts (主题内部 js 的 cdn 配置)
   # option: local/elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
   # Dev version can only choose. ( dev版的主题只能设置为 local )
-  internal_provider: local
+  internal_provider: jsdelivr
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
-  third_party_provider: cbd
+  third_party_provider: jsdelivr
 
   # Add version number to CDN, true or false
   version: true
@@ -1260,12 +1258,11 @@ CDN:
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
   custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
-
-  option:    
+  option:
     # main_css:
     # main:
     # utils:
-    translate: https://cdn.jsdelivr.net/npm/translate@3.0.0/index.min.js
+    # translate: 
     # random_friends_post_js:
     # right_click_menu_js:
     # comment_barrage_js:
@@ -1325,4 +1322,4 @@ CDN:
     # rightmenu:
     # waterfall:
     # ali_iconfont_css:
-    # accesskey_js:    
+    # accesskey_js:
