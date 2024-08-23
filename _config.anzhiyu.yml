@@ -426,9 +426,9 @@ footer:
   runtime:
     enable: true
     launch_time: 11/12/2021 12:00:00 # 网站上线时间
-    work_img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/main/零异星-疯狂输出中.svg
+    work_img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/零异星-疯狂输出中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/main/零异星-下班啦.svg
+    offduty_img: https://cdn.jsdelivr.net/gh/choodsire666/blog-img/零异星-下班啦.svg
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
@@ -1050,21 +1050,21 @@ home_top:
   subTitle: 万物可爱。
   siteText: https://choodsire666.github.io/
   category:
-    - name: 前端
-      path: /categories/前端开发/
-      shadow: var(--anzhiyu-shadow-blue)
-      class: blue
-      icon: anzhiyu-icon-dove
-    - name: 大学
-      path: /categories/大学生涯/
-      shadow: var(--anzhiyu-shadow-red)
-      class: red
-      icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活日常/
-      shadow: var(--anzhiyu-shadow-green)
-      class: green
-      icon: anzhiyu-icon-book
+    # - name: 前端
+    #   path: /categories/前端开发/
+    #   shadow: var(--anzhiyu-shadow-blue)
+    #   class: blue
+    #   icon: anzhiyu-icon-dove
+    # - name: 大学
+    #   path: /categories/大学生涯/
+    #   shadow: var(--anzhiyu-shadow-red)
+    #   class: red
+    #   icon: anzhiyu-icon-fire
+    # - name: 生活
+    #   path: /categories/生活日常/
+    #   shadow: var(--anzhiyu-shadow-green)
+    #   class: green
+    #   icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false
