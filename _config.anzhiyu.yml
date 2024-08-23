@@ -1265,7 +1265,7 @@ CDN:
     # main_css:
     # main:
     # utils:
-    # translate:
+    translate: https://cdn.jsdelivr.net/npm/translate@3.0.0/index.min.js
     # random_friends_post_js:
     # right_click_menu_js:
     # comment_barrage_js:

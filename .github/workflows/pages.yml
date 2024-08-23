@@ -36,10 +36,13 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install Dependencies
         run: |
           export TZ='Asia/Shanghai'
-          npm install --prod
+          pnpm install --prod
       # 拉取语雀信息
       - name: 拉取语雀/Notion的文章
         env:
@@ -55,7 +58,7 @@ jobs:
           ELOG_GITHUB_REPO: ${{ secrets.ELOG_GITHUB_REPO }}
         run: |
           # 对应package.json中的script.sync
-          npm run sync:post
+          pnpm run sync:post
       
       - name: 配置Git用户名邮箱
         run: |
@@ -77,15 +80,15 @@ jobs:
       
       # 拉取b站信息
       - name: get bilibili
-        run: npm run sync:bili
+        run: pnpm run sync:bili
 
       # 生成Algolia搜索indexs
       - name: create indexs
-        run: npm run sync:algolia
+        run: pnpm run sync:algolia
 
       # build
       - name: Build
-        run: npm run build
+        run: pnpm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
