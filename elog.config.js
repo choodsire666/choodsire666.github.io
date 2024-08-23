@@ -113,7 +113,7 @@ module.exports = {
       repo: process.env.ELOG_GITHUB_REPO,
       prefixKey: '',
       branch: 'main',
-      host: 'http://raw.githubusercontent.com',      
+      host: 'https://cdn.jsdelivr.net',      
       secretExt: '', // 可选
     }
   }

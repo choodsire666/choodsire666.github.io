@@ -10,7 +10,9 @@
     "sync:algolia": "hexo g && hexo algolia",
     "sync:local": "elog sync -e .elog.env",
     "publish": "npm run clean && npm run deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "clean:all": "hexo clean && elog clean",
+    "sync:all": "elog sync -e .elog.env && hexo g && hexo algolia && hexo bangumi -u"
   },
   "hexo": {
     "version": "7.2.0"

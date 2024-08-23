@@ -319,7 +319,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk    
-  use: valine,giscus
+  use: valine
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -333,7 +333,7 @@ valine:
   appId: 3YPTClSqEar2HGGGPmSQ5FcQ-gzGzoHsz # leancloud application app id
   appKey: tBgbA7HEODALiqsqeTfJox0n # leancloud application app key
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  serverURLs: https://3yptclsq.lc-cn-n1-shared.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /img/comment_bg.png # valine background
   placeholder: '请输入QQ邮箱以便自动获取头像和用户名'
   visitor: false
@@ -389,10 +389,10 @@ artalk:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: false
+chat_btn: true
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: false
+chat_hide_show: true
 
 # chatra
 # https://chatra.io/
@@ -1096,7 +1096,7 @@ bubble:
 
 #  控制台打印信息
 console:
-  enable: true
+  enable: false
 
 # 51a统计配置
 LA:
@@ -1144,7 +1144,7 @@ ptool:
   share_mobile: true
   share_weibo: true
   share_copyurl: true
-  categories: false # 是否显示分类
+  categories: true # 是否显示分类
   mode: /wechat/ # 运营模式与责任，不配置不显示
 
 # 欢迎语配置
@@ -1226,8 +1226,8 @@ peoplecanvas:
 # 动效
 dynamicEffect:
   postTopWave: true # 文章顶部波浪效果
-  postTopRollZoomInfo: false # 文章顶部滚动时缩放
-  pageCommentsRollZoom: false # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
+  postTopRollZoomInfo: true # 文章顶部滚动时缩放
+  pageCommentsRollZoom: true # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
 
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
@@ -1261,7 +1261,7 @@ CDN:
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
   custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
 
-  option:
+  option:    
     # main_css:
     # main:
     # utils:
@@ -1292,15 +1292,15 @@ CDN:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    # lazyload:
+    lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.min.js
     # instantpage:
     # typed:
     # pangu:
-    # fancybox_css:
-    # fancybox:
+    fancybox_css: https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.min.css
+    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js
     # medium_zoom:
-    # snackbar_css:
-    # snackbar:
+    snackbar_css: https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css
+    snackbar: https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js
     # activate_power_mode:
     # fireworks:
     # click_heart:
@@ -1308,8 +1308,8 @@ CDN:
     # fontawesome:
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
-    # aplayer_css:
-    # aplayer_js:
+    aplayer_css: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css
+    aplayer_js: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js
     # meting_js:
     # meting_api:
     # prismjs_js:
@@ -1321,8 +1321,8 @@ CDN:
     # pace_default_css:
     # countup_js:
     # gsap_js:
-    # busuanzi:
+    busuanzi: https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js
     # rightmenu:
     # waterfall:
     # ali_iconfont_css:
-    # accesskey_js:
+    # accesskey_js:    
