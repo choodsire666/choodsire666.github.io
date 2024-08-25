@@ -2,7 +2,7 @@
 title: ClassLoader
 urlname: agttl2ua7sthd8f5
 date: '2024-08-22 11:24:46'
-updated: '2024-08-23 10:02:20'
+updated: '2024-08-23 14:07:16'
 cover: 'https://cdn.jsdelivr.net/gh/choodsire666/blog-img/ClassLoader/e484f68a0efba581c6d2ccea288780e4.png'
 description: 'title: ClassLoadertags: jvmcategories: jvm概述类加载器ClassLoader的作用：java.lang.ClassLoader 是 Java 运行时环境中非常关键的一个组件，它的主要职责是根据应用程序的需求动态地加载 .class 文件（即字节码文件）...'
 tags: jvm
@@ -54,8 +54,7 @@ ExtClassLoader: -Djava.ext.dirs: 指定路径
 AppClassLoader: -Djava.class.path, -cp, -classpath 或者是环境变量classpath
 
 ## Link链接
-verify
-
+verify：校验阶段会进行字节码的验证，包括对
 prepare
 resolve
 ## 初始化
