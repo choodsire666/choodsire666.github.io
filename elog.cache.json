@@ -382,15 +382,66 @@
       "realName": "Spring容器的启动",
       "relativePath": "/Spring容器的启动.md",
       "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 204544751,
+      "doc_id": "tzf3voxzhr62kgrh",
+      "updated": 1738761418000,
+      "properties": {
+        "title": "无标题文档",
+        "urlname": "tzf3voxzhr62kgrh",
+        "date": "2025-02-05 17:18:54",
+        "updated": "2025-02-05 21:16:58",
+        "description": "Spring是一个分层架构的框架, 其基本核心是IOC(控制反转)和AOP面向切面编程‌ClassUtils‌：用于类加载、查找类全部信息、类信息的处理等‌1。‌ObjectUtils‌：用于基本类型的比较或数组比较，处理对象和数组的实用工具类‌1。‌PatternMatchUtils‌：用于..."
+      },
+      "catalog": [
+        {
+          "title": "Spring",
+          "doc_id": "tzf3voxzhr62kgrh"
+        }
+      ],
+      "realName": "无标题文档",
+      "relativePath": "/Spring/无标题文档.md",
+      "docPath": "source/_posts/yuque/Spring"
     }
   ],
   "catalog": [
     {
       "type": "TITLE",
+      "title": "Spring",
+      "uuid": "e5J6vWd1nZ0LxEnN",
+      "url": "",
+      "prev_uuid": "",
+      "sibling_uuid": "5xkH2VlKloQXrw66",
+      "child_uuid": "vpCsf19pgfzMzstp",
+      "parent_uuid": "",
+      "doc_id": "",
+      "level": 0,
+      "id": "",
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
+      "title": "无标题文档",
+      "uuid": "vpCsf19pgfzMzstp",
+      "url": "tzf3voxzhr62kgrh",
+      "prev_uuid": "e5J6vWd1nZ0LxEnN",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "e5J6vWd1nZ0LxEnN",
+      "doc_id": 204544751,
+      "level": 1,
+      "id": 204544751,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "TITLE",
       "title": "JVM",
       "uuid": "5xkH2VlKloQXrw66",
       "url": "",
-      "prev_uuid": "",
+      "prev_uuid": "e5J6vWd1nZ0LxEnN",
       "sibling_uuid": "FcznZIORZxWkRtl1",
       "child_uuid": "LX09WZTORdWsHE-q",
       "parent_uuid": "",
