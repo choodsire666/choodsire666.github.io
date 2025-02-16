@@ -403,15 +403,46 @@
       "realName": "无标题文档",
       "relativePath": "/Spring/无标题文档.md",
       "docPath": "source/_posts/yuque/Spring"
+    },
+    {
+      "id": 205998362,
+      "doc_id": "zq5ptssk15mzsucd",
+      "updated": 1739604178000,
+      "properties": {
+        "title": "java编程思想",
+        "urlname": "zq5ptssk15mzsucd",
+        "date": "2025-02-15 14:07:39",
+        "updated": "2025-02-15 15:22:58",
+        "description": "一切都是对象标识符(句柄, 指针, 引用), 不一定指向对象, 可能没有对象安全做法是, 一定要初始化\"\", 字符串常量数据保存在哪里寄存器(速度很快, 容器小, 数量有限.程序员无法执行控制)堆栈(速度仅此与寄存器, 容器比寄存器大得多(RAM), 用于保存标识符等, 对象不保证在堆栈), ..."
+      },
+      "catalog": [],
+      "realName": "java编程思想",
+      "relativePath": "/java编程思想.md",
+      "docPath": "source/_posts/yuque"
     }
   ],
   "catalog": [
+    {
+      "type": "DOC",
+      "title": "java编程思想",
+      "uuid": "jn-fvmVIyHZ0sZr2",
+      "url": "zq5ptssk15mzsucd",
+      "prev_uuid": "",
+      "sibling_uuid": "e5J6vWd1nZ0LxEnN",
+      "child_uuid": "",
+      "parent_uuid": "",
+      "doc_id": 205998362,
+      "level": 0,
+      "id": 205998362,
+      "open_window": 1,
+      "visible": 1
+    },
     {
       "type": "TITLE",
       "title": "Spring",
       "uuid": "e5J6vWd1nZ0LxEnN",
       "url": "",
-      "prev_uuid": "",
+      "prev_uuid": "jn-fvmVIyHZ0sZr2",
       "sibling_uuid": "5xkH2VlKloQXrw66",
       "child_uuid": "vpCsf19pgfzMzstp",
       "parent_uuid": "",
