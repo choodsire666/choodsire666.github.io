@@ -269,12 +269,12 @@
     {
       "id": 175789873,
       "doc_id": "vareg4hky8e5bi1c",
-      "updated": 1719721994000,
+      "updated": 1740367769000,
       "properties": {
         "title": "考虑使用静态工厂方法代替构造函数",
         "urlname": "vareg4hky8e5bi1c",
         "date": "2024-06-30 12:08:18",
-        "updated": "2024-06-30 12:33:14",
+        "updated": "2025-02-24 11:29:29",
         "description": "举例子：Java中的包装类中的valueOf方法，通过静态方法valueOf来创建或返回实例对象。public static Boolean valueOf(boolean b) {     return (b ? Boolean.True : Boolean.False); }优点：与构造函...",
         "cover": "https://cdn.jsdelivr.net/gh/choodsire666/blog-img/考虑使用静态工厂方法代替构造函数/cover.jpg"
       },
@@ -419,6 +419,27 @@
       "realName": "java编程思想",
       "relativePath": "/java编程思想.md",
       "docPath": "source/_posts/yuque"
+    },
+    {
+      "id": 207312429,
+      "doc_id": "fndgp2id9whscbud",
+      "updated": 1740375469000,
+      "properties": {
+        "title": "遇到多个构造器参数时要考虑使用构建器",
+        "urlname": "fndgp2id9whscbud",
+        "date": "2025-02-24 11:41:00",
+        "updated": "2025-02-24 13:37:49",
+        "description": "在有多个参数时, 特别是可变参数时.使用构造器会使得构造器方法参数过多或者要使用叠加构造器方法使用JavaBeans模式强制使用Setter方法, 会导致对象出现不一致情况, 且无法进行参数的校验验证, 这时使用不完整的对象会出现不可预期的问题, 且调试困难. 且会破坏对象的封装性, 使得不可..."
+      },
+      "catalog": [
+        {
+          "title": "Effective Java",
+          "doc_id": "fndgp2id9whscbud"
+        }
+      ],
+      "realName": "遇到多个构造器参数时要考虑使用构建器",
+      "relativePath": "/Effective Java/遇到多个构造器参数时要考虑使用构建器.md",
+      "docPath": "source/_posts/yuque/Effective Java"
     }
   ],
   "catalog": [
@@ -759,7 +780,7 @@
       "url": "",
       "prev_uuid": "O3ggrKF40q18wh3n",
       "sibling_uuid": "OWW-sRov5c65PNQF",
-      "child_uuid": "aVYl8oDnoQlBXLBo",
+      "child_uuid": "bfISXcTlrzTN3aOI",
       "parent_uuid": "",
       "doc_id": "",
       "level": 0,
@@ -769,10 +790,25 @@
     },
     {
       "type": "DOC",
+      "title": "遇到多个构造器参数时要考虑使用构建器",
+      "uuid": "bfISXcTlrzTN3aOI",
+      "url": "fndgp2id9whscbud",
+      "prev_uuid": "XGOikCCO0hMt2KRH",
+      "sibling_uuid": "aVYl8oDnoQlBXLBo",
+      "child_uuid": "",
+      "parent_uuid": "XGOikCCO0hMt2KRH",
+      "doc_id": 207312429,
+      "level": 1,
+      "id": 207312429,
+      "open_window": 1,
+      "visible": 1
+    },
+    {
+      "type": "DOC",
       "title": "考虑使用静态工厂方法代替构造函数",
       "uuid": "aVYl8oDnoQlBXLBo",
       "url": "vareg4hky8e5bi1c",
-      "prev_uuid": "XGOikCCO0hMt2KRH",
+      "prev_uuid": "bfISXcTlrzTN3aOI",
       "sibling_uuid": "",
       "child_uuid": "",
       "parent_uuid": "XGOikCCO0hMt2KRH",
