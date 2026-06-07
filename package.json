@@ -23,7 +23,7 @@
     "bluebird": "^3.7.2",
     "chokidar": "^3.6.0",
     "graceful-fs": "^4.2.11",
-    "hexo": "^7.0.0",
+    "hexo": "^7.3.0",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-bilibili-bangumi": "^1.9.0",
     "hexo-butterfly-envelope": "^1.0.15",
